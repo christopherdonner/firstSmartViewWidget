@@ -1,0 +1,23 @@
+{{#if hasSubCrumbs}}
+  <a href="{{url}}" class="binf-dropdown-toggle csui-subcrumb csui-acc-focusable"
+     data-binf-toggle="dropdown" title="{{subcrumbTooltip}}">{{name}}</a>
+  <ul class="binf-dropdown-menu" role="menu">
+    {{#each subcrumbs}}
+      {{#if inactive}}
+        <li role="menuitem"><a data-id="{{this.id}}" title="{{this.name}}">{{this.name}}</a>
+      {{else}}
+        <li role="menuitem"><a class='csui-breadcrumb csui-acc-focusable' href="{{this.url}}"
+               data-id="{{this.id}}" title="{{this.name}}">{{this.name}}</a>
+      {{/if}}
+    {{/each}}
+  </ul>
+{{else}}
+  {{#if inactive}}
+    {{name}}
+  {{else}}
+    <a class='csui-breadcrumb csui-acc-focusable' href="{{url}}" data-id="{{id}}"
+       title="{{name}}">{{name}}</a>
+  {{/if}}
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

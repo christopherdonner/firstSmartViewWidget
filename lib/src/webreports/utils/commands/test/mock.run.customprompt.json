@@ -1,0 +1,61 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {},
+			"export_mime_type": "text/html",
+			"output_destination": "browser"
+		}
+	},
+	"forms": [
+		{
+			"data": {
+				"myCustomParm": "&nbsp;<A HREF=\"An unknown feature was specified\" TITLE=\"Download Reportview SUBVERSION\">Download Reportview</A>&nbsp;&nbsp;<A HREF=\"An unknown feature was specified\" TITLE=\"Edit Reportview SUBVERSION\">Edit Reportview</A>&nbsp;&nbsp;<A HREF=\"An unknown feature was specified\" TITLE=\"Export SUBVERSION\">Export</A>&nbsp;&nbsp;<A HREF=\"An unknown feature was specified\" TITLE=\"Comments SUBVERSION\">Comments</A>&nbsp;&nbsp;<A HREF='?func=ll&objId=2000&objAction=browse&sort=name' ><IMG BORDER='0' SRC='/main3_img/webdoc/upalevel.gif' ALT='Navigate up one level to Enterprise' TITLE='Navigate up one level to Enterprise' /></A>&nbsp;<a href=\"#\" onclick=\"javascript:setSectionName( '' );showFunctionMenu2( '&nexturl=', 8957, event, '', '' );setSectionName( '' );return false;\" ><img src=\"/main3_img/webdoc/actions.png\" ID=\"x8957\" border=\"0\" alt=\"Functions\" title=\"Functions\" onmouseover=\"this.src='/main3_img/webdoc/actions_hover.png'\" onmouseout=\"this.src='/main3_img/webdoc/actions.png'\"></A><div id=\"z8957\" class=\"functionMenuDiv\" style=\"width: 1px\"></div><p>\n \nContent Server 16.2.0 (main), build 1747 (activeview 16.2.0) (rktdocservices 16.0.0.01 +pat162000084) (webreports 16.2.0-RJS:10.0.2) (webreportswf 16.2.0). Content Server Applications: OTAVMOBILE 16.2, OTREPSPKG 16.1.0.21, OTRMReports 1.3<br>\n<br>\n{A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='myText','fieldname'='_1_1_2_1','FixedRows'=true,'ID'=2,'Length'=32,'MaxRows'=1,'multi'=false,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'='hello'>,A<1,?,'catid'=156526,'catver'=2,'DisplayName'='myInt','fieldname'='_1_1_3_1','FixedRows'=true,'ID'=3,'MaxRows'=1,'multi'=false,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=2,'value'=123>,A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='Passcodes','fieldname'='_1_1_4_1','FixedRows'=false,'ID'=4,'Length'=32,'MaxRows'=5,'multi'=true,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'='4123'>,A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='Passcodes','fieldname'='_1_1_4_2','FixedRows'=false,'ID'=4,'Length'=32,'MaxRows'=5,'multi'=true,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'='new value'>,A<1,?,'catid'=156526,'catver'=2,'DisplayName'='Address','fieldname'=?,'FixedRows'=false,'ID'=5,'MaxRows'=3,'multi'=true,'NumRows'=1,'ParentAssoc'=A<1,?,'Children'={A<1,?,'DisplayLen'=32,'DisplayName'='myText','FixedRows'=true,'ID'=2,'Length'=32,'MaxRows'=1,'NumRows'=1,'Required'=false,'Search'=true,'Type'=-1>,A<1,?,'DisplayName'='myInt','FixedRows'=true,'ID'=3,'MaxRows'=1,'NumRows'=1,'Required'=false,'Search'=true,'Type'=2>,A<1,?,'DisplayLen'=32,'DisplayName'='Passcodes','FixedRows'=false,'ID'=4,'Length'=32,'MaxRows'=5,'NumRows'=1,'Required'=false,'Search'=true,'Type'=-1>,A<1,?,'Children'={A<1,?,'DisplayLen'=32,'DisplayName'='Line','FixedRows'=false,'ID'=6,'Length'=32,'MaxRows'=5,'NumRows'=1,'Required'=false,'Search'=true,'Type'=-1>},'DisplayName'='Address','FixedRows'=false,'ID'=5,'MaxRows'=3,'NumRows'=1,'Type'=-18>},'DisplayName'='MiscCat','FixedRows'=true,'ID'=1,'MaxRows'=1,'Name'='MiscCat','NextID'=7,'NumRows'=1,'Required'=false,'Type'=-18,'ValueTemplate'=A<1,?,'ID'=1,'Values'={A<1,?,2=A<1,?,'ID'=2,'Values'={?}>,3=A<1,?,'ID'=3,'Values'={?}>,4=A<1,?,'ID'=4,'Values'={?}>,5=A<1,?,'ID'=5,'Values'={A<1,?,6=A<1,?,'ID'=6,'Values'={?}>>}>>}>>,'set'=true,'Type'=-18,'value'=?>,A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='Line','fieldname'='_1_1_5_1_6_1','FixedRows'=false,'ID'=6,'Length'=32,'MaxRows'=5,'multi'=false,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'='123 Fake Street'>,A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='Line','fieldname'='_1_1_5_2_6_1','FixedRows'=false,'ID'=6,'Length'=32,'MaxRows'=5,'multi'=true,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'='another value'>,A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='Line','fieldname'='_1_1_5_2_6_2','FixedRows'=false,'ID'=6,'Length'=32,'MaxRows'=5,'multi'=true,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'='something else'>,A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='Line','fieldname'='_1_1_5_3_6_1','FixedRows'=false,'ID'=6,'Length'=32,'MaxRows'=5,'multi'=true,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'=?>,A<1,?,'catid'=156526,'catver'=2,'DisplayLen'=32,'DisplayName'='Line','fieldname'='_1_1_5_3_6_2','FixedRows'=false,'ID'=6,'Length'=32,'MaxRows'=5,'multi'=true,'NumRows'=1,'ParentAssoc'=?,'Required'=false,'Search'=true,'set'=false,'Type'=-1,'value'='else'>}",
+				"normalText": ""
+			},
+			"options": {
+				"fields": {
+					"myCustomParm": {
+						"hidden": false,
+						"hideInitValidationError": true,
+						"label": "customParm label",
+						"readonly": false,
+						"type": "text"
+					},
+					"normalText": {
+						"hidden": false,
+						"hideInitValidationError": true,
+						"label": "normalText label",
+						"readonly": false,
+						"type": "text"
+					}
+				},
+				"form": {
+					"attributes": {
+						"action": "api/v1/",
+						"method": ""
+					},
+					"renderForm": true
+				}
+			},
+			"schema": {
+				"properties": {
+					"myCustomParm": {
+						"description": "",
+						"readonly": false,
+						"required": false,
+						"title": "customParm label",
+						"type": "Custom"
+					},
+					"normalText": {
+						"description": "",
+						"readonly": false,
+						"required": false,
+						"title": "normalText label",
+						"type": "String"
+					}
+				},
+				"type": "object"
+			}
+		}
+	]
+}

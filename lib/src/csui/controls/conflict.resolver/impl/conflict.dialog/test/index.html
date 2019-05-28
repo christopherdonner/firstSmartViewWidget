@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NodePicker</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            // url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            // url: 'http://localhost/OTCS_0708/cs.exe/api/v1',
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+//        'csui/utils/contexts/factories/node': {
+//          attributes: {id: 2000}
+//        }
+      }
+    });
+
+    require(['csui/lib/underscore', "csui/lib/jquery", 'csui/lib/marionette','csui/utils/contexts/page/page.context',
+      "csui/controls/fileupload/fileupload", 'csui/utils/commands/add',
+      'csui/models/node/node.model', 'csui/utils/contexts/factories/connector',"csui/utils/contexts/factories/node",
+      "csui/controls/fileupload/test/fileupload.mock",'csui/utils/contexts/factories/children','csui/utils/connector'
+    ], function (_,$,Marionette,PageContext,FileUploadController, AddCommand, NodeModel, ConnectorFactory,NodeFactory, MockData,ChildrenCollectionFactory,Connector) {
+
+      MockData.test2.enable();
+
+      var connector = new Connector({
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }),
+        container = new NodeModel({id: 2000}, {connector: connector}),
+        collection,
+        contentRegion = new Marionette.Region({el: '#content'});
+
+
+     // context.fetch().then(function () {
+        var fileUpload =  new FileUploadController({
+          container: container,
+          collection: collection
+        });
+        fileUpload.uploadView.addSelectFiles(MockData.files);
+     // });
+
+    });
+  </script>
+</head>
+<body>
+<div id="content">
+</div>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

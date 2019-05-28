@@ -1,0 +1,56 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "/api/v2/nodes/678798?fields=properties",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"data": {
+			"properties": {
+				"container": false,
+				"container_size": 0,
+				"create_date": "2017-11-15T10:58:52",
+				"create_user_id": 1000,
+				"description": "",
+				"description_multilingual": {
+					"en_US": "",
+					"fr": ""
+				},
+				"external_create_date": null,
+				"external_identity": "",
+				"external_identity_type": "",
+				"external_modify_date": null,
+				"external_source": "",
+				"favorite": false,
+				"id": 678798,
+				"mime_type": "text/html",
+				"modify_date": "2017-11-15T14:02:28",
+				"modify_user_id": 1000,
+				"name": "Content Server - Node Destination",
+				"name_multilingual": {
+					"en_US": "Content Server - Node Destination",
+					"fr": ""
+				},
+				"owner_group_id": 1001,
+				"owner_user_id": 1000,
+				"parent_id": 678795,
+				"permissions_model": "advanced",
+				"reserved": false,
+				"reserved_date": null,
+				"reserved_user_id": 0,
+				"size": 1990,
+				"size_formatted": "2 KB",
+				"type": 30303,
+				"type_name": "WebReport",
+				"versions_control_advanced": false,
+				"volume_id": -2000
+			}
+		}
+	}
+}

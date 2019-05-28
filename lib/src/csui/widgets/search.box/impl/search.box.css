@@ -1,0 +1,299 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-search-box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 5px;
+}
+
+.csui-search-box .search-bar {
+  width: calc(100% - 50px);
+}
+
+.csui-search-box .search-bar-content {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: row;
+  width: calc(100% - 1px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.csui-search-box .icon-global-search {
+  background-position-y: 8px;
+  background-position-x: 8px;
+  padding: 8px;
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-size: 44px 44px;
+}
+
+.csui-search-box .csui-input {
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  font: 18px Lato;
+}
+
+.binf-nav .csui-search-box .csui-input {
+  height: 38px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 7px 30px 7px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+
+.csui-search-box .csui-search-box .csui-input:focus {
+  outline: 0;
+}
+
+.csui-search-box .csui-input::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+.binf-widgets .csui-input-focus {
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.csui-search-box .csui-clearer {
+  color: #d3d3d3;
+  position: absolute;
+  top: calc((100% - 20px) / 2);
+  right: 1em;
+  line-height: 1.4em;
+  font-size: 1.4em;
+  pointer-events: auto;
+  z-index: 10;
+  display: none;
+}
+
+.csui-search-box .csui-clearer.formfield_clear {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 10px;
+}
+
+.csui-search-box a.csui-header-search-icon {
+  text-decoration: none;
+}
+
+.csui-search-box .csui-header-search-icon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.binf-navbar-nav .csui-search-box .csui-header-search-icon {
+  padding: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-search-box .csui-search-box-slice-popover {
+  color: #333333;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 25px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  width: 32px;
+  height: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.binf-widgets .csui-search-box .csui-search-box-slice-popover:focus {
+  outline-style: dotted;
+  outline: 1px dotted #333333;
+}
+
+.search-bar .binf-popover-content {
+  min-width: 225px;
+}
+
+.search-bar .binf-popover-title {
+  display: none;
+}
+
+.search-bar .binf-popover {
+  border-radius: 0;
+}
+
+
+
+.binf-widgets .csui-slice-checkbox {
+  width: 100%;
+}
+
+.binf-widgets .csui-search-popover-row {
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-search-popover-row-body {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-search-popover-row:hover {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-search-popover-row.active {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-search-popover-row:active {
+  background-color: #dfe7ea;
+}
+
+.binf-widgets .csui-search-popover-checked {
+  background-repeat: no-repeat;
+  min-width: 18px;
+  min-height: 18px;
+  margin-top: 7px;
+  position: absolute;
+}
+
+.binf-widgets .csui-search-popover-label {
+  margin-left: 26px;
+  font: 14px Lato;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label {
+  position: relative;
+  word-break: break-all;
+  cursor: pointer;
+  display: inline-block;
+  width: calc(100% - 1.5625rem);
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label span.cs-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inherit;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.15;
+}
+
+
+
+.csui-selected-checkbox.csui-slice-checkbox label::before {
+  margin-left: -1.5em;
+  top: 0;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label::after {
+  left: 0;
+  margin-left: -1.5em;
+  top: 0;
+}
+
+.binf-widgets .csui-search-slice-container-first {
+  height: 4px;
+}
+
+.binf-widgets .csui-search-slice-container-last {
+  height: 3px;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox input[type="checkbox"]:checked + label::after {
+  color: rgba(2, 115, 61, 0.99);
+  background-color: transparent;
+}
+
+.csui-search-box .binf-popover,
+.csui-search-box .binf-popover-content {
+  padding: 0;
+}
+
+.csui-search-box .icon-expandArrowDown:hover {
+  background-image: url('image/caret_down_mo.svg');
+}
+
+.csui-search-box .icon-expandArrowDown:active {
+  background-image: url('image/caret_down_md.svg');
+}
+
+
+
+.binf-widgets .csui-search-input-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex: 1 1 auto;
+  margin-right: 1em;
+  height: initial;
+  padding-left: 8px;
+}
+
+.binf-widgets input[type="search"]:focus{
+  border: 2px solid #666666;
+}
+
+
+
+.binf-widgets .csui-search-options-dropdown {
+  position: absolute;
+  background-color: #ffffff;
+  margin: 0;
+  width: calc(100% - 0.5rem);
+  height: 2.5em;
+  padding: 0 0.625rem 0 0.75rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.csui-search-box .csui-input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.csui-search-box .csui-input:-moz-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.csui-search-box .csui-input::-moz-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.csui-search-box .csui-input:-ms-input-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Error Page</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body.binf-widgets {
+      margin-top: 15px;
+    }
+    body.binf-widgets .full-page-container {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      margin: 25px;
+    }
+    body.binf-widgets .maximize-wrapper-container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        'i18n': {
+          loadableLocales: {root: true}
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', 'csui/lib/backbone', '../error.global.view'
+    ], function ($, Backbone, GlobalErrorView) {
+      'use strict';
+
+      var errorModel    = new Backbone.Model({
+            serverError: '500 Internal server error'
+          }),
+          globalPageView = new GlobalErrorView({
+            model: errorModel
+          });
+
+      globalPageView.render();
+      $('.maximize-wrapper-container').append(globalPageView.el);
+
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="full-page-container">
+  <div class="maximize-wrapper-container"></div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

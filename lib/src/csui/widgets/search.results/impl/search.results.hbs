@@ -1,0 +1,70 @@
+
+<div id="header"></div>
+<div class="binf-container-fluid">
+  <div class="csui-facet-table-container">
+    <div class="csui-search-left-panel csui-popover-panel csui-is-hidden">
+      <div class="csui-popover-panel-container">
+        {{#if messages.enableCustomSearch}}
+          <div class="csui-search-left-panel-tabs">
+            <ul>
+              <li class="csui-tab csui-search-custom-tab">
+                <a title="{{messages.customSearchTab}}" tabindex="0">
+                  <span>{{messages.customSearchTab}}</span>
+                </a>
+              </li>
+              <li class="csui-tab csui-search-facet-tab">
+                <a title="{{messages.searchFilterTab}}" tabindex="0">
+                  <span>{{messages.searchFilterTab}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        {{/if}}
+        <div class="csui-search-left-panel-content">
+          {{#if messages.enableCustomSearch}}
+            <div class="csui-search-results-custom">
+              <div id="csui-search-custom-container"></div>
+            </div>
+          {{/if}}
+          <div id="facetview" class="csui-facetview"></div>
+        </div>
+      </div>
+    </div>
+    <div class="csui-search-results-body binf-col-lg-12 binf-col-md-12 binf-col-xs-12">
+      <div id="csui-search-custom-results">
+        <div class="csui-search-results-content binf-col-lg-12 binf-col-md-12">
+          <div id="facetbarview"></div>
+          <div
+              class="csui-search-tool-container binf-hidden binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+            <div
+                class="csui-search-header-left-actions binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+              <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+                <div id="selectAllCheckBox" class="csui-select-all csui-search-item-check"></div>
+                <div id="toolbar"
+                     class="csui-search-toolbar binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+              </div>
+            </div>
+            <div class="csui-search-header-right-actions">
+              <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+                <div
+                    class="csui-search-sorting binf-col-lg-6 binf-col-md-6 binf-col-sm-6 binf-col-xs-6"
+                    id="csui-search-sort"></div>
+                <div class="csui-expand-all binf-col-lg-6 binf-col-md-6 binf-col-sm-6 binf-col-xs-6"
+                     id="expandAllArrow"></div>
+              </div>
+            </div>
+          </div>
+          <div id="results" tabindex="-1"
+               class="csui-result-list binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+          <div
+              class="csui-search-row-divider binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+        </div>
+
+        <div id="pagination"
+             class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

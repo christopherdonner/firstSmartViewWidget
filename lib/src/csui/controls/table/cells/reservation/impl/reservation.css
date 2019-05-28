@@ -1,0 +1,25 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-table-cell-reservation {
+  max-width: 3.5rem;
+  min-width: 3.5rem;
+}
+
+.csui-table-cell-reservation .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.csui-table-cell-reservation button {
+  border: none;
+  background: none;
+}
+
+.csui-table-cell-reservation button:focus {
+  outline: 1px dotted #333333;
+}
+

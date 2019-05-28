@@ -1,0 +1,57 @@
+<div class="control-area cs-field-write">
+  <div class="cs-field-write-inner">
+    <textarea id="{{id}}" class="editable cs-no-resize"
+              {{#if options.placeholder}}placeholder="{{options.placeholder}}"{{/if}}
+      {{#if options.rows}}rows="{{options.rows}}"{{/if}}
+      {{#if options.readonly}}readonly{{/if}}
+      {{#if name}}name="{{name}}"{{/if}}
+      {{#if ariaRequired}} aria-required="{{ariaRequired}}"{{/if}}
+      {{#each options.data}}data-{{fieldId}}="{{value}}" {{/each}}
+      {{#if idBtnLabel}} aria-labelledby="{{idBtnLabel}}"{{/if}}
+      {{#if multiFieldLabel}} aria-label="{{multiFieldLabel}}" {{/if}}>{{data}}</textarea>
+
+    {{#xif "this.mode !== 'writeonly'"}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{else}}
+      {{#if options.applyFlag}}
+        <div class="icon-container binf-hidden">
+          <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"></div>
+        </div>
+      {{/if}}
+    {{/xif}}
+
+  </div>
+</div>
+
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    <div class="btn-container">
+      <button title="{{data}}"
+        {{#if schema.readonly }} aria-disabled="true" {{/if}}
+        {{#if multiFieldLabel}}
+              aria-label="{{readModeMultiFieldAria}}" data-multi="true"
+        {{else}}
+              aria-label="{{readModeAria}}"
+        {{/if}}>
+        {{#xif "this.data !== '' && this.data !== null"}}
+          <span class="csui-ellipsis-area"><span><span
+              class="cs-field-textarea-data">{{data}}</span></span>
+          </span>
+        {{else}}
+          <span class="placeholder" title="{{noValue}}">{{emptyLabel}}</span>
+        {{/xif}}
+      </button>
+
+    </div>
+    <div class="icon-container">
+      <div title="{{edit}}" aria-label="{{edit}}" role="button"
+           class="csui-icon-edit inline-edit-icon icon-edit"></div>
+    </div>
+    <div tabindex="0" class="cs-icon icon-expandArrowDown binf-hidden cs-icon-exp-col"
+         aria-label="{{seeMore}}" role="button"></div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

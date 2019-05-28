@@ -1,0 +1,36 @@
+{{#if icon}}
+  <img class="cs-icon" src="{{icon}}" alt="">
+{{/if}}
+
+<div class="cs-left">
+  {{#if key}}
+    <div class="cs-key">{{key}}</div>
+  {{/if}}
+  <div class="cs-title">
+    <span class="cs-name">{{name}}</span>
+    {{#if size}}
+      <span class="cs-size"> ({{size}})</span>
+    {{/if}}
+  </div>
+  {{#if stage.value}}
+    <div class="cs-stage">
+      <span class="cs-label">{{csui-l10n stage.label}}</span>
+      <span class="cs-value">{{stage.value}}</span>
+    </div>
+  {{/if}}
+</div>
+
+<div class="cs-right">
+  {{#if price}}
+    <div class="cs-price {{priceClass}}">{{price}}</div>
+    <div class="cs-currency">{{csui-l10n currency}}</div>
+  {{/if}}
+  {{#if date.value}}
+    <div class="cs-date">
+      <div class="cs-label">{{csui-l10n date.label}}</div>
+      <div class="cs-value {{date.class}}">{{date.value}}</div>
+    </div>
+  {{/if}}
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,114 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-perspective-panel {
+  
+  padding-top: 32px;
+  position: relative;
+  
+  height: calc(100vh - 62px);
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel {
+  padding-top: 1px;
+  
+  height: calc(100vh - 62px);
+}
+
+.binf-widgets.csui-maximized-widget-mode.csui-breadcrumbs-visible .cs-perspective-panel {
+  
+  padding-top: 32px;
+  
+  height: calc(100vh - 62px);
+}
+
+.binf-widgets .cs-perspective-panel > .cs-perspective {
+  position: absolute;
+  
+  left: 0;
+  top: 32px;
+
+  width: 100%;
+
+  
+  padding-left: calc(4vw + 15px);
+  padding-right: calc(4vw + 15px);
+
+  
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  height: calc(100vh - 94px);
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel > .cs-perspective {
+  padding-left: 0px;
+  padding-right: 0px;
+  top: 1px;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel > .cs-perspective > .csui-maximized-row > .csui-maximized-column {
+  
+  height: calc(100vh - 63px);
+}
+
+.binf-widgets.csui-maximized-widget-mode.csui-breadcrumbs-visible .cs-perspective-panel > .cs-perspective {
+  top: 32px;
+}
+
+.binf-widgets.csui-maximized-widget-mode.csui-breadcrumbs-visible .cs-perspective-panel > .cs-perspective > .csui-maximized-row > .csui-maximized-column {
+  
+  height: calc(100vh - 94px);
+}
+
+.binf-widgets .cs-perspective-panel > .cs-perspective.cs-on-stage-right {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.binf-widgets .cs-perspective-panel > .cs-perspective.cs-on-stage-left {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+
+.binf-widgets .cs-perspective-panel.csui-in-transition {
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: landscape), only screen
+and (min-width: 768px)
+and (max-width: 768px)
+and (orientation: portrait) {
+  .binf-widgets .cs-perspective-panel {
+    height: calc(100vh - 110px);
+  }
+
+  .binf-widgets.binf-modal-open .cs-perspective-panel {
+    overflow-y: hidden;
+  }
+
+  .binf-widgets .recentlyaccessed.binf-fade.binf-in,
+  .binf-widgets .favorites.binf-fade.binf-in,
+  .binf-widgets .assignments.binf-fade.binf-in {
+    min-height: 100vh;
+  }
+
+}
+
+.binf-widgets.csui-mobile .cs-perspective-panel {
+  padding-top: 0;
+}
+
+.binf-widgets.csui-mobile .cs-perspective-panel > .cs-perspective {
+  position: relative;
+}

@@ -1,0 +1,194 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-tabletoolbar {
+  background-color: #dce4e8;
+  color: #333333;
+  border-bottom: 1px solid #d5d5d5;
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  height: 3em;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 0.625em; 
+  padding-right: 0.75em; 
+}
+
+.binf-widgets .csui-tabletoolbar > div {
+  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.csui-tabletoolbar > div > .csui-align-left {
+  justify-content: flex-start;
+}
+
+.csui-tabletoolbar > div > .csui-align-right {
+  justify-content: flex-end;
+}
+
+.csui-tabletoolbar > div.csui-toolbar-caption {
+  font-size: 24px;
+  color: #333333;
+  flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  display: flex;
+  display: -webkit-flex;
+  min-width: 0; 
+}
+
+.csui-tabletoolbar > div.csui-toolbar-caption .csui-item-title {
+  height: 100%;
+}
+
+.csui-tabletoolbar > div.csui-addToolbar {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.csui-tabletoolbar .csui-toolbar-divider {
+  width: 0.125em;
+  background-color: #dcdcdc;
+  display: inline;
+  float: left;
+  margin-left: 2px;
+  position: relative;
+  padding: 0;
+  border: 0;
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.csui-addToolbar li.binf-dropdown > a {
+  position: relative;
+  z-index: 3333;
+}
+
+.csui-tabletoolbar > .csui-toolbar > .binf-nav > .csui-toolbar-state {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 0 1em 0 1em;
+  line-height: 42px;
+  font-style: italic;
+  font-weight: 300;
+  color: #666666;
+}
+
+.csui-tabletoolbar > .csui-toolbar > .binf-nav.csui-state-loading > .csui-toolbar-state {
+  animation: csui-tabletoolbar-state-fade-in-and-out 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 1
+}
+
+@keyframes csui-tabletoolbar-state-fade-in-and-out {
+  from {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: .5;
+  }
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > a,
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region,
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region > div,
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region > div > div,
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region > div > div > button {
+  height: 100%; 
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region .csui-configuration-view .binf-dropdown > button > .icon {
+  border-radius: 50%;
+  padding: 6px;
+  width: 28px;
+  height: 28px;
+  background-size: 22px;
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region .csui-configuration-view .binf-dropdown.binf-open > button > .icon {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li.binf-open > a,
+.binf-table.dataTable li.binf-dropdown.binf-open a {
+  z-index: 1002;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li > a > .icon {
+  margin: auto; 
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li.binf-open,
+.binf-table.dataTable li.binf-dropdown.binf-open {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li.binf-open a,
+.binf-table.dataTable li.binf-dropdown.binf-open a {
+  box-shadow: none;
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > a:hover {
+  background-color: inherit;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li > a:active {
+  background-color: inherit;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="toggledescription"] a {
+  width: 28px;
+  height: 28px;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="toggledescription"] a {
+  background-color: transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  padding: 0;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="thumbnail"] a {
+  background-color: transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  display: block;
+  padding: 0;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="toggledescription"] a :hover,
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="thumbnail"] a :hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="toggledescription"] a :active,
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="thumbnail"] a :active {
+  background-color: #cccccc;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="toggledescription"] a > .icon.icon-description-toggle,
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="thumbnail"] a .icon.icon-switch_thumbnails24,
+.binf-widgets .csui-tabletoolbar .binf-nav > li[data-csui-command="thumbnail"] a > span.icon.icon-switch_list {
+  display: block;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-size: 20px;
+}

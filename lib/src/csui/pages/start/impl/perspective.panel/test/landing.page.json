@@ -1,0 +1,111 @@
+{
+  "type": "grid",
+  "options": {
+    "rows": [
+      {
+        "columns": [
+          {
+            "sizes": {
+              "md": 8,
+              "xl": 6
+            },
+            "widget": {
+              "type": "csui/widgets/welcome.placeholder"
+            }
+          },
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4,
+              "xl": 3
+            },
+            "pushes": {
+              "sm": 6,
+              "md": 0,
+              "xl": 3,
+              "xxl": 0
+            },
+            "widget": {
+              "type": "csui/widgets/myassignments"
+            }
+          },
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4,
+              "xl": 3
+            },
+            "pulls": {
+              "sm": 6,
+              "md": 0,
+              "xl": 3,
+              "xxl": 0
+            },
+            "pushes": {
+              "md": 8,
+              "xl": 0,
+              "xxl": 0
+            },
+            "widget": {
+              "type": "csui/widgets/favorites"
+            }
+          },
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4,
+              "xl": 3
+            },
+            "pushes": {
+              "sm": 6,
+              "md": 0,
+              "xl": 9,
+              "xxl": 0
+            },
+            "widget": {
+              "type": "csui/widgets/recentlyaccessed"
+            }
+          },
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4,
+              "xl": 3
+            },
+            "pulls": {
+              "sm": 6,
+              "md": 8,
+              "xl": 3,
+              "xxl": 0
+            },
+            "widget": {
+              "type": "csui/widgets/shortcut",
+              "options": {
+                "type": 141,
+                "background": "cs-tile-background2"
+              }
+            }
+          },
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4,
+              "xl": 3
+            },
+            "pulls": {
+              "xl": 3,
+              "xxl": 0
+            },
+            "widget": {
+              "type": "csui/widgets/shortcut",
+              "options": {
+                "type": 142,
+                "background": "cs-tile-background3"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

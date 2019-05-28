@@ -1,0 +1,15 @@
+<a href="#{{uniqueTabId}}" class="cs-tablink" data-binf-toggle="tab" title="{{csui-l10n title}}">
+  {{#if required}}
+    <span class="cs-icon-required category_required" aria-label="{{required_tooltip}}"></span>
+  {{/if}}
+  <span class="cs-tablink-text">{{csui-l10n title}}</span>
+</a>
+{{#if allow_delete}}
+  <div class="cs-tablink-delete" title="{{delete_tooltip}}">
+    <span class="icon {{delete_icon}} cs-delete-icon" role="button"
+          {{#if removeable}}data-cstabindex="0"{{/if}}
+          aria-label="{{deleteCategoryAria}}"></span>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

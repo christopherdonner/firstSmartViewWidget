@@ -1,0 +1,83 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-item-object .cs-icon {
+    float: left;
+    margin-right: 10px;
+}
+
+.cs-item-object .cs-left {
+    display: inline-block;
+    width: 70%;
+}
+
+.cs-item-object .cs-right {
+    float: right;
+    text-align: right;
+}
+
+.cs-item-object .cs-key {
+    margin-bottom: 10px;
+}
+
+.cs-item-object .cs-stage {
+    margin-top: 5px;
+}
+
+.cs-item-object .cs-price {
+    font-size: 18px;
+}
+
+.cs-item-object .cs-stage,
+.cs-item-object .cs-currency,
+.cs-item-object .cs-date .cs-label {
+    font-size: 12px;
+}
+
+.cs-item-object .cs-date .cs-label {
+    margin-top: 20px;
+}
+
+.cs-item-object .cs-stage > .cs-label,
+.cs-item-object .cs-date > .cs-label {
+  color: #aaa;
+}
+
+.cs-item-object .cs-progress-pending {
+  color: #888;
+}
+
+.cs-item-object .cs-progress-ontrack {
+  color: #088;
+}
+
+.cs-item-object .cs-progress-delayed {
+  color: #f40;
+}
+
+.cs-item-object .cs-progress-finished {
+  color: #080;
+}
+
+.cs-item-object .cs-progress-failed {
+  color: #c00;
+}
+
+.cs-item-object .cs-priority-low {
+  color: #880;
+}
+
+.cs-item-object .cs-priority-medium {
+  color: #008;
+}
+
+.cs-item-object .cs-priority-high {
+  color: #c00;
+}
+
+.cs-item-object .cs-status-good {
+  color: #080;
+}
+
+.cs-item-object .cs-status-bad {
+  color: #c00;
+}

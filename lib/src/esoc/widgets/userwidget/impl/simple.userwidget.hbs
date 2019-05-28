@@ -1,0 +1,61 @@
+<div class="esoc-simple-user-widget">
+  <div class="esoc-simple-user-widget-header">
+    <div class="cs-close binf-close esoc-user-widget-dialog-close"
+         title="{{dialogCloseButtonTooltip}}" aria-label="{{closeDialogLabel}}" tabindex="0"
+         data-cstabindex="0"></div>
+    <div class="esoc-userprofile-pic-actions">
+      {{#if chatSettings.chatEnabled}}
+        {{#if chatSettings.presenceEnabled}}
+          <div id="esoc-user-profile-presence-indicator" class="esoc-user-profile-presence-indicator binf-col-lg-12 binf-col-md-12 binf-col-sm-12
+    binf-col-xs-12"></div>
+        {{/if}}
+        {{#if otherUser}}
+          <div role="button" class="esoc-user-profile-chat-comment" aria-label="{{chatLabel}}"
+               tabindex="0" data-cstabindex="0"></div>
+        {{/if}}
+      {{/if}}
+      <span class="{{^if otherUser}} esoc-full-profile-avatar-cursor {{/if}}
+      image_user_placeholder esoc-userprofile-default-avatar esoc-full-profile-avatar-update
+    esoc-user-default-avatar-{{userid}}" id="esoc-simple-user-default-avatar-{{uniqueId}}" title="{{messages
+      .displayname}}" aria-label="{{simpleUserProfileLabel}}" tabindex="0"
+            data-cstabindex="0">{{initials}}</span>
+      <img role = "button" class="{{^if otherUser}} esoc-full-profile-avatar-cursor {{/if}}
+      esoc-full-profile-avatar
+    esoc-full-profile-avatar-update binf-img-circle esoc-image
+    esoc-upload-image-style
+    esoc-userprofile-img-{{userid}}" id="esoc-simple-user-image-avatar-{{uniqueId}}" title="{{messages
+      .displayname}}" alt="{{messages.displayname}}" aria-label="{{simpleUserProfileLabel}}"
+           tabindex="0" data-cstabindex="0" src="#"/>
+
+        {{#xif "this.isEnableUploadProfilePicture && !this.otherUser"}}
+            <span class="edit-user-image-placeholder edit-user"></span>
+            <input type="file" id="esoc-profilepic-desktop-attachment"
+                   class="esoc-profilepic-desktop-attachment" name="updateProfilePic" accept="image/*"
+                   aria-label="{{simpleUserProfileLabel}}"/>
+
+            <div class="esoc-simple-profile-img-load-container esoc-social-progress-style">
+                <div class="esoc-simple-profile-img-outer-border">
+                    <div class="esoc-simple-profile-img-loader">
+                        <div class="esoc-simple-profile-img-inner-border"></div>
+                    </div>
+                </div>
+            </div>
+        {{/xif}}
+    </div>
+
+    <div class="esoc-user-name binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      {{display_name}}
+      {{#if title}}
+        <div
+            class="esoc-user-title binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">{{title}}</div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="esoc-simple-user-widget-body">
+    <div class="esoc-simple-user-widget-tabs"></div>
+  </div>
+  <div class="esoc-simple-user-widget-footer"></div>
+</div>
+<div class="esoc-simple-user-widget-backdrop"></div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,85 @@
+{{#if commandName}}
+  <div class="csui-progressbar csui-progressrow" style="height:48px;">
+    <div class="csui-name-status" role="listitem">
+      <div class="csui-names-progress ">
+        <div class="csui-names csui-progresscell">
+          <div class="csui-name csui-progresscell" title="{{name}}">
+            {{name}}
+          </div>
+        </div>
+        <div class="csui-states-actions">
+          <div class="csui-stateaction csui-progresscell">
+            {{#if enableCancel}}
+              <button type="button" class="csui-stateaction-pending binf-btn binf-btn-default icon csui-icon
+            circle_delete" title="{{cancel}}" />
+              <button type="button" class="csui-stateaction-processing binf-hidden binf-btn binf-btn-default icon
+            csui-icon circle_delete" aria-label="{{cancelAria}}" title="{{cancel}}" />
+            {{/if}}
+            <div
+                class="csui-stateaction-resolved binf-hidden icon csui-icon csui-icon-like-btn csui-icon-notification-success" />
+            <div
+                class="csui-stateaction-rejected binf-hidden icon csui-icon csui-icon-like-btn csui-icon-notification-error" />
+            <div class="csui-stateaction-aborted binf-hidden" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{else}}
+  <div class="csui-name-status" role="listitem">
+    <div class="csui-names-progress">
+      <div class="csui-names csui-progresscell">
+        <div class="csui-type {{type_icon_class}}" />
+        <div class="csui-name" title="{{name}}">
+          {{name}}
+        </div>
+      </div>
+      <div class="csui-progress csui-progresscell" tabindex="0">
+        <div class="csui-progress-dynamic binf-hidden" aria-hidden="true">
+          <div class="csui-progress-textbar">
+            <div class="csui-progress-text"></div>
+            <div class="binf-progress">
+              <div class="binf-progress-bar" role="progressbar" aria-valuenow="{{percentage}}"
+                   aria-valuemin="0" aria-valuemax="100" style="width:{{percentage}}%" ></div>
+            </div>
+          </div>
+          <div class="csui-percent"></div>
+        </div>
+        <div class="csui-progress-static"  aria-hidden="true">
+          <div class="csui-progress-textbar">
+            <div class="csui-progress-static-pending">{{state_pending}}</div>
+            <div class="csui-progress-static-processing binf-hidden">{{state_processing}}</div>
+            <div class="csui-progress-static-resolved binf-hidden">{{state_resolved}}</div>
+            <div class="csui-progress-static-rejected binf-hidden">{{state_rejected}}</div>
+            <div class="csui-progress-static-aborted binf-hidden">{{state_aborted}}</div>
+          </div>
+          <div class="csui-percent"></div>
+        </div>
+      </div>
+    </div>
+    <div class="csui-states-actions">
+      <div class="csui-stateaction csui-progresscell">
+        {{#if enableCancel}}
+          <button type="button" class="csui-stateaction-pending binf-btn binf-btn-default icon csui-icon
+            circle_delete" aria-label="{{cancelAria}}" title="{{cancel}}" />
+          <button type="button" class="csui-stateaction-processing binf-hidden binf-btn binf-btn-default icon
+            csui-icon circle_delete" aria-label="{{cancelAria}}" title="{{cancel}}" />
+        {{/if}}
+        <div
+            class="csui-stateaction-resolved binf-hidden icon csui-icon csui-icon-like-btn csui-icon-notification-success" />
+        <div
+            class="csui-stateaction-rejected binf-hidden icon csui-icon csui-icon-like-btn csui-icon-notification-error" />
+        <div class="csui-stateaction-aborted binf-hidden" />
+      </div>
+    </div>
+  </div>
+  <div class="csui-error" title="{{error}}">
+    {{error}}
+  </div></div>
+
+{{/if}}
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

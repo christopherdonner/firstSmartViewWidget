@@ -1,0 +1,24 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-form .shortcut_section .binf-control-label {
+  text-align: right;
+  padding: 0 1em 0 0;
+  margin-bottom: 0.5em;
+}
+
+.cs-form .shortcut_section .binf-col-sm-9 {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.cs-form .shortcut_section .binf-form-group {
+  display: block;
+  text-align: left;
+  margin-top: 8px;
+  height: auto;
+}
+
+
+.url_section .binf-form-group > div {
+  width: 100%;
+}

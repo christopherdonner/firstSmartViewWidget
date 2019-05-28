@@ -1,0 +1,23 @@
+{{#if lightWeight}}
+  <div class="member-info{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="name binf-pull-left" title="{{name}}">{{name}}</span>
+  </div>
+{{else}}
+  <div class="member-picture{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="csui-icon image_group_placeholder"></span>
+  </div>
+  <div class="member-info{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="name binf-pull-left" title="{{name}}">{{name}}</span>
+    <span class="group-title binf-pull-left" title="{{group-title}}">{{group-title}}</span>
+    {{#if leader}}
+      <span class="leader binf-pull-left" title="{{leader}}">{{leader}}</span>
+      <span class="leader-title binf-pull-left" title="{{leader-title}}">{{leader-title}}</span>
+    {{/if}}
+    {{#if disabled}}
+      <span class="message binf-pull-left">{{disabled-message}}</span>
+    {{/if}}
+  </div>
+{{/if}}
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

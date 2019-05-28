@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Alpaca Form Renderer</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+
+    .binf-widgets .binf-container {
+      padding: 1em;
+      background-color: #ffffff;
+      margin: 20px;
+    }
+
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          // Trick to get the default user image placeholder working;
+          // the usual mocked connection '//server/otcs/cs/api/v1'
+          // and '/support' would not produce a valid URL for the
+          // browser to load an <img> from, but if you create a
+          // symlink in your project root to CS_CORE_UI/src and call
+          // it 'csui', the following connection parameters will
+          // allow you to see the default user image on this page
+
+          connection: {
+            url: '/api/v1',
+            supportPath: '/',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      },
+      deps: ['csui/lib/require.config!csui/csui-extensions.json']
+    });
+
+    require(["csui/lib/underscore", "csui/lib/jquery", "csui/lib/backbone", "csui/lib/marionette",
+      "csui/models/form", "csui/controls/form/form.view", 'csui/utils/contexts/page/page.context',
+      'csui/controls/form/test/alpcontrols.mock'
+    ], function (_, $, Backbone, Marionette, FormModel, FormView, PageContext, mock) {
+
+      var pageContext = new PageContext({
+        factories: {
+          connector: {
+            connection: {
+              url: '//server/otcs/cs/api/v1',
+              supportPath: '/support',
+              session: {
+                ticket: 'dummy'
+              }
+            }
+          }
+        }
+      });
+
+      mock.enable();
+
+      //form.view =  'bootstrap-edit';
+
+      var contentRegionForm = new Marionette.Region({el: "#form"}),
+          formView;
+
+      var hideNotRequired = false;
+
+      // set display mode
+      $('#show').on('click', function () {
+        var spec = $('#spec').val(),
+            parsedSpec = JSON.parse(spec),
+            form = {
+              data: parsedSpec.data || {},
+              schema: parsedSpec.schema || {
+                "properties": {},
+                "type": "object"
+              },
+              options: parsedSpec.options || {}
+            };
+
+        var mode = $('input[name=inlineRadioOptions]:checked').val();
+        var colMode = $('input[name=inlineRadioOptionsCol]:checked').val();
+        var displayMode = $('input[name=inlineRadioOptionsMode]:checked').val();
+
+        if (mode === 'required') {
+          _.each(form.schema.properties, function (cur) {
+            cur.required = true;
+          });
+        } else {
+          _.each(form.schema.properties, function (cur) {
+            cur.required = false;
+          });
+        }
+
+        var formModel = new FormModel(form),
+            options = {
+              model: formModel,
+              mode: displayMode,
+              context: pageContext
+            };
+
+        if (formView) {
+          formView.destroy();
+        }
+        formView = new FormView(options);
+
+        formView.layoutMode = colMode;
+
+        contentRegionForm.show(formView);
+
+      });
+
+      $('#validate').on('click', function () {
+        formView.validate();
+      });
+
+      $('#toggleRequired').on('click', function () {
+        hideNotRequired = !hideNotRequired;
+        formView.hideNotRequired(hideNotRequired);
+      });
+
+      $('div[id*=li]').css("padding", "5px");
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Instructions:</div>
+    <div class="buttons binf-col-sm-8">Set up the parameters of the form, enter the {data, schema,
+      options} form specification and click the "Show" button below.
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Fields:</div>
+
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="optional" checked>
+      optional
+    </label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="required"> required
+    </label>
+
+  </div>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Layout mode:</div>
+
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsCol" id="inlineRadio3" value="singleCol" checked>
+      single column
+    </label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsCol" id="inlineRadio4" value="multiCol"> multi
+      column
+    </label>
+  </div>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Display mode:</div>
+
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsMode" id="inlineRadio13" value="read" checked>
+      read</label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsMode" id="inlineRadio14" value="create">
+      create</label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsMode" id="inlineRadio15" value="update">
+      update</label>
+  </div>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Form specification:</div>
+    <textarea id="spec"></textarea>
+  </div>
+
+  <div class="" style="margin:2em;">
+    <button type="button" class="btn btn-primary" id="show">Show</button>
+  </div>
+
+  <div class="">
+    <div id="form"></div>
+
+    <div class="binf-col-sm-offset-2 binf-col-sm-8">
+      <button type="button" class="btn btn-primary" id="validate">Validate form</button>
+    </div>
+
+    <div class="binf-col-sm-offset-2 binf-col-sm-8">
+      <button type="button" class="btn btn-primary" id="toggleRequired">Toggle not required fields
+      </button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

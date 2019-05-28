@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.cke_colordialog_colorcell {
+	width: 12px !important; 
+	height: 14px !important;
+	padding: 1px !important; 
+}
+
+.cke_colordialog_colorcell.cke_colordialog_focused_light,
+.cke_colordialog_colorcell.cke_colordialog_focused_dark {
+	padding: 0 !important; 
+	border: 1px dotted #000 !important;
+}
+
+.cke_colordialog_colorcell.cke_colordialog_focused_dark {
+	border-color: #FFF !important;
+}

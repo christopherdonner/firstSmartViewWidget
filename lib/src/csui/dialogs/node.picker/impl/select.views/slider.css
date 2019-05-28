@@ -1,0 +1,164 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-select-lists > div.cs-start-locations.csui-slideLeft {
+  left:50%;
+  animation: slideFarLeft 400ms forwards;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  -webkit-animation: slideFarLeft 400ms forwards;
+  -moz-animation: slideFarLeft 400ms forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation: slideFarLeft 400ms;
+  -o-animation-fill-mode: forwards;
+}
+.csui-select-lists > div.cs-pane-view.csui-slideMidLeft {
+  left:110%;
+  animation: slideMidLeft 400ms forwards;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  -webkit-animation: slideMidLeft 400ms forwards;
+  -moz-animation: slideMidLeft 400ms forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation: slideMidLeft 400ms;
+  -o-animation-fill-mode: forwards;
+}
+
+.csui-select-lists > div.cs-pane-view.csui-slideRight {
+  animation: slideRight 400ms forwards;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  -webkit-animation: slideRight 400ms forwards;
+  -moz-animation: slideRight 400ms forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation: slideRight 400ms;
+  -o-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slideFarLeft {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@-moz-keyframes slideFarLeft {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@-o-keyframes slideFarLeft {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes slideFarLeft {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes slideFarLeft {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes slideMidLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@-moz-keyframes slideMidLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@-o-keyframes slideMidLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes slideMidLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slideMidLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@-moz-keyframes slideRight {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@-o-keyframes slideRight {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 50%;
+  }
+}

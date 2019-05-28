@@ -1,0 +1,75 @@
+@startuml
+
+
+Authenticator <|-- BasicAuthenticator
+Authenticator <|-- TicketAuthenticator
+Authenticator <|-- RegularHeaderAuthenticator
+
+TicketAuthenticator <|-- RequestAuthenticator
+
+RequestAuthenticator <|-- CredentialsAuthenticator
+RequestAuthenticator <|-- InteractiveCredentialsAuthenticator
+RequestAuthenticator <|-- HeaderAuthenticator
+
+abstract class Authenticator {
+Object connection
+authenticate(options, success(), failure())
+setAuthenticationHeaders()
+}
+
+class BasicAuthenticator <<(C,lightgrey)>> {
+Object credentials
+setAuthenticationHeaders()
+}
+
+class CredentialsAuthenticator {
+authenticate() { login(connection.credentials)}
+}
+
+
+note left of BasicAuthenticator::setAuthenticationHeaders
+Authorization: Basic <B64encoded connection.credentials>
+endNote
+
+class TicketAuthenticator {
+String ticketHeader
+setAuthenticationHeaders()
+}
+
+class CredentialsAuthenticator <<(C,lightgrey)>> {
+authenticate(){ login(credentials);}
+}
+
+class HeaderAuthenticator <<(C,lightgrey)>> {
+authenticate(){ login(headers);}
+}
+
+
+class InteractiveCredentialsAuthenticator <<(C,lightgrey)>> {
+authenticate(){ openSignInDialog();}
+}
+
+
+note right of TicketAuthenticator::setAuthenticationHeaders
+ticketHeader: <connection.session.ticket>
+endNote
+
+class RegularHeaderAuthenticator <<(C,lightgrey)>> {
+setAuthenticationHeaders()
+}
+
+note right of RegularHeaderAuthenticator::setAuthenticationHeaders
+headers from connection.authenticationHeaders
+endNote
+
+class RequestAuthenticator {
+login()
+}
+
+note left of RequestAuthenticator::login
+$.ajax( this.connection.url + 'auth')
+endNote
+
+
+
+@enduml

@@ -1,0 +1,636 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-dialog.target-browse {
+  overflow: auto;
+}
+
+.cs-dialog.target-browse .binf-modal-lg {
+  
+  width: calc(100% - 16px); 
+  height: calc(100% - 200px);
+  margin-top: 2rem;
+  max-width: 68rem;
+  max-height: 42rem;
+  min-width: 40rem;
+  min-height: 27rem;
+}
+
+.binf-widgets .cs-dialog.target-browse.csui-save-filter-browse .csui-start-locations .binf-dropdown-menu {
+  top: 99%;
+}
+
+.cs-dialog.target-browse.csui-save-filter-browse .csui-start-locations.binf-dropdown > div.binf-open .binf-dropdown-toggle {
+  z-index: 1002;
+  position: relative;
+}
+
+.target-browse .binf-modal-content {
+  border-radius: 0px;
+  border: 0px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.target-browse .binf-modal-header {
+  padding: 0;
+  border: 0;
+  height: 3.5em;
+  border-bottom: 1px solid #a9a9a9;
+  background-color: #f5f5f5;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  width: calc(100%);
+}
+
+.target-browse.csui-save-filter-browse .binf-modal-header {
+  height: 4.5em;
+}
+
+.binf-widgets .target-browse .binf-modal-header div {
+  height: 100%;
+}
+
+.binf-widgets .csui-start-locations.binf-dropdown {
+  height: 3em;
+  float: left;
+  width: auto;
+}
+
+.target-browse .csui-title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+span.csui-separator {
+  display: inline-block;
+  margin-left: 1em;
+  height: 24px;
+  width: 1px;
+  background-color: #cccccc;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cs-header-control .csui-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.binf-widgets .csui-start-locations > div.dropdown-locations > button {
+  border: none;
+  border-radius: 0;
+  padding: 0 1rem;
+  font-size: 14px;
+  height: 100%;
+  width: auto;
+  background-color: #f5f5f5;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+}
+
+@-moz-document url-prefix() {
+  .binf-widgets .csui-start-locations > .binf-widgets div.dropdown-locations > .binf-widgets button {
+    display: block;
+  }
+}
+
+.binf-widgets .csui-start-locations > .binf-widgets div.dropdown-locations > .binf-widgets button > .binf-widgets div {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+}
+
+.csui-start-locations.binf-dropdown > div.dropdown-locations {
+  z-index: 10;
+  position: absolute;
+  width: auto;
+  top: 0;
+  
+}
+
+.csui-start-locations .dropdown-locations.binf-open button.binf-dropdown-toggle:focus {
+  outline: 0;
+}
+
+.csui-start-locations.binf-dropdown > div .binf-dropdown-toggle:hover {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.csui-start-locations.binf-dropdown > div.binf-open {
+  background-color: #ffffff !important;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.csui-start-locations.binf-dropdown > div.binf-open .binf-dropdown-toggle {
+  background-color: #ffffff !important;
+}
+
+.csui-start-locations .binf-dropdown-menu {
+  z-index: 1000;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 0.25em 0px;
+  background-clip: border-box;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.csui-start-locations .binf-dropdown-menu li a {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+}
+
+.csui-start-locations .binf-dropdown-menu .binf-divider {
+  margin: 0.25em 0px;
+}
+
+.csui-start-locations .cs-icon,
+.cs-pane-view .cs-icon {
+  width: 1em;
+}
+
+.csui-start-locations .binf-dropdown-toggle .cs-label,
+.csui-start-locations .binf-dropdown-menu .cs-label {
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.csui-start-locations .binf-dropdown-toggle .cs-label,
+.csui-start-locations .binf-dropdown-menu .cs-label {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.csui-start-locations .binf-dropdown-toggle .cs-label.select-prompt {
+  color: #333333;
+  font-style: italic;
+}
+
+.target-browse .cs-breadcrumb {
+  height: 2em;
+  padding: 0 1.5em;
+  background-color: #ffffff;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.target-browse .cs-breadcrumb .binf-breadcrumb {
+  background-color: #ffffff;
+  height: 100%;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.target-browse .cs-breadcrumb .binf-breadcrumb > li {
+  background-color: #ffffff;
+  line-height: 100%;
+  font-size: 14px;
+}
+
+.target-browse .cs-breadcrumb .breadcrumb-inner {
+  padding-right: 10%;
+}
+
+.target-browse .cs-breadcrumb .breadcrumb-inner,
+.target-browse .cs-breadcrumb .searchheader-inner {
+  height: 100%;
+}
+
+.target-browse .cs-folder-name {
+  border-bottom: 1px solid #a9a9a9;
+  height: 3.0625rem;
+  background-color: #e6e6e6;
+}
+
+.target-browse .cs-folder-name .folder-name {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  line-height: 1rem;
+}
+
+.target-browse .cs-folder-name .cs-icon {
+  width: 1.3rem;
+  vertical-align: middle;
+  margin-left: 1em;
+  display: inline-block;
+  height: 1rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.target-browse .cs-folder-name .cs-icon:hover,
+.target-browse .cs-folder-name .cs-icon:focus {
+  width: 1.3rem;
+  height: 1rem;
+}
+
+.target-browse .binf-modal-body {
+  padding: 0;
+  overflow: hidden;
+  flex: 1 1000 auto;
+  -ms-flex: 1 1000 auto;
+  -webkit-flex: 1 1000 auto;
+  height: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  border-bottom: 1px solid #a9a9a9;
+}
+
+.cs-modal-filter .binf-form-group {
+  position: relative;
+  height: 100%;
+  margin: 0px;
+  margin-left: 24px;
+  display: inline-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(100% - 62px)
+}
+
+.cs-modal-filter .cs-filter-input {
+  box-sizing: border-box;
+  height: 35px;
+  border-radius: 3px;
+  border: 1px solid #a7a9ac;
+  vertical-align: middle;
+  width: 100%;
+  padding-right: 30px;
+}
+
+.cs-modal-filter .cs-filter-input:focus {
+  border: 2px solid #666666;
+}
+
+.cs-modal-filter .cs-filter-input::-ms-clear {
+  display: none;
+}
+
+.cs-modal-filter .cs-filter-input::-moz-placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+.cs-modal-filter .cs-filter-input:-moz-placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+.cs-modal-filter .cs-filter-input::-webkit-input-placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+.cs-modal-filter .cs-filter-input:-ms-input-placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+.cs-modal-filter .form-control-search {
+  display: block;
+  margin-left: 16px;
+  margin-right: 16px;
+  background-repeat: no-repeat;
+  z-index: 10 !important;
+  pointer-events: auto;
+}
+
+.cs-modal-filter .binf-form-control-feedback {
+  margin-right: .5em;
+  margin-left: .5em;
+  display: block;
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 53px;
+  cursor: pointer;
+  z-index: 10 !important;
+  pointer-events: auto;
+}
+
+.cs-modal-filter .binf-form-control-feedback.icon-formfield-clear {
+  margin-right: 0;
+}
+
+.cs-modal-filter .binf-form-control-feedback:hover,
+.cs-modal-filter .binf-form-control-feedback:focus {
+  width: 1em;
+  height: 1em;
+  top: calc(50% - 8px);
+}
+
+.target-browse .binf-modal-footer {
+  padding: 1em 1.5em;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.binf-modal-footer .binf-btn {
+  height: 2em;
+  padding: 0 1.5em;
+}
+
+.binf-modal-footer .binf-btn-default {
+  background-color: #ffffff;
+  border-radius: 1em;
+  border: 1px solid #0072aa;
+  font-size: 0.875em;
+  line-height: 0.75;
+  color: #0072aa;
+}
+
+.binf-modal-footer .binf-btn-default:focus {
+  background-color: #0072aa;
+  color: #ffffff;
+  border: 1px solid #0072aa;
+  box-shadow: inset 0 0 2px #ffffff;
+  outline: 0;
+}
+
+.binf-modal-footer .binf-btn-default:hover {
+  background-color: #0072aa;
+  color: #ffffff;
+}
+
+.binf-modal-footer .binf-btn-default:active {
+  background-color: #004b71;
+  color: #ffffff;
+}
+
+.binf-modal-footer .binf-btn-primary {
+  background-color: #0072aa;
+  border-radius: 1em;
+  font-size: 0.875em;
+  line-height: 0.75;
+  color: #ffffff;
+}
+
+.binf-modal-footer .binf-btn-primary:focus {
+  background-color: #0072aa;
+  color: #ffffff;
+  outline: 1px dotted #333333;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.binf-modal-footer .binf-btn-primary:hover {
+  background-color: #004b71;
+  color: #ffffff;
+}
+
+.binf-modal-footer .binf-btn-primary:active {
+  background-color: #0072aa;
+  color: #ffffff;
+}
+
+
+.binf-modal-footer .binf-btn:disabled {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #999999;
+}
+
+.target-browse .cs-breadcrumb .csui-icon {
+  width: 20px;
+  float: left;
+  margin-right: 0.5em;
+}
+
+.binf-widgets .csui-node-picker {
+  overflow: hidden;
+  width: 100%;
+
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+#csui-np-selectviews.csui-full-height {
+  height: 100%;
+}
+
+#csui-np-selectviews {
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  height: 100%;
+  flex: 1 1000 auto;
+  -ms-flex: 1 1000 auto;
+  -webkit-flex: 1 1000 auto;
+}
+
+#csui-np-actionbar {
+  height: 45px;
+}
+
+.cs-dialog .modal-md {
+  width: 50%;
+  top: 70px;
+}
+
+.cs-dialog .modal-md .binf-modal-body {
+  padding: 0;
+  margin: 0;
+}
+
+.cs-dialog .modal-md .tile-title {
+  padding: 0;
+  margin: 0px 0 0 5px;
+}
+
+.cs-dialog .modal-md .tile-title .csui-heading {
+  padding-top: 12px !important;
+}
+
+.cs-dialog .modal-md .binf-close {
+  padding: 0;
+  margin: 0 15px 0 15px;
+  font-size: 1.1em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+  opacity: 0.5;
+}
+
+.cs-dialog .modal-md .binf-close .icon-tileCollapse {
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.cs-dialog .modal-md .binf-close .cs-icon-cross {
+  padding: 18px;
+  vertical-align: middle;
+}
+
+.cs-dialog .modal-md .binf-close:hover {
+  opacity: 1;
+}
+
+.target-browse.cs-dialog .binf-modal-footer {
+  background-color: #f5f5f5;
+  padding: 0.75rem 1.5rem;
+  border: none;
+}
+
+.csui-node-picker .tile-header {
+  height: 27px;
+  border: 0px;
+}
+
+.target-browse .tile-title {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.binf-widgets .target-browse.cs-dialog .cs-header-control {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  width: 100%;
+}
+
+.binf-widgets .target-browse.cs-dialog input.search {
+  width: 90%;
+  padding-right: 30px;
+}
+
+.binf-widgets .target-browse.cs-dialog .cs-header-control .csui-target-controls {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  width: calc(100% - 125px);
+}
+
+.binf-widgets .target-browse .binf-modal-header .csui-search-options-dropdown {
+  height: auto;
+  z-index: 12;
+}
+
+.binf-widgets .target-browse.cs-dialog .cs-header-control .csui-target-controls.csui-no-search {
+  display: flex;
+  position: relative;
+}
+
+@media all and (max-width: 1023px) {
+  .target-browse .cs-header-control .csui-title {
+    min-width: 80px;
+    max-width: 370px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .target-browse .csui-search-box .csui-header-search-icon {
+    right: -44px;
+  }
+}
+
+@media all and (max-width: 992px) {
+
+  .binf-modal-dialog .metadata-content .metadata-content-header .metadata-header-right-bar-container {
+    top: 50px;
+    padding-top: 0;
+  }
+
+  .binf-modal-dialog .metadata-content .metadata-content-header.shortcut-object .metadata-header-right-bar-container,
+  .binf-modal-dialog .metadata-content .metadata-content-header.with-close-icon .metadata-header-right-bar-container {
+    top: 0px;
+    padding-top: 16px;
+  }
+
+  .binf-widgets .target-browse .metadata-content .cs-metadata-properties {
+    top: 0px;
+    padding-top: 16px;
+  }
+
+  .binf-widgets .metadata-content .cs-add-item-metadata-form .cs-metadata-properties {
+    margin-top: 16px;
+    height: calc(100% - 76px);
+  }
+
+  .metadata-wrapper .metadata-navigation .cs-add-item-metadata-form .cs-metadata-properties .binf-tab-content {
+    height: calc(100% - 64px);
+  }
+
+  .metadata-wrapper .metadata-navigation .cs-add-item-metadata-form .cs-metadata-properties .binf-tab-content.show-validation-error {
+    height: calc(100% - 120px);
+  }
+
+  .target-browse .metadata-content .metadata-header.with-right-bar {
+    width: 100%;
+    max-width: 100%;
+  }
+}

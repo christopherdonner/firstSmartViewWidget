@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Signin View Test</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    .docRef {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .democontainer {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 90%;
+      height: 90%;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+      require(["csui/lib/marionette", "signin.mock.data", "../signin.view"
+      ], function (Marionette, mock, SigninView) {
+
+          var options = {
+                  connection: {
+                      url: '//murdock.opentext.com/alpha/cs.exe/api/v1',
+                      supportPath: '/alphasupport'
+                  }
+              },
+              contentRegion = new Marionette.Region({
+                  el: "#content"
+              }),
+              control = new SigninView(options),
+              userName = 'whodunit',
+              credential = 'secret';
+
+          // when the mock is enabled, the given url is just a string and no real connection will be made
+          // mock.enable(options.connection.url, userName, credential);
+
+          if (mock && mock.isEnabled())
+          {
+              document.getElementById("hint").innerHTML = "Mocked! Try " + userName + ", " + credential;
+          }
+
+          control.render();
+
+          control.on('success', function (event) {
+              var msg = "success! Event details: userName=" + event.username + " session=" + event.session.ticket;
+              alert(msg);
+              console.info(msg);
+          });
+
+          control.on('failure', function (event) {
+              var msg = "failure! Event details: userName=" + event.username + " msg=" + event.error.message + " status=" + event.error.statusCode + " url=" + event.error.url;
+              alert(msg); // this alert shifts the focus from the gui and thus causes the error-message to vanish
+              console.warn(msg);
+          });
+          contentRegion.show(control);
+      });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-text-info" id="hint"></div>
+<div><a class="docRef" href="../doc/signin.md">Documentation</a></div>
+
+<div class="democontainer" id="content"></div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

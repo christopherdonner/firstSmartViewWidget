@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Standard List Item Control</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding-top: 1em;
+    }
+
+    .binf-widgets .docRef {
+      /*
+            position: absolute;
+            top: 20px;
+            left: 20px;
+      */
+      color: #ffffff;
+    }
+
+    .binf-widgets .listitem{
+      padding: 5px;
+      margin: 10px 5px 10px 5px;
+      background-color: #fff;
+    }
+
+    a:link {
+      color: grey;
+    }
+
+    a:hover {
+      color: grey;
+    }
+
+    a:active {
+      color: grey;
+    }
+
+    a:visited {
+      color: grey;
+    }
+
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require(["csui/lib/jquery", "csui/lib/backbone", "csui/lib/marionette",
+      "csui/utils/connector",
+      "csui/controls/listitem/listitemstandard.view",
+      "csui/controls/listitem/listitemstateful.view",
+      "csui/controls/listitem/listitemobject.view",
+      "csui/controls/listitem/simpletreelistitem.view"
+    ], function ($, Backbone, Marionette, Connector,
+        StandardListItem, StatefulListItem, ObjectListItem, SimpleTreeListItemView) {
+
+      var contentRegionStali1 = new Marionette.Region({
+            el: "#stali1"
+          }),
+          contentRegionObjli1 = new Marionette.Region({
+            el: "#objli1"
+          }),
+          contentRegionObjli2 = new Marionette.Region({
+            el: "#objli2"
+          }),
+          contentRegionObjli3 = new Marionette.Region({
+            el: "#objli3"
+          }),
+          contentRegionObjli4 = new Marionette.Region({
+            el: "#objli4"
+          }),
+          staItem             = new Backbone.Model({
+            name: 'Carbon Fiber Demonstration Meetings All Contents February 2014'
+          }),
+          objItem1            = new Backbone.Model({
+            id: '120001',
+            name: 'Robotic Lawn Mower - HomeDep.',
+            size: '1000 Items',
+            categories: {
+              sales_opportunity: {
+                key: 'SOPP-06478',
+                price: '84,500.00',
+                currency: 'EUR',
+                stage: '6. Create Price Proposal',
+                closed_date: '09/05/2014'
+              }
+            }
+          }),
+          objItem2            = new Backbone.Model({
+            id: '120001',
+            name: 'Robotic Lawn Mower - HomeDep.',
+            size: '1000 Items',
+            categories: {
+              sales_opportunity: {
+                key: 'SOPP-06478',
+                price: '84,500.00',
+                currency: 'EUR',
+                stage: '6. Create Price Proposal',
+                closed_date: '09/05/2014'
+              }
+            }
+          }),
+          objItem3            = new Backbone.Model({
+            id: '120031',
+            name: 'Armstrong, Liz',
+            categories: {
+              employee: {
+                job: 'Account Executive',
+                photo: 'images/liz.png'
+              }
+            }
+          }),
+          stali               = new StandardListItem({
+            model: staItem,
+            name: '{name}',
+            icon: 'csui-icon-node-category-folder'
+          }),
+          objli1              = new ObjectListItem({
+            model: objItem1,
+            data: {
+              "key": "{categories.sales_opportunity.key}",
+              "name": "{name}",
+              "size": "{size}",
+              "stage": {
+                "label": "Stage:",
+                "value": "{categories.sales_opportunity.stage}"
+              },
+              "price": "{categories.sales_opportunity.price}",
+              "currency": "{categories.sales_opportunity.currency}",
+              "date": {
+                "label": "Closed Date",
+                "value": "{categories.sales_opportunity.closed_date}"
+              }
+            }
+          }),
+          objli2              = new ObjectListItem({
+            model: objItem2,
+            data: {
+              "date": {
+                "label": "Closed Date",
+                "value": "{categories.sales_opportunity.closed_date}",
+                "class": {
+                  "expression": "{categories.sales_opportunity.closed_date}",
+                  "type": "Date",
+                  "valueRanges": [
+                    {
+                      "lessThan": "07/01/2014",
+                      "value": "cs-status-bad"
+                    },
+                    {
+                      "greaterOrEqual": "07/02/2014",
+                      "value": "cs-status-good"
+                    }
+                  ]
+                }
+              }
+            }
+          }),
+          objli3              = new ObjectListItem({
+            model: objItem3,
+            data: {
+              "name": "{name}",
+              "stage": {
+                "value": "{categories.employee.job}"
+              },
+              "icon": "{categories.employee.photo}"
+            }
+          });
+
+      var childrenCollection = new Backbone.Collection([
+        {id: 11112, name: "Tree List Item 1 Folder", type: 0},
+        {id: 11113, name: "Tree List Item 2.pdf", type: 144, mime_type: "application/pdf"},
+        {id: 11114, name: "Tree List Item 4.doc", type: 144, mime_type: "application/msword"}
+      ]);
+      var connection = {
+        url: "//server/otcs/cs/api/v1",
+        supportPath: "/otcssupport"
+      };
+      var connector = new Connector({connection: connection});
+      var i;
+      for (i = 0; i < childrenCollection.length; i++) {
+        childrenCollection.models[i].connector = connector;
+      }
+      var treeModel = new Backbone.Model({
+        id: 11111,
+        icon: 'mime_fav_group32',
+        name: "Tree List with icon"
+      });
+      treeModel.childrenCollection = childrenCollection;
+      var objli4 = new SimpleTreeListItemView({model: treeModel});
+
+      stali.on("click:item", function () {
+        alert('click:item raised');
+      });
+      objli1.on("click:item", function () {
+        alert('click:item raised');
+      });
+      objli2.on("click:item", function () {
+        alert('click:item raised');
+      });
+      objli3.on("click:item", function () {
+        alert('click:item raised');
+      });
+      objli4.on("click:item", function () {
+        alert('click:item raised');
+      });
+
+      stali.render();
+      objli1.render();
+      objli2.render();
+      objli3.render();
+      objli4.render();
+
+      contentRegionStali1.show(stali);
+      contentRegionObjli1.show(objli1);
+      contentRegionObjli2.show(objli2);
+      contentRegionObjli3.show(objli3);
+      contentRegionObjli4.show(objli4);
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets" style="margin: 5px">
+
+
+  <div class="row">
+    <div>
+      <a class="col-sm-6 col-md-5 col-lg-4 docRef" href="../doc/listitemstandard.md">Documentation ListItemStandard</a>
+    </div>
+    <div>
+      <a class="col-sm-6 col-md-5 col-lg-4 docRef" href="../doc/listitemobject.md">Documentation ListItemObject</a>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4" id="stalis">
+      <div id="stali1" ></div>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-4" id="objlis">
+      <div id="objli1" class="listitem"></div>
+      <div id="objli2" class="listitem"></div>
+      <div id="objli3" class="listitem"></div>
+      <div id="objli4" class="listitem"></div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

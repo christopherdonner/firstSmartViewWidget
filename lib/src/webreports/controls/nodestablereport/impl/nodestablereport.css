@@ -1,0 +1,45 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .webreports-nodestablereport-view {
+  height: calc(100vh - 181px);
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.binf-widgets .webreports-nodestablereport-view #tabletoolbar {
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+
+.binf-widgets .webreports-nodestablereport-view #tableview {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  min-height: 90px;
+}
+
+.binf-widgets .webreports-nodestablereport-view #paginationview {
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.binf-widgets .webreports-nodestablereport-view #paginationview .binf-pagination {
+  margin: 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .binf-widgets .webreports-nodestablereport-view {
+    height: calc(100vh - 315px);
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .binf-widgets .webreports-nodestablereport-view {
+    height: calc(100vh - 315px);
+  }
+}

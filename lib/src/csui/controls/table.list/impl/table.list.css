@@ -1,0 +1,66 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-table-list {
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 0;
+  border: 1px solid #cccccc;
+  border-bottom: 0;
+}
+
+.csui-table-list-header,
+.csui-table-list-body {
+  margin: 0;
+  padding: 0;
+}
+
+.csui-table-list-body {
+  height: calc(100% - 3em);
+}
+
+.csui-table-list-header {
+  background-color: #f1f1f1;
+  min-height: 3em;
+}
+
+.csui-table-list-header .csui-table-header,
+.csui-table-list-body .csui-table-row {
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+  display: inline-block;
+}
+
+.csui-table-list-header .csui-table-header {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: calc(3em - 2px);
+}
+
+.csui-table-header div.csui-table-header-cell,
+.csui-table-body div.csui-table-cell {
+  display: block;
+  float: left;
+  padding: 5px 3px;
+  height: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.csui-table-extra-cols > .csui-table-metadata-view .cs-form .binf-form-group {
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.csui-table-extra-cols > .csui-table-metadata-view {
+  padding-bottom: 1em;
+}
+
+.binf-widgets .csui-table-list .csui-table-row.active-row {
+  background-color: #dfe7ea;
+}

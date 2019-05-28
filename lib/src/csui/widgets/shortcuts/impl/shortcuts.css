@@ -1,0 +1,36 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-shortcut-container.tile {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+.binf-widgets .csui-shortcut-container.tile:hover {
+  box-shadow: 0px 0px 0px 0px #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container.tile:active {
+  box-shadow: 0px 0px 0px 0px #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-region {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 0.5em;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-region:first-child {
+  margin-top: 0px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-region-medium {
+  flex-grow: 0;
+  height: calc(50% - 0.25em);
+}

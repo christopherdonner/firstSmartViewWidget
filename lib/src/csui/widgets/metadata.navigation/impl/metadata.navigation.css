@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-metadata-navigation-wrapper {
+  background-color: #ffffff;
+}
+
+.binf-widgets .cs-metadata-navigation-wrapper.cs-metadata-no-bg-color {
+  background-color: transparent;
+}
+
+.binf-widgets .cs-metadata-navigation-wrapper,
+.binf-widgets .cs-metadata-navigation-wrapper > .cs-metadata,
+.binf-widgets .cs-metadata-navigation-wrapper > .cs-metadata .metadata-navigation > .metadata-content > .cs-metadata {
+  height: 100%;
+}
+
+.binf-widgets .cs-metadata-navigation-wrapper > .cs-metadata {
+  overflow: hidden;
+}

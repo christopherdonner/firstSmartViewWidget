@@ -1,0 +1,4180 @@
+/* FIXME: Merge this with the list control */
+
+.cs-tile .tile-content {
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 64px);
+}
+
+.cs-expanded.binf-modal .binf-modal-header .tile-type-icon,
+.cs-expanded.binf-modal .binf-modal-header .tile-type-image {
+  width: 1em;
+  /* height: 1 em; */
+  line-height: 1em;
+}
+.binf-widgets .csui-html-editor-wrapper,
+.binf-widgets .csui-html-editor-wrapper-parent, .binf-widgets .csui-html-editor-grand-parent {
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-wrapper .cke_editable {
+  border: none;
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-wrapper .cke_editable:hover {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-wrapper-parent .ps-scrollbar-y-rail {
+  right: 3px;
+  z-index: 1040;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message {
+  background-color: #ffffff;
+  border: none;
+  height: calc(100%);
+  margin: 0px;
+  padding-right: 10px;
+  word-wrap: break-word;
+  line-height: 24px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  font-weight: 300;
+  font-style: oblique;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message p {
+  margin-bottom: 1em;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message table,
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message img {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message.cke_editable {
+  z-index: 1040;
+  padding-right: 15px;
+  margin-right: 0px;
+}
+
+.binf-widgets .cui-rich-editor-widget-wrapper {
+  background-color: #ffffff;
+}
+
+.binf-widgets .cs-tile.cui-rich-editor-widget-wrapper .tile-content {
+  padding: 0;
+}
+
+.binf-widgets .cui-rich-editor-widget-wrapper .tile-controls .binf-dropdown,
+.binf-widgets .cui-rich-editor-widget-wrapper .tile-controls .csui-html-editor-reserved,
+.binf-widgets .cui-rich-editor-widget-wrapper .tile-controls .csui-html-editor-reserved-readonly {
+  margin-top: 18px;
+  float: right;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown a,
+.binf-widgets .csui-html-editor-grand-parent .csui-html-editor-tile-controls.tile-controls a {
+  cursor: pointer;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .csui-html-editor-control {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-position: center;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .csui-icon {
+  height: 22px;
+  width: 22px;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .icon-html-edit-toolbar-more {
+  margin: 3px auto auto auto;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon {
+  background-size: 16px;
+  width: 28px;
+  height: 28px;
+  float: left;
+  margin: 0px 0px 0px 8px;
+}
+
+.binf-widgets .csui-html-editor-action-buttons button:focus {
+  border: 1px dotted #333333;
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon.csui-html-edit-save:disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon:hover,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown.binf-open .csui-html-editor-control,
+.binf-widgets .csui-html-editor-grand-parent:hover .tile-controls .binf-dropdown .csui-html-editor-control {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown .binf-dropdown-menu,
+.binf-widgets .csui-html-editor-grand-parent .binf-dropdown-menu {
+  margin-top: 6px;
+  border-radius: 0;
+  z-index: 1041;
+  right: 0;
+  left: auto;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown .binf-dropdown-menu.csui-html-editor-floating-dd-menu,
+.binf-widgets .csui-html-editor-grand-parent .binf-dropdown-menu.csui-html-editor-floating-dd-menu {
+  right: auto;
+  left: 0;
+}
+
+.binf-widgets .csui-html-editor-action-buttons {
+  /*width: auto;*/
+  /*display: inline-block;*/
+  white-space: nowrap;
+  float: left;
+  padding: 0px 8px;
+  margin-top: 12px;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .csui-rich-text-edit-icon-wrapper {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-html-editor-no-header {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .csui-html-editor-tile-controls.tile-controls {
+  color: #000000;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: auto;
+  height: 32px;
+  padding: 0;
+  z-index: 1;
+}
+
+.binf-widgets .csui-html-editor-grand-parent:hover .csui-html-editor-tile-controls.tile-controls {
+  z-index: 1041;
+}
+
+.binf-widgets .csui-richtext-message.cke_editable:hover {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-richtext-message ol {
+  list-style-type: decimal;
+}
+
+.binf-widgets .csui-richtext-message ul {
+  list-style-type: disc;
+}
+
+.binf-widgets .csui-rich-text-mask {
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.binf-widgets .csui-html-editor-zindex {
+  z-index: 1040;
+}
+
+.binf-widgets .csui-rich-text-body-mask {
+  position: absolute;
+  z-index: 1040;
+}
+
+/* CKEditor toolbar styling - begin */
+
+.binf-widgets .csui-rich-text-editor-toolbar.cke_reset_all,
+.binf-widgets .csui-rich-text-editor-toolbar.cke_reset_all * {
+  z-index: 1040;
+}
+
+.binf-widgets .csui-rich-text-editor-toolbar .cke_button.cke_button__save,
+.binf-widgets .csui-rich-text-editor-toolbar .cke_button.cke_button__cancel {
+  background-size: 100%;
+  cursor: pointer;
+}
+
+/* CKEditor toolbar styling - end */
+
+/* CKEditor Page Content format - start */
+.binf-widgets .csui-richtext-message h1,
+.binf-widgets .csui-richtext-message h2,
+.binf-widgets .csui-richtext-message h3,
+.binf-widgets .csui-richtext-message h4,
+.binf-widgets .csui-richtext-message h5 {
+  font-weight: bold;
+  color: #333333;
+  font-style: normal;
+}
+
+.binf-widgets .csui-richtext-message h1,
+.binf-widgets .csui-richtext-message h2,
+.binf-widgets .csui-richtext-message h3 {
+  margin-bottom: 0.5em;
+}
+
+.binf-widgets .csui-richtext-message h1 {
+  font-size: 26px;
+}
+
+.binf-widgets .csui-richtext-message h2 {
+  font-size: 22px;
+}
+
+.binf-widgets .csui-richtext-message h3 {
+  font-size: 18px;
+}
+
+.binf-widgets .csui-richtext-message h4 {
+  font-size: 14px;
+}
+
+.binf-widgets .csui-richtext-message h5 {
+  font-size: 12px;
+}
+
+.binf-widgets .csui-richtext-message p,
+.binf-widgets .csui-richtext-message dt {
+  margin: 0 0 0.5em 0;
+}
+
+.binf-widgets .csui-richtext-message ol {
+  margin-top: 0.5em;
+  padding-top: 0;
+  margin-left: 0;
+  padding-left: 2em;
+}
+
+.binf-widgets .csui-richtext-message dl {
+  margin: 0;
+  padding: 0;
+}
+
+.binf-widgets .csui-richtext-message ul {
+  margin-top: .5em;
+  padding-top: 0;
+  margin-left: 0;
+  padding-left: 1.5em;
+}
+
+.binf-widgets .csui-richtext-message li {
+  margin-top: .5em;
+  padding-top: 0;
+}
+
+.binf-widgets .csui-richtext-message code,
+.binf-widgets .csui-richtext-message .literal,
+.binf-widgets .csui-richtext-message .code,
+.binf-widgets .csui-richtext-message .filename,
+.binf-widgets .csui-richtext-message .screen, .programlisting {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 115%;
+}
+
+.binf-widgets .csui-richtext-message .programlisting {
+  font-family: "Courier New", Courier, monospace;
+  font-color: #58595b;
+}
+
+.binf-widgets .csui-richtext-message .guilabel {
+  font-family: Arial, Verdana, Sans-Serif;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.binf-widgets .csui-richtext-message .specialnote {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em
+}
+
+/*CKEditor custom css -start*/
+
+/*Begin more styles*/
+.binf-widgets .csui-html-editor-wrapper small {
+  font-size: smaller !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper big,
+.binf-widgets .csui-html-editor-wrapper .csui-big {
+  font-size: larger !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .marker {
+  background-color: Yellow;
+}
+
+.binf-widgets .csui-html-editor-wrapper sub,
+.binf-widgets .csui-html-editor-wrapper sup {
+  font-size: 75% !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper ol {
+  list-style-type: decimal;
+}
+
+.binf-widgets .csui-html-editor-wrapper ul {
+  list-style-type: disc;
+}
+
+.binf-widgets .csui-html-editor-wrapper em, .binf-widgets .csui-html-editor-wrapper var, .binf-widgets .csui-html-editor-wrapper cite, .binf-widgets .csui-html-editor-wrapper i,
+.binf-widgets .csui-html-editor-wrapper i > a, .binf-widgets .csui-html-editor-wrapper a > i, .binf-widgets .csui-html-editor-wrapper em > a, .binf-widgets .csui-html-editor-wrapper a > em {
+  font-style: italic;
+}
+
+.binf-widgets .csui-html-editor-wrapper tt, samp {
+  font-family: monospace !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper q {
+  quotes: inherit !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper q:before {
+  content: open-quote !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper q:after {
+  content: close-quote !important;
+}
+
+/*End more styles*/
+
+.binf-widgets .csui-richtext-message .cke_button.cke_button__save_disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 1;
+}
+
+.binf-widgets .csui-richtext-message .cke_toolbar:last-of-type .cke_toolgroup {
+  background-color: #f5f5f5;
+  border: none;
+  box-shadow: none
+}
+
+.binf-widgets .csui-richtext-message .cke_toolbar:last-of-type .cke_toolgroup a:first-child {
+  margin-left: 0;
+}
+
+.binf-widgets .csui-richtext-message .cke_toolbar:last-of-type .cke_toolgroup a:last-child {
+  margin-right: 0;
+}
+
+.binf-widgets .csui-richtext-message .dp-highlighter {
+  font-family: "Consolas", "Courier New", Courier, mono, serif;
+  font-size: 12px;
+  background-color: #e7e5dc;
+  width: 99%;
+  overflow: auto;
+  margin: 18px 0 !important;
+  padding-top: 1px;
+}
+
+/*CKEditor custom css - end*/
+
+/* html editor table styling - begin */
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) {
+  border: 1px solid #c1c1c1;
+  width: 100%;
+}
+
+.binf-widgets .csui-richtext-message .specialnote tr td:first-child {
+  width: 10%;
+}
+
+.binf-widgets .csui-richtext-message table[align="center"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.binf-widgets .csui-richtext-message table {
+  border-collapse: unset;
+  border-spacing: 2px;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tr,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tr > td,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tr > th,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tbody > tr,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tbody > tr > td,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tbody > tr > th {
+  border: 1px solid;
+}
+
+.binf-widgets .csui-richtext-message table.specialnote td {
+  vertical-align: top;
+}
+
+.binf-widgets .csui-richtext-message th {
+  font-weight: bold;
+}
+
+.binf-widgets .csui-richtext-message blockquote {
+  border-width: 3px;
+  margin: 15px;
+  padding: 15px;
+}
+
+/* html editor table styling - end */
+
+.binf-widgets .csui-richtext-message img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.csui-html-editor-grand-parent b,
+.csui-html-editor-grand-parent strong {
+  font-weight: bold;
+}
+
+.csui-html-editor-grand-parent i,
+.csui-html-editor-grand-parent em {
+  font-style: italic;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_inner {
+  display: inline-block;
+  float: left;
+}
+
+.binf-modal-open .cke_reset_all.csui-rich-text-editor-toolbar {
+  visibility: hidden;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_inner .csui-html-edit-icon {
+  white-space: nowrap;
+}
+
+html[dir="ltr"] .cke_reset_all.csui-rich-text-editor-toolbar[style*="right"] .cke_inner {
+  float: right;
+}
+
+html[dir="rtl"] .cke_reset_all.csui-rich-text-editor-toolbar[style*="left"] .cke_inner {
+  float: right;
+}
+
+/* Begin: stylings for errors */
+.csui-html-editor-grand-parent .csui-error .csui-error-icon-div {
+  padding-top: 2.5em;
+}
+
+.csui-html-editor-grand-parent .csui-error .csui-error-icon-parent {
+  border: 0;
+  background-color: #f7f7f7;
+}
+
+.row-xs-full .csui-html-editor-grand-parent .csui-error .csui-error-icon-div {
+  padding-top: 9em;
+}
+
+.csui-html-editor-grand-parent .csui-error .csui-error-icon-div .csui-error-icon {
+  width: 6em;
+  height: 6em;
+}
+
+.csui-html-editor-grand-parent .csui-error .csui-message {
+  padding: 2em;
+  line-height: 1.5rem;
+}
+
+/* End: stylings for errors */
+
+/* html editor reserved info */
+.csui-html-editor-control .csui-html-editor-reserved-icon {
+  margin: 2px auto auto auto;
+}
+
+#breadcrumb-wrap.csui-html-editor-zero-zindex {
+  z-index: 0;
+}
+
+/**
+* as ckeditor not supporting multiple skins and appends only one editor.css
+* stackoverflow question link:
+* https://stackoverflow.com/questions/30481246/ckeditor-multiple-skins-on-a-single-page
+* ckeditor source link: https://github.com/ckeditor/ckeditor-dev/blob/major/core/skin.js
+* refer to function loadCss( part, callback ), once editor.css part is loaded it will not
+* appned new one. So we have given a workaround for this issue
+* check rich.text.editor.js for implementation
+* This class is the fix for LPAD-63231 observation in comment.
+* Class and its style is common in skins editor.css
+*/
+.cke_reset_all.csui-rich-text-editor-toolbar,
+.cke_reset_all.csui-rich-text-editor-toolbar * {
+  box-sizing: content-box;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_button_label,
+.csui-rich-text-editor-toolbar .cke_voice_label {
+  display: none;
+}
+
+.cke_toolbar {
+  float: left;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_toolbar_separator {
+  float: left;
+  margin: 5px 2px 0;
+  height: 18px;
+  width: 1px;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar a.cke_button {
+  display: inline-block;
+  padding: 4px 6px;
+  height: 18px;
+  float: left;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_toolbar_break {
+  display: block;
+  clear: left
+}
+
+.cke_reset.csui-rich-text-editor-toolbar .cke_combo_button,
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_combo_button {
+  display: inline-block;
+  margin: 0 6px 5px 0;
+  border-top: 1px solid #eeeeee;
+  padding: 1px;
+}
+
+.cke_reset.csui-rich-text-editor-toolbar .cke_combo_text,
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_combo_text {
+  line-height: 26px;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 60px;
+}
+
+.csui-rich-text-editor-toolbar .cke_button_icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.csui-rich-text-editor-toolbar.cke_reset_all .cke_toolgroup {
+  padding: 1px;
+  float: left;
+}
+
+.csui-rich-text-editor-toolbar .cke_button_arrow {
+  display: inline-block;
+}
+
+/*Css start for HTML Tile Templates*/
+/* Contact cards */
+
+.binf-widgets .csui-html-editor-wrapper .contact {
+  color: #333333;
+  margin: 16px 16px 32px 16px;
+  width: calc(100% - 32px);
+  text-align: left;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactImage {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 8px;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactImage img {
+  height: 96px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact h1 {
+  font-size: 1.4em;
+  margin: 0 0 4px 16px;
+  font-weight: 400;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact p.contactTitle {
+  color: #333333;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact p.contactCompany {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact .header {
+  position: relative;
+  font-size: .875em;
+  padding: 16px 16px 12px 128px;
+  border-radius: 4px 4px 0 0;
+  min-height: 96px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact {
+  border-bottom: 4px solid #33c6c8;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact header p {
+  margin-bottom: 4px;
+  color: #666666;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact ul {
+  font-size: .875em;
+  text-align: left;
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact ul li {
+  padding: 12px 16px 12px 0px;
+  margin-left: 16px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact ul li:last-child {
+  border-bottom: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactLabel {
+  display: block;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactValue {
+  line-height: 1.4em;
+}
+
+/* Contact cards end */
+
+/* QuickIconlinks */
+.binf-widgets .csui-html-editor-wrapper .linkGroup {
+  display: inline-block;
+  vertical-align: top;
+  margin: 16px;
+  padding: 12px 0 0 0;
+  border-top: 2px solid #e2e2e2;
+  line-height: 1;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.v:first-child {
+  padding: 0 0 0 0;
+  border-top: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.h {
+  width: 240px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.icons {
+  width: 180px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.v {
+  width: calc(100% - 32px);
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup h2 {
+  font-size: 1.2em;
+  color: #333333;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup ul {
+  font-size: .875em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li {
+  padding: 8px 0;
+  margin: 0;
+  line-height: 1.2em;
+}
+
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  vertical-align: top;
+  margin: 16px;
+  padding: 0;
+  outline: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:focus {
+  outline: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 8px auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a,
+.binf-widgets .csui-html-editor-wrapper .contact a {
+  display: inline-block;
+  color: #2f4ed1;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Lato;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a:active,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:active,
+.binf-widgets .csui-html-editor-wrapper .contact a:active {
+  color: #2e3d98;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a:visited,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:visited,
+.binf-widgets .csui-html-editor-wrapper .contact a:visited {
+  color: #4f3690;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a:hover,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:hover,
+.binf-widgets .csui-html-editor-wrapper .contact a:hover {
+  color: #0084ce;
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+/* Defaults */
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h1,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h2,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h3,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h4,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h5,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h6,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > p,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ol,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > blockquote {
+  padding: 0;
+  margin: 0 16px 0 16px !important;
+  font-weight: normal !important;
+  color: #333333;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 300;
+  margin-bottom: 4px;
+  margin-left: 0px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > p {
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 22px;
+  margin-bottom: 24px !important;
+  margin-top: 8px !important;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400 !important;
+  margin-bottom: 4px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400 !important;
+  margin-bottom: 0px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h5 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400 !important;
+  margin-bottom: 4px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h6 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400 !important;
+  color: #000000;
+  margin-bottom: 4px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ol {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  font-weight: 400 !important;
+  max-width: 24em;
+  margin: -8px 0 24px 32px !important;
+  padding: 0 0 0 16px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul {
+  list-style: disc;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul li,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ol li {
+  margin: 6px 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > blockquote {
+  font-size: 14px;
+  line-height: 20px;
+  background: #f7f7f7;
+  border-left: 4px solid #cccccc;
+  margin: 16px 32px 16px 16px !important;
+  padding: 16px !important;
+  width: 80%;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > code {
+  border: 1px solid #cccccc;
+  color: #000000;
+  font-family: Courier, 'New Courier', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 16px 32px 16px 16px;
+  padding: 16px;
+  width: 80%;
+  display: block;
+  background-color: inherit !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer {
+  display: inline-block;
+  text-align: center;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:link p {
+  color: #2f4ed1;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:visited p {
+  color: #4f3690;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:hover p {
+  color: #0084ce;
+  text-decoration: underline;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:active p {
+  color: #2e3d98;
+  text-decoration: none;
+}
+
+/* Table */
+.binf-widgets .csui-html-editor-wrapper table.binf-table {
+  margin: 16px;
+  width: calc(100% - 32px) !important;
+  border-collapse: collapse !important;
+  border-top: 1px solid #cccccc !important;
+  vertical-align: top;
+  text-align: left;
+  font-size: .875em;
+}
+
+.binf-widgets .csui-html-editor-wrapper .binf-table td {
+  background-color: #ffffff;
+  padding: 8px !important;
+  overflow: hidden;
+  word-break: normal;
+  border-bottom: 1px solid #cccccc !important;
+  color: #333333;
+  background-color: #ffffff
+}
+
+.binf-widgets .csui-html-editor-wrapper .binf-table th {
+  padding: 8px !important;
+  border-bottom: 1px solid #757575 !important;
+  overflow: hidden;
+  word-break: normal;
+  background-color: #f5f5f5;
+}
+
+.binf-widgets .csui-html-editor-wrapper .binf-table {
+  vertical-align: top
+}
+
+/*Css end for HTML Tile Templates*//**
+ * cssyntaxhighlighter
+ * http://alexgorbatchev.com/syntaxhighlighter
+ *
+ * cssyntaxhighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/syntaxhighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ * 
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.cssyntaxhighlighter a,
+.cssyntaxhighlighter div,
+.cssyntaxhighlighter code,
+.cssyntaxhighlighter table,
+.cssyntaxhighlighter table td,
+.cssyntaxhighlighter table tr,
+.cssyntaxhighlighter table tbody,
+.cssyntaxhighlighter table thead,
+.cssyntaxhighlighter table caption,
+.cssyntaxhighlighter textarea {
+  -moz-border-radius: 0 0 0 0 !important;
+  -webkit-border-radius: 0 0 0 0 !important;
+  background: none !important;
+  border: 0 !important;
+  bottom: auto !important;
+  float: none !important;
+  height: auto !important;
+  left: auto !important;
+  line-height: 1.1em !important;
+  margin: 0 !important;
+  outline: 0 !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  position: static !important;
+  right: auto !important;
+  text-align: left !important;
+  top: auto !important;
+  vertical-align: baseline !important;
+  width: auto !important;
+  box-sizing: content-box !important;
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 1em !important;
+  min-height: inherit !important;
+  min-height: auto !important;
+}
+
+.cssyntaxhighlighter {
+  width: 100% !important;
+  margin: 1em 0 1em 0 !important;
+  position: relative !important;
+  overflow: auto !important;
+  font-size: 1em !important;
+}
+.cssyntaxhighlighter.source {
+  overflow: hidden !important;
+}
+.cssyntaxhighlighter .bold {
+  font-weight: bold !important;
+}
+.cssyntaxhighlighter .italic {
+  font-style: italic !important;
+}
+.cssyntaxhighlighter .line {
+  white-space: pre !important;
+}
+.cssyntaxhighlighter table {
+  width: 100% !important;
+}
+.cssyntaxhighlighter table caption {
+  text-align: left !important;
+  padding: .5em 0 0.5em 1em !important;
+}
+.cssyntaxhighlighter table td.code {
+  width: 100% !important;
+}
+.cssyntaxhighlighter table td.code .container {
+  position: relative !important;
+}
+.cssyntaxhighlighter table td.code .container textarea {
+  box-sizing: border-box !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: white !important;
+  padding-left: 1em !important;
+  overflow: hidden !important;
+  white-space: pre !important;
+}
+.cssyntaxhighlighter table td.gutter .line {
+  text-align: right !important;
+  padding: 0 0.5em 0 1em !important;
+}
+.cssyntaxhighlighter table td.code .line {
+  padding: 0 1em !important;
+}
+.cssyntaxhighlighter.nogutter td.code .container textarea, .cssyntaxhighlighter.nogutter td.code .line {
+  padding-left: 0em !important;
+}
+.cssyntaxhighlighter.show {
+  display: block !important;
+}
+.cssyntaxhighlighter.collapsed table {
+  display: none !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar {
+  padding: 0.1em 0.8em 0em 0.8em !important;
+  font-size: 1em !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar span {
+  display: inline !important;
+  margin-right: 1em !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar span a {
+  padding: 0 !important;
+  display: none !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar span a.expandSource {
+  display: inline !important;
+}
+.cssyntaxhighlighter .toolbar {
+  position: absolute !important;
+  right: 1px !important;
+  top: 1px !important;
+  width: 11px !important;
+  height: 11px !important;
+  font-size: 10px !important;
+  z-index: 10 !important;
+}
+.cssyntaxhighlighter .toolbar span.title {
+  display: inline !important;
+}
+.cssyntaxhighlighter .toolbar a {
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  padding-top: 1px !important;
+}
+.cssyntaxhighlighter .toolbar a.expandSource {
+  display: none !important;
+}
+.cssyntaxhighlighter.ie {
+  font-size: .9em !important;
+  padding: 1px 0 1px 0 !important;
+}
+.cssyntaxhighlighter.ie .toolbar {
+  line-height: 8px !important;
+}
+.cssyntaxhighlighter.ie .toolbar a {
+  padding-top: 0px !important;
+}
+.cssyntaxhighlighter.printing .line.alt1 .content,
+.cssyntaxhighlighter.printing .line.alt2 .content,
+.cssyntaxhighlighter.printing .line.highlighted .number,
+.cssyntaxhighlighter.printing .line.highlighted.alt1 .content,
+.cssyntaxhighlighter.printing .line.highlighted.alt2 .content {
+  background: none !important;
+}
+.cssyntaxhighlighter.printing .line .number {
+  color: #bbbbbb !important;
+}
+.cssyntaxhighlighter.printing .line .content {
+  color: black !important;
+}
+.cssyntaxhighlighter.printing .toolbar {
+  display: none !important;
+}
+.cssyntaxhighlighter.printing a {
+  text-decoration: none !important;
+}
+.cssyntaxhighlighter.printing .plain, .cssyntaxhighlighter.printing .plain a {
+  color: black !important;
+}
+.cssyntaxhighlighter.printing .comments, .cssyntaxhighlighter.printing .comments a {
+  color: #008200 !important;
+}
+.cssyntaxhighlighter.printing .string, .cssyntaxhighlighter.printing .string a {
+  color: blue !important;
+}
+.cssyntaxhighlighter.printing .keyword {
+  color: #006699 !important;
+  font-weight: bold !important;
+}
+.cssyntaxhighlighter.printing .preprocessor {
+  color: gray !important;
+}
+.cssyntaxhighlighter.printing .variable {
+  color: #aa7700 !important;
+}
+.cssyntaxhighlighter.printing .value {
+  color: #009900 !important;
+}
+.cssyntaxhighlighter.printing .functions {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter.printing .constants {
+  color: #0066cc !important;
+}
+.cssyntaxhighlighter.printing .script {
+  font-weight: bold !important;
+}
+.cssyntaxhighlighter.printing .color1, .cssyntaxhighlighter.printing .color1 a {
+  color: gray !important;
+}
+.cssyntaxhighlighter.printing .color2, .cssyntaxhighlighter.printing .color2 a {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter.printing .color3, .cssyntaxhighlighter.printing .color3 a {
+  color: red !important;
+}
+.cssyntaxhighlighter.printing .break, .cssyntaxhighlighter.printing .break a {
+  color: black !important;
+}
+
+.cssyntaxhighlighter {
+  background-color: white !important;
+}
+.cssyntaxhighlighter .line.alt1 {
+  background-color: white !important;
+}
+.cssyntaxhighlighter .line.alt2 {
+  background-color: white !important;
+}
+.cssyntaxhighlighter .line.highlighted.alt1, .cssyntaxhighlighter .line.highlighted.alt2 {
+  background-color: #e0e0e0 !important;
+}
+.cssyntaxhighlighter .line.highlighted.number {
+  color: black !important;
+}
+.cssyntaxhighlighter table caption {
+  color: black !important;
+}
+.cssyntaxhighlighter .gutter {
+  color: #afafaf !important;
+}
+.cssyntaxhighlighter .gutter .line {
+  border-right: 3px solid #6ce26c !important;
+}
+.cssyntaxhighlighter .gutter .line.highlighted {
+  background-color: #6ce26c !important;
+  color: white !important;
+}
+.cssyntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+.cssyntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid #6ce26c !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar a {
+  color: blue !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar a:hover {
+  color: red !important;
+}
+.cssyntaxhighlighter .toolbar {
+  color: white !important;
+  background: #6ce26c !important;
+  border: none !important;
+}
+.cssyntaxhighlighter .toolbar a {
+  color: white !important;
+}
+.cssyntaxhighlighter .toolbar a:hover {
+  color: black !important;
+}
+.cssyntaxhighlighter .plain, .cssyntaxhighlighter .plain a {
+  color: black !important;
+}
+.cssyntaxhighlighter .comments, .cssyntaxhighlighter .comments a {
+  color: #008200 !important;
+}
+.cssyntaxhighlighter .string, .cssyntaxhighlighter .string a {
+  color: blue !important;
+}
+.cssyntaxhighlighter .keyword {
+  color: #006699 !important;
+}
+.cssyntaxhighlighter .preprocessor {
+  color: gray !important;
+}
+.cssyntaxhighlighter .variable {
+  color: #aa7700 !important;
+}
+.cssyntaxhighlighter .value {
+  color: #009900 !important;
+}
+.cssyntaxhighlighter .functions {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter .constants {
+  color: #0066cc !important;
+}
+.cssyntaxhighlighter .script {
+  font-weight: bold !important;
+  color: #006699 !important;
+  background-color: none !important;
+}
+.cssyntaxhighlighter .color1, .cssyntaxhighlighter .color1 a {
+  color: gray !important;
+}
+.cssyntaxhighlighter .color2, .cssyntaxhighlighter .color2 a {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter .color3, .cssyntaxhighlighter .color3 a {
+  color: red !important;
+}
+
+.cssyntaxhighlighter .keyword {
+  font-weight: bold !important;
+}
+.binf-widgets .csui-alert {
+  /* Bootstrap 3 goes as high as 1070 and the blocking view 1101. */
+  z-index: 1200;
+}
+
+.csui-alert .icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 32px;
+  width: 32px;
+}
+
+.csui-alert .binf-modal-content {
+  background-color: #fff;
+  border-radius: 3px;
+  border-bottom: 0 none;
+}
+
+.csui-alert .binf-modal-header {
+  border-bottom: 0px none;
+  font-size: 24px;
+}
+
+.csui-alert .binf-modal-header .binf-close {
+  opacity: .7;
+}
+
+.csui-alert .binf-modal-header .binf-close:hover {
+  opacity: 1;
+}
+.csui-alert .question-header,
+.csui-alert .warning-header,
+.csui-alert .error-header,
+.csui-alert .info-header,
+.csui-alert .success-header,
+.csui-alert .message-header {
+  background-color: transparent;
+  color: #000;
+}
+
+.csui-alert .question-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #111B57;
+  border-radius: 2px;
+}
+
+.csui-alert .warning-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #DF6800;
+}
+
+.csui-alert .error-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #DF3323;
+}
+
+.csui-alert .info-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #2D3C97;
+}
+
+.csui-alert .success-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #067C13;
+}
+
+.csui-alert .binf-modal-header .binf-modal-title .icon {
+  float: left;
+}
+
+.csui-alert .binf-modal-header .binf-modal-title .title-text {
+  margin-left: 15px;
+  width: calc(100% - 47px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  line-height: normal;
+}
+
+.csui-alert .binf-modal-body {
+  margin: 0px 30px 15px;
+  white-space: pre-wrap;
+  font-size: 1.1em;
+  line-height: 120%;
+  font-weight: 300;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.csui-alert .binf-modal-footer {
+  border-top: 0 solid #e5e5e5;
+  margin: 0 15px 15px 15px;
+}
+
+.csui-alert .binf-modal-footer.csui-no-body {
+  margin-top: 15px;
+}
+
+.csui-alert .binf-modal-footer .binf-btn {
+  border-radius: 1rem;
+  min-width: 5rem;
+  margin-left: 10px;
+  line-height: 0.75rem;
+  font-size: 0.875rem;
+  height: 2rem;
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default {
+  border-radius: 1rem;
+  min-width: 5rem;
+  margin-left: 10px;
+  line-height: 0.75rem;
+  font-size: 0.875rem;
+  height: 2rem;
+  border: 1px solid #0072aa;
+  color: #0072aa;
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default:hover {
+  background-color: #ffffff;
+  border: 1px solid #004b71;
+  color: #004b71;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  -moz-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default:focus {
+  outline: 1px dotted #333333;
+  outline-offset: 2px;
+  background-color: #ffffff;
+  border: 1px solid #004b71;
+  box-shadow: none;
+  color: #004b71;
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default:active {
+  border: 1px solid #0072aa;
+  color: #0072aa;
+}@media screen and (max-width: 992px) {
+    .binf-widgets .binf-navbar-left li.tile-breadcrumb {
+        display: none;
+    }
+}.binf-widgets .binf-navbar-right {
+  padding-right: 0px;
+}
+.binf-widgets .binf-nav > div{
+  position: relative;
+  display: block;
+  float: left;
+}
+.binf-navbar .binf-navbar-nav > div:not(.csui-help) > a {
+  padding-top: 7px;
+  padding-bottom: 10px;
+}
+
+.binf-navbar .binf-navbar-nav > div:not(.csui-help) > .breadcrumbs-handle > a {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  height: 60px;
+}
+
+.binf-widgets .binf-nav > div > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  line-height: 26px;
+  color: #777;
+}
+.binf-navbar .binf-navbar-nav.binf-navbar-right > div.csui-search {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-basis: auto;
+  -webkit-flex-basis: auto;
+}
+
+.binf-nav>div>*>a.nav-profile {
+  display: inline-block;
+  height: 60px;
+  float: left;
+  padding: 7px 10px 6px;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .binf-widgets .binf-navbar-left {
+    float: left;
+  }
+
+  .binf-widgets .binf-navbar-right {
+    float: right;
+    margin-right: -15px;
+  }
+
+  .binf-navbar-left > li, .binf-navbar-right > li {
+    float: left;
+  }
+
+  .csui-global-message.csui-progresspanel {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .csui-progressrow .csui-names-progress {
+    width: 80%;
+    padding: 0;
+  }
+
+  .csui-progressrow .csui-names {
+    width: 80%;
+  }
+
+  .csui-progressrow .csui-progress {
+    width: 15%;
+  }
+
+  .csui-progressbar .csui-progress-static .csui-progress-textbar {
+    margin: 0;
+  }
+
+  .csui-progressrow .csui-error {
+    margin-left: 2em;
+  }
+
+  .csui-error .csui-progressrow .csui-names-progress {
+    width: 100%;
+    padding: 0;
+  }
+
+  .csui-error .csui-progressrow .csui-states-actions {
+    padding: 0;
+  }
+
+  .binf-navbar-nav .binf-open .binf-dropdown-menu {
+    right: 0;
+    left: auto;
+    position: absolute;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .csui-error .csui-progressrow .csui-progresscell {
+    padding-left: 0.1em;
+  }
+}
+
+.binf-navbar .csui-navbar-message {
+  float: none;
+  overflow: hidden;
+}
+
+/* FIXME: Navigation header styling should be cleaned up */
+.binf-navbar .csui-search-box .csui-input[style*="display: none"] ~ .icon-search {
+  display: block;
+  position: initial;
+  margin-top: 6px;
+  margin-right: -20px;
+}
+
+.binf-navbar .csui-search-box .csui-input {
+  width: 100%;
+}
+
+.binf-widgets .csui-global-message {
+  position: absolute;
+}
+
+.csui-navbar.binf-navbar {
+  z-index: 3
+}
+
+/* overriding bootstrap's navbar's background color as per spec */
+.binf-widgets .csui-navbar.binf-navbar {
+  background: transparent;
+  margin: 0px;
+  border: 1px solid transparent;
+}
+
+.binf-navbar .binf-navbar-nav {
+  margin: 0;
+}
+
+.binf-navbar .binf-navbar-nav a.csui-home,
+.binf-navbar .binf-navbar-nav .caret-hide-breadcrumb,
+.binf-navbar .csui-search {
+  height: 60px;
+}
+
+.binf-widgets div:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.binf-navbar .binf-navbar-nav > li:not(.csui-help) > a,
+.binf-navbar .binf-navbar-nav > li:not(.csui-help) > .breadcrumbs-handle > a {
+  padding-top: 7px;
+  padding-bottom: 10px;
+}
+
+.binf-navbar .binf-navbar-nav > li:not(.csui-help) > .breadcrumbs-handle > a {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 60px;
+}
+
+.binf-widgets .binf-navbar-right {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+
+.binf-navbar .binf-navbar-nav.binf-navbar-right > li.csui-search {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+
+  flex-basis: auto;
+  -webkit-flex-basis: auto;
+}
+
+/* Prevent company logo from hiding, when the search box is expanded */
+.binf-navbar-brand.binf-collapse.csui-logo-left,
+.binf-navbar-brand.binf-collapse.csui-logo-right {
+  display: block;
+  visibility: visible;
+}
+
+/* Move company logo to the left or right */
+.binf-navbar .binf-navbar-brand.csui-logo-left .csui-logo,
+.binf-navbar .binf-navbar-brand.csui-logo-right .csui-logo {
+  position: absolute;
+  top: 0;
+}
+
+.binf-navbar .binf-navbar-brand.csui-logo-left .csui-logo {
+  left: 33px;
+}
+
+.binf-navbar .binf-navbar-brand.csui-logo-right .csui-logo {
+  right: 33px;
+}
+
+.binf-widgets .binf-btn.btn-hide-breadcrumb:active,
+.binf-widgets .binf-btn.btn-show-breadcrumb:active {
+  padding: 4px 10px;
+}
+
+.binf-widgets .binf-btn.btn-hide-breadcrumb,
+.binf-widgets .binf-btn.btn-show-breadcrumb {
+  padding: 5px 11px;
+}
+
+#breadcrumb-wrap .breadcrumb-inner.breadcrumb-inner-header {
+  background: rgba(0, 0, 0, 0.25);
+}#breadcrumb-wrap {
+  position: absolute;
+  top: 12px;
+  width: 100%;
+  padding-left: calc(4vw + 15px);
+  padding-right: calc(4vw + 15px);
+  height: calc(2rem - 1px);
+  z-index: 2; /* Has to slide under the main navbar */
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  font-size: 0.875rem;
+  min-width: 768px;
+  opacity: 0;
+  margin-bottom: 1px;
+}
+
+.binf-widgets.csui-maximized-widget-mode #breadcrumb-wrap {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.binf-widgets.csui-maximized-widget-mode #breadcrumb-wrap > .binf-row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.binf-widgets.csui-maximized-widget-mode #breadcrumb-wrap > .binf-row > .binf-col-xs-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#breadcrumb-wrap.breadcrumb-wrap-visible {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  opacity: 1;
+}
+
+#breadcrumb-wrap .binf-row {
+  height: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#breadcrumb-wrap .binf-item {
+  height: inherit;
+  display: flex;
+  display: -webkit-flex;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#breadcrumb-wrap .breadcrumb-inner {
+  width: 100%;
+  height: inherit;
+  padding-right: 10%;
+  background: #ebf1f4;
+}
+
+#breadcrumb-wrap .binf-breadcrumb {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center; /* IE 11 needs that - margin: auto does not work here */
+  height: inherit;
+}
+
+#breadcrumb-wrap .binf-breadcrumb > li.tail {
+  flex-shrink: 0;
+}
+
+#breadcrumb-wrap .binf-breadcrumb > li.binf-active {
+  display: block;
+}
+
+.binf-widgets #breadcrumb-wrap .binf-breadcrumb > li.binf-active {
+  color: #c3e5f6;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.binf-widgets #breadcrumb-wrap .binf-dropdown-menu > li > a {
+  color: #333333;
+}
+
+.binf-widgets .binf-breadcrumb>li.binf-active, .binf-widgets .binf-breadcrumb>li.tail {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  display: inline-flex;
+}/* Give Smart UI page minimum width; widgets cannot shrink indefinitely */
+body.binf-widgets {
+  min-width: 768px;
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* this is for IE and Edge to autohide scrollbar */
+}
+
+/* Height of the modal should always fit on the page; no vertical scrollbar
+   will be shown */
+body.binf-widgets.binf-modal-open {
+  overflow-y: hidden;
+}
+
+/* Give modal dialogs created by binf_modal plugin minimum width,
+   if they are in Smart UI */
+body.binf-widgets .binf-modal {
+  position: absolute;
+  min-width: 768px;
+}
+
+/* Make backdrop spread over the entire body; not only over the viewport,
+   if the modal dialog is in Smart UI */
+body.bin-widgets .binf-modal-backdrop {
+  position: fixed;
+}
+
+
+.binf-widgets .csui-search-box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 5px;
+}
+
+.csui-search-box .search-bar {
+  width: calc(100% - 50px);
+}
+
+.csui-search-box .search-bar-content {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: row;
+  width: calc(100% - 1px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.csui-search-box .icon-global-search {
+  background-position-y: 8px;
+  background-position-x: 8px;
+  padding: 8px;
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-size: 44px 44px;
+}
+
+.csui-search-box .csui-input {
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  font: 18px Lato;
+}
+
+.binf-nav .csui-search-box .csui-input {
+  height: 38px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 7px 30px 7px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+
+.csui-search-box .csui-search-box .csui-input:focus {
+  outline: 0;
+}
+
+.csui-search-box .csui-input::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+.binf-widgets .csui-input-focus {
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.csui-search-box .csui-clearer {
+  color: #d3d3d3;
+  position: absolute;
+  top: calc((100% - 20px) / 2);
+  right: 1em;
+  line-height: 1.4em;
+  font-size: 1.4em;
+  pointer-events: auto;
+  z-index: 10;
+  display: none;
+}
+
+.csui-search-box .csui-clearer.formfield_clear {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 10px;
+}
+
+.csui-search-box a.csui-header-search-icon {
+  text-decoration: none;
+}
+
+.csui-search-box .csui-header-search-icon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.binf-navbar-nav .csui-search-box .csui-header-search-icon {
+  padding: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-search-box .csui-search-box-slice-popover {
+  color: #333333;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 25px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  width: 32px;
+  height: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.binf-widgets .csui-search-box .csui-search-box-slice-popover:focus {
+  outline-style: dotted;
+  outline: 1px dotted #333333;
+}
+
+.search-bar .binf-popover-content {
+  min-width: 225px;
+}
+
+.search-bar .binf-popover-title {
+  display: none;
+}
+
+.search-bar .binf-popover {
+  border-radius: 0;
+}
+
+/****** START: OVERRIDING CHECKBOX STYLES FOR SLICES   ******/
+
+.binf-widgets .csui-slice-checkbox {
+  width: 100%;
+}
+
+.binf-widgets .csui-search-popover-row {
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-search-popover-row-body {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-search-popover-row:hover {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-search-popover-row.active {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-search-popover-row:active {
+  background-color: #dfe7ea;
+}
+
+.binf-widgets .csui-search-popover-checked {
+  background-repeat: no-repeat;
+  min-width: 18px;
+  min-height: 18px;
+  margin-top: 7px;
+  position: absolute;
+}
+
+.binf-widgets .csui-search-popover-label {
+  margin-left: 26px;
+  font: 14px Lato;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label {
+  position: relative;
+  word-break: break-all;
+  cursor: pointer;
+  display: inline-block;
+  width: calc(100% - 1.5625rem);
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label span.cs-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inherit;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.15;
+}
+
+/*.target-browse .csui-selected-checkbox.csui-slice-checkbox label span.cs-ellipsis::after {
+  content: '';
+  display: block;
+  height: 22px;
+  width: 32px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: linear-gradient(to right, rgba(255,255,255,0) 1%,rgba(255,255,255,0.45) 46%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%);
+}*/
+
+.csui-selected-checkbox.csui-slice-checkbox label::before {
+  margin-left: -1.5em;
+  top: 0;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label::after {
+  left: 0;
+  margin-left: -1.5em;
+  top: 0;
+}
+
+.binf-widgets .csui-search-slice-container-first {
+  height: 4px;
+}
+
+.binf-widgets .csui-search-slice-container-last {
+  height: 3px;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox input[type="checkbox"]:checked + label::after {
+  color: rgba(2, 115, 61, 0.99);
+  background-color: transparent;
+}
+
+.csui-search-box .binf-popover,
+.csui-search-box .binf-popover-content {
+  padding: 0;
+}
+
+.csui-search-box .icon-expandArrowDown:hover {
+  background-image: url('../widgets/search.box/impl/image/caret_down_mo.svg');
+}
+
+.csui-search-box .icon-expandArrowDown:active {
+  background-image: url('../widgets/search.box/impl/image/caret_down_md.svg');
+}
+
+/****** END: OVERRIDING CHECKBOX STYLES FOR SLICES   ******/
+
+.binf-widgets .csui-search-input-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex: 1 1 auto;
+  margin-right: 1em;
+  height: initial;
+  padding-left: 8px;
+}
+
+.binf-widgets input[type="search"]:focus{
+  border: 2px solid #666666;
+}
+
+/*.binf-widgets .csui-search-input-container::after {
+  content: '';
+  display: block;
+  height: 22px;
+  width: 32px;
+  position: absolute;
+  right: 34px;
+  top: 8px;
+  background: linear-gradient(to right, rgba(255,255,255,0) 1%,rgba(255,255,255,0.45) 46%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%);
+}*/
+
+.binf-widgets .csui-search-options-dropdown {
+  position: absolute;
+  background-color: #ffffff;
+  margin: 0;
+  width: calc(100% - 0.5rem);
+  height: 2.5em;
+  padding: 0 0.625rem 0 0.75rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.csui-search-box .csui-input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.csui-search-box .csui-input:-moz-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.csui-search-box .csui-input::-moz-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.csui-search-box .csui-input:-ms-input-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+
+/*.binf-widgets .csui-search .csui-search-input-container::after {
+  background: linear-gradient(to right, rgba(36, 121, 163, 0) 1%, rgba(36, 121, 163, 0.45) 46%, rgba(36, 121, 163, 0.99) 99%, rgba(36, 121, 163, 1) 100%);
+}
+*/
+
+.cs-favorites .tile-header {
+  cursor: pointer;
+}
+
+.cs-favorites .tile-content .binf-list-group .csui-item-standard.binf-list-group-item {
+  height: 48px;
+  padding: 0 16px 0 16px;
+  margin: 1px 0 0 0;
+  border: 0;
+}
+
+.cs-favorites .tile-content .binf-list-group .csui-item-standard.binf-list-group-item span:focus,
+.cs-favorites .tile-content .binf-list-group .csui-item-standard.binf-list-group-item span:active {
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+.cs-favorites .tile-content .binf-list-group > a.csui-item-standard:hover {
+  background-color: #d7d7d7;
+}
+
+.cs-favorites .tile-content .binf-list-group a.csui-item-standard:focus,
+.cs-favorites .tile-content .binf-list-group a.csui-item-standard.binf-active:focus {
+  outline: 1px dotted #333333;
+}
+
+.cs-favorites .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .csui-icon-group,
+.cs-favorites .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .csui-icon-group .csui-icon {
+  height: 32px;
+  width: 32px;
+  margin: 8px 8px 0 0;
+  background-repeat: no-repeat;
+}
+
+.cs-favorites .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .csui-icon-group .csui-icon {
+  margin: 0;
+}
+
+.cs-favorites .tile-content .csui-item-standard.binf-list-group-item .list-item-title {
+  font-size: 14px;
+  margin: 17px 0 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cs-favorites .tile-content .binf-list-group .cs-content .cs-list-group .cs-emptylist-container {
+  height: 48px;
+  margin: 0;
+  padding: 0 16px 0 56px;
+}
+
+.cs-favorites .tile-content .binf-list-group .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-placeholder {
+  display: none;
+}
+
+.cs-favorites .tile-content .binf-list-group .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-text {
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 48px;
+  text-align: left;
+}
+
+.cs-favorites .tile-content .binf-list-group .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-text p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+.csui-favorites-view {
+  width: 60px;
+  height: 60px;
+}
+
+.csui-favorites-view.showing-favorites-view {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+}
+
+.csui-favorites-view .csui-favorites-icon-container {
+  height: 60px;
+  padding: 8px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.csui-favorites-view.showing-favorites-view .csui-favorites-icon-container {
+  z-index: 1041;
+  background-color: #ffffff;
+}
+
+.csui-favorites-view .csui-favorites-icon-container .csui-icon-favorites {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.csui-favorites-view .csui-favorites-view-container {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+  z-index: 1040;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  display: block;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile {
+  background: #ffffff;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .tile-content {
+  background: #ffffff;
+  width: 252px;  /* = 15.75em x 16px/1em */
+  min-height: 150px;
+  max-height: 320px;  /* = 20em x 16px/1em */
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .tile-content .binf-list-group {
+  margin: 0 0 4px 0;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .tile-header,
+.csui-favorites-view .csui-favorites-view-container .content-tile .tile-header .cs-search-icon,
+.csui-favorites-view .csui-favorites-view-container .content-tile .tile-footer,
+.csui-favorites-view .csui-favorites-view-container .content-tile .tile-footer .tile-expand {
+  display: none;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-simpletreelistitem.binf-panel {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  margin: 0;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .arrow-overlay {
+  display: none;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-panel-heading,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard.binf-list-group-item {
+  height: 32px;
+  padding: 0 16px 0 16px;
+  background-color: #ffffff;
+  border: 0;
+
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard.binf-list-group-item {
+  margin: 4px 0 0 0;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile:hover {
+  box-shadow: none;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-panel-heading:hover,
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group > a:not(.clicked-no-hover):hover,
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group > a.binf-active:not(.clicked-no-hover):hover,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard:not(.clicked-no-hover):hover {
+  background-color: #bac9ce;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-panel-heading:focus,
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-panel-heading.binf-active:focus,
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group a:focus,
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group a.binf-active:focus,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group a.csui-item-standard:focus,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group a.csui-item-standard.binf-active:focus {
+  outline: 1px dotted #333333;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-panel-heading .container-icon,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .csui-icon-group,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .csui-icon-group .csui-icon {
+  height: 32px;
+  width: 24px;
+  margin: 0 8px 0 0;
+  background-repeat: no-repeat;
+}
+
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .csui-icon-group .csui-icon {
+  margin: 0;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-panel-heading .cs-title,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .list-item-title {
+  font-size: 14px;
+  margin: 9px 8px 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+
+  flex-basis: 0;
+  -webkit-flex-basis: 0;
+}
+
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard.binf-list-group-item .list-item-title {
+  margin-right: 0;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-panel-heading .dropdown-icon {
+  width: 16px;
+  height: 32px;
+  background-repeat: no-repeat;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-list-group  .cs-content {
+  min-height: 32px;
+  padding: 0;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-list-group .cs-content .cs-list-group .cs-emptylist-container {
+  height: 32px;
+  margin: 0;
+  padding: 0 16px 0 48px;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-list-group .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-placeholder {
+  display: none;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-list-group .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-text {
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: left;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .binf-list-group .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-text p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group {
+  padding: 0;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .binf-list-group-item {
+  width: 100%;
+  height: 28px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  border-radius: 0;
+  background-color: inherit;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group a {
+  width: 100%;
+  height: 32px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #323232;
+  text-decoration: none;
+  padding: 0 16px 0 48px;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-simpletreelistitem.flatten-tree .cs-content .cs-list-group a {
+  padding: 0 16px 0 16px;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group a.binf-active,
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group a.clicked-no-hover,
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group a.binf-active.clicked-no-hover,
+.csui-favorites-view .csui-favorites-view-container .tile-content .binf-list-group .csui-item-standard {
+  background-color: inherit;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group div.binf-list-group-item .csui-icon-group,
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group div.binf-list-group-item .csui-icon {
+  height: 28px;
+  width: 24px;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group div.binf-list-group-item .csui-icon {
+  margin-right: 8px;
+  display: block;
+  position: absolute;
+}
+
+.csui-favorites-view .csui-favorites-view-container .content-tile .cs-content .cs-list-group .list-item-title {
+  line-height: 28px;
+  height: 28px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  width: calc(100% - 40px);
+  top: 0;
+  left: 32px;
+}
+.binf-navbar-nav .binf-open > .binf-dropdown-menu.csui-profile-dropdown {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  border: 0px;
+  border-radius: 0;
+  margin-top: 0;
+}
+
+.binf-nav > li > * > ul.csui-profile-dropdown > li {
+  border: 0px;
+}
+
+.binf-nav > li > * > a.csui-navbar-icons {
+  margin: 0px 10px;
+}
+
+.binf-nav > li > * > a.csui-navbar-icons.notification {
+  /* FIXME: Notification icon has a different size than the user profile one */
+  margin: 6px 10px 0 6px;
+}
+
+.binf-nav > li > * > a.nav-profile {
+  display: inline-block;
+  height: 60px;
+  float: left;
+  padding: 7px 10px 6px;
+  margin: 0px 0px;
+}
+
+.binf-widgets .csui-profile li {
+  margin: 0px;
+  margin-bottom: 2px;
+}
+
+.binf-widgets .csui-profile li:first-child {
+  margin-top: 4px;
+}
+
+.binf-widgets .csui-profile li:last-child {
+  margin-bottom: 4px;
+}
+
+.binf-widgets .csui-profile li.csui-name > .cs-name {
+  display: none; /* todo: this is a workaround to hide an unnecessary markup created by user widget */
+}
+
+.binf-widgets .csui-profile > .binf-open > a {
+  z-index: 1001;
+  box-shadow: none;
+  position: relative;
+}
+
+.binf-widgets .csui-profile > .binf-open > a:focus {
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .csui-profile > .binf-open {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.binf-widgets .csui-profile li > a,
+.binf-widgets .csui-profile li > a:active {
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.csui-profile .user-display-name {
+  /*font-style: italic;*/
+}
+
+/*.csui-profile li:not(.csui-name) > a:hover*/
+.binf-widgets .csui-profile li a:hover {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-profile li.binf-divider {
+  padding: 0px;
+  margin: 4px 0px;
+}
+
+.binf-widgets .hide-menu {
+  display: none;
+}
+
+.binf-widgets .csui-profile-image,
+.binf-widgets .csui-profile-default-image {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+}
+
+.csui-profile a.nav-profile:hover,
+.csui-profile a.nav-profile:focus {
+  text-decoration: none;
+}
+/* Move the tabs to the right, cancel their underlining and round corners */
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs {
+  border-bottom: none;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a {
+  border-radius: 0;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content {
+  clear: both;
+}
+
+/* Temporarily patch the theme, so that the text is readable when hovered over */
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a {
+  color: #ffffff;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 48px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li.binf-active > a {
+  font-weight: bold;
+}
+
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a:focus {
+  outline: none;
+  background-color: rgba(148, 187, 234, 0.25);
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a > span.cs-tablink-text {
+  margin: 0 16px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  padding: 10px 0px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a > span.cs-tablink-text:focus{
+  outline: none;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li.binf-active > a > span.cs-tablink-text {
+  border-bottom: 4px solid #9de4f9;
+}
+
+/* Align the grid row with the top header widget, which is not in a grid row */
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row {
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Shrink the header is other than first tab is activated */
+
+.cs-tabbed-perspective.cs-toggling > .cs-header {
+  transition: height .3s ease-in-out;
+}
+
+.cs-tabbed-perspective > .cs-header {
+  height: 176px;
+  /*background-color: rgba(65, 64, 66, .85);*/
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cs-tabbed-perspective.cs-toggling.cs-collapse > .cs-header {
+  transition: height .3s ease-in-out;
+  
+}
+
+.cs-tabbed-perspective.cs-collapse > .cs-header {
+  height: 64px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-extension {
+  display:inline-block;
+  height: 48px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links {
+  height: 48px;
+  /*background-color: rgba(65, 64, 66, .98);*/
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-basis: auto;
+  -webkit-flex-basis: auto;
+  float: right;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs {
+  margin-bottom: 7.5px;
+}
+
+.cs-tabbed-perspective.cs-toggling > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  transition: height .3s ease-in-out;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 176px - 48px - 107.5px);
+  min-height: 160px;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 63px);
+}
+
+.binf-widgets.csui-maximized-widget-mode.csui-breadcrumbs-visible .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 94px);
+}
+
+.cs-tabbed-perspective.cs-toggling.cs-collapse > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  transition: height .3s ease-in-out;
+}
+
+.cs-tabbed-perspective.cs-collapse > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 64px - 48px - 107.5px);
+}
+
+/* Cut 50px from the bottom of the page; iPad can show a top toolbar and tab bar,
+   which take the space from the viewport without reporting it on the page. */
+
+.csui-on-ipad .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 176px - 48px - 157.5px);
+}
+
+.csui-on-ipad .cs-tabbed-perspective.cs-collapse > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 64px - 48px - 157.5px);
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-header {
+  display: none;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links {
+  display: none;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-header {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-header {
+  height: 74px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-header .conws-header-type {
+  display: none;
+}
+
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-content > .tab-panel > .tab-links {
+  background: transparent;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar {
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  overflow: hidden;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar.with-left-toolbar {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse:not(.cs-tabbed-flow-perspective) > .cs-content {
+  top: -47px;
+  position: relative;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-content {
+  top: 0;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar ul.binf-nav,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .right-toolbar {
+  height: 48px;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar ul.binf-nav {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500%;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page {
+  float: left;
+  width: inherit;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-position:center
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page {
+  background-image: url(../perspectives/tabbed/impl/images/next.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div {
+  width: 48px;
+  height: 48px;
+
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:hover {
+  background-image: url(../perspectives/tabbed/impl/images/next-hover.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:active {
+  background-image: url(../perspectives/tabbed/impl/images/next-select.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div:focus,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:focus,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div:focus,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:focus {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .right-toolbar:hover {
+  background-color: rgba(148, 187, 234, 0.25);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar:active,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .right-toolbar:active {
+  background-color: rgba(51, 51, 51, 0.25);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page {
+  background-image: url(../perspectives/tabbed/impl/images/prev.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:hover {
+  background-image: url(../perspectives/tabbed/impl/images/prev-hover.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:active {
+  background-image: url(../perspectives/tabbed/impl/images/prev-select.svg);
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li:not(.binf-active) > a:hover {
+  border-bottom: none;
+  background-color: rgba(148, 187, 234, 0.25);
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li:not(.binf-active) > a:active,
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li.binf-active > a:active {
+  background-color: rgba(51, 51, 51, 0.25)
+}
+
+
+.binf-widgets .xecmpf-businessattachments .xecmpf-attachmentstitlebaricon,
+.binf-widgets .xecmpf-businessattachments .xecmpf-attachmentstitleicon {
+  top: 15%;
+}
+
+.binf-widgets .cs-tabbed-perspective-header {
+  height: 100%;
+}
+
+/******Header background Change for xECM workspace css Ends here ******/.binf-widgets .csui-pman-editinput {
+  background: transparent;
+}
+
+.binf-widgets .csui-pman-editinput {
+  color: #ffffff !important;
+  caret-color: #ffffff;
+  border: 1px solid #ffffff;
+  margin: 10px 22px !important;
+  max-width: 332px;
+  min-width: 125px;
+}
+
+.binf-widgets .pman-edit-tab .cs-tablink-delete {
+  display: none;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.binf-widgets .pman-edit-tab .cs-tablink-delete .cs-delete-icon {
+  height: 16px;
+  width: 16px;
+  display: block;
+}
+
+.binf-widgets .pman-edit-tab.binf-active .cs-tablink-delete, .binf-widgets .pman-edit-tab:hover .cs-tablink-delete {
+  display: block;
+}
+
+.binf-widgets .csui-pman-add-newtab {
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 5px 5px 6px 5px;
+  padding: 8px;
+}
+
+.binf-widgets .csui-pman-add-newtab.csui-pman-disable-newtab {
+  opacity: 0.25;
+}
+
+.binf-widgets .csui-pman-add-newtab.csui-pman-disable-newtab .icon{
+  cursor:default;
+}
+
+.binf-widgets .csui-pman-add-newtab .icon {
+  height: 21px;
+  width: 21px;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.binf-widgets .csui-global-error {
+  width: 100%;
+  height: 100%;
+}
+
+.csui-global-error {
+  color: #ffffff;
+}
+
+.csui-global-error .main-area-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* consistent padding with perspective.panel.css */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.binf-widgets.csui-maximized-widget-mode .csui-global-error .main-area-container,
+.binf-widgets.csui-error-page-container .csui-global-error .main-area-container {
+  /* consistent padding with perspective.panel.css */
+  padding-left: calc(4vw + 15px);
+  padding-right: calc(4vw + 15px);
+}
+
+.csui-global-error .main-area-container .main-area-group {
+  height: auto;
+  display: inline-block;
+  position: relative;
+  top: 112px;  /* UXD: 7em = 112px */
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.csui-global-error .main-area-container .main-area-group .error-message-area,
+.csui-global-error .main-area-container .main-area-group .error-message-area > div {
+  display: block;
+}
+
+.csui-global-error .main-area-container .main-area-group .error-message-area .error-message,
+.csui-global-error .main-area-container .main-area-group .error-message-area .server-error-message {
+  text-align: justify;
+  text-align-last: center;
+  margin: 0 auto;
+}
+
+.csui-global-error .main-area-container .main-area-group .error-message-area > div > div > span {
+  width: auto;
+}
+
+.csui-global-error .main-area-container .main-area-group .error-message-area .error-message {
+  padding: 0 0 24px 0;
+}
+
+.csui-global-error .main-area-container .main-area-group .error-message-area span {
+  font-size: 24px;  /* UXD: 1.5em = 24px */
+}
+
+.csui-global-error .main-area-container .main-area-group .error-message-area .server-error-message {
+  font-weight: 200;
+  padding: 0 0 64px 0;
+}
+
+.csui-global-error .horizontal-center-align {
+  width: auto;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.csui-global-error .main-area-container .main-area-group .navigation-area .navigation-control-container {
+  width: 200px;
+  height: 300px;
+  display: inline-block;
+}
+
+.csui-global-error .main-area-container .main-area-group .navigation-area .navigation-control-container .circle-border {
+  width: 96px;
+  height: 96px;
+  display: block;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 16px;
+  margin: 0 0 24px 0;  /* UXD: 1.5em = 24px */
+  cursor: pointer;
+}
+
+.csui-global-error .main-area-container .main-area-group .navigation-area .navigation-control-container .go-home-button.circle-border {
+  padding: 12px 16px 12px 16px;  /* adjustment due to Home button not created vertically centre */
+}
+
+.csui-global-error .main-area-container .main-area-group .navigation-area .navigation-control-container .icon {
+  width: 64px;  /* UXD: 4em = 64px */
+  height: 64px;  /* UXD: 4em = 64px */
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.csui-global-error .main-area-container .main-area-group .navigation-area .navigation-control-container span {
+  font-weight: 200;  /* UXD: light */
+  font-size: 24px;  /* UXD: 1.5em = 24px */
+  cursor: pointer;
+}
+
+.csui-global-error .main-area-container .main-area-group .error-message-area span:focus,
+.csui-global-error .main-area-container .main-area-group .navigation-area .navigation-control-container .circle-border:focus {
+  outline: 1px dotted #666666;
+}
+.cs-assignments .tile-header {
+  cursor: pointer;
+
+}
+
+.binf-widgets .csui-myassignmentstable .csui-table-cell-name-appendix-full {
+  min-width: 0;
+  padding-left: 0;
+}
+.binf-widgets .cs-placeholder {
+  padding: 1em;
+  background-color: #cacaca;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.cs-recentlyaccessed .tile-header {
+  cursor: pointer;
+}
+.binf-widgets .cs-shortcut {
+  background-color: rgba(247, 247, 247, 0.82);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  color: #333333;
+}
+
+.binf-widgets .cs-shortcut:active,
+.binf-widgets .cs-shortcut:hover,
+.binf-widgets .cs-shortcut:focus,
+.binf-widgets .cs-shortcut:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.binf-widgets .cs-shortcut:focus {
+  border: 1px dotted #333333;
+}
+
+.cs-shortcut:not(.csui-disabled) {
+  cursor: pointer;
+}
+
+.cs-shortcut.csui-disabled {
+  pointer-events: none;
+}
+
+.cs-shortcut.csui-disabled .tile-title {
+  color: #757575;
+  font-style: italic;
+}
+
+.cs-shortcut.csui-disabled .tile-icon {
+  opacity: 0.5;
+}
+
+.cs-shortcut .tile-header {
+  background-color: #f7f7f7;
+}
+
+.cs-shortcut .tile-title {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.cs-shortcut .tile-icon {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: calc(100% - 70px);
+}
+
+.cs-shortcut .tile-icon .icon {
+  width: 7em;
+  height: 7em;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+}
+.binf-widgets .csui-shortcut-container .csui-shortcut-item {
+    flex-grow: 1;
+    background-color: rgba(247, 247, 247, 0.82);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333333;
+    text-decoration: none;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:active,
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:focus {
+    text-decoration: none;
+    color: #333333;
+    outline: 1px solid #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:hover {
+    outline: 1px solid #333333;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:not(.csui-disabled) {
+    cursor: pointer;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-disabled {
+    pointer-events: none;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-disabled .tile-title {
+    color: #757575;
+    font-style: italic;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-disabled .tile-icon {
+    opacity: 0.5;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item .tile-icon {
+    display: flex;
+    align-items: center;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item .tile-icon .icon {
+    background-repeat: no-repeat;
+    background-position: center 45%;
+}
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  height: 70px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error-icon-parent {
+  height: 42px;
+  width: 42px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error-icon {
+  width: 26px;
+  height: 26px;
+  margin: 8px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error-icon-div {
+  padding: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-message {
+  margin: 0 10px;
+  padding: 0;
+  text-align: left;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details {
+  height: 70px;
+  width: 100%;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details > div {
+  float: left;
+  margin-left: 10px;
+  height: 100%;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details .tile-icon .icon {
+  width: 2.625em;
+  height: 2.625em;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details .tile-title {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details .tile-title .csui-heading {
+  display: block;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade1 {
+  background: #d0d0d0;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade2 {
+  background: #9d9c9c;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade3 {
+  background: #777676;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade4 {
+  background: #505050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade1 {
+  background: #66cca7;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade2 {
+  background: #39ac82;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade3 {
+  background: #2c8464;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade4 {
+  background: #03634d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade1 {
+  background: #ee90ee;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade2 {
+  background: #e34fe3;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade3 {
+  background: #c71fc7;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade4 {
+  background: #9a189a;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade1 {
+  background: #cb7a0a;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade2 {
+  background: #bb6207;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade3 {
+  background: #aa4704;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade4 {
+  background: #9e3402;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade1 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade2 {
+  background: #3f4950;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade3 {
+  background: #71747b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade4 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade1 {
+  background: #71747b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade2 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade3 {
+  background: #70769b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade4 {
+  background: #3f4950;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade1 {
+  background: #005873;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade2 {
+  background: #078db3;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade3 {
+  background: #00639b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade4 {
+  background: #005c5d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade1 {
+  background: #008a8b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade2 {
+  background: #007599;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade3 {
+  background: #00639b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade4 {
+  background: #004267;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade1 {
+  background: #780050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade2 {
+  background: #c83370;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade3 {
+  background: #a8003d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade4 {
+  background: #780050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade1 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade2 {
+  background: #a0006b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade3 {
+  background: #ba004c;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade4 {
+  background: #8b0039;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade1 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade2 {
+  background: #2e3d98;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade3 {
+  background: #232e72;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade4 {
+  background: #111b58;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade1 {
+  background: #2e3d98;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade2 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade3 {
+  background: #232e72;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade4 {
+  background: #414979;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-failed {
+  background-color: #edf1fa;
+}.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium {
+  overflow-y: hidden;
+  flex-grow: 0;
+  height: 100%;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-error-icon-parent {
+  height: 48px;
+  width: 48px;
+  display: inline-flex;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-error-icon {
+  width: 28px;
+  height: 28px;
+  margin: 10px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-error-icon-div {
+  padding-top: 33px;
+  width: 100%;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-details {
+  width: 100%;
+  height: 50%;
+  min-height: 70px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-details > div {
+  float: left;
+  height: 100%;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-details .tile-icon {
+  margin-left: calc(2em - 1.312em);
+  margin-right: calc(2em - 1.313em);
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-details .tile-icon .icon {
+  width: 2.625em;
+  height: 2.625em;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-details .tile-title {
+  display: flex;
+  align-items: flex-start;
+  color: #ffffff;
+  font-size: 1.125em;
+  width: calc(100% - 5em);
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium .csui-details .tile-title .csui-heading {
+  display: block;
+  width: 100%;
+  height: 150%;
+  position: relative;
+  top: calc(50% - 0.562em);
+  padding: 0px;
+  margin: 0px;
+  line-height: normal;
+  white-space: normal;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-grey-shade1 {
+  background: #d0d0d0;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-grey-shade2 {
+  background: #9d9c9c;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-grey-shade3 {
+  background: #777676;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-grey-shade4 {
+  background: #505050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-green-shade1 {
+  background: #66cca7;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-green-shade2 {
+  background: #39ac82;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-green-shade3 {
+  background: #2c8464;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-green-shade4 {
+  background: #03634d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-purple-shade1 {
+  background: #ee90ee;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-purple-shade2 {
+  background: #e34fe3;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-purple-shade3 {
+  background: #c71fc7;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-purple-shade4 {
+  background: #9a189a;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-orange-shade1 {
+  background: #cb7a0a;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-orange-shade2 {
+  background: #bb6207;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-orange-shade3 {
+  background: #aa4704;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-orange-shade4 {
+  background: #9e3402;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone1-shade1 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone1-shade2 {
+  background: #3f4950;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone1-shade3 {
+  background: #71747b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone1-shade4 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone2-shade1 {
+  background: #71747b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone2-shade2 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone2-shade3 {
+  background: #70769b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-stone2-shade4 {
+  background: #3f4950;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal1-shade1 {
+  background: #005873;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal1-shade2 {
+  background: #078db3;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal1-shade3 {
+  background: #00639b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal1-shade4 {
+  background: #005c5d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal2-shade1 {
+  background: #008a8b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal2-shade2 {
+  background: #007599;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal2-shade3 {
+  background: #00639b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-teal2-shade4 {
+  background: #004267;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink1-shade1 {
+  background: #780050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink1-shade2 {
+  background: #c83370;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink1-shade3 {
+  background: #a8003d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink1-shade4 {
+  background: #780050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink2-shade1 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink2-shade2 {
+  background: #a0006b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink2-shade3 {
+  background: #ba004c;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-pink2-shade4 {
+  background: #8b0039;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo1-shade1 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo1-shade2 {
+  background: #2e3d98;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo1-shade3 {
+  background: #232e72;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo1-shade4 {
+  background: #111b58;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo2-shade1 {
+  background: #2e3d98;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo2-shade2 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo2-shade3 {
+  background: #232e72;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-medium.csui-shortcut-theme-indigo2-shade4 {
+  background: #414979;
+}
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large {
+    display: flex;
+    flex-direction: column;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large .tile-header {
+    border-width: 0px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large .tile-header .tile-title {
+    font-face: Aktiv Grotesk Light;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large .tile-icon {
+    flex-grow: 1;
+    diplay: flex;
+    justify-content: center;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large .tile-icon .icon {
+    width: 7em;
+    height: 7em;
+}
+
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-grey .tile-header {
+    background: #777676;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-grey .tile-icon {
+    background: #9D9C9C;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-green .tile-header {
+    background: #2c8464;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-green .tile-icon {
+    background: #39ac82;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-purple .tile-header {
+    background: #c71fc7;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-purple .tile-icon {
+    background: #e34fe3;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-orange .tile-header {
+    background: #AA4704;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-orange .tile-icon {
+    background: #BB6207;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-stone1 .tile-header {
+    background: #3f4950;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-stone1 .tile-icon {
+    background: #5f6e77;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-stone2 .tile-header {
+    background: #005c5d;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-stone2 .tile-icon {
+    background: #008a8b;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-teal1 .tile-header {
+    background: #055e78;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-teal1 .tile-icon {
+    background: #078db3;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-teal2 .tile-header {
+    background: #004267;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-teal2 .tile-icon {
+    background: #00639b;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-pink1 .tile-header {
+    background: #b4421a;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-pink1 .tile-icon {
+    background: #df3324;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-pink2 .tile-header {
+    background: #780050;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-pink2 .tile-icon {
+    background: #a0006b;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-indigo1 .tile-header {
+    background: #232e72;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-indigo1 .tile-icon {
+    background: #2e3d98;
+}
+
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-indigo2 .tile-header {
+    background: #3b296c;
+    color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-large.csui-shortcut-theme-indigo2 .tile-icon {
+    background: #4f3690;
+}
+.binf-widgets .csui-shortcut-container.tile {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+.binf-widgets .csui-shortcut-container.tile:hover {
+  box-shadow: 0px 0px 0px 0px #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container.tile:active {
+  box-shadow: 0px 0px 0px 0px #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-region {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 0.5em;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-region:first-child {
+  margin-top: 0px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-region-medium {
+  flex-grow: 0;
+  height: calc(50% - 0.25em);
+}
+.cs-dialog.welcome-video.binf-modal .binf-modal-backdrop.binf-in{
+  background-color: rgba(65, 64, 66, 0.85);
+  opacity: 1;
+
+  min-width: 640px;
+  /*min-height: 360px;*/
+}
+
+.cs-dialog.welcome-video.binf-modal{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: auto;
+  padding: 0 !important;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.cs-dialog.welcome-video.binf-modal .binf-modal-dialog{
+  width: 67.5%;
+  background-color: transparent;
+
+  min-width: 640px;
+  margin: auto;
+}
+.cs-dialog.welcome-video.binf-modal .binf-modal-content{
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+}
+
+.cs-dialog.welcome-video.binf-modal .binf-modal-content > video {
+  width: 100% !important;
+  height: auto !important;
+  min-width: 640px;
+  background-color: transparent;
+  box-shadow: #000 0px 0px 6px;
+}
+
+.cs-dialog.welcome-video.binf-modal.mobile .binf-modal-content{
+  box-shadow: #000 0px 0px 6px;
+}
+.cs-dialog.welcome-video.binf-modal.mobile .binf-modal-content > video {
+  box-shadow: none;
+}
+.cs-dialog.welcome-video.binf-modal .binf-modal-content > video::-webkit-media-controls-overlay-enclosure{
+  /*width: auto !important;*/
+}
+.binf-widgets .hero{
+  width: calc(100%);
+  overflow: hidden;
+}
+.binf-widgets .hero:focus {
+  border: 1px dotted #333333;
+}
+
+.binf-widgets .csui-hero-tile {
+  padding: 32px;
+  height: 100%;
+  min-width: 260px;
+  background: #fff url(../widgets/welcome.placeholder/impl/images/hero_bg.jpg) no-repeat top center;
+  box-shadow: 0px 0px 1.76px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.csui-hero-tile .csui-greeting {
+  display: block;
+  font-size: 2.625em;
+  font-weight: 200;
+  margin: 0em 32px 32px 32px;
+  text-align: center;
+}
+
+.csui-hero-tile .csui-message{
+  clear: left;
+  display: block;
+  color: #333;
+  margin: 0px 20%;
+  margin-bottom: 0;
+  font-size: .875em;
+  height: 72px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  text-align: center;
+}
+
+.csui-hero-tile .csui-videoButton {
+  font-size: 1.125em;
+  display:block;
+  margin: 0px auto 32px auto;
+  border-radius: 41px;
+  -moz-border-radius: 41px;
+  -webkit-border-radius: 41px;
+  padding: 0px;
+  white-space: nowrap;
+  width: 82px;
+  height: 82px;
+  text-indent: -5000px;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.4) url(../widgets/welcome.placeholder/impl/images/play_arrow.svg) no-repeat 26px center/38px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+
+.csui-hero-tile .csui-videoButton:hover {
+  background: rgba(0, 0, 0, 0.5) url(../widgets/welcome.placeholder/impl/images/play_arrow.svg) no-repeat 26px center/38px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.csui-hero-tile .csui-videoButton:active {
+  background: rgba(0, 0, 0, 0.6) url(../widgets/welcome.placeholder/impl/images/play_arrow.svg) no-repeat 26px center/38px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen
+and (max-width: 920px) {
+
+  .csui-hero-tile .csui-greeting {
+    font-size: 2em;
+    margin: 0px 1em 1em 1em;
+  }
+
+  .csui-hero-tile .csui-message {
+    margin: 1.5em 10%;
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+  }
+}
+
+@media only screen
+and (max-width: 480px) {
+
+  .csui-hero-tile .csui-message {
+    display: none;
+  }
+}
+
+
+@media only screen
+and (max-width: 1150px) {
+
+  .csui-hero-tile .csui-message {
+    margin: 1.5em 10%;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen
+and (max-height: 400px) {
+
+  .csui-hero-tile .csui-message {
+    display:none;
+  }
+}
+.binf-widgets .cs-link-popover {
+  background-color: #3a3a3a;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+  border-radius: 0px;
+  border: 0px;
+}
+
+.binf-widgets .cs-link-popover .binf-arrow {
+  overflow: hidden;
+}
+
+.binf-widgets .cs-link-popover.binf-bottom > .binf-arrow {
+  border-bottom-color: #3a3a3a !important;
+}
+
+.binf-widgets .cs-link-popover.binf-left > .binf-arrow {
+  border-left-color: #3a3a3a !important;
+}
+
+.binf-widgets .cs-link-popover.binf-right > .binf-arrow {
+  border-right-color: #3a3a3a !important;
+}
+
+.binf-widgets .cs-link-popover.binf-top > .binf-arrow {
+  border-top-color: #3a3a3a !important;
+}
+
+.binf-widgets .cs-link-popover, .binf-widgets .cs-link-popover-temp-div {
+  max-width: 35.5em;
+  max-height: 16.5em;
+  min-width: 25em;
+  min-height: 10em;
+  width: 35em;
+  height: 16em;
+}
+
+.binf-widgets .cs-link-popover .binf-popover-content {
+  padding: 0px;
+  max-width: 35em;
+  max-height: 16em;
+  min-width: 25em;
+  min-height: 9.5em;
+  width: inherit;
+  height: inherit;
+}
+
+.binf-widgets .cs-link {
+  height: inherit;
+}
+
+.binf-widgets .cs-link .cs-link-popoverhead {
+  width: inherit;
+  padding-left: 1.5em;
+  padding-bottom: 1em;
+  line-height: 16px;
+}
+
+.binf-widgets .cs-link .cs-link-heading {
+  display: inline-block;
+  font-family: Lato, Light;
+  font-size: 1.5em;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 2.5em);
+  line-height: 24px;
+  padding-top: 18px;
+}
+
+.binf-widgets .cs-link .cs-link-expand {
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  float: right;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+.binf-widgets .cs-link-popover .cs-link-preview-content {
+  width: inherit;
+  height: calc(100% - 4.3em);
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.binf-widgets .cs-link-preview-height {
+  height: 9.5em !important;
+}
+
+.binf-widgets .cs-link-preview-width {
+  width: 24.5em !important;
+}
+
+.binf-widgets .cs-link-preview-img-only {
+  padding-left: 0px !important;
+  width: 100% !important;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content {
+  width: 21.5em;
+  max-height: 10.5em;
+  min-height: 4em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+  line-height: 21px;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content * {
+  font-family: Lato !important;
+  color: #f5f5f5 !important;
+  background-color: #3a3a3a !important;
+  text-overflow: ellipsis !important;
+  font-style: normal !important;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content .syntaxhighlighter * {
+  background-color: #3a3a3a !important;
+  border-color: #3a3a3a !important;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content > * {
+  font-size: 0.875em !important;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content > p {
+  margin-bottom: 21px;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content ol, .binf-widgets .cs-link-popover .cs-link-content ul {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content ul {
+  list-style: inside;
+}
+
+.binf-widgets .cs-link-popover .cs-link-content ol {
+  list-style: decimal inside;
+}
+
+.binf-widgets .cs-link-popover .cs-link-image {
+  display: inline-block;
+  text-align: center;
+  width: 10.5em;
+  max-height: 10.5em;
+  min-height: 4em;
+  padding-left: 1.5em;
+  height: 100%;
+}
+
+.binf-widgets .cs-link-popover .cs-link-image-only {
+  text-align: center;
+}
+
+.binf-widgets .cs-link-popover .cs-link-image-only .cs-link-image {
+  padding: 0px !important;
+}
+
+.binf-widgets .cs-link-popover .cs-link-image > img {
+  max-width: 9em;
+  max-height: 142px;
+  margin: 0px !important;
+  padding: 0px !important;
+}

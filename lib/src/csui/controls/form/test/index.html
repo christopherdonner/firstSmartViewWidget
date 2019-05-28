@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FormView Control</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  
+
+  <style>
+
+    html {
+      height: 100%;
+/*    background: -webkit-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+      background: -o-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+      background: -ms-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+      background: -moz-linear-gradient(29deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+*/
+      background: linear-gradient(61deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+      background-color: #111b58;
+/*    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#090E2C',endColorstr='#078DB3' , GradientType=1); */
+
+
+      background-attachment: fixed;
+    }
+
+    body {
+      background-color: transparent; /*todo unclear problem with background coloring in ot productive page*/
+      font-family: "Lato", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+      /*font-size: 14px;*/
+      /*font-weight: 300; */
+      height: 100%;
+    }
+
+    .docRef {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #ffffff;
+    }
+
+    .test-container {
+      padding: 20px 150px;
+      height: 100%;
+    }
+
+    .cs-form {
+      background-color: white;
+      max-height: 450px;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .row {
+      height: 100%;
+      margin: 0;
+    }
+
+    #content {
+      height: 100%;
+    }
+
+    a:link {
+      color: grey;
+    }
+
+    a:hover {
+      color: grey;
+    }
+
+    a:active {
+      color: grey;
+    }
+
+    a:visited {
+      color: grey;
+    }
+  </style>
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require.config({
+      deps: ['csui/lib/require.config!csui/csui-extensions.json']
+    });
+
+    require(['csui/lib/underscore',
+      'csui/lib/jquery',
+      'csui/utils/base',
+      'csui/lib/marionette',
+      'csui/utils/contexts/page/page.context',
+      'csui/models/form',
+      'csui/models/forms',
+      'csui/controls/form/form.view'
+    ], function (_, $, base, Marionette, PageContext, FormModel, FormCollection, FormView) {
+
+      var rawFormData =
+          {
+            "forms": [{
+              "data": {
+                "id": 136827,
+                "type": 144,
+                "type_name": "Document",
+                "name": "Cisco_PAT.pdf with 3 cats",
+                "description": "",
+                "parent_id": 67449,
+                "volume_id": -2000,
+                "guid": null,
+                "create_date": "2015-06-03T14:11:40",
+                "create_user_id": "Admin",
+                "modify_date": "2015-06-03T14:15:18",
+                "modify_user_id": "Admin",
+                "owner_user_id": "Admin",
+                "owner_group_id": "DefaultGroup",
+                "reserved": false,
+                "reserved_date": null,
+                "reserved_user_id": "<Unknown>",
+                "icon": "\/alphasupport\/webdoc\/apppdf.gif",
+                "icon_large": "\/alphasupport\/webdoc\/apppdf_large.gif",
+                "versions_control_advanced": false,
+                "container": false,
+                "container_size": 0,
+                "favorite": false
+              },
+              "options": {
+                "fields": {
+                  "id": {
+                    "hidden": false,
+                    "label": "ID",
+                    "readonly": true,
+                    "type": "number"
+                  },
+                  "type": {"hidden": true, "label": "Type", "readonly": true, "type": "number"},
+                  "type_name": {"hidden": false, "label": "Type", "readonly": true, "type": "text"},
+                  "name": {"hidden": false, "label": "Name", "readonly": true, "type": "text"},
+                  "description": {
+                    "hidden": false,
+                    "label": "Description",
+                    "readonly": true,
+                    "type": "textarea"
+                  },
+                  "parent_id": {
+                    "hidden": false,
+                    "label": "Parent ID",
+                    "readonly": true,
+                    "type": "number"
+                  },
+                  "volume_id": {
+                    "hidden": false,
+                    "label": "VolumeID",
+                    "readonly": true,
+                    "type": "number"
+                  },
+                  "guid": {"hidden": false, "label": "GUID", "readonly": true},
+                  "create_date": {
+                    "hidden": false,
+                    "label": "Created",
+                    "readonly": true,
+                    "type": "datetime"
+                  },
+                  "create_user_id": {
+                    "hidden": false,
+                    "label": "Created By",
+                    "readonly": true,
+                    "type": "text"
+                  },
+                  "modify_date": {
+                    "hidden": false,
+                    "label": "Modified",
+                    "readonly": true,
+                    "type": "datetime"
+                  },
+                  "modify_user_id": {
+                    "hidden": false,
+                    "label": "Modified By",
+                    "readonly": true,
+                    "type": "text"
+                  },
+                  "owner_user_id": {
+                    "hidden": false,
+                    "label": "Owned By",
+                    "readonly": true,
+                    "type": "text"
+                  },
+                  "owner_group_id": {
+                    "hidden": false,
+                    "label": "Owned By",
+                    "readonly": true,
+                    "type": "text"
+                  },
+                  "reserved": {
+                    "hidden": false,
+                    "label": "Reserved",
+                    "readonly": true,
+                    "type": "checkbox"
+                  },
+                  "reserved_date": {
+                    "hidden": false,
+                    "label": "Reserved",
+                    "readonly": true,
+                    "type": "datetime"
+                  },
+                  "reserved_user_id": {
+                    "hidden": false,
+                    "label": "Reserved By",
+                    "readonly": true,
+                    "type": "text"
+                  },
+                  "icon": {"hidden": false, "label": "Icon", "readonly": true, "type": "text"},
+                  "icon_large": {
+                    "hidden": false,
+                    "label": "Large Icon",
+                    "readonly": true,
+                    "type": "text"
+                  },
+                  "versions_control_advanced": {
+                    "hidden": false,
+                    "label": "Versions Control Advanced",
+                    "readonly": true,
+                    "type": "checkbox"
+                  },
+                  "container": {
+                    "hidden": false,
+                    "label": "Container",
+                    "readonly": true,
+                    "type": "checkbox"
+                  },
+                  "container_size": {
+                    "hidden": false,
+                    "label": "Container Size",
+                    "readonly": true,
+                    "type": "number"
+                  },
+                  "favorite": {
+                    "hidden": false,
+                    "label": "Favorite",
+                    "readonly": true,
+                    "type": "checkbox"
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "ID",
+                    "type": "integer"
+                  },
+                  "type": {"readonly": true, "required": false, "title": "Type", "type": "integer"},
+                  "type_name": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Type",
+                    "type": "string"
+                  },
+                  "name": {"readonly": true, "required": false, "title": "Name", "type": "string"},
+                  "description": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Description",
+                    "type": "string"
+                  },
+                  "parent_id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Parent ID",
+                    "type": "integer"
+                  },
+                  "volume_id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "VolumeID",
+                    "type": "integer"
+                  },
+                  "guid": {"readonly": true, "required": false, "title": "GUID"},
+                  "create_date": {
+                    "format": "datetime",
+                    "readonly": true,
+                    "required": false,
+                    "title": "Created",
+                    "type": "string"
+                  },
+                  "create_user_id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Created By",
+                    "type": "string"
+                  },
+                  "modify_date": {
+                    "format": "datetime",
+                    "readonly": true,
+                    "required": false,
+                    "title": "Modified",
+                    "type": "string"
+                  },
+                  "modify_user_id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Modified By",
+                    "type": "string"
+                  },
+                  "owner_user_id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Owned By",
+                    "type": "string"
+                  },
+                  "owner_group_id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Owned By",
+                    "type": "string"
+                  },
+                  "reserved": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Reserved",
+                    "type": "boolean"
+                  },
+                  "reserved_date": {
+                    "format": "datetime",
+                    "readonly": true,
+                    "required": false,
+                    "title": "Reserved",
+                    "type": "string"
+                  },
+                  "reserved_user_id": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Reserved By",
+                    "type": "string"
+                  },
+                  "icon": {"readonly": true, "required": false, "title": "Icon", "type": "string"},
+                  "icon_large": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Large Icon",
+                    "type": "string"
+                  },
+                  "versions_control_advanced": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Versions Control Advanced",
+                    "type": "boolean"
+                  },
+                  "container": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Container",
+                    "type": "boolean"
+                  },
+                  "container_size": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Container Size",
+                    "type": "integer"
+                  },
+                  "favorite": {
+                    "readonly": true,
+                    "required": false,
+                    "title": "Favorite",
+                    "type": "boolean"
+                  }
+                }, "title": null, "type": "object"
+              }
+            }, {
+              "data": {
+                "12516": {"12516_2": null, "12516_3": null},
+                "26413": {
+                  "26413_2": null,
+                  "26413_3": null,
+                  "26413_4": false,
+                  "26413_5": null,
+                  "26413_6": null,
+                  "26413_7": null,
+                  "26413_8": null,
+                  "26413_9": null,
+                  "26413_10": null,
+                  "26413_11": {"26413_11_1": {"26413_11_1_12": null}}
+                },
+                "68013": {"68013_2": "Test 3"}
+              },
+              "options": {
+                "fields": {
+                  "12516": {
+                    "fields": {
+                      "12516_2": {
+                        "hidden": false,
+                        "label": "Test Field",
+                        "readonly": true,
+                        "type": "text"
+                      },
+                      "12516_3": {
+                        "hidden": false,
+                        "label": "Date Popup",
+                        "optionLabels": ["2000-01-01", "2003-02-14"],
+                        "readonly": true,
+                        "type": "radio"
+                      }
+                    }
+                  },
+                  "26413": {
+                    "fields": {
+                      "26413_2": {
+                        "hidden": false,
+                        "label": "Dåtë Field A",
+                        "readonly": true,
+                        "type": "datetime"
+                      },
+                      "26413_3": {
+                        "hidden": false,
+                        "label": "Dåtë Popup A",
+                        "optionLabels": ["1990-01-01", "2004-05-27", "2027-12-31"],
+                        "readonly": true,
+                        "type": "radio"
+                      },
+                      "26413_4": {
+                        "hidden": false,
+                        "label": "Flág Çheckböx A",
+                        "readonly": true,
+                        "type": "checkbox"
+                      },
+                      "26413_5": {
+                        "hidden": false,
+                        "label": "Intëgêr Field A",
+                        "readonly": true,
+                        "type": "number"
+                      },
+                      "26413_6": {
+                        "hidden": false,
+                        "label": "Intëgêr Popúp A",
+                        "readonly": true,
+                        "type": "select"
+                      },
+                      "26413_7": {
+                        "hidden": false,
+                        "label": "Têxt Fíeld A",
+                        "readonly": true,
+                        "type": "text"
+                      },
+                      "26413_8": {
+                        "hidden": false,
+                        "label": "Tëxt MultiLîñe A",
+                        "readonly": true,
+                        "type": "textarea"
+                      },
+                      "26413_9": {
+                        "hidden": false,
+                        "label": "Tèxt Pòpup A",
+                        "readonly": true,
+                        "type": "select"
+                      },
+                      "26413_10": {
+                        "hidden": false,
+                        "label": "User Fïeld A",
+                        "readonly": true,
+                        "type": "number"
+                      },
+                      "26413_11": {
+                        "fields": {
+                          "26413_11_1": {
+                            "fields": {
+                              "26413_11_1_12": {
+                                "hidden": false,
+                                "label": "Subset Intëgêr Popúp",
+                                "readonly": true,
+                                "type": "radio"
+                              }
+                            }, "label": "Sêt A [1]", "type": "object"
+                          }
+                        }, "label": "Sêt A", "readonly": true, "type": "object"
+                      }
+                    }
+                  },
+                  "68013": {
+                    "fields": {
+                      "68013_2": {
+                        "hidden": false,
+                        "label": "required text field",
+                        "readonly": true,
+                        "type": "text"
+                      }
+                    }
+                  }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "12516": {
+                    "description": null,
+                    "properties": {
+                      "12516_2": {
+                        "maxLength": 32,
+                        "readonly": true,
+                        "required": false,
+                        "title": "Test Field",
+                        "type": "string"
+                      },
+                      "12516_3": {
+                        "enum": ["2000-01-01T00:00:00", "2003-02-14T00:00:00"],
+                        "format": "datetime",
+                        "readonly": true,
+                        "required": false,
+                        "title": "Date Popup",
+                        "type": "string"
+                      }
+                    },
+                    "title": "MVA 1 Test Category",
+                    "type": "object"
+                  },
+                  "26413": {
+                    "description": null,
+                    "properties": {
+                      "26413_2": {
+                        "format": "datetime",
+                        "readonly": true,
+                        "required": false,
+                        "title": "Dåtë Field A",
+                        "type": "string"
+                      },
+                      "26413_3": {
+                        "enum": ["1990-01-01T00:00:00", "2004-05-27T00:00:00",
+                          "2027-12-31T00:00:00"],
+                        "format": "datetime",
+                        "readonly": true,
+                        "required": false,
+                        "title": "Dåtë Popup A",
+                        "type": "string"
+                      },
+                      "26413_4": {
+                        "readonly": true,
+                        "required": false,
+                        "title": "Flág Çheckböx A",
+                        "type": "boolean"
+                      },
+                      "26413_5": {
+                        "readonly": true,
+                        "required": false,
+                        "title": "Intëgêr Field A",
+                        "type": "integer"
+                      },
+                      "26413_6": {
+                        "enum": [-2147483647, 0, 1000, 2147483646],
+                        "readonly": true,
+                        "required": false,
+                        "title": "Intëgêr Popúp A",
+                        "type": "integer"
+                      },
+                      "26413_7": {
+                        "maxLength": 32,
+                        "readonly": true,
+                        "required": false,
+                        "title": "Têxt Fíeld A",
+                        "type": "string"
+                      },
+                      "26413_8": {
+                        "readonly": true,
+                        "required": false,
+                        "title": "Tëxt MultiLîñe A",
+                        "type": "string"
+                      },
+                      "26413_9": {
+                        "enum": ["text popup test input 1", "text popup test input 2",
+                          "text popup test input 3",
+                          "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ"],
+                        "readonly": true,
+                        "required": false,
+                        "title": "Tèxt Pòpup A",
+                        "type": "string"
+                      },
+                      "26413_10": {
+                        "readonly": true,
+                        "required": false,
+                        "title": "User Fïeld A",
+                        "type": "integer"
+                      },
+                      "26413_11": {
+                        "properties": {
+                          "26413_11_1": {
+                            "properties": {
+                              "26413_11_1_12": {
+                                "enum": [1, 2, 3],
+                                "readonly": true,
+                                "required": false,
+                                "title": "Subset Intëgêr Popúp",
+                                "type": "integer"
+                              }
+                            }, "title": "Sêt A [1]", "type": "object"
+                          }
+                        }, "readonly": true, "required": false, "title": "Sêt A", "type": "object"
+                      }
+                    },
+                    "title": "MVA 2 Test Cátêgöry A a little longer name",
+                    "type": "object"
+                  },
+                  "68013": {
+                    "description": null,
+                    "properties": {
+                      "68013_2": {
+                        "maxLength": 32,
+                        "readonly": true,
+                        "required": true,
+                        "title": "required text field",
+                        "type": "string"
+                      }
+                    },
+                    "title": "cat with req attrs",
+                    "type": "object"
+                  }
+                }, "title": "categories", "type": "object"
+              }
+            }]
+          };
+
+      var rawFormData2 =
+          {
+            "forms": [
+              {
+                "data": {
+                  "id": 182623,
+                  "type": 144,
+                  "type_name": "Document",
+                  "name": "000_Doc_with_category_fields",
+                  "description": "",
+                  "parent_id": 2000,
+                  "volume_id": -2000,
+                  "guid": null,
+                  "create_date": "2015-06-16T04:59:18",
+                  "create_user_id": "Admin",
+                  "modify_date": "2015-06-16T05:02:51",
+                  "modify_user_id": "Admin",
+                  "owner_user_id": "Admin",
+                  "owner_group_id": "DefaultGroup",
+                  "reserved": false,
+                  "reserved_date": null,
+                  "reserved_user_id": "<Unknown>",
+                  "icon": "\/alphasupport\/webdoc\/apppdf.gif",
+                  "icon_large": "\/alphasupport\/webdoc\/apppdf_large.gif",
+                  "versions_control_advanced": false,
+                  "container": false,
+                  "container_size": 0,
+                  "favorite": true
+                },
+                "options": {
+                  "fields": {
+                    "id": {
+                      "hidden": false,
+                      "label": "ID",
+                      "readonly": true,
+                      "type": "number"
+                    },
+                    "type": {
+                      "hidden": true,
+                      "label": "Type",
+                      "readonly": true,
+                      "type": "number"
+                    },
+                    "type_name": {
+                      "hidden": false,
+                      "label": "Type",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "name": {
+                      "hidden": false,
+                      "label": "Name",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "description": {
+                      "hidden": false,
+                      "label": "Description",
+                      "readonly": true,
+                      "type": "textarea"
+                    },
+                    "parent_id": {
+                      "hidden": false,
+                      "label": "Parent ID",
+                      "readonly": true,
+                      "type": "number"
+                    },
+                    "volume_id": {
+                      "hidden": false,
+                      "label": "VolumeID",
+                      "readonly": true,
+                      "type": "number"
+                    },
+                    "guid": {
+                      "hidden": false,
+                      "label": "GUID",
+                      "readonly": true
+                    },
+                    "create_date": {
+                      "hidden": false,
+                      "label": "Created",
+                      "readonly": true,
+                      "type": "datetime"
+                    },
+                    "create_user_id": {
+                      "hidden": false,
+                      "label": "Created By",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "modify_date": {
+                      "hidden": false,
+                      "label": "Modified",
+                      "readonly": true,
+                      "type": "datetime"
+                    },
+                    "modify_user_id": {
+                      "hidden": false,
+                      "label": "Modified By",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "owner_user_id": {
+                      "hidden": false,
+                      "label": "Owned By",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "owner_group_id": {
+                      "hidden": false,
+                      "label": "Owned By",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "reserved": {
+                      "hidden": false,
+                      "label": "Reserved",
+                      "readonly": true,
+                      "type": "checkbox"
+                    },
+                    "reserved_date": {
+                      "hidden": false,
+                      "label": "Reserved",
+                      "readonly": true,
+                      "type": "datetime"
+                    },
+                    "reserved_user_id": {
+                      "hidden": false,
+                      "label": "Reserved By",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "icon": {
+                      "hidden": false,
+                      "label": "Icon",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "icon_large": {
+                      "hidden": false,
+                      "label": "Large Icon",
+                      "readonly": true,
+                      "type": "text"
+                    },
+                    "versions_control_advanced": {
+                      "hidden": false,
+                      "label": "Versions Control Advanced",
+                      "readonly": true,
+                      "type": "checkbox"
+                    },
+                    "container": {
+                      "hidden": false,
+                      "label": "Container",
+                      "readonly": true,
+                      "type": "checkbox"
+                    },
+                    "container_size": {
+                      "hidden": false,
+                      "label": "Container Size",
+                      "readonly": true,
+                      "type": "number"
+                    },
+                    "favorite": {
+                      "hidden": false,
+                      "label": "Favorite",
+                      "readonly": true,
+                      "type": "checkbox"
+                    }
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "ID",
+                      "type": "integer"
+                    },
+                    "type": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Type",
+                      "type": "integer"
+                    },
+                    "type_name": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Type",
+                      "type": "string"
+                    },
+                    "name": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "description": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Description",
+                      "type": "string"
+                    },
+                    "parent_id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Parent ID",
+                      "type": "integer"
+                    },
+                    "volume_id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "VolumeID",
+                      "type": "integer"
+                    },
+                    "guid": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "GUID"
+                    },
+                    "create_date": {
+                      "format": "datetime",
+                      "readonly": true,
+                      "required": false,
+                      "title": "Created",
+                      "type": "string"
+                    },
+                    "create_user_id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Created By",
+                      "type": "string"
+                    },
+                    "modify_date": {
+                      "format": "datetime",
+                      "readonly": true,
+                      "required": false,
+                      "title": "Modified",
+                      "type": "string"
+                    },
+                    "modify_user_id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Modified By",
+                      "type": "string"
+                    },
+                    "owner_user_id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Owned By",
+                      "type": "string"
+                    },
+                    "owner_group_id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Owned By",
+                      "type": "string"
+                    },
+                    "reserved": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Reserved",
+                      "type": "boolean"
+                    },
+                    "reserved_date": {
+                      "format": "datetime",
+                      "readonly": true,
+                      "required": false,
+                      "title": "Reserved",
+                      "type": "string"
+                    },
+                    "reserved_user_id": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Reserved By",
+                      "type": "string"
+                    },
+                    "icon": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Icon",
+                      "type": "string"
+                    },
+                    "icon_large": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Large Icon",
+                      "type": "string"
+                    },
+                    "versions_control_advanced": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Versions Control Advanced",
+                      "type": "boolean"
+                    },
+                    "container": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Container",
+                      "type": "boolean"
+                    },
+                    "container_size": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Container Size",
+                      "type": "integer"
+                    },
+                    "favorite": {
+                      "readonly": true,
+                      "required": false,
+                      "title": "Favorite",
+                      "type": "boolean"
+                    }
+                  },
+                  "title": null,
+                  "type": "object"
+                }
+              },
+              {
+                "data": {
+                  "186455": {
+                    "186455_2": "Lorem ipsum",
+                    "186455_3": ["dolor sit"],
+                    "186455_5": [
+                      "Lorem ipsum",
+                      "Lorem ipsum",
+                      "Lorem ipsum"
+                    ],
+                    "186455_4": [
+                      "Lorem ipsum",
+                      "Lorem ipsum",
+                      "Lorem ipsum"
+                    ],
+                    "186455_6": "two",
+                    "186455_7": ["one"],
+                    "186455_8": [
+                      "one",
+                      "two",
+                      "three"
+                    ],
+                    "186455_9": [
+                      "one",
+                      "two",
+                      "three"
+                    ],
+                    "186455_10": "2015-06-16T00:00:00",
+                    "186455_11": ["2015-06-16T00:00:00"],
+                    "186455_12": [
+                      "2015-06-17T00:00:00",
+                      "2015-06-18T00:00:00",
+                      "2015-06-19T00:00:00"
+                    ],
+                    "186455_13": [
+                      "2015-06-08T00:00:00",
+                      "2015-06-09T00:00:00",
+                      "2015-06-10T00:00:00"
+                    ],
+                    "186455_14": {
+                      "186455_14_1": {
+                        "186455_14_1_15": "Lorem ipsum",
+                        "186455_14_1_26": "2015-06-15T00:00:00"
+                      }
+                    },
+                    "186455_17": [{
+                      "186455_17_1_18": "Lorem ipsum",
+                      "186455_17_1_19": "2015-06-23T00:00:00"
+                    },
+                      {
+                        "186455_17_1_18": "Lorem ipsum other",
+                        "186455_17_1_19": "2015-06-23T00:00:00"
+                      },
+                      {
+                        "186455_17_1_18": "Lorem ipsum third",
+                        "186455_17_1_19": "2015-06-23T00:00:00"
+                      }
+                    ],
+                    "186455_20": {
+                      "186455_20_1": {
+                        "186455_20_1_21": "Lorem ipsum",
+                        "186455_20_1_22": "2015-06-08T00:00:00"
+                      },
+                      "186455_20_2": {
+                        "186455_20_2_21": "Lorem ipsum",
+                        "186455_20_2_22": "2015-06-09T00:00:00"
+                      },
+                      "186455_20_3": {
+                        "186455_20_3_21": "Lorem ipsum",
+                        "186455_20_3_22": "2015-06-10T00:00:00"
+                      }
+                    },
+                    "186455_23": {
+                      "186455_23_1": {
+                        "186455_23_1_24": "Lorem ipsum",
+                        "186455_23_1_25": "2015-06-08T00:00:00"
+                      },
+                      "186455_23_2": {
+                        "186455_23_2_24": "Lorem ipsum",
+                        "186455_23_2_25": "2015-06-09T00:00:00"
+                      },
+                      "186455_23_3": {
+                        "186455_23_3_24": "Lorem ipsum",
+                        "186455_23_3_25": "2015-06-10T00:00:00"
+                      }
+                    }
+                  }
+                },
+                "options": {
+                  "fields": {
+                    "186455": {
+                      "fields": {
+                        "186455_2": {
+                          "hidden": false,
+                          "label": "Text, single row, locked",
+                          "readonly": true,
+                          "type": "text"
+                        },
+                        "186455_3": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "text"
+                          },
+                          "label": "Text, single row, max 5, unlocked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_5": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "text"
+                          },
+                          "label": "Text, 3 rows, locked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_4": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "text"
+                          },
+                          "label": "Text, 3 rows, max 5, unlocked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_6": {
+                          "hidden": false,
+                          "label": "Text Popup, single row, locked",
+                          "readonly": true,
+                          "type": "radio"
+                        },
+                        "186455_7": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "radio"
+                          },
+                          "label": "Text Popup, single row, max 5, unlocked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_8": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "radio"
+                          },
+                          "label": "Text Popup, 3 rows, locked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_9": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "radio"
+                          },
+                          "label": "Text Popup, 3 rows, 5 max, unlocked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_10": {
+                          "hidden": false,
+                          "label": "Date, single row, locked",
+                          "readonly": true,
+                          "type": "datetime"
+                        },
+                        "186455_11": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "datetime"
+                          },
+                          "label": "Date, single row, max5, unlocked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_12": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "datetime"
+                          },
+                          "label": "Date, 3 rows, locked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_13": {
+                          "hidden": false,
+                          "items": {
+                            "showMoveDownItemButton": false,
+                            "showMoveUpItemButton": false,
+                            "type": "datetime"
+                          },
+                          "label": "Date, 3 rows, max5, unlocked",
+                          "readonly": true,
+                          "toolbarSticky": true,
+                          "type": "array"
+                        },
+                        "186455_14": {
+                          "fields": {
+                            "186455_14_1": {
+                              "fields": {
+                                "186455_14_1_15": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_14_1_26": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, single row, locked [1]",
+                              "type": "object"
+                            }
+                          },
+                          "label": "Set, single row, locked",
+                          "readonly": true,
+                          "type": "object"
+                        },
+                        "186455_17": {
+                          "fields": {
+                            "186455_17_1": {
+                              "fields": {
+                                "186455_17_1_18": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_17_1_19": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, single row, max 5, unlocked [1]",
+                              "type": "object"
+                            }
+                          },
+                          "label": "Set, single row, max 5, unlocked",
+                          "readonly": true,
+                          "type": "object"
+                        },
+                        "186455_20": {
+                          "fields": {
+                            "186455_20_1": {
+                              "fields": {
+                                "186455_20_1_21": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_20_1_22": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, 3 rows, locked [1]",
+                              "type": "object"
+                            },
+                            "186455_20_2": {
+                              "fields": {
+                                "186455_20_2_21": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_20_2_22": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, 3 rows, locked [2]",
+                              "type": "object"
+                            },
+                            "186455_20_3": {
+                              "fields": {
+                                "186455_20_3_21": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_20_3_22": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, 3 rows, locked [3]",
+                              "type": "object"
+                            }
+                          },
+                          "label": "Set, 3 rows, locked",
+                          "readonly": true,
+                          "type": "object"
+                        },
+                        "186455_23": {
+                          "fields": {
+                            "186455_23_1": {
+                              "fields": {
+                                "186455_23_1_24": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_23_1_25": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, 3 rows, max 5, unlocked [1]",
+                              "type": "object"
+                            },
+                            "186455_23_2": {
+                              "fields": {
+                                "186455_23_2_24": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_23_2_25": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, 3 rows, max 5, unlocked [2]",
+                              "type": "object"
+                            },
+                            "186455_23_3": {
+                              "fields": {
+                                "186455_23_3_24": {
+                                  "hidden": false,
+                                  "label": "Text",
+                                  "readonly": true,
+                                  "type": "text"
+                                },
+                                "186455_23_3_25": {
+                                  "hidden": false,
+                                  "label": "Date",
+                                  "readonly": true,
+                                  "type": "datetime"
+                                }
+                              },
+                              "label": "Set, 3 rows, max 5, unlocked [3]",
+                              "type": "object"
+                            }
+                          },
+                          "label": "Set, 3 rows, max 5, unlocked",
+                          "readonly": true,
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "186455": {
+                      "description": null,
+                      "properties": {
+                        "186455_2": {
+                          "maxLength": 32,
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text, single row, locked",
+                          "type": "string"
+                        },
+                        "186455_3": {
+                          "items": {
+                            "maxItems": 5,
+                            "maxLength": 32,
+                            "minItems": 1,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "maxLength": 32,
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text, single row, max 5, unlocked",
+                          "type": "array"
+                        },
+                        "186455_5": {
+                          "items": {
+                            "maxItems": 3,
+                            "maxLength": 32,
+                            "minItems": 3,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "maxLength": 32,
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text, 3 rows, locked",
+                          "type": "array"
+                        },
+                        "186455_4": {
+                          "items": {
+                            "maxItems": 5,
+                            "maxLength": 32,
+                            "minItems": 1,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "maxLength": 32,
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text, 3 rows, max 5, unlocked",
+                          "type": "array"
+                        },
+                        "186455_6": {
+                          "enum": [
+                            "one",
+                            "two",
+                            "three"
+                          ],
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text Popup, single row, locked",
+                          "type": "string"
+                        },
+                        "186455_7": {
+                          "enum": [
+                            "one",
+                            "two",
+                            "three"
+                          ],
+                          "items": {
+                            "maxItems": 5,
+                            "maxLength": null,
+                            "minItems": 1,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text Popup, single row, max 5, unlocked",
+                          "type": "array"
+                        },
+                        "186455_8": {
+                          "enum": [
+                            "one",
+                            "two",
+                            "three"
+                          ],
+                          "items": {
+                            "maxItems": 3,
+                            "maxLength": null,
+                            "minItems": 3,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text Popup, 3 rows, locked",
+                          "type": "array"
+                        },
+                        "186455_9": {
+                          "enum": [
+                            "one",
+                            "two",
+                            "three"
+                          ],
+                          "items": {
+                            "maxItems": 5,
+                            "maxLength": null,
+                            "minItems": 1,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Text Popup, 3 rows, 5 max, unlocked",
+                          "type": "array"
+                        },
+                        "186455_10": {
+                          "format": "datetime",
+                          "readonly": true,
+                          "required": false,
+                          "title": "Date, single row, locked",
+                          "type": "string"
+                        },
+                        "186455_11": {
+                          "format": "datetime",
+                          "items": {
+                            "maxItems": 5,
+                            "maxLength": null,
+                            "minItems": 1,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Date, single row, max5, unlocked",
+                          "type": "array"
+                        },
+                        "186455_12": {
+                          "format": "datetime",
+                          "items": {
+                            "maxItems": 3,
+                            "maxLength": null,
+                            "minItems": 3,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Date, 3 rows, locked",
+                          "type": "array"
+                        },
+                        "186455_13": {
+                          "format": "datetime",
+                          "items": {
+                            "maxItems": 5,
+                            "maxLength": null,
+                            "minItems": 1,
+                            "minLength": null,
+                            "type": "string"
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Date, 3 rows, max5, unlocked",
+                          "type": "array"
+                        },
+                        "186455_14": {
+                          "properties": {
+                            "186455_14_1": {
+                              "properties": {
+                                "186455_14_1_15": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_14_1_26": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "datetime"
+                                }
+                              },
+                              "title": "Set, single row, locked [1]",
+                              "type": "object"
+                            }
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Set, single row, locked",
+                          "type": "object"
+                        },
+                        "186455_17": {
+                          "properties": {
+                            "186455_17_1": {
+                              "properties": {
+                                "186455_17_1_18": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_17_1_19": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "string"
+                                }
+                              },
+                              "title": "Set, single row, max 5, unlocked [1]",
+                              "type": "object"
+                            }
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Set, single row, max 5, unlocked",
+                          "type": "object"
+                        },
+                        "186455_20": {
+                          "properties": {
+                            "186455_20_1": {
+                              "properties": {
+                                "186455_20_1_21": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_20_1_22": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "string"
+                                }
+                              },
+                              "title": "Set, 3 rows, locked [1]",
+                              "type": "object"
+                            },
+                            "186455_20_2": {
+                              "properties": {
+                                "186455_20_2_21": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_20_2_22": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "string"
+                                }
+                              },
+                              "title": "Set, 3 rows, locked [2]",
+                              "type": "object"
+                            },
+                            "186455_20_3": {
+                              "properties": {
+                                "186455_20_3_21": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_20_3_22": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "string"
+                                }
+                              },
+                              "title": "Set, 3 rows, locked [3]",
+                              "type": "object"
+                            }
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Set, 3 rows, locked",
+                          "type": "object"
+                        },
+                        "186455_23": {
+                          "properties": {
+                            "186455_23_1": {
+                              "properties": {
+                                "186455_23_1_24": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_23_1_25": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "string"
+                                }
+                              },
+                              "title": "Set, 3 rows, max 5, unlocked [1]",
+                              "type": "object"
+                            },
+                            "186455_23_2": {
+                              "properties": {
+                                "186455_23_2_24": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_23_2_25": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "string"
+                                }
+                              },
+                              "title": "Set, 3 rows, max 5, unlocked [2]",
+                              "type": "object"
+                            },
+                            "186455_23_3": {
+                              "properties": {
+                                "186455_23_3_24": {
+                                  "maxLength": 32,
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Text",
+                                  "type": "string"
+                                },
+                                "186455_23_3_25": {
+                                  "format": "datetime",
+                                  "readonly": true,
+                                  "required": false,
+                                  "title": "Date",
+                                  "type": "string"
+                                }
+                              },
+                              "title": "Set, 3 rows, max 5, unlocked [3]",
+                              "type": "object"
+                            }
+                          },
+                          "readonly": true,
+                          "required": false,
+                          "title": "Set, 3 rows, max 5, unlocked",
+                          "type": "object"
+                        }
+                      },
+                      "title": "Leo",
+                      "type": "object"
+                    }
+                  },
+                  "title": "categories",
+                  "type": "object"
+                }
+              }
+            ]
+          };
+
+      var formModel0 = new FormModel(
+          {
+            "data": {
+              address: {
+                zip: "18210"
+              }
+            },
+            "view": "bootstrap-edit",
+            "schema": {
+              "title": "Profile",
+              "type": "object",
+              "properties": {
+                "address": {
+                  "title": "Home Address",
+                  "type": "object",
+                  "properties": {
+                    "zip": {
+                      "title": "Zip Code",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+      );
+
+      var formModel1 = new FormModel(
+          {
+            "data": {
+              "186455_14_1": {
+                "186455_14_1_15": "Lorem ipsum"
+              }
+            },
+            "schema": {
+              "title": "Set, single row, locked",
+              "type": "object",
+              "properties": {
+                "186455_14_1": {
+                  "title": "Set, single row, locked [1]",
+                  "type": "object",
+                  "properties": {
+                    "186455_14_1_15": {
+                      "maxLength": 32,
+                      "title": "Text",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+      );
+
+      var formModel = {
+        data: {},
+        options: {},
+        schema: {}
+      };
+
+      var formModel2 = {
+        "data": {
+          "186455_4": [
+            "Lorem ipsum",
+            "Lorem ipsum",
+            "Lorem ipsum"
+          ]
+        },
+        "options": {
+          "fields": {
+            "186455_4": {
+              "items": {
+                "type": "text"
+              },
+              "toolbarSticky": true,
+              "type": "array"
+            }
+          }
+        },
+        "schema": {
+          "properties": {
+            "186455_4": {
+              "items": {
+                "maxItems": 5,
+                "maxLength": 32,
+                "minItems": 1,
+                "minLength": null,
+                "type": "string"
+              },
+              "title": "Text, 3 rows, max 5, unlocked",
+              "type": "array"
+            }
+
+          },
+          "title": "Category Multi Value Property",
+          "type": "object"
+        }
+      };
+
+      var formModel4 = {
+        "data": {
+          "186455_17": [
+            {
+              "186455_17_1_18": "Lorem ipsum set",
+              "186455_17_1_19": "2015-06-23T00:00:00",
+              "186455_17_1_20": "Lorem ipsum set",
+              "186455_17_1_21": "2015-06-23T00:00:00",
+              "186455_17_1_22": "Lorem ipsum set",
+              "186455_17_1_23": "2015-06-23T00:00:00"
+            },
+            {
+              "186455_17_1_18": "Lorem ipsum set",
+              "186455_17_1_19": "2015-06-23T00:00:00",
+              "186455_17_1_20": "Lorem ipsum set",
+              "186455_17_1_21": "2015-06-23T00:00:00",
+              "186455_17_1_22": "Lorem ipsum set",
+              "186455_17_1_23": "2015-06-23T00:00:00"
+            },
+            {
+              "186455_17_1_18": "Lorem ipsum set",
+              "186455_17_1_19": "2015-06-23T00:00:00",
+              "186455_17_1_20": "Lorem ipsum set",
+              "186455_17_1_21": "2015-06-23T00:00:00",
+              "186455_17_1_22": "Lorem ipsum set",
+              "186455_17_1_23": "2015-06-23T00:00:00"
+            },
+            {
+              "186455_17_1_18": "Lorem ipsum set",
+              "186455_17_1_19": "2015-06-23T00:00:00",
+              "186455_17_1_20": "Lorem ipsum set",
+              "186455_17_1_21": "2015-06-23T00:00:00",
+              "186455_17_1_22": "Lorem ipsum set",
+              "186455_17_1_23": "2015-06-23T00:00:00"
+            }
+          ]
+        },
+        "options": {
+          "fields": {
+            "186455_17": {
+              "items": {
+                "fields": {
+                  "186455_17_1_18": {
+                    "label": "Text",
+                    "type": "text"
+                  },
+                  "186455_17_1_19": {
+                    "label": "Date",
+                    "type": "date",
+                    picker: {
+                      //widgetParent: 'body',
+                      //debug: true,
+                      widgetPositioning: {
+                        //vertical: 'top'
+                      }
+                    }
+                  },
+                  "186455_17_1_20": {
+                    "label": "Text",
+                    "type": "text"
+                  },
+                  "186455_17_1_21": {
+                    "label": "Date",
+                    "type": "date",
+                    picker: {
+                      //widgetParent: 'body',
+                      //debug: true,
+                      widgetPositioning: {
+                        //vertical: 'top'
+                      }
+                    }
+                  },
+                  "186455_17_1_22": {
+                    "label": "Text",
+                    "type": "text"
+                  },
+                  "186455_17_1_23": {
+                    "label": "Date",
+                    "type": "date",
+                    picker: {
+                      //widgetParent: 'body',
+                      //debug: true,
+                      widgetPositioning: {
+                        //vertical: 'top'
+                      }
+                    }
+                  }
+
+                }
+              },
+              "toolbarSticky": true
+            }
+          }
+        },
+        "schema": {
+          "properties": {
+            "186455_17": {
+              "items": {
+                "maxItems": 5,
+                "maxLength": 32,
+                "minItems": 1,
+                "minLength": null,
+                "type": "object",
+                "properties": {
+                  "186455_17_1_18": {
+                    "maxLength": 32,
+                    "type": "string"
+                  },
+                  "186455_17_1_19": {
+                    "format": "date",
+                    "type": "string"
+                  },
+                  "186455_17_1_20": {
+                    "maxLength": 32,
+                    "type": "string"
+                  },
+                  "186455_17_1_21": {
+                    "format": "date",
+                    "type": "string"
+                  },
+                  "186455_17_1_22": {
+                    "maxLength": 32,
+                    "type": "string"
+                  },
+                  "186455_17_1_23": {
+                    "format": "date",
+                    "type": "string"
+                  }
+
+                }
+              },
+              "title": "Set, single row, max 5, unlocked",
+              "type": "array"
+            }
+          },
+          "title": "Category Set Property",
+          "type": "object"
+        }
+      };
+
+      var formModel5 = {
+        "data": {
+          "235323_19": "aaa",
+          "235323_26": "2015-10-07T16:00:00",
+          "235323_4": "sssss",
+          "235323_5": 11111,
+          "235323_27": "asdfasfda\r\nasfdsafsafsfd\r\nasfsafsadf",
+          "235323_6": ["dsdfsdf"],
+          "235323_23": ["asdfsadfsadfsdfsadfdhfghfdhhgfh"],
+          "235323_20": true,
+          "235323_14": "sssfdgdfgdgd",
+          "235323_9": 111,
+          "235323_13": [22222],
+          "235323_16": [
+            "2015-10-14T00:00:00",
+            "2015-10-16T00:00:00",
+            "2015-11-03T00:00:00"
+          ],
+          "235323_28": ["2015-10-08T16:00:00"],
+          "235323_18": ["hhhhd"],
+          "235323_36": [
+            {
+              "235323_36_x_37": "aaaaaaaaaaaaaaaaaaaaa",
+              "235323_36_x_38": true,
+              "235323_36_x_39": ["bbbbbbbbbbbbbbbbbbb\r\ncccccccccccccccc\r\ndddddddddddddddddddd"],
+              "235323_36_x_45": [
+                "hhhhhhhhhhhhhhhhhh",
+                "kkkkkkkkkkkkkkkkkkkkkkk",
+                "mmmmmmmmmmmmmmmmm"
+              ]
+            },
+            {
+              "235323_36_x_37": "bbbbbbbbbbbbbbbbbbbbbb",
+              "235323_36_x_38": false,
+              "235323_36_x_39": ["cccccccccccccccccccccc\r\neeeeeeeeeeeeeeee\r\nbbbbbbbbbbbbbbbbbb"],
+              "235323_36_x_45": [null]
+            },
+            {
+              "235323_36_x_37": null,
+              "235323_36_x_38": false,
+              "235323_36_x_39": [null],
+              "235323_36_x_45": [null]
+            }
+          ],
+          "235323_30": [
+            {
+              "235323_30_x_31": [null],
+              "235323_30_x_32": [null],
+              "235323_30_x_33": [null],
+              "235323_30_x_34": [null],
+              "235323_30_x_35": [null]
+            }
+          ],
+          "235323_36_1": null,
+          "235323_36_2": null,
+          "235323_36_3": null,
+          "235323_30_1": null
+        },
+        "options": {
+          "fields": {
+            "235323_19": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropGUID",
+              "readonly": false,
+              "type": "text"
+            },
+            "235323_26": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropRecDate",
+              "readonly": false,
+              "type": "datetime"
+            },
+            "235323_4": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropString",
+              "readonly": false,
+              "type": "text"
+            },
+            "235323_5": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropInteger",
+              "readonly": false,
+              "type": "integer"
+            },
+            "235323_27": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropLongString",
+              "readonly": false,
+              "type": "textarea"
+            },
+            "235323_6": {
+              "fields": {"item": {"type": "text"}},
+              "hidden": false,
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropMVString",
+              "readonly": false,
+              "toolbarSticky": true
+            },
+            "235323_23": {
+              "fields": {"item": {"type": "textarea"}},
+              "hidden": false,
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropMVLongString",
+              "readonly": false,
+              "toolbarSticky": true
+            },
+            "235323_20": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropBoolean",
+              "readonly": false,
+              "type": "checkbox"
+            },
+            "235323_14": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropMLString",
+              "readonly": false,
+              "type": "text"
+            },
+            "235323_9": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "TestPropUser",
+              "readonly": false,
+              "type": "integer"
+            },
+            "235323_13": {
+              "fields": {"item": {"type": "integer"}},
+              "hidden": false,
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropMVInteger",
+              "readonly": false,
+              "toolbarSticky": true
+            },
+            "235323_16": {
+              "fields": {"item": {"type": "date"}},
+              "hidden": false,
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropMVDate",
+              "readonly": false,
+              "toolbarSticky": true
+            },
+            "235323_28": {
+              "fields": {"item": {"type": "datetime"}},
+              "hidden": false,
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropMVDateTime",
+              "readonly": false,
+              "toolbarSticky": true
+            },
+            "235323_18": {
+              "fields": {"item": {"type": "text"}},
+              "hidden": false,
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropMVPopup",
+              "readonly": false,
+              "toolbarSticky": true
+            },
+            "235323_36": {
+              "fields": {
+                "item": {
+                  "fields": {
+                    "235323_36_x_37": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "TestGPropLongString",
+                      "readonly": false,
+                      "type": "textarea"
+                    },
+                    "235323_36_x_38": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "TestGPropBoolean",
+                      "readonly": false,
+                      "type": "checkbox"
+                    },
+                    "235323_36_x_39": {
+                      "fields": {"item": {"type": "textarea"}},
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "items": {
+                        "showMoveDownItemButton": false,
+                        "showMoveUpItemButton": false
+                      },
+                      "label": "TestGPropMVLongString",
+                      "readonly": false,
+                      "toolbarSticky": true
+                    },
+                    "235323_36_x_45": {
+                      "fields": {"item": {"type": "text"}},
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "items": {
+                        "showMoveDownItemButton": false,
+                        "showMoveUpItemButton": false
+                      },
+                      "label": "TestGPropMVString",
+                      "readonly": false,
+                      "toolbarSticky": true
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropGroup",
+              "toolbarSticky": true
+            },
+            "235323_30": {
+              "fields": {
+                "item": {
+                  "fields": {
+                    "235323_30_x_31": {
+                      "fields": {"item": {"type": "datetime"}},
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "items": {
+                        "showMoveDownItemButton": false,
+                        "showMoveUpItemButton": false
+                      },
+                      "label": "TestGPropMVDateTime",
+                      "readonly": false,
+                      "toolbarSticky": true
+                    },
+                    "235323_30_x_32": {
+                      "fields": {"item": {"type": "text"}},
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "items": {
+                        "showMoveDownItemButton": false,
+                        "showMoveUpItemButton": false
+                      },
+                      "label": "TestGPropMVPopup",
+                      "readonly": false,
+                      "toolbarSticky": true
+                    },
+                    "235323_30_x_33": {
+                      "fields": {"item": {"type": "date"}},
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "items": {
+                        "showMoveDownItemButton": false,
+                        "showMoveUpItemButton": false
+                      },
+                      "label": "TestGPropMVDate",
+                      "readonly": false,
+                      "toolbarSticky": true
+                    },
+                    "235323_30_x_34": {
+                      "fields": {"item": {"type": "text"}},
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "items": {
+                        "showMoveDownItemButton": false,
+                        "showMoveUpItemButton": false
+                      },
+                      "label": "TestGPropMVString2",
+                      "readonly": false,
+                      "toolbarSticky": true
+                    },
+                    "235323_30_x_35": {
+                      "fields": {"item": {"type": "integer"}},
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "items": {
+                        "showMoveDownItemButton": false,
+                        "showMoveUpItemButton": false
+                      },
+                      "label": "TestGPropMVInteger",
+                      "readonly": false,
+                      "toolbarSticky": true
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "hideInitValidationError": true,
+              "items": {
+                "showMoveDownItemButton": false,
+                "showMoveUpItemButton": false
+              },
+              "label": "TestPropGroup2",
+              "toolbarSticky": true
+            },
+            "235323_36_1": {"hidden": true},
+            "235323_36_2": {"hidden": true},
+            "235323_36_3": {"hidden": true},
+            "235323_30_1": {"hidden": true}
+          },
+          "form": {
+            "attributes": {
+              "action": "api\/v1\/nodes\/6530813\/categories\/235323",
+              "method": "PUT"
+            },
+            "renderForm": true
+          }
+        },
+        "schema": {
+          "properties": {
+            "235323_19": {
+              "maxLength": 254,
+              "readonly": false,
+              "required": true,
+              "title": "TestPropGUID",
+              "type": "string"
+            },
+            "235323_26": {
+              "readonly": false,
+              "required": true,
+              "title": "TestPropRecDate",
+              "type": "string"
+            },
+            "235323_4": {
+              "maxLength": 254,
+              "readonly": false,
+              "required": true,
+              "title": "TestPropString",
+              "type": "string"
+            },
+            "235323_5": {
+              "readonly": false,
+              "required": true,
+              "title": "TestPropInteger",
+              "type": "integer"
+            },
+            "235323_27": {
+              "readonly": false,
+              "required": true,
+              "title": "TestPropLongString",
+              "type": "string"
+            },
+            "235323_6": {
+              "items": {
+                "maxItems": 10000000,
+                "maxLength": 254,
+                "minItems": 1,
+                "type": "string"
+              },
+              "readonly": false,
+              "required": true,
+              "title": "TestPropMVString",
+              "type": "array"
+            },
+            "235323_23": {
+              "items": {
+                "maxItems": 10000000,
+                "minItems": 1,
+                "type": "string"
+              },
+              "readonly": false,
+              "required": true,
+              "title": "TestPropMVLongString",
+              "type": "array"
+            },
+            "235323_20": {
+              "readonly": false,
+              "required": false,
+              "title": "TestPropBoolean",
+              "type": "boolean"
+            },
+            "235323_14": {
+              "maxLength": 254,
+              "readonly": false,
+              "required": true,
+              "title": "TestPropMLString",
+              "type": "string"
+            },
+            "235323_9": {
+              "readonly": false,
+              "required": true,
+              "title": "TestPropUser",
+              "type": "integer"
+            },
+            "235323_13": {
+              "items": {
+                "maxItems": 10000000,
+                "minItems": 1,
+                "type": "integer"
+              },
+              "readonly": false,
+              "required": true,
+              "title": "TestPropMVInteger",
+              "type": "array"
+            },
+            "235323_16": {
+              "items": {
+                "maxItems": 10000000,
+                "minItems": 1,
+                "type": "string"
+              },
+              "readonly": false,
+              "required": true,
+              "title": "TestPropMVDate",
+              "type": "array"
+            },
+            "235323_28": {
+              "items": {
+                "maxItems": 10000000,
+                "minItems": 1,
+                "type": "string"
+              },
+              "readonly": false,
+              "required": true,
+              "title": "TestPropMVDateTime",
+              "type": "array"
+            },
+            "235323_18": {
+              "items": {
+                "maxItems": 10000000,
+                "maxLength": 254,
+                "minItems": 1,
+                "type": "string"
+              },
+              "readonly": false,
+              "required": true,
+              "title": "TestPropMVPopup",
+              "type": "array"
+            },
+            "235323_36": {
+              "items": {
+                "maxItems": 10000000,
+                "minItems": 1,
+                "properties": {
+                  "235323_36_x_37": {
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropLongString",
+                    "type": "string"
+                  },
+                  "235323_36_x_38": {
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropBoolean",
+                    "type": "boolean"
+                  },
+                  "235323_36_x_39": {
+                    "items": {
+                      "maxItems": 10000000,
+                      "minItems": 1,
+                      "type": "string"
+                    },
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropMVLongString",
+                    "type": "array"
+                  },
+                  "235323_36_x_45": {
+                    "items": {
+                      "maxItems": 10000000,
+                      "maxLength": 254,
+                      "minItems": 1,
+                      "type": "string"
+                    },
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropMVString",
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              },
+              "title": "TestPropGroup",
+              "type": "array"
+            },
+            "235323_30": {
+              "items": {
+                "maxItems": 10000000,
+                "minItems": 1,
+                "properties": {
+                  "235323_30_x_31": {
+                    "items": {
+                      "maxItems": 10000000,
+                      "minItems": 1,
+                      "type": "string"
+                    },
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropMVDateTime",
+                    "type": "array"
+                  },
+                  "235323_30_x_32": {
+                    "items": {
+                      "maxItems": 10000000,
+                      "maxLength": 254,
+                      "minItems": 1,
+                      "type": "string"
+                    },
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropMVPopup",
+                    "type": "array"
+                  },
+                  "235323_30_x_33": {
+                    "items": {
+                      "maxItems": 10000000,
+                      "minItems": 1,
+                      "type": "string"
+                    },
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropMVDate",
+                    "type": "array"
+                  },
+                  "235323_30_x_34": {
+                    "items": {
+                      "maxItems": 10000000,
+                      "maxLength": 254,
+                      "minItems": 1,
+                      "type": "string"
+                    },
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropMVString2",
+                    "type": "array"
+                  },
+                  "235323_30_x_35": {
+                    "items": {
+                      "maxItems": 10000000,
+                      "minItems": 1,
+                      "type": "integer"
+                    },
+                    "readonly": false,
+                    "required": false,
+                    "title": "TestGPropMVInteger",
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              },
+              "title": "TestPropGroup2",
+              "type": "array"
+            },
+            "235323_36_1": {"type": "string"},
+            "235323_36_2": {"type": "string"},
+            "235323_36_3": {"type": "string"},
+            "235323_30_1": {"type": "string"}
+          },
+          "type": "object"
+        }
+      };
+
+      var formModel6 = {
+        "data": {
+              "20944_7": "NLM-004-1",
+              "20944_8": "Line Card",
+              "20944_9": "Adapters",
+              "20944_10": null,
+              "20944_11": {
+                "20944_11_1_12": "3.000",
+                "20944_11_1_13": "2.000 ",
+                "20944_11_1_14": "g",
+                "20944_11_1_15": null,
+                "20944_11_1_16": null,
+                "20944_11_1_17": null,
+                "20944_11_1_18": "12345670",
+                "20944_11_1_19": "8"
+              }
+            },
+            "schema": {
+              "properties": {
+                "20944_7": {
+                  "maxLength": 10,
+                  "readonly": false,
+                  "required": false,
+                  "title": "Material Number",
+                  "type": "string"
+                },
+                "20944_8": {
+                  "maxLength": 80,
+                  "readonly": false,
+                  "required": false,
+                  "title": "Material Description",
+                  "type": "string"
+                },
+                "20944_9": {
+                  "maxLength": 8,
+                  "readonly": false,
+                  "required": false,
+                  "title": "Material Group",
+                  "type": "string"
+                },
+                "20944_10": {
+                  "maxLength": 4,
+                  "readonly": false,
+                  "required": false,
+                  "title": "Authorization Group",
+                  "type": "string"
+                },
+                "20944_11": {
+                  "properties": {
+                    "20944_11_1_12": {
+                      "maxLength": 17,
+                      "readonly": false,
+                      "required": false,
+                      "title": "Gross Weight",
+                      "type": "string"
+                    },
+                    "20944_11_1_13": {
+                      "maxLength": 17,
+                      "readonly": false,
+                      "required": false,
+                      "title": "Net Weight",
+                      "type": "string"
+                    },
+                    "20944_11_1_14": {
+                      "maxLength": 3,
+                      "readonly": false,
+                      "required": false,
+                      "title": "Weight unit",
+                      "type": "string"
+                    },
+                    "20944_11_1_15": {
+                      "maxLength": 17,
+                      "readonly": false,
+                      "required": false,
+                      "title": "Volume",
+                      "type": "string"
+                    },
+                    "20944_11_1_16": {
+                      "maxLength": 3,
+                      "readonly": false,
+                      "required": false,
+                      "title": "Volume unit",
+                      "type": "string"
+                    },
+                    "20944_11_1_17": {
+                      "maxLength": 32,
+                      "readonly": false,
+                      "required": false,
+                      "title": "Size/dimensions",
+                      "type": "string"
+                    },
+                    "20944_11_1_18": {
+                      "maxLength": 18,
+                      "readonly": false,
+                      "required": false,
+                      "title": "EAN/UPC",
+                      "type": "string"
+                    },
+                    "20944_11_1_19": {
+                      "maxLength": 2,
+                      "readonly": false,
+                      "required": false,
+                      "title": "EAN Category",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Dimensions/EAM",
+                  "type": "object"
+                }
+              }
+            },
+            "options": {
+              "fields": {
+                "20944_7": {
+                  "hidden": false,
+                  "hideInitValidationError": true,
+                  "label": "Material Number",
+                  "readonly": false,
+                  "type": "text",
+                  "setRequiredFieldsEditable": false,
+                  "mode": "update"
+                },
+                "20944_8": {
+                  "hidden": false,
+                  "hideInitValidationError": true,
+                  "label": "Material Description",
+                  "readonly": false,
+                  "type": "text",
+                  "setRequiredFieldsEditable": false,
+                  "mode": "update"
+                },
+                "20944_9": {
+                  "hidden": false,
+                  "hideInitValidationError": true,
+                  "label": "Material Group",
+                  "readonly": false,
+                  "type": "text",
+                  "setRequiredFieldsEditable": false,
+                  "mode": "update"
+                },
+                "20944_10": {
+                  "hidden": false,
+                  "hideInitValidationError": true,
+                  "label": "Authorization Group",
+                  "readonly": false,
+                  "type": "text",
+                  "setRequiredFieldsEditable": false,
+                  "mode": "update"
+                },
+                "20944_11": {
+                  "fields": {
+                    "20944_11_1_12": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "Gross Weight",
+                      "readonly": false,
+                      "type": "text"
+                    },
+                    "20944_11_1_13": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "Net Weight",
+                      "readonly": false,
+                      "type": "text"
+                    },
+                    "20944_11_1_14": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "Weight unit",
+                      "readonly": false,
+                      "type": "text"
+                    },
+                    "20944_11_1_15": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "Volume",
+                      "readonly": false,
+                      "type": "text"
+                    },
+                    "20944_11_1_16": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "Volume unit",
+                      "readonly": false,
+                      "type": "text"
+                    },
+                    "20944_11_1_17": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "Size/dimensions",
+                      "readonly": false,
+                      "type": "text"
+                    },
+                    "20944_11_1_18": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "EAN/UPC",
+                      "readonly": false,
+                      "type": "text"
+                    },
+                    "20944_11_1_19": {
+                      "hidden": false,
+                      "hideInitValidationError": true,
+                      "label": "EAN Category",
+                      "readonly": false,
+                      "type": "text"
+                    }
+                  },
+                  "hideInitValidationError": true,
+                  "label": "Dimensions/EAM",
+                  "type": "object",
+                  "setRequiredFieldsEditable": false,
+                  "mode": "update"
+                }
+              },
+              "focus": false,
+              "hideInitValidationError": true
+            },
+            "view": {
+              "parent": "bootstrap-csui",
+              "layout": {
+                "template": "<div class=\"row\">\r\n  <div class=\"col-md-12 alpaca-container-label\">\r\n    {{#if options.label}}<h3>{{options.label}}<\/h3>{{/if}}\r\n  <\/div>\r\n      <div class=\"col-md-12 cs-form-doublecolumn\"\r\n           id=\"csfLeftCol_csform7930\"><\/div>\r\n<\/div>",
+                "bindings": {
+                  "20944_7": "csfLeftCol_csform7930",
+                  "20944_8": "csfLeftCol_csform7930",
+                  "20944_9": "csfLeftCol_csform7930",
+                  "20944_10": "csfLeftCol_csform7930",
+                  "20944_11": "csfLeftCol_csform7930"
+                }
+              }
+            }
+          };
+
+      var formModels = new FormCollection();
+      formModels.reset(formModels.parse(rawFormData2));
+
+      var formModels1 = new FormCollection([
+        formModels.models[0].attributes.forms[0],
+        formModels.models[0].attributes.forms[1],
+        formModel4,
+        formModel5,
+          formModel6
+      ]);
+
+      var pageContext = new PageContext(),
+          contentRegion,
+          formView;
+
+      _.each(formModels1.models, function (curCat, i) {
+
+        $('#content').append($('<div>').attr('id',
+            'content' + i).addClass('col-sm-12 col-md-12 col-lg-12'));
+
+        contentRegion = new Marionette.Region({
+          el: '#content' + i
+        });
+
+        formView = new FormView({
+          context: pageContext,
+          model: curCat
+        });
+
+        contentRegion.show(formView);
+      }, this);
+
+      pageContext.fetch();
+    });
+
+  </script>
+</head>
+
+<body>
+<a class="docRef" href="../doc/form.md">Documentation</a>
+
+<div class="test-container container-fluid">
+  <div id="content" class="binf-row"></div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

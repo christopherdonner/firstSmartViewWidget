@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1000,
+      "name": "Admin",
+      "first_name": "Chief",
+      "last_name": "Administrator",
+      "name_formatted": "Administrator, Chief",
+      "type": 0
+    },
+    {
+      "id": 1001,
+      "business_email": "kristen@innovate.com",
+      "name": "Kristen",
+      "first_name": "Kristen",
+      "last_name": "Smith",
+      "name_formatted": "Smith, Kristen",
+      "photo_url": "api/v1/members/1001/photo?v=1",
+      "type": 0
+    },
+    {
+      "id": 1002,
+      "business_email": "neil@innovate.com",
+      "name": "Neil",
+      "first_name": "Neil",
+      "last_name": "Lang",
+      "name_formatted": "Lang, Neil",
+      "photo_url": "api/v1/members/1002/photo?v=1",
+      "type": 0
+    },
+    {
+      "id": 1003,
+      "name": "Nick",
+      "business_email": "nick@innovate.com",
+      "first_name": "Nick",
+      "last_name": "Gallegos",
+      "name_formatted": "Gallegos, Nick",
+      "photo_url": "api/v1/members/1003/photo?v=1",
+      "type": 0
+    }
+  ],
+  "groups": [
+    {
+      "id": 2000,
+      "name": "DefaultGroup",
+      "name_formatted": "DefaultGroup",
+      "leader_id": "1000",
+      "type": 1
+    },
+    {
+      "id": 2001,
+      "name": "Contributors",
+      "name_formatted": "Contributors",
+      "leader_id": "1003",
+      "type": 1
+    }
+  ]
+}

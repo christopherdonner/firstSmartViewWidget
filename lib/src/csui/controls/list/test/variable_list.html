@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SimpleList usage</title>
+
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+
+    <script src="../../../lib/require.js"></script>
+    <script src="../../../config.js" data-csui-path="../../.."></script>
+
+
+    <script>
+        require(["csui/lib/marionette", "list.mock.data", "../simplelist.view"
+        ], function (Marionette, mock, SimpleListView) {
+            'use strict';
+
+            var contentRegion = new Marionette.Region({
+                    el: "#content"
+                }),
+                options = {
+                    data: {
+                        title: 'Current elements',
+                        items: []
+                    }
+                },
+                control = new SimpleListView(options);
+
+            control.render();
+            contentRegion.show(control);
+
+            var timerHandle = null, number = 0;
+
+            var collectionChanger = function () {
+                var item = {name: (++number)};
+                var selector = Math.sin(number);
+                if (selector < -0.8) {
+                    item.icon = "circle_delete"; // reference to files from <stylesheet>/image/icons
+                    item.enableIcon = true;
+                    item.name = item.name + ' with delete';
+                }
+                else if (selector > 0.7) {
+                    item.icon = "circle_add"; // reference to files from <stylesheet>/image/icons
+                    item.enableIcon = true;
+                    item.name = item.name + ' with add';
+                }
+                else{
+                    item.name = item.name + ' default';
+                }
+                control.collection.add(item);
+
+                if (control.collection.size() > 6) {
+                    control.collection.shift();
+                }
+            };
+
+            timerHandle = setInterval(collectionChanger, 1200);
+
+        });
+    </script>
+</head>
+
+<body class="binf-widgets">
+<h1>SimpleList usage</h1>
+
+<div class="binf-h3">Using the SimpleList for a variable collection of elements</div>
+<p class="binf-text-info">
+    The SimpleList control is used to display a collection of simple items, just a name and an optional icon.
+    <br>
+    The items are created and removed through some timer just to get continuous changes.
+    <br>
+    A similar structure could be used to show a slowly changing sequence of entities.
+</p>
+
+<div class="binf-container">
+    <div class="binf-row">
+        <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content"></div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

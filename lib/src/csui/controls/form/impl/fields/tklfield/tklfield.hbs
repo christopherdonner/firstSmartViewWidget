@@ -1,0 +1,56 @@
+<div class="cs-field-write">
+  <div class="cs-field-write-inner">
+    <div class="cs-tklfield-select">
+      <div class="cs-tkl-search-box">
+        <input type="text" placeholder="{{emptyLabel}}" value="{{data}}"
+          {{#if idBtnLabel}}aria-labelledby="{{idBtnLabel}}"{{/if}}
+          {{#if multiFieldLabel}} aria-label="{{multiFieldLabel}}" {{/if}}
+          {{#if ariaRequired}}aria-required="{{ariaRequired}}"{{/if}} id="{{id}}" aria-autocomplete="list" role="combobox">
+      </div>
+      <div class="cs-tkl-options-container">
+        <div>
+          <ul class="cs-tkl-options" role="listbox">
+            <li id="{{noneOptionId}}" role="option"><a tabindex="-1" title="{{emptyLabel}}">{{emptyLabel}}</a></li>
+            {{#each options}}
+              <li id="{{id}}" role="option"><a tabindex="-1" title="{{name}}">{{name}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {{#if this.isNotWriteOnly}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{else}}
+      {{#if this.applyFlag}}
+        <div class="icon-container">
+          <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"
+               data-cstabindex="0"></div>
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>
+
+</div>
+
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    <div class="btn-container">
+      <button {{#if schema.readonly}} aria-disabled="true" {{/if}}
+          {{#if multiFieldLabel}}aria-label="{{readModeMultiFieldAria}}"{{else}}aria-label="{{readModeAria}}"{{/if}} >
+        {{#if hasData}}
+          <span title="{{data}}">{{data}}</span>
+        {{else}}
+          <span class="placeholder" title="{{emptyLabel}}">{{emptyLabel}}</span>
+        {{/if}}
+      </button>
+    </div>
+    <div class="icon-container">
+      <div class="csui-icon-edit inline-edit-icon icon-edit" title="{{edit}}"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

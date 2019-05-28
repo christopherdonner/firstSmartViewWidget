@@ -1,0 +1,30 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {},
+			"export_mime_type": "text\/html",
+			"output_destination": "browser"
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [{
+		"data": {},
+		"options": {
+			"fields": {},
+			"form": {
+				"attributes": {
+					"action": "api\/v1\/",
+					"method": ""
+				},
+				"renderForm": true
+			}
+		},
+		"schema": {
+			"properties": {},
+			"type": "object"
+		}
+	}]
+}

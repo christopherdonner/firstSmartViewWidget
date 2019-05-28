@@ -1,0 +1,111 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.csui-facet-panel .csui-facet-item{
+  padding-right: 16px;
+  margin-top: 0.75em;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+}
+
+.csui-facet-panel .csui-facet-item > .csui-filter-name
+{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+}
+
+.csui-facet-panel .csui-facet-item > .csui-filter-name > div{
+  font-size: 0.75em;
+}
+
+
+.csui-facet-panel .csui-facet-item > .csui-filter-name > .csui-name{
+   flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+   padding: 0.25em 0;
+  padding-right: 0.5em;
+  height: inherit;
+}
+
+.csui-facet-panel .csui-facet-item > .csui-filter-name > .csui-total{
+  border-radius: 0.5em;
+  padding: 0.25em 0.5em;
+  background-color: #c9f093;
+
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.csui-facet-panel .csui-facet-item .csui-filter-name:focus .csui-name,
+.csui-facet-panel .csui-facet-item:hover > .csui-filter-name > .csui-name{
+  text-decoration: underline;
+}
+
+.csui-facet-panel .csui-facet.multi-select:hover .csui-facet-item > .csui-filter-name{
+  text-decoration: none;
+}
+
+.csui-facet-panel .csui-facet-item.binf-disabled > .csui-filter-name{
+  color: #a9a9a9;
+  cursor: default;
+}
+
+
+.csui-facet-panel .csui-facet-item span > input {
+  
+  display:block;
+  height:inherit;
+  width:inherit;
+  opacity: 0;
+  margin:0;
+}
+
+.csui-facet-panel .csui-facet-item span{
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  min-width: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin-right: 0.75em;
+}
+
+.csui-facet-panel span.csui-showAlways,
+.csui-facet-panel .csui-facet.multi-select span,
+.csui-facet-panel .csui-facet:hover span,
+.csui-facet-panel .csui-facet.csui-focus span,
+.csui-facet-panel .csui-facet:focus span{
+  opacity: 1;
+}
+
+.csui-facet-panel .csui-facet .facet-disabled span{
+  opacity: 0;
+}
+.csui-facet-panel span:focus{
+  outline-offset: 3px;
+  outline:1px dotted #333;
+}
+.csui-facet-panel .csui-filter-name:focus{
+  outline-offset: 3px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Thumbnail Test</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body.binf-widgets {
+      /*padding-top: 1em;*/
+      margin: 0;
+      height: 100%;
+      overflow-y: hidden;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+    csui.require.config({
+      config: {"csui\/utils\/commands\/thumbnail.toggle":{"enableGridView":true}}
+    });
+
+  </script>
+  <script src="index.js"></script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid binf-grid-rows">
+  <div class="binf-row" id="navigation">
+    <div class="binf-col-sm-12">
+      Navigation is here
+    </div>
+  </div>
+
+  <div class="binf-row" id="table">
+    <div class="binf-col-sm-12 binf-row-xs-full" id="content"></div>
+  </div>
+
+  <div class="binf-row" id="footer">
+    <div class="binf-col-sm-12">
+      Footer is here
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

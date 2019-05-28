@@ -1,0 +1,2240 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .esoc-user-display-name {
+  font: italic 0.875em Lato;
+  color: #333333;
+}
+
+.hero .esoc-user-display-name {
+  color: #ffffff;
+}
+
+.user-presence-indicator {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  line-height: 60px;
+
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+
+  margin: 2px;
+  background-color: #808080;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  vertical-align: top;
+}
+
+.user-presence-indicator-online {
+  background-color: #63cd68;
+}
+
+.user-presence-indicator-offline {
+  background-color: #808080;
+}
+
+.user-presence-indicator-busy {
+  background-color: #ff0000;
+}
+
+.user-presence-indicator-idle {
+  background-color: #ffff00;
+}
+
+.binf-widgets .esoc-user-profile-link {
+  cursor: pointer;
+}
+
+.esoc-mini-profile-popover .esoc-mini-profile-widget {
+  padding: 0px;
+}
+
+.esoc-miniprofile-view.esoc-mini-profile-widget {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-mini-profile-user {
+  width: 100%;
+  padding: 0em;
+}
+
+.binf-widgets .esoc-mini-profile-img {
+  display: inline-block;
+  float: left;
+  margin: 16px 8px 0 16px;
+  padding: 0px;
+  cursor: default;
+  height: 72px;
+  width: 72px;
+}
+
+.binf-widgets .esoc-mini-profile-widget {
+  width: calc(100% + 2px);
+}
+
+.binf-widgets .esoc-mini-profile-presence-indicator {
+  width: 12px;
+  height: 12px;
+  margin: 16px 0;
+  padding: 0px;
+  cursor: default;
+}
+
+.binf-widgets .esoc-user-profile-presence-indicator {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  margin-top: 7px;
+}
+
+.binf-widgets .esoc-user-profile-default-presence {
+  background: url(../images/unknown.svg) no-repeat center;
+}
+
+.esoc-user-profile-presence-indicator .esoc-chat-presence-indicator {
+  width: 18px;
+  height: 18px;
+  margin: 0px;
+}
+
+.esoc-mini-profile-presence-indicator .esoc-chat-presence-indicator {
+  width: 12px;
+  height: 12px;
+  margin: 0px;
+}
+
+.binf-widgets .esoc-mini-profile-pic {
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-mini-profile-popover .esoc-mini-profile-userinfo {
+  width: 210px;
+  padding: 16px 16px 0 8px;
+}
+
+.binf-widgets .esoc-mini-profile-userinfo {
+  width: calc(100% - 108px);
+  padding: 16px 16px 0 8px;
+}
+
+.binf-widgets .esoc-mini-profile-userinfo-with-actions {
+  width: calc(100% - 164px);
+}
+
+.binf-widgets .esoc-user-relations-container {
+  margin-top: 16px;
+  padding: 0px;
+  height: calc(100% - 16px);
+}
+
+.binf-widgets .esoc-user-picker-holder {
+  margin-bottom: 16px;
+  padding: 0px;
+}
+
+.binf-widgets .esoc-user-picker-holder .csui-control-userpicker .cs-search,
+.binf-widgets .esoc-user-manager-picker-holder .csui-control-userpicker .cs-search {
+  position: relative;
+}
+
+.binf-widgets .esoc-mini-profile-user-displayname {
+  color: #333333;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: italic 1.125em Lato;
+  line-height: 14px;
+  height: 17px;
+}
+
+.binf-widgets .esoc-mini-profile-user-displayemail {
+  color: #0072aa;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: 0.875em Lato;
+  margin-bottom: 20px;
+}
+
+.esoc-mini-profile-userinfo a.esoc-mini-profile-user-name {
+  text-decoration: none;
+  color: #333333;
+}
+
+.esoc-general-tab-content a {
+  text-decoration: none;
+}
+
+.esoc-general-tab-content .esoc-user-links a:hover,
+.esoc-general-tab-content .esoc-widget-user-display-name a:hover {
+  text-decoration: underline;
+}
+
+.esoc-social-comment-user-details .esoc-user-container:hover {
+  text-decoration: none;
+}
+
+.binf-widgets .esoc-mini-profile-user-title, .binf-widgets .esoc-mini-profile-user-location {
+  color: #333333;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: 0.875em Lato;
+}
+
+.binf-widgets .esoc-mini-profile-avatar img, .binf-widgets .esoc-miniprofile-default-avatar {
+  width: 72px;
+  height: 72px;
+  display: none;
+}
+
+.esoc-mini-profile-chat-icon {
+  background: url(../images/Chat_Off.svg) no-repeat center;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-miniprofile-chat-action {
+  height: 24px;
+  Width: 56px;
+}
+
+.binf-widgets .esoc-mini-profile-view-icon {
+  background: url(../images/view_profile_new.svg) no-repeat center;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-mini-profile-view-icon:hover {
+  background: url(../images/view_profile_mo.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-mini-profile-view-icon:active {
+  background: url(../images/view_profile_md.svg) no-repeat center;
+}
+
+.esoc-mini-profile-follow-icon {
+  background: url(../images/add_user.svg) no-repeat center;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.esoc-mini-profile-follow-icon:hover {
+  background: url(../images/add_user_mo.svg) no-repeat center;
+}
+
+.esoc-mini-profile-follow-icon:active {
+  background: url(../images/add_user_md.svg) no-repeat center;
+}
+
+.esoc-mini-profile-unfollow-icon {
+  background: url(../images/remove_user.svg) no-repeat center;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.esoc-mini-profile-unfollow-icon:hover {
+  background: url(../images/remove_user_mo.svg) no-repeat center;
+}
+
+.esoc-mini-profile-unfollow-icon:active {
+  background: url(../images/remove_user_md.svg) no-repeat center;
+}
+
+.esoc-mini-profile-otheruser-actions-spacing {
+
+  height: 20px;
+}
+
+.binf-widgets .esoc-mini-profile-selfuser-actions {
+  height: 114px;
+  padding: 44px 16px;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-mini-profile-otheruser-actions-without-chat {
+  height: 44px;
+  padding: 11px 16px;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-miniprofile-otheruser-actions-withchat {
+  padding: 0px 16px;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-viewminiprofile-action {
+  border: none;
+}
+
+.binf-widgets .esoc-miniprofilecard-container {
+  min-width: 270px;
+  max-width: 376px;
+  margin: 1px 16px 16px 1px;
+  padding: 0px;
+}
+
+.esoc-mini-profile-popover.binf-popover {
+  border-radius: 0px;
+  max-width: 376px;
+  min-width: 376px;
+  height: 134px;
+  padding: 0px;
+  border: 1px solid #cfcfcf;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.esoc-userprofile-widget {
+  height: calc(100vh - 200px);
+  background-color: #f7f7f7;
+}
+
+.binf-widgets .esoc-user-profile-tab-content {
+  height: calc(100vh - 272px);
+  overflow: hidden;
+  border-top: 1px solid #cccccc;
+  padding: 0px;
+}
+
+
+
+.esoc-userprofile-widget .esoc-user-profile-tabcontainer li.esoc-user-pulse-enabled-tabs, .esoc-userprofile-action-names a.esoc-userprofile-following-action {
+  display: none;
+}
+
+.binf-widgets .esoc-profile-tabs {
+  width: calc(100% - 160px) !important;
+  height: 5em;
+}
+
+.binf-widgets .esoc-profile-tabs .esoc-user-profile-tabcontainer {
+  display: inline-block;
+  height: 3em;
+  overflow: hidden;
+  white-space: nowrap;
+  width: calc(100% - 150px);
+  vertical-align: middle;
+}
+
+.esoc-profile-tabs .left-toolbar {
+  float: left;
+  width: 48px;
+  height: 3em;
+  display: inline-block;
+}
+
+.esoc-profile-tabs .right-toolbar {
+  float: right;
+  width: calc(4.375em + 20px); 
+  height: 3em;
+  display: inline-block;
+}
+
+.binf-widgets .esoc-profile-tabs .goto_previous_page,
+.binf-widgets .esoc-profile-tabs .goto_next_page {
+  display: inline-block;
+  margin-top: calc((3em - 14px) / 2);
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+}
+
+.binf-widgets .esoc-profile-tabs .left-toolbar .icon.circular,
+.binf-widgets .esoc-profile-tabs .right-toolbar .icon.circular {
+  border: 0;
+}
+
+
+
+.esoc-userprofile-actions, .esoc-userprofile-action-names {
+  display: inline-block;
+  height: 130px;
+  text-align: center;
+}
+
+.esoc-userprofile-pic-actions {
+  width: 160px;
+  height: 120px;
+  float: initial;
+}
+
+.esoc-userprofile-actions {
+  width: 160px;
+  float: left;
+}
+
+.esoc-userprofile-action-names {
+  max-width: 160px;
+}
+
+.esoc-update-profilepic .esoc-userprofile-actions-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.esoc-mini-profile-popover .esoc-mini-profile-actions, .esoc-mini-profile-widget .esoc-mini-profile-actions {
+  margin: 0px;
+  padding: 10px 0px;
+  width: 56px;
+  height: 132px;
+  background: #e0e0e0;
+}
+
+.esoc-mini-profile-widget .esoc-mini-profile-actions {
+  display: none;
+}
+
+.binf-widgets .esoc-nopadding-right {
+  padding-right: 0px !important;
+}
+
+.binf-widgets .esoc-full-profile-avatar, .binf-widgets .esoc-userprofile-default-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 20px 40px 10px 40px;
+  display: none;
+}
+
+.binf-widgets .esoc-userprofile-following-action, .binf-widgets .esoc-update-profilepic {
+  cursor: pointer;
+  color: #0072aa;
+  font: 0.875em Lato;
+}
+
+.binf-widgets .esoc-user-profile-chat-action {
+  margin-bottom: 16px;
+  text-align: left;
+  font-size: 14px;
+  display: none;
+}
+
+.binf-widgets .esoc-miniprofile-view {
+  border: 1px solid #cfcfcf;
+  min-width: 270px;
+  max-width: 376px;
+  height: 134px;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+.esoc-userprofile-widget .binf-nav-pills > li > a:hover,
+.esoc-userprofile-widget .binf-nav-pills > li > a:focus,
+.esoc-simple-user-widget .binf-nav-pills > li > a:hover,
+.esoc-simple-user-widget .binf-nav-pills > li > a:focus{
+  border-radius: inherit;
+  background-color: transparent;
+  color: #000000;
+}
+
+.esoc-miniprofile-collection {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-miniprofile-collection,
+.binf-widgets .esoc-user-relation-tab,
+.binf-widgets .esoc-user-relations-activity-list,
+.binf-widgets .esoc-user-relations-list {
+  height: 100%;
+  padding: 0px;
+}
+
+.binf-widgets .esoc-user-relations-activity-list {
+  border-left: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+.esoc-user-relations-with-picker {
+  height: calc(100% - 50px);
+}
+
+.esoc-mini-profile-popover .binf-popover-content {
+  padding: 0px;
+}
+
+.esoc-extendedinfo-update-mask .esoc-user-extended-edit-input {
+  cursor: not-allowed;
+}
+
+.esoc-extendedinfo-update-mask .esoc-user-update, .esoc-extendedinfo-update-mask .esoc-user-status-update, .esoc-extendedinfo-update-mask .esoc-user-cancel {
+  pointer-events: none;
+  color: #75797b;
+}
+
+.esoc-miniprofile-view .esoc-mini-profile-loading-img {
+  display: none;
+}
+
+.esoc-mini-profile-popover .esoc-mini-profile-loading-img {
+  margin: 0px;
+  padding: 10px 16px 10px 16px;
+  width: 56px;
+  height: 132px;
+}
+
+.binf-widgets .esoc-mini-profile-progress-icon {
+  background: url("../images/progress_icon.gif") no-repeat center;
+  display: inline-block;
+  height: 112px;
+  width: 32px;
+}
+
+.esoc-user-picker-holder input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #666666;
+  border-radius: 4px;
+}
+
+.esoc-mini-profile-popover .esoc-mini-profile-following-error {
+  color: #ff0000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-top: 1px solid #cfcfcf;
+}
+
+.esoc-mini-profile-popover .esoc-mini-profile-following-error, .esoc-mini-profile-popover .esoc-mini-profile-actions {
+  display: none;
+}
+
+.esoc-user-font {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.binf-widgets .esoc-user-external-profile-link {
+  height: 50px;
+  width: 50px;
+  margin-right: 16px;
+}
+
+.binf-widgets .esoc-user-external-profile-link:focus {
+  outline: 3px solid #666666;
+  outline-offset: -3px;
+}
+
+.esoc-general-tab .esoc-user-login-name {
+  color: #999999;
+  font-weight: 700;
+}
+
+.esoc-general-tab .esoc-user-twitter-link {
+  background: url("../images/twitter.svg");
+}
+
+.esoc-general-tab .esoc-user-linkedin-link {
+  background: url("../images/linkedin.svg");
+}
+
+.esoc-general-tab .esoc-user-facebook-link {
+  background: url("../images/facebook.svg");
+}
+
+.esoc-user-content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+.binf-widgets .esoc-cursor-pointer {
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-general-tab, .binf-widgets .esoc-settings-tab {
+  height: calc(100% - 5px);
+  padding: 0px;
+}
+
+.binf-widgets .esoc-general-tab-content, .binf-widgets .esoc-settings-tab-content {
+  height: calc(100% - 2em);
+  word-wrap: break-word;
+  padding: 0em;
+}
+
+.esoc-general-tab-sub-content.binf-col-lg-6.binf-col-md-6.binf-col-sm-12.binf-col-xs-12 {
+  padding-right: 2em;
+}
+
+.binf-widgets .esoc-user-extendedinfo-content,
+.binf-widgets .esoc-user-extendedinfo-default-content,
+.binf-widgets .esoc-user-widget-links-content {
+  width: auto;
+  display: inline-block;
+  float: left;
+  max-width: calc(100% - 20px);
+}
+
+.binf-widgets .esoc-user-extendedinfo-edit-icon {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.esoc-user-default-content-mode .esoc-user-extendedinfo-edit-icon,
+.esoc-user-extendedinfo .esoc-user-extendedinfo-edit-icon {
+  margin-top: 3px;
+}
+
+.binf-widgets .esoc-user-widget-links-content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+.esoc-user-extendedinfo {
+  overflow: hidden;
+  display: inline-block;
+  width: calc(100% - 38px);
+}
+
+
+
+
+.csui-facet-panel .csui-facet-item label input[type="radio"] + span {
+  opacity: 0;
+  margin: 0.125em 0;
+  margin-right: 0.75em;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+
+
+.esoc-settings-tab .esoc-setting-name {
+  font: bold 1.125em Lato;
+  color: #333333;
+}
+
+.esoc-settings-tab .esoc-sub-setting-name {
+  color: #323232;
+  margin-top: 0.75em;
+  display: block;
+  font: 0.875em Lato;
+}
+
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item label input {
+  visibility: visible;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item label input[type="checkbox"] + span,
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item label input[type="radio"] + span {
+  opacity: 1;
+  margin: auto;
+}
+
+.esoc-settings-tab-content .csui-name {
+  font: 0.875em Lato;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 20px;
+}
+
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item > .csui-filter-name {
+  cursor: default;
+  width: calc(100% - 3em);
+}
+
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item label input[type="checkbox"]:focus + span,
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item label input[type="radio"]:focus + span {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.esoc-settings-tab-content > .csui-facet-panel {
+  margin-top: 1em;
+}
+
+
+
+.esoc-user-widget-dialog .tile-title .binf-modal-title {
+  width: calc(100% - 1px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.esoc-user-widget-dialog .tile-title.cs-text-only {
+  width: 85%;
+  display: inline-block;
+  margin: 0px;
+}
+
+.esoc-user-relations-activity-list .tile:hover {
+  box-shadow: none !important;
+}
+
+.binf-widgets .esoc-user-widget {
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+
+.binf-widgets .esoc-social-comment-user-details {
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.esoc-user-extended-edit-textarea {
+  width: 100%;
+  outline: 0;
+  word-wrap: break-word;
+  color: #4d4d4d;
+  resize: none;
+  border: 1px solid #cfcfcf;
+  min-height: 100px;
+}
+
+.esoc-user-hide-element {
+  display: none;
+}
+
+.binf-widgets .esoc-user-update {
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-user-status-update,
+.binf-widgets .esoc-user-cancel,
+.binf-widgets .esoc-user-extended-edit {
+  cursor: pointer;
+  color: #0072aa;
+}
+
+.binf-widgets .esoc-see-more-content {
+  font-size: 1em;
+  max-height: 3.809em;
+  line-height: 1.25em;
+  overflow: hidden;
+  position: relative;
+}
+
+.esoc-general-tab-content .icon-expandArrowDown,
+.esoc-general-tab-content .icon-expandArrowUp {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 57%;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #999999;
+  border-radius: 50%;
+  width: 0.875em;
+  height: 0.875em;
+  margin-right: 3px;
+}
+
+.esoc-general-tab-content .icon-arrow-down,
+.esoc-general-tab-content .icon-arrow-up {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  margin-top: 3px;
+  margin-right: 16px;
+}
+
+.esoc-general-tab-content .esoc-see-more-activity:hover {
+  text-decoration: none;
+}
+
+.esoc-general-tab-content .esoc-see-more-activity:hover > .icon-expandArrowDown,
+.esoc-general-tab-content .esoc-see-more-activity:hover > .icon-expandArrowUp {
+  border: 1px solid #b98c4b;
+}
+
+.esoc-general-tab-content .esoc-user-see-more,
+.esoc-general-tab-content .esoc-user-see-less {
+  cursor: pointer;
+  color: #0072aa;
+  font-family: lato;
+  font-size: 0.875em;
+  background-color: #ffffff;
+}
+
+.esoc-edit-icon {
+  background: url(../images/toolbar_rename.svg) no-repeat center center;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+}
+
+.esoc-upload-image-style, .esoc-userprofile-actions {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.esoc-full-profile-avatar-cursor {
+  cursor: pointer;
+}
+
+.esoc-simple-profile-img-load-container, .esoc-profile-img-load-container {
+  display: none;
+  left: 57px;
+  top: 36px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.binf-widgets .esoc-simple-profile-img-load-icon{
+  display:block;
+}
+
+.binf-widgets .esoc-simple-profile-img-outer-border,
+.binf-widgets .esoc-profile-img-outer-border {
+  border: 0.5em solid rgba(255, 255, 255, 1);
+  border-radius: 4em;
+  z-index: 999;
+}
+
+.binf-widgets .esoc-simple-profile-img-outer-border {
+  margin-left: 140px;
+  margin-top: 25px;
+}
+
+.binf-widgets .esoc-profile-img-inner-border,
+.binf-widgets .esoc-simple-profile-img-inner-border {
+  border: 0.5em solid rgba(255, 255, 255, 1);
+  border-radius: 4em;
+}
+
+.binf-widgets .esoc-simple-profile-img-inner-border,
+.binf-widgets .esoc-profile-img-inner-border {
+  width: 20px;
+  height: 20px;
+}
+
+.binf-widgets .esoc-profile-img-loader,
+.binf-widgets .esoc-simple-profile-img-loader {
+  margin: auto;
+  position: relative;
+  border: 7px solid rgba(219, 241, 254, 1);
+  border-left: 7px solid #0072aa;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load7 0.7s infinite linear;
+  animation: load7 0.7s infinite linear;
+  border-radius: 6em;
+}
+
+.binf-widgets .esoc-profile-img-loader {
+  width: 33px;
+  height: 33px;
+}
+
+@-webkit-keyframes load7 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load7 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.esoc-progress-display {
+  display: block;
+}
+
+.esoc-profile-opacity {
+  opacity: 0.5;
+}
+
+.esoc-user-relattions-container {
+  margin-bottom: 16px;
+  padding: 0px;
+}
+
+.esoc-user-no-relations {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-extended-info-link-holder {
+  width: calc(100% - 66px);
+}
+
+.binf-widgets .esoc-general-tab-content {
+  margin-top: 1em;
+}
+
+
+
+.esoc-general-tab .binf-col-xs-1, .esoc-general-tab .binf-col-sm-1, .esoc-general-tab .binf-col-md-1,
+.esoc-general-tab .binf-col-lg-1, .esoc-general-tab .binf-col-xs-2, .esoc-general-tab .binf-col-sm-2,
+.esoc-general-tab .binf-col-md-2, .esoc-general-tab .binf-col-lg-2, .esoc-general-tab .binf-col-xs-3,
+.esoc-general-tab .binf-col-sm-3, .esoc-general-tab .binf-col-md-3, .esoc-general-tab .binf-col-lg-3,
+.esoc-general-tab .binf-col-xs-4, .esoc-general-tab .binf-col-sm-4, .esoc-general-tab .binf-col-md-4,
+.esoc-general-tab .binf-col-lg-4, .esoc-general-tab .binf-col-xs-5, .esoc-general-tab .binf-col-sm-5,
+.esoc-general-tab .binf-col-md-5, .esoc-general-tab .binf-col-lg-5, .esoc-general-tab .binf-col-xs-6,
+.esoc-general-tab .binf-col-sm-6, .esoc-general-tab .binf-col-md-6, .esoc-general-tab .binf-col-lg-6,
+.esoc-general-tab .binf-col-xs-7, .esoc-general-tab .binf-col-sm-7, .esoc-general-tab .binf-col-md-7,
+.esoc-general-tab .binf-col-lg-7, .esoc-general-tab .binf-col-xs-8, .esoc-general-tab .binf-col-sm-8,
+.esoc-general-tab .binf-col-md-8, .esoc-general-tab .binf-col-lg-8, .esoc-general-tab .binf-col-xs-9,
+.esoc-general-tab .binf-col-sm-9, .esoc-general-tab .binf-col-md-9, .esoc-general-tab .binf-col-lg-9,
+.esoc-general-tab .binf-col-xs-10, .esoc-general-tab .binf-col-sm-10, .esoc-general-tab .binf-col-md-10,
+.esoc-general-tab .binf-col-lg-10, .esoc-general-tab .binf-col-xs-11, .esoc-general-tab .binf-col-sm-11,
+.esoc-general-tab .binf-col-md-11, .esoc-general-tab .binf-col-lg-11, .esoc-general-tab .binf-col-xs-12,
+.esoc-general-tab .binf-col-sm-12, .esoc-general-tab .binf-col-md-12, .esoc-general-tab .binf-col-lg-12 {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-department-name, .binf-widgets .esoc-user-business-phone, .binf-widgets .esoc-user-business-fax, .binf-widgets .esoc-user-title,
+.binf-widgets .esoc-user-location, .binf-widgets .esoc-user-email, .binf-widgets .esoc-user-time-zone {
+  margin-top: 12px;
+}
+
+.binf-widgets .esoc-user-profile-link-label, .binf-widgets .esoc-user-extended-info-label, .binf-widgets .esoc-user-extended-label {
+  margin-bottom: 12px;
+}
+
+.binf-widgets .esoc-user-extended-info-link, .binf-widgets .esoc-user-extended-info-text-field, .binf-widgets .esoc-user-general-details {
+  margin-bottom: 24px;
+}
+
+.binf-widgets .esoc-user-extended-info-link, .binf-widgets .esoc-user-reports-to .esoc-user-extended-info-text-field,
+.binf-widgets .esoc-user-languages-spoken .esoc-user-extended-info-text-field {
+  width: calc(100% - 66px);
+}
+
+.binf-widgets .esoc-department-name {
+  color: #666666;
+  font: 0.875em Lato;
+}
+
+.binf-widgets .esoc-user-name {
+  color: #333333;
+  font: 1.75em Lato;
+}
+
+.binf-widgets .esoc-user-title {
+  color: #333333;
+  font: bold 0.875em Lato;
+}
+
+.binf-widgets .esoc-user-location {
+  color: #666666;
+  font: 0.875em Lato;
+}
+
+.esoc-user-links a {
+  color: #232e72;
+  font: 0.875em Lato;
+}
+
+.binf-widgets .esoc-user-general-info-label, .binf-widgets .esoc-user-extended-label {
+  color: #333333;
+  font: bold 0.875em Lato;
+  display: inline-block;
+}
+
+.binf-widgets .esoc-user-general-info-content, .binf-widgets .esoc-user-extended-info-content {
+  color: #333333;
+  font: 0.875em Lato;
+}
+
+.binf-widgets .esoc-user-extended-info-label {
+  color: #333333;
+  font: bold 1.125em Lato;
+  display: inline-block;
+}
+
+.binf-widgets .esoc-user-default-content {
+  font: italic 0.875em Lato;
+  color: #666666;
+}
+
+.esoc-general-tab .esoc-user-default-content:hover,
+.esoc-general-tab .esoc-user-default-content:focus {
+  color: #666666;
+}
+
+.esoc-user-extended-edit-text {
+  height: 1.6em;
+  width: 100%;
+  padding-left: 0.5em;
+}
+
+.binf-widgets .esoc-user-manager-picker-holder input {
+  padding-left: 0.5em;
+  border: 1px solid #a7a9ac;
+  border-radius: 3px;
+  height: 1.8em;
+  margin: 0px;
+}
+
+.esoc-user-extended-edit-input:focus,
+.esoc-user-extended-edit-textarea:focus,
+.esoc-user-manager-picker-holder input:focus,
+a.esoc-user-messages:focus,
+.esoc-extended-info-link-holder .esoc-user-messages a:focus,
+.esoc-user-default-content:focus,
+.esoc-user-email a:focus,
+.esoc-user-reports-to .esoc-user-profile-link:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #666666;
+  border-radius: 3px;
+  padding: 0px;
+}
+
+.esoc-user-extended-edit-text:focus,
+.esoc-user-manager-picker-holder input:focus {
+  padding-left: 0.5em;
+}
+
+a.esoc-user-messages:focus,
+a.esoc-user-messages {
+  display: block;
+}
+
+.binf-widgets .esoc-user-default-content:focus,
+.binf-widgets .esoc-user-default-content,
+.binf-widgets .esoc-user-reports-to .esoc-user-profile-link {
+  display: inline-block;
+}
+
+.esoc-user-reports-to .esoc-widget-user-display-name .esoc-user-profile-link {
+  max-width: calc(100% - 56px);
+}
+
+.binf-widgets a.esoc-user-messages,
+.binf-widgets .esoc-user-links a,
+.binf-widgets .esoc-user-default-content {
+  padding: 2px;
+}
+
+.binf-widgets .esoc-user-links-ellipsis-onfocus {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+.esoc-general-tab .esoc-user-text-edit-buttons {
+  margin-top: 0.625em;
+  line-height: 1.6em;
+  height: 1.6em;
+}
+
+.binf-widgets .esoc-user-links {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+.esoc-user-manager-picker-holder .csui-control-userpicker .cs-search-icon,
+.esoc-user-manager-picker-holder .csui-control-userpicker .cs-search-clear {
+  width: 0px;
+  display: none;
+}
+
+.esoc-user-manager-picker-holder .csui-control-userpicker .cs-search {
+  width: 100%;
+}
+
+.esoc-general-tab .esoc-user-text-edit-buttons .esoc-user-update,
+.esoc-general-tab .esoc-user-text-edit-buttons .esoc-user-status-update {
+  margin-left: 0.2em;
+}
+
+.esoc-general-tab .esoc-user-text-edit-buttons .esoc-user-cancel {
+  margin-left: 0.75em;
+}
+
+
+
+.esoc-user-widget-avatar, .esoc-userwidget-default-avatar {
+  width: 1.5em;
+  height: 1.5em;
+  display: none;
+}
+
+.binf-widgets .esoc-user-profile-pic-container {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.esoc-user-widget-dialog.cs-dialog .binf-modal-lg .cs-close {
+  opacity: 1;
+}
+
+.esoc-user-widget-dialog .cs-icon-left.esoc-user-widget-dialog-back {
+  height: 20px;
+  top: 0.55em;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-user-widget-dialog .esoc-user-widget-dialog-close,
+.binf-widgets .esoc-user-widget-dialog .esoc-user-widget-dialog-back {
+  border: 0px;
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+
+.esoc-status-textinput-button-holder {
+  position: absolute;
+  top: 0;
+  margin: 36px 10px;
+  height: 24px;
+  cursor: text;
+}
+
+.esoc .esoc-status-textinput-button-holder {
+  right: 0;
+}
+
+.esoc-status-textinput-button-holder .emoji-menu {
+  margin-left: -191px;
+}
+
+.esoc-status-textinput-button-holder .binf-popover.binf-bottom > .binf-arrow,
+.esoc-status-textinput-button-holder .binf-popover.binf-top > .binf-arrow {
+  left: 188px;
+}
+
+.esoc-social-status-input-container {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.esoc-social-status-input-container .emoji-wysiwyg-editor {
+  min-height: 100px !important;
+  box-shadow: none;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  margin: 0px;
+  background-color: white;
+  color: #4d4d4d;
+  font-family: inherit;
+}
+
+.esoc-social-status-input-container .esoc-status-header-emoji-focus,
+.esoc-social-status-input-container .emoji-wysiwyg-editor:focus {
+  -webkit-box-shadow: none;
+  resize: none;
+  border: 2px solid #666666 !important;
+  border-radius: 3px;
+  font-size: 16px;
+
+}
+
+.binf-widgets .esoc-social-status-data img,
+.binf-widgets .emoji-wysiwyg-editor.esoc-status-header-emoji img {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+
+
+.binf-widgets .esoc-userprofile-widget .binf-nav-pills > li.binf-active > a,
+.binf-widgets .esoc-userprofile-widget .binf-nav-pills > li.binf-active > a:hover,
+.binf-widgets .esoc-simple-user-widget .binf-nav-pills > li.binf-active > a,
+.binf-widgets .esoc-simple-user-widget .binf-nav-pills > li.binf-active > a:hover {
+  background-color: transparent;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 4px solid #0072aa;
+}
+
+.esoc-userprofile-widget .binf-nav-pills > li > a.binf-active,
+.esoc-simple-user-widget .binf-nav-pills > li > a.binf-active{
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.esoc-userprofile-widget .binf-nav-pills > li > a:hover,
+.esoc-simple-user-widget .binf-nav-pills > li > a:hover{
+  border-bottom: 4px solid #666666;
+}
+
+.esoc-userprofile-widget .binf-nav-pills > li,
+.esoc-simple-user-widget .binf-nav-pills > li{
+  display: inline-block;
+  margin-right: 2em;
+  height: 100%;
+}
+
+.esoc-userprofile-widget .binf-nav-pills > li > a,
+.esoc-simple-user-widget .binf-nav-pills > li > a {
+  width: auto;
+  border: none;
+  border-radius: 0;
+  font-size: 1em;
+  padding: 0.9em 0;
+  display: inline-block;
+  color: #333333;
+  font-weight: normal;
+  height: 100%;
+}
+
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-followers-tab-label,
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-following-tab-label,
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-settings-tab-label,
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-activity-tab-label,
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-general-tab-label,
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-profile-tab-label,
+.esoc-simple-user-widget  .binf-nav-pills > li > a > .esoc-user-profile-tab-label {
+  max-width: 16em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  height: 18px;
+}
+
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-followers-count,
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-following-count,
+.esoc-userprofile-widget .binf-nav-pills > li > a > .esoc-user-profile-tab-count {
+  border-radius: 8px;
+  background-color: #eeeeee;
+  color: #0072aa;
+  font-size: 14px;
+  padding: 3px 8px;
+  vertical-align: baseline;
+}
+
+.binf-widgets .esoc-userprofile-widget img:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.binf-widgets a.esoc-mini-profile-pic:focus {
+  text-decoration: none;
+  display:inline-block;
+}
+
+.esoc-userwidget-default-avatar.esoc-user-show-profilepic,
+.esoc-userprofile-default-avatar.esoc-user-show-profilepic,
+.esoc-miniprofile-default-avatar.esoc-user-show-profilepic {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex;
+  justify-content: center;
+}
+
+.esoc-mini-profile-avatar .image_user_placeholder {
+  font-size: 34px;
+}
+
+
+.binf-widgets .esoc-user-manager-avatar-container {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  vertical-align: top;
+}
+
+.binf-widgets .esoc-user-reports-to .esoc-user-manager-avatar-container a {
+  padding: 2px;
+}
+
+.binf-widgets .esoc-user-reports-to .esoc-userwidget-wrapper a {
+  padding: 2px;
+}
+
+.esoc-user-reports-to .esoc-widget-user-display-name .esoc-userwidget-wrapper a {
+  padding-top: 5px;
+}
+
+.esoc-user-reports-to .esoc-widget-user-display-name .esoc-userwidget-wrapper a:focus {
+  padding-top: 3px;
+}
+
+.binf-widgets .esoc-user-extendedinfo-reports-to-edit-icon {
+  vertical-align: top;
+  padding-top: 5px;
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .scroll-container {
+  position: absolute;
+  max-height: calc(90vh - 278px);
+  width: 100%;
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .scroll-container .typeahead.binf-dropdown-menu,
+.esoc-user-picker-holder .csui-control-userpicker .scroll-container .typeahead.binf-dropdown-menu > li {
+  width: 100%;
+}
+
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item,
+.esoc-settings-tab-content .csui-filter-name > label {
+  width: 100%;
+}
+
+.esoc-settings-tab-content .csui-facet-panel .csui-facet-item .esoc-settings-selection-label {
+  width: 3em;
+  position: relative;
+  text-align: center;
+  margin-left: 8px;
+}
+
+.binf-widgets input[type="radio"].esoc_activityfeed_filter,
+.binf-widgets input[type="checkbox"].esoc_activityfeed_filter,
+.binf-widgets input[type="radio"].esoc_setting_edit_field,
+.binf-widgets input[type="checkbox"].esoc_setting_edit_field {
+  opacity: 0;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-facet-panel .csui-facet-item .esoc-settings-selection-label span.icon-checkbox,
+.binf-widgets .csui-facet-panel .csui-facet-item .esoc-settings-selection-label span.icon-radiobutton,
+.binf-widgets .csui-facet-panel .csui-facet-item .esoc-settings-selection-label span.icon-radiobutton-selected {
+  opacity: 1;
+}
+
+.binf-widgets .csui-facet-panel .esoc-activity-filter-content .csui-facet-item > .csui-filter-name > .csui-name {
+  padding: 0;
+}
+
+
+
+
+
+.esoc-chat-action-enabled, .esoc-chat-action-disabled {
+  display: none;
+}
+
+.binf-widgets .esoc-user-widget-dialog .esoc-miniprofilecard-container .esoc-mini-profile-actions a {
+  display: inline-block;
+  margin-bottom: -2px
+}
+
+.binf-widgets .esoc-mini-profile-widget.esoc-mini-profile-actions a {
+  display: inline-block;
+  margin-bottom: -5px
+}
+
+.esoc-user-widget-dialog .esoc-miniprofilecard-container .esoc-mini-profile-user-displayname a {
+  outline-offset: -5px;
+}
+
+.esoc-mini-profile-widget .esoc-mini-profile-user-displayname a {
+  outline-offset: -4px;
+}
+
+.esoc-simple-mini-profile-popover .esoc-mini-profile-user-displayname a {
+  display: block;
+  word-wrap: break-word;
+  max-height: 49px;
+  min-height: 25px;
+  line-height: 24px;
+}
+
+.binf-widgets .esoc-user-default-content:focus, .binf-widgets .esoc-user-messages-content:focus {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+.esoc-userpickercard-container {
+  padding: 0px;
+}
+
+.esoc-userpickercard-container .esoc-mini-profile-actions {
+  margin: 0px;
+  padding: 10px 0px;
+  width: 56px;
+  background: #e0e0e0;
+  height: 130px;
+  display: none;
+  float: left;
+}
+
+.esoc-userpickercard-container .csui-userpicker-item .member-info {
+  padding-left: 0px;
+  padding-top: 16px;
+  font-size: 16px;
+  height: 130px;
+  width: calc(100% - 6em);
+}
+
+.esoc-userpickercard-container .csui-userpicker-item .member-picture {
+  padding: 16px 16px 0px 16px;
+  height: 130px
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .binf-dropdown-menu > li {
+  border-top: 0 none;
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .binf-dropdown-menu > li {
+  padding: 0;
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .binf-dropdown-menu.csui-no-results-wrapper > li {
+  padding: 10px;
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .scroll-container {
+  border: 0 none;
+}
+
+.esoc-userpickercard-container .csui-userpicker-item .member-info-with-actions {
+  width: calc(100% - 7.5em);
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .cs-search {
+  width: 100%;
+  padding-right: 26px;
+}
+
+.binf-widgets .esoc-user-picker-holder .csui-control-userpicker .cs-search-clear {
+  right: 0.5em;
+}
+
+.esoc-user-picker-holder .csui-control-userpicker .cs-search-icon {
+  right: -1.75em
+}
+
+.esoc-user-picker-holder .esoc-mini-profile-otheruser-actions-spacing {
+  cursor: default;
+}
+
+
+.esoc-general-tab .esoc-user-status-post .emoji-menu.binf-popover {
+  border-radius: 0;
+}
+
+
+
+.binf-widgets .esoc-simple-user-widget-dialog .binf-modal-lg {
+  width: 448px !important;
+  height: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog {
+  overflow: auto;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-header {
+  background-image: -webkit-linear-gradient(60deg, #004647 0%, #008385 100%);
+  background-image: linear-gradient(60deg, #004647 0%, #008385 100%);
+  width: 100%;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-footer {
+  border-bottom: 4px solid #33c6c8;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-header {
+  display: inline-block;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-footer {
+  display: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-header {
+  display: inline-block;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-header {
+  min-height: 220px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-userprofile-pic-actions {
+  min-width: 0;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-full-profile-avatar-cursor {
+  height: 116px;
+  width: 116px;
+  margin: 0px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .binf-modal-content {
+  max-height: calc(100vh - 150px);
+  min-height: 444px;
+  width: 448px;
+  border: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-footer {
+  height: 4px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .binf-modal-body {
+  height: 100%;
+  max-height: 704px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .binf-modal-body,
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-view,
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget {
+  position: absolute;
+  width: 100%;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-view,
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget {
+  height: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-widget-dialog-close {
+  top: 30px !important;
+  right: 16px !important;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-widget-dialog-close {
+  background-image: url(../images/close_profile20.svg)
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-widget-dialog-close:focus,
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-widget-dialog-close:active {
+  background-image: url(../images/close_profile20_md.svg)
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-widget-dialog-close:hover {
+  background-image: url(../images/close_profile20_mo.svg)
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-userprofile-pic-actions {
+  width: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-body {
+  width: inherit;
+  min-height: 220px;
+  background-color: #ffffff;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-form {
+  padding-top: 30px;
+  padding-right: 3em;
+}
+
+.binf-widgets .esoc-simple-user-widget-tab-view .esoc-simple-user-widget-form-body {
+  padding-left: 32px;
+}
+
+.binf-widgets .esoc-simple-user-widget-body .cs-form {
+  height: auto;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-profile-presence-indicator {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  z-index: 1;
+  top: 99px;
+  right: 37%;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-profile-chat-comment {
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  top: 66px;
+  left: 86px;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-full-profile-avatar,
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-userprofile-default-avatar {
+  width: 116px;
+  height: 116px;
+  margin: 0px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-profile-chat-comment {
+  background: url(../images/chat_profile48.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-social-chat-icon {
+  background: url(../images/chat24.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-profile-chat-comment:hover {
+  background: url(../images/chat_profile48_mo.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-social-chat-icon:hover {
+  background: url(../images/chat24_mo.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-profile-chat-comment:active,
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-profile-chat-comment:focus {
+  background: url(../images/chat_profile48_md.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-social-chat-icon:active,
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-social-chat-icon:focus {
+  background: url(../images/chat24_md.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-profile-presence-indicator .esoc-chat-presence-indicator {
+  width: 28px;
+  height: 28px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-name {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  padding: 0px 32px;
+  line-height: 24px;
+  margin-bottom: 12px;
+  word-wrap: break-word;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-title {
+  color: #ffffff;
+  font: 18px Lato;
+  text-align: center;
+  line-height: 24px;
+  padding: 0px;
+  margin-top: 1px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-extended-info-text-field {
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .esoc-simple-user-widget-form {
+  padding: 0px;
+  overflow: hidden;
+  height: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-view-form .alpaca-field {
+  height: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-view-form .binf-form-group {
+  margin-top: 0px;
+}
+
+.binf-widgets .esoc-simple-user-widget-view-form .cs-formfield .cs-field-read {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-simple-user-widget-view-form .cs-formfield.cs-userfield .inline-edit-icon.icon-edit,
+.binf-widgets .esoc-simple-user-widget-view-form .cs-formfield .inline-edit-icon.icon-edit,
+.binf-widgets .esoc-simple-user-widget-view-form .inline-edit-icon {
+  margin-top: 0px;
+}
+
+.binf-widgets .esoc-simple-user-widget-view-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  height: 100%;
+}
+
+.binf-widgets .esoc-simple-user-widget-form .binf-control-label,
+.binf-widgets .esoc-simple-user-widget-form .binf-form-group > .binf-col-sm-9 {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.binf-widgets .esoc-simple-user-widget-form .binf-control-label {
+  font-size: 14px;
+  color: #757575;
+  line-height: 18px !important;
+  margin-bottom: -1px;
+}
+
+.binf-widgets .esoc-simple-user-widget-form .binf-control-label:first-child {
+  margin-top: -1px;
+}
+
+.binf-widgets .esoc-simple-user-widget-form .binf-form-group > .binf-col-sm-9 {
+  font-size: 16px;
+  color: #333333;
+  margin: 0px;
+  padding: 0px 0px 32px 0px;
+  line-height: 16px;
+}
+
+.binf-widgets .esoc-simple-user-widget-form .binf-form-group.alpaca-field {
+  margin-bottom: 22px;
+}
+
+.binf-widgets .esoc-simple-user-widget-form-content .cs-form .binf-help-block.alpaca-message {
+  margin-left: 0px;
+}
+
+.binf-widgets .esoc-simple-user-widget-body .binf-row.alpaca-field {
+  margin: 0px !important;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-label {
+  font-size: 14px;
+  color: #757575;
+  line-height: 16px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-data {
+  font-size: 16px;
+  color: #333333;
+  margin: 0px;
+  padding: 0px 0px 32px 0px;
+  line-height: 16px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-user-widget-dialog-close {
+  border: 0px;
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .edit-user-image-placeholder {
+  background: url(../images/edit112.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .edit-user {
+  position: absolute;
+  width: 116px;
+  height: 116px;
+  top: 30px;
+  right: 165px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-profilepic-desktop-attachment {
+  display:none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-full-profile-avatar-cursor {
+  cursor: context-menu;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-email .cs-field-read {
+  color: #2f4ed1;
+  text-decoration: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-email .cs-field-read:visited {
+  color: #4f3690;
+  text-decoration: none;
+  bottom-border: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-email .cs-field-read:hover {
+  color: #0084ce;
+  text-decoration: none;
+  bottom-border: 1px solid #0084ce;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-email .cs-field-read:active {
+  color: #2e3d98;
+  bottom-border: none;
+  text-decoration: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-manager .cs-field-read a {
+  text-decoration: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .esoc-simple-user-widget-manager .cs-field-read a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.esoc-simple-mini-profile-popover {
+  height: auto !important;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-widget {
+  width: 448px;
+  min-height: 132px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-popover {
+  max-width: 448px;
+  min-width: 448px;
+  min-height: 132px;
+  border: none;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-displayname {
+  font: 24px Lato;
+  line-height: 24px;
+  color: #333333;
+  height: auto;
+  max-height: 49px;
+  min-height: 25px;
+  white-space: normal;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-displayname a:after,
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-title:after {
+  content: "";
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 65%);
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-chat-comment {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 53px;
+  right: 139px;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-img {
+  width: 96px;
+  height: 96px;
+  margin-top: 16px;
+  margin-right: 32px;
+  margin-left: 0px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-simple-mini-profile-user-img {
+  float: right;
+  height: inherit;
+  display: inline-block;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user-img .esoc-mini-profile-avatar img, .binf-widgets .esoc-simple-mini-profile-user-img .esoc-miniprofile-default-avatar {
+  width: 96px;
+  height: 96px
+}
+
+.binf-widgets .esoc-simple-mini-profile-user {
+  width: calc(100% - 128px);
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-simple-mini-profile-user-img {
+  padding-right: 32px;
+  width: 128px;
+  display: inline-block;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-title {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 24px;
+  word-wrap: break-word;
+  max-height: 48px;
+  position: relative;
+  white-space: normal;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-chat-comment {
+  display: none;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-location {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-phone,
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-phone-label,
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-mobile-label,
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-mobile {
+  display: inline-block;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-phone-label,
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-mobile-label{
+  color: #757575;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-phone,
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-user-mobile {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .binf-arrow {
+  overflow: hidden;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-bottom > .binf-arrow {
+  border-bottom-color: #33c6c8 !important;
+
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-left > .binf-arrow {
+  border-left-color: #33c6c8 !important;
+
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-right > .binf-arrow {
+  border-right-color: #33c6c8 !important;
+
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-top > .binf-arrow {
+  border-top-color: #33c6c8 !important;
+
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-userinfo {
+  padding: 0px;
+  margin: 28px 0 8px 32px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user .esoc-mini-profile-userinfo {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user-img .esoc-mini-profile-presence-indicator {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 82px;
+  right: 36px;
+  width: 24px;
+  height: 24px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-user-img .esoc-mini-profile-presence-indicator .esoc-chat-presence-indicator {
+  width: 24px;
+  height: 24px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-email:link,
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-displayemail:link {
+  font-size: 14px;
+  color: #232e72;
+  text-decoration: none;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-email:visited,
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-displayemail:visited {
+  color: #4f3690;
+  text-decoration: none;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-email:hover,
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-displayemail:hover {
+  color: #0084ce;
+  text-decoration: underline;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-email:active,
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-displayemail:active {
+  color: #2e3d98;
+  text-decoration: none;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-displayemail {
+  margin-bottom: 12px;
+  margin-top: 2px;
+  color: #232e72;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-bottom .esoc-mini-profile-widget {
+  border-top: 4px solid #33c6c8;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-left .esoc-mini-profile-widget {
+  border-right: 4px solid #33c6c8;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-right .esoc-mini-profile-widget {
+  border-left: 4px solid #33c6c8;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover.binf-top .esoc-mini-profile-widget {
+  border-bottom: 4px solid #33c6c8;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-user-phone-data{
+  margin-bottom: 6px;
+}
+
+.binf-widgets .esoc-simple-mini-profile-popover .esoc-mini-profile-userinfo {
+  width: calc(100% - 108px);
+}
+
+
+.esoc-simple-user-widget-view .esoc-simple-user-widget-tabs,
+.esoc-simple-user-widget-view .esoc-simple-user-widget-tab-view ,
+.esoc-simple-user-widget-view .esoc-profile-tabs{
+  width: inherit !important;
+}
+
+.binf-widgets .esoc-simple-user-widget-view .esoc-profile-tabs {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-simple-user-widget-form-body {
+  border-top: 1px solid #cccccc;
+}
+
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-tabs,
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-tab-view,
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-tab-view .esoc-profile-tabs,
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-tab-view .tab-links-bar {
+  height: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-form-body {
+  height: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-tab-view .tab-links-bar > .esoc-simple-user-widget-form-body {
+  overflow: hidden;
+  position: relative;
+}
+
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-profile-view,
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-form-view {
+  height: 100%;
+}
+
+.binf-widgets .esoc-simple-user-widget-view .esoc-simple-user-widget-form-view {
+  position: relative;
+}
+
+.binf-widgets .esoc-simple-user-widget .esoc-simple-user-widget-form-content {
+  padding-right: 32px;
+}
+
+.binf-widgets .esoc-user-manager-avatar-container .image_user_placeholder,
+.esoc-simple-user-widget-form .cs-field-read-content .image_user_placeholder {
+  font-size: 12px;
+  height: 24px;
+  width: 24px;
+}
+
+.esoc-simple-mini-profile-popover a.esoc-mini-profile-pic:hover,
+.esoc-mini-profile-widget a.esoc-mini-profile-pic:hover,
+.esoc-user-manager-field .esoc-user-profile-link:hover,
+.esoc-userwidget-wrapper .esoc-user-profile-link:hover {
+  text-decoration: none;
+}
+
+.esoc-userpickercard-container .image_user_placeholder {
+  font-size: 12px;
+}
+
+.esoc-userpickercard-container .image_user_placeholder,
+.binf-widgets .esoc-user-manager-avatar-container .image_user_placeholder,
+.esoc-userprofile-widget .image_user_placeholder {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex;
+  justify-content: center;
+}
+
+.esoc-userprofile-widget .image_user_placeholder,
+.esoc-simple-user-widget-view .image_user_placeholder {
+  font-size: 42px;
+}
+
+.esoc-simple-user-widget-view .image_user_placeholder {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-inline-flex; 
+  display: inline-flex;
+  justify-content: center;
+}
+
+.esoc-simple-user-widget-form .cs-field-read-content .image_user_placeholder {
+  font-size: 12px;
+}
+
+.esoc-simple-user-widget .esoc-simple-user-profile-pic-edit:hover,
+.esoc-simple-user-widget .esoc-simple-user-profile-pic-delete:hover {
+  background-color: #bac9ce;
+  color: #333333;
+}
+
+.binf-widgets .esoc-simple-user-edit-pic-popover .binf-popover-content {
+  padding: 0px;
+}
+
+.binf-widgets .esoc-simple-user-edit-pic-popover .esoc-profile-pic-edit {
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-simple-user-edit-pic-popover .esoc-simple-user-profile-pic-update {
+  padding: 5px 0;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .binf-modal-dialog {
+  display: inline-block;
+  top: 65px;
+  width: 448px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide {
+  display: inline-block;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .multi-modal-dialogs {
+  overflow: hidden;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .multi-modal-dialogs {
+  height: 100%;
+}
+
+.binf-widgets .modal-dialogs-inner {
+  text-align: center;
+  height: inherit;
+}
+
+.esoc-simple-user-widget-form-content {
+  height: 362px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide:not(.slick-current) {
+  transition: ease-in-out 0s ease;
+  position: relative;
+  
+  margin-right:-41px;
+  margin-left: -41px;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide:not(.slick-current) .binf-modal-content {
+  transform: scale(0.8, 0.8);
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-next-slide-adjust {
+  margin-left:-57px !important;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-prev-slide-adjust {
+  margin-right:-57px !important;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-current {
+  transition: ease-in-out 0s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide:focus {
+  outline: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide {
+  height: 100vh;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-current:hover {
+  cursor: pointer;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .binf-modal-body {
+  margin-right: 0;
+}
+
+.binf-widgets .slick-prev.slick-arrow {
+  left: 0px;
+  top: calc(50% - 24px);
+  background: url(../images/left_scroll_caret48.svg) no-repeat center;
+  margin-left: 8px;
+}
+
+.binf-widgets .slick-next.slick-arrow {
+  right: 0px;
+  top: calc(50% - 24px);
+  background: url(../images/right_scroll_caret48.svg) no-repeat center;
+  margin-right: 8px;
+}
+
+.binf-widgets .slick-arrow {
+  position: absolute;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.binf-widgets .slick-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide > div {
+  height: inherit;
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide.slick-current .esoc-simple-user-widget-backdrop {
+  display: none
+}
+
+.binf-widgets .esoc-simple-user-widget-dialog .slick-slide:not(.slick-current) .esoc-simple-user-widget-backdrop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 4px);
+  background-color: rgba(0, 0, 0, 0.3);
+}

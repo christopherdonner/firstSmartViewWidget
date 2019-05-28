@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>List controls example</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+  <style>
+    body {
+      font-family: "Lato", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+      font-size: 14px;
+      font-weight: 300; /* Lato Light */
+      padding-top: 1em;
+    }
+
+    #content2 .cs-simplelist {
+      height: 16em;
+    }
+
+    .cs-emptylist-container {
+      background-color: #fff;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require(["csui/lib/backbone", "csui/lib/marionette", "list.mock.data", "csui/utils/connector",
+      "../list.view", "../simplelist.view", "../emptylist.view", "../simpletreelist.view"
+    ], function (Backbone, Marionette, mock, Connector, ListView, SimpleListView, EmptyListView,
+        SimpleTreeListView) {
+
+      var contentRegion  = new Marionette.Region({
+            el: "#content"
+          }),
+          contentRegion2 = new Marionette.Region({
+            el: "#content2"
+          }),
+          contentRegion3 = new Marionette.Region({
+            el: "#content3"
+          }),
+          contentRegion4 = new Marionette.Region({
+            el: "#content4"
+          }),
+
+          // the icons are from the <stylesheet>/image/icons directory
+          options        = {
+            data: {
+              title: "SimpleListView",
+              back_button: true,
+              items: [
+                {
+                  icon: 'mime_pdf',
+                  name: 'SomePresentation',
+                  enableIcon: true
+                },
+                {
+                  icon: 'mime_excel',
+                  name: 'ASpreadsheet',
+                  enableIcon: true
+                },
+                {
+                  icon: 'mime_folder',
+                  name: 'No icon wanted here',
+                  enableIcon: false
+                },
+                {
+                  icon: 'mime_document',
+                  name: 'TheDocument',
+                  enableIcon: true
+                }
+              ]
+            }
+          },
+          control1       = new ListView({data: {title: 'A title, at least'}}),
+          control2       = new SimpleListView(options),
+          control3       = new EmptyListView({text: "EmptyListText"});
+
+      var connection = {
+            url: "//server/otcs/cs/api/v1",
+            supportPath: "/otcssupport"
+          },
+          connector  = new Connector({
+            connection: connection
+          });
+      var treeCollection = new Backbone.Collection([
+        {
+          id: 11112,
+          name: "Tree List Node 1 - Favorite Group",
+          type: -1,
+          icon: "mime_fav_group32"
+        },
+        {
+          id: 11113,
+          name: "Tree List Node 2 - Folder",
+          type: 0,
+          icon: "mime_folder"
+        },
+        {
+          id: 11114,
+          name: "Tree List Node 3 - PDF",
+          type: 144,
+          mime_type: "application/pdf",
+          icon: "mime_pdf"
+        },
+        {
+          id: 11115,
+          name: "Tree List Node 4 - No Icon",
+          type: 0
+        },
+        {
+          id: 11116,
+          name: "Tree List Node 5 - Folder with super long name to see truncation",
+          type: 0,
+          icon: "mime_folder"
+        }
+      ]);
+      var i;
+      for (i = 0; i < treeCollection.length; i++) {
+        treeCollection.models[i].connector = connector;
+      }
+      treeCollection.models[0].childrenCollection = new Backbone.Collection([
+        {
+          id: 111121,
+          name: "Tree List Leaf 1 - Folder",
+          type: 0,
+          icon: "mime_folder"
+        },
+        {
+          id: 111122,
+          name: "Tree List Leaf 2 - PDF",
+          type: 144,
+          mime_type: "application/pdf",
+          icon: "mime_pdf"
+        },
+        {
+          id: 111123,
+          name: "Tree List Leaf 3 - Folder with super long name to see truncation",
+          type: 0,
+          icon: "mime_folder"
+        }
+      ]);
+      for (i = 0; i < treeCollection.models[0].childrenCollection.length; i++) {
+        treeCollection.models[0].childrenCollection.models[i].connector = connector;
+      }
+
+      var control4 = new SimpleTreeListView({collection: treeCollection});
+
+      control1.render();
+      contentRegion.show(control1);
+
+      control2.render();
+      contentRegion2.show(control2);
+
+      control3.render();
+      contentRegion3.show(control3);
+
+      control4.render();
+      contentRegion4.show(control4);
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<br>
+<div class="binf-container">
+  <div class="binf-row">
+    <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content"></div>
+    <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content2"></div>
+    <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content3"></div>
+  </div>
+  <div class="binf-row">
+    <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content4"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

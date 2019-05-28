@@ -1,0 +1,256 @@
+{
+  "csui/controls/form/form.view": {
+    "extensions": {
+      "csui": [
+        "csui/controls/form/fields/alpaca/alpuserfield"
+      ]
+    }
+  },
+  "csui/controls/table/cells/node.state/node.state.icons": {
+    "extensions": {
+      "csui": [
+        "csui/controls/table/cells/node.state/impl/node.state.icons"
+      ]
+    }
+  },
+  "csui/controls/thumbnail/content/node.state/node.state.icons": {
+    "extensions": {
+      "csui": [
+        "csui/controls/thumbnail/content/node.state/impl/node.state.icons"
+      ]
+    }
+  },
+  "csui/dialogs/node.picker/start.locations/start.location.collection": {
+    "startLocations": {
+      "csui": [
+        "csui/dialogs/node.picker/start.locations/enterprise.volume",
+        "csui/dialogs/node.picker/start.locations/current.location",
+        "csui/dialogs/node.picker/start.locations/personal.volume",
+        "csui/dialogs/node.picker/start.locations/favorites",
+        "csui/dialogs/node.picker/start.locations/recent.containers",
+        "csui/dialogs/node.picker/start.locations/category.volume",
+        "csui/dialogs/node.picker/start.locations/perspective.assets.volume",
+        "csui/dialogs/node.picker/start.locations/search.location",
+        "csui/dialogs/node.picker/start.locations/default.location"
+      ]
+    }
+  },
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "csui": {
+        "version": "16.2.7.32",
+        "helpDocId": "cssui160206-h-ugd"
+      }
+    }
+  },
+  "csui/models/tool.item.config/tool.item.config.collection": {
+    "configs": {
+      "csui": [
+        "csui/widgets/favorites/toolbaritems",
+        "csui/widgets/metadata/add.properties.menuitems",
+        "csui/widgets/metadata/header.dropdown.menu.items",
+        "csui/widgets/nodestable/headermenuitems",
+        "csui/widgets/nodestable/toolbaritems",
+        "csui/widgets/recentlyaccessed/toolbaritems",
+        "csui/widgets/search.results/toolbaritems",
+        "csui/widgets/metadata/versions.toolbaritems",
+        "csui/widgets/navigation.header/profile.menuitems"
+      ]
+    }
+  },
+  "csui/models/tool.item.mask/tool.item.mask.collection": {
+    "masks": {
+      "csui": [
+        "csui/widgets/favorites/toolbaritems.masks",
+        "csui/widgets/metadata/add.properties.menuitems.mask",
+        "csui/widgets/metadata/header.dropdown.menu.items.mask",
+        "csui/widgets/nodestable/headermenuitems.mask",
+        "csui/widgets/nodestable/toolbaritems.masks",
+        "csui/widgets/recentlyaccessed/toolbaritems.masks",
+        "csui/widgets/search.results/toolbaritems.masks",
+        "csui/widgets/metadata/versions.toolbaritems.mask",
+        "csui/widgets/navigation.header/profile.menuitems.mask"
+      ]
+    }
+  },
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "csui": [
+        "csui/widgets/favorites",
+        "csui/widgets/myassignments",
+        "csui/widgets/nodestable",
+        "csui/widgets/recentlyaccessed",
+        "csui/widgets/search.custom",
+        "csui/widgets/search.results",
+        "csui/widgets/shortcut",
+        "csui/widgets/shortcuts",
+        "csui/widgets/welcome.placeholder",
+        "csui/widgets/html.editor"
+      ]
+    }
+  },
+  "csui/pages/start/perspective.routing": {
+    "extensions": {
+      "csui": [
+        "csui/pages/start/impl/node.perspective.router",
+        "csui/pages/start/impl/search.perspective.router"
+      ]
+    }
+  },
+  "csui/utils/authenticators/authenticators": {
+    "extensions": {
+      "csui": [
+        "csui/utils/authenticators/core.authenticators"
+      ]
+    }
+  },
+  "csui/utils/classic.nodes/classic.nodes": {
+    "extensions": {
+      "csui": [
+        "csui/utils/classic.nodes/impl/core.classic.nodes"
+      ]
+    }
+  },
+  "csui/utils/commands": {
+    "extensions": {
+      "csui": [
+        "csui/integration/folderbrowser/commands/go.to.node.history",
+        "csui/integration/folderbrowser/commands/open.full.page.container",
+        "csui/utils/commands/add.categories",
+        "csui/utils/commands/add",
+        "csui/utils/commands/add.version",
+        "csui/utils/commands/browse",
+        "csui/utils/commands/copy",
+        "csui/utils/commands/delete",
+        "csui/utils/commands/download",
+        "csui/utils/commands/edit",
+        "csui/utils/commands/editactivex",
+        "csui/utils/commands/editofficeonline",
+        "csui/utils/commands/editwebdav",
+        "csui/utils/commands/email.link",
+        "csui/utils/commands/execute.saved.query",
+        "csui/utils/commands/favorite.add",
+        "csui/utils/commands/favorite.remove",
+        "csui/utils/commands/filter",
+        "csui/utils/commands/inlineedit",
+        "csui/utils/commands/move",
+        "csui/utils/commands/navigate",
+        "csui/utils/commands/open",
+        "csui/utils/commands/open.channel",
+        "csui/utils/commands/open.discussion",
+        "csui/utils/commands/open.form",
+        "csui/utils/commands/open.milestone",
+        "csui/utils/commands/open.news",
+        "csui/utils/commands/open.poll",
+        "csui/utils/commands/open.prospector",
+        "csui/utils/commands/open.specific.classic.page",
+        "csui/utils/commands/open.specific.node.perspective",
+        "csui/utils/commands/open.task",
+        "csui/utils/commands/open.taskgroup",
+        "csui/utils/commands/open.tasklist",
+        "csui/utils/commands/open.topic",
+        "csui/utils/commands/permissions",
+        "csui/utils/commands/properties",
+        "csui/utils/commands/rename",
+        "csui/utils/commands/rename.favorite",
+        "csui/utils/commands/reserve",
+        "csui/utils/commands/run.livereport",
+        "csui/utils/commands/sign.out",
+        "csui/utils/commands/switch.to.classic",
+        "csui/utils/commands/unreserve",
+        "csui/utils/commands/user.profile",
+        "csui/utils/commands/description.toggle",
+        "csui/utils/commands/thumbnail.toggle",
+        "csui/utils/commands/save.filter",
+        "csui/utils/commands/copy.link",
+        "csui/utils/commands/permissions",
+        "csui/utils/commands/maximize.widget.view",
+        "csui/utils/commands/restore.widget.size",
+        "csui/utils/commands/permissions/apply.permission",
+        "csui/utils/commands/permissions/edit.permission",
+        "csui/utils/commands/permissions/change.owner.permission",
+        "csui/utils/commands/permissions/delete.permission",
+        "csui/utils/commands/permissions/add.user.group",
+        "csui/utils/commands/permissions/add.owner.group",
+        "csui/utils/commands/collection/collect.items",
+        "csui/utils/commands/collection/remove.collected.items",
+        "csui/utils/commands/permissions/restore.public.access",
+        "csui/utils/commands/goto.location",
+        "csui/utils/commands/edit.perspective",
+        "csui/utils/commands/create.perspective"
+      ],
+      "cop-temporary": [
+        "csui/temporary/cop/commands/open.blog",
+        "csui/temporary/cop/commands/open.faq",
+        "csui/temporary/cop/commands/open.forum",
+        "csui/temporary/cop/commands/open.wiki",
+        "csui/temporary/cop/commands/open.mailstore"
+      ]
+    }
+  },
+  "csui/utils/commands/open.plugins/open.plugins": {
+    "extensions": {
+      "csui": [
+        "csui/utils/commands/open.plugins/impl/core.open.plugins"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/perspective.context": {
+    "extensions": {
+      "csui": [
+        "csui/utils/contexts/perspective/impl/node.perspective.context.plugin",
+        "csui/utils/contexts/perspective/impl/search.perspective.context.plugin"
+      ]
+    }
+  },
+  "csui/utils/defaultactionitems": {
+    "extensions": {
+      "activeviews-temporary": [
+        "csui/temporary/activeviews/commands/defaultactionitems"
+      ],
+      "appearances-temporary": [
+        "csui/temporary/appearances/commands/defaultactionitems"
+      ],
+      "cop-temporary": [
+        "csui/temporary/cop/commands/defaultactionitems"
+      ],
+      "csui": [
+        "csui/utils/impl/core.defaultactionitems"
+      ]
+    }
+  },
+  "csui/utils/node.links/node.links": {
+    "extensions": {
+      "csui": [
+        "csui/utils/node.links/impl/core.node.links"
+      ]
+    }
+  },
+  "csui/utils/nodesprites": {
+    "extensions": {
+      "activeviews-temporary": [
+        "csui/temporary/activeviews/icons/icons"
+      ],
+      "appearances-temporary": [
+        "csui/temporary/appearances/icons/icons"
+      ],
+      "cop-temporary": [
+        "csui/temporary/cop/icons/icons"
+      ]
+    }
+  },
+  "csui/utils/smart.nodes/smart.nodes": {
+    "extensions": {
+      "csui": [
+        "csui/utils/smart.nodes/impl/core.smart.nodes"
+      ]
+    }
+  },
+  "csui/widgets/nodestable/toolbaritems": {
+    "extensions": {
+      "csui": [
+        "csui/integration/folderbrowser/impl/nodestable.toolitems"
+      ]
+    }
+  }
+}

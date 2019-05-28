@@ -1,0 +1,96 @@
+<div class="esoc-general-tab-content binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+  <div class="esoc-general-tab-sub-content binf-col-lg-6 binf-col-md-6 binf-col-sm-12 binf-col-xs-12">
+    <div class="esoc-user-general-details binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      <div class="esoc-user-name binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+        {{#if chatSettings.chatEnabled}}
+          {{#if chatSettings.presenceEnabled}}
+            <div id="esoc-user-profile-presence-indicator" class="esoc-user-profile-presence-indicator binf-col-lg-12 binf-col-md-12 binf-col-sm-12
+    binf-col-xs-12"></div>
+          {{/if}}
+        {{/if}}{{display_name}}</div>
+      {{#if title}}
+        <div class="esoc-user-title binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">{{title}}</div>
+      {{/if}}
+      {{#if department_name}}
+        <div
+            class="esoc-department-name binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">{{department_name}}</div>
+      {{/if}}
+      {{#if office_location}}
+        <div
+            class="esoc-user-location binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">{{office_location}}</div>
+      {{/if}}
+      {{#if business_email}}
+        <div class="esoc-user-email esoc-user-links binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          <a href="mailto:{{business_email}}">{{business_email}}</a>
+        </div>
+      {{/if}}
+      {{#if business_phone}}
+        <div class="esoc-user-business-phone binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          <span
+              class="esoc-user-messages-business-phone esoc-user-general-info-label">{{messages.phone}} </span>
+          <span class="esoc-user-general-info-content">{{business_phone}}</span>
+        </div>
+      {{/if}}
+      {{#if business_fax}}
+        <div class="esoc-user-business-fax binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          <span
+              class="esoc-user-messages-business-fax esoc-user-general-info-label">{{messages.fax}} </span>
+          <span class="esoc-user-general-info-content">{{business_fax}}</span>
+        </div>
+      {{/if}}
+
+      {{#if messages.time_zone}}
+        <div class="esoc-user-time-zone binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          <span
+              class="esoc-user-messages-timezone esoc-user-general-info-label">{{messages.timezone}} </span>
+          <span class="esoc-user-general-info-content">{{time_zone}}</span>
+        </div>
+      {{/if}}
+    </div>
+
+    {{^if errorMessage}}
+      {{#if messages.showFacebookLink}}
+        <div class="esoc-user-facebook-link"></div>
+      {{/if}}
+      {{#if messages.showLinkedinLink}}
+        <div class="esoc-user-linked-link"></div>
+      {{/if}}
+      {{#if messages.showTwitterLink}}
+        <div class="esoc-user-twitter-link"></div>
+      {{/if}}
+      {{#if messages.showReportsTo}}
+        <div class="esoc-user-reports-to"></div>
+      {{/if}}
+      {{#if messages.showLangSpoken}}
+        <div class="esoc-user-languages-spoken"></div>
+      {{/if}}
+    {{/if}}
+  </div>
+  <div class="esoc-general-tab-sub-content binf-col-lg-6 binf-col-md-6 binf-col-sm-12 binf-col-xs-12">
+    {{^if errorMessage}}
+      {{#if messages.statusPost}}
+        <div class="esoc-user-status-post"></div>
+      {{/if}}
+      {{#if messages.showAboutMe}}
+        <div class="esoc-user-about-me"></div>
+      {{/if}}
+      {{#if messages.showJobDesc}}
+        <div class="esoc-user-job-description"></div>
+      {{/if}}
+      {{#if messages.showExpertise}}
+        <div class="esoc-user-expertise"></div>
+      {{/if}}
+      {{#if messages.showPastPositions}}
+        <div class="esoc-user-past-positions"></div>
+      {{/if}}
+      {{#if messages.showDegrees}}
+        <div class="esoc-user-degree"></div>
+      {{/if}}
+      {{#if messages.showAwards}}
+        <div class="esoc-user-awards"></div>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

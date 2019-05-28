@@ -1,0 +1,162 @@
+{
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/nodes\/6404?actions",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "actions": {
+      "data": {
+        "audit": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v1\/nodes\/6404\/audit?limit=1000",
+          "method": "GET",
+          "name": "Audit"
+        },
+        "copy": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v1\/forms\/nodes\/copy?id=6404",
+          "href": "\/api\/v1\/nodes",
+          "method": "POST",
+          "name": "Copy"
+        },
+        "delete": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v1\/nodes\/6404",
+          "method": "DELETE",
+          "name": "Delete"
+        },
+        "makefavorite": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/members\/favorites\/6404",
+          "method": "POST",
+          "name": "Add to Favorites"
+        },
+        "more": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "",
+          "name": "..."
+        },
+        "move": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v1\/forms\/nodes\/move?id=6404",
+          "href": "\/api\/v1\/nodes\/6404",
+          "method": "PUT",
+          "name": "Move"
+        },
+        "open": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v1\/nodes\/6404\/nodes",
+          "method": "GET",
+          "name": "Open"
+        },
+        "properties": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v1\/nodes\/6404",
+          "method": "GET",
+          "name": "Properties"
+        },
+        "rename": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v1\/forms\/nodes\/rename?id=6404",
+          "href": "\/api\/v1\/nodes\/6404",
+          "method": "PUT",
+          "name": "Rename"
+        }
+      },
+      "map": {
+        "default_action": "open",
+        "more": [
+          "properties",
+          "audit"
+        ]
+      },
+      "order": [
+        "open",
+        "rename",
+        "makefavorite",
+        "copy",
+        "move",
+        "delete",
+        "more"
+      ]
+    },
+    "data": {
+      "columns": [
+        {
+          "data_type": 2,
+          "key": "type",
+          "name": "Type",
+          "sort_key": "x2225"
+        },
+        {
+          "data_type": -1,
+          "key": "name",
+          "name": "Name",
+          "sort_key": "x2222"
+        },
+        {
+          "data_type": -1,
+          "key": "size_formatted",
+          "name": "Size",
+          "sort_key": "x2223"
+        },
+        {
+          "data_type": 401,
+          "key": "modify_date",
+          "name": "Modified",
+          "sort_key": "x2221"
+        }
+      ],
+      "properties": {
+        "container": true,
+        "container_size": 14,
+        "create_date": "2016-01-15T11:43:43",
+        "create_user_id": 1000,
+        "description": "",
+        "description_multilingual": {"en": ""},
+        "favorite": false,
+        "id": 6404,
+        "mime_type": null,
+        "modify_date": "2016-01-15T17:47:48",
+        "modify_user_id": 1000,
+        "name": "F1",
+        "name_multilingual": {"en": "F1"},
+        "owner_group_id": 1001,
+        "owner_user_id": 1000,
+        "parent_id": 2000,
+        "reserved": false,
+        "reserved_date": null,
+        "reserved_user_id": 0,
+        "size": 14,
+        "size_formatted": "14 Items",
+        "type": 0,
+        "type_name": "Folder",
+        "versions_control_advanced": false,
+        "volume_id": -2000
+      }
+    }
+  }
+}

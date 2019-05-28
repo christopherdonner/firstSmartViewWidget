@@ -1,0 +1,201 @@
+
+<div class="esoc-settings-tab-content binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+  <div class="esoc-setting-notification csui-facet-panel">
+    <div class="esoc-setting-name">{{ messages.notification}}</div>
+
+    <div class="csui-facet-item">
+      <div class="esoc-settings-selection-label">
+        <input type="checkbox" name="notification" value="notifyMentions"
+               id="esoc_setting_notifyMentions" class="esoc_setting_edit_field"
+               {{#if settings.notifyMentions}}checked{{/if}}>
+        <span id="esoc_setting_notifyMentions_checkbox"
+              class="{{#if settings.notifyMentions}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+      </div>
+
+      <div class="csui-filter-name">
+          <label for="esoc_setting_notifyMentions" class="csui-name" title="{{messages.notifyMentions}}">
+              {{messages.notifyMentions}}
+	  </label>
+      </div>
+    </div>
+
+    <div class="csui-facet-item">
+      <div class="esoc-settings-selection-label">
+        <input type="checkbox" name="notification" value="notifyNewFollower"
+               id="esoc_setting_notifyNewFollower" class="esoc_setting_edit_field"
+               {{#if settings.notifyNewFollower}}checked{{/if}}>
+        <span id="esoc_setting_notifyNewFollower_checkbox"
+              class="{{#if settings.notifyNewFollower}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+      </div>
+
+      <div class="csui-filter-name">
+          <label for="esoc_setting_notifyNewFollower" class="csui-name" title="{{messages.notifyNewFollower}}">
+              {{messages.notifyNewFollower}}
+	  </label>
+      </div>
+    </div>
+
+    <div class="csui-facet-item">
+      <div class="esoc-settings-selection-label">
+        <input type="checkbox" name="notification" value="notifyCommentsMyPosts"
+               id="esoc_setting_notifyCommentsMyPosts" class="esoc_setting_edit_field"
+               {{#if settings.notifyCommentsMyPosts}}checked{{/if}}>
+        <span id="esoc_setting_notifyCommentsMyPosts_checkbox"
+              class="{{#if settings.notifyCommentsMyPosts}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+      </div>
+
+      <div class="csui-filter-name">
+          <label for="esoc_setting_notifyCommentsMyPosts" class="csui-name" title="{{messages.notifyCommentsMyPosts}}">
+              {{messages.notifyCommentsMyPosts}}
+	  </label>
+      </div>
+    </div>
+
+    <div class="csui-facet-item">
+      <div class="esoc-settings-selection-label">
+        <input type="checkbox" name="notification" value="notifyCommentsMyThreads"
+               id="esoc_setting_notifyCommentsMyThreads" class="esoc_setting_edit_field"
+               {{#if settings.notifyCommentsMyThreads}}checked{{/if}}>
+        <span id="esoc_setting_notifyCommentsMyThreads_checkbox"
+              class="{{#if settings.notifyCommentsMyThreads}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+      </div>
+
+      <div class="csui-filter-name">
+          <label for="esoc_setting_notifyCommentsMyThreads" class="csui-name" title="{{messages.notifyCommentsMyThreads}}">
+              {{messages.notifyCommentsMyThreads}}
+	  </label>
+      </div>
+    </div>
+
+    <div class="csui-facet-item">
+      <div class="esoc-settings-selection-label">
+        <input type="checkbox" name="notification" value="notifyPrivateMessages"
+               id="esoc_setting_notifyPrivateMessages" class="esoc_setting_edit_field"
+               {{#if settings.notifyPrivateMessages}}checked{{/if}}>
+        <span id="esoc_setting_notifyPrivateMessages_checkbox"
+              class="{{#if settings.notifyPrivateMessages}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+      </div>
+
+      <div class="csui-filter-name">
+          <label for="esoc_setting_notifyPrivateMessages" class="csui-name" title="{{messages.notifyPrivateMessages}}">
+              {{messages.notifyPrivateMessages}}
+	  </label>
+      </div>
+    </div>
+  </div>
+  {{#if settings.contentPrivacy}}
+    <div
+        class="esoc-setting-privacySettings csui-facet-panel binf-col-lg-6 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      <div class="esoc-setting-name">{{ messages.privacySettings}}</div>
+      <span class="esoc-sub-setting-name">{{ messages.notifyMyUpdatesTo}}</span>
+
+      <div class="csui-facet-item">
+        <div class="esoc-settings-selection-label">
+          <input type="radio" name="{{messages.CONTENT_PRIVACY}}" value="{{messages.EVERYONE}}"
+                 id="esoc_privacySettings_{{messages.EVERYONE}}" class="esoc_setting_edit_field"
+                 {{#if settings.contentPrivacyEveryOne}}checked{{/if}} >
+          <span id="esoc_privacySettings_{{messages.EVERYONE}}_radio"
+                class="{{#if settings.contentPrivacyEveryOne}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+        </div>
+
+        <div class="csui-filter-name">
+            <label for="esoc_privacySettings_{{messages.EVERYONE}}" class="csui-name" title="{{messages.privacyEveryOne}}">
+                {{messages.privacyEveryOne}}
+	    </label>
+        </div>
+      </div>
+
+      <div class="csui-facet-item">
+        <div class="esoc-settings-selection-label">
+          <input type="radio" name="{{messages.CONTENT_PRIVACY}}" value="{{messages.FOLLOW}}"
+                 id="esoc_privacySettings_{{messages.FOLLOW}}" class="esoc_setting_edit_field"
+                 {{#if settings.contentPrivacyFollow}}checked{{/if}} >
+          <span id="esoc_privacySettings_{{messages.FOLLOW}}_radio"
+                class="{{#if settings.contentPrivacyFollow}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+        </div>
+
+        <div class="csui-filter-name">
+            <label for="esoc_privacySettings_{{messages.FOLLOW}}" class="csui-name" title="{{messages.privacyFollow}}">
+                {{messages.privacyFollow}}
+	    </label>
+        </div>
+      </div>
+
+      <div class="csui-facet-item">
+        <div class="esoc-settings-selection-label">
+          <input type="radio" name="{{messages.CONTENT_PRIVACY}}" value="{{messages.NONE}}"
+                 id="esoc_privacySettings_{{messages.NONE}}" class="esoc_setting_edit_field"
+                 {{#if settings.contentPrivacyNone}}checked{{/if}} >
+          <span id="esoc_privacySettings_{{messages.NONE}}_radio"
+                class="{{#if settings.contentPrivacyNone}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+        </div>
+
+        <div class="csui-filter-name">
+            <label for="esoc_privacySettings_{{messages.NONE}}" class="csui-name" title="{{messages.privacyNone}}">
+                {{messages.privacyNone}}
+            </label>
+        </div>
+      </div>
+
+    </div>
+  {{/if}}
+  {{#if settings.statusPrivacy}}
+    <div
+        class="esoc-setting-status-privacySettings csui-facet-panel binf-col-lg-6 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      <div class="esoc-setting-name">{{ messages.privacySettingsForStatusMessages}}</div>
+      <span class="esoc-sub-setting-name">{{ messages.notifyMyUpdatesTo}}</span>
+
+      <div class="csui-facet-item">
+        <div class="esoc-settings-selection-label">
+          <input type="radio" name="{{messages.STATUS_PRIVACY}}" value="{{messages.EVERYONE}}"
+                 id="esoc_statusPrivacySettings_{{messages.EVERYONE}}"
+                 class="esoc_setting_edit_field"
+                 {{#if settings.statusPrivacyEveryOne}}checked{{/if}} >
+          <span id="esoc_statusPrivacySettings_{{messages.EVERYONE}}_radio"
+                class="{{#if settings.statusPrivacyEveryOne}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+        </div>
+
+        <div class="csui-filter-name">
+            <label for="esoc_statusPrivacySettings_{{messages.EVERYONE}}" class="csui-name" title="{{messages.privacyEveryOne}}">
+                {{messages.privacyEveryOne}}
+            </label>
+        </div>
+      </div>
+
+      <div class="csui-facet-item">
+        <div class="esoc-settings-selection-label">
+          <input type="radio" name="{{messages.STATUS_PRIVACY}}" value="{{messages.FOLLOW}}"
+                 id="esoc_statusPrivacySettings_{{messages.FOLLOW}}" class="esoc_setting_edit_field"
+                 {{#if settings.statusPrivacyFollow}}checked{{/if}} >
+          <span id="esoc_statusPrivacySettings_{{messages.FOLLOW}}_radio"
+                class="{{#if settings.statusPrivacyFollow}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+        </div>
+
+        <div class="csui-filter-name">
+            <label for="esoc_statusPrivacySettings_{{messages.FOLLOW}}" class="csui-name" title="{{messages.privacyFollow}}">
+                {{messages.privacyFollow}}
+	    </label>
+        </div>
+      </div>
+
+      <div class="csui-facet-item">
+        <div class="esoc-settings-selection-label">
+          <input type="radio" name="{{messages.STATUS_PRIVACY}}" value="{{messages.NONE}}"
+                 id="esoc_statusPrivacySettings_{{messages.NONE}}" class="esoc_setting_edit_field"
+                 {{#if settings.statusPrivacyNone}}checked{{/if}} >
+          <span id="esoc_statusPrivacySettings_{{messages.NONE}}_radio"
+                class="{{#if settings.statusPrivacyNone}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+        </div>
+
+        <div class="csui-filter-name">
+            <label for="esoc_statusPrivacySettings_{{messages.NONE}}" class="csui-name" title="{{messages.privacyNone}}">
+                {{messages.privacyNone}}
+            </label>
+        </div>
+      </div>
+
+    </div>
+  {{/if}}
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,33 @@
+{
+  "type": "flow",
+  "options": {
+    "widgets": [
+      {
+        "type": "csui/widgets/welcome.placeholder"
+      },
+      {
+        "type": "csui/widgets/myassignments"
+      },
+      {
+        "type": "csui/widgets/favorites"
+      },
+      {
+        "type": "csui/widgets/shortcut",
+        "options": {
+          "type": 141,
+          "background": "cs-tile-background2"
+        }
+      },
+      {
+        "type": "csui/widgets/shortcut",
+        "options": {
+          "type": 142,
+          "background": "cs-tile-background3"
+        }
+      },
+      {
+        "type": "csui/widgets/recentlyaccessed"
+      }
+    ]
+  }
+}

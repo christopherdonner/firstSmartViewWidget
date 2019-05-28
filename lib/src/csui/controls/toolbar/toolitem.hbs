@@ -1,0 +1,33 @@
+{{#if isSeparator}}
+{{else}}
+  {{#if icon}}
+    {{#if renderIconAndText}}
+      <a title="{{title}}" href="#" class="csui-toolitem" tabindex="-1" data-cstabindex="-1">
+        <span class="{{icon}}" data-cstabindex="-1"></span>{{name}}
+      </a>
+    {{else}}
+      {{#if renderTextOnly}}
+        <a href="#" class="csui-toolitem" data-cstabindex="-1" title="{{title}}">{{name}}
+          {{#if menuWithMoreOptions}}
+            <span class="csui-button-icon csui-icon-rightArrow icon-expandArrowUp" data-cstabindex="-1"></span>
+          {{/if}}
+        </a>
+      {{else}}
+        <a href="#" title="{{title}}" class="csui-toolitem"
+           data-cstabindex="-1" {{#if toolItemAria}}aria-label="{{toolItemAria}}" {{else}}
+           aria-label="{{title}}" {{/if}}
+          {{#if hasToolItemAriaExpand}}aria-expanded="{{toolItemAriaExpand}}" {{/if}}>
+          <span class="{{icon}}" data-cstabindex="-1"></span>
+        </a>
+      {{/if}}
+    {{/if}}
+  {{else}}
+    <a href="#" class="csui-toolitem" data-cstabindex="-1" title="{{title}}">{{name}}
+      {{#if menuWithMoreOptions}}
+        <span class="csui-button-icon csui-icon-rightArrow icon-expandArrowUp" data-cstabindex="-1"></span>
+      {{/if}}
+    </a>
+  {{/if}}
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

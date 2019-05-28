@@ -1,0 +1,73 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-fav2-table {
+  height: calc(100vh - 183px);
+  min-height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .binf-widgets .csui-fav2-table {
+    height: calc(100vh - 315px);
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .binf-widgets .csui-fav2-table {
+    height: calc(100vh - 315px);
+  }
+}
+
+.binf-widgets .csui-fav2-table .csui-favorite-masterdetail-view {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto; 
+  overflow: hidden;
+  width: 100%;
+}
+
+.binf-widgets .csui-fav2-table .csui-favorite-groups-view {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 248px;
+  min-width: 248px;
+  width: 20%;
+}
+
+.binf-widgets .csui-fav2-table .csui-table-view {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  width: 80%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.binf-widgets .csui-fav2-table .csui-table-view tr.csui-dragline.csu-dragline-spacer {
+  height: 1px;
+  box-shadow: none;
+}
+
+.binf-widgets .csui-fav2-table .csui-table-view tr.csui-dragline {
+  height: 0;
+  box-shadow: 2px 0 2px 2px #627783;
+}
+
+.binf-widgets .csui-fav2-table .csui-table-cell-parent_id .csui-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.binf-widgets .csui-fav2-table .csui-table-cell-parent_id .csui-parent-location .csui-icon-group {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.binf-widgets .csui-fav2-table .csui-table-view tbody tr[draggable=true]:hover td:first-child {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-image: url('../../../themes/carbonfiber/image/icons/drag_dots21.svg');
+}

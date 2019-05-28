@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Single Perspective View</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body.binf-widgets{
+      margin-top: 1em;
+      margin-left: 1em;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require(["csui/lib/underscore", "csui/lib/marionette", 'csui/utils/contexts/page/page.context',
+      "../single.perspective.view", "./single.perspective.mock",
+      'csui/widgets/myassignments/test/myassignments.mock.data'
+    ], function (_, Marionette, PageContext, SinglePerspectiveView, perspectiveMock,
+        MyAssignmentsMock) {
+
+      var contentRegion = new Marionette.Region({
+            el: "body"
+          }),
+          pageContext = new PageContext(),
+          perspectiveView = new SinglePerspectiveView(_.defaults({
+            context: pageContext
+          }, perspectiveMock));
+
+      perspectiveView.widgetsResolved.always(function () {
+        MyAssignmentsMock.enable();
+        pageContext.fetch();
+        contentRegion.show(perspectiveView);
+      });
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets"></body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

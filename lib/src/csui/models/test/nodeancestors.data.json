@@ -1,0 +1,14 @@
+{
+  "ancestors": {
+    "2000": [
+      {
+        "id": 2000,
+        "name": "Enterprise",
+        "parent_id": -1,
+        "type": 141,
+        "type_name": "Enterprise Workspace",
+        "volume_id": -2000
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"add_version_to_id": 653866,
+				"append_data": "dont_append",
+				"category_names": "",
+				"export_type": "version",
+				"version_description": "",
+				"version_handling": "minorversion",
+				"version_name": "MyNewVersion"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text/html",
+			"http_method": "POST",
+			"output_destination": "node",
+			"run_in_background": false,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true,
+			"use_conversion_engine": false,
+			"xml_job_ticket_id": ""
+		}
+	}
+}

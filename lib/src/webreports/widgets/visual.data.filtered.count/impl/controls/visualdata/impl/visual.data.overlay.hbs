@@ -1,0 +1,34 @@
+<div id="{{id}}" class="visual-data-controls">
+    <div class="visual-data-control-group controls-lhs {{#unless multipleColumns}}binf-hidden{{/unless}}">
+        <ul>
+            <li>
+                <label for="{{id}}_visual-data-active-column">{{lang.activeColumn}}</label>
+                <select name="visual-data-active-column" id="{{id}}_visual-data-active-column">
+                    {{#each columnnames }}
+                        <option value="{{column}}" {{#if selected}}selected="selected"{{/if}}>{{column_formatted}}</option>
+                    {{/each}}
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div class="visual-data-control-group controls-rhs">
+        <ul>
+            <li> <label for="{{id}}_visual-data-sort-options">{{lang.sortBy}}</label><select name="visual-data-sort-options" id="{{id}}_visual-data-sort-options">
+                {{#each sortOptions }}
+                    <option value="{{value}}" {{#if selected}}selected="selected"{{/if}}>{{label}}</option>
+                {{/each}}
+            </select></li>
+            <li><label for="{{id}}_visual-data-value-as-percentage">{{lang.showValuesAs}}</label><select name="visual-data-value-as-percentage" id="{{id}}_visual-data-value-as-percentage">
+                {{#each viewValueAsPercentage }}
+                    <option value="{{value}}" {{#if selected}}selected="selected"{{/if}}>{{label}}</option>
+                {{/each}}
+            </select></li>
+            <li><label for="{{id}}_visual-data-group-after">{{lang.groupAfter}}</label> <select name="visual-data-group-after" id="{{id}}_visual-data-group-after">
+                {{#each groupAfter }}
+                    <option value="{{value}}" {{#if selected}}selected="selected"{{/if}}>{{display}}</option>
+                {{/each}}
+            </select></li>
+        </ul>
+    </div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

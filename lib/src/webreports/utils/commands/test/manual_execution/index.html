@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Open WR Command</title>
+
+	<style>
+		body.binf-widgets {
+			/*padding-top: 1em;*/
+			margin: 0;
+			height: 100%;
+			overflow-y: hidden;
+		}
+
+		.binf-widgets #control {
+			background-color: #FFF;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.binf-widgets #content{
+			background-color: #FFF;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+
+	<link rel="stylesheet" href="../../../../../csui/themes/carbonfiber/theme.css">
+
+	<script src="../../../../../csui/lib/require.js"></script>
+	<script src="../../../../../csui/config.js" data-csui-path="../../../../../csui"></script>
+
+	<script>
+
+		require.config({
+			deps: [
+				'csui/lib/require.config!csui/csui-extensions.json'
+			]
+		});
+
+		require.config({
+			waitSeconds : 20,
+			paths: {
+				webreports: '../../../../',
+				workflow: '../../../../../workflow_not_core/workflow-src'  // needs to point to /src of workflow component on your local machine
+			},
+			config: {
+				// Load WR extensions:
+				"csui/models/server.module/server.module.collection": {
+					"modules": {
+						"webreports": {
+							"version": "1.0.0.598"
+						}
+					}
+				},
+				"csui/models/widget/widget.collection": {
+					"widgets": {
+						"webreports": [
+							"webreports/widgets/tilereport",
+							"webreports/widgets/nodeslistreport",
+							"webreports/widgets/visual.data.filtered.count",
+							"webreports/widgets/widget.carousel"
+						]
+					}
+				},
+				"csui/utils/commands": {
+					"extensions": {
+						"webreports": [
+							"webreports/utils/commands/open.webreport",
+							"webreports/utils/commands/open.classic.webreport"
+						]
+					}
+				},
+				"csui/utils/defaultactionitems": {
+					"extensions": {
+						"webreports": [
+							"webreports/utils/commands/defaultactionitems"
+						]
+					}
+				},
+				"csui/utils/nodesprites": {
+					"extensions": {
+						"webreports": [
+							"webreports/utils/icons/icons"
+						]
+					}
+				}
+			}
+		});
+
+
+
+		require(['csui/lib/backbone','csui/lib/marionette', 'csui/lib/jquery', 'csui/lib/underscore',
+				'csui/utils/contexts/page/page.context',
+				'csui/utils/contexts/factories/connector',
+				'csui/utils/contexts/factories/node',
+				'csui/utils/contexts/factories/next.node',
+				'csui/utils/commands',
+				'csui/behaviors/default.action/default.action.behavior',
+				'./manual.execution.mock.js',
+				'csui/lib/binf/js/binf'
+		], function (Backbone, Marionette, $, _, PageContext, ConnectorFactory, NodeFactory, NextNode, commands, DefaultActionBehavior,  Mock) {
+
+			var
+			// Create the data managing context
+					context = new PageContext({
+						factories: {
+							connector: {
+								connection: {
+									url: '//server/cgi/cs.exe/api/v1',
+									supportPath: '/support',
+									session: {
+										ticket: 'dummy'
+									}
+								}
+							},
+							node: {
+								attributes: {id: 699160} //699157
+							}
+						}
+					}),
+
+			// Create instance to execute a WR:
+					ExecutionView = Marionette.ItemView.extend({
+						constructor: function(){
+							Marionette.ItemView.prototype.constructor.apply(this, arguments);
+							this.options.context = context;
+							this.nextNode = context.getModel(NextNode);
+							this.listenTo( this.nextNode, "change:id", this.showWRData);
+
+						},
+						template: "<div><button id='runWR' class='binf-btn binf-btn-danger'>Run WR</button></div>",
+						attributes: {
+							class: "executionView"
+						},
+						ui: {
+							runWR: "#runWR"
+						},
+						events: {
+							"click @ui.runWR": "runWR"
+						},
+						runWR: function (e){
+
+							// Get node models:
+							var self = this,
+								nodeFactory = this.options.context.getFactory(NodeFactory);
+
+							$("#content").html("WR output goes here");
+
+							// Execute the default action:
+							$.when( nodeFactory.fetch())
+								.then( function(data, status, jqxhr ){
+									self.node = nodeFactory.property;
+									self.defaultActionController
+											.executeAction(self.node, {
+												context: self.options.context,
+												originatingView: self,
+												parameters: {
+													parm1:"one",
+													parm2:"two"
+												}
+											});
+
+									/*var nodeCollection = new Backbone.Collection([self.node]),
+										openWebReport = commands.get('OpenWebReport'),
+										status = {
+											nodes: nodeCollection,
+											context: self.options.context
+										};
+									if (openWebReport && openWebReport.enabled(status)) {
+										openWebReport.execute(status, {
+											context: self.options.context,
+											parameters: [{ //TODO: get parms from subwebreport node
+												name: 'myparm1',
+												value: 'parm1'
+											},
+												{
+													name: 'myparm2',
+													value: 'val2'
+												}]
+										});
+									}*/
+								});
+						},
+						// Get the WR data and show it manually:
+						showWRData: function(node, id, options){
+
+							$.ajax({
+								url: "//server/cgi/cs.exe/api/v1/nodes/699160/output"
+							})
+							.done(function(response, status, xhr){
+
+								var response = JSON.parse(response);
+								$("#content").html(response.data);
+							});
+
+						},
+						behaviors: {
+
+							DefaultAction: {
+								behaviorClass: DefaultActionBehavior
+							}
+
+						}
+					}),
+			// Create an instance of the View
+					executionView = new ExecutionView(),
+			// Create helpers to show the views on the page
+					executionRegion = new Marionette.Region({
+						el: "#control"
+					});
+
+			// Show the views on the page
+			executionRegion.show(executionView);
+
+			// Mock the REST API responses
+			Mock.enable();
+
+
+		});
+
+	</script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid binf-grid-rows">
+	<div class="xrow" id="navigation">
+		<div class="binf-col-sm-12">
+			Navigation is here
+		</div>
+	</div>
+	<div class="binf-row" id="table">
+		<div class="binf-col-sm-12">
+			<div class="binf-col-sm-12 binf-row-xs-full" id="control"></div>
+		</div>
+	</div>
+	<div class="binf-row" id="footer">
+		<div class="binf-col-sm-12">
+			<div class="binf-col-sm-12 binf-row-xs-full" id="content">WR output goes here</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

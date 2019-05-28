@@ -1,0 +1,28 @@
+{
+  "data": {
+    "date": null
+  },
+  "schema": {
+    "properties": {
+      "date": {
+        "enum": [
+          "D/2018/8/1:0:0:0",
+          "D/2018/9/1:0:0:0"
+        ],
+        "title": "Date",
+        "type": "string"
+      }
+    }
+  },
+  "options": {
+    "fields": {
+      "date": {
+        "optionLabels": [
+          "2018-08-01",
+          "2018-09-01"
+        ],
+        "type": "select"
+      }
+    }
+  }
+}

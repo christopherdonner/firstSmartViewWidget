@@ -1,0 +1,26 @@
+{{#if isRename}}
+  <input type="text" value="{{name}}" placeholder="{{namePlaceholder}}"
+         class="binf-flex-row binf-form-control csui-favorite-group-input-name">
+  <button type="button" class="binf-flex csui-btn-edit-cancel binf-btn">
+    <span class="icon edit-cancel" title="{{EditCancelTooltip}}" aria-label="{{EditCancelAria}}"></span>
+  </button>
+{{else}}
+  <div class="csui-favorite-group-selection-marker"></div>
+  <div class="csui-favorite-group-draggable-handle">
+    <span class=" icon icon-draggable-handle"></span>
+  </div>
+  <a role="button" href="#" class="binf-flex-row csui-favorite-group-name-link" aria-label="{{groupNameAria}}" title="{{name}}"
+     tabindex="{{tabindex}}">
+    <span class="csui-favorite-group-name">{{name}}</span>
+  </a>
+  <button type="button" class="binf-btn csui-btn-action csui-btn-edit-start"
+          aria-label="{{EditStartAria}}" tabindex="{{tabindex}}">
+    <span class="icon icon-edit" title="{{EditStartTooltip}}"></span>
+  </button>
+  <button type="button" class="binf-btn csui-btn-action csui-btn-delete"
+          aria-label="{{DeleteAria}}" tabindex="{{tabindex}}">
+    <span class="icon icon-circle-close" title="{{DeleteTooltip}}"></span>
+  </button><span class="csui-favorite-group-arrow-overlay"></span>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

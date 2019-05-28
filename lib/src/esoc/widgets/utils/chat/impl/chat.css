@@ -1,0 +1,17 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.esoc-social-chat-icon {
+  background: url("../../../common/images/chat_on.svg") 0px 0px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.esoc-social-chat-icon:hover {
+  background: url("../../../common/images/chat_on_mo.svg") 0px 0px;
+}
+
+.esoc-social-chat-icon:active {
+  background: url("../../../common/images/chat_on_md.svg") 0px 0px;
+}

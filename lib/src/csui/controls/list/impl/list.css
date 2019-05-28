@@ -1,0 +1,228 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-list {
+  position: relative;
+}
+
+.cs-list .binf-panel-heading {
+  height: 64px;
+  padding: 5px 0 0 0;
+}
+
+.cs-list .binf-panel-heading .binf-panel-title {
+  font-size: 22px;
+  padding: 5px 5px 0 15px;
+  display: inline-block;
+}
+
+.cs-list .binf-panel-heading .binf-panel-title .cs-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  vertical-align: middle;
+  float: left;
+  margin-top: -5px;
+  margin-left: -10px;
+}
+
+html[dir="rtl"] .cs-list .binf-panel-heading .binf-panel-title .cs-icon {
+  float: right;
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.cs-list .cs-toolbar {
+  
+  margin-right: 5px;
+}
+
+.cs-list .cs-toolbar .binf-btn {
+  float: right;
+  padding: 0;
+  height: 38px;
+  border-color: transparent;
+}
+
+.cs-list .cs-toolbar .cs-icon {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+
+.cs-list .tile-content {
+  padding: 0;
+  margin: 0;
+  height: calc(100% - 64px);
+}
+
+.cs-list .tile-content .binf-list-group {
+  margin-bottom: 0;
+}
+
+.cs-list .tile-content .binf-list-group .cs-emptylist-container {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.binf-widgets .search-box .clearer {
+  color: #d3d3d3;
+  position: relative;
+  top: 10px;
+  margin-right: 25px;
+  pointer-events: auto;
+  width: 20px;
+  height: 20px;
+  z-index: 10!important;
+  float: right;
+  right: 0;
+  left: 0;
+}
+
+.binf-widgets .search-box .fadeout {
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  cursor: text;
+  width: 35px;
+   
+  height: 20px;
+  z-index: 9;
+  display: none;
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 100%); 
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); 
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); 
+}
+
+.cs-list .search {
+  text-indent: 2px; 
+}
+
+.search::-ms-clear {
+  display: none;
+}
+
+
+
+.binf-widgets .tile-controls {
+  left: 0px;
+  right: 16px;
+  height: 100%;
+  position: initial;
+  display: inline-block;
+  float: right;
+}
+.binf-widgets .tile-controls .search-box {
+  position: absolute;
+  left: 0px;
+  right: 30px;
+  top: 12px;
+}
+.tile-controls .search-box.expanded {
+  width: 100%;
+}
+.binf-widgets .tile-controls .icon-search {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  margin-left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform:translateY(-50%);
+
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 1em;
+
+  width: 1.1em;
+  height: 1.1em;
+  line-height: 1.2em;
+  font-size: 1.2em;
+}
+
+.binf-widgets .tile-controls .search {
+  position: absolute;
+  left: 60px;
+  z-index: 9;
+  outline: 0;
+  border: 1px solid #a7a9ac;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 30px;
+  right: 34px;
+  height: 28px;
+  width: calc(100% - 80px);
+  top: 6px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+
+
+.tile-controls .search-box .search {
+    padding-left: 0.5em;
+    padding-right: 1.75em;
+    font-size: 0.875em;
+}
+
+.binf-widgets .cs-perspective-panel input::-webkit-input-placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.binf-widgets .cs-perspective-panel input::-moz-placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.binf-widgets .cs-perspective-panel input:-ms-input-placeholder  {
+  color: #666;
+  font-style: italic;
+}
+
+.binf-widgets .cs-perspective-panel input:-moz-placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.binf-widgets input[disabled] {
+  color: #666666;
+}
+
+.binf-widgets input[readonly] {
+  color: #333333;
+}
+
+.cs-list .icon-tileCollapse {
+  width: 2em;
+  height: 2em;
+}
+
+
+
+.cs-list .icon-tileExpand {
+  width: 2em;
+  height: 2em;
+}
+
+.cs-list .tile-expand>div{
+  border: 1px solid #d3d3d3;
+  border-radius: 50%;
+}
+
+
+.cs-list .tile-expand:hover>div{
+  background-color: #ffffff;
+  border: 1px solid #666666;
+}
+
+.cs-list .tile-expand:active>div{
+  background-color: #ffffff;
+  border: 2px solid #666666;
+}
+

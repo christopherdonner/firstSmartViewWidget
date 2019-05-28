@@ -1,0 +1,12 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-table-cell-_select {
+  min-width: 3.75em;
+  max-width: 3.75em;
+  overflow-x: visible;
+}
+
+.binf-widgets .binf-table.dataTable tr .csui-table-cell-_select .csui-control-view.csui-checkbox-view {
+  margin-left: -0.75em;
+  margin-right: -0.75em;
+}

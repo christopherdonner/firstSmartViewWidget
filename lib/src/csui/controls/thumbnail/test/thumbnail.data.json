@@ -1,0 +1,415 @@
+{
+    "nodes": {
+      "2000": {
+        "container": true,
+        "id": 2000,
+        "name": "Innovate",
+        "parent_id": -1,
+        "size": 2,
+        "type": 141,
+        "type_name": "Enterprise Volume",
+        "modify_date": "2017-12-12T12:52:51Z",
+        "volume_id": 2000,
+        "actions": {
+          "browse": {},
+          "properties": {}
+        }
+      },
+      "2001": {
+        "container": true,
+        "id": 2001,
+        "name": "First child",
+        "parent_id": 2000,
+        "size": 1,
+        "type": 0,
+        "type_name": "Folder",
+        "volume_id": 2000, 
+        "modify_date": "2017-9-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      },
+      "3000": {
+        "container": true,
+        "id": 3000,
+        "name": "Nested item",
+        "parent_id": 2001,
+        "size": 0,
+        "type": 0,
+        "type_name": "Folder",
+        "volume_id": 2000,
+        "modify_date": "2018-9-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      },
+      "4000": {
+        "container": true,
+        "id": 4000,
+        "name": "Folder with no description",
+        "parent_id": 2000,
+        "size": 20,
+        "type": 0,
+        "type_name": "Folder",
+        "volume_id": 2000,
+        "modify_date": "2018-11-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      },
+      "4001": {
+        "container": false,
+        "id": 4001,
+        "name": "My Document.docx",
+        "icon": "/img/webdoc/appword.gif",
+        "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "parent_id": 4000,
+        "size": 783043,
+        "size_formatted": "765 KB",
+        "type": 144,
+        "type_name": "Document",
+        "volume_id": 4000,
+        "modify_date": "2018-8-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      },
+      "5000": {
+        "container": true,
+        "id": 5000,
+        "name": "Folder with description",
+        "parent_id": 2000,
+        "size": 20,
+        "type": 0,
+        "type_name": "Folder",
+        "volume_id": 2000,
+        "modify_date": "2018-12-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      },
+      "5001": {
+        "container": false,
+        "id": 5001,
+        "description": "Hello World",
+        "name": "Item with short description.docx",
+        "icon": "/img/webdoc/appword.gif",
+        "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "parent_id": 5000,
+        "size": 783043,
+        "size_formatted": "765 KB",
+        "type": 144,
+        "type_name": "Document",
+        "volume_id": 5000,
+        "modify_date": "2017-10-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      },
+      "5002": {
+        "container": false,
+        "id": 5002,
+        "description": "Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
+        "name": "Item with lengthy description.docx",
+        "icon": "/img/webdoc/appword.gif",
+        "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "parent_id": 5000,
+        "size": 783043,
+        "size_formatted": "765 KB",
+        "type": 144,
+        "type_name": "Document",
+        "volume_id": 5000,
+        "modify_date": "2017-11-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      },
+      "5003": {
+        "container": false,
+        "id": 5003,
+        "name": "Item without description.docx",
+        "icon": "/img/webdoc/appword.gif",
+        "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "parent_id": 5000,
+        "size": 783043,
+        "size_formatted": "765 KB",
+        "type": 144,
+        "type_name": "Document",
+        "volume_id": 5000,
+        "modify_date": "2018-10-12T12:52:51Z",
+        "actions": {
+          "browse": {},
+          "delete": {},
+          "properties": {}
+        }
+      }
+    },
+    "definitions": {
+      "container": {
+        "key": "container",
+        "name": "Container",
+        "read_only": true,
+        "sort": true,
+        "type": 5,
+        "type_name": "Boolean"
+      },
+      "id": {
+        "key": "id",
+        "name": "ID",
+        "read_only": true,
+        "sort": true,
+        "type": 2,
+        "type_name": "Integer"
+      },
+      "name": {
+        "key": "name",
+        "multiline": false,
+        "multilingual": true,
+        "name": "Name",
+        "read_only": false,
+        "sort": true,
+        "type": -1,
+        "type_name": "String"
+      },
+      "parent_id": {
+        "key": "parent_id",
+        "name": "Parent ID",
+        "read_only": false,
+        "sort": true,
+        "type": 2,
+        "type_name": "Integer"
+      },
+      "size": {
+        "key": "size",
+        "name": "Size",
+        "read_only": true,
+        "sort": true,
+        "type": 2,
+        "type_name": "Integer"
+      },
+      "type": {
+        "key": "type",
+        "name": "Type",
+        "read_only": true,
+        "sort": true,
+        "type": 2,
+        "type_name": "Integer"
+      },
+      "type_name": {
+        "key": "type_name",
+        "multiline": false,
+        "multilingual": false,
+        "name": "Type",
+        "read_only": true,
+        "type": -1,
+        "type_name": "String"
+      },
+      "volume_id": {
+        "key": "volume_id",
+        "name": "Volume ID",
+        "read_only": false,
+        "sort": true,
+        "type": 2,
+        "type_name": "Integer"
+      }
+    },
+    "actions": {
+      "0": [
+        "browse"
+      ],
+      "141": [
+        "browse"
+      ]
+    },
+    "columns": [
+      {
+        "key": "type",
+        "name": "Type",
+        "data_type": 2,
+        "sortable": true
+      },
+      {
+        "key": "name",
+        "name": "Name",
+        "data_type": -1,
+        "sortable": true
+      },
+      {
+        "key": "size",
+        "name": "Size",
+        "data_type": 2,
+        "sortable": true
+      }
+    ],
+    "facets": {
+      "available_values": [
+        {
+          "3324": [
+            {
+              "name": "Microsoft Word",
+              "percentage": 14.7058823529412,
+              "total": 5,
+              "value": "23"
+            },
+            {
+              "name": "Adobe PDF",
+              "percentage": 5.88235294117647,
+              "total": 2,
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "3321": [
+            {
+              "name": "Document",
+              "percentage": 55.8823529411765,
+              "total": 19,
+              "value": "144"
+            },
+            {
+              "name": "Category",
+              "percentage": 29.4117647058824,
+              "total": 10,
+              "value": "131"
+            },
+            {
+              "name": "Folder",
+              "percentage": 11.7647058823529,
+              "total": 4,
+              "value": "0"
+            },
+            {
+              "name": "URL",
+              "percentage": 2.94117647058824,
+              "total": 1,
+              "value": "140"
+            }
+          ]
+        },
+        {
+          "3325": [
+            {
+              "name": "Images",
+              "percentage": 41.1764705882353,
+              "total": 14,
+              "value": "332"
+            },
+            {
+              "name": "Office",
+              "percentage": 20.5882352941176,
+              "total": 7,
+              "value": "331"
+            }
+          ]
+        },
+        {
+          "3322": [
+            {
+              "name": "Last week",
+              "percentage": 11.7647058823529,
+              "total": 4,
+              "value": "re09"
+            },
+            {
+              "name": "Three weeks ago",
+              "percentage": 2.94117647058824,
+              "total": 1,
+              "value": "re11"
+            },
+            {
+              "name": "Last month",
+              "percentage": 44.1176470588235,
+              "total": 15,
+              "value": "re12"
+            },
+            {
+              "name": "Older",
+              "percentage": 44.1176470588235,
+              "total": 15,
+              "value": "re13"
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "3321": {
+          "data_source": "sys_ObjectType",
+          "data_source_type": 305,
+          "display_mode": 1,
+          "display_priority": 50,
+          "id": 3321,
+          "items_to_show": 5,
+          "name": "Content Type",
+          "name_multilingual": {
+            "en_US": "Content Type"
+          },
+          "show_as_numbers": true,
+          "show_text_in_more": false,
+          "type": 305
+        },
+        "3322": {
+          "data_source": "sys_ModifyDate",
+          "data_source_type": -7,
+          "display_mode": 4,
+          "display_priority": 50,
+          "id": 3322,
+          "items_to_show": 5,
+          "name": "Modified Date",
+          "name_multilingual": {
+            "en_US": "Modified Date"
+          },
+          "show_as_numbers": true,
+          "show_text_in_more": false,
+          "type": -7
+        },
+        "3324": {
+          "data_source": "dc_1",
+          "data_source_type": 400,
+          "display_mode": 1,
+          "display_priority": 50,
+          "id": 3324,
+          "items_to_show": 5,
+          "name": "Application",
+          "name_multilingual": {
+            "en_US": "Application"
+          },
+          "show_as_numbers": true,
+          "show_text_in_more": false,
+          "type": 400
+        },
+        "3325": {
+          "data_source": "dc_336",
+          "data_source_type": 400,
+          "display_mode": 1,
+          "display_priority": 50,
+          "id": 3325,
+          "items_to_show": 5,
+          "name": "Document Type",
+          "name_multilingual": {
+            "en_US": "Document Type"
+          },
+          "show_as_numbers": true,
+          "show_text_in_more": false,
+          "type": 400
+        }
+      },
+      "selected_values": []
+    }
+  }
+
+  

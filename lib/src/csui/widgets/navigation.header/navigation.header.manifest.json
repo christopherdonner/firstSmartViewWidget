@@ -1,0 +1,21 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "header",
+  "schema": {},
+  "options": {},
+  "actions": [
+    {
+      "toolItems": "csui/widgets/navigation.header/profile.menuitems",
+      "toolItemMasks": "csui/widgets/navigation.header/profile.menuitems.mask",
+      "toolbars": [
+        {
+          "id": "profileMenu",
+          "title": "{{profileMenuTitle}}",
+          "description": "{{profileMenuDescription}}"
+        }
+      ]
+    }
+  ]
+}

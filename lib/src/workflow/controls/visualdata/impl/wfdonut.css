@@ -1,0 +1,56 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.wfstatus-donut-chart-tooltip.toolTip {
+  font-family: "Lato", "Helvetica", sans-serif;
+  position: absolute;
+  width: auto;
+  height: auto;
+  background: none repeat scroll 0 0 white;
+  border: 0 none;
+  color: black;
+  font-size: 0.75rem;
+  padding: 0.313rem 0.625rem;
+  text-align: center;
+  visibility: hidden;
+}
+
+.wfstatus-donut-chart-tooltip.toolTip:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #ffffff;
+  border-width: 0.438rem;
+  margin-left: -1.25rem;
+}
+
+.wfstatus-donut-chart .wf-legend-count {
+  font-size: 1.667rem;
+}
+
+.wfstatus-donut-chart .wf-legend-text {
+  font-size: 1rem;
+}
+
+.wfstatus-donut-chart .total-count {
+  font-size: 3rem;
+}
+
+.wfstatus-donut-chart .total-text {
+  font-size: 1.667rem;
+  font-family: "Lato Light";
+}
+
+.wfstatus-donut-chart .vis-wrapper .pie-chart path:focus,
+.wfstatus-donut-chart .vis-wrapper .pie-total-container g:focus,
+.wfstatus-donut-chart .vis-wrapper .pie-total-container text:focus,
+.wfstatus-donut-chart .vis-wrapper .pie-total-container text:focus,
+.wfstatus-donut-chart .vis-wrapper .pie-legend-container .pie-legend text:focus {
+  outline: 0px;
+}

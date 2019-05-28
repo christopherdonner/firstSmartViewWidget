@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Breadcrumbs Control</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+    <link rel="stylesheet" href="../../../pages/start/impl/navigationheader/impl/navigationheader.css">
+
+    <script src="../../../lib/require.js"></script>
+    <script src="../../../config.js" data-csui-path="../../.."></script>
+
+    <style>
+        .binf-widgets h1 {
+            color: #ffffff;
+            margin:1em;
+            font-size: 2em;
+        }
+    </style>
+
+    <script>
+
+      require.config({
+        deps: [
+          'csui/lib/require.config!csui/csui-extensions.json'
+        ]
+      });
+
+        require.config({
+            config: {
+                'csui/utils/contexts/factories/connector': {
+                    connection: {
+                        url: '//server/otcs/cs/api/v1',
+                        supportPath: '/support',
+                        session: {
+                            ticket: 'dummy'
+                        }
+                    }
+                }
+            }
+        });
+
+        require([
+            'csui/lib/marionette',
+            'csui/utils/contexts/page/page.context',
+            'csui/utils/contexts/factories/ancestors',
+            '../breadcrumbs.view',
+            './breadcrumbs.mock.data'
+        ],
+        function ( Marionette, PageContext, AncestorsCollectionFactory, BreadCrumbsView, mock) {
+            mock.test.enable();
+
+            var contentRegion = new Marionette.Region({el: '.breadcrumbs-panel'});
+
+            var pageContext = new PageContext({
+                factories: {
+                    node: {
+                        attributes: {id: 2222}
+                    }
+                }
+            });
+
+            var breadCrumbs = new BreadCrumbsView({
+                context: pageContext,
+                collection: pageContext.getCollection(AncestorsCollectionFactory)
+            });
+
+            contentRegion.show(breadCrumbs);
+            pageContext.fetch();
+        });
+
+    </script>
+</head>
+
+<body class="binf-widgets ">
+
+<div class="container">
+    <h1>Breadcrumbs control</h1>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12" id="content">
+            <div class="breadcrumbs-panel breadcrumb-inner breadcrumb-inner-header"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

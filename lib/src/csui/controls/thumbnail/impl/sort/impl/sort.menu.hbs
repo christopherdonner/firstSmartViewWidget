@@ -1,0 +1,21 @@
+<div class="csui-search-sort-options">
+  <button id="{{id}}" type="button" class="binf-btn binf-btn-default binf-dropdown-toggle"
+          data-binf-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="cs-label">{{selectedValue}}</span>
+    <span class="csui-button-icon icon-caret-down"></span>
+  </button>
+  <span id="search-sort-btn" class="csui-sort-arrow  {{selectedArrow}}"></span>
+  <ul class="binf-dropdown-menu" role="menu">
+    {{#each sortListArray}}
+      <li role="presentation"><a role="menuitem" href="#" class="csui-sort-option"
+                                 data-binf-toggle="tab">                                
+        {{#if this.selected }}
+          <span class="cs-icon icon-listview-checkmark"></span>
+        {{else}}
+          <span class="cs-icon "></span>
+        {{/if}}
+        <span class="cs-label" title="{{this.value}}" id="{{this.key}}">{{this.value}} </span></a></li>
+    {{/each}}
+  </ul>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

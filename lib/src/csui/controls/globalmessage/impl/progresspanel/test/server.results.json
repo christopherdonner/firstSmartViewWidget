@@ -1,0 +1,1304 @@
+{
+  "validate": {
+    "success": {
+      "results": [
+        {
+          "id": null,
+          "name": "FlowDiagrams1 - Copy (6) - Copy - Copy.vsd",
+          "type": 144,
+          "versioned": true
+        }
+      ]
+    }
+  },
+  "create": {
+    "forms": [
+      {
+        "data": {
+          "file": null,
+          "name": null,
+          "description": "",
+          "parent_id": 619217,
+          "advanced_versioning": false,
+          "type": 144
+        },
+        "options": {
+          "fields": {
+            "file": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "File",
+              "readonly": false,
+              "type": "file"
+            },
+            "name": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "Name",
+              "readonly": false,
+              "type": "text"
+            },
+            "description": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "Description",
+              "readonly": false,
+              "type": "textarea"
+            },
+            "parent_id": {
+              "hidden": true,
+              "hideInitValidationError": true,
+              "label": "Location",
+              "readonly": false,
+              "type": "number"
+            },
+            "advanced_versioning": {
+              "hidden": false,
+              "hideInitValidationError": true,
+              "label": "Version Control",
+              "optionLabels": [
+                "Standard - linear versioning",
+                "Advanced - major\/minor versioning"
+              ],
+              "readonly": false,
+              "type": "radio"
+            },
+            "type": {
+              "hidden": true,
+              "hideInitValidationError": true,
+              "type": "integer"
+            }
+          },
+          "form": {
+            "attributes": {
+              "action": "api\/v1\/nodes",
+              "method": "POST"
+            },
+            "renderForm": true
+          }
+        },
+        "schema": {
+          "properties": {
+            "file": {
+              "readonly": false,
+              "required": true,
+              "title": "File",
+              "type": "string"
+            },
+            "name": {
+              "maxLength": 248,
+              "minLength": 1,
+              "readonly": false,
+              "required": true,
+              "title": "Name",
+              "type": "string"
+            },
+            "description": {
+              "default": "",
+              "readonly": false,
+              "required": false,
+              "title": "Description",
+              "type": "string"
+            },
+            "parent_id": {
+              "readonly": false,
+              "required": true,
+              "title": "Location",
+              "type": "integer"
+            },
+            "advanced_versioning": {
+              "default": false,
+              "enum": [
+                false,
+                true
+              ],
+              "readonly": false,
+              "required": true,
+              "title": "Version Control",
+              "type": "boolean"
+            },
+            "type": {
+              "required": true,
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      {
+        "data": {
+          "186356": {
+            "186356_2": null,
+            "186356_3": "Happy",
+            "186356_4": null,
+            "186356_1": {"version_number": 5}
+          }
+        },
+        "options": {
+          "fields": {
+            "186356": {
+              "fields": {
+                "186356_2": {
+                  "hidden": false,
+                  "hideInitValidationError": true,
+                  "label": "When",
+                  "readonly": false,
+                  "type": "date"
+                },
+                "186356_3": {
+                  "hidden": false,
+                  "hideInitValidationError": true,
+                  "label": "Require me",
+                  "readonly": false,
+                  "type": "radio"
+                },
+                "186356_4": {
+                  "hidden": false,
+                  "hideInitValidationError": true,
+                  "label": "XSS Popup",
+                  "readonly": false,
+                  "type": "radio"
+                },
+                "186356_1": {
+                  "hidden": true,
+                  "hideInitValidationError": true,
+                  "readonly": true,
+                  "type": "object"
+                }
+              },
+              "hideInitValidationError": true,
+              "label": "Anton",
+              "type": "object"
+            }
+          }
+        },
+        "role_name": "categories",
+        "schema": {
+          "properties": {
+            "186356": {
+              "properties": {
+                "186356_2": {
+                  "readonly": false,
+                  "required": false,
+                  "title": "When",
+                  "type": "string"
+                },
+                "186356_3": {
+                  "enum": [
+                    "Happy",
+                    "Unhappy",
+                    "Satisfied"
+                  ],
+                  "readonly": false,
+                  "required": true,
+                  "title": "Require me",
+                  "type": "string"
+                },
+                "186356_4": {
+                  "enum": [
+                    "<b onmouseover=alert(\u0027\u0027)>click!<\/b>",
+                    "Some Other"
+                  ],
+                  "readonly": false,
+                  "required": false,
+                  "title": "XSS Popup",
+                  "type": "string"
+                },
+                "186356_1": {
+                  "readonly": true,
+                  "required": false,
+                  "type": "object"
+                }
+              },
+              "title": "Anton",
+              "type": "object"
+            }
+          },
+          "title": "Categories",
+          "type": "object"
+        }
+      }
+    ]
+  },
+  "failed": {
+    "alreadyExist": {"error": "An item with the name \u0027FlowDiagrams1\u0027 already exists."}
+  },
+  "nodesCollection": {
+    "data": [
+      {
+        "id": 1,
+        "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "name": "file1"
+      }
+    ],
+    "limit": 30,
+    "page": 0,
+    "page_total": 0,
+    "range_max": 0,
+    "range_min": 1,
+    "sort": "asc_name",
+    "total_count": 1,
+    "where_facet": [],
+    "where_name": "",
+    "where_type": []
+  },
+  "node": {
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "\/api\/v2\/nodes\/2000?perspective=&actions",
+          "method": "GET",
+          "name": ""
+        }
+      }
+    },
+    "results": {
+      "actions": {
+        "data": {
+          "audit": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "\/api\/v2\/nodes\/2000\/audit?limit=1000",
+            "method": "GET",
+            "name": "Audit"
+          },
+          "docview": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "?func=doc.viewdoc&nodeid=2000",
+            "method": "GET",
+            "name": "View"
+          },
+          "makefavorite": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "\/api\/v2\/members\/favorites\/2000",
+            "method": "POST",
+            "name": "Add to Favorites"
+          },
+          "more": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "",
+            "name": "..."
+          },
+          "open": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "\/api\/v2\/nodes\/2000\/nodes",
+            "method": "GET",
+            "name": "Open"
+          },
+          "properties": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "\/api\/v2\/nodes\/2000",
+            "method": "GET",
+            "name": "Properties"
+          },
+          "rename": {
+            "body": "",
+            "content_type": "",
+            "form_href": "\/api\/v2\/forms\/nodes\/rename?id=2000",
+            "href": "\/api\/v2\/nodes\/2000",
+            "method": "PUT",
+            "name": "Rename"
+          }
+        },
+        "map": {
+          "default_action": "open",
+          "more": [
+            "properties",
+            "audit"
+          ]
+        },
+        "order": [
+          "docview",
+          "open",
+          "rename",
+          "makefavorite",
+          "more"
+        ]
+      },
+      "data": {
+        "columns": [
+          {
+            "data_type": 2,
+            "key": "type",
+            "name": "Type",
+            "sort_key": "x61031"
+          },
+          {
+            "data_type": -1,
+            "key": "187420_4",
+            "name": "Subject",
+            "sort_key": "x197408"
+          },
+          {
+            "data_type": 2,
+            "key": "187420_3",
+            "name": "Organization"
+          },
+          {
+            "data_type": -1,
+            "key": "187420_5",
+            "name": "Status",
+            "sort_key": "x186712"
+          },
+          {
+            "data_type": -1,
+            "key": "187420_6",
+            "name": "Publisher"
+          },
+          {
+            "data_type": -1,
+            "key": "name",
+            "name": "Name",
+            "sort_key": "x61028"
+          },
+          {
+            "data_type": -1,
+            "key": "186529_2",
+            "name": "Manual Description",
+            "sort_key": "x197409"
+          },
+          {
+            "data_type": -1,
+            "key": "size_formatted",
+            "name": "Size",
+            "sort_key": "x61029"
+          },
+          {
+            "data_type": 401,
+            "key": "modify_date",
+            "name": "Modified",
+            "sort_key": "x61027"
+          },
+          {
+            "data_type": 2,
+            "key": "version",
+            "name": "Version"
+          },
+          {
+            "data_type": 5,
+            "key": "187420_7",
+            "name": "Rights Management",
+            "sort_key": "x197953"
+          },
+          {
+            "data_type": 2,
+            "key": "187420_12",
+            "name": "Reviewer Name",
+            "sort_key": "x208790"
+          },
+          {
+            "data_type": 2,
+            "key": "187420_13",
+            "name": "Reviewed at",
+            "sort_key": "x208716"
+          },
+          {
+            "data_type": 2,
+            "key": "comments",
+            "name": "Comments"
+          }
+        ],
+        "properties": {
+          "container": true,
+          "container_size": 114,
+          "create_date": "2003-10-01T13:30:55",
+          "create_user_id": 1000,
+          "description": "",
+          "description_multilingual": {
+            "en": "",
+            "ja": ""
+          },
+          "favorite": false,
+          "id": 2000,
+          "mime_type": null,
+          "modify_date": "2016-07-25T14:57:40",
+          "modify_user_id": 1000,
+          "name": "Enterprise Workspace",
+          "name_multilingual": {
+            "en": "Enterprise Workspace",
+            "ja": ""
+          },
+          "owner_group_id": 1001,
+          "owner_user_id": 1000,
+          "parent_id": -1,
+          "reserved": false,
+          "reserved_date": null,
+          "reserved_user_id": 0,
+          "size": 114,
+          "size_formatted": "114 Items",
+          "type": 141,
+          "type_name": "Enterprise Workspace",
+          "versions_control_advanced": false,
+          "volume_id": -2000,
+          "wnd_att_690t_3": null,
+          "wnd_att_690t_6": null,
+          "wnd_comments": null,
+          "wnd_version": null,
+          "wnf_att_6832_2": null,
+          "wnf_att_690t_4": null,
+          "wnf_att_690t_5": null,
+          "wnf_att_690t_7": null,
+          "wnf_att_690t_d": null,
+          "wnf_att_690t_f": null
+        }
+      },
+      "perspective": {
+        "options": {
+          "rows": [
+            {
+              "columns": [
+                {
+                  "heights": {"xs": "full"},
+                  "sizes": {"md": 12},
+                  "widget": {
+                    "options": {},
+                    "type": "nodestable"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "type": "grid"
+      }
+    }
+  },
+  "volume": {
+    "addable_types": [
+      {
+        "icon": "\/alphasupport\/webdoc\/folder.gif",
+        "type": 0,
+        "type_name": "Folder"
+      },
+      {
+        "icon": "\/alphasupport\/tinyali.gif",
+        "type": 1,
+        "type_name": "Shortcut"
+      },
+      {
+        "icon": "\/alphasupport\/webattribute\/16category.gif",
+        "type": 131,
+        "type_name": "Category"
+      },
+      {
+        "icon": "\/alphasupport\/webdoc\/cd.gif",
+        "type": 136,
+        "type_name": "Compound Document"
+      },
+      {
+        "icon": "\/alphasupport\/webdoc\/url.gif",
+        "type": 140,
+        "type_name": "URL"
+      },
+      {
+        "icon": "\/alphasupport\/webdoc\/doc.gif",
+        "type": 144,
+        "type_name": "Document"
+      },
+      {
+        "icon": "\/alphasupport\/project\/16project.gif",
+        "type": 202,
+        "type_name": "Project"
+      },
+      {
+        "icon": "\/alphasupport\/task\/16tasklist.gif",
+        "type": 204,
+        "type_name": "Task List"
+      },
+      {
+        "icon": "\/alphasupport\/channel\/16channel.gif",
+        "type": 207,
+        "type_name": "Channel"
+      },
+      {
+        "icon": "\/alphasupport\/collections\/collection.gif",
+        "type": 298,
+        "type_name": "Collection"
+      },
+      {
+        "icon": "\/alphasupport\/otemail\/emailcontainer.gif",
+        "type": 557,
+        "type_name": "Compound Email"
+      },
+      {
+        "icon": "\/alphasupport\/otemail\/email.gif",
+        "type": 749,
+        "type_name": "Email"
+      },
+      {
+        "icon": "\/alphasupport\/otemail\/emailfolder.gif",
+        "type": 751,
+        "type_name": "Email Folder"
+      },
+      {
+        "icon": "\/alphasupport\/webdoc\/virtual_folder.png",
+        "type": 899,
+        "type_name": "Virtual Folder"
+      },
+      {
+        "icon": "\/alphasupport\/wiki\/wiki.gif",
+        "type": 5573,
+        "type_name": "Wiki"
+      },
+      {
+        "icon": "\/alphasupport\/activeview\/activeview.gif",
+        "type": 30309,
+        "type_name": "ActiveView"
+      }
+    ],
+    "available_actions": [
+      {
+        "parameterless": false,
+        "read_only": true,
+        "type": "browse",
+        "type_name": "Browse",
+        "webnode_signature": null
+      },
+      {
+        "parameterless": false,
+        "read_only": false,
+        "type": "update",
+        "type_name": "Update",
+        "webnode_signature": null
+      }
+    ],
+    "available_roles": [
+      {
+        "type": "audit",
+        "type_name": "Audit"
+      },
+      {
+        "type": "categories",
+        "type_name": "Categories"
+      }
+    ],
+    "data": {
+      "container": true,
+      "container_size": 114,
+      "create_date": "2003-10-01T13:30:55",
+      "create_user_id": {
+        "birth_date": null,
+        "business_email": null,
+        "business_fax": null,
+        "business_phone": null,
+        "cell_phone": null,
+        "deleted": false,
+        "first_name": "Admin",
+        "gender": null,
+        "group_id": 2426,
+        "home_address_1": null,
+        "home_address_2": null,
+        "home_fax": null,
+        "home_phone": null,
+        "id": 1000,
+        "last_name": null,
+        "middle_name": null,
+        "name": "Admin",
+        "name_formatted": "Admin",
+        "office_location": null,
+        "pager": null,
+        "personal_email": null,
+        "personal_interests": null,
+        "personal_url_1": null,
+        "personal_url_2": null,
+        "personal_url_3": null,
+        "personal_website": null,
+        "photo_url": "api\/v1\/members\/1000\/photo",
+        "privilege_login": true,
+        "privilege_modify_groups": true,
+        "privilege_modify_users": true,
+        "privilege_public_access": true,
+        "privilege_system_admin_rights": true,
+        "privilege_user_admin_rights": true,
+        "time_zone": -1,
+        "title": null,
+        "type": 0,
+        "type_name": "User"
+      },
+      "description": "",
+      "description_multilingual": {
+        "en": "",
+        "ja": ""
+      },
+      "favorite": false,
+      "guid": null,
+      "icon": "\/alphasupport\/webdoc\/icon_library.gif",
+      "icon_large": "\/alphasupport\/webdoc\/icon_library_large.gif",
+      "id": 2000,
+      "modify_date": "2016-07-25T14:57:40",
+      "modify_user_id": {
+        "birth_date": null,
+        "business_email": null,
+        "business_fax": null,
+        "business_phone": null,
+        "cell_phone": null,
+        "deleted": false,
+        "first_name": "Admin",
+        "gender": null,
+        "group_id": 2426,
+        "home_address_1": null,
+        "home_address_2": null,
+        "home_fax": null,
+        "home_phone": null,
+        "id": 1000,
+        "last_name": null,
+        "middle_name": null,
+        "name": "Admin",
+        "name_formatted": "Admin",
+        "office_location": null,
+        "pager": null,
+        "personal_email": null,
+        "personal_interests": null,
+        "personal_url_1": null,
+        "personal_url_2": null,
+        "personal_url_3": null,
+        "personal_website": null,
+        "photo_url": "api\/v1\/members\/1000\/photo",
+        "privilege_login": true,
+        "privilege_modify_groups": true,
+        "privilege_modify_users": true,
+        "privilege_public_access": true,
+        "privilege_system_admin_rights": true,
+        "privilege_user_admin_rights": true,
+        "time_zone": -1,
+        "title": null,
+        "type": 0,
+        "type_name": "User"
+      },
+      "name": "Enterprise Workspace",
+      "name_multilingual": {
+        "en": "Enterprise Workspace",
+        "ja": ""
+      },
+      "owner_group_id": {
+        "deleted": false,
+        "id": 1001,
+        "leader_id": 1000,
+        "name": "DefaultGroup",
+        "name_formatted": "DefaultGroup",
+        "photo_url": "api\/v1\/members\/1001\/photo",
+        "type": 1,
+        "type_name": "Group"
+      },
+      "owner_user_id": {
+        "birth_date": null,
+        "business_email": null,
+        "business_fax": null,
+        "business_phone": null,
+        "cell_phone": null,
+        "deleted": false,
+        "first_name": "Admin",
+        "gender": null,
+        "group_id": 2426,
+        "home_address_1": null,
+        "home_address_2": null,
+        "home_fax": null,
+        "home_phone": null,
+        "id": 1000,
+        "last_name": null,
+        "middle_name": null,
+        "name": "Admin",
+        "name_formatted": "Admin",
+        "office_location": null,
+        "pager": null,
+        "personal_email": null,
+        "personal_interests": null,
+        "personal_url_1": null,
+        "personal_url_2": null,
+        "personal_url_3": null,
+        "personal_website": null,
+        "photo_url": "api\/v1\/members\/1000\/photo",
+        "privilege_login": true,
+        "privilege_modify_groups": true,
+        "privilege_modify_users": true,
+        "privilege_public_access": true,
+        "privilege_system_admin_rights": true,
+        "privilege_user_admin_rights": true,
+        "time_zone": -1,
+        "title": null,
+        "type": 0,
+        "type_name": "User"
+      },
+      "parent_id": -1,
+      "reserved": false,
+      "reserved_date": null,
+      "reserved_user_id": 0,
+      "type": 141,
+      "type_name": "Enterprise Workspace",
+      "versions_control_advanced": false,
+      "volume_id": {
+        "container": true,
+        "container_size": 114,
+        "create_date": "2003-10-01T13:30:55",
+        "create_user_id": 1000,
+        "description": "",
+        "description_multilingual": {
+          "en": "",
+          "ja": ""
+        },
+        "favorite": false,
+        "guid": null,
+        "icon": "\/alphasupport\/webdoc\/icon_library.gif",
+        "icon_large": "\/alphasupport\/webdoc\/icon_library_large.gif",
+        "id": 2000,
+        "modify_date": "2016-07-25T14:57:40",
+        "modify_user_id": 1000,
+        "name": "Enterprise Workspace",
+        "name_multilingual": {
+          "en": "Enterprise Workspace",
+          "ja": ""
+        },
+        "owner_group_id": 1001,
+        "owner_user_id": 1000,
+        "parent_id": -1,
+        "reserved": false,
+        "reserved_date": null,
+        "reserved_user_id": 0,
+        "type": 141,
+        "type_name": "Enterprise Workspace",
+        "versions_control_advanced": false,
+        "volume_id": -2000
+      }
+    },
+    "definitions": {
+      "container": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "container",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "Container",
+        "persona": "",
+        "read_only": true,
+        "required": false,
+        "type": 5,
+        "type_name": "Boolean",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "container_size": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "container_size",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Container Size",
+        "persona": "",
+        "read_only": true,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "create_date": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "include_time": true,
+        "key": "create_date",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "Created",
+        "persona": "",
+        "read_only": true,
+        "required": false,
+        "type": -7,
+        "type_name": "Date",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "create_user_id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "create_user_id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Created By",
+        "persona": "user",
+        "read_only": true,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "description": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "description",
+        "key_value_pairs": false,
+        "max_length": null,
+        "min_length": null,
+        "multiline": true,
+        "multilingual": true,
+        "multi_value": false,
+        "name": "Description",
+        "password": false,
+        "persona": "",
+        "read_only": false,
+        "regex": "",
+        "required": false,
+        "type": -1,
+        "type_name": "String",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "favorite": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "favorite",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "Favorite",
+        "persona": "",
+        "read_only": true,
+        "required": false,
+        "type": 5,
+        "type_name": "Boolean",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "guid": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "guid",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "GUID",
+        "persona": "",
+        "read_only": false,
+        "required": false,
+        "type": -95,
+        "type_name": "GUID",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "icon": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "icon",
+        "key_value_pairs": false,
+        "max_length": null,
+        "min_length": null,
+        "multiline": false,
+        "multilingual": false,
+        "multi_value": false,
+        "name": "Icon",
+        "password": false,
+        "persona": "",
+        "read_only": false,
+        "regex": "",
+        "required": false,
+        "type": -1,
+        "type_name": "String",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "icon_large": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "icon_large",
+        "key_value_pairs": false,
+        "max_length": null,
+        "min_length": null,
+        "multiline": false,
+        "multilingual": false,
+        "multi_value": false,
+        "name": "Large Icon",
+        "password": false,
+        "persona": "",
+        "read_only": false,
+        "regex": "",
+        "required": false,
+        "type": -1,
+        "type_name": "String",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "ID",
+        "persona": "node",
+        "read_only": false,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "modify_date": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "include_time": true,
+        "key": "modify_date",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "Modified",
+        "persona": "",
+        "read_only": true,
+        "required": false,
+        "type": -7,
+        "type_name": "Date",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "modify_user_id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "modify_user_id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Modified By",
+        "persona": "user",
+        "read_only": false,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "name": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "name",
+        "key_value_pairs": false,
+        "max_length": null,
+        "min_length": null,
+        "multiline": false,
+        "multilingual": true,
+        "multi_value": false,
+        "name": "Name",
+        "password": false,
+        "persona": "",
+        "read_only": false,
+        "regex": "",
+        "required": false,
+        "type": -1,
+        "type_name": "String",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "owner_group_id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "owner_group_id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Owned By",
+        "persona": "group",
+        "read_only": false,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "owner_user_id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "owner_user_id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Owned By",
+        "persona": "user",
+        "read_only": true,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "parent_id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "parent_id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Parent ID",
+        "persona": "node",
+        "read_only": false,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "reserved": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "reserved",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "Reserved",
+        "persona": "",
+        "read_only": false,
+        "required": false,
+        "type": 5,
+        "type_name": "Boolean",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "reserved_date": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "include_time": true,
+        "key": "reserved_date",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "Reserved",
+        "persona": "",
+        "read_only": true,
+        "required": false,
+        "type": -7,
+        "type_name": "Date",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "reserved_user_id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "reserved_user_id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Reserved By",
+        "persona": "member",
+        "read_only": true,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "type": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": true,
+        "key": "type",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "Type",
+        "persona": "",
+        "read_only": true,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "type_name": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "type_name",
+        "key_value_pairs": false,
+        "max_length": null,
+        "min_length": null,
+        "multiline": false,
+        "multilingual": false,
+        "multi_value": false,
+        "name": "Type",
+        "password": false,
+        "persona": "",
+        "read_only": true,
+        "regex": "",
+        "required": false,
+        "type": -1,
+        "type_name": "String",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "versions_control_advanced": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "versions_control_advanced",
+        "key_value_pairs": false,
+        "multi_value": false,
+        "name": "Versions Control Advanced",
+        "persona": "",
+        "read_only": false,
+        "required": false,
+        "type": 5,
+        "type_name": "Boolean",
+        "valid_values": [],
+        "valid_values_name": []
+      },
+      "volume_id": {
+        "allow_undefined": false,
+        "bulk_shared": false,
+        "default_value": null,
+        "description": null,
+        "hidden": false,
+        "key": "volume_id",
+        "key_value_pairs": false,
+        "max_value": null,
+        "min_value": null,
+        "multi_value": false,
+        "name": "VolumeID",
+        "persona": "node",
+        "read_only": false,
+        "required": false,
+        "type": 2,
+        "type_name": "Integer",
+        "valid_values": [],
+        "valid_values_name": []
+      }
+    },
+    "definitions_base": [
+      "container",
+      "container_size",
+      "create_date",
+      "create_user_id",
+      "description",
+      "favorite",
+      "guid",
+      "icon",
+      "icon_large",
+      "id",
+      "modify_date",
+      "modify_user_id",
+      "name",
+      "owner_group_id",
+      "owner_user_id",
+      "parent_id",
+      "reserved",
+      "reserved_date",
+      "reserved_user_id",
+      "type",
+      "type_name",
+      "versions_control_advanced",
+      "volume_id"
+    ],
+    "definitions_order": [
+      "id",
+      "type",
+      "type_name",
+      "name",
+      "description",
+      "parent_id",
+      "volume_id",
+      "guid",
+      "create_date",
+      "create_user_id",
+      "modify_date",
+      "modify_user_id",
+      "owner_user_id",
+      "owner_group_id",
+      "reserved",
+      "reserved_date",
+      "reserved_user_id",
+      "icon",
+      "icon_large",
+      "versions_control_advanced",
+      "container",
+      "container_size",
+      "favorite"
+    ],
+    "type": 141,
+    "type_info": {
+      "advanced_versioning": false,
+      "container": true
+    },
+    "type_name": "Enterprise Workspace"
+  },
+  "ancestors": {"ancestors":[{"id":2000,"name":"Enterprise Workspace","volume_id":-2000,"parent_id":-1,"type":141,"type_name":"Enterprise Workspace"}]}
+}

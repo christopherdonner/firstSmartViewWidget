@@ -1,0 +1,25 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+body.binf-widgets {
+  min-width: 768px;
+  -ms-overflow-style: -ms-autohiding-scrollbar; 
+}
+
+
+body.binf-widgets.binf-modal-open {
+  overflow-y: hidden;
+}
+
+
+body.binf-widgets .binf-modal {
+  position: absolute;
+  min-width: 768px;
+}
+
+
+body.bin-widgets .binf-modal-backdrop {
+  position: fixed;
+}
+
+

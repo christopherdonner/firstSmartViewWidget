@@ -1,0 +1,16 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.permissions-header-left-bar .cs-go-back {
+   width: 24px;
+   height: 24px;
+   background-repeat: no-repeat;
+   display: inline-block;
+   background-position: center left;
+   float: none;
+   vertical-align: top;
+   cursor: pointer;
+ }
+
+.permissions-header-left-bar .cs-go-back:focus {
+  outline: 1px dotted #ffffff;
+}

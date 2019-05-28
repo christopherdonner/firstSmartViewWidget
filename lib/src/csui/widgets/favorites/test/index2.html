@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Favorites2 Widget</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    .docRef {
+      color: #ffffff;
+    }
+
+    a:link {
+      color: grey;
+    }
+
+    a:hover {
+      color: grey;
+    }
+
+    a:active {
+      color: grey;
+    }
+
+    a:visited {
+      color: grey;
+    }
+
+  </style>
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette',
+      'csui/utils/contexts/page/page.context',
+      'csui/utils/contexts/factories/favorites2',
+      '../impl/favorites2.table.view',
+      './favorites2.mock.data2'
+    ], function (Marionette, PageContext, Favorite2CollectionFactory, Favorites2TableView, mock) {
+      mock.enable();
+
+      var contentRegion      = new Marionette.Region({el: '#content'}),
+          pageContext        = new PageContext(), // holds the model
+          favoritesTableView = new Favorites2TableView({
+            context: pageContext,
+            collection: pageContext.getCollection(Favorite2CollectionFactory),
+            pageSize: 100
+          });
+
+      contentRegion.show(favoritesTableView);
+      favoritesTableView.trigger('dom:refresh');
+      pageContext.fetch();
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Favorites test #2</h1>
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-md-12 row-xs-full" id="content"></div>
+  </div>
+</div>
+<a class="docRef" href="../doc/favorites2.table.view.md">Documentation</a>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

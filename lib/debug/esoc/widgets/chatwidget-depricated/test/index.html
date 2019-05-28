@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat Widget</title>
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+  <script src="../../../../../csui/lib/require.js"></script>
+</head>
+<body>
+
+<script data-csui-path="../../../../../csui" src="../../../../../csui/config.js"></script>
+<script src="../../../../../csui/helpers.js"></script>
+
+<script type="text/javascript">
+  require.config({
+    paths: {
+      esoc: '../../../../src'
+    },
+    config: {
+      'csui/utils/contexts/factories/connector': {
+        connection: {
+          url: '//server/OTCS/livelink/api/v1',
+          supportPath: '/img',
+          crossDomain: true
+        }
+      }
+    }
+  });
+
+  csui.onReady(['../chatwidget', 'csui/utils/contexts/page/page.context'],
+      function (ChatWidget, PageContext) {
+        var pageContext = new PageContext(),
+            options     = {
+              context: pageContext
+            };
+        var OTDSTicket = '';
+        var otdsTicketMatch = (' ' +
+                               document.cookie).match(new RegExp('[; ]otdsticket=([^\\s;]*)'));
+        if (otdsTicketMatch) {
+          OTDSTicket = unescape(otdsTicketMatch[1]);
+          options.connection.authenticationHeaders = {OTDSTicket: OTDSTicket};
+        }
+
+        new ChatWidget(options).show();
+      }
+  );
+</script>
+</body>
+</html>

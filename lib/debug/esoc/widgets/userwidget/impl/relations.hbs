@@ -1,0 +1,21 @@
+<div class="esoc-user-relations-container binf-col-lg-8 binf-col-md-8 binf-col-sm-8 binf-col-xs-8">
+  {{^if messages.otherUser}}
+    {{#if messages.isFollowingTab}}
+      <div id="esoc-user-picker"
+           class="esoc-user-picker-holder binf-col-lg-4 binf-col-md-6 binf-col-sm-6 binf-col-xs-8"></div>
+    {{/if}}
+  {{/if}}
+  {{^if messages.otherUser}}
+    {{#if messages.isFollowingTab}}
+      <div
+          class="esoc-user-hide-element esoc-user-no-relations binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+        <div id="esoc-user-no-relations"
+             class="esoc-user-relations-list esoc-user-default-content">{{messages.followingListEmptyMessage}}</div>
+      </div>
+    {{/if}}
+  {{/if}}
+  <div id="esoc-user-relations-list"
+       class="esoc-user-relations-list binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+</div>
+<div id="esoc-user-relations-activity-list"
+     class="esoc-user-relations-activity-list binf-col-lg-4 binf-col-md-4 binf-col-sm-4 binf-col-xs-4"></div>

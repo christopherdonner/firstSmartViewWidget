@@ -1,0 +1,73 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "tile",
+  "supportedKinds": ["tile"],
+  "schema": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "title": "{{tileTitle}}",
+        "description": "{{tileDescription}}",
+        "type": "object"
+      },
+      "titleBarIcon": {
+        "title": "{{iconTitle}}",
+        "description": "{{iconDescription}}",
+        "type": "string"
+      },
+      "searchPlaceholder": {
+        "title": "{{placeHolderTitle}}",
+        "description": "{{placeHolderDescription}}",
+        "type": "object"
+      },
+      "id": {
+        "title": "{{idTitle}}",
+        "description": "{{idDescription}}",
+        "type": "integer"
+      },
+      "parameters": {
+        "type": "array",
+        "title": "{{reportParamTitle1}}",
+        "description": "{{reportParamDescription1}}",
+        "items": {
+          "type": "object",
+          "title": "{{reportParamTitle2}}",
+          "description": "{{reportParamDescription2}}",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "{{paramNameTitle}}",
+              "description": "{{paramNameDescription}}"
+            },
+            "value": {
+              "type": "string",
+              "title": "{{paramValTitle}}",
+              "description": "{{paramValDescription}}"
+            }
+          }
+        }
+      }
+    },
+    "required": ["id"]
+  },  
+  "options": {
+    "fields": {
+      "id": {
+        "type": "otcs_node_picker",
+        "type_control": {
+          "parameters": {
+            "select_types": [30303]
+          }
+        }
+      },
+      "title": {
+        "type": "otcs_multilingual_string"
+      },
+      "searchPlaceholder": {
+        "type": "otcs_multilingual_string"
+      }
+    }
+  }
+}

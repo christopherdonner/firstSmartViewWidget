@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Status Screen via NodeBrowse Table</title>
+
+	<style>
+		body.binf-widgets {
+			/*padding-top: 1em;*/
+			margin: 0;
+			height: 100%;
+			overflow-y: hidden;
+		}
+	</style>
+
+	<link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+	<script src="../../../../csui/lib/require.js"></script>
+	<script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+
+	<script>
+
+		//////////////////////////////////////////////////////////////////////////////////////////
+		// NOTE: In order to test Workflow destinations,
+		// you need you ensure you have the cs.workflow.ui source code on your local dev env.
+		// Make sure the 'paths' object has an entry for workflow, which points to the correct path for your env:
+		//////////////////////////////////////////////////////////////////////////////////////////
+
+		require.config({
+			deps: [
+				'csui/lib/require.config!csui/csui-extensions.json'
+			]
+		});
+
+		require.config({
+			waitSeconds : 20,
+			paths: {
+				webreports: '../../../',
+				workflow: '../../../../workflow_not_core/workflow-src'
+			},
+			config: {
+				// Load WR extensions:
+				"csui/models/server.module/server.module.collection": {
+					"modules": {
+						"webreports": {
+							"version": "1.0.0.598"
+						}
+					}
+				},
+				"csui/models/widget/widget.collection": {
+					"widgets": {
+						"webreports": [
+							"webreports/widgets/tilereport",
+							"webreports/widgets/nodeslistreport",
+							"webreports/widgets/visual.data.filtered.count",
+							"webreports/widgets/widget.carousel"
+						]
+					}
+				},
+				"csui/utils/commands": {
+					"extensions": {
+						"webreports": [
+							"webreports/utils/commands/open.webreport",
+							"webreports/utils/commands/open.classic.webreport",
+							"webreports/utils/commands/execute.webreport"
+						]
+					}
+				},
+				"csui/utils/defaultactionitems": {
+					"extensions": {
+						"webreports": [
+							"webreports/utils/commands/defaultactionitems"
+						]
+					}
+				},
+				"csui/utils/nodesprites": {
+					"extensions": {
+						"webreports": [
+							"webreports/utils/icons/icons"
+						]
+					}
+				}
+			}
+		});
+	</script>
+	<script src="./index_nodesTable.js"></script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid binf-grid-rows">
+	<div class="xrow" id="navigation">
+		<div class="binf-col-sm-12">
+			Navigation is here
+		</div>
+	</div>
+	<div class="binf-row" id="table">
+		<div class="binf-col-sm-12 binf-row-xs-full" id="content"></div>
+	</div>
+	<div class="binf-row" id="footer">
+		<div class="binf-col-sm-12">
+			Footer is here
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

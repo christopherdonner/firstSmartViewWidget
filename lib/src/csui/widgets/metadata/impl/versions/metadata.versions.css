@@ -1,0 +1,53 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-metadata-versions {
+  font-size: 16px;
+  font-weight: normal;
+  height: calc(100% - 4em);
+  flex: 1 1000 auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3em;
+  padding-right: 3em;
+  margin-top: 4em;
+}
+
+.binf-widgets .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-view {
+  flex: 0 0 0; 
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  transition: flex-basis 0.3s; 
+}
+
+
+.binf-widgets .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-visible {
+  flex-basis: 3em;
+  visibility: visible;
+  overflow: visible;
+  transition: flex-basis 0.3s;
+}
+
+.binf-widgets .csui-no-animation .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-view,
+.binf-widgets .csui-no-animation .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-visible {
+  transition: none;
+}
+
+.csui-metadata-versions .csui-table-view {
+  flex: 1 1000 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.csui-metadata-versions .csui-table-view > div {
+  overflow: hidden;
+}
+
+.csui-metadata-versions .csui-table-paginationview {
+  height: auto;
+  flex: 0 0 auto;
+}

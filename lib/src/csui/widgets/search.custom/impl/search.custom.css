@@ -1,0 +1,260 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-saved-search-submit-container {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 42px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.csui-saved-search-form, .csui-custom-view-search {
+  height: calc(100% - 24px);
+}
+
+.csui-saved-search-form, .customsearch-attr-container {
+  height: calc(100% - 18px);
+  position: relative;
+}
+
+.csui-search-custom-container .csui-saved-search-form, .customsearch-attr-container {
+  height: calc(100% - 16px);
+}
+
+.csui-saved-search-form, .customsearch-attr-container .cs-selectfield.binf-dropdown .cs-field-write ul.binf-dropdown-menu {
+  left: auto;
+}
+
+.binf-widgets .csui-custom-search-form-submit {
+  position: absolute;
+  bottom: 4px;
+  right: 23px;
+  border-radius: 1rem;
+  height: 2rem;
+  line-height: 0.75rem;
+  padding: 0 1.5rem;
+  color: #ffffff;
+  min-width: 5rem;
+  border: none;
+}
+
+.csui-custom-search-form-submit.binf-btn-primary:focus {
+  background-color: #0072aa;
+  outline: 1px dotted #333333;
+  outline-offset: 2px;
+}
+
+.csui-custom-search-form-submit.binf-btn-primary:active {
+  background-color: #0072aa;
+  color: #ffffff;
+}
+
+.csui-custom-search-form-submit.binf-btn-primary:hover {
+  background-color: #004b71;
+  border: none;
+  color: #ffffff;
+}
+
+.csui-custom-view-search .csui-search-form-submit-disabled {
+  background-color: #c7c3c3;
+  border-color: #c7c3c3;
+}
+
+.csui-custom-view-search .cs-form .binf-help-block.alpaca-message {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-left: 0px;
+  color: #df3324;
+  display: block;
+  margin-bottom: 0px;
+}
+
+.cs-textfield input {
+  outline-color: #999999;
+  outline-width: 2px;
+}
+
+.cs-nodepicker input {
+  outline-color: #999999;
+  outline-width: 2px;
+}
+
+
+
+.customsearch-attr-container .cs-form .alpaca-container-item {
+  line-height: 1;
+}
+
+.customsearch-attr-container .alpaca-field-obsject {
+  border: none;
+}
+
+.customsearch-attr-container .cs-form.cs-form-create .alpaca-container-item > .binf-form-group.alpaca-field > div {
+  width: 98%;
+}
+
+.customsearch-attr-container .cs-form.cs-form-create .alpaca-container-item > .binf-form-group.alpaca-field > div > input {
+  height: 26px;
+  max-width: calc(100% - 1.8em);
+}
+
+.csui-search-results-custom .customsearch-attr-container .cs-form.cs-form-create .alpaca-container-item > .binf-form-group.alpaca-field > div {
+  width: calc(92% - 2px);
+}
+
+.csui-search-results-custom .customsearch-attr-container .cs-form.cs-form-create .alpaca-container-item > .binf-form-group.alpaca-field > div > input {
+  height: 26px;
+  max-width: calc(100% - 1px);
+}
+
+.customsearch-attr-container .cs-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  text-align: left;
+  width: 100%;
+  padding-bottom: 0;
+  display: initial;
+}
+
+.customsearch-attr-container .alpaca-container-label {
+  display: none;
+}
+
+.customsearch-attr-container .cs-formfield .icon-container {
+  width: 0px;
+  z-index: 1000;
+}
+
+.customsearch-attr-container .alpaca-container-item:not(:first-child) {
+  margin-top: 0px;
+}
+
+.customsearch-attr-container .cs-form .cs-form-doublecolumn > div:not(:first-child) {
+  margin-top: 0;
+}
+
+.customsearch-attr-container .cs-form .cs-form-doublecolumn > div:nth-child(2) {
+  margin-top: 0em;
+}
+
+.customsearch-attr-container .cs-userfield .cs-field-write .csui-control-userpicker .cs-search {
+  float: left;
+}
+
+.customsearch-attr-container .cs-userfield .cs-field-write .cs-search-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  float: right;
+  margin: -1px 5px 0px 0px;
+}
+
+.customsearch-attr-container .cs-userfield {
+  background-color: transparent;
+  width: 100%;
+}
+
+.customsearch-attr-container .alpaca-container-item > div > legend {
+  display: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.customsearch-attr-container .cs-form .alpaca-container-item > .alpaca-field.alpaca-field-object > legend > span {
+  cursor: pointer !important;
+}
+
+.binf-widgets .customsearch-attr-container .cs-form {
+  background-color: transparent;
+}
+
+.binf-widgets .csui-search-results .csui-popover-panel .customsearch-attr-container .cs-form {
+  padding-left: 16px;
+}
+
+.binf-widgets .csui-custom-view-search .binf-dropdown-menu > .binf-active > a {
+  background-color: #bac9ce;
+}
+
+.customsearch-attr-container .cs-form-doublecolumn {
+  padding: 0px;
+}
+
+.customsearch-attr-container .cs-form .alpaca-top:not(#generalform) {
+  border-top: none;
+}
+
+.customsearch-attr-container .cs-formfield .cs-field-read .btn-container {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #757575;
+  height: 1.8em;
+  padding: 0px;
+}
+
+.customsearch-attr-container .cs-formfield .cs-field-read button:focus {
+  outline: none;
+}
+
+.customsearch-attr-container .cs-formfield .inline-edit-icon.icon-edit {
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.customsearch-attr-container .cs-form .alpaca-container-item > .alpaca-field.alpaca-field-object,
+.customsearch-attr-container .cs-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  margin-top: 2px;
+}
+
+.csui-search-results .csui-popover-panel .customsearch-attr-container .cs-userfield .cs-field-write-inner {
+  overflow: hidden;
+}
+
+.csui-custom-view-search .csui-saved-search-form .ps-scrollbar-x-rail {
+  display: none;
+}
+
+.tile-content .csui-custom-search-formitems {
+  padding: 0 15px;
+}
+
+.customsearch-attr-container .cs-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label,
+.customsearch-attr-container .cs-field-write-inner {
+  padding: 0;
+}
+
+.customsearch-attr-container .cs-userfield .cs-field-write-inner {
+  margin-top: 0px;
+}
+
+.customsearch-attr-container .cs-formfield.cs-nodepicker .icon-container {
+  position: absolute;
+  max-width: calc(100% - 1.8em);
+  left: 0;
+  width: 100%;
+  margin-left: 0;
+  height: 1.8em;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.customsearch-attr-container .cs-formfield.cs-nodepicker .csui-icon-edit {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.customsearch-attr-container .cs-form .binf-row.alpaca-field {
+  padding-bottom: 16px;
+  margin-bottom: 0;
+}
+
+.csui-search-custom-results .csui-pager {
+  border-left: none;
+}
+
+
+

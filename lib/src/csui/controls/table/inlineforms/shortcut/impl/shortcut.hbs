@@ -1,0 +1,24 @@
+<form class="csui-inlineform-group csui-inlineform-group-url-name">
+  <input type="text" value="{{name}}" placeholder="{{namePlaceholder}}"
+         class="binf-form-control csui-inlineform-input-name">
+  {{#if formModeIsEdit }}
+    <button type="button" class="csui-btn-edit-cancel binf-btn">
+      <span class="icon edit-cancel" title="{{EditCancelTooltip}}"></span>
+    </button>
+  {{ else }}
+    <button type="button" class="csui-btn-metadata binf-btn"><span
+        class="icon icon-toolbar-metadata"></span></button>
+    <div class="csui-inline-action-container">
+      <button type="submit" class="csui-btn-save csui-btn binf-btn
+    binf-btn-default">{{SaveButtonLabel}}</button>
+      <button type="button" class="csui-btn-cancel csui-btn binf-btn">{{CancelButtonLabel}}</button>
+    </div>
+  {{/if}}
+</form>
+{{#if haveErrorMessage}}
+  <div class="csui-inlineform-group csui-inlineform-group-error" role="alert">
+    <div class="binf-text-danger">{{errorMessage}}</div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

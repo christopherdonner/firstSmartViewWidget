@@ -1,0 +1,297 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs {
+  border-bottom: none;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a {
+  border-radius: 0;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content {
+  clear: both;
+}
+
+
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a {
+  color: #ffffff;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 48px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li.binf-active > a {
+  font-weight: bold;
+}
+
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a:focus {
+  outline: none;
+  background-color: rgba(148, 187, 234, 0.25);
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a > span.cs-tablink-text {
+  margin: 0 16px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  padding: 10px 0px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li > a > span.cs-tablink-text:focus{
+  outline: none;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li.binf-active > a > span.cs-tablink-text {
+  border-bottom: 4px solid #9de4f9;
+}
+
+
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row {
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+.cs-tabbed-perspective.cs-toggling > .cs-header {
+  transition: height .3s ease-in-out;
+}
+
+.cs-tabbed-perspective > .cs-header {
+  height: 176px;
+  
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cs-tabbed-perspective.cs-toggling.cs-collapse > .cs-header {
+  transition: height .3s ease-in-out;
+  
+}
+
+.cs-tabbed-perspective.cs-collapse > .cs-header {
+  height: 64px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-extension {
+  display:inline-block;
+  height: 48px;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links {
+  height: 48px;
+  
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-basis: auto;
+  -webkit-flex-basis: auto;
+  float: right;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs {
+  margin-bottom: 7.5px;
+}
+
+.cs-tabbed-perspective.cs-toggling > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  transition: height .3s ease-in-out;
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 176px - 48px - 107.5px);
+  min-height: 160px;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 63px);
+}
+
+.binf-widgets.csui-maximized-widget-mode.csui-breadcrumbs-visible .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 94px);
+}
+
+.cs-tabbed-perspective.cs-toggling.cs-collapse > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  transition: height .3s ease-in-out;
+}
+
+.cs-tabbed-perspective.cs-collapse > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 64px - 48px - 107.5px);
+}
+
+
+
+.csui-on-ipad .cs-tabbed-perspective > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 176px - 48px - 157.5px);
+}
+
+.csui-on-ipad .cs-tabbed-perspective.cs-collapse > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: calc(100vh - 64px - 48px - 157.5px);
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-header {
+  display: none;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links {
+  display: none;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-header {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-header {
+  height: 74px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-header .conws-header-type {
+  display: none;
+}
+
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-content > .tab-panel > .tab-links {
+  background: transparent;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar {
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  overflow: hidden;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar.with-left-toolbar {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse:not(.cs-tabbed-flow-perspective) > .cs-content {
+  top: -47px;
+  position: relative;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-content {
+  top: 0;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar ul.binf-nav,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .right-toolbar {
+  height: 48px;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .tab-links-bar ul.binf-nav {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500%;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page {
+  float: left;
+  width: inherit;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-position:center
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page {
+  background-image: url(../impl/images/next.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div {
+  width: 48px;
+  height: 48px;
+
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:hover {
+  background-image: url(../impl/images/next-hover.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:active {
+  background-image: url(../impl/images/next-select.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div:focus,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:focus,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div:focus,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_next_div .goto_next_page:focus {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar:hover,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .right-toolbar:hover {
+  background-color: rgba(148, 187, 234, 0.25);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .left-toolbar:active,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .right-toolbar:active {
+  background-color: rgba(51, 51, 51, 0.25);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page {
+  background-image: url(../impl/images/prev.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:hover {
+  background-image: url(../impl/images/prev-hover.svg);
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links .goto_previous_div .goto_previous_page:active {
+  background-image: url(../impl/images/prev-select.svg);
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li:not(.binf-active) > a:hover {
+  border-bottom: none;
+  background-color: rgba(148, 187, 234, 0.25);
+}
+
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li:not(.binf-active) > a:active,
+.cs-tabbed-perspective > .cs-content > .tab-panel > .tab-links > .tab-links-bar > .binf-nav-tabs > li.binf-active > a:active {
+  background-color: rgba(51, 51, 51, 0.25)
+}
+
+
+.binf-widgets .xecmpf-businessattachments .xecmpf-attachmentstitlebaricon,
+.binf-widgets .xecmpf-businessattachments .xecmpf-attachmentstitleicon {
+  top: 15%;
+}
+
+.binf-widgets .cs-tabbed-perspective-header {
+  height: 100%;
+}
+

@@ -1,0 +1,65 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-td-content-edit {
+  
+  
+  
+  width: 100%;
+  z-index: 4;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+}
+
+.csui-td-content-edit input {
+  outline: 0;
+  border: 1px solid #a7a9ac;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  max-width: 0;
+}
+
+.csui-td-content-edit input.csui-input-full {
+  transition: max-width 0.2s linear 0s;
+  max-width: 100%
+}
+
+.csui-td-content-edit .edit-cancel.inline-edit-icon {
+  margin-top: 4px;
+  pointer-events: auto;
+  display: inline-flex;
+  flex: 0 0 30px;
+  -ms-flex: 0 0 30px;
+  -webkit-flex: 0 0 30px;
+}
+
+.csui-td-content-edit .csui-btn-cancel.binf-btn {
+  margin-top: 1px;
+  pointer-events: auto;
+  display: inline-flex;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  border-radius: 25px;
+  margin-left: 10px;
+  border-color: #337ab7;
+  background-color: white;
+  color: #337ab7;
+}
+
+.csui-td-content-edit .csui-btn-cancel.binf-btn:hover {
+  color: #337ab7;
+}
+
+.csui-td-content-edit .csui-btn-cancel.binf-btn.binf-btn-default {
+  color: #337ab7;
+}

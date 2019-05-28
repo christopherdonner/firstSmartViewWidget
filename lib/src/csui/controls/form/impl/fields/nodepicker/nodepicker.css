@@ -1,0 +1,91 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-nodepicker {
+  height: auto;
+}
+
+.binf-widgets .metadata-tab .shortcut_section .cs-nodepicker {
+  height: auto;
+}
+
+.cs-nodepicker .cs-search-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.3em;
+  height: 1.35em;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.cs-nodepicker input {
+  -webkit-box-flex: 1 1 0; 
+  -moz-box-flex: 1 1 0; 
+  -webkit-flex: 1 1 0; 
+  -ms-flex: 1 1 0; 
+  flex: 1 1 0; 
+
+  line-height: 1.25em;
+  padding: 3px;
+  padding-left: 4.5px;
+  text-align: left;
+  width: 100%;
+
+  border: 1px solid #a7a9ac;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.cs-nodepicker input:focus {
+  outline-color: #666666;
+  outline-width: 2px;
+  
+}
+
+.cs-nodepicker input:-moz-focusring {
+  outline: 2px solid #666666;
+}
+
+
+
+.cs-formfield.cs-nodepicker .cs-field-read a {
+  text-align: left;
+  height: auto;
+  max-height: 100%;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a:focus {
+  box-shadow: none;
+  border-radius: 3px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 2px;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a > span {
+  text-align: left;
+  white-space: normal;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding: 0;
+  width: calc(100%);
+  cursor: pointer;
+  color: #337ab7;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a[disabled] > span {
+  pointer-events: none;
+}
+
+
+
+.binf-widgets a.csui-nodepicker-readonly:hover, .binf-widgets a.csui-nodepicker-readonly:focus {
+  text-decoration: none;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a.csui-nodepicker-readonly > span {
+  cursor: default;
+  color: #000000;
+}

@@ -1,0 +1,36 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-table.dataTable > thead > tr > th.csui-table-cell-favorite,
+.binf-table.dataTable > tbody > tr > td.csui-table-cell-favorite {
+  max-width: 2.5em;
+  min-width: 2.5em;
+  padding: 1px;  
+  margin: 0;
+}
+
+.binf-table.dataTable > thead > tr > th.csui-table-cell-favorite.csui-table-header-last-column,
+.binf-table.dataTable > tbody > tr > td.csui-table-cell-favorite.csui-table-cell-last-visible {
+  max-width: 3.5em;
+  min-width: 3.5em;
+}
+
+.binf-table.dataTable > thead > tr > th.csui-table-cell-favorite button.csui-favorite-star,
+.binf-table.dataTable > tbody > tr > td.csui-table-cell-favorite  button.csui-favorite-star {
+  
+  padding: calc(0.75em - 1px) calc(0.5em - 1px);
+}
+
+.binf-table.dataTable > thead > tr > th.csui-table-cell-favorite.csui-table-header-last-column button.csui-favorite-star,
+.binf-table.dataTable > tbody > tr > td.csui-table-cell-favorite.csui-table-cell-last-visible button.csui-favorite-star {
+  
+  padding-right: calc(1.5em - 1px);
+}
+
+.csui-table-cell-favorite .icon {
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}

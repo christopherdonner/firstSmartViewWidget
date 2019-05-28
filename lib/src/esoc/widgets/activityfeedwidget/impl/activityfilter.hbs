@@ -1,0 +1,198 @@
+<div class="esoc-activityfeed-filter">
+  <div class="cs-simplelist csui-facet-panel">
+    <div class="cs-header binf-panel-heading">
+      <span class="cs-title">{{messages.refineby}}</span>
+
+      <div class="csui-right-shadow"></div>
+    </div>
+    <div class="esoc-activityfeed-filters cs-content">
+      <div class="cs-list-group">
+        <div class="csui-facet">
+          <a href="javascript:void(0);" class="esoc-activityfeed-filter-types"
+             data-binf-toggle="collapse"
+             data-binf-target="#esoc-activityfeed-filtertypes-{{messages.widgetid}}">
+            <div class="csui-facet-header">
+              <div class="header-label esoc-activityfeed-allfilter-label"
+                   title="{{messages.allselectedlabel}}">{{messages.allselectedlabel}}</div>
+              <div class="header-label esoc-activityfeed-filter-feedtypes"
+                   title="{{messages.activitytypes}}">{{messages.activitytypes}}</div>
+              <div class="cs-icon csui-button-icon icon-expandArrowDown"></div>
+              <div class="cs-icon csui-button-icon icon-expandArrowUp"></div>
+              <div class="csui-right-shadow"></div>
+            </div>
+          </a>
+
+          <div id="esoc-activityfeed-filtertypes-{{messages.widgetid}}"
+               class="binf-in csui-facet-content esoc-activity-filter-content">
+            <div class="cs-filter-group">
+              <div class="csui-facet-item">
+                <div class="esoc-activity-filter-selection-label">
+                  <input type="checkbox" name="feedtype" value="status"
+                         id="esoc_activityfeed_filter_status"
+                         class="esoc_activityfeed_filter" {{ messages.fieldValue.status }} >
+                  <span id="esoc_activityfeed_filter_status_checkbox"
+                        class="{{#if messages.fieldValue.status}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+                </div>
+
+                <div class="csui-filter-name" title="{{messages.statusupdates}}">
+                    <label for="esoc_activityfeed_filter_status" class="csui-name">
+                        {{messages.statusupdates}}
+                    </label>
+                </div>
+              </div>
+              <div class="csui-facet-item">
+                <div class="esoc-activity-filter-selection-label">
+                  <input type="checkbox" name="feedtype" value="content"
+                         id="esoc_activityfeed_filter_content"
+                         class="esoc_activityfeed_filter" {{ messages.fieldValue.content }}>
+                  <span id="esoc_activityfeed_filter_content_checkbox"
+                        class="{{#if messages.fieldValue.content}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+                </div>
+
+                <div class="csui-filter-name" title="{{messages.contentupdates}}">
+                    <label for="esoc_activityfeed_filter_content" class="csui-name">
+                        {{messages.contentupdates}}
+                    </label>
+                </div>
+              </div>
+              <div class="csui-facet-item">
+                <div class="esoc-activity-filter-selection-label">
+                  <input type="checkbox" name="feedtype" value="attribute"
+                         id="esoc_activityfeed_filter_attribute"
+                         class="esoc_activityfeed_filter" {{ messages.fieldValue.attribute }}>
+                  <span id="esoc_activityfeed_filter_attribute_checkbox"
+                        class="{{#if messages.fieldValue.attribute}} icon-checkbox-selected {{else}} icon-checkbox {{/if}}"></span>
+                </div>
+
+                <div class="csui-filter-name" title="{{messages.attributeupdates}}">
+                    <label for="esoc_activityfeed_filter_attribute" class="csui-name">
+                        {{messages.attributeupdates}}
+                    </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{^if messages.hideupdatesfrom}}
+          <div class="csui-facet">
+            <a href="javascript:void(0);" class="esoc-activityfeed-filter-updatesfrom"
+               data-binf-toggle="collapse"
+               data-binf-target="#esoc-activityfeed-updatesfromfilter-{{messages.widgetid}}">
+              <div class="csui-facet-header">
+                <div class="header-label"
+                     title="{{messages.updatesfrom}}">{{messages.updatesfrom}}</div>
+                <div class="cs-icon csui-button-icon icon-expandArrowDown"></div>
+                <div class="cs-icon csui-button-icon icon-expandArrowUp"></div>
+                <div class="csui-right-shadow"></div>
+              </div>
+            </a>
+
+            <div id="esoc-activityfeed-updatesfromfilter-{{messages.widgetid}}"
+                 class="binf-in csui-facet-content esoc-activity-filter-content">
+              <div class="cs-filter-group">
+                <div class="csui-facet-item">
+                  <div class="esoc-activity-filter-selection-label">
+                    <input type="radio" name="updatesfrom" id="esoc_activityfeed_filter_allusers"
+                           class="esoc_activityfeed_filter"
+                           value="all" {{messages.fieldValue.from.all}}>
+                    <span id="esoc_activityfeed_filter_allusers_radio"
+                          class="{{#if messages.fieldValue.from.all}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+                  </div>
+
+                  <div class="csui-filter-name" title="{{messages.allusers}}">
+                      <label for="esoc_activityfeed_filter_allusers" class="csui-name">
+                          {{messages.allusers}}
+                      </label>
+                  </div>
+                </div>
+
+                <div class="csui-facet-item">
+                  <div class="esoc-activity-filter-selection-label">
+                    <input type="radio" name="updatesfrom"
+                           id="esoc_activityfeed_filter_iamfollowing"
+                           value="following"  {{messages.fieldValue.from.following}}
+                           class="esoc_activityfeed_filter">
+                    <span id="esoc_activityfeed_filter_iamfollowing_radio"
+                          class="{{#if messages.fieldValue.from.following}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+                  </div>
+
+                  <div class="csui-filter-name" title="{{messages.iamfollowing}}">
+                      <label for="esoc_activityfeed_filter_iamfollowing" class="csui-name">
+                          {{messages.iamfollowing}}
+                      </label>
+                  </div>
+                </div>
+
+                <div class="csui-facet-item">
+                  <div class="esoc-activity-filter-selection-label">
+                    <input type="radio" name="updatesfrom" id="esoc_activityfeed_filter_myfollowers"
+                           class="esoc_activityfeed_filter"
+                           value="followers"  {{messages.fieldValue.from.followers}}>
+                    <span id="esoc_activityfeed_filter_myfollowers_radio"
+                          class="{{#if messages.fieldValue.from.followers}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+                  </div>
+
+                  <div class="csui-filter-name" title="{{messages.myfollowers}}">
+                      <label for="esoc_activityfeed_filter_myfollowers" class="csui-name">
+                          {{messages.myfollowers}}
+                      </label>
+                  </div>
+                </div>
+                <div class="csui-facet-item">
+                  <div class="esoc-activity-filter-selection-label">
+                    <input type="radio" name="updatesfrom" id="esoc_activityfeed_filter_myupdates"
+                           value="myupdates" {{messages.fieldValue.from.myupdates}}
+                           class="esoc_activityfeed_filter">
+                    <span id="esoc_activityfeed_filter_myupdates_radio"
+                          class="{{#if messages.fieldValue.from.myupdates}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+                  </div>
+
+                  <div class="csui-filter-name" title="{{messages.myupdates}}">
+                      <label for="esoc_activityfeed_filter_myupdates" class="csui-name">
+                          {{messages.myupdates}}
+                      </label>
+                  </div>
+                </div>
+
+                <div class="csui-facet-item">
+                  <div class="esoc-activity-filter-selection-label">
+                    <input type="radio" name="updatesfrom" id="esoc_activityfeed_filter_mentions"
+                           value="mentions"
+                           class="esoc_activityfeed_filter" {{messages.fieldValue.from.mentions}}>
+                    <span id="esoc_activityfeed_filter_mentions_radio"
+                          class="{{#if messages.fieldValue.from.mentions}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+                  </div>
+
+                  <div class="csui-filter-name" title="{{messages.mentions}}">
+                      <label for="esoc_activityfeed_filter_mentions" class="csui-name">
+                          {{messages.mentions}}
+                      </label>
+                  </div>
+                </div>
+
+                <div class="csui-facet-item">
+                  <div class="esoc-activity-filter-selection-label">
+                    <input type="radio" name="updatesfrom" id="esoc_activityfeed_filter_myfavorites"
+                           value="myfavorites"
+                           class="esoc_activityfeed_filter" {{messages.fieldValue.from.myfavorites}}>
+                    <span id="esoc_activityfeed_filter_myfavorites_radio"
+                          class="{{#if messages.fieldValue.from.myfavorites}} icon-radiobutton-selected {{else}} icon-radiobutton {{/if}}"></span>
+                  </div>
+
+                  <div class="csui-filter-name" title="{{messages.myfavorites}}">
+                      <label for="esoc_activityfeed_filter_myfavorites" class="csui-name">
+                          {{messages.myfavorites}}
+                      </label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

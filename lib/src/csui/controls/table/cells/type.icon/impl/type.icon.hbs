@@ -1,0 +1,12 @@
+{{#if defaultAction}}
+  {{#if inactive}}
+    <div class="csui-table-cell-no-default-action"></div>
+  {{else}}
+    <a class="csui-table-cell-default-action" href="{{defaultActionUrl}}"
+       aria-label="{{typeAndNameAria}}"></a>
+  {{/if}}
+{{else}}
+  <div class="csui-table-cell-no-default-action"></div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

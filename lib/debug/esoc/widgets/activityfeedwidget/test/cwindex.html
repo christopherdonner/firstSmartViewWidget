@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AcitivityFeed Widget</title>
+
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+  <script src="../../../../csui/lib/require.js"></script>
+  <script data-csui-path="../../../../csui" src="../../../../csui/config.js"></script>
+  <script src="../../../../csui/helpers.js"></script>
+
+  <style>
+    body {
+      padding: 1em;
+    }
+  </style>
+
+  <script>
+
+    require.config({
+      paths: {
+        esoc: '../../../../src'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/OTCS/livelink/api/v1/',
+            supportPath: '/img',
+            crossDomain: true
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/underscore', 'csui/lib/jquery', 'csui/lib/backbone', 'csui/lib/marionette',
+      'csui/lib/handlebars',
+      'csui/controls/tile/behaviors/expanding.behavior',
+      'esoc/widgets/activityfeedwidget/activityfeedfactory',
+      'esoc/widgets/activityfeedwidget/activityfeed.view',
+      'csui/utils/contexts/page/page.context',
+      '../object/object.view',
+      'esoc/widgets/activityfeedwidget/util'
+    ], function (_, $, Backbone, Marionette, Handlebars,
+        ExpandingBehavior, ItemCollection, ItemCollectionView,
+        PageContext, ObjectView, Util) {
+
+      var
+          pageContext = new PageContext(),
+          options     = {
+            context: pageContext,
+            "title": "Activity Feed - All",
+            "feedsize": 15,
+            "feedtype": "all",
+            "wrapperClass": "hero",
+            "headerView": true,
+            "feedSettings": {
+              "enableComments": true,
+              "enableFilters": false
+            },
+            config_settings: {
+              'feedsAutoRefreshWait': 60000,
+              'maxMessageLength': 1000
+            }
+          };
+      options.titleBarIcon = options.showTitleIcon === false ? undefined :
+                             'title-icon title-favourites';
+      Util.commonUtil.fillDefaultActivityOptions(options);
+      if (options.feedtype !== undefined) {
+        ItemCollection.prototype.propertyPrefix = Util.commonUtil.getActivityWidgetId(options);
+        ItemCollection.prototype.uniqueid = Util.commonUtil.getActivityWidgetId(options);
+      } else if (options.data !== undefined && this.options.data.feedtype !== undefined) {
+        ItemCollection.prototype.propertyPrefix = Util.commonUtil.getActivityWidgetId(options);
+        ItemCollection.prototype.uniqueid = Util.commonUtil.getActivityWidgetId(options);
+      }
+
+      var collection   = pageContext.getCollection(ItemCollection, options),
+
+          HeaderView   = Marionette.LayoutView.extend({
+            className: 'tile',
+            template: Handlebars.compile($('#header-template').html()),
+            regions: {
+              listRegion: '.list'
+            },
+            initialize: function (options) {
+              if (this.options.wrapperClass !== undefined) {
+                this.$el.addClass(this.options.wrapperClass);
+              }
+            },
+            behaviors: {
+              Expanding: {
+                behaviorClass: ExpandingBehavior,
+                expandedView: ItemCollectionView,
+                titleBarIcon: 'title-activityfeed',
+                dialogTitle: 'Expandable Activity Feed - All',
+                expandedViewOptions: _.extend(options, {collection: collection})
+              }
+            },
+            onShow: function () {
+              var collection = pageContext.getCollection(ItemCollection, options),
+                  _options   = _.extend(options, {collection: collection});
+              listView = new ObjectView(_options);
+
+              this.listRegion.show(listView);
+              collection.fetch();
+            }
+          }),
+          headerView   = new HeaderView(options),
+          headerRegion = new Marionette.Region({
+            el: "#header"
+          });
+
+      headerRegion.show(headerView);
+    });
+  </script>
+</head>
+
+<body>
+<div class="container-fluid grid-rows">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-6" id="header"></div>
+  </div>
+</div>
+
+<script id="header-template" type="text/x-handlebars-template">
+  <div style="width: 49%; height: 100%; display: inline-block;" id="herocontentarea">
+    Rest of the body content here... Lorem Ipsum is simply dummy text of the printing and
+    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s,
+  </div>
+  <div class="list" style="float:right;width: 50%; height: 100%; display: inline-block;"></div>
+  <div class="tile-footer"></div>
+</script>
+
+</body>
+</html>

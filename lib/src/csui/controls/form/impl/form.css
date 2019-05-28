@@ -1,0 +1,2016 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-form {
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+.cs-form > .binf-row > .alpaca-container-label {
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cs-form > .binf-row > .alpaca-container-label:first-child {
+  padding: 0;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.cs-form .binf-row.alpaca-field {
+  margin-bottom: 3em;
+}
+
+.cs-form .alpaca-icon-required {
+  font-size: 5px;
+  color: #df3324;
+  vertical-align: text-top;
+}
+
+.cs-form .alpaca-field.binf-has-error .cs-field-write input:focus,
+.cs-form .alpaca-field.binf-has-error .cs-field-write textarea:focus,
+.cs-form .alpaca-field.binf-has-error .cs-field-write button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #666666;
+  border-radius: 3px;
+}
+
+.cs-form .description-label {
+  font-weight: 500;
+  color: #757575;
+  line-height: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cs-form .description-text {
+  font-weight: 500;
+}
+
+.cs-form .language-switcher {
+  width: 1em;
+  height: 1em;
+}
+
+.cs-form > .alpaca-field-object {
+  padding: 0;
+  border-radius: 0;
+}
+
+.cs-form .alpaca-container-label {
+  padding: 0;
+}
+
+.cs-form > .binf-row {
+  margin: 0;
+}
+
+
+
+.binf-widgets .title {
+  font-size: 1.4em
+}
+
+
+.binf-widgets .data-line {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-bottom: 2em;
+}
+
+.data-line .title {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  font-size: 1em !important;
+}
+
+span.label-data {
+  float: right;
+  display: inline-block;
+  text-align: left;
+  width: calc(60% - 1em);
+}
+
+.cs-form .alpaca-container-label > h4 {
+  color: #00498f;
+  font-size: 1.25rem;
+}
+
+
+.binf-widgets .general-body {
+  clear: both;
+  float: left;
+  line-height: 1.5;
+}
+
+#form-pane-right {
+  padding: 2em 2em 0 3em;
+}
+
+.binf-widgets .general-information {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.general-information ul li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.binf-widgets .general-extensions {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.binf-widgets .extensions-wrap {
+  width: 100%;
+  clear: both;
+  float: left;
+  border: 1px dashed #999999;
+  background-color: #f5f5f5;
+  padding: 1em;
+}
+
+.binf-widgets .extensions-body {
+  font-style: italic;
+}
+
+
+.binf-widgets .metadata-icon {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.cs-form .alpaca-container-label {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 0.5em;
+  color: #333333;
+}
+
+.cs-form .binf-form-group {
+  margin-bottom: 0px;
+  margin-top: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 1.5em;
+}
+
+.cs-form .cs-form-set-container .binf-form-group {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.cs-form .binf-form-horizontal .binf-form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.binf-widgets .cs-form .binf-control-label {
+  color: #757575;
+  text-align: right;
+}
+
+.cs-form .binf-form-control {
+  margin-left: 1px;
+}
+
+.cs-form .alpaca-array-actionbar.alpaca-array-actionbar-top {
+  padding-bottom: 0;
+  margin-left: 0px;
+}
+
+.cs-form .alpaca-array-actionbar {
+  height: 100%;
+}
+
+.cs-form .binf-btn-group button {
+  margin-bottom: 5px;
+}
+
+.cs-form .cs-form-leftcolumn {
+  height: 100%;
+  padding-left: 0;
+}
+
+.cs-form .cs-form-rightcolumn {
+  height: 100%;
+  padding-left: 0;
+
+}
+
+.cs-form .cs-form-singlecolumn {
+  height: 100%;
+  width: 100%;
+}
+
+.binf-widgets .csui-form-set-array-wrapper .csui-array-bulk-edit {
+  position: absolute;
+  right: -7px;
+}
+
+.binf-widgets .csui-array-bulk-edit-noset {
+  
+}
+
+.binf-widgets .csui-array-bulk-edit-set {
+  position: relative;
+  z-index: 1;
+}
+
+.cs-form label.alpaca-container-label {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 0;
+  padding-bottom: 6px;
+  margin-bottom: 0;
+  color: #333333;
+
+}
+
+
+
+
+.cs-form .cs-form-set {
+  padding: 0;
+  margin-top: 1em;
+}
+
+@media (max-width: 991px) {
+  .cs-form .cs-form-set {
+    float: left;
+  }
+}
+
+.cs-form .cs-form-set .alpaca-field-array {
+  padding: 0;
+  padding-right: 0px;
+  position: relative;
+  width: 100%;
+}
+
+
+
+
+
+.csui-general-form .alpaca-container-item {
+  margin-bottom: 12px;
+}
+
+.csui-general-form .cs-form-set-container .alpaca-container-item {
+  margin-bottom: 0px;
+}
+
+.cs-form .cs-form-set > .alpaca-container-item {
+  width: calc(100%);
+  height: auto;
+  display: flex;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .binf-form-group .cs-formfield {
+  padding-left: 5px; 
+  padding-right: 16px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .binf-form-group .cs-formfield .cs-field-write-inner {
+  width: 100%;
+}
+
+.cs-form .cs-form-set-container {
+  
+  position: relative;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container {
+  display: flex;
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item {
+  flex: 1 0 0px;
+  -webkit-flex: 1 0 0px;
+  -ms-flex: 1 0 0px;
+  
+  
+  
+  margin-top: 0;
+  
+  min-width: 235px;
+  max-width: 640px; 
+  padding-bottom: 0px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item {
+  max-width: 266px;
+  min-width: 266px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container.cs-form-set-container .alpaca-container-item {
+  
+  margin-bottom: 8px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container.cs-form-set-container .alpaca-container-item.alpaca-container-item-last {
+  
+  margin-bottom: 0px;
+}
+
+
+
+ 
+
+.cs-form .cs-form-set .cs-form-set-container .cs-pull-left .cs-array .cs-pull-left .cs-field-read-inner,
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-pull-left .cs-formfield .cs-field-read-inner {
+  width: calc(100% + 80px); 
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right {
+  
+  min-width: 24px;
+  max-width: 24px;
+  padding: 5px 0px;
+  width: 24px;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right button .csui-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right:focus {
+  background-color: #d6dfe2;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .cs-pull-left .cs-array .cs-pull-left {
+  display: block;
+  width: calc(100% - 80px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-field-array .alpaca-container .alpaca-container-item {
+  flex: 1 0 0px;
+  -webkit-flex: 1 0 0px;
+  -ms-flex: 1 0 0px;
+
+  border-bottom: 0;
+}
+
+
+
+.binf-widgets .cs-form .cs-userfield {
+  width: 100%;
+  background-color: transparent;
+}
+
+.cs-form .cs-userfield .esoc-user-display-name {
+  font-size: 14px;
+  font-style: inherit;
+}
+
+
+
+.binf-widgets .cs-form .cs-form-set .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9,
+.binf-widgets .cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-field .binf-col-sm-9,
+.binf-widgets .cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-scrollablecols .alpaca-field .binf-col-sm-9 {
+  width: 100%;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field {
+  display: flex;
+  flex-direction: column;
+
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  max-width: 100%;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-form-group {
+  margin-bottom: 0;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .binf-form-group.alpaca-field {
+  margin-bottom: 0;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item > .binf-form-group > div.binf-col-sm-9 {
+  margin: 8px 0;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item > .binf-form-group.binf-has-error > div.binf-col-sm-9 {
+  margin-bottom: 0px;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field.alpaca-field-array {
+  padding-right: 0;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field.alpaca-field-array .alpaca-control {
+  padding: 0;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field.alpaca-field-array > div {
+  display: block;
+  
+  margin: 8px 0px;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field .alpaca-control-label {
+  flex: 1 0 32px;
+  -webkit-flex: 1 0 32px;
+  -ms-flex: 1 0 28px;
+
+  text-align: left;
+  width: auto;
+  margin: 0;
+  border-bottom: 2px solid darkgrey;
+  background-color: #f5f5f5;
+  color: #333333;
+  padding: 2px 16px 0px 8px;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field .alpaca-container-label {
+  flex: 1 0 32px;
+  -webkit-flex: 1 0 32px;
+  -ms-flex: 1 0 28px;
+
+  text-align: left;
+  width: auto;
+  margin: 0;
+  border-bottom: 2px solid darkgrey;
+  background-color: #f5f5f5;
+  color: #333333;
+  padding: 2px 16px 0px 8px;
+  font-size: 14px;
+  font-weight: bold;
+
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cs-form .cs-form-set .alpaca-container .cs-pull-left .cs-form-set-container .alpaca-container-item .cs-pull-right {
+  margin-top: 0px;
+  margin-left: 0px;
+  height: auto;
+  padding: 4px 0px;
+  text-align: center;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item.alpaca-container-item-first .cs-pull-right {
+  margin-top: 28px;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item.alpaca-container-item:not(:first-child) .alpaca-field-object .alpaca-control-label {
+  display: none;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item.alpaca-container-item:not(:first-child) .alpaca-field-object .alpaca-container-label {
+  display: none;
+}
+
+.cs-form .cs-form-set .alpaca-container-item .alpaca-field.alpaca-field-object {
+  padding: 0;
+}
+
+
+.cs-form .cs-form-set label.alpaca-container-label {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #333333;
+  border-bottom: 0;
+  text-align: left;
+}
+
+.cs-form .cs-form-set .alpaca-field .cs-form-set-container.alpaca-container-has-items {
+  border-bottom: none;
+  padding: 1px;
+  float: left;
+}
+
+.cs-form .cs-form-set .alpaca-field .cs-form-set-container.alpaca-container-has-items:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array {
+  
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  padding: 0;
+  margin: 11px 0px 0px 0px;
+  float: left;
+  width: 100%;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.csui-array-bulk-edit {
+  width: 24px;
+  height: 24px;
+  margin-left: -2px;
+  padding-top: 2px;
+  margin-top: -2px;
+  float: left;
+  position: relative;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .apply-mv {
+  float: left;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .apply-mv .apply-all,
+.binf-widgets .alpaca-field-array .apply-set .apply-all,
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .apply-mv .apply-all:focus,
+.binf-widgets .alpaca-field-array .apply-set .apply-all:focus,
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .apply-mv .apply-all:active,
+.binf-widgets .alpaca-field-array .apply-set .apply-all:active {
+  background-color: transparent;
+  border: none;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container {
+  width: calc(60% - 25px);
+  float: left;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .apply-mv.alpaca-container {
+  width: 25px;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container-label {
+  
+  
+
+  display: inline-block;
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  min-width: 6em;
+  padding: 4px;
+  padding-right: 1em;
+  margin-top: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+
+.cs-form .binf-col-md-6 {
+  width: 100%;
+  float: left;
+}
+
+@media (min-width: 1400px) {
+  .cs-form .binf-col-md-6 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1399px) {
+  .cs-form .binf-col-md-6 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.cs-form .cs-form-set-container .binf-col-sm-9 {
+  width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  
+  .csui-form-set-array-wrapper.cs-form .cs-form-set .cs-form-set-container .binf-col-sm-9 {
+    width: 100%;
+  }
+
+}
+
+.cs-form .cs-form-doublecolumn .cs-form-set-container .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9 {
+  width: 100%;
+}
+
+.cs-form .cs-form-doublecolumn .cs-form-set-container .alpaca-container-item {
+  
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cs-form .cs-form-doublecolumn .cs-form-set-container .alpaca-container-item:last-child {
+  margin-bottom: 0;
+}
+
+.cs-form .cs-array {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cs-form .cs-form-set .csui-container-lockedcols .cs-form-set-container .cs-array {
+  position: relative;
+}
+
+.cs-form.csui-general-form .cs-form-set .csui-container-lockedcols .cs-form-set-container .alpaca-container-item {
+  margin-bottom: 0px;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-pull-left {
+  -webkit-box-flex: inherit; 
+  -moz-box-flex: inherit; 
+  -webkit-flex: inherit; 
+  -ms-flex: inherit; 
+
+  flex: inherit;
+  min-width: 0;
+  max-width: calc(100% - 77px);
+  float: left;
+}
+
+.cs-form .cs-array .cs-pull-left {
+  -webkit-box-flex: 0 1 auto; 
+  -moz-box-flex: 0 1 auto; 
+  -webkit-flex: 0 1 auto; 
+  -ms-flex: 0 1 auto; 
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.csui-form-set-array-wrapper.cs-form .cs-array .cs-pull-left {
+  max-width: 100%;
+}
+
+.csui-form-set-array-wrapper .cs-form .cs-array .cs-pull-left {
+  max-width: 100%;
+}
+
+.csui-form-set-array-wrapper .cs-array.alpaca-container-item:hover > .cs-pull-left {
+  background-color: #bac9ce;
+  color: #333333;
+}
+
+.csui-form-set-array-wrapper .cs-array.alpaca-container-item:hover > .cs-pull-left.csui-emptyset {
+  background-color: #ffffff;
+}
+
+.csui-form-set-array-wrapper.csui-multivalue-set-write-mode .cs-array.alpaca-container-item:hover > .cs-pull-right {
+  background-color: #d6dfe2;
+}
+
+
+.cs-form .cs-form-set .cs-array > .cs-pull-left {
+  -webkit-box-flex: 0 0 auto; 
+  -moz-box-flex: 0 0 auto; 
+  -webkit-flex: 0 0 auto; 
+  -ms-flex: 0 0 auto; 
+  min-width: 0;
+}
+
+
+.cs-form .cs-form-set .cs-array > .cs-pull-left {
+  -webkit-box-flex: 0 0 auto; 
+  -moz-box-flex: 0 0 auto; 
+  -webkit-flex: 0 0 auto; 
+  -ms-flex: 0 0 auto; 
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.cs-form .cs-array .cs-pull-right {
+  
+  
+  
+  
+  
+  width: 72px;
+}
+
+.binf-widgets .cs-form .cs-array .cs-pull-right button {
+  border: 0;
+  margin-left: 8px;
+  margin-bottom: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+.cs-form .cs-array .cs-pull-right button.alpaca-button-disabled,
+.cs-form .cs-array .cs-pull-right button > i.alpaca-button-disabled {
+  visibility: hidden;
+}
+
+.cs-form .cs-array .cs-pull-right button > i.alpaca-button-disabled.circle_delete:hover {
+  visibility: hidden;
+}
+
+
+button.alpaca-array-actionbar-action:hover i.alpaca-button-disabled.circle_delete {
+  visibility: hidden;
+}
+
+.cs-form .cs-array .cs-pull-right button:hover {
+  background-color: transparent;
+}
+
+.cs-form .cs-array .cs-pull-right button:active {
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.cs-form .cs-array .cs-pull-right button:focus {
+  outline: 1px dotted;
+}
+
+.cs-form .cs-array .cs-pull-right button .csui-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0;
+  background-color: transparent;
+}
+
+.cs-form .cs-array .cs-pull-right button .csui-icon.circle_add {
+}
+
+.cs-form .cs-array .cs-pull-right button .csui-icon.circle_delete {
+  
+}
+
+
+
+
+.cs-form .binf-help-block.alpaca-message {
+  margin-left: 40%;
+  text-align: left;
+  padding-left: 8px;
+  color: #df3324;
+  display: block;
+  margin-bottom: 0px;
+}
+
+.cs-form .alpaca-container-item .binf-help-block.alpaca-message {
+  font-size: 12px;
+}
+
+.binf-help-block.alpaca-message.alpaca-message-notAllFieldsFilled {
+  display: none;
+}
+
+.cs-form .binf-help-block.alpaca-message .binf-glyphicon {
+  display: none;
+}
+
+p.alpaca-control {
+  height: auto;
+}
+
+.cs-form .binf-form-group.alpaca-field {
+  height: auto;
+}
+
+.cs-form .alpaca-container-item > .binf-form-group.alpaca-field.alpaca-field-datetime > .binf-col-sm-9 {
+  overflow: visible;
+  
+}
+
+.cs-form .alpaca-container-item:not(:first-child) {
+  margin-top: 0;
+}
+
+.cs-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 24px; 
+  line-height: 24px; 
+  padding: 0 16px 0 0;
+  vertical-align: top;
+}
+
+.cs-form .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9 {
+  display: inline-block;
+  
+  width: calc(60% - 40px);
+  padding: 0;
+}
+
+.cs-form-doublecolumn .alpaca-container-item {
+  float: left;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .cs-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label,
+  .cs-form .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9 {
+    float: left;
+  }
+}
+
+.cs-form.cs-form-create .cs-form-set-container .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9 {
+  width: 100%;
+}
+
+.cs-form .alpaca-container-item > .binf-form-group.alpaca-field.alpaca-field-date > .binf-col-sm-9 {
+  overflow: inherit;
+}
+
+
+.cs-form .alpaca-container-item > .alpaca-field.alpaca-field-object {
+  padding: 0;
+  margin-top: 1em;
+}
+
+.cs-form .alpaca-container-item > .alpaca-field.alpaca-field-object > label {
+  margin-bottom: 0.5em;
+  font-size: 18px;
+  color: #333333;
+  padding: 0;
+}
+
+.cs-form .alpaca-container-item > .alpaca-field.alpaca-field-object > label > span {
+  cursor: default !important;
+}
+
+.cs-form .alpaca-container-item > .alpaca-field.alpaca-field-array > label > span {
+  cursor: default !important;
+}
+
+
+.cs-form .alpaca-field label {
+  color: #757575;
+  border-bottom: 0;
+  text-align: left;
+}
+
+.cs-form .alpaca-field {
+  border: 0;
+  padding: 0;
+}
+
+.cs-form .alpaca.object {
+  border: 0;
+}
+
+
+
+
+.alpaca-field-url .cs-formfield.cs-textfield .cs-field-read button > div {
+  white-space: inherit;
+}
+
+.alpaca-field-url .cs-formfield.cs-textfield .cs-field-read .btn-container {
+  max-width: calc(100% - 24px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.alpaca-field-url .cs-formfield.cs-textfield .cs-field-read button > a {
+  color: #000000;
+}
+
+.alpaca-control.binf-checkbox {
+  margin: 0;
+}
+
+.binf-widgets .cs-form .url_section .binf-help-block.alpaca-message {
+  width: inherit;
+  margin-right: 5%;
+}
+
+.binf-widgets .alpaca-array-actionbar-action {
+  padding: 4px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.binf-widgets .csui-array-inline-action {
+  padding-left: 3px;
+}
+
+.cs-array-item-field-wrapper .icon-edit,
+.cs-array-item-field-wrapper .edit-cancel {
+  display: none;
+}
+
+.cs-form .cs-form-set-container .cs-pull-right .alpaca-array-actionbar.alpaca-array-actionbar-top > button[data-alpaca-array-actionbar-action="up"],
+.cs-form .cs-form-set-container .cs-pull-right .alpaca-array-actionbar.alpaca-array-actionbar-top > button[data-alpaca-array-actionbar-action="down"] {
+  display: none;
+}
+
+.binf-hidden.binf-switch-disabled {
+  display: block;
+  visibility: visible;
+}
+
+.cs-datefield .cs-field-write-inner {
+  display: flex;
+}
+
+.cs-pull-left .cs-datefield .cs-field-write-inner {
+  display: block;
+}
+
+.csui-form-set-array-wrapper .cs-form-set-container .binf-control-label.alpaca-control-label, .csui-form-set-array-wrapper .cs-form-set-container label.alpaca-container-label {
+  -webkit-flex: 1 0 33px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.75em;
+}
+
+.cs-form .cs-array .cs-pull-right button .csui-icon.circle_add:focus {
+  border: 1px dotted #cccccc;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-help-block.alpaca-message {
+  padding-bottom: 5px;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .csui-lockedcols .binf-help-block.alpaca-message {
+  padding-left: 5px;
+}
+
+.cs-form .cs-form-set-container .binf-help-block.alpaca-message {
+  margin: 5px 0 0 0;
+  font-size: 12px;
+  width: 100%;
+}
+
+.binf-widgets .cs-form .cs-form-set .alpaca-container .alpaca-container-item > .binf-form-group > div.binf-col-sm-9 .cs-form-add-bottom-margin {
+  margin-bottom: 0px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item > .binf-form-group > div.binf-col-sm-9.cs-form-add-bottom-margin {
+  margin-bottom: 0px;
+}
+
+.binf-widgets .apply-all,
+.binf-widgets .apply-all:focus,
+.binf-widgets .applied_done {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  max-width: 24px;
+  margin-top: 2px;
+  background-color: transparent;
+  border: none;
+}
+
+.binf-widgets .apply-all:focus {
+  outline: 1px dotted;
+}
+
+.binf-widgets .apply-all:active {
+  box-shadow: 0px 0px 0px 2px #666666;
+  border-radius: 10px;
+}
+
+.binf-widgets .alpaca-field-array .apply-set .apply-all,
+.binf-widgets .alpaca-field-array .apply-set .applied_done {
+  right: 3px;
+  background-color: transparent;
+  border: none;
+}
+
+.binf-widgets .metadata-sidebar-fadeout {
+  background: rgba(231, 240, 217, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  right: 14px;
+}
+
+.binf-widgets .metadata-sidebar-cs-list-group {
+  position: relative;
+}
+
+.binf-widgets .metadata-sidebar-arrow-overlay {
+  border-left: 0.875em solid #e7f0d9;
+  opacity: 0.6;
+}
+
+.csui-transparent {
+  opacity: 0;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.csui-multivalue-read-block {
+  width: auto;
+  max-width: calc(60% - 25px);
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container .csui-multivalue-block:focus,
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.csui-multivalue-read-block:focus {
+  outline: 1px dotted;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.csui-multivalue-read-block .alpaca-container-item {
+  float: none;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .csui-multivalue-block .cs-pull-left,
+.cs-item-action-metadata .binf-modal-body .cs-add-item-metadata-form .cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-pull-left {
+  width: calc(100% - 77px);
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .csui-multivalue-block .cs-pull-right,
+.cs-item-action-metadata .binf-modal-body .cs-add-item-metadata-form .cs-form .cs-form-doublecolumn .cs-array .cs-pull-right {
+  float: left;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.csui-multivalue-read-block .cs-pull-right {
+  display: none;
+  float: left;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.csui-multivalue-read-block .cs-formfield .icon-container {
+  min-width: 0px;
+  max-width: 0px;
+  min-height: 0px;
+  max-height: 0px;
+}
+
+@media (max-width: 1024px) {
+  .cs-item-action-metadata .binf-modal-lg {
+    width: calc(100% - 352px);
+    height: calc(100% - 200px);
+    margin-top: 2rem;
+    max-width: 68rem;
+    max-height: 42rem;
+    min-width: 40rem;
+    min-height: 27rem;
+  }
+}
+
+.cs-form .cs-form-multi-action-container .alpaca-array-actionbar {
+  height: 0px;
+  font-size: 0;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .cs-pull-left .cs-array.cs-form-multi-action-container .cs-pull-left .cs-field-read-inner,
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-form-multi-action-container .cs-pull-left .cs-formfield .cs-field-read-inner {
+  padding: 0;
+  width: auto;
+}
+
+.cs-form .cs-form-set .cs-form-set-container.alpaca-container-input-focus .cs-pull-left .cs-array.cs-form-multi-action-container .cs-pull-left .cs-field-read-inner {
+  width: 185px;
+  padding: 0px 50px 0px 0px;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .cs-form-multi-action-container .alpaca-container-item .cs-pull-right {
+  margin-top: 0px;
+  min-width: 0px;
+  max-width: 0px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .cs-pull-left .cs-array.cs-form-multi-action-container .cs-pull-left {
+  display: block;
+  width: calc(100% - 15px);
+}
+
+.cs-form .cs-form-set .alpaca-container .cs-pull-left .cs-form-set-container .alpaca-container-item.cs-form-multi-action-container .cs-pull-right {
+  height: 0;
+  
+  width: 100%;
+  min-width: inherit;
+  max-width: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+.cs-form .cs-form-set .alpaca-container .cs-form-multi-action-container .cs-pull-left .cs-form-set-container .alpaca-container-item .cs-pull-right .binf-btn-group {
+  width: calc(100% - 5px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item.alpaca-container-item-first.cs-form-multi-action-container .cs-pull-right {
+  margin-top: 0px;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.alpaca-container-input-focus.cs-form-multi-action-container {
+  width: auto;
+}
+
+.cs-form .cs-form-doublecolumn .cs-form-set-container .alpaca-container-item.cs-form-multi-action-container,
+.cs-form .cs-array.cs-form-multi-action-container {
+  position: relative;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-form-multi-action-container .cs-pull-left {
+  -webkit-box-flex: 0 0 100%; 
+  -moz-box-flex: 0 0 100%; 
+  -webkit-flex: 0 0 100%; 
+  -ms-flex: 0 0 100%; 
+
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 0 16px 0 0;
+}
+
+.cs-form .cs-array.cs-form-multi-action-container .cs-pull-right {
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-size: 0;
+}
+
+.binf-widgets .cs-form .cs-array.cs-form-multi-action-container .cs-pull-right button {
+  background-color: transparent;
+  border: 0 none;
+  height: 14px;
+  margin-bottom: 0;
+  margin-left: 0px;
+  padding: 0;
+  position: absolute;
+  right: 9px;
+  width: 14px;
+}
+
+.binf-widgets .cs-form .cs-array.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="remove"] {
+  top: 0px;
+}
+
+.cs-form .cs-form-set .alpaca-container .cs-pull-left .cs-form-set-container .alpaca-container-item.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="remove"],
+.binf-widgets .cs-form .csui-multivalue-block .cs-array.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="remove"] {
+  right: 9px;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right button[data-alpaca-array-actionbar-action="remove"].alpaca-button-disabled {
+  display: none;
+}
+
+.binf-widgets .cs-form .cs-array.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="add"] {
+  left: calc(50% - 15px);
+  right: auto;
+}
+
+.binf-widgets .cs-form .cs-array.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="remove"] .csui-icon,
+.binf-widgets .cs-form .cs-array.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="add"] .csui-icon {
+  height: 100%;
+  width: 100%;
+}
+
+.cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .csui-multivalue-block .cs-form-multi-action-container .cs-pull-left,
+.cs-item-action-metadata .binf-modal-body .cs-add-item-metadata-form .cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-form-multi-action-container .cs-pull-left {
+  width: calc(100%);
+  max-width: calc(100%);
+}
+
+.cs-form .cs-array.cs-form-multi-action-container .cs-pull-left .cs-field-read-inner .icon-container {
+  display: none;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right buttton {
+  position: initial;
+  margin-top: 8px;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right.csui-set-action-bar {
+  background-color: #d6dfe2;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right button[data-alpaca-array-actionbar-action="remove"],
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right button[data-alpaca-array-actionbar-action="add"] {
+  width: 14px;
+  height: 14px;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right button[data-alpaca-array-actionbar-action="remove"],
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right button[data-alpaca-array-actionbar-action="add"],
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right.csui-set-action-bar button[data-alpaca-array-actionbar-action="remove"],
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right.csui-set-action-bar button[data-alpaca-array-actionbar-action="add"] {
+  margin: 0px 0px 0px 5px;
+}
+
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right button[data-alpaca-array-actionbar-action="remove"],
+.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right.csui-set-action-bar button[data-alpaca-array-actionbar-action="remove"] {
+  margin-bottom: 6px;
+}
+
+.cs-form .cs-form-set .alpaca-container .cs-pull-left .cs-form-set-container .alpaca-container-item.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="remove"],
+.cs-form .cs-form-set .alpaca-container .cs-pull-left .cs-form-set-container .alpaca-container-item.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="add"],
+.cs-form .cs-form-set .alpaca-container .cs-pull-left .cs-form-set-container .alpaca-container-item.cs-form-multi-action-container .cs-pull-right button .csui-icon {
+  margin: 0px;
+  padding: 0px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item.alpaca-container-item .cs-pull-right .alpaca-array-actionbar {
+  text-align: center;
+}
+
+.csui-form-set-array-wrapper .cs-array.alpaca-container-item > .cs-pull-left.cs-form-set-row-bg {
+  background-color: #bac9ce;
+}
+
+.cs-form .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  margin: 8px 0;
+}
+
+.cs-form .cs-form-set-container .binf-popover .binf-row.alpaca-field {
+  margin-bottom: 0;
+}
+
+.binf-widgets .csui-show-colout {
+  height: 100%;
+  width: auto;
+  opacity: 1;
+}
+
+.binf-widgets .csui-colout-icon {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.binf-widgets .csui-show-colout .csui-icon-container {
+  height: 100%;
+  width: 100%;
+  padding: 9px 3px 0px 4px;
+}
+
+.binf-widgets .cs-array.alpaca-container-item.alpaca-container-item-first .csui-show-colout {
+  padding-top: 33px;
+}
+
+.binf-widgets .cs-array.alpaca-container-item.alpaca-container-item-first .csui-show-colout .csui-icon-container {
+  background-color: #ffffff;
+}
+
+.binf-widgets .cs-form-set-container .csui-lockedcols.csui-colout-visible .csui-show-colout {
+  position: absolute;
+  z-index: 1;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible .alpaca-field .alpaca-container-label,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible .alpaca-field .alpaca-control-label {
+  padding: 2px 16px 0px 39px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible .alpaca-field .alpaca-container,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible .alpaca-field .binf-col-sm-9 {
+  padding-left: 31px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible.csui-lockedWriteMode .alpaca-field .alpaca-container-label,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible.csui-lockedWriteMode .alpaca-field .alpaca-control-label {
+  padding: 2px 16px 0px 8px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible.csui-lockedWriteMode .alpaca-field .alpaca-container,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible.csui-lockedWriteMode .alpaca-field .binf-col-sm-9 {
+  padding-left: 0px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols.csui-colout-visible .alpaca-field .alpaca-container .binf-col-sm-9 {
+  padding-left: 0;
+}
+
+.form-metadata .cs-array.alpaca-container-item.alpaca-container-item-first .csui-show-colout .csui-icon-container {
+  background-color: #f7f7f7;
+}
+
+.csui-form-set-array-wrapper .cs-array.alpaca-container-item:hover > .cs-pull-left .csui-icon-container,
+.binf-widgets .cs-array.alpaca-container-item.alpaca-container-item-first:hover .csui-show-popover .csui-icon-container {
+  background-color: #bac9ce;
+  color: #333333;
+}
+
+.binf-widgets .csui-lockedcols, .binf-widgets .csui-scrollablecols {
+  display: inherit;
+  position: relative;
+}
+
+.binf-widgets .csui-shadowleft-container,
+.binf-widgets .csui-shadowright-container {
+  width: 16px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+  z-index: 1;
+}
+
+.binf-widgets .csui-shadowright-container {
+  right: 30px;
+  background: -webkit-linear-gradient(left, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+  background: -o-linear-gradient(right, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+  background: -moz-linear-gradient(right, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+  background: linear-gradient(to right, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+}
+
+.binf-widgets .csui-shadowleft-container {
+  right: -16px;
+  background: -webkit-linear-gradient(right, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+  background: -o-linear-gradient(left, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+  background: -moz-linear-gradient(left, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+  background: linear-gradient(to left, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.1)); 
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array {
+  max-width: 100%;
+  padding: 0px;
+}
+
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container.alpaca-container-has-items {
+  width: 100%;
+  padding: 0;
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .cs-form-set-container.alpaca-container-has-items {
+  width: 100%;
+  padding: 0;
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .binf-popover .cs-form-set-container.alpaca-container-has-items {
+  border: 0px;
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .cs-pull-left .cs-form-set-container.alpaca-container-has-items,
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-pull-left .cs-form-set-container.alpaca-container-has-items {
+  border: 0px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-set-container.alpaca-container-has-items {
+  width: 60%;
+  padding: 4px;
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .binf-popover .cs-form-set-container .cs-array > .cs-pull-left,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-set-container .cs-array > .cs-pull-left,
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .binf-popover .cs-form-set-container > .cs-array.alpaca-container-item.alpaca-container-item-first > .cs-pull-left,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-set-container > .cs-array.alpaca-container-item.alpaca-container-item-first > .cs-pull-left {
+  border: none;
+  padding: 0px;
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left,
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left {
+  width: calc(100% - 30px);
+  border: 1px solid lightgrey;
+  border-top: none;
+  overflow: hidden;
+}
+
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left.csui-emptyset {
+  border: none;
+}
+
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left .cs-pull-left,
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left .cs-pull-left {
+  
+  width: 100%;
+}
+
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left .csui-lockedcols .cs-pull-left,
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left .csui-scrollablecols .cs-pull-left {
+  width: calc(100%);
+}
+
+.binf-widgets .cs-form .cs-array .csui-lockedcols .cs-pull-right button[data-alpaca-array-actionbar-action="add"],
+.binf-widgets .cs-form .cs-array .csui-scrollablecols .cs-pull-right button[data-alpaca-array-actionbar-action="add"] {
+  left: calc(50% - 10px);
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .cs-form-set-container > .cs-array.alpaca-container-item.alpaca-container-item-first > .cs-pull-left,
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container > .cs-array.alpaca-container-item.alpaca-container-item-first > .cs-pull-left {
+  border-top: 1px solid lightgrey;
+}
+
+.cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container > .cs-array.alpaca-container-item.alpaca-container-item-first > .cs-pull-left.csui-emptyset {
+  border-top: none;
+}
+
+.cs-form .cs-form-set .binf-popover .csui-set-locked-container.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left,
+.cs-form .cs-form-set .binf-popover .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left {
+  width: 100%;
+  border-bottom: 0px;
+  max-width: 100%;
+}
+
+.cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left .cs-pull-left {
+  border-bottom: 0px;
+}
+
+.binf-widgets .csui-form-set-array-wrapper .csui-set-locked-container.alpaca-field-array .csui-array-bulk-edit {
+  right: -2px;
+}
+
+.cs-form .cs-form-set .csui-container-scrollablecols.alpaca-field-array {
+  width: 100%;
+  padding: 0px;
+}
+
+.cs-form .cs-form-set .csui-container-scrollablecols.alpaca-field-array .cs-form-set-container.alpaca-container-has-items {
+  width: 100%;
+}
+
+.cs-form .cs-form-set .csui-container-scrollablecols.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left {
+  width: 100%;
+}
+
+.binf-widgets .csui-form-set-array-wrapper .csui-container-scrollablecols.alpaca-field-array .csui-array-bulk-edit {
+  right: -30px;
+}
+
+.cs-form-set-container .csui-lockedcols {
+  max-width: 275px;
+}
+
+.cs-form-set-container .csui-scrollablecols,
+.cs-form-set-container.is-touch .csui-scrollablecols.csui-dropdown-open {
+  width: calc(100% - 235px);
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-form-set-container.csui-native-scrollbar .csui-scrollablecols,
+.cs-form-set-container.csui-native-scrollbar.is-touch .csui-scrollablecols.csui-dropdown-open {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .cs-form .cs-form-set .alpaca-field .cs-form-set-container.alpaca-container-has-items > .cs-array.alpaca-container-item.alpaca-container-item-last .csui-scrollablecols {
+    padding-bottom: 10px;
+  }
+
+  .cs-form .cs-form-set .alpaca-field .cs-form-set-container.alpaca-container-has-items > .cs-array.alpaca-container-item.alpaca-container-item-last .csui-scrollablecols .binf-help-block.alpaca-message {
+    padding-bottom: 10px;
+  }
+}
+
+.cs-form .cs-form-set .csui-container-lockedcols .cs-form-set-container.csui-native-scrollbar .cs-array:not(.alpaca-container-item-last) .csui-scrollablecols {
+  overflow: hidden;
+}
+
+
+.cs-form-set-container.is-touch .csui-scrollablecols {
+  overflow-x: scroll;
+}
+
+.binf-widgets .cs-form-set-container.is-touch .csui-set-scroll-container-parent .ps-scrollbar-x-rail,
+.binf-widgets .cs-form-set-container.is-touch .csui-set-scroll-container-parent .ps-scrollbar-x-rail:hover {
+  opacity: 0;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-scrollablecols > .alpaca-container-item label,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-scrollablecols > .alpaca-container-item label {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-scrollablecols > .alpaca-container-item .binf-form-group .cs-formfield {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.cs-form .cs-form-set .cs-formfield.cs-booleanfield {
+  min-height: 28px;
+}
+
+.metadata-inner-wrapper .cs-metadata-properties .csui-scrollablecols.ps-container > div {
+  padding: 0px;
+}
+
+.metadata-inner-wrapper .cs-metadata-properties .csui-scrollablecols.ps-container > .ps-scrollbar-x-rail {
+  display: block;
+}
+
+.cs-form .cs-form-set .alpaca-container .cs-pull-left .csui-scrollablecols .cs-form-set-container .alpaca-container-item.cs-form-multi-action-container .cs-pull-right button[data-alpaca-array-actionbar-action="remove"] {
+  right: 9px;
+}
+
+.binf-widgets .cs-form-set-container .csui-scrollablecols.csui-scrollable-writemode {
+  width: calc(100% - 235px);
+}
+
+.csui-lockedWriteMode {
+  max-width: 100%;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-field-array .alpaca-container .alpaca-container-item .cs-pull-left {
+  border: 0px;
+}
+
+
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover {
+  border-radius: 0px;
+  padding: 0px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-arrow {
+  display: none;
+  border-right-color: rgba(0, 0, 0, .15);
+  margin-top: -9px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .binf-popover .alpaca-field {
+  display: flex;
+  flex-direction: inherit;
+  display: -webkit-flex;
+  -webkit-flex-direction: inherit;
+  display: -ms-flexbox;
+  -ms-flex-direction: inherit;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .binf-popover .alpaca-container-item {
+  border-bottom: none;
+  min-width: inherit;
+  max-width: inherit;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9,
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-popover-content .cs-form-doublecolumn .cs-form-set-container.alpaca-container-has-items {
+  min-width: calc(100% - 150px);
+  max-width: calc(100% - 150px);
+  padding: 0px 8px;
+  background: #ffffff;
+  margin: 0px;
+  width: auto;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn,
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-popover-content {
+  padding: 0px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield .cs-field-read,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-booleanfield .control-area,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield .cs-field-read button > div,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item > .alpaca-field.alpaca-field-array .cs-formfield .cs-field-read button > div,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item > .alpaca-field.alpaca-field-array .cs-formfield.cs-userfield .cs-field-read-content,
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-popover-content .cs-form-doublecolumn .cs-form-set-container.alpaca-container-has-items .cs-formfield .cs-field-read,
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-popover-content .cs-form-doublecolumn .cs-form-set-container.alpaca-container-has-items .binf-form-group .cs-formfield {
+  padding: 0px;
+  height: auto;
+  line-height: 36px;
+  color: #333333;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Lato';
+  font-style: normal;
+  width: 100%;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield .cs-field-read .btn-container,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield .cs-field-write,
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-popover-content .cs-form-doublecolumn .cs-form-set-container.alpaca-container-has-items .cs-formfield .btn-container {
+  width: 100%;
+  min-width: 100%;
+}
+
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-popover-content .cs-form-doublecolumn .cs-form-set-container.alpaca-container-has-items .binf-form-group .cs-formfield.cs-userfield .cs-field-read-content,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield.cs-userfield .cs-field-read-content {
+  padding: 5px 0px;
+  line-height: 24px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield.cs-textfield {
+  line-height: normal;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .binf-popover .alpaca-container-item {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item .binf-form-group.alpaca-field {
+  max-width: 100%;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .cs-formfield.cs-formfield-readonly .cs-field-read button:focus {
+  border: none;
+  padding-left: 0px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .binf-form-group.alpaca-field .alpaca-control-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .binf-form-group.alpaca-field > .binf-col-sm-9,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .alpaca-field.alpaca-field-array .alpaca-container-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .alpaca-field.alpaca-field-array .alpaca-container-has-items {
+  padding-top: 3px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .binf-form-group.alpaca-field .alpaca-control-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .binf-form-group.alpaca-field > .binf-col-sm-9,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .alpaca-field.alpaca-field-array .alpaca-container-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .alpaca-field.alpaca-field-array .alpaca-container-has-items {
+  padding-bottom: 10px;
+}
+
+@media (min-width: 1251px) {
+
+  .metadata-navigation .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form {
+    display: table;
+  }
+
+  .metadata-navigation .cs-form .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form .binf-row.alpaca-field {
+    display: table-row;
+  }
+
+  .metadata-navigation .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form .cs-form-doublecolumn {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+
+}
+
+@media (max-width: 1250px) {
+  .binf-widgets .metadata-content .cs-form-set-container .binf-popover {
+    max-width: 414px;
+  }
+
+  .metadata-navigation .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form,
+  .metadata-navigation .cs-form .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form .binf-row.alpaca-field,
+  .metadata-navigation .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form .cs-form-doublecolumn {
+    display: block;
+    height: auto;
+  }
+
+  .metadata-navigation .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form .cs-form-doublecolumn {
+    float: left;
+  }
+}
+
+@media (min-width: 1071px) {
+  .binf-widgets .cs-form-set-container .binf-popover {
+    max-width: 826px;
+  }
+
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form {
+    display: table;
+  }
+
+  .cs-form .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form .binf-row.alpaca-field {
+    display: table-row;
+  }
+
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form.cs-doublecolumn-form .cs-form-doublecolumn {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+
+}
+
+@media (max-width: 1070px) {
+  .binf-widgets .cs-form-set-container .binf-popover {
+    max-width: 414px;
+  }
+
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .binf-form-group.alpaca-field .alpaca-control-label,
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .binf-form-group.alpaca-field > .binf-col-sm-9,
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .alpaca-field.alpaca-field-array .alpaca-container-label,
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:first-child > .alpaca-field.alpaca-field-array .alpaca-container-has-items {
+    padding-top: 0px;
+  }
+
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .binf-form-group.alpaca-field .alpaca-control-label,
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .binf-form-group.alpaca-field > .binf-col-sm-9,
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .alpaca-field.alpaca-field-array .alpaca-container-label,
+  .cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item:last-child > .alpaca-field.alpaca-field-array .alpaca-container-has-items {
+    padding-bottom: 0px;
+  }
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-first:first-child > .binf-form-group.alpaca-field .alpaca-control-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-first:first-child > .binf-form-group.alpaca-field > .binf-col-sm-9,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-first:first-child > .alpaca-field.alpaca-field-array .alpaca-container-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-first:first-child > .alpaca-field.alpaca-field-array .alpaca-container-has-items {
+  padding-top: 3px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-last:last-child > .binf-form-group.alpaca-field .alpaca-control-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-last:last-child > .binf-form-group.alpaca-field > .binf-col-sm-9,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-last:last-child > .alpaca-field.alpaca-field-array .alpaca-container-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn > .alpaca-container-item.alpaca-container-item-last:last-child > .alpaca-field.alpaca-field-array .alpaca-container-has-items {
+  padding-bottom: 10px;
+}
+
+.csui-form-set-array-wrapper .binf-popover .cs-array.alpaca-container-item:hover > .cs-pull-left {
+  background-color: #ffffff;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form {
+  width: calc(100%);
+  background-color: transparent;
+}
+
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover .binf-popover-content .cs-form-doublecolumn {
+  background: -webkit-linear-gradient(to left, #ffffff 262px, #f2f2f2 150px); 
+  background: -o-linear-gradient(to left, #ffffff 262px, #f2f2f2 150px); 
+  background: -moz-linear-gradient(to left, #ffffff 262px, #f2f2f2 150px); 
+  background: linear-gradient(to left, #ffffff 262px, #f2f2f2 150px); 
+  padding: 0px;
+  min-width: 412px;
+  max-width: 412px;
+  width: 262px;
+  display: none;
+}
+
+.binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover.binf-right > .binf-arrow:after,
+html[dir="rtl"] .binf-widgets .cs-form .cs-form-set .cs-form-set-container .binf-popover.binf-left > .binf-arrow:after {
+  border-right-color: #f2f2f2;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container-label,
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  color: #666666;
+  line-height: 36px;
+  height: auto;
+  padding: 0px 8px;
+  margin: 0px;
+  width: 150px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Lato';
+  font-style: normal;
+  border: none;
+}
+
+.cs-form .binf-popover .cs-form-doublecolumn .alpaca-field.alpaca-field-array {
+  margin: 0;
+}
+
+.metadata-inner-wrapper .cs-metadata-properties .csui-showscrollbar.ps-container > div {
+  padding: 0;
+}
+
+.binf-widgets .csui-showscrollbar {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-form .cs-form-set .alpaca-field-array.cs-adjust-width,
+.cs-form .cs-form-set .alpaca-field-array.cs-single-field {
+  width: auto;
+}
+
+@media (max-width: 1024px) {
+  .cs-form .cs-form-set .alpaca-field-array.cs-adjust-width {
+    width: 100%;
+  }
+
+  .cs-form .cs-form-set .alpaca-field-array.cs-adjust-width.cs-single-field {
+    width: auto;
+  }
+}
+
+.binf-widgets .csui-set-scroll-container-parent {
+  width: calc(100%);
+  height: 14px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.binf-widgets .csui-set-scroll-container-child {
+  height: 100%;
+  overflow: hidden;
+  width: calc(100% - 30px);
+  position: relative;
+}
+
+.binf-widgets .csui-set-scroll-container-parent .csui-set-scroll-container-child.ps-active-x {
+  z-index: 1;
+}
+
+.binf-widgets .csui-set-scroll-container-parent .csui-set-scroll-container-child.ps-container > div {
+  padding: 0 3em .5em 3em;
+}
+
+.binf-widgets .csui-set-scroll-container-parent .csui-set-scroll-container-child.ps-container > div.ps-scrollbar-x-rail,
+.binf-widgets .csui-set-scroll-container-parent .csui-set-scroll-container-child.ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.cs-form-set-container .csui-scrollablecols .csui-set-scroll-container-parent {
+  display: none;
+}
+
+.binf-widgets .csui-hoveredScrollable .ps-scrollbar-x-rail {
+  background-color: #eeeeee;
+  opacity: 0.9;
+  display: block;
+}
+
+.form-metadata .csui-set-scroll-container-child.ps-container > div {
+  padding: 0 5px 5px 5px;
+}
+
+.form-metadata .csui-set-scroll-container-child.ps-container > div.ps-scrollbar-x-rail,
+.form-metadata .cs-metadata-properties .csui-set-scroll-container-child.ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.binf-widgets .cs-form .cs-form-set .csui-colout-container .csui-colout-formitems {
+  padding: 0;
+}
+
+.binf-widgets .cs-form .cs-form-set .csui-colout-container .csui-colout-formitems .cs-form {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .binf-popover .csui-colout-container {
+  border-top: 2px solid #757575;
+  border-bottom: 1px solid #757575;
+}
+
+
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-array,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-array .alpaca-container-item {
+  min-width: 200px;
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-array-lockedcolumn + div.csui-scrollablecols {
+  width: calc(100% - 200px);
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-array-lockedcolumn + div.csui-scrollablecols.csui-scrollable-writemode {
+  width: calc(100% - 200px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item.csui-field-array {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+
+.cs-form-set-container .csui-lockedcols.csui-field-checkbox-lockedcolumn {
+  max-width: 135px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-checkbox {
+  min-width: 135px;
+  max-width: 135px;
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-checkbox-lockedcolumn + div.csui-scrollablecols {
+  width: calc(100% - 135px);
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-checkbox-lockedcolumn + div.csui-scrollablecols.csui-scrollable-writemode {
+  width: calc(100% - 135px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item.csui-field-checkbox {
+  min-width: 135px;
+  max-width: 135px;
+}
+
+
+.cs-form-set-container .csui-lockedcols.csui-field-select-lockedcolumn {
+  max-width: 200px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-select {
+  min-width: 200px;
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-select-lockedcolumn + div.csui-scrollablecols {
+  width: calc(100% - 200px);
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-select-lockedcolumn + div.csui-scrollablecols.csui-scrollable-writemode {
+  width: calc(100% - 200px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item.csui-field-select {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+
+.cs-form-set-container .csui-lockedcols.csui-field-tkl-lockedcolumn {
+  max-width: 200px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-tkl {
+  min-width: 200px;
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-tkl-lockedcolumn + div.csui-scrollablecols {
+  width: calc(100% - 200px);
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-tkl-lockedcolumn + div.csui-scrollablecols.csui-scrollable-writemode {
+  width: calc(100% - 200px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item.csui-field-tkl {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+
+.cs-form-set-container .csui-lockedcols.csui-field-text-lockedcolumn {
+  max-width: 200px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-text {
+  min-width: 200px;
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-text-lockedcolumn + div.csui-scrollablecols {
+  width: calc(100% - 200px);
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-text-lockedcolumn + div.csui-scrollablecols.csui-scrollable-writemode {
+  width: calc(100% - 200px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item.csui-field-text {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-textarea {
+}
+
+
+.cs-form-set-container .csui-lockedcols.csui-field-date-lockedcolumn,
+.cs-form-set-container .csui-lockedcols.csui-field-datetime-lockedcolumn {
+  max-width: 185px;
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-datetime,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-date {
+  min-width: 185px;
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-date-lockedcolumn + div.csui-scrollablecols,
+.cs-form-set-container .csui-lockedcols.csui-field-datetime-lockedcolumn + div.csui-scrollablecols {
+  width: calc(100% - 185px);
+}
+
+.cs-form-set-container .csui-lockedcols.csui-field-date-lockedcolumn + div.csui-scrollablecols.csui-scrollable-writemode,
+.cs-form-set-container .csui-lockedcols.csui-field-datetime-lockedcolumn + div.csui-scrollablecols.csui-scrollable-writemode {
+  width: calc(100% - 185px);
+}
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item.csui-field-datetime,
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .csui-lockedcols .alpaca-container-item.csui-field-date {
+  min-width: 185px;
+  max-width: 185px;
+}
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item.csui-field-otcs_user {
+  min-width: 200px;
+}
+
+.csui-field-otcs_user .alpaca-control-hidden {
+  visibility: hidden;
+  max-height: 28px;
+}

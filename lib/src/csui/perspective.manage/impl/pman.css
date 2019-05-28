@@ -1,0 +1,89 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.pman-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.pman-container .pman-backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  opacity: .5;
+  background-color: #000000;
+}
+
+.pman-container .pman-header {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 1151;
+}
+
+.pman-container .pman-tools-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.pman-container .pman-header .pman-right-tools,
+.pman-container .pman-header .pman-left-tools {
+  padding: 0px 15px;
+  position: relative;
+}
+
+.pman-container .pman-header .pman-toolitem {
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0px 5px;
+  padding: 8px;
+}
+
+.pman-container .pman-header .pman-toolitem .icon {
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+}
+
+.pman-container .pman-toolitem .icon-toolbarAdd.binf-active {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.pman-container .pman-header .pman-header-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: #000000;
+  opacity: 0.5;
+}
+
+.pman-container .pman-header li {
+  display: inline-block;
+}
+
+.perspective-editing .csui-navbar,
+.perspective-editing .breadcrumb-wrap-visible {
+  visibility: hidden;
+}
+
+.perspective-editing .cs-perspective-panel {
+  z-index: 1150;
+}
+
+.perspective-editing .binf-popover {
+  z-index: 1160;
+}
+
+.perspective-editing .binf-widgets .binf-modal {
+  z-index: 1170;
+}

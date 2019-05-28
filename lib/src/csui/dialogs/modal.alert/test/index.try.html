@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Modal Alert</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    /* Put some margin around the body */
+    body.binf-widgets  {
+      padding: 1em;
+    }
+
+    /* Fix Bootstrap styling for forms destroyed by BmDodo styling */
+    .binf-widgets .options {
+      background-color: #ffffff;
+      padding: 1em;
+    }
+
+    .binf-widgets .binf-control-label {
+      font-weight: bold;
+    }
+
+    /* Improve the default form layout */
+    .binf-widgets .binf-checkbox-inline, .binf-widgets .binf-radio-inline {
+      margin-right: 1em;
+    }
+
+    .binf-widgets .options p {
+      margin-bottom: 1em;
+    }
+
+    .binf-widgets .options button {
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+
+    /* Show the source code and callback result with monospace font */
+    #source {
+      margin-top: 1em;
+      padding: 1ex;
+    }
+
+    #source, #result {
+      white-space: pre;
+      font-family: monospace;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require(['csui/lib/jquery', 'csui/lib/marionette', '../modal.alert',
+      'csui/lib/binf/js/binf', 'csui/lib/domReady!'
+    ], function ($, Marionette, ModalAlert) {
+      var scenario;
+
+      function getMessage() {
+        return $('#message').val() || '';
+      }
+
+      function getTitle() {
+        if (!$('#showHeader').prop('checked')) {
+          return '';
+        }
+        var t = $('#title').val();
+        return t !== '' ? t : undefined;
+      }
+
+      function getOptions(confirmation) {
+        return {
+          showTitleCloseButton: $('#showTitleCloseButton').prop('checked'),
+          buttons: confirmation ? ModalAlert.buttons[$('#buttons :checked').val()] : undefined,
+          dialogSize: $('#dialogSize :checked').val()
+        };
+      }
+
+      function closeCallback(result) {
+        $('#result').text(result !== undefined ? JSON.stringify(result) : 'undefined');
+      }
+
+      function getOptionsSource(confirmation, showHeader) {
+        var options;
+        if (showHeader && !$('#showHeader').prop('checked')) {
+          options = 'showHeader: false';
+        }
+        if ($('#showTitleCloseButton').prop('checked')) {
+          if (options) { options += ',\n      '; }  else { options = ''; }
+          options += 'showTitleCloseButton: true';
+        }
+        if (confirmation) {
+          var buttons = $('#buttons :checked').val();
+          if (buttons !== 'YesNo') {
+            if (options) { options += ',\n      '; } else { options = ''; }
+            options += 'buttons: ModalAlert.buttons.' + buttons;
+          }
+        }
+        var dialogSize = $('#dialogSize :checked').val();
+        if (dialogSize !== 'md') {
+          if (options) { options += ',\n      '; } else { options = ''; }
+          options += 'dialogSize: \'' + dialogSize + '\'';
+        }
+        return options;
+      }
+
+      function getCallbackResult(buttons) {
+        switch (buttons) {
+        case 'YesNo':
+        case 'YesNoCancel':
+          return 'result: yes/no/cancel ~ true/false/undefined';
+        case 'OkCancel':
+          return 'result: ok/cancel ~ true/undefined';
+        }
+        return '';
+      }
+
+      function updateSource() {
+        var confirmation              = scenario.indexOf('Confirm') === 0,
+            message                   = getMessage(),
+            title                     = getTitle(),
+            method                    = (confirmation ? 'confirm' : 'show') +
+                                    scenario.substring(scenario.indexOf(' ') + 1),
+            buttons                   = $('#buttons :checked').val(),
+            preferPromises            = $('#preferPromises').prop('checked'),
+            preferNamedParameters     = $('#preferNamedParameters').prop('checked'),
+            parameters = '', handlers = '', options, result;
+        if (preferPromises) {
+          if (confirmation) {
+            switch (buttons) {
+            case 'YesNo':
+              handlers = '\n  .done(function () { /* confirmed */ })' +
+                         '\n  .fail(function (result) { /* result: no/cancel ~ false/undefined */ })';
+              break;
+            case 'YesNoCancel':
+              handlers = '\n  .always(function (result) { /* result: yes/no/cancel ~ true/false/undefined */ })';
+              break;
+            case 'OkCancel':
+              handlers = '\n  .done(function () { /* confirmed */ })' +
+                         '\n  .fail(function () { /* cancelled */ })';
+              break;
+            }
+          } else {
+            handlers = '\n  .always(function () { /* closed */ })';
+          }
+        }
+        if (preferNamedParameters) {
+          options = getOptionsSource(confirmation, true);
+          parameters = '{\n      message: ' + JSON.stringify(message);
+          if (title) {
+            parameters += ',\n      title: ' + JSON.stringify(title);
+          }
+          if (options) {
+            parameters += ',\n      ' + options;
+          }
+          if (!preferPromises) {
+            if (confirmation) {
+              result = getCallbackResult(buttons);
+              parameters += ',\n      callback: function (result) { /* ' + result + ' */ }';
+            } else {
+              parameters += ',\n      callback: function () { /* closed */ }';
+            }
+          }
+          parameters += '\n    }';
+        } else {
+          options = getOptionsSource(confirmation, false);
+          if (!preferPromises) {
+            if (confirmation) {
+              result = getCallbackResult(buttons);
+              parameters += '\n    function (result) { /* ' + result + ' */ }';
+            } else {
+              parameters += '\n    function () { /* closed */ }';
+            }
+            parameters += ',';
+          }
+          parameters += '\n    ' + JSON.stringify(message);
+          if (title !== undefined) {
+            parameters += ',\n    ' + JSON.stringify(title);
+          }
+          if (options) {
+            parameters += ', {\n      ' + options + '\n    }';
+          }
+        }
+        $('#source').text('ModalAlert.' + method + '(' + parameters + ')' + handlers);
+      }
+
+      function showAlert() {
+        var confirmation = scenario.indexOf('Confirm') === 0,
+            method       = (confirmation ? 'confirm' : 'show') +
+                           scenario.substring(scenario.indexOf(' ') + 1);
+        ModalAlert[method](closeCallback, getMessage(), getTitle(), getOptions(confirmation));
+      }
+
+      $('.binf-buttons > button')
+          .hover(function () {
+            scenario = $(this).text();
+            updateSource();
+          })
+          .click(function () {
+            scenario = $(this).text();
+            updateSource();
+            showAlert();
+          });
+      $('#title, #showHeader, #showTitleCloseButton, #message, #buttons input,' +
+        '#dialogSize input, #preferPromises, #preferNamedParameters')
+          .change(function () {
+            if (scenario) {
+              updateSource();
+            }
+          });
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<main>
+  <h1 style="color: #fff;">Dialog samples</h1>
+<div class="binf-widgets"></div>
+<div class="options">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Instructions:</div>
+    <div class="binf-buttons binf-col-sm-10">Enter title and message to show and click one of the
+      buttons
+      below. See also the <a href="index.show.html">showcase of prepared samples</a>.
+    </div>
+  </div>
+
+  <hr>
+
+  <form class="binf-form-horizontal">
+    <div class="binf-form-group">
+      <label for="title" class="binf-col-sm-2 binf-control-label">Title:</label>
+
+      <div class="binf-col-sm-10">
+        <input type="text" class="binf-form-control" id="title"
+               placeholder="Override the text in the dialog caption">
+      </div>
+      <div class="binf-col-sm-offset-2 binf-col-sm-10">
+        <label class="binf-checkbox-inline">
+          <input type="checkbox" id="showHeader" checked>
+          Show dialog caption
+        </label>
+        <label class="binf-checkbox-inline">
+          <input type="checkbox" id="showTitleCloseButton">
+          Show close button in dialog caption
+        </label>
+      </div>
+      <label for="message" class="binf-col-sm-2 binf-control-label">Message:</label>
+
+      <div class="binf-col-sm-10">
+        <textarea rows="3" class="binf-form-control" id="message"
+                  placeholder="Provide the text for the dialog body">Here comes the textual message.
+
+Are you sure that you did not want to change the default text?</textarea>
+      </div>
+
+      <p class="binf-col-sm-2 binf-control-label">Confirmation buttons:</p>
+      <div id="buttons" class="binf-col-sm-10">
+        <label class="binf-radio-inline">
+          <input type="radio" name="buttons" value="YesNo" checked>
+          Yes/No
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="buttons" value="YesNoCancel">
+          Yes/No/Cancel
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="buttons" value="OkCancel">
+          OK/Cancel
+        </label>
+      </div>
+
+      <p class="binf-col-sm-2 binf-control-label">Dialog size:</p>
+      <div id="dialogSize" class="binf-col-sm-10">
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="sm"> Small
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="md" checked> Medium
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="lg"> Large
+        </label>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="binf-row binf-form-horizontal">
+      <div class="binf-col-sm-2 binf-control-label">Call method:</div>
+      <div class="binf-buttons col-sm-10">
+        <button type="button" class="binf-btn binf-btn-default">Show Success</button>
+        <button type="button" class="binf-btn binf-btn-default">Show Information</button>
+        <button type="button" class="binf-btn binf-btn-default">Show Warning</button>
+        <button type="button" class="binf-btn binf-btn-default">Show Error</button>
+        <button type="button" class="binf-btn binf-btn-default">Show Message</button>
+        <br>
+        <button type="button" class="binf-btn binf-btn-default">Confirm Success</button>
+        <button type="button" class="binf-btn binf-btn-default">Confirm Information</button>
+        <button type="button" class="binf-btn binf-btn-default">Confirm Warning</button>
+        <button type="button" class="binf-btn binf-btn-default">Confirm Error</button>
+        <button type="button" class="binf-btn binf-btn-default">Confirm Question</button>
+        <button type="button" class="binf-btn binf-btn-default">Confirm Message</button>
+      </div>
+    </div>
+  </form>
+
+  <hr>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Source code:</div>
+    <div class="binf-col-sm-10">
+      <label class="binf-checkbox-inline">
+        <input type="checkbox" id="preferPromises" checked>
+        Prefer promises
+      </label>
+      <label class="binf-checkbox-inline">
+        <input type="checkbox" id="preferNamedParameters">
+        Prefer named parameters
+      </label>
+      <pre id="source">// Hover above a button to see how to implement
+// the corresponding scenario</pre>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Result value:</div>
+    <div class="binf-col-sm-10" id="result"></div>
+  </div>
+
+</div>
+</main>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

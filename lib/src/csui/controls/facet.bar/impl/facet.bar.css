@@ -1,0 +1,213 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-facet-bar {
+  font-size: 0.875em;
+  border-bottom: 1px solid #d5d5d5;
+  background-color: #ffffff;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 3em;
+  transition: height 0.3s ease-in;
+}
+
+.binf-widgets .csui-facet-bar.csui-facet-bar-hidden {
+  height: 0;
+  border-bottom: 0;
+  transition: height 0.2s ease-out;
+}
+
+.binf-widgets .csui-facet-bar a:hover, .binf-widgets .csui-facet-bar a:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-facet-bar a {
+  color: #333333;
+  height: 1.8em; 
+}
+
+.csui-facet-bar > .csui-facet-list-bar {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.csui-facet-bar .csui-mover {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  align-items: center;
+  position: relative; 
+}
+
+.csui-facet-bar .csui-mover > a {
+  display: flex;
+  display: -webkit-flex;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em; 
+}
+
+.csui-facet-bar .csui-mover .csui-icon {
+  width: 1em;
+  height: 1em;
+  align-self: center;
+}
+
+.csui-facet-bar .csui-facet-list-area-wrapper {
+  position: relative;
+}
+
+.csui-facet-bar .csui-facet-list-fadein {
+  
+  
+  background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1)); 
+  position: absolute;
+  top: 0;
+  left: 3em; 
+  width: 2.5em;
+  height: 100%;
+  z-index: 9;
+}
+
+.csui-facet-bar .csui-facet-list-fadeout {
+  
+  
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)); 
+  position: absolute;
+  top: 0;
+  right: 3em; 
+  width: 2.5em;
+  height: 100%;
+  z-index: 9;
+}
+
+.csui-facet-bar .csui-facet-list-area {
+  flex: 1 10 auto;
+  -webkit-flex: 1 10 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  height: inherit;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  align-items: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.csui-facet-bar .csui-facet-list-area.csui-facet-list-overflowed {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.csui-facet-bar .csui-facet-list-area > ol {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+}
+
+.csui-facet-bar .csui-clear-all {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  cursor: pointer;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  margin-right: 1.0em;
+}
+
+.csui-facet-bar .csui-clear-all:focus {
+  
+  
+}
+
+.csui-facet-bar .csui-clear-all > .clear-label {
+  font-size: inherit;
+  white-space: nowrap;
+  float: left;
+}
+
+.csui-facet-bar .csui-clear-all > .cs-icon {
+  font-size: inherit;
+  width: 0.714em; 
+  height: 0.714em;
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: 0.429em; 
+}
+
+.csui-facet-bar .csui-facet-item {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  margin: 0;
+  margin-right: 1em;
+  font: inherit;
+  flex: 1 0 auto; 
+  -webkit-flex: 1 0 auto;
+}
+
+.csui-facet-item .csui-facet-item-content {
+  background-color: #e7f1d9;
+  border: 1px solid #8cc53e;
+  border-radius: 2px;
+  padding: 0 0.5em;
+  display: inherit;
+  align-items: center;
+}
+
+.csui-facet-item .csui-facet-item-content > div {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  align-items: center;
+}
+
+.csui-facet-item a.csui-facet-item-content,
+.csui-facet-item a.csui-facet-item-content:focus {
+  text-decoration: none;
+}
+
+.csui-facet-bar .csui-facet-item span.csui-label {
+  padding-right: 1.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 16px;
+}
+
+.csui-facet-bar .csui-facet-item span.csui-label > .csui-facet-item-facet-name {
+  color: #3f6708;
+}
+
+.csui-facet-bar .csui-facet-item .csui-icon {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+}
+
+.csui-facet-bar .csui-filter-save {
+  width: auto;
+  margin-right: 16px;
+  bottom: 4px;
+  right: 23px;
+  border-radius: 14px;
+  height: 1.8em;
+  line-height: 14px;
+  padding: 0 21px;
+  color: #ffffff;
+  border: none;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,9 @@
+<div class="cs-array">
+    <div class="cs-pull-left cs-array-item-field-wrapper">
+        {{#itemField}}{{/itemField}}
+    </div>
+    <div class="cs-pull-right">
+        {{#arrayActionbar}}{{/arrayActionbar}}
+    </div>
+    <div class="alpaca-clear"></div>
+</div>

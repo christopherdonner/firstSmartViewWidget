@@ -1,0 +1,168 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-formfield.cs-textareafield {
+  max-height: 68px;
+  height: auto;
+  line-height: 1.6em;
+}
+
+
+.cs-textareafield textarea {
+  -webkit-box-flex: 1 1 0; 
+  -moz-box-flex: 1 1 0; 
+  -webkit-flex: 1 1 0; 
+  -ms-flex: 1 1 0; 
+  flex: 1 1 0; 
+  line-height: normal;
+  text-align: left;
+
+  border: 1px solid #a7a9ac;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px;
+  width: 100%;
+  max-height: 68px;
+  height: 68px;
+}
+
+.cs-form .cs-form-set .cs-form-set-container .cs-pull-left .cs-array .cs-pull-left .cs-textareafield textarea {
+  height: 68px;
+}
+
+.cs-form .alpaca-field.binf-has-error .cs-field-write textarea {
+  color: #000000;
+  background-color: #fae9ea;
+  border: 1px solid #df3324;
+}
+
+.cs-textareafield textarea:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  border: 2px solid #666666;
+  border-radius: 3px;
+}
+
+.cs-formfield.cs-textareafield .cs-field-read button {
+  height: auto;
+  max-height: 4.8em;
+}
+
+.cs-formfield.cs-textareafield .cs-field-read button.csui-textareafield-reset-button {
+  max-height: inherit;
+}
+
+.cs-formfield.cs-textareafield .cs-field-read button > span {
+  white-space: pre-wrap;
+}
+
+
+
+.cs-textareafield.readonly textarea {
+  border: 1px transparent;
+  padding-left: 0;
+}
+
+.binf-widgets .ellipsis {
+  overflow: hidden;
+  height: auto;
+  width: auto;
+  min-width: 2em;
+  max-height: 72px;
+}
+
+.ellipsis:before {
+  content: "";
+  float: left;
+  width: 5px;
+  height: 51px;
+}
+
+.ellipsis > *:first-child {
+  float: right;
+  width: 100%;
+  margin-left: -5px;
+}
+
+.cs-formfield.cs-textareafield span.cs-field-textarea-data {
+  width: calc(100%);
+  padding-right: 6px;
+  word-wrap: break-word;
+}
+
+.cs-field-text-nospace .cs-textareafield .cs-field-read button .cs-field-textarea-data {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cs-field-text-nospace .cs-textareafield .cs-field-read .icon-expandArrowDown {
+  display: none;
+}
+
+.cs-formfield.cs-textareafield .ellipsis:after {
+  content: "\02026";
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  float: right;
+  position: absolute;
+  top: 44px;
+  right: 18px;
+  width: 1em;
+  margin-left: -3em;
+  padding-right: 5px;
+  text-align: right;
+  background-size: 100% 100%;
+  text-align: left;
+}
+
+.cs-form .cs-formfield.cs-textareafield .cs-field-read button.adjustWidth {
+  width: calc(100% - 40px);
+}
+
+.cs-textareafield .cs-field-write-inner {
+  display: flex;
+}
+
+.cs-formfield.cs-textareafield .cs-icon {
+  cursor: pointer;
+}
+
+.cs-formfield.cs-textareafield.csui-textareafield-reset {
+  height: auto;
+  max-height: none;
+}
+
+.cs-form .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9.cs-text-area-field-width {
+  width: auto;
+  max-width: 60%;
+}
+
+.binf-widgets .alpaca-field-textarea .cs-icon-exp-col {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+}
+
+.binf-widgets .alpaca-field-textarea .cs-icon-exp-col.icon-expandArrowDown {
+  bottom: 4px;
+}
+
+.binf-widgets .alpaca-field-textarea .cs-icon-exp-col.icon-expandArrowUp {
+  bottom: 26px;
+}
+
+.binf-widgets .alpaca-field-textarea .cs-icon-exp-col:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.binf-widgets .alpaca-field-textarea .editable.cs-no-resize {
+  resize: none;
+}

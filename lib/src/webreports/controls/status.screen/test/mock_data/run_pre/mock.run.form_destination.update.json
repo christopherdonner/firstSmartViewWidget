@@ -1,0 +1,41 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"append_form": "update",
+				"form_id": "678873"
+			},
+			"export_if_no_data": true,
+			"http_method": "POST",
+			"output_destination": "form",
+			"run_in_background": false,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [
+		{
+			"data": {},
+			"options": {
+				"fields": {},
+				"form": {
+					"attributes": {
+						"action": "api/v1/nodes/678868/output",
+						"method": "POST"
+					},
+					"renderForm": true
+				}
+			},
+			"schema": {
+				"properties": {},
+				"type": "object"
+			}
+		}
+	]
+}

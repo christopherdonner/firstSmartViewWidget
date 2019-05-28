@@ -1,0 +1,200 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-nodestable {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.csui-nodestable .csui-table-facetbarview {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.csui-nodestable .csui-facet-table-container {
+  flex: 1 1 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+}
+
+.csui-nodestable .csui-table-facetview.csui-facetview-visibility {
+  visibility: hidden;
+}
+
+.csui-nodestable .csui-table-facetview.csui-facetview-hidden {
+  max-width: 0;
+  transition: max-width 0.2s ease-out;
+}
+
+.csui-nodestable .csui-table-facetview {
+  position: relative; 
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #dcdcdc;
+  max-width: 248px;
+  transition: max-width 0.3s ease-in;
+}
+
+.csui-nodestable.csui-no-animation .csui-table-facetview,
+.csui-nodestable.csui-no-animation .csui-table-facetview.csui-facetview-hidden {
+  transition: none;
+}
+
+.csui-nodestable .csui-outertablecontainer {
+  flex: 1 1 100%;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.csui-nodestable .csui-innertablecontainer {
+  width: 100%;
+  max-width: 100%; 
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.csui-nodestable .csui-alternating-toolbars {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 3em;
+}
+
+
+.csui-nodestable .csui-alternating-toolbars.csui-show-header {
+  flex: 0 0 6em;
+}
+
+.csui-nodestable .csui-alternating-toolbars .csui-table-tabletoolbar.csui-table-rowselection-toolbar-visible .csui-tabletoolbar {
+  
+  border-bottom: none;
+}
+
+.binf-widgets .csui-nodestable .csui-tabletoolbar {
+  
+  height: 100%;
+}
+
+.csui-nodestable .csui-table-tabletoolbar {
+  min-width: 0;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.csui-nodestable .csui-table-rowselection-toolbar {
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333333;
+  padding-left: 0.625em;
+  padding-right: 0.75em;
+  display: flex;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+
+.csui-nodestable .csui-table-tabletoolbar.csui-table-rowselection-toolbar-visible,
+.csui-nodestable .csui-table-rowselection-toolbar {
+  overflow: hidden;
+}
+
+
+.csui-nodestable .csui-table-tabletoolbar,
+.csui-table-rowselection-toolbar.csui-table-rowselection-toolbar-visible {
+  overflow: visible;
+}
+
+
+.csui-nodestable .csui-show-header .csui-table-tabletoolbar.csui-table-rowselection-toolbar-visible {
+  overflow: visible;
+}
+
+
+.csui-nodestable .csui-table-tabletoolbar.csui-table-rowselection-toolbar-visible,
+.csui-nodestable .csui-table-rowselection-toolbar {
+  height: 0; 
+}
+
+.csui-nodestable .csui-table-tabletoolbar,
+.csui-nodestable .csui-table-rowselection-toolbar.csui-table-rowselection-toolbar-visible {
+  height: 3em;
+}
+
+
+.csui-nodestable .csui-show-header .csui-table-tabletoolbar.csui-table-rowselection-toolbar-visible {
+  height: 3em;
+}
+
+
+.csui-nodestable .csui-table-tabletoolbar,
+.csui-nodestable .csui-table-rowselection-toolbar {
+  transition: height 0.5s;
+}
+
+
+
+
+.csui-nodestable.csui-no-animation .csui-table-tabletoolbar,
+.csui-nodestable.csui-no-animation .csui-table-rowselection-toolbar {
+  transition: none;
+}
+
+.csui-nodestable .csui-table-tableview {
+  flex: 1 1 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.csui-nodestable .csui-alternating-toolbars .csui-table-tabletoolbar > div {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.csui-nodestable .csui-child-container {
+  width: 100%;
+  position: relative;
+}
+
+.csui-nodestable .csui-table-tableview.drag-over {
+  border: 3px solid #627783;
+  background-color: rgba(123, 154, 176, 0.2);
+  opacity: 0.8;
+}
+
+.csui-nodestable .csui-table-tableview.drag-over.csui-disabled {
+  border: 3px solid #836277;
+  background-color: rgba(226, 96, 144, 0.2);
+}
+
+.csui-nodestable .csui-table-tableview.drag-over.csui-disabled > .csui-nodetable > .dataTables_wrapper > .dataTable {
+  background-color: rgba(226, 96, 144, 0.2);
+}
+
+.csui-nodestable .csui-table-tableview > div {
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+.csui-nodestable .csui-table-paginationview {
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.csui-nodestable .csui-table-paginationview .binf-pagination {
+  margin: 0;
+}

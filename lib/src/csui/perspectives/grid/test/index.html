@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GridPerspectiveView</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require(["csui/lib/underscore", "csui/lib/marionette", 'csui/utils/contexts/page/page.context',
+      "../grid.perspective.view", "./grid.perspective.mock",
+      'csui/widgets/shortcut/test/shortcut.mock.data',
+      'csui/widgets/favorites/test/favorites.mock.data',
+      'csui/widgets/myassignments/test/myassignments.mock.data',
+      'csui/widgets/recentlyaccessed/test/recentlyaccessed.mock.data',
+      'csui/utils/contexts/page/test/page.context.mock'
+    ], function (_, Marionette, PageContext, GridPerspectiveView, perspectiveMock,
+      ShortcutMock, FavoritesMock, MyAssignmentsMock, RecentlyAcessedMock, PageContextMock) {
+
+      var contentRegion = new Marionette.Region({
+            el: "body"
+          }),
+          pageContext = new PageContext(),
+          perspectiveView = new GridPerspectiveView(_.defaults({
+            context: pageContext
+          }, perspectiveMock));
+
+      perspectiveView.widgetsResolved.always(function () {
+        ShortcutMock.enable();
+        FavoritesMock.enable();
+        MyAssignmentsMock.enable();
+        RecentlyAcessedMock.enable();
+        PageContextMock.enable();
+        pageContext.fetch();
+        contentRegion.show(perspectiveView);
+      });
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

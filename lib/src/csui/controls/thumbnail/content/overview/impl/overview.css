@@ -1,0 +1,169 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-thumbnail-overview .binf-popover {
+  width: 248px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover.binf-left {
+  border-right: 4px solid #0084ce;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover.binf-right {
+  border-left: 4px solid #0084ce;
+  border-right-width: 0;
+}
+
+html[dir="rtl"] .binf-widgets .csui-thumbnail-overview .binf-popover.binf-right {
+  border-right: 4px solid #0084ce;
+  border-left-width: 0;
+}
+
+html[dir="rtl"] .binf-widgets .csui-thumbnail-overview .binf-popover.binf-left {
+  border-left: 4px solid #0084ce;
+  border-right-width: 0;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover.binf-right > .binf-arrow:after {
+  border-right-color: #0084ce;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover.binf-left > .binf-arrow:after {
+  border-left-color: #0084ce;
+}
+
+html[dir="rtl"] .binf-widgets .csui-thumbnail-overview .binf-popover.binf-right > .binf-arrow:after {
+  border-left-color: #0084ce;
+  left: 4px;
+}
+
+html[dir="rtl"] .binf-widgets .csui-thumbnail-overview .binf-popover.binf-left > .binf-arrow:after {
+  border-right-color: #0084ce;
+  right: 4px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover.binf-right > .binf-arrow {
+  left: -14px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover.binf-left > .binf-arrow {
+  right: -14px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container {
+  height: 100%;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties {
+  width: auto;
+  padding-bottom: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  line-height: normal;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-modify_date {
+  padding-bottom: 21px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .binf-popover-content {
+  width: 100%;
+  padding: 14px 16px 10px 16px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .binf-popover .csui-thumbnail-size span {
+  padding: 0;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-size-container .csui-thumbnail-size-label,
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-size-container .csui-thumbnail-size-value {
+  display: flex;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties .csui-thumbnail-name-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-overview-icon {
+  padding-top: 2px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-label {
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+  padding-bottom: 9px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-value {
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-name .csui-thumbnail-name-justify-div {
+  align-content: center;
+  align-items: center;
+  font-size: inherit;
+  display: inline-flex;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  align-items: center;
+  margin: 0;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100%;
+  word-break: break-all;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties .csui-thumbnail-nodestate-container .csui-thumbnail-nodestate > ul {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties .csui-thumbnail-nodestate-container .csui-thumbnail-nodestate > ul > li {
+  padding: 0 6px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties .csui-thumbnail-nodestate-container .csui-thumbnail-nodestate > ul > li button:hover,
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties .csui-thumbnail-nodestate-container .csui-thumbnail-nodestate > ul > li button:focus,
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-properties button:hover,
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-properties button:focus,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container .csui-overview-container .csui-thumbnail-nodestate a:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container .csui-overview-container .csui-thumbnail-nodestate a:focus {
+  background: #eef2f4;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-properties .csui-thumbnail-properties {
+  padding: 0;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-properties {
+  padding: 0 6px 0 0;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-reserved {
+  width: calc(100% - 35px);
+  display: inline-block;
+  padding: 0;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-reserved .csui-thumbnail-nodestate-container,
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties.csui-thumbnail-overview-reserved .csui-thumbnail-nodestate-container .csui-thumbnail-nodestate {
+  width: 100%;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-properties-actions {
+  display: flex;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-name-value.csui-thumbnail-no-default-action {
+  cursor: default;
+  color: #000000;
+  font-style: inherit;
+}
+

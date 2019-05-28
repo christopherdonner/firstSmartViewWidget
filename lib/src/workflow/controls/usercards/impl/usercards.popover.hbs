@@ -1,0 +1,16 @@
+{{#if isGroup}}
+<div class = "wfstatus-usercard-list-header">
+    <div class="wfstatus-usercard-popover-header-labels">
+        <div class = "wfstatus-usercard-popover-header-group-label"
+             title="{{groupName}}">{{groupName}}</div>
+        <div class = "wfstatus-usercard-popover-header-group-status"
+             title="{{status}}">{{status}}</div>
+    </div>
+        <input class="search wfstatus-user-input" type="search" title="Search by Group User" style="display: none" >
+        <div class="cs-search-icon icon icon-search csui-acc-focusable-active wfstatus-user-search-icon" title="Search by Group User" ></div>
+</div>
+{{/if}}
+<div class = "popover wfstatus-usercard-popover-scrolling
+     wfstatus-usercard-popover-content large"></div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

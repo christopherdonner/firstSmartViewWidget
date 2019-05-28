@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TileView</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body.binf-widgets {
+      padding: 1em;
+    }
+
+    /* Preserve line breaks in the content view. */
+    .test-content.test-content {
+      white-space: pre-line;
+    }
+
+    /* Original tile provided margins, new one and dialog do not; add them. */
+    .test-content.test-content {
+      margin: 1em;
+    }
+
+    /* Just make the simple tile same not overflowing; the real-world
+       implementation woudl count with this in the styling, but here
+       I just reuse a single content view in all scenarios. */
+    .binf-row > :first-child .tile-content {
+      overflow-y: hidden;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require(['csui/lib/underscore', 'csui/lib/jquery', 'csui/lib/backbone', 'csui/lib/marionette',
+      'csui/lib/handlebars', '../tile.view', '../behaviors/perfect.scrolling.behavior.js',
+      '../behaviors/expanding.behavior', '../behaviors/searching.behavior',
+      '../behaviors/blocking.behavior', '../behaviors/infinite.scrolling.behavior.js',
+      'csui/models/mixins/fetchable/fetchable.mixin', 'csui/models/browsable/client-side.mixin'
+    ], function (_, $, Backbone, Marionette, Handlebars, TileView, PerfectScrollingBehavior,
+        ExpandingBehavior, SearchingBehavior, BlockingBehavior, InfiniteScrollingBehavior,
+        FetchableMixin, ClientSideBrowsableMixin) {
+
+      var
+      // Create a custom tile content showing a static HTML
+          ContentView = Marionette.View.extend({
+            className: 'test-content',
+            render: function () {
+              this.$el.html($('#content').html());
+              return this;
+            }
+          }),
+      // Create custom tiles with or without extra features
+          ScrollableTileView = TileView.extend({
+            behaviors: {
+              PerfectScrolling: {
+                behaviorClass: PerfectScrollingBehavior,
+                contentParent: '.tile-content',
+                suppressScrollX: true
+              }
+            }
+          }),
+          ExpandableTileView = TileView.extend({
+            icon: 'title-recentlyaccessed',
+            title: 'Expandable Tile',
+            contentView: ContentView,
+            behaviors: {
+              PerfectScrolling: {
+                behaviorClass: PerfectScrollingBehavior,
+                contentParent: '.tile-content',
+                suppressScrollX: true
+              },
+              Expanding: {
+                behaviorClass: ExpandingBehavior,
+                expandedView: ContentView,
+                titleBarIcon: 'title-recentlyaccessed',
+                dialogTitle: 'Expandable Tile',
+                expandIconTitle: 'configuredExpandTitle'
+              }
+            }
+          }),
+          SearchableTileView = TileView.extend({
+            icon: 'image_user_placeholder',
+            title: 'Searchable Tile',
+            contentView: ContentView,
+            behaviors: {
+              PerfectScrolling: {
+                behaviorClass: PerfectScrollingBehavior,
+                contentParent: '.tile-content',
+                suppressScrollX: true
+              },
+              Expanding: {
+                behaviorClass: ExpandingBehavior,
+                expandedView: ContentView,
+                titleBarIcon: 'image_user_placeholder',
+                dialogTitle: 'Searchable Tile',
+                expandIconTitle: 'configuredExpandTitle'
+              },
+              Searching: {
+                behaviorClass: SearchingBehavior,
+                searchIconTitle: 'configuredSearchTitle'
+              }
+            }
+          }),
+          ItemModel = Backbone.Model.extend({
+            defaults: {
+              id: null,
+              name: 'Unnamed'
+            }
+          }),
+          ItemCollection = Backbone.Collection.extend({
+            model: ItemModel,
+            initialize: function (models, options) {
+              this._items = _.times(30, function (index) {
+                ++index;
+                return {
+                  id: index,
+                  name: 'Item ' + index
+                };
+              });
+              this.makeFetchable(options)
+                  .makeClientSideBrowsable(options);
+            },
+            sync: function (method, collection, options) {
+              if (method !== 'read') {
+                throw new Error('Only fetching the collection is supported.');
+              }
+              console.log('Getting', collection._items.length, 'items');
+              var deferred = $.Deferred();
+              setTimeout(function () {
+                var response = _.clone(collection._items);
+                  if (!options) {
+                      options = {};
+                  }
+                  if (options.success) {
+                      options.success(response, options);
+                  }
+                collection.trigger('sync', collection, response, options);
+                deferred.resolve(response);
+              }, 500);
+              return deferred.promise();
+            }
+          }),
+          ListItemView = Marionette.ItemView.extend({
+            className: 'binf-list-group-item',
+            template: Handlebars.compile($('#list-item-template').html())
+          }),
+          ListView = Marionette.CompositeView.extend({
+            attributes: {
+              style: 'width: 100%; height: 100%;'
+            },
+            template: Handlebars.compile($('#list-template').html()),
+            childViewContainer: '.binf-list-group',
+            childView: ListItemView,
+            behaviors: {
+              Blocking: {
+                behaviorClass: BlockingBehavior
+              },
+              PerfectScrolling: {
+                behaviorClass: PerfectScrollingBehavior,
+                suppressScrollX: true
+              },
+              InfiniteScrolling: {
+                behaviorClass: InfiniteScrollingBehavior
+              }
+            }
+          }),
+          InfinitelyScrollableTileView = TileView.extend({
+            icon: 'header-openfolder',
+            title: 'Infinitely Scrollable Tile',
+            contentView: ListView
+          });
+          /*
+          HeaderView = Marionette.LayoutView.extend({
+            className: 'tile hero',
+            template: Handlebars.compile($('#header-template').html()),
+            regions: {
+              listRegion: '.list'
+            },
+            onShow: function () {
+              var collection = new ItemCollection(undefined, {
+                    top: 10
+                  }),
+                  listView = new ListView({
+                    collection: collection
+                  });
+              this.listRegion.show(listView);
+              collection.fetch();
+            }
+          });
+          */
+
+      // Finish the ItemCollection prototype declaration
+      ClientSideBrowsableMixin.mixin(ItemCollection.prototype);
+      FetchableMixin.mixin(ItemCollection.prototype);
+
+      var
+      // Create instances of the tile views to show on the page
+          simpleTileView = new TileView({
+            icon: 'title-favourites',
+            title: 'Simple Tile',
+            contentView: ContentView
+          }),
+          scrollableTileView = new ScrollableTileView({
+            icon: 'title-assignments',
+            title: 'Scrollable Tile',
+            contentView: ContentView
+          }),
+          expandableTileView = new ExpandableTileView(),
+          searchableTileView = new SearchableTileView(),
+          collection = new ItemCollection(undefined, {
+            top: 10
+          }),
+          infinitelyScrollableTileView = new InfinitelyScrollableTileView({
+            contentViewOptions: {
+              collection: collection
+            }
+          }),
+          //headerView = new HeaderView(),
+      // Create helpers to show the views on the page
+          simpleRegion = new Marionette.Region({
+            el: "#simple"
+          }),
+          scrollableRegion = new Marionette.Region({
+            el: "#scrollable"
+          }),
+          expandableRegion = new Marionette.Region({
+            el: "#expandable"
+          }),
+          searchableRegion = new Marionette.Region({
+            el: "#searchable"
+          }),
+          infinitelyScrollableRegion = new Marionette.Region({
+            el: "#infinitely-scrollable"
+          });
+//          headerRegion = new Marionette.Region({
+//            el: "#header"
+//          });
+
+      // Show the views on the page
+      simpleRegion.show(simpleTileView);
+      scrollableRegion.show(scrollableTileView);
+      expandableRegion.show(expandableTileView);
+      searchableRegion.show(searchableTileView);
+      infinitelyScrollableRegion.show(infinitelyScrollableTileView);
+      //headerRegion.show(headerView);
+
+      // Fetch the data
+      collection.fetch();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="simple"></div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="scrollable"></div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="expandable"></div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="searchable"></div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="infinitely-scrollable"></div>
+    <div class="binf-col-sm-12 binf-col-md-8 binf-col-lg-6" id="header"></div>
+  </div>
+</div>
+
+<script id="content" type="text/plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur, nisl vel condimentum rutrum, ex ante elementum enim, a porttitor metus tellus quis eros. Nulla turpis nisl, dignissim eu tempus id, molestie et metus.
+
+Nulla in lacinia augue. Phasellus leo sem, volutpat id pellentesque quis, bibendum quis neque. Suspendisse at neque elit. Maecenas elementum turpis nisl. Aenean nec congue diam. Morbi eget pulvinar purus.
+
+In molestie quam id imperdiet dapibus. Ut sagittis a nunc eu tristique. Cras maximus ipsum vel dui aliquam, et dignissim justo vestibulum. Mauris mattis maximus ex, at aliquet tellus molestie nec. Duis ac interdum mi. Fusce.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<script id="list-template" type="text/x-handlebars-template">
+  <div class="binf-list-group" style="margin-bottom: 0;"></div>
+</script>
+
+<script id="list-item-template" type="text/x-handlebars-template">
+  {{name}}
+</script>
+
+<script id="header-template" type="text/x-handlebars-template">
+  <div class="list" style="margin-left: 50%; width: 50%; height: 100%; color: #000;"></div>
+</script>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

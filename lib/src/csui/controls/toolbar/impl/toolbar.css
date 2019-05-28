@@ -1,0 +1,238 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-toolbar {
+  font-size: inherit;
+  flex: 1 1 auto;
+  display: flex;
+  height: inherit;
+  width: 100%;
+}
+
+.binf-widgets .csui-toolbar.binf-nav.csui-measuring {
+  overflow: hidden;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-readonly > .csui-item-name-block {
+  margin-top: -3px;
+}
+
+.binf-widgets .csui-toolbar.binf-nav > li > a > .icon,
+.binf-widgets .csui-toolbar.binf-nav > li > .custom-view-region > div > div > a > .icon,
+.binf-widgets .csui-toolbar.binf-nav > li > .custom-view-region > div > div > button > .icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.5em; 
+  height: 1.5em;
+  margin: auto; 
+  font-size: 1em;
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region:focus {
+  outline: 1px dotted #333333;
+}
+
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region > div > div > button {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.binf-widgets .csui-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region > div > div > button:focus {
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .csui-toolbar.binf-nav > li > a > .wnd-comment-count {
+  width: 2px;
+  max-width: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-bottom: 6px;
+}
+
+.binf-widgets .csui-toolbar.binf-nav > li {
+  display: flex;
+  display: -webkit-flex;
+  flex: 0 0 auto;
+}
+
+.binf-widgets .csui-toolbar.binf-nav > li > a,
+.binf-widgets .csui-toolbar.binf-nav > li > .custom-view-region {
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin: auto; 
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.binf-widgets .csui-toolbar.binf-nav.binf-disabled > li > a > .icon {
+  opacity: 0.5;
+}
+
+.binf-widgets .csui-toolbar.binf-nav.binf-disabled > li > a {
+  pointer-events: none;
+  color: #777777;
+}
+
+.csui-toolbar.binf-nav > li.binf-divider {
+  width: 0.125em;
+  background-color: #cccccc;
+  height: calc(100% - 1.2em);
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.csui-toolbar.binf-nav-pills > li + li {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.csui-toolbar.binf-nav-pills > li > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-toolbar-hide-child {
+  width: 0;
+  opacity: 0;
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout.binf-open {
+  box-shadow: none;
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout.binf-open .csui-toolitem {
+  background-color: inherit;
+  white-space: nowrap;
+  z-index: initial;
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout.binf-open > a {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout.binf-open .binf-dropdown-menu .csui-toolitem:hover {
+  background-color: #bac9ce !important;
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout .csui-flyout-arrow {
+  padding-right: 0px;
+  padding-left: 12px
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout-arrow .csui-button-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout-arrow.binf-disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-flyout.binf-open .binf-dropdown-menu {
+  margin-top: -1px;
+  border-radius: 0px;
+  left: -1px;
+  border: 1px solid rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.binf-widgets .csui-toolbar.binf-nav .csui-toolitem.binf-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.binf-widgets .cs-dialog.addversion-fornonreserve .tile-header {
+  padding: 0 1em 0 0.75em;
+  color: #000000;
+  margin: 0;
+  background-color: #ff9f00;
+}
+
+.binf-widgets .cs-dialog.addversion-fornonreserve .binf-modal-dialog {
+  margin: 200px auto;
+}
+
+.binf-widgets .cs-dialog.addversion-fornonreserve .cs-close {
+  display: none;
+}
+
+.binf-widgets .csui-toolbar .csui-loading-dots-wrapper {
+  min-height: 26px;
+  min-width: 46px;
+  display: block;
+  margin-left: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  cursor: auto;
+  height: 100%
+}
+
+.csui-toolbar .csui-loading-dots {
+  position: absolute;
+  background-color: rgb(123, 154, 176);
+  width: 6px;
+  height: 6px;
+  top: calc(50% - 3px);
+  animation-name: bounce_loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  transform: scale(.3);
+  border-radius: 6px;
+}
+
+.csui-toolbar .csui-dot-1 {
+  left: 6px;
+  animation-delay: 1.07s;
+}
+
+.csui-toolbar .csui-dot-2 {
+  left: 14px;
+  animation-delay: 1.33s;
+}
+
+.csui-toolbar .csui-dot-3 {
+  left: 22px;
+  animation-delay: 1.6s;
+}
+
+@keyframes bounce_loading {
+  0% {
+    transform: scale(1);
+    background-color: rgba(46, 61, 152, 0.98);
+  }
+
+  100% {
+    transform: scale(.3);
+    background-color: rgb(123, 154, 176);
+  }
+}
+
+.binf-widgets .csui-toolbar .binf-dropdown > .binf-dropdown-menu li > a .csui-icon-rightArrow.csui-icon-rightArrow {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  margin-top: 2px;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}

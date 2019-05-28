@@ -1,0 +1,318 @@
+{
+  "nodes": {
+    "2000": {
+      "id": 2000,
+      "container": true,
+      "favorite": false,
+      "name": "Innovate",
+      "type": 141,
+      "create_date": "2014-07-10T14:11:31",
+      "create_user_id": 1000,
+      "description": "",
+      "modify_date": "2014-10-15T14:54:06",
+      "modify_user_id": 1000,
+      "parent_id": -1,
+      "size": 0,
+      "volume_id": 2000
+    },
+    "2001": {
+      "id": 2001,
+      "container": false,
+      "favorite": false,
+      "name": "Overview.txt",
+      "type": 144,
+      "create_date": "2014-07-11T10:08:56",
+      "create_user_id": 1000,
+      "description": "",
+      "mime_type": "text/plain",
+      "modify_date": "2014-10-19T05:45:12",
+      "modify_user_id": 1000,
+      "parent_id": 2000,
+      "reserved": false,
+      "reserved_date": null,
+      "reserved_user_id": null,
+      "size": 123,
+      "version_number": 1,
+      "volume_id": 2000
+    }
+  },
+  "nodeActions": {
+    "144": [
+      "addversion",
+      "comment",
+      "copy",
+      "delete",
+      "download",
+      "move",
+      "open",
+      "properties",
+      "rename",
+      "reserve",
+      "unreserve"
+    ],
+    "141": [
+      "browse",
+      "properties"
+    ]
+  },
+  "nodeMetadata": {
+    "container": {
+      "key": "container",
+      "name": "Container",
+      "read_only": true,
+      "sort": true,
+      "type": 5,
+      "type_name": "Boolean"
+    },
+    "create_date": {
+      "include_time": true,
+      "key": "create_date",
+      "name": "Created",
+      "read_only": true,
+      "sort": true,
+      "type": -7,
+      "type_name": "Date"
+    },
+    "create_user_id": {
+      "key": "create_user_id",
+      "name": "Created By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "description": {
+      "key": "description",
+      "multiline": true,
+      "multilingual": true,
+      "name": "Description",
+      "read_only": false,
+      "type": -1,
+      "type_name": "String"
+    },
+    "favorite": {
+      "key": "favorite",
+      "name": "Favorite",
+      "read_only": false,
+      "sort": true,
+      "type": 5,
+      "type_name": "Boolean"
+    },
+    "id": {
+      "key": "id",
+      "name": "ID",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "mime_type": {
+      "key": "mime_type",
+      "name": "MIME Type",
+      "type": -1,
+      "type_name": "String"
+    },
+    "modify_date": {
+      "include_time": true,
+      "key": "modify_date",
+      "name": "Modified",
+      "read_only": true,
+      "sort": true,
+      "type": -7,
+      "type_name": "Date"
+    },
+    "modify_user_id": {
+      "key": "modify_user_id",
+      "name": "Modified By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "name": {
+      "key": "name",
+      "multiline": false,
+      "multilingual": true,
+      "name": "Name",
+      "read_only": false,
+      "sort": true,
+      "type": -1,
+      "type_name": "String"
+    },
+    "owner_user_id": {
+      "key": "owner_user_id",
+      "name": "Owned By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "parent_id": {
+      "key": "parent_id",
+      "name": "Parent ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "reserved": {
+      "key": "reserved",
+      "name": "Reserved",
+      "read_only": false,
+      "sort": true,
+      "type": 5,
+      "type_name": "Boolean"
+    },
+    "reserved_date": {
+      "include_time": true,
+      "key": "reserved_date",
+      "name": "Reserved",
+      "read_only": false,
+      "sort": true,
+      "type": -7,
+      "type_name": "Date"
+    },
+    "reserved_user_id": {
+      "key": "reserved_user_id",
+      "name": "Reserved By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "size": {
+      "key": "type",
+      "name": "Size",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type": {
+      "key": "type",
+      "name": "Type",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type_name": {
+      "key": "type_name",
+      "multiline": false,
+      "multilingual": false,
+      "name": "Type",
+      "read_only": true,
+      "type": -1,
+      "type_name": "String"
+    },
+    "volume_id": {
+      "key": "volume_id",
+      "name": "Volume ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "wnd_comments": {
+      "key": "wnd_comments",
+      "name": "Comments",
+      "read_only": false,
+      "sort": false,
+      "type": 2,
+      "type_name": "Integer",
+      "definitions_order": 504
+    }
+  },
+  "templates": [
+    {
+      "id": 1000001,
+      "name": "Hello Template 1"
+    },
+    {
+      "id": 1000002,
+      "name": "Hello Template 2"
+    }
+  ],
+  "generalCreateFormSchema": {
+    "properties": {
+      "name": {
+        "readonly": false,
+        "title": "Name",
+        "type": "string"
+      },
+      "description": {
+        "readonly": false,
+        "title": "Description",
+        "type": "string"
+      },
+      "parent_id": {
+        "readonly": true,
+        "title": "Parent",
+        "type": "integer"
+      },
+      "template_id": {
+        "readonly": true,
+        "title": "Template",
+        "type": "integer"
+      },
+      "type": {
+        "readonly": true,
+        "title": "Type",
+        "type": "integer"
+      }
+    }
+  },
+  "generalCreateFormOptions": {
+    "fields": {
+      "name": {
+        "hidden": false
+      },
+      "description": {
+        "hidden": false,
+        "type": "textarea"
+      },
+      "parent_id": {
+        "hidden": true
+      },
+      "template_id": {
+        "hidden": true
+      },
+      "type": {
+        "hidden": true
+      }
+    }
+  },
+  "categiriesCreateForm": {
+    "data": {
+      "3001": {
+        "hello": "Hello"
+      }
+    },
+    "schema": {
+      "properties": {
+        "3001": {
+          "title": "Hello Category",
+          "properties": {
+            "hello": {
+              "readonly": false,
+              "title": "Hello",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "options": {
+      "fields": {
+        "3001": {
+          "fields": {
+            "hello": {
+              "hidden": false
+            }
+          }
+        }
+      }
+    },
+    "role_name": "categories"
+  }
+}

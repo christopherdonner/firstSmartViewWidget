@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Grid Control</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+    <style>
+        #content {
+            background-color: #aaaaaa;
+        }
+        .samples-content {
+            background-color: #ccffcc;
+        }
+
+        .binf-widgets .binf-h1{
+            color: #fff;
+        }
+    </style>
+
+    <script src="../../../lib/require.js"></script>
+    <script src="../../../config.js" data-csui-path="../../.."></script>
+    <script>
+        require(['csui/lib/jquery', 'csui/lib/handlebars', 'csui/lib/backbone',
+            'csui/lib/marionette', '../grid.view'
+        ], function ($, Handlebars, Backbone, Marionette, GridView) {
+
+            var contentRegion = new Marionette.Region({
+                    el: "#content"
+                }),
+
+                GridCellView = Marionette.ItemView.extend({
+                    className: 'samples-content',
+                    template: Handlebars.compile($('#samples-cell-content').html())
+                }),
+
+                control = new GridView({
+                    cellView: GridCellView,
+                    cellViewOptions: function (model) {
+                        return {
+                            model: new Backbone.Model(model.get('data'))
+                        };
+                    },
+                    rows: [
+                        {
+                            columns: [
+                                {
+                                    sizes: {sm: 12},
+                                    data: {name: 'Single value'}
+                                }
+                            ]
+                        },
+                        {
+                            columns: [
+                                {
+                                    sizes: {sm: 4},
+                                    data: {name: 'Fred'}
+                                },
+                                {
+                                    sizes: {sm: 8},
+                                    data: {name: 'Frida'}
+                                }
+                            ]
+                        },
+                        {
+                            columns: [
+                                {
+                                    sizes: {sm: 3},
+                                    data: {name: 'Arno'}
+                                },
+                                {
+                                    sizes: {sm: 6},
+                                    data: {name: 'Anne'}
+                                },
+                                {
+                                    sizes: {sm: 3},
+                                    data: {name: 'Amanda'}
+                                }
+                            ]
+                        },
+                        {
+                            columns: [
+                                {
+                                    sizes: {sm: 1},
+                                    data: {name: 'Short'}
+                                },
+                                {
+                                    sizes: {sm: 2},
+                                    data: {name: 'Longer'}
+                                },
+                                {
+                                    sizes: {sm: 4},
+                                    data: {name: 'EvenLonger'}
+                                },
+                                {
+                                    sizes: {sm: 5},
+                                    data: {name: 'Longest'}
+                                }
+                            ]
+                        }
+                    ]
+                });
+
+            contentRegion.show(control);
+        });
+    </script>
+
+    <script id="samples-cell-content" type="text/template">
+        {{name}}
+    </script>
+
+</head>
+
+<body class="binf-widgets">
+<h1 class="binf-h1">Arranged in a grid</h1>
+
+<div id="content">
+    Initial value
+</div>
+
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,61 @@
+<div class="cs-field-write">
+  <div class="cs-field-write-inner">
+    <div class="picker-container" {{#if idBtnLabel }}aria-labelledby="{{idBtnLabel}}"{{/if}}
+      {{#if multiFieldLabel}} aria-label="{{multiFieldLabel}}"{{/if}}></div>
+    {{#xif "this.mode !== 'writeonly'"}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{else}}
+      {{#if options.applyFlag}}
+        <div class="icon-container binf-hidden">
+          <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"
+               data-cstabindex="0"></div>
+        </div>
+      {{/if}}
+    {{/xif}}
+
+  </div>
+</div>
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    <div class="btn-container">
+      <div>
+        {{#if name}}
+          <div class="cs-field-read-content"
+            tabindex="0" data-cstabindex="0"
+               aria-label="{{userEditAria}}">
+            <img class="user-photo binf-img-circle binf-hidden" src="{{url}}" alt="{{name}}">
+            <span class="user-default-image csui-icon image_group_placeholder binf-hidden"></span>
+            <span class="user-default-image csui-icon image_user_placeholder">{{initials}}</span>
+            <div class="cs-name">
+              {{#if isTouch}}
+                <div class="esoc-user-container cs-user-container-no-hover esoc-user-mini-profile">
+                  {{name}}
+                </div>
+              {{else}}
+                <a href="javascript:void(0);" aria-label="{{readModeAria}}"
+                   class="esoc-user-container cs-user-container-no-hover esoc-user-mini-profile"
+                   data-binf-original-title="" data-cstabindex="0">
+                  {{name}}
+                </a>
+              {{/if}}
+            </div>
+          </div>
+        {{else}}
+          <div class="cs-field-read-content placeholder" role="button" title="{{noValue}}"
+            tabindex="0" data-cstabindex="0" aria-label="{{noName}}">
+            {{{emptyLabel}}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="icon-container">
+      <div class="csui-icon-edit inline-edit-icon icon-edit" title="{{edit}}"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Error Page</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          'csui/utils/contexts/factories/connector': {
+            connection: {
+            /*
+              url: '//server/otcs/cs/api/v1',
+              supportPath: '/support',
+              session: {
+                ticket: 'dummy'
+              }
+              */
+              url: "http://murdock.opentext.com/alpha/cs.exe/api/v1",
+              supportPath: '/alphasupport'
+            }
+          }
+        },
+        'i18n': {
+          loadableLocales: {root: true}
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', 'csui/lib/backbone', '../error.page.view'
+    ], function ($, Backbone, ErrorPageView) {
+      'use strict';
+
+      var errorModel    = new Backbone.Model({
+            serverError: "Sorry, the item you requested could not be accessed. Either it does not exist, or you do not have permission to access it. If you were sent a link to this item, please contact the sender for assistance.",
+            errorCode: 404,
+            showLogout: false,
+            errorMailAddress: "testadmin@smartui.tst",
+            errorMailSubject: ""
+          }),
+          errorPageView = new ErrorPageView({
+            model: errorModel
+          });
+
+      errorPageView.render();
+
+    });
+
+  </script>
+</head>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

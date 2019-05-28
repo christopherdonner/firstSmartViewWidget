@@ -1,0 +1,46 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .csui-icon-notification-error {
+  background-image: url('impl/images/notification_error.svg');
+}
+
+.binf-widgets .csui-icon-notification-error-white {
+  background-image: url('impl/images/notification/notification_error_red.svg');
+}
+
+.binf-widgets .csui-icon-notification-information {
+  background-image: url('impl/images/notification_information.svg');
+}
+
+.binf-widgets .csui-icon-notification-information-white {
+  background-image: url('impl/images/notification/notification_information.svg');
+}
+
+.binf-widgets .csui-icon-notification-success {
+  background-image: url('impl/images/notification_success.svg');
+}
+
+.binf-widgets .csui-icon-notification-success-white {
+  background-image: url('impl/images/notification/notification_success24.svg');
+}
+
+.binf-widgets .csui-icon-notification-warning {
+  background-image: url('impl/images/notification_warning.svg');
+}
+
+.binf-widgets .csui-icon-notification-warning-white {
+  background-image: url('impl/images/notification/notification_warning.svg');
+}
+
+.binf-widgets .csui-icon-notification-confirmation-white {
+  background-image: url('impl/images/notification/notification_question24.svg');
+}
+
+.binf-widgets .csui-icon-dismiss {
+  background-image: url('impl/images/dismiss.svg');
+}
+
+.binf-widgets .csui-icon-dismiss-white {
+  background-image: url('impl/images/dismiss_white.svg');
+}

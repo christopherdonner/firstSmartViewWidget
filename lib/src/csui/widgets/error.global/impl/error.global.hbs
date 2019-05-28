@@ -1,0 +1,43 @@
+<div class='main-area-container'>
+  <div class='main-area-group'>
+    <div class='error-message-area'>
+      <div class='error-message-wrapper'>
+        <div class='error-message horizontal-center-align'>
+          <span class='csui-acc-focusable' tabindex=0>{{errorMessage}}</span>
+        </div>
+      </div>
+      {{#if serverError}}
+        <div class='server-error-message-wrapper'>
+          <div class='server-error-message horizontal-center-align'>
+            <span class='csui-acc-focusable' tabindex=0>{{serverError}}</span>
+          </div>
+        </div>
+      {{/if}}
+    </div>
+
+    <div class='navigation-area horizontal-center-align'>
+      <div class='navigation-control-container'>
+        <div class='go-back-button circle-border horizontal-center-align' tabindex=0
+          title='{{backTooltip}}' aria-label='{{backTooltip}}' class='csui-acc-focusable'>
+            <span class='icon icon-back'></span>
+        </div>
+        <div class='go-back-text button-text horizontal-center-align'
+          title='{{backTooltip}}' aria-label='{{backTooltip}}'>
+            <span>{{backText}}</span>
+        </div>
+      </div>
+      <div class='navigation-control-container'>
+        <div class='go-home-button circle-border horizontal-center-align' tabindex=0
+          title='{{homeTooltip}}' aria-label='{{homeTooltip}}' class='csui-acc-focusable'>
+            <span class='icon icon-home'></span>
+        </div>
+        <div class='go-home-text button-text horizontal-center-align'
+          title='{{homeTooltip}}' aria-label='{{homeTooltip}}'>
+            <span>{{homeText}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

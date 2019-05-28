@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Table Report Model</title>
+
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+  <style>
+    .binf-widgets #model-data {
+      padding: 30px;
+      background-color: white;
+    }
+
+  </style>
+  <script src="../../../../csui/lib/require.js"></script>
+  <script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+  <script>
+
+	  require.config({
+		  deps: [
+			  'csui/lib/require.config!csui/csui-extensions.json'
+		  ]
+	  });
+
+    require.config({
+      paths: {
+        webreports: '../../..'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/cgi/cs.exe/api/v1',
+            supportPath: '/the_main_img',
+            credentials: {
+              username: 'Admin',
+              password: 'livelink'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', 'csui/utils/contexts/page/page.context', 'csui/utils/contexts/factories/connector',
+      '../tablereport.model.js', './table.report.mock.data.js'
+    ], function ($, PageContext, ConnectorFactory, TableReportCollection, mock) {
+
+      var   context   = new PageContext(),
+            connector = context.getObject(ConnectorFactory),
+            tableReportCollection = new TableReportCollection(undefined,{
+                context: context,
+                connector: connector,
+                data: {
+                    id: 24024,
+                    sortBy: 'SubType',
+                    sortOrder: 'DESC',
+                    swrLaunchCell: {
+                        id: 12345,
+                        iconClass: 'my-icon-class',
+                        hoverText: 'Some hover text for my icon.'
+                    },
+                    parameters: [
+                        {
+                            name: 'myparm1',
+                            value: 'val1'
+                        },
+                        {
+                            name: 'myparm2',
+                            value: 'val2'
+                        }
+                    ]
+                }
+            });
+
+            mock.enable();
+
+            tableReportCollection.fetch()
+                .done(function(){
+                    console.log(tableReportCollection);
+                    $("#model-data").html(tableReportCollection.length + " models returned from the collection.<br>");
+                    $("#model-data").append("The collection has the following columns: " + tableReportCollection.columns.pluck("name"));
+                });
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div id="model-data">
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

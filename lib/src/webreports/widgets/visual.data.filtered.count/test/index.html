@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Visual Data View</title>
+
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+  <script src="../../../../csui/lib/require.js"></script>
+  <script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+  <style type="text/css">
+  /* hack override required for test pages */
+  .visual-data-container {
+    height: calc(50vh - 80px) !important;
+  }
+  .binf-modal-dialog .visual-data-container {
+    height: calc(100vh - 360px) !important;
+  }
+
+  </style>
+  <script>
+   require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+	
+    require.config({
+      paths: {
+        webreports: '../../..'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/cgi/cs.exe/api/v1',
+            supportPath: '/support',
+            credentials: {
+              username: 'Admin',
+              password: 'livelink'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../visual.data.filtered.count.view.js', './visual.data.mock.js'
+    ], function (Marionette, PageContext, VisualDataView, VisualDataMock) {
+
+      var
+      // Create the data managing context
+              context = new PageContext(),
+
+              // Create an instance of the visual data view using the bar type
+              barChartView = new VisualDataView({
+                context: context,
+                data: {
+                  id: 218890,
+                  title: 'Bar Chart',
+                  type: 'bar',
+                  activeColumn: 'Habitat',
+                  filterable: true,
+                  expandable: true,
+                  viewValueAsPercentage: false,
+                  groupAfter: -1,
+                  sortBy: 'ordinal',
+                  sortOrder: 'asc',
+                  launchButtonConfig: {
+                    rowLimit: 2,
+                    launchButtons:
+                            [
+                              {
+                                launchButtonID: 12345,
+                                launchButtonLabel: "label1",
+                                launchButtonTooltip: "tooltip1"
+                              },
+                              {
+                                launchButtonID: 54321,
+                                launchButtonLabel: "label2",
+                                launchButtonTooltip: "tooltip2"
+                              },
+                              {
+                                launchButtonID: 88888,
+                                launchButtonLabel: "label3",
+                                launchButtonTooltip: "tooltip3"
+                              }
+                            ]
+                  },
+                  filters: [{"column":"Legs","operator":"IN","value":["4"]},{"column":"Tail","operator":"IN","value":["yes"]}]
+                }
+              }),
+              // Create an instance of the visual data view using the donut type
+              donutChartView = new VisualDataView({
+                context: context,
+                data: {
+                  id: 255548,
+                  title: 'Donut Chart',
+                  type: 'donut',
+                  activeColumn: 'Label',
+                  filterable: false
+                }
+              }),
+              // Create an instance of the visual data view using the donut type
+              pieChartView = new VisualDataView({
+                context: context,
+                data: {
+                  id: 239645,
+                  title: 'Pie Chart',
+                  type: 'pie',
+                  activeColumn: 'Type',
+                  filterable: true,
+                  expandable:false
+                }
+              }),
+              // Create an instance of the visual data view using the donut type
+              donutAuditChartView = new VisualDataView({
+                context: context,
+                data: {
+                  id: 255591,
+                  title: 'Donut Audit Chart',
+                  type: 'donut',
+                  activeColumn: 'Type',
+                  filterable: true,
+                  expandable: true,
+                  groupAfter: 7
+                }
+              }),
+              // Create an instance of the visual data view that returns no data
+              emptyBarChartView = new VisualDataView({
+                  context: context,
+                  data: {
+                      id: 123456,
+                      title: 'Empty Bar Chart',
+                      type: 'bar',
+                      activeColumn: 'Type',
+                      filterable: true,
+                      expandable: true,
+                      groupAfter: 7
+                  }
+              }),
+
+		  oneColumnBarChartView = new VisualDataView({
+			  context: context,
+			  data: {
+				  id: 98765,
+				  title: 'One Column Bar Chart',
+				  type: 'bar',
+				  activeColumn: 'Habitat',
+				  filterable: true,
+				  expandable: true,
+				  viewValueAsPercentage: false,
+				  groupAfter: -1
+			  }
+		  }),
+
+              // Create helpers to show the views on the page
+              barRegion = new Marionette.Region({
+                el: "#bar"
+              }),
+              donutRegion = new Marionette.Region({
+                el: "#donut"
+              }),
+              pieRegion = new Marionette.Region({
+                el: "#pie"
+              }),
+              donutAuditRegion = new Marionette.Region({
+                el: "#donut-audit"
+              }),
+              emptyBarRegion = new Marionette.Region({
+                  el: "#empty-bar"
+              }),
+              oneColumnBarRegion = new Marionette.Region({
+                  el: "#one-column-bar"
+              });
+
+      // Show the views on the page
+      barRegion.show(barChartView);
+      donutRegion.show(donutChartView);
+      pieRegion.show(pieChartView);
+      donutAuditRegion.show(donutAuditChartView);
+      emptyBarRegion.show(emptyBarChartView);
+      oneColumnBarRegion.show(oneColumnBarChartView);
+
+      // Mock the REST API responses
+      VisualDataMock.enable();
+
+      // Fetch the data from the server to populate the tiles with
+      context.fetch();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid binf-grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-md-8 binf-col-xl-6" id="bar"></div>
+    <div class="binf-col-md-8 binf-col-xl-6" id="donut"></div>
+    <div class="binf-col-md-8 binf-col-xl-6" id="pie"></div>
+    <div class="binf-col-md-8 binf-col-xl-6" id="donut-audit"></div>
+    <div class="binf-col-md-8 binf-col-xl-6" id="empty-bar"></div>
+    <div class="binf-col-md-8 binf-col-xl-6" id="one-column-bar"></div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

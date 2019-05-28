@@ -1,0 +1,315 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.cssyntaxhighlighter a,
+.cssyntaxhighlighter div,
+.cssyntaxhighlighter code,
+.cssyntaxhighlighter table,
+.cssyntaxhighlighter table td,
+.cssyntaxhighlighter table tr,
+.cssyntaxhighlighter table tbody,
+.cssyntaxhighlighter table thead,
+.cssyntaxhighlighter table caption,
+.cssyntaxhighlighter textarea {
+  -moz-border-radius: 0 0 0 0 !important;
+  -webkit-border-radius: 0 0 0 0 !important;
+  background: none !important;
+  border: 0 !important;
+  bottom: auto !important;
+  float: none !important;
+  height: auto !important;
+  left: auto !important;
+  line-height: 1.1em !important;
+  margin: 0 !important;
+  outline: 0 !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  position: static !important;
+  right: auto !important;
+  text-align: left !important;
+  top: auto !important;
+  vertical-align: baseline !important;
+  width: auto !important;
+  box-sizing: content-box !important;
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 1em !important;
+  min-height: inherit !important;
+  min-height: auto !important;
+}
+
+.cssyntaxhighlighter {
+  width: 100% !important;
+  margin: 1em 0 1em 0 !important;
+  position: relative !important;
+  overflow: auto !important;
+  font-size: 1em !important;
+}
+.cssyntaxhighlighter.source {
+  overflow: hidden !important;
+}
+.cssyntaxhighlighter .bold {
+  font-weight: bold !important;
+}
+.cssyntaxhighlighter .italic {
+  font-style: italic !important;
+}
+.cssyntaxhighlighter .line {
+  white-space: pre !important;
+}
+.cssyntaxhighlighter table {
+  width: 100% !important;
+}
+.cssyntaxhighlighter table caption {
+  text-align: left !important;
+  padding: .5em 0 0.5em 1em !important;
+}
+.cssyntaxhighlighter table td.code {
+  width: 100% !important;
+}
+.cssyntaxhighlighter table td.code .container {
+  position: relative !important;
+}
+.cssyntaxhighlighter table td.code .container textarea {
+  box-sizing: border-box !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: white !important;
+  padding-left: 1em !important;
+  overflow: hidden !important;
+  white-space: pre !important;
+}
+.cssyntaxhighlighter table td.gutter .line {
+  text-align: right !important;
+  padding: 0 0.5em 0 1em !important;
+}
+.cssyntaxhighlighter table td.code .line {
+  padding: 0 1em !important;
+}
+.cssyntaxhighlighter.nogutter td.code .container textarea, .cssyntaxhighlighter.nogutter td.code .line {
+  padding-left: 0em !important;
+}
+.cssyntaxhighlighter.show {
+  display: block !important;
+}
+.cssyntaxhighlighter.collapsed table {
+  display: none !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar {
+  padding: 0.1em 0.8em 0em 0.8em !important;
+  font-size: 1em !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar span {
+  display: inline !important;
+  margin-right: 1em !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar span a {
+  padding: 0 !important;
+  display: none !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar span a.expandSource {
+  display: inline !important;
+}
+.cssyntaxhighlighter .toolbar {
+  position: absolute !important;
+  right: 1px !important;
+  top: 1px !important;
+  width: 11px !important;
+  height: 11px !important;
+  font-size: 10px !important;
+  z-index: 10 !important;
+}
+.cssyntaxhighlighter .toolbar span.title {
+  display: inline !important;
+}
+.cssyntaxhighlighter .toolbar a {
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  padding-top: 1px !important;
+}
+.cssyntaxhighlighter .toolbar a.expandSource {
+  display: none !important;
+}
+.cssyntaxhighlighter.ie {
+  font-size: .9em !important;
+  padding: 1px 0 1px 0 !important;
+}
+.cssyntaxhighlighter.ie .toolbar {
+  line-height: 8px !important;
+}
+.cssyntaxhighlighter.ie .toolbar a {
+  padding-top: 0px !important;
+}
+.cssyntaxhighlighter.printing .line.alt1 .content,
+.cssyntaxhighlighter.printing .line.alt2 .content,
+.cssyntaxhighlighter.printing .line.highlighted .number,
+.cssyntaxhighlighter.printing .line.highlighted.alt1 .content,
+.cssyntaxhighlighter.printing .line.highlighted.alt2 .content {
+  background: none !important;
+}
+.cssyntaxhighlighter.printing .line .number {
+  color: #bbbbbb !important;
+}
+.cssyntaxhighlighter.printing .line .content {
+  color: black !important;
+}
+.cssyntaxhighlighter.printing .toolbar {
+  display: none !important;
+}
+.cssyntaxhighlighter.printing a {
+  text-decoration: none !important;
+}
+.cssyntaxhighlighter.printing .plain, .cssyntaxhighlighter.printing .plain a {
+  color: black !important;
+}
+.cssyntaxhighlighter.printing .comments, .cssyntaxhighlighter.printing .comments a {
+  color: #008200 !important;
+}
+.cssyntaxhighlighter.printing .string, .cssyntaxhighlighter.printing .string a {
+  color: blue !important;
+}
+.cssyntaxhighlighter.printing .keyword {
+  color: #006699 !important;
+  font-weight: bold !important;
+}
+.cssyntaxhighlighter.printing .preprocessor {
+  color: gray !important;
+}
+.cssyntaxhighlighter.printing .variable {
+  color: #aa7700 !important;
+}
+.cssyntaxhighlighter.printing .value {
+  color: #009900 !important;
+}
+.cssyntaxhighlighter.printing .functions {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter.printing .constants {
+  color: #0066cc !important;
+}
+.cssyntaxhighlighter.printing .script {
+  font-weight: bold !important;
+}
+.cssyntaxhighlighter.printing .color1, .cssyntaxhighlighter.printing .color1 a {
+  color: gray !important;
+}
+.cssyntaxhighlighter.printing .color2, .cssyntaxhighlighter.printing .color2 a {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter.printing .color3, .cssyntaxhighlighter.printing .color3 a {
+  color: red !important;
+}
+.cssyntaxhighlighter.printing .break, .cssyntaxhighlighter.printing .break a {
+  color: black !important;
+}
+
+.cssyntaxhighlighter {
+  background-color: white !important;
+}
+.cssyntaxhighlighter .line.alt1 {
+  background-color: white !important;
+}
+.cssyntaxhighlighter .line.alt2 {
+  background-color: white !important;
+}
+.cssyntaxhighlighter .line.highlighted.alt1, .cssyntaxhighlighter .line.highlighted.alt2 {
+  background-color: #e0e0e0 !important;
+}
+.cssyntaxhighlighter .line.highlighted.number {
+  color: black !important;
+}
+.cssyntaxhighlighter table caption {
+  color: black !important;
+}
+.cssyntaxhighlighter .gutter {
+  color: #afafaf !important;
+}
+.cssyntaxhighlighter .gutter .line {
+  border-right: 3px solid #6ce26c !important;
+}
+.cssyntaxhighlighter .gutter .line.highlighted {
+  background-color: #6ce26c !important;
+  color: white !important;
+}
+.cssyntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+.cssyntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid #6ce26c !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar a {
+  color: blue !important;
+}
+.cssyntaxhighlighter.collapsed .toolbar a:hover {
+  color: red !important;
+}
+.cssyntaxhighlighter .toolbar {
+  color: white !important;
+  background: #6ce26c !important;
+  border: none !important;
+}
+.cssyntaxhighlighter .toolbar a {
+  color: white !important;
+}
+.cssyntaxhighlighter .toolbar a:hover {
+  color: black !important;
+}
+.cssyntaxhighlighter .plain, .cssyntaxhighlighter .plain a {
+  color: black !important;
+}
+.cssyntaxhighlighter .comments, .cssyntaxhighlighter .comments a {
+  color: #008200 !important;
+}
+.cssyntaxhighlighter .string, .cssyntaxhighlighter .string a {
+  color: blue !important;
+}
+.cssyntaxhighlighter .keyword {
+  color: #006699 !important;
+}
+.cssyntaxhighlighter .preprocessor {
+  color: gray !important;
+}
+.cssyntaxhighlighter .variable {
+  color: #aa7700 !important;
+}
+.cssyntaxhighlighter .value {
+  color: #009900 !important;
+}
+.cssyntaxhighlighter .functions {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter .constants {
+  color: #0066cc !important;
+}
+.cssyntaxhighlighter .script {
+  font-weight: bold !important;
+  color: #006699 !important;
+  background-color: none !important;
+}
+.cssyntaxhighlighter .color1, .cssyntaxhighlighter .color1 a {
+  color: gray !important;
+}
+.cssyntaxhighlighter .color2, .cssyntaxhighlighter .color2 a {
+  color: #ff1493 !important;
+}
+.cssyntaxhighlighter .color3, .cssyntaxhighlighter .color3 a {
+  color: red !important;
+}
+
+.cssyntaxhighlighter .keyword {
+  font-weight: bold !important;
+}

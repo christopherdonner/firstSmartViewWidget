@@ -1,0 +1,10 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .binf-modal-footer .cs-footer-control .csui-selected-items {
+  float: left;
+  padding: 8px 0;
+}
+
+.binf-widgets .binf-modal-footer .cs-footer-control .csui-footer-buttons {
+  float: right;
+}

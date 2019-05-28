@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CollectionErrorBehavior</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style data-csui-theme-overrides="true">
+    body.binf-widgets {
+      margin-top: 15px;
+    }
+
+    .my-tile.my-tile {
+      width: 100%;
+      height: 100%;
+      background-color: #eeeeee;
+    }
+
+    .my-tile p {
+      padding: 0 1em 1em 1em;
+    }
+
+    .my-tile :nth-child(1) p {
+      padding-top: 1em;
+    }
+  </style>
+
+  <script id="node" type="text/x-handlebars-template">
+    <p>{{name}}</p>
+  </script>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        i18n: {
+          loadableLocales: {root: true}
+        }
+      }
+    });
+
+    require([
+      'csui/lib/jquery', 'csui/lib/handlebars',
+      'csui/lib/backbone', 'csui/lib/marionette',
+      'csui/utils/contexts/page/page.context',
+      'csui/utils/contexts/factories/children',
+      'csui/behaviors/collection.error/collection.error.behavior',
+      './collection.error.mock.js'
+    ], function ($, Handlebars, Backbone, Marionette, PageContext,
+        ChildrenCollectionFactory, CollectionErrorBehavior, mock) {
+      'use strict';
+
+      var node = Handlebars.compile($('#node').html()),
+          NodeView = Marionette.ItemView.extend({
+            template: node
+          }),
+          ChildrenViewWithCollection = Marionette.CollectionView.extend({
+            className: 'my-tile',
+            childView: NodeView,
+            behaviors: {
+              CollectionError: {
+                behaviorClass: CollectionErrorBehavior
+              }
+            }
+          }),
+          ChildrenViewWithViewCollection = Marionette.CollectionView.extend({
+            className: 'my-tile',
+            childView: NodeView,
+            behaviors: {
+              CollectionError: {
+                behaviorClass: CollectionErrorBehavior,
+                collection: function () {
+                  return this.backendCollection;
+                }
+              }
+            },
+            constructor: function NodeViewWithViewModel(options) {
+              this.backendCollection = options.collection;
+              options.collection = new Backbone.Collection();
+              Marionette.CollectionView.prototype.constructor.call(this, options);
+              this.listenTo(this.backendCollection, 'reset', function () {
+                this.collection.reset(this.backendCollection.models);
+              });
+            }
+          });
+
+      var viewIndex = 0;
+
+      function showView(View) {
+        var node = {id: 2000 + (++viewIndex)},
+            view = new View({
+              collection: context.getCollection(ChildrenCollectionFactory, {
+                attributes: node,
+                node: {attributes: node}
+              })
+            }),
+            region = new Marionette.Region({
+              el: '#tile' + viewIndex
+            });
+        region.show(view);
+      }
+
+      function showCollectionView(View) {
+        showView(View);
+        showView(View);
+      }
+
+      var context = new PageContext();
+
+      showCollectionView(ChildrenViewWithCollection);
+      showCollectionView(ChildrenViewWithViewCollection);
+
+      mock.enable();
+      context.fetch();
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile1"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile2"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile3"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile4"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

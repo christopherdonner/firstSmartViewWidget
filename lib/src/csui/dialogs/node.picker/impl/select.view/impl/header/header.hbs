@@ -1,0 +1,48 @@
+  <div class="csui-targetbrowse-history">
+      <span class="csui-targetbrowse-arrow-back">
+        <span class="icon arrow_back cs-go-back" title="{{backButtonTooltip}}"
+              aria-label="{{backButtonAria}}" tabindex="0" data-cstabindex="-1"
+              role="link"></span>
+      </span>
+  </div>
+{{#if searchView}}
+  <div class="csui-search-item-left-panel">
+    <div class="csui-search-item-type">
+      <span class="csui-type-label"> {{type}} </span>
+    </div>
+    <div class="csui-search-item">
+      <div class="csui-search-item-name">
+        {{name}}
+      </div>
+    </div>
+  </div>
+  <div class="csui-search-item-right-panel">
+    <div class="csui-search-item-location">
+      <div class="csui-search-toolbar-container">
+        {{location}}
+      </div>
+    </div>
+  </div>
+{{else}}
+  <div class="csui-folder-name">
+    <h3 class="folder-name" title="{{title}}">{{title}}</h3>
+    <span class="cs-icon icon-sv-search csui-acc-focusable" tabindex="0" data-cstabindex="-1"
+          role="button" aria-expanded="false" aria-haspopup="true" title="{{searchInButtonAria}}" aria-label="{{searchInButtonAria}}"></span>
+  </div>
+
+  <form class="cs-modal-filter">
+    <div class="binf-form-group">
+      <input class="binf-form-control cs-filter-input" placeholder="{{search_placeholder}}"
+             tabindex="0" data-cstabindex="-1" aria-label="{{search_placeholder}}">
+      <span class="binf-form-control-feedback cs-icon icon-formfield-clear" role="button"
+            title="{{clearSearchButtonAria}}" aria-label="{{clearSearchButtonAria}}" tabindex="0" data-cstabindex="-1"></span>
+
+      <button class="binf-btn csui-form-control-search" title="{{collapseSearch}}" aria-label="{{collapseSearch}}" aria-expanded="true" aria-haspopup="true"
+              tabindex="0" data-cstabindex="-1">
+        <span class="form-control-search cs-icon icon-sv-search-hide"></span>
+      </button>
+    </div>
+  </form>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

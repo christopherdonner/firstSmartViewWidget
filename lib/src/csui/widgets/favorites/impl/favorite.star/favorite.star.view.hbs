@@ -1,0 +1,20 @@
+{{#if enabled}}
+  <div class='csui-favorite-star-view-container csui-favorite-popover-container'>
+    {{#if selected}}
+      <button type="button" class="csui-favorite-star selected csui-acc-focusable"
+              {{#if focusable}}tabindex="0"{{else}}tabindex="-1"{{/if}}
+               title="{{removeFav}}" aria-label="{{removeFav}}">
+        <span class="icon icon-socialFav"></span>
+      </button>
+    {{else}}
+      <button type="button" class="csui-favorite-star csui-acc-focusable"
+              {{#if focusable}}tabindex="0"{{else}}tabindex="-1"{{/if}}
+              {{#unless showInFavoritesTable}}aria-haspopup="dialog"{{/unless}}
+               title="{{addFav}}" aria-label="{{addFav}}">
+        <span class="icon icon-socialFavOpen"></span>
+      </button>
+    {{/if}}
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

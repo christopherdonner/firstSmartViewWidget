@@ -1,0 +1,104 @@
+{
+	"facets": {
+		"available_values": [{
+			"3211": [{
+				"name": "WebReport",
+				"percentage": 55.5555555555556,
+				"total": 5,
+				"value": "30303"
+			}, {
+				"name": "Document",
+				"percentage": 33.3333333333333,
+				"total": 3,
+				"value": "144"
+			}, {
+				"name": "LiveReport",
+				"percentage": 11.1111111111111,
+				"total": 1,
+				"value": "299"
+			}]
+		}, {
+			"3212": [{
+				"name": "Last week",
+				"percentage": 33.3333333333333,
+				"total": 3,
+				"value": "re09"
+			}, {
+				"name": "Two weeks ago",
+				"percentage": 33.3333333333333,
+				"total": 3,
+				"value": "re10"
+			}, {
+				"name": "Three weeks ago",
+				"percentage": 33.3333333333333,
+				"total": 3,
+				"value": "re11"
+			}, {
+				"name": "Last month",
+				"percentage": 66.6666666666667,
+				"total": 6,
+				"value": "re12"
+			}]
+		}, {
+			"3216": [{
+				"name": "Snapshot",
+				"percentage": 66.6666666666667,
+				"total": 6,
+				"value": "34"
+			}, {
+				"name": "Spreadsheet",
+				"percentage": 22.2222222222222,
+				"total": 2,
+				"value": "35"
+			}]
+		}],
+		"properties": {
+			"3211": {
+				"data_source": "sys_ObjectType",
+				"data_source_type": 305,
+				"display_mode": 1,
+				"display_priority": 50,
+				"id": 3211,
+				"items_to_show": 5,
+				"name": "Content Type",
+				"name_multilingual": {
+					"en_US": "Content Type"
+				},
+				"show_as_numbers": true,
+				"show_text_in_more": false,
+				"type": 305
+			},
+			"3212": {
+				"data_source": "sys_ModifyDate",
+				"data_source_type": -7,
+				"display_mode": 4,
+				"display_priority": 50,
+				"id": 3212,
+				"items_to_show": 5,
+				"name": "Modified Date",
+				"name_multilingual": {
+					"en_US": "Modified Date"
+				},
+				"show_as_numbers": true,
+				"show_text_in_more": false,
+				"type": -7
+			},
+			"3216": {
+				"data_source": "dc_2",
+				"data_source_type": 400,
+				"display_mode": 1,
+				"display_priority": 50,
+				"id": 3216,
+				"items_to_show": 5,
+				"name": "Office",
+				"name_multilingual": {
+					"en_US": "Office"
+				},
+				"show_as_numbers": true,
+				"show_text_in_more": false,
+				"type": 400
+			}
+		},
+		"selected_values": []
+	}
+}

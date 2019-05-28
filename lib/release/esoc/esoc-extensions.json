@@ -1,0 +1,52 @@
+{
+  "csui/controls/table/cells/cell.factory": {
+    "extensions": {
+      "esoc": [
+        "esoc/widgets/tablecell/tablecell.view"
+      ]
+    }
+  },
+  "csui/controls/thumbnail/content/content.factory": {
+    "extensions": {
+      "esoc": [
+        "esoc/widgets/tablecell/thumbnail.content.view"
+      ]
+    }
+  },
+  "csui/utils/commands": {
+    "extensions": {
+      "esoc": [
+        "esoc/commands/comment/comment.command",
+        "esoc/commands/open.roi"
+      ]
+    }
+  },
+  "csui/utils/defaultactionitems": {
+    "extensions": {
+      "esoc": [
+        "esoc/widgets/utils/esocactionitems"
+      ]
+    }
+  },
+  "csui/utils/nodesprites": {
+    "extensions": {
+      "esoc": [
+        "esoc/widgets/utils/esocnodesprites"
+      ]
+    }
+  },
+  "csui/widgets/metadata/metadata.panels": {
+    "extensions": {
+      "esoc": [
+        "esoc/widgets/metadata/metadata.panels"
+      ]
+    }
+  },
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "esoc": [
+        "esoc/widgets/activityfeedwidget"
+      ]
+    }
+  }
+}

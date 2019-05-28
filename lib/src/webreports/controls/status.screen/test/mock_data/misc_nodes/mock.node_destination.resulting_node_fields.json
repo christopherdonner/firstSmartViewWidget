@@ -1,0 +1,56 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "/api/v2/nodes/679564?fields=properties",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"data": {
+			"properties": {
+				"container": false,
+				"container_size": 0,
+				"create_date": "2017-11-16T11:16:36",
+				"create_user_id": 1000,
+				"description": "",
+				"description_multilingual": {
+					"en_US": "",
+					"fr": ""
+				},
+				"external_create_date": null,
+				"external_identity": "",
+				"external_identity_type": "",
+				"external_modify_date": null,
+				"external_source": "",
+				"favorite": false,
+				"id": 679564,
+				"mime_type": "text/html",
+				"modify_date": "2017-11-24T16:05:48",
+				"modify_user_id": 1000,
+				"name": "My WR Output.html",
+				"name_multilingual": {
+					"en_US": "My WR Output.html",
+					"fr": ""
+				},
+				"owner_group_id": 1001,
+				"owner_user_id": 1000,
+				"parent_id": 678795,
+				"permissions_model": "advanced",
+				"reserved": false,
+				"reserved_date": null,
+				"reserved_user_id": 0,
+				"size": 1189,
+				"size_formatted": "2 KB",
+				"type": 144,
+				"type_name": "Document",
+				"versions_control_advanced": false,
+				"volume_id": -2000
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "fullpage",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "title": "{{idTitle}}",
+        "description": "{{idDescription}}",
+        "type": "integer"
+      },
+      "initialPanel": {
+        "title": "{{initialPanelTitle}}",
+        "description": "{{initialPanelDescription}}",
+        "type": "string"
+      }
+    },
+    "required": ["id"]
+  },
+  "options": {
+    "fields": {
+      "id": {
+        "type": "otcs_node_picker",
+        "type_control": {
+          "parameters": {
+            "select_types": []
+          }
+        }
+      }
+    }
+  },
+  "actions": [
+    {
+      "toolItems": "csui/widgets/metadata/header.dropdown.menu.items",
+      "toolItemMasks": "csui/widgets/metadata/header.dropdown.menu.items.mask",
+      "toolbars": [
+        {
+          "id": "dropdownMenuList",
+          "title": "{{dropdownMenuTitle}}",
+          "description": "{{dropdownMenuDescription}}"
+        }
+      ]
+    },
+    {
+      "toolItems": "csui/widgets/metadata/add.properties.menuitems",
+      "toolItemMasks": "csui/widgets/metadata/add.properties.menuitems.mask",
+      "toolbars": [
+        {
+          "id": "addPropertiesToolbar",
+          "title": "{{addPropertiesTitle}}",
+          "description": "{{addPropertiesDescription}}"
+        }
+      ]
+    }
+  ]
+}

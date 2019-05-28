@@ -1,0 +1,123 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .activity-item {
+  padding: 0.75rem 1.0rem 0.75rem 0.0rem;
+  background-color: white;
+  border-bottom: 0.063rem solid #cbcbcb;
+}
+
+.binf-widgets .activity-item .header {
+  display: flex;
+  padding-bottom: 1.0rem;
+}
+
+.binf-widgets .activity-item .details {
+  width: 12rem;
+}
+
+.binf-widgets .activity-item .action {
+  text-align: right;
+  flex: 1;
+}
+
+.binf-widgets .activity-item .action-label {
+  font-size: 0.75rem;
+  font-style: normal;
+  color: #757575;
+  padding-top: 0.25rem;
+}
+
+.binf-widgets .activity-item .action-text {
+  font-size: 0.875rem;
+  font-style: normal;
+  color: #333333;
+  padding-top: 0.5rem;
+}
+
+.binf-widgets .activity-item .user {
+  font-style: italic;
+}
+
+.binf-widgets .activity-item .user .esoc-user-container {
+  color: #333333;
+}
+
+.binf-widgets .activity-item .date {
+  font-size: 0.75rem;
+  font-style: normal;
+  color: #757575;
+  padding-left: 2.25rem;
+}
+
+.binf-widgets .activity-item .comment {
+  font-size: 0.875rem;
+  color: #333333;
+  padding-left: 2.25rem;
+  padding-bottom: 0.5rem;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .activity-item .reassign-label {
+  font-size: 0.75rem;
+  font-style: normal;
+  color: #757575;
+  padding-left: 2.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.binf-widgets .activity-item .reassign-user {
+  font-size: 0.875rem;
+  padding-left: 2.0rem;
+}
+
+.binf-widgets .activity-item .reassign-user .user-photo,
+.binf-widgets .activity-item .reassign-user .user-default-image {
+  height: 1.25rem;
+  width: 1.25rem;
+  align-self: center;
+}
+
+.binf-widgets .activity-item .reassign-user .esoc-user-container {
+  color: #333333;
+}
+
+.binf-widgets .activity-item .attachment {
+  font-size: 0.875rem;
+  color: #333333;
+  padding-left: 1.8625rem;
+  padding-bottom: 1.0rem;
+  display: flex;
+}
+
+.binf-widgets .activity-item .attachment .disabled {
+  pointer-events: none;
+}
+
+.binf-widgets .activity-item .attachment-icon .csui-icon,
+.binf-widgets .activity-item .attachment-icon .csui-icon-group {
+  width: 1.75rem;
+  height: 1.25rem;
+}
+
+.binf-widgets .activity-item .attachment-name {
+  padding-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.binf-widgets .activity-item .attachment-name a {
+  color: #333333;
+}
+
+.binf-widgets .activity-item .attachment-desc {
+  font-size: 0.875rem;
+  color: #333333;
+  padding-left: 2.25rem;
+  padding-bottom: 0.5rem;
+  white-space: pre-wrap;
+}

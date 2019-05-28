@@ -1,0 +1,26 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .launch-subwebreport-col {
+    padding: 10px;
+    min-width:
+}
+
+.binf-widgets .launch-subwebreport-col button {
+    border: 1px red solid;
+}
+
+.launch-subwebreport-col .icon {
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.icon-subwebreport {
+    
+    background-image: url('../../../../../image/icons/launch_subwebreport.svg');
+
+}

@@ -1,0 +1,237 @@
+{
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/nodes\/actions?ids=208875&ids=207475&ids=184910&actions=addcategory&actions=addversion&actions=copy&actions=delete&actions=edit&actions=rename&actions=move&actions=properties&actions=reserve&actions=unreserve&actions=comment",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "184910": {
+      "data": {
+        "addcategory": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/184910\/categories",
+          "method": "POST",
+          "name": "Add Category"
+        },
+        "comment": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "POST",
+          "name": "Comments"
+        },
+        "copy": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/copy?id=184910",
+          "href": "\/api\/v2\/nodes",
+          "method": "POST",
+          "name": "Copy"
+        },
+        "delete": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/184910",
+          "method": "DELETE",
+          "name": "Delete"
+        },
+        "move": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/move?id=184910",
+          "href": "\/api\/v2\/nodes\/184910",
+          "method": "PUT",
+          "name": "Move"
+        },
+        "properties": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/184910",
+          "method": "GET",
+          "name": "Properties"
+        },
+        "rename": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/rename?id=184910",
+          "href": "\/api\/v2\/nodes\/184910",
+          "method": "PUT",
+          "name": "Rename"
+        }
+      },
+      "map": {
+        "default_action": "open",
+        "more": [
+          "properties"
+        ]
+      },
+      "order": [
+        "addcategory",
+        "rename",
+        "copy",
+        "move",
+        "delete",
+        "comment"
+      ]
+    },
+    "207475": {
+      "data": {
+        "addcategory": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/207475\/categories",
+          "method": "POST",
+          "name": "Add Category"
+        },
+        "comment": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "POST",
+          "name": "Comments"
+        },
+        "copy": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/copy?id=207475",
+          "href": "\/api\/v2\/nodes",
+          "method": "POST",
+          "name": "Copy"
+        },
+        "delete": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/207475",
+          "method": "DELETE",
+          "name": "Delete"
+        },
+        "move": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/move?id=207475",
+          "href": "\/api\/v2\/nodes\/207475",
+          "method": "PUT",
+          "name": "Move"
+        },
+        "properties": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/207475",
+          "method": "GET",
+          "name": "Properties"
+        },
+        "rename": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/rename?id=207475",
+          "href": "\/api\/v2\/nodes\/207475",
+          "method": "PUT",
+          "name": "Rename"
+        }
+      },
+      "map": {
+        "default_action": "open",
+        "more": [
+          "properties"
+        ]
+      },
+      "order": [
+        "addcategory",
+        "rename",
+        "copy",
+        "move",
+        "delete",
+        "comment"
+      ]
+    },
+    "208875": {
+      "data": {
+        "addcategory": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/208875\/categories",
+          "method": "POST",
+          "name": "Add Category"
+        },
+        "comment": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "POST",
+          "name": "Comments"
+        },
+        "copy": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/copy?id=208875",
+          "href": "\/api\/v2\/nodes",
+          "method": "POST",
+          "name": "Copy"
+        },
+        "delete": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/208875",
+          "method": "DELETE",
+          "name": "Delete"
+        },
+        "move": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/move?id=208875",
+          "href": "\/api\/v2\/nodes\/208875",
+          "method": "PUT",
+          "name": "Move"
+        },
+        "properties": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/208875",
+          "method": "GET",
+          "name": "Properties"
+        },
+        "rename": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/rename?id=208875",
+          "href": "\/api\/v2\/nodes\/208875",
+          "method": "PUT",
+          "name": "Rename"
+        }
+      },
+      "map": {
+        "default_action": "open",
+        "more": [
+          "properties"
+        ]
+      },
+      "order": [
+        "addcategory",
+        "rename",
+        "copy",
+        "move",
+        "delete",
+        "comment"
+      ]
+    }
+  }
+}

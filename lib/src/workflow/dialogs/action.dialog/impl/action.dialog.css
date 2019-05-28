@@ -1,0 +1,44 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.workflow-action-dialog .tile-header {
+  padding: 0 1.5rem 0 1.5rem;
+  height: 4rem;
+  border-bottom-color: #e2e2e2;
+}
+
+.binf-widgets .workflow-action-dialog .tile-header  {
+  padding : 0rem 1.5rem 0rem 1.5rem;
+}
+
+.workflow-action-dialog .binf-modal-dialog .tile-header .tile-title {
+  width: 100%;
+}
+
+.workflow-action-dialog .binf-modal-dialog .tile-title h4 {
+  line-height: 4rem;
+}
+
+
+.workflow-action-dialog .binf-modal-dialog .cs-close {
+  display: none;
+}
+
+
+.workflow-action-dialog.cs-dialog  .binf-modal-body {
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  margin-right: 0px;
+}
+.binf-widgets .workflow-action-dialog .binf-modal-backdrop{
+   background-color: #000000;
+   opacity: 0.75;
+ }
+
+
+.workflow-action-dialog .binf-modal-footer {
+  height: 4rem;
+  padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+  background-color: #f5f5f5;
+  border-top-color: #e2e2e2;
+}

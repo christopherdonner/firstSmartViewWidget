@@ -1,0 +1,34 @@
+<div class="activity-item">
+  <div class="header">
+    <div hidden id={{ariaDescribedById}}>{{activityAriaDescription}}</div>
+    <div class="details">
+      <div class="user"></div>
+      <p class="date" aria-label="{{dateAria}}" title="{{exactDate}}">{{date}}</p>
+    </div>
+    <p class="action">
+      <span class="action-label">{{actionLabel}}</span>
+      <span class="action-text">{{action}}</span>
+    </p>
+  </div>
+  {{#if attachment}}
+    <div class="attachment">
+      <div class="attachment-icon">{{attachmentIcon}}</div>
+      <div class="attachment-name">
+        <a href="{{attachmentUrl}}" aria-describedby="{{attachmentDescID}}">{{attachmentName}}</a>
+      </div>
+    </div>
+    <p id="{{attachmentDescID}}" class="attachment-desc">{{attachmentDesc}}</p>
+  {{else}}
+    {{#if comment}}
+      <p class="comment" title ="{{commentText}}">{{commentText}}</p>
+    {{/if}}
+    {{#if reassign}}
+      <div class="reassign">
+        <p class="reassign-label">{{reassignLabel}}</p>
+        <div class="reassign-user"></div>
+      </div>
+    {{/if}}
+  {{/if}}
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,50 @@
+{
+	"csui/models/server.module/server.module.collection": {
+		"modules": {
+			"webreports": {
+				"version": "1.0"
+			}
+		}
+	},
+	"csui/models/widget/widget.collection": {
+		"widgets": {
+			"webreports": [
+				"webreports/widgets/tilereport",
+				"webreports/widgets/nodeslistreport",
+				"webreports/widgets/visual.data.filtered.count",
+				"webreports/widgets/widget.carousel"
+			]
+		}
+	},
+	"csui/utils/commands": {
+		"extensions": {
+			"webreports": [
+				"webreports/utils/commands/open.webreport",
+				"webreports/utils/commands/open.classic.webreport",
+				"webreports/utils/commands/execute.webreport"
+
+			]
+		}
+	},
+	"csui/utils/defaultactionitems": {
+		"extensions": {
+			"webreports": [
+				"webreports/utils/commands/defaultactionitems"
+			]
+		}
+	},
+	"csui/utils/nodesprites": {
+		"extensions": {
+			"webreports": [
+				"webreports/utils/icons/icons"
+			]
+		}
+	},
+	"csui/controls/table/cells/cell.factory": {
+		"extensions": {
+			"webreports": [
+				"webreports/controls/table.report/cells/launch.subwebreport/launch.subwebreport.view"
+			]
+		}
+	}
+}

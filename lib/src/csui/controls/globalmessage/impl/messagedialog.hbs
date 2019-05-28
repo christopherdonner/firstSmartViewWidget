@@ -1,0 +1,29 @@
+<div class="csui-header csui-height-target">
+    <div class="csui-state">
+        <span class="csui-state-icon csui-icon"></span>
+    </div>
+    <div class="csui-text" id="{{headerId}}" title="{{header_text}}">{{header_text}}</div>
+    <div class="csui-action">
+        <button type="button" class="csui-action-close binf-btn binf-btn-default csui-icon" title="{{closeDialog}}" aria-label="{{closeDialogAria}}"/>
+    </div>
+</div>
+
+{{#if message_with_link}}
+  <div class="csui-message-link-div">
+    <a href="{{link_url}}" class="csui-message-link">{{link_label}}</a>
+  </div>
+{{/if}}
+
+{{#if details_text}}
+<div class="csui-details-wrapper">
+  <div id="csui-message-details" class="csui-details csui-minheight">
+    <div class="csui-text binf-hidden" id="{{detailsId}}">{{details_text}}</div>
+    <div class="csui-action csui-message-details-heightsource">
+      <a href="javascript:void(0);" class="csui-action-moredetails">{{action_moredetails}}</a>
+      <a href="javascript:void(0);" class="csui-action-fewerdetails binf-hidden">{{action_fewerdetails}}</a>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

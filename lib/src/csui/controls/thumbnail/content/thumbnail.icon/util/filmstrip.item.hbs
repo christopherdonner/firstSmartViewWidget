@@ -1,0 +1,40 @@
+{{#each data}}
+  {{#if activeItem}}
+    <div class="binf-item binf-filmstrip-item-{{id}} binf-active" title="{{name}}" tabindex="0">
+      <div class="binf-thumb" data-binf-target="#binf-carousel" data-binf-slide-to= {{index}}>
+        <div class="binf-thumb-caption">{{name}}</div>
+        <div class="binf-thumb-img-container">
+          <div class="binf-thumb-img {{#if isVideo}}binf-video-container {{/if}}">
+            {{#if isVideo}}
+              <div class="binf-play-arrow-container"><span
+                  class="binf-play-arrow"></span></div>
+            {{else}}
+              <div>
+                <img src="{{this.thumbnailURL}}">
+              </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <div class="binf-item binf-filmstrip-item-{{id}}" title="{{name}}" tabindex="0">
+      <div class="binf-thumb" data-binf-target="#binf-carousel" data-binf-slide-to= {{index}}>
+        <div class="binf-thumb-caption">{{name}}</div>
+        <div class="binf-thumb-img-container">
+          <div class="binf-thumb-img {{#if isVideo}}binf-video-container {{/if}}">
+            {{#if isVideo}}
+              <div class="binf-play-arrow-container"><span
+                  class="binf-play-arrow"></span></div>
+            {{else}}
+              <div>
+                <img src="{{this.thumbnailURL}}">
+              </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+{{/each}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

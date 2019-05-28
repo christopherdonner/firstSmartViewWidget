@@ -1,0 +1,51 @@
+<div class="cs-field-write">
+  <div class="cs-field-write-inner cs-drop-down">
+    <div id="{{idValueDiv}}"></div>
+    <button id="{{idBtn}}" aria-label="{{writeModeAria}}" title="{{name}}" type="button"
+            class="binf-btn binf-btn-default {{#unless this.disabled}} binf-dropdown-toggle"{{/unless}}
+            data-binf-toggle="dropdown"
+            aria-haspopup="true">
+      <span class="cs-label">{{name}}</span>
+      <span class="cs-icon icon-caret-down {{#if this.disabled}}cs-icon-disabled {{/if}}"></span>
+    </button>
+    <ul class="binf-dropdown-menu" role="menu" aria-labelledby="{{idBtn}}"></ul>
+    {{#if this.isNotWriteOnly}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{else}}
+      {{#if this.applyFlag}}
+        <div class="icon-container binf-hidden">
+          <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"
+               data-cstabindex="0"></div>
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>
+
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    <div class="btn-container">
+      <button aria-label="{{readModeAria}}"
+          {{#if this.hasData}}
+            title="{{name}}"
+          {{else}}
+            title="{{noValue}}"
+          {{/if}}
+          {{#if schema.readonly}} aria-disabled="true" {{/if}}
+        >
+        {{#if this.hasData}}
+          <span>{{name}}</span>
+        {{else}}
+          <span class="placeholder">{{emptyLabel}}</span>
+        {{/if}}
+      </button>
+    </div>
+    <div class="icon-container">
+      <div class="csui-icon-edit inline-edit-icon icon-edit" title="{{edit}}"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

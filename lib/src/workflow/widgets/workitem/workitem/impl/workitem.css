@@ -1,0 +1,369 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .workitem-footer .binf-btn.binf-btn-default:nth-last-child(2) {
+  margin: 0rem 1rem 0rem 0rem;
+}
+
+.binf-widgets .workitem-footer .binf-btn.binf-btn-primary {
+  margin: 0rem 1rem 0rem 0rem;
+  background-color: #0072aa
+}
+
+.binf-widgets .workitem-footer .binf-btn.binf-btn-default {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.binf-widgets .binf-modal-footer .binf-btn-default-review {
+  float: left;
+}
+
+.binf-widgets .workitem-footer .binf-btn-default {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.binf-widgets .workitem-view {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+
+  background-color: #ffffff;
+  
+  width: 100%;
+  height: 100%;
+}
+
+.workitem-view .workitem-header {
+  height: 4rem;
+  border-bottom: solid 0.0625rem #cccccc;
+  position: relative;
+  padding: 0rem 1rem 0rem 1.5rem;
+}
+
+.workitem-view .workitem-row {
+  display: flex;
+  height: calc(100% - 2.5rem);
+}
+
+.workitem-view .workitem-view-left {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20rem);
+  padding-right: 0;
+}
+
+.workitem-tabpanel .cs-tabpanel, .workitem-tabpanel .binf-tab-pane {
+  height: 100%;
+}
+
+.workitem-view .workitem-tabpanel {
+  width: 20rem;
+  padding-left: 0;
+  height: 100%;
+}
+
+.workitem-tabpanel .binf-tab-content {
+  height: calc(100% - 4rem);
+}
+
+.binf-widgets .workitem-tabpanel .tab-links {
+  height: 4rem;
+  border-bottom: solid 0.0625rem #cccccc;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .tab-links-bar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 1.5rem);
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .tab-links-bar.with-left-toolbar {
+  width: calc(100% - 1.5rem - 1.5rem);
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .tab-links-bar ul.binf-nav {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500%;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .tab-links-bar .fadeout {
+  background: -moz-linear-gradient(left, rgba(242, 242, 242, 0) 0%, rgba(255, 255, 255, 255) 75%, rgba(255, 255, 255, 255) 100%); 
+  background: -webkit-linear-gradient(left, rgba(242, 242, 242, 0) 0%, rgba(255, 255, 255, 255) 75%, rgba(255, 255, 255, 255) 100%); 
+  background: linear-gradient(to right, rgba(242, 242, 242, 0) 0%, rgba(255, 255, 255, 255) 75%, rgba(255, 255, 255, 255) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f2f2f2', endColorstr='#f2f2f2', GradientType=1); 
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .tab-links-bar .fadeout {
+  position: absolute;
+  right: 0rem;
+  width: 35px;
+  height: 3.75rem;
+  z-index: 9;
+  pointer-events: none;
+  display: inline-block;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .left-toolbar {
+  float: left;
+  
+  display: inline-block;
+  height: 4rem;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .right-toolbar {
+  height: 4rem;
+  display: inline-block;
+  position: absolute;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .goto_previous_div .goto_previous_page,
+.binf-widgets .workitem-tabpanel .tab-links .goto_next_div .goto_next_page,
+.binf-widgets .workitem-tabpanel .tab-links .add {
+  display: inline-block;
+  margin-top: 2.375rem;
+  width: 14px;
+  height: 14px;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .goto_previous_div {
+  z-index: 2;
+  height: 4rem;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .goto_previous_div .goto_previous_page {
+  margin-left: .5rem; 
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .goto_previous_div:hover,
+.binf-widgets .workitem-tabpanel .tab-links .goto_previous_div:focus,
+.binf-widgets .workitem-tabpanel .tab-links .goto_previous_div .goto_previous_page:hover,
+.binf-widgets .workitem-tabpanel .tab-links .goto_previous_div .goto_previous_page:focus,
+.binf-widgets .workitem-tabpanel .tab-links .goto_next_div:hover,
+.binf-widgets .workitem-tabpanel .tab-links .goto_next_div:focus,
+.binf-widgets .workitem-tabpanel .tab-links .goto_next_div .goto_next_page:hover,
+.binf-widgets .workitem-tabpanel .tab-links .goto_next_div .goto_next_page:focus,
+.binf-widgets .workitem-tabpanel .tab-links .add:hover,
+.binf-widgets .workitem-tabpanel .tab-links .add:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .goto_next_div {
+  height: 4rem;
+  z-index: 2;
+}
+
+.binf-widgets .workitem-tabpanel .tab-links .goto_next_div .goto_next_page {
+  margin-left: .5rem; 
+}
+
+.workitem-header .cs-icon-left {
+  font-size: 2.25rem;
+  left: 1.5rem;
+  top: 0.875rem;
+  padding-left: 1.5rem;
+}
+
+.binf-widgets .workflow-action-dialog .binf-modal-dialog {
+  width: 600px;
+  margin-top: 130px;
+}
+
+.workitem-header .tile-title {
+  left: 1rem;
+  color: #333333;
+}
+
+.binf-widgets .workitem-footer {
+  padding: 15px 7px 15px 7px;
+  text-align: right;
+}
+
+.binf-widgets .workitem-header .tile-title {
+  margin: 0 0 0 50px
+}
+
+.binf-widgets .workitem-header .tile-title h2 {
+  font-size: 1.75rem;
+  line-height: 61px;
+  color: #333333;
+  font-weight: 300;
+  margin: 0;
+  position: relative;
+  display: table-cell;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .workitem-header .tile-title h2:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.workitem-view .workitem-footer {
+  height: 4rem;
+  background: #ffffff;
+  border-top: solid 0.0625rem #a9a9a9;
+}
+
+.binf-widgets .workitem-footer .binf-modal-footer .binf-btn + .binf-btn {
+  margin-left: 0rem;
+}
+
+.binf-widgets .binf-modal-footer .binf-btn-default-review:hover {
+  background-color: #0072aa;
+  color: #ffffff;
+}
+
+.workflow-action-dialog .binf-widgets .binf-modal-dialog {
+
+  width: 600px;
+  margin: 100px auto;
+}
+
+.cs-form .alpaca-container-label > h3 {
+  color: #0072aa;
+  font-size: 1.25rem;
+}
+
+.binf-widgets .workitem-header .cs-selectfield {
+  margin-top: 8px;
+  width: inherit;
+  height: 100%;
+}
+
+.workitem-header .cs-selectfield .cs-field-write button {
+  height: 40px;
+  width: 45%;
+  border: 0px;
+}
+
+.workitem-header .cs-selectfield .cs-field-write .select-workflow-label {
+  font: italic 1.3rem Lato;
+  color: #757575;
+  float: left;
+  padding-right: 1rem;
+}
+
+.workitem-header .cs-selectfield .cs-field-write button .cs-icon {
+  margin-top: 5px;
+}
+
+.workitem-header .cs-selectfield.binf-dropdown .cs-field-write ul.binf-dropdown-menu {
+  width: inherit;
+}
+
+.workitem-header .cs-selectfield .cs-field-write button:focus,
+.binf-widgets .workitem-header .binf-open > .binf-dropdown-toggle.binf-btn-default,
+.workitem-header .cs-dropdown-shadow {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  border: 0px;
+}
+
+.workitem-tabpanel .binf-nav > li > a:focus,
+.workitem-tabpanel .binf-nav > li.binf-active > a:focus,
+.workitem-tabpanel .binf-nav-pills > li > a:focus,
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.workitem-tabpanel .binf-nav > li > a:hover > .cs-tablink-text {
+  border-bottom: 4px solid #666666;
+}
+
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a,
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a:hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a > .cs-tablink-text,
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a:hover > .cs-tablink-text {
+  border-bottom: 4px solid #0072aa;
+}
+
+
+.workitem-tabpanel .binf-nav-pills > li > a:active > .cs-tablink-text {
+  border-bottom: 4px solid #333333;
+}
+
+.workitem-tabpanel .binf-nav-pills > li > a {
+  background-color: transparent;
+  width: auto;
+  text-align: center;
+  text-overflow: ellipsis;
+  border: none;
+  border-radius: 0;
+  font-size: 0.875rem;
+  color: #000000;
+  padding: 0 2px 0 2px;
+  vertical-align: baseline;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  font-weight: 500;
+  height: 100%;
+}
+
+.workitem-tabpanel .binf-nav-pills > li {
+  height: 100%;
+}
+
+.workitem-tabpanel .binf-nav > li > a > .cs-tablink-text {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 1em;
+  margin-right: 1em;
+  pointer-events: none;
+  padding-top: 2.8em;
+}
+
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a,
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a:hover,
+.workitem-tabpanel .binf-nav-pills > li.binf-active > a:focus {
+  background-color: transparent;
+  color: #000000;
+}
+
+.binf-widgets .workitem-tabpanel .binf-nav > li > a:hover {
+  background-color: transparent;
+}
+
+.workitem-tabpanel .binf-nav > li > a {
+  height: 4rem;
+}
+
+.workitem-tabpanel .workitem-tabpanel-header.workitem-doc-initiate {
+  display: block;
+}
+
+.workitem-tabpanel .workitem-tabpanel-header {
+  height: 4rem;
+  border-bottom: solid 0.0625rem #cccccc;
+  position: relative;
+  padding: 0rem 1rem 0rem 1.5rem;
+  padding-left: 0;
+  display: none;
+}
+
+.workitem-tabpanel .workitem-tabpanel-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.workitem-tabpanel .workitem-tabpanel-content.workitem-doc-initiate {
+  height: calc(100% - 4rem);
+}

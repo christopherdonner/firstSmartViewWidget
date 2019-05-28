@@ -1,0 +1,313 @@
+{
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/nodes\/6254?expand=node&expand=user&actions=",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "actions": {
+      "data": {
+        "addversion": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/versions\/create?id=6254",
+          "href": "\/api\/v2\/nodes\/6254\/versions",
+          "method": "POST",
+          "name": "Add Version"
+        },
+        "audit": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/6254\/audit?limit=1000",
+          "method": "GET",
+          "name": "Audit"
+        },
+        "comment": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "POST",
+          "name": "Comments"
+        },
+        "copy": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/copy?id=6254",
+          "href": "\/api\/v2\/nodes",
+          "method": "POST",
+          "name": "Copy"
+        },
+        "docview": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "?func=doc.viewdoc&nodeid=6254",
+          "method": "GET",
+          "name": "View"
+        },
+        "download": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/6254\/content?download",
+          "method": "GET",
+          "name": "Download"
+        },
+        "edit": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "?func=Edit.Edit&nodeid=6254",
+          "method": "GET",
+          "name": "Edit"
+        },
+        "makefavorite": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/members\/favorites\/6254",
+          "method": "POST",
+          "name": "Add to Favorites"
+        },
+        "more": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "",
+          "name": "..."
+        },
+        "move": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/move?id=6254",
+          "href": "\/api\/v2\/nodes\/6254",
+          "method": "PUT",
+          "name": "Move"
+        },
+        "open": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/6254\/content",
+          "method": "GET",
+          "name": "Open"
+        },
+        "properties": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/6254",
+          "method": "GET",
+          "name": "Properties"
+        },
+        "rename": {
+          "body": "",
+          "content_type": "",
+          "form_href": "\/api\/v2\/forms\/nodes\/rename?id=6254",
+          "href": "\/api\/v2\/nodes\/6254",
+          "method": "PUT",
+          "name": "Rename"
+        },
+        "unreserve": {
+          "body": "reserved_user_id=null",
+          "content_type": "application\/x-www-form-urlencoded",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/6254",
+          "method": "PUT",
+          "name": "Unreserve"
+        },
+        "versions": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/6254\/versions",
+          "method": "GET",
+          "name": "Versions"
+        }
+      },
+      "map": {
+        "default_action": "open",
+        "more": [
+          "properties",
+          "audit",
+          "versions"
+        ]
+      },
+      "order": [
+        "docview",
+        "open",
+        "edit",
+        "download",
+        "addversion",
+        "rename",
+        "makefavorite",
+        "copy",
+        "move",
+        "unreserve",
+        "comment",
+        "more"
+      ]
+    },
+    "data": {
+      "columns": [
+        {
+          "data_type": 2,
+          "key": "type",
+          "name": "Type",
+          "sort_key": "x61031"
+        },
+        {
+          "data_type": -1,
+          "key": "187420_4",
+          "name": "Subject",
+          "sort_key": "x197408"
+        },
+        {
+          "data_type": 2,
+          "key": "187420_3",
+          "name": "Organization"
+        },
+        {
+          "data_type": -1,
+          "key": "187420_5",
+          "name": "Status",
+          "sort_key": "x186712"
+        },
+        {
+          "data_type": -1,
+          "key": "187420_6",
+          "name": "Publisher"
+        },
+        {
+          "data_type": -1,
+          "key": "name",
+          "name": "Name",
+          "sort_key": "x61028"
+        },
+        {
+          "data_type": -1,
+          "key": "186529_2",
+          "name": "Manual Description",
+          "sort_key": "x197409"
+        },
+        {
+          "data_type": -1,
+          "key": "size_formatted",
+          "name": "Size",
+          "sort_key": "x61029"
+        },
+        {
+          "data_type": 401,
+          "key": "modify_date",
+          "name": "Modified",
+          "sort_key": "x61027"
+        },
+        {
+          "data_type": 2,
+          "key": "version",
+          "name": "Version"
+        },
+        {
+          "data_type": 5,
+          "key": "187420_7",
+          "name": "Rights Management",
+          "sort_key": "x197953"
+        },
+        {
+          "data_type": 2,
+          "key": "187420_12",
+          "name": "Reviewer Name",
+          "sort_key": "x208790"
+        },
+        {
+          "data_type": 2,
+          "key": "187420_13",
+          "name": "Reviewed at",
+          "sort_key": "x208716"
+        },
+        {
+          "data_type": 2,
+          "key": "comments",
+          "name": "Comments"
+        }
+      ],
+      "properties": {
+        "container": false,
+        "container_size": 0,
+        "create_date": "2003-10-03T12:18:09",
+        "create_user_id": 1000,
+        "description": "Add Version done via drop\/paste on 03\/10\/2003 12:11:05 PM",
+        "description_multilingual": {
+          "en": "Add Version done via drop\/paste on 03\/10\/2003 12:11:05 PM",
+          "ja": ""
+        },
+        "favorite": false,
+        "id": 6254,
+        "mime_type": "application\/msword",
+        "modify_date": "2016-05-02T09:52:36",
+        "modify_user_id": 1000,
+        "name": "0402_blk.doc",
+        "name_multilingual": {
+          "en": "0402_blk.doc",
+          "ja": ""
+        },
+        "owner_group_id": 1001,
+        "owner_user_id": 1000,
+        "parent_id": 6521,
+        "reserved": true,
+        "reserved_date": "2016-07-12T18:19:07",
+        "reserved_user_id": 1000,
+        "size": 626688,
+        "size_formatted": "612 KB",
+        "type": 144,
+        "type_name": "Document",
+        "versions_control_advanced": false,
+        "volume_id": -2000,
+        "wnd_att_690t_3": null,
+        "wnd_att_690t_6": null,
+        "wnd_comments": null,
+        "wnd_version": 1,
+        "wnf_att_6832_2": null,
+        "wnf_att_690t_4": null,
+        "wnf_att_690t_5": null,
+        "wnf_att_690t_7": null,
+        "wnf_att_690t_d": null,
+        "wnf_att_690t_f": null
+      },
+      "versions": [
+        {
+          "create_date": "2003-10-03T12:18:09",
+          "description": "Add Version done via drop\/paste on 03\/10\/2003 12:11:05 PM",
+          "file_create_date": "1999-07-02T16:37:00",
+          "file_modify_date": "1999-07-02T16:37:00",
+          "file_name": "0402_blk.doc",
+          "file_size": 626688,
+          "file_type": "DOC",
+          "id": 6254,
+          "locked": false,
+          "locked_date": null,
+          "locked_user_id": null,
+          "mime_type": "application\/msword",
+          "modify_date": "2003-10-03T12:18:09",
+          "name": "0402_blk.doc",
+          "owner_id": 1000,
+          "provider_id": 6255,
+          "version_id": 6256,
+          "version_number": 1,
+          "version_number_major": 0,
+          "version_number_minor": 1,
+          "version_number_name": "1"
+        }
+      ]
+    }
+  }
+}

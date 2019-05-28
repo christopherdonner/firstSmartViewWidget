@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NodePicker</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    /* Put some margin around the body */
+    body.binf-widgets {
+      padding: 1em;
+    }
+
+    /* Fix Bootstrap styling for forms destroyed by BmDodo styling */
+    .binf-widgets .options {
+      background-color: #ffffff;
+      padding: 1em;
+    }
+
+    .binf-widgets .binf-control-label {
+      font-weight: bold;
+    }
+
+    /* Improve the default form layout */
+    .binf-widgets .binf-checkbox-inline, .binf-widgets .binf-radio-inline {
+      margin-right: 1em;
+    }
+
+    .binf-widgets .options p {
+      margin-bottom: 1em;
+    }
+
+    .binf-widgets .options button {
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+
+    /* Show the source code popovers with full width and monospace font */
+    .binf-widgets .binf-popover {
+      max-width: initial;
+    }
+
+    .binf-widgets .binf-popover-content {
+      white-space: pre;
+      font-family: monospace;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            //credentials: {
+            //  username: 'Admin"',
+            //  password: 'livelink'
+            //},
+            url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            supportPath: '/support'
+            //url: 'http://vmfp-oclipse.opentext.net/carbonfibre/cs/api/v1',
+            //supportPath: '/carbonfibresupport'
+          }
+          //},
+          //'csui/utils/contexts/factories/node': {
+          //  attributes: {type: 141}
+        }
+      }
+    });
+
+    require(['csui/utils/contexts/page/page.context', 'csui/models/node/node.model',
+      '../node.picker', "csui/utils/contexts/factories/node", "csui/models/nodechildren",
+      'csui/utils/contexts/factories/connector', 'csui/lib/jquery', 'csui/lib/binf/js/binf'
+    ], function (PageContext, NodeModel, NodePicker, NodeFactory, NodeChildrenCollection,
+        ConnectorFactory, $) {
+
+      function showPicker() {
+        var context = new PageContext(),
+            dialogTitle = $('#dialogTitle').val(),
+            initialContainer = $('#initialContainer').val(),
+            initialContainerType = $('#initialContainerType :checked').val(),
+            buttonLabel = $('#buttonLabel').val(),
+            selectableTypes = $('#selectableTypes').val(),
+            selectMultiple = $('#selectMultiple').prop('checked');
+        if (initialContainer) {
+          initialContainer = parseInt(initialContainer);
+          initialContainer = initialContainerType === 'node' ? {id: initialContainer} : {
+            id: 'volume',
+            type: initialContainer
+          };
+        }
+        if (selectableTypes) {
+          selectableTypes = selectableTypes.split(',').map(
+              function (type) {
+                return parseInt(type.trim());
+              });
+        }
+        var nodePicker = new NodePicker({
+          context: context,
+          dialogTitle: dialogTitle,
+          initialContainer: initialContainer,
+          selectableTypes: selectableTypes,
+          selectMultiple: selectMultiple,
+          selectButtonLabel: buttonLabel
+        });
+        nodePicker
+            .show()
+            .done(function (args) {
+              var names = args.nodes.map(function (node) {
+                return node.get('name');
+              });
+              alert(names.join(', '));
+            });
+      }
+
+      $('#show').click(showPicker);
+
+      $('#scenarios > button')
+          .each(function () {
+            var source;
+            var scenario = $(this).text();
+            switch (scenario) {
+            case 'Add Category':
+              source = '// Picks a category to add to a document\n\
+var nodePicker = new NodePicker({\n\
+      connector: connector, // or context\n\
+      initialContainer: {\n\
+        id: \'volume\',\n\
+        type: 133\n\
+      },\
+      selectableTypes: [131],\n\
+      dialogTitle: \'Add a Category\',\n\
+      selectButtonLabel: \'Add\'\n\
+    });';
+              break;
+            case 'Attach Documents':
+              source = '// Picks documents to attach to a comment\n\
+var nodePicker = new NodePicker({\n\
+      connector: connector, // or context\n\
+      selectableTypes: [144],\n\
+      dialogTitle: \'Attach Documents\',\n\
+      selectButtonLabel: \'Attach\'\n\
+    });';
+              break;
+            case 'Create Shortcut For':
+              source = '// Picks a node to create a new shortcut for\n\
+var nodePicker = new NodePicker({\n\
+      connector: connector, // or context\n\
+      dialogTitle: \'Create Shortcut For\',\n\
+    });';
+              break;
+            case 'Make Shortcut At':
+              source = '// Picks a container to make a new shortcut for an existing node at\n\
+var nodePicker = new NodePicker({\n\
+      connector: connector, // or context\n\
+      selectableTypes: [-1],\n\
+      dialogTitle: \'Make Shortcut At\',\n\
+      selectButtonLabel: \'Make\'\n\
+    });';
+              break;
+            case 'Open Container':
+              source = '// Picks a container to start browsing at\n\
+var nodePicker = new NodePicker({\n\
+      connector: connector, // or context\n\
+      selectableTypes: [-1],\n\
+      dialogTitle: \'Open Container\'\n\
+    });';
+              break;
+            }
+            $(this)
+                .attr({
+                  'role': 'button',
+                  'data-binf-toggle': 'binf_popover',
+                  'data-binf-trigger': 'focus',
+                  'title': 'Source code',
+                  'data-binf-content': source
+                })
+                .binf_popover({
+                  trigger: 'hover',
+                  placement: 'top'
+                });
+          })
+          .click(function () {
+            var scenario = $(this).text();
+            switch (scenario) {
+            case 'Add Category':
+              $('#dialogTitle').val('Add Category');
+              $('#initialContainer').val('133');
+              $('#initialContainerType :checked').val('volume');
+              $('#buttonLabel').val('Add');
+              $('#selectableTypes').val('131');
+              $('#selectMultiple').prop('checked', false);
+              break;
+            case 'Attach Documents':
+              $('#dialogTitle').val('Attach Documents');
+              $('#initialContainer').val('141');
+              $('#initialContainerType :checked').val('volume');
+              $('#buttonLabel').val('Attach');
+              $('#selectableTypes').val('144');
+              $('#selectMultiple').prop('checked', true);
+              break;
+            case 'Create Shortcut For':
+              $('#dialogTitle').val('Select Any Node');
+              $('#initialContainer').val('141');
+              $('#initialContainerType :checked').val('volume');
+              $('#buttonLabel').val('');
+              $('#selectableTypes').val('');
+              $('#selectMultiple').prop('checked', false);
+              break;
+            case 'Make Shortcut At':
+              $('#dialogTitle').val('Select Target Container');
+              $('#initialContainer').val('141');
+              $('#initialContainerType :checked').val('volume');
+              $('#buttonLabel').val('Create');
+              $('#selectableTypes').val('-1');
+              $('#selectMultiple').prop('checked', false);
+              break;
+            case 'Open Container':
+              $('#dialogTitle').val('Open Container');
+              $('#initialContainer').val('141');
+              $('#initialContainerType :checked').val('volume');
+              $('#buttonLabel').val('');
+              $('#selectableTypes').val('-1');
+              $('#selectMultiple').prop('checked', false);
+              break;
+            }
+            showPicker();
+          });
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="options">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Instructions:</div>
+    <div class="buttons binf-col-sm-9">Set up the parameters in the form and click the 
+      "Show" button below.
+    </div>
+  </div>
+
+  <hr>
+
+  <form class="binf-form-horizontal">
+    <div class="binf-form-group">
+      <label for="dialogTitle" class="binf-col-sm-2 binf-control-label">Dialog Title:</label>
+      <div class="binf-col-sm-9">
+        <input type="text" class="binf-form-control" id="dialogTitle" value="Select an Object"
+               placeholder="Provide the text for the dialog caption">
+      </div>
+
+      <label for="initialContainer" class="binf-col-sm-2 binf-control-label">Initial Container:</label>
+      <div class="binf-col-sm-9">
+        <input type="text" class= "binf-form-control" id="initialContainer" value="141"
+               placeholder="Provide a node ID of the container to start with">
+      </div>
+
+      <div id="ictLabel" class="binf-col-sm-2 binf-control-label">Initial Container Type:</div>
+      <div aria-labelledby="ictLabel" class="binf-col-sm-9">
+        <label class="binf-radio-inline">
+          <input type="radio" name="buttons" value="node"> Node
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="buttons" value="Volume" checked> Volume
+        </label>
+      </div>
+
+      <label for="selectableTypes" class="binf-col-sm-2 binf-control-label">Selectable types:</label>
+      <div class="binf-col-sm-9">
+        <input type="text" class= "binf-form-control" id="selectableTypes"
+               placeholder="Provide a comma-delimited list of selectable node subtypes">
+      </div>
+      <div class="binf-col-sm-offset-2 binf-col-sm-9">
+        <label class="checkbox-inline">
+          <input type="checkbox" id="selectMultiple"> Select multiple Items
+        </label>
+      </div>
+
+      <label for="buttonLabel" class="binf-col-sm-2 binf-control-label">Button Label:</label>
+      <div class="binf-col-sm-9">
+        <input type="text" class= "binf-form-control" id="buttonLabel"
+               placeholder="Override the text on the select button">
+      </div>
+    </div>
+    <hr>
+
+    <div class="binf-row binf-form-horizontal">
+      <div class="binf-col-sm-2 binf-control-label">Typical Scenarios:</div>
+      <div class="binf-col-sm-9" id="scenarios">
+        <button type="button" class="binf-btn binf-btn-default">Add Category</button>
+        <button type="button" class="binf-btn binf-btn-default">Attach Documents</button>
+        <button type="button" class="binf-btn binf-btn-default">Create Shortcut For</button>
+        <button type="button" class="binf-btn binf-btn-default">Make Shortcut At</button>
+        <button type="button" class="binf-btn binf-btn-default">Open Container</button>
+      </div>
+    </div>
+  </form>
+
+  <hr>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-offset-2 binf-col-sm-9">
+      <button type="button" class="binf-btn binf-btn-primary" id="show">Show</button>
+    </div>
+  </div>
+  </form>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

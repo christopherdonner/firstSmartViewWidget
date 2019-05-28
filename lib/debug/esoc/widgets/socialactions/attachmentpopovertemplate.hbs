@@ -1,0 +1,65 @@
+{{#if popoverTitle}}
+  <span id="esoc-social-selected-attachment-dialog-title" title="{{popoverTitle}}"
+       class="esoc-social-attachment-dialog-title">
+    <span class="esoc-social-attachment-label" title="{{popoverTitle}}">{{popoverTitle}}</span>
+  </span>
+{{/if}}
+{{#if attachFilesPopover}}
+  <div class="esoc-social-attachment-dialog">
+    <div class="esoc-social-attachment-row">
+      <span id="esoc-social-attachment-cs-icon-{{id}}"
+            class="esoc-social-attachment-cs-icon"></span>
+      <a href="javascript:void(0);" id="esoc-social-attachment-cs-{{id}}"
+         class="esoc-social-attachment-cs" title="{{fromContentServer}}">
+        <span>{{fromContentServer}}</span>
+      </a>
+    </div>
+    <div class="esoc-social-attachment-row">
+      <span id="esoc-social-attachment-desktop-icon-{{id}}"
+            class="esoc-social-attachment-desktop-icon"></span>
+      <a href="javascript:void(0);" id="esoc-social-attachment-desktop-{{id}}"
+         class="esoc-social-attachment-desktop" title="{{fromYourDesktop}}">
+        <span>{{fromYourDesktop}}</span>
+      </a>
+    </div>
+  </div><input type="file" id="{{desktopAttachmentInputId}}" name="AddDesktopDoc"
+               style="display:none" />
+{{/if}}
+{{#if attachmentPopover}}
+  <div id="esoc-social-selected-attachment-dialog">
+    <div class="esoc-social-selected-file row-fluid">
+
+      <a href="javascript:void(0);" id="esoc-social-selected-file-icon-{{id}}" title="{{filename}}"
+         class="esoc-social-selected-file-icon {{ filemimetypeicon }} binf-col-lg-1 binf-col-md-1 binf-col-sm-1 binf-col-xs-1 esoc-social-no-padding-right binf-pull-left" />
+
+      <a href="javascript:void(0);" id="esoc-social-attachment-name-{{id}}"
+         class="esoc-social-attachment-name binf-col-lg-6 binf-col-md-6 binf-col-sm-6 binf-col-xs-6 esoc-social-no-padding-right"
+         title="{{filename}}">{{filename}}</a>
+            <span id="esoc-social-attachment-size-{{id}}" class="esoc-social-attachment-size binf-col-lg-3 binf-col-md-3 binf-col-sm-3 binf-col-xs-3
+                  esoc-social-no-padding-right">{{filesize}}</span>
+      <a href="javascript:void(0);" id="esoc-social-attachment-delete-icon-{{id}}" class="esoc-social-attachment-icon-delete binf-col-lg-2 binf-col-md-2 binf-col-sm-2 binf-col-xs-2
+                  esoc-social-no-padding-right" title="{{deletetitle}}"></a>
+    </div>
+  </div>
+{{/if}}
+{{#if shortcutPopover}}
+  <div id="esoc-social-selected-attachment-dialog">
+    <div class="esoc-social-selected-file row-fluid">
+
+            <span class="csui-icon-group" title="{{filename}}">
+                  <span id="esoc-social-selected-file-icon-{{id}}"
+                        class="esoc-social-selected-file-icon esoc-social-mime-icon esoc-comment-valign {{filemimetypeicon}} binf-col-lg-1 binf-col-md-1 binf-col-sm-1 binf-col-xs-1 esoc-social-no-padding-right binf-pull-left" />
+                  <a href="javascript:void(0);" class="csui-icon csui-icon-shortcut-overlay"></a>
+            </span>
+
+      <a href="javascript:void(0);" id="esoc-social-attachment-name-{{id}}"
+         class="esoc-social-attachment-name binf-col-lg-6 binf-col-md-6 binf-col-sm-6 binf-col-xs-6 esoc-social-no-padding-right esoc-social-shortcut-name"
+         title="{{filename}}">{{filename}}</a>
+      <span
+          class="esoc-social-attachment-size binf-col-lg-4 binf-col-md-4 binf-col-sm-4 binf-col-xs-4 esoc-social-no-padding-right"></span>
+      <a href="javascript:void(0);" id="esoc-social-attachment-delete-icon-{{id}}"
+         class="esoc-social-attachment-icon-delete binf-col-lg-1 binf-col-md-1 binf-col-sm-4 binf-col-xs-1 esoc-social-no-padding-right esoc-shortcut-delete-icon"
+         title="{{deletetitle}}"></a>
+    </div>
+  </div>
+{{/if}}

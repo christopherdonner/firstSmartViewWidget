@@ -1,0 +1,23 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-rowselection-toolbar {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 0; 
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  transition: flex-basis 0.3s; 
+}
+
+.binf-widgets .csui-rowselection-toolbar-visible {
+  flex-basis: 3em;
+  visibility: visible;
+  overflow: visible;
+  transition: flex-basis 0.3s;
+}
+
+.binf-widgets .csui-rowselection-toolbar.csui-no-animation,
+.binf-widgets .csui-rowselection-toolbar-visible.csui-no-animation {
+  transition: none;
+}

@@ -1,0 +1,38 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-tab-links.binf-dropdown .cs-label {
+  font-size: 1.125rem;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.cs-tab-links.binf-dropdown button {
+  width: auto;
+}
+
+.cs-tab-links.binf-dropdown button .cs-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 3px 5px;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li.binf-active a {
+  color: #333333;
+  background-color: #e2e2e2;
+  margin: 0.063rem 0;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li a {
+  margin: 0.063rem 0;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li a:focus {
+  outline: 1px dotted #333333;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li:first-child a {
+  margin-top: 0.187rem;
+}

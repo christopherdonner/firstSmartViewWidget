@@ -1,0 +1,9 @@
+{
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "donner": {
+        "version": "1.0"
+      }
+    }
+  }
+}

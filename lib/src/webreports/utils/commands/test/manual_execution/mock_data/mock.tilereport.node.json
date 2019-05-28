@@ -1,0 +1,177 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "/api/v2/nodes/699160?actions=addcategory&actions=addversion&actions=open&actions=copy&actions=delete&actions=download&actions=edit&actions=editactivex&actions=rename&actions=move&actions=permissions&actions=properties&actions=reserve&actions=unreserve&actions=collect&actions=removefromcollection&expand=properties{original_id}&fields=properties",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"actions": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"collect": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160",
+					"method": "PUT",
+					"name": "Collect"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/copy?id=699160",
+					"href": "/api/v2/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"download": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160/content?download",
+					"method": "GET",
+					"name": "Download"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/move?id=699160",
+					"href": "/api/v2/nodes/699160",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"open": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160/content",
+					"method": "GET",
+					"name": "Open"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"removefromcollection": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160",
+					"method": "PUT",
+					"name": "Remove From Collection"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/rename?id=699160",
+					"href": "/api/v2/nodes/699160",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "/api/v2/nodes/699160",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "GetParameters",
+				"more": [
+					"properties"
+				]
+			},
+			"order": [
+				"open",
+				"download",
+				"addversion",
+				"addcategory",
+				"rename",
+				"copy",
+				"collect",
+				"move",
+				"removefromcollection",
+				"reserve",
+				"delete"
+			]
+		},
+		"data": {
+			"properties": {
+				"container": false,
+				"container_size": 0,
+				"create_date": "2017-12-15T12:19:43",
+				"create_user_id": 1000,
+				"description": "",
+				"description_multilingual": {
+					"en_US": "",
+					"fr": ""
+				},
+				"external_create_date": null,
+				"external_identity": "",
+				"external_identity_type": "",
+				"external_modify_date": null,
+				"external_source": "",
+				"favorite": true,
+				"id": 699160,
+				"mime_type": "text/html",
+				"modify_date": "2018-02-13T11:31:28",
+				"modify_user_id": 1000,
+				"name": "Widget Destination - TileReport",
+				"name_multilingual": {
+					"en_US": "Widget Destination - TileReport",
+					"fr": ""
+				},
+				"owner": "Minton, Adam",
+				"owner_group_id": 1001,
+				"owner_user_id": 1000,
+				"parent_id": 699145,
+				"permissions_model": "advanced",
+				"reserved": false,
+				"reserved_date": null,
+				"reserved_shared_collaboration": false,
+				"reserved_user_id": 0,
+				"size": 5715,
+				"size_formatted": "6 KB",
+				"type": 30303,
+				"type_name": "WebReport",
+				"versions_control_advanced": false,
+				"volume_id": -2000
+			}
+		}
+	}
+}

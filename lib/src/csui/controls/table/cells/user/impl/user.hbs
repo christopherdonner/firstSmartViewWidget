@@ -1,0 +1,57 @@
+<div class="csui-user-container">
+{{#if isPublicPermission}}
+  <div class="csui-profileimg">
+    <span class="csui-icon-paceholder csui-icon icon_permmision_public"></span>
+  </div>
+  <div class="member-info csui-fadeout{{#if disabled}} binf-disabled{{/if}} ">
+    <div class="">
+      <span class="csui-user-display-name csui-public"
+            aria-label="{{ariaUserLabel}}">{{publicAccesslabel}}</span>
+    </div>
+  </div>
+{{else}}
+  {{#if showProfileImg}}
+    <div class="csui-profileimg{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="csui-icon {{#if isOwner}} icon_permmision_owner {{else}}
+      {{#if isOwnerGroup}} icon_permmision_owner_group {{else}} csui-icon-paceholder
+      {{#if isGroup}} image_group_placeholder_permission
+      {{else}} image_user_placeholder_permission{{/if}}{{/if}}{{/if}}" title="{{title}}"
+          aria-label="{{ariaUserType}}">{{#if isUser}} {{initials}}{{/if}}</span>
+      {{#if isOwner}}
+      {{else}}
+        <img class="csui-icon-user csui-icon binf-img-circle binf-hidden" src="{{usrImgSrc}}"
+             alt="{{name}}" title="{{name}}" aria-label="{{ariaUserType}}">
+      {{/if}}
+    </div>
+  {{/if}}
+  <div class="member-info csui-fadeout ">
+    {{#if addOwnerOrGroup}}
+      <div class="csui-add-owner-or-group">
+        <span class="csui-user-display-name binf-disabled"
+              aria-label="{{ariaUserLabel }}">{{name}}</span>
+        <span class="csui-icon"></span>
+      </div>
+    {{else}}
+      <div class="">
+        <span class="csui-user-display-name  {{#if disabled}} binf-disabled{{/if}}"
+              aria-label="{{ariaUserLabel}}">{{name}}</span>
+      </div>
+    {{/if}}
+  </div>
+{{/if}}
+{{#if includeInlineToolBarPlaceholder}}
+  {{#if isOwnerOrOwnerGroup}}
+    <div class="csui-inline-owner-change"></div>
+  {{/if}}
+  {{#unless addOwnerOrGroup}}
+    <div class="{{inlineToolBarPlaceholderClass}} binf-hidden"></div>
+  {{/unless}}
+{{/if}}
+</div>
+{{#if selectedUsername}}
+  <div class="csui-selected-user-ingroup">
+    <span class="icon icon-toolbar-more"></span>
+    <span class="csui-selected-username">{{selectedUsername}}</span>
+  </div>
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

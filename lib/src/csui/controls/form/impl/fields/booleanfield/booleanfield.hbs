@@ -1,0 +1,19 @@
+<div class="cs-field-write csui-unedited">
+  <div class="cs-field-inner">
+    <div class="control-area">
+      <input type="checkbox" name="csui-checkbox" aria-labelledby="{{idBtnLabel}}" {{#if value}}
+             aria-checked=true{{else}}
+             aria-checked=false{{/if}} id="{{this.id}}">
+    </div>
+    {{#if this.applyFlag}}
+      <div class="icon-container binf-hidden">
+        <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"
+             data-cstabindex="0"></div>
+      </div>
+    {{/if}}
+  </div>
+</div>
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

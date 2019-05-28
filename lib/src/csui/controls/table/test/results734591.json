@@ -1,0 +1,262 @@
+{
+  "links": {
+    "self": {
+      "body": "",
+      "content_type": "",
+      "href": "\/api\/v2\/nodes\/183718?perspective=&actions",
+      "method": "GET",
+      "name": ""
+    }
+  },
+  "results": {
+    "actions": {
+      "audit": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v1\/nodes\/183718\/audit?limit=1000",
+        "method": "GET",
+        "name": "Audit"
+      },
+      "copy": {
+        "body": "",
+        "content_type": "",
+        "form_href": "\/api\/v1\/forms\/nodes\/copy?id=183718",
+        "href": "\/api\/v1\/nodes",
+        "method": "POST",
+        "name": "Copy"
+      },
+      "delete": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v1\/nodes\/183718",
+        "method": "DELETE",
+        "name": "Delete"
+      },
+      "docview": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "?func=doc.viewdoc&nodeid=183718",
+        "method": "GET",
+        "name": "View"
+      },
+      "makefavorite": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v2\/members\/favorites\/183718",
+        "method": "POST",
+        "name": "Add to Favorites"
+      },
+      "more": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "",
+        "method": "",
+        "name": "..."
+      },
+      "move": {
+        "body": "",
+        "content_type": "",
+        "form_href": "\/api\/v1\/forms\/nodes\/move?id=183718",
+        "href": "\/api\/v1\/nodes\/183718",
+        "method": "PUT",
+        "name": "Move"
+      },
+      "open": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v1\/nodes\/183718\/nodes",
+        "method": "GET",
+        "name": "Open"
+      },
+      "properties": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v1\/nodes\/183718",
+        "method": "GET",
+        "name": "Properties"
+      },
+      "rename": {
+        "body": "",
+        "content_type": "",
+        "form_href": "\/api\/v1\/forms\/nodes\/rename?id=183718",
+        "href": "\/api\/v1\/nodes\/183718",
+        "method": "PUT",
+        "name": "Rename"
+      }
+    },
+    "actions_map": {
+      "default_action": "open",
+      "more": [
+        "properties",
+        "audit"
+      ]
+    },
+    "actions_order": [
+      "docview",
+      "open",
+      "rename",
+      "makefavorite",
+      "copy",
+      "move",
+      "delete",
+      "more"
+    ],
+    "data": {
+      "columns": [
+        {
+          "data_type": 2,
+          "key": "type",
+          "name": "Type",
+          "sort_key": "x61031"
+        },
+        {
+          "data_type": -1,
+          "key": "187420_4",
+          "name": "Subject",
+          "sort_key": "x197408"
+        },
+        {
+          "data_type": 2,
+          "key": "187420_3",
+          "name": "Organization"
+        },
+        {
+          "data_type": -1,
+          "key": "187420_5",
+          "name": "Status",
+          "sort_key": "x186712"
+        },
+        {
+          "data_type": -1,
+          "key": "187420_6",
+          "name": "Publisher"
+        },
+        {
+          "data_type": -1,
+          "key": "name",
+          "name": "Name",
+          "sort_key": "x61028"
+        },
+        {
+          "data_type": -1,
+          "key": "186529_2",
+          "name": "Manual Description",
+          "sort_key": "x197409"
+        },
+        {
+          "data_type": -1,
+          "key": "size_formatted",
+          "name": "Size",
+          "sort_key": "x61029"
+        },
+        {
+          "data_type": 401,
+          "key": "modify_date",
+          "name": "Modified",
+          "sort_key": "x61027"
+        },
+        {
+          "data_type": 2,
+          "key": "version",
+          "name": "Version"
+        },
+        {
+          "data_type": 5,
+          "key": "187420_7",
+          "name": "Rights Management",
+          "sort_key": "x197953"
+        },
+        {
+          "data_type": 2,
+          "key": "187420_12",
+          "name": "Reviewer Name",
+          "sort_key": "x208790"
+        },
+        {
+          "data_type": 2,
+          "key": "187420_13",
+          "name": "Reviewed at",
+          "sort_key": "x208716"
+        },
+        {
+          "data_type": 2,
+          "key": "comments",
+          "name": "Comments"
+        }
+      ],
+      "properties": {
+        "container": true,
+        "container_size": 3,
+        "create_date": "2015-06-16T10:52:56",
+        "create_user_id": 1000,
+        "description": "",
+        "description_multilingual": {
+          "en": "",
+          "ja": ""
+        },
+        "favorite": false,
+        "id": 183718,
+        "mime_type": null,
+        "modify_date": "2015-11-24T08:15:27",
+        "modify_user_id": 1000,
+        "name": "Immersion Pumps",
+        "name_multilingual": {
+          "en": "Immersion Pumps",
+          "ja": ""
+        },
+        "owner_group_id": 1001,
+        "owner_user_id": 1000,
+        "parent_id": 68333,
+        "reserved": false,
+        "reserved_date": null,
+        "reserved_user_id": 0,
+        "size": 3,
+        "size_formatted": "3 Items",
+        "type": 0,
+        "type_name": "Folder",
+        "versions_control_advanced": false,
+        "volume_id": -2000,
+        "wnd_att_690t_3": null,
+        "wnd_att_690t_6": null,
+        "wnd_comments": null,
+        "wnd_version": null,
+        "wnf_att_6832_2": null,
+        "wnf_att_690t_4": null,
+        "wnf_att_690t_5": null,
+        "wnf_att_690t_7": 0,
+        "wnf_att_690t_d": null,
+        "wnf_att_690t_f": null
+      }
+    },
+    "perspective": {
+      "options": {
+        "rows": [
+          {
+            "columns": [
+              {
+                "heights": {
+                  "xs": "full"
+                },
+                "sizes": {
+                  "md": 12
+                },
+                "widget": {
+                  "options": {},
+                  "type": "nodestable"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "type": "grid"
+    }
+  }
+}

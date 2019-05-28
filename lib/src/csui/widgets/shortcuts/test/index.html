@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Shortcuts Widget</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body.binf-widgets {
+      margin-top: 15px;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        'i18n': {
+          loadableLocales: {root: true}
+        }
+      }
+    });
+
+    require([
+      "csui/lib/underscore",
+      "csui/lib/marionette",
+      "csui/utils/contexts/page/page.context",
+      "csui/utils/contexts/factories/node",
+      "./shortcuts.mock.data.js",
+      "../shortcuts.view"
+    ], function (
+      _,
+      Marionette,
+      PageContext,
+      NodeModelFactory,
+      ShortcutsMock,
+      ShortcutsView) {
+
+      'use strict';
+
+      function sampleShortcutsWidget(themes, items, context) {
+        var numberOfShortcuts = _.sample([1, 2, 3, 4]);
+        return new ShortcutsView({
+          context: context,
+          data: {shortcutTheme: _.sample(themes), shortcutItems: _.sample(items, numberOfShortcuts)}
+        });
+      }
+
+      ShortcutsMock.enable();
+
+      var shortcutThemes = [
+        "csui-shortcut-theme-stone1",
+        "csui-shortcut-theme-stone2",
+        "csui-shortcut-theme-teal1",
+        "csui-shortcut-theme-teal2",
+        "csui-shortcut-theme-pink1",
+        "csui-shortcut-theme-pink2",
+        "csui-shortcut-theme-indigo1",
+        "csui-shortcut-theme-indigo2"
+      ];
+      var shortcutItems = [{id: 50000}, {id: 60000}, {id: 70000}, {id: 80000}, {id: 90000}, {id: 2003}, {type: 141}, {type: 142}, {id: 2004}];
+      var pageContext = new PageContext();
+      var testInfo = _.map(_.range(8), function(val) {
+        var tmpWidget = sampleShortcutsWidget(shortcutThemes, shortcutItems, pageContext);
+        // 2004 will trigger an error; restrict it to be selected once.
+        if (_.contains(_.pluck(tmpWidget.items, "id"), 2004)) {
+          shortcutItems = _.filter(shortcutItems, function(item) {return (item.id !== 2004)});
+        }
+        return {
+          region: new Marionette.Region({el: "#content" + val}),
+          widget: tmpWidget
+        };
+      });
+
+      _.each(testInfo, function(info) {
+        info.region.show(info.widget);
+      });
+
+      pageContext.fetch();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content0"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content1"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content2"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content3"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content4"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content5"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content6"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="content7"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

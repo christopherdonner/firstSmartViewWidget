@@ -1,0 +1,88 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-error {
+  margin: auto 0 auto 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-error {
+  overflow-x: hidden;
+}
+
+.binf-widgets .csui-error.csui-low {
+  white-space: nowrap;
+}
+
+.tile .csui-error.content-tile {
+  background-color: #edf1fa;
+}
+
+.csui-error .csui-error-icon-div {
+  padding-top: 80px;
+  display: inline-block;
+  width: 100%;
+}
+
+.csui-error .csui-error-icon-div .csui-error-icon-parent {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: inline-flex;
+}
+
+.csui-error.csui-low .csui-error-icon-div {
+  display: inline-block;
+  height: 100%;
+}
+
+.csui-error .csui-error-icon-div .csui-error-icon {
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.tile .csui-error .csui-error-icon-div .csui-error-icon {
+  width: 48px;
+  height: 48px;
+  margin: 16px;
+}
+
+.csui-error .csui-message {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.csui-error.csui-low .csui-message {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.csui-error .csui-suggestion {
+  padding: 1em 1em 0 1em;
+  font-size: 14px;
+}
+
+.csui-error .binf-popover {
+  width: 200px;
+}
+
+.csui-error .binf-popover .binf-popover-content {
+  font-size: 11px;
+  padding: 8px;
+}
+
+.cs-shortcut.tile .notification_error,
+.csui-shortcut-item .notification_error {
+  background-image: url('../../../themes/carbonfiber/image/icons/notification_warning_grey.svg');
+}

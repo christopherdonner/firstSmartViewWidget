@@ -1,0 +1,70 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-favorite-groups-header {
+  display: flex;
+  flex: 1 1 auto;
+  background-color: #f1f1f1;
+  font-size: 20px;
+  padding-right: 0.25em;
+}
+
+.binf-widgets .csui-favorite-groups-header > button {
+  background: none;
+}
+
+.binf-widgets .csui-favorite-groups-header > .csui-groups-header-plus {
+  border: none;
+  display: inline-flex;
+  padding: 0 0.5em 0 0.5em;
+  font-size: inherit;
+  line-height: initial;
+}
+
+.binf-widgets .csui-favorite-groups-header > .csui-groups-header-plus.binf-disabled {
+  cursor: inherit;
+}
+
+.binf-widgets .csui-favorite-groups-header > .csui-groups-header-plus > .icon {
+  height: 1em;
+  width: 1em;
+  margin: auto;
+}
+
+.binf-widgets .csui-favorite-groups-header > .csui-groups-header-text {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  font-weight: lighter;
+  color: #666666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-has-groups-editing .csui-favorite-groups-header > .binf-btn.csui-groups-header-edit-mode {
+  display: inline-flex;
+}
+
+.binf-widgets .csui-favorite-groups .csui-favorite-groups-header > .binf-btn.csui-groups-header-edit-mode {
+  display: none;
+  flex: 0 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.binf-widgets .csui-favorite-groups-header > .binf-btn.csui-groups-header-edit-mode > span {
+  font-size: 14px;
+  color: #333333;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-any .csui-favorite-groups-header > .binf-btn.csui-groups-header-edit-on {
+  display: none;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-groups-header > .binf-btn.csui-groups-header-edit-off {
+  display: none;
+}

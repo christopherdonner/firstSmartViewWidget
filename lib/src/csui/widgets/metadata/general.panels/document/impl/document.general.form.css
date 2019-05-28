@@ -1,0 +1,68 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-form img.img-doc-preview {
+  
+  opacity: 50;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cs-form img.img-doc-preview:focus {
+  outline: none;
+}
+
+.binf-widgets .cs-form-img-border {
+  
+  
+  
+  border: 1px solid #666666;
+}
+
+.binf-widgets .cs-form-img-border:focus {
+  border: 1px dotted #333333;
+}
+
+.binf-widgets .cs-form-img-vertical {
+  height: 100%;
+  max-height: 200px;
+  width: auto;
+  max-width: 280px;
+
+}
+
+.binf-widgets .cs-form-img-horizontal {
+  height: auto;
+  max-height: 200px;
+  
+  max-width: 280px;
+
+}
+
+.cs-form .thumbnail_section {
+  height: auto;
+  max-width: 280px;
+  margin: 42px auto 1.5rem auto;
+
+}
+
+.cs-form .thumbnail_section .thumbnail_not_loaded {
+  display: inline-block;
+  height: 124px;
+  width: 150px;
+  
+}
+
+.cs-form .thumbnail_section .thumbnail_not_loaded.thumbnail_empty {
+  background-image: url('images/thumbnail_empty.svg');
+}
+
+.cs-form .thumbnail_section .thumbnail_not_loaded.thumbnail_missing {
+  background-image: url('images/thumbnail_missing.svg');
+}
+
+@media (max-width: 1100px) {
+  .cs-form .thumbnail_section {
+    margin-left: auto;
+  }
+}

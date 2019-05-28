@@ -1,0 +1,50 @@
+{{#if expandedHeader}}
+  {{#if showIcon}}
+    {{#if iconLeft}}
+      <span class="tile-type-icon cs-icon-left {{iconLeft}}"></span>
+      <div class="tile-title">
+    {{else}}
+      {{#if imageLeftUrl}}
+          <div class="tile-type-image {{imageLeftClass}}">
+            <img src="{{imageLeftUrl}}" aria-hidden="true">
+          </div>
+        <div class="tile-title">
+      {{else}}
+        <div class="tile-title cs-text-only">
+      {{/if}}
+    {{/if}}
+  {{/if}}
+  {{#if multiMaps}}
+      <div class="cs-formfield cs-selectfield binf-dropdown">
+        <div class="cs-field-write">
+          <div class="cs-field-write-inner cs-drop-down">
+            <button id="select-workflow-type" title="{{MultipleMapsSelectPlaceholder}}"
+                    type="button" class="binf-btn binf-btn-default binf-dropdown-toggle
+                    {{shadowClass}}" data-binf-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+              <span class="cs-label select-workflow-label">{{MultipleMapsSelectPlaceholder}}</span>
+              <span class="cs-icon icon-caret-down"></span>
+            </button>
+            <ul class="binf-dropdown-menu ps-container" role="menu"
+                aria-label="{{MultipleMapsSelectPlaceholder}}">
+              {{#each maps}}
+                <li><a role="menuitem" class="cs-menu-option" href="#" data-wfid="{{this
+                .DataID}}" tabindex="-1" data-cstabindex="-1" >
+              <span class="cs-label" data-wfid="{{this.DataID}}">{{this.Name}}</span>
+                </a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+  {{else}}
+      <h2 title="{{title}}">{{title}}</h2>
+  {{/if}}
+
+  </div>
+
+
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

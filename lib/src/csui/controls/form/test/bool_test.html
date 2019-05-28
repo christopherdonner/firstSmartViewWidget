@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Boolean test</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+    <style>
+        .binf-widgets { margin-top: 30px; background: none;  }
+    </style>
+
+    <script src="../../../lib/require.js"></script>
+    <script src="../../../config.js" data-csui-path="../../.."></script>
+
+    <script>
+      require([
+        'csui/lib/underscore', 'csui/lib/backbone', 'csui/lib/marionette', '../fields/booleanfield.view'
+      ], function (_, Backbone, Marionette, BooleanFieldView) {
+        'use strict';
+
+        var model = new Backbone.Model({ data: true }),
+          contentRegion = new Marionette.Region({el: '#content'}),
+          field = new BooleanFieldView({
+            id: 'id1',
+            model: model,
+            labelId: 'booleanLabel'
+          });
+
+        field.on("field:changed", function (event) {
+            setTimeout(delayedList, 400, event);
+        });
+
+        function delayedList(event) {
+          console.log(event.fieldid + ' field:changed, new value: ' + event.fieldvalue + ", checked: " + document.activeElement.checked);
+        }
+
+        contentRegion.show(field);
+
+      });
+
+    </script>
+</head>
+
+<body>
+
+<h1>Boolean field</h1>
+<p><a href="#wohin">Start</a></p>
+<div style="" class="binf-widgets">
+    <div id="booleanLabel">The boolean:</div>
+    <div class="binf-container-fluid grid-rows">
+        <div id="content" class="binf-row">
+        </div>
+    </div>
+</div>
+<p><a href="#wohin2">End</a></p>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

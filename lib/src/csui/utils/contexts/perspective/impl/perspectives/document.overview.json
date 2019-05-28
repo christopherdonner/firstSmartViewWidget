@@ -1,0 +1,24 @@
+{
+  "type": "grid",
+  "options": {
+    "rows": [
+      {
+        "columns": [
+          {
+            "sizes": {
+              "md": 12
+            },
+            "heights": {
+              "xs": "full"
+            },
+            "widget": {
+              "type": "csui/widgets/document.overview",
+              "options": {
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

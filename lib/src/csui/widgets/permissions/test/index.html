@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Permissions Widget</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body {
+      font-family: "Lato", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+      font-size: 14px;
+      font-weight: 300; /* Lato Light */
+      height: 100%;
+    }
+
+    .docRef {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #ffffff;
+    }
+
+    .test-container {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+    }
+
+    .cs-metadata {
+      height: 100%;
+    }
+
+    .row {
+      height: 100%;
+    }
+
+    #content {
+      height: 100%;
+    }
+
+    a:link {
+      color: grey;
+    }
+
+    a:hover {
+      color: grey;
+    }
+
+    a:active {
+      color: grey;
+    }
+
+    a:visited {
+      color: grey;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+
+            /* url: "http://10.96.11.200:8080/OTCS/livelink/api/v1",
+             supportPath: '/img'*/
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', "csui/lib/marionette", 'csui/utils/contexts/page/page.context',
+          "csui/utils/contexts/factories/node", "./permissions.mock.data.js",
+          "../permissions.view.js", 'csui/lib/jquery.mousehover',
+          'csui/utils/contexts/factories/usernodepermission'
+        ],
+        function ($, Marionette, PageContext, NodeModelFactory, PermissionsMock, PermissionsView,
+            hover, AuthenticatedUserNodePermissionFactory) {
+
+          PermissionsMock.enable();
+          $.mousehover = hover;
+          var permissionsView,
+              contentRegion = new Marionette.Region({el: "#content"}),
+              context       = new PageContext({
+                factories: {
+                  connector: {
+                    connection: {
+                      url: '//server/otcs/cs/api/v2',
+                      supportPath: '/support',
+                      session: {
+                        ticket: 'dummy'
+                      }
+                    }
+                  }
+                }
+              });
+          // 11111 for mocked data
+
+          var userWithEditPermissionRights = 1000,
+              node1 = context.getModel(NodeModelFactory, {attributes: {id: 44444}}),
+              userNodePermissionsModel     = context.getModel(
+                  AuthenticatedUserNodePermissionFactory, {node: node1});
+          userNodePermissionsModel.options.user.set("id", userWithEditPermissionRights);
+          node1.setExpand('permissions', '44444');
+          userNodePermissionsModel.nodeId = node1.get('id');
+          userNodePermissionsModel.fetch().always(function () {
+            permissionsView = new PermissionsView({
+              context: context,
+              model: node1,
+              authenticatedUserPermissions: userNodePermissionsModel
+            });
+            contentRegion.show(permissionsView);
+            node1.destroy();
+            permissionsView.destroy();
+
+          });
+
+        });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<a class="docRef" href="../doc/permissions.md">Documentation</a>
+
+<div class="binf-container-fluid">
+  <div class="binf-row">
+    <div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12 test-container" id="content"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

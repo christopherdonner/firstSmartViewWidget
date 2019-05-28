@@ -1,0 +1,21 @@
+{{#if totalcount}}
+{{else}}
+  <a class="csui-item-standard csui-list-group-item" href="">
+    <span class="csui-icon csui-start-icon {{selected}}"></span>
+    {{#if isGroup}}
+      <span class="csui-user-default-picture-dlg csui-icon image_group_placeholder_permission"></span>
+      <span><img src="{{imgSrc}}" alt="{{imgAlt}}"
+                 class="binf-hidden csui-user-profile-picture-dlg csui-member-group-icon csui-icon" /></span>
+      <span class="csui-icon csui-end-icon icon-sidebar-expand24 binf-hidden"></span>
+    {{else}}
+      <span
+          class="csui-user-default-picture-dlg csui-icon image_user_placeholder">{{initials}}</span>
+      <span><img src="{{imgSrc}}" alt="{{imgAlt}}"
+                 class="binf-hidden csui-user-profile-picture-dlg csui-member-group-icon csui-icon" /></span>
+    {{/if}}
+    <span title="{{name}}" class="csui-list-item-title">{{name}}</span>
+  </a>
+{{/if}}
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

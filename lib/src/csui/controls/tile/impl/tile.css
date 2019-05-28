@@ -1,0 +1,16 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.cs-tile .tile-content {
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 64px);
+}
+
+.cs-expanded.binf-modal .binf-modal-header .tile-type-icon,
+.cs-expanded.binf-modal .binf-modal-header .tile-type-image {
+  width: 1em;
+  
+  line-height: 1em;
+}

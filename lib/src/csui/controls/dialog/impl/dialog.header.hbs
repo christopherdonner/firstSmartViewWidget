@@ -1,0 +1,32 @@
+{{#if expandedHeader}}
+  {{#if actionIconLeft}}
+    <span class="tile-type-action-icon cs-icon-left {{actionIconLeft}}" tabindex="0"></span>
+  {{/if}}
+  {{#if iconLeft}}
+    <span class="tile-type-icon cs-icon-left {{iconLeft}}"></span>
+    <div class="tile-title">
+  {{else}}
+    {{#if imageLeftUrl}}
+        <div class="tile-type-image {{imageLeftClass}}">
+          <span class="tile-type-icon tile-type-icon-img">
+           <img src="{{imageLeftUrl}}" alt="" aria-hidden="true">
+          </span>
+        </div>
+      <div class="tile-title">
+    {{else}}
+      <div class="tile-title cs-text-only">
+    {{/if}}
+  {{/if}}
+    <h2 class="tile-title binf-modal-title csui-heading">{{title}}</h2>
+  </div>
+
+    <div class="cs-header-control"></div>
+
+    <div class="cs-close" title="{{dialogCloseButtonTooltip}}"
+         tabindex="0" aria-label="{{dialogCloseAria}}" role="button">
+      <div class="icon circular {{iconRight}}"></div>
+    </div>
+
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

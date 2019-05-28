@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0;fill:#666666;}
+	.st1{fill:#005B9D;}
+	.st2{fill:#FFFFFF;}
+	.st3{clip-path:url(#SVGID_2_);}
+	.st4{fill:#008730;}
+	.st5{clip-path:url(#SVGID_4_);fill:#008730;}
+	.st6{fill:#666666;}
+</style>
+<rect y="0.001" class="st0" width="24" height="24"/>
+<rect x="12.353" y="11.513" class="st1" width="3.629" height="0.817"/>
+<g>
+	<path class="st1" d="M17.917,21.061V9.231H0v11.83h6.968v1.4H3.573v1.54h10.771v-1.54h-3.741v-1.4H17.917z M1.54,10.761h14.837
+		v8.76H1.54V10.761z"/>
+	<g>
+		<rect x="1.54" y="10.761" class="st2" width="14.837" height="8.76"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_1_" points="4.512,7.669 4.512,0 23.406,0 23.406,12.33 19.673,12.33 19.673,7.714 4.512,7.714 		"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st3">
+		<rect x="6.152" y="0.769" class="st2" width="16.38" height="10.292"/>
+		<path class="st4" d="M23.3,11.83H5.383V0H23.3V11.83z M6.921,10.292h14.841V1.538H6.921V10.292z"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_3_" x="19.673" y="11.34" width="1.594" height="4.246"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+	</clipPath>
+	<rect x="10.914" y="13.378" class="st5" width="9.976" height="1.538"/>
+</g>
+<g>
+	<polygon class="st6" points="13.064,10.319 11.627,8.881 7.261,13.247 5.517,11.502 9.882,7.137 8.445,5.7 13.554,5.343 	"/>
+	<path class="st2" d="M7.262,13.601l-2.099-2.098l4.366-4.366L7.881,5.488l5.951-0.415l-0.57,5.796l-1.635-1.634L7.262,13.601z
+		 M5.87,11.503l1.392,1.391l4.365-4.366l1.24,1.24l0.41-4.154L9.01,5.911l1.227,1.226L5.87,11.503z"/>
+</g>
+<g>
+	<polygon class="st6" points="10.753,11.215 12.19,12.653 16.766,8.076 18.511,9.821 13.934,14.397 15.372,15.834 10.131,16.323 	
+		"/>
+	<path class="st2" d="M9.845,16.6l0.722-5.923l1.624,1.622l4.576-4.576l2.098,2.098l-4.576,4.576l1.638,1.636L9.845,16.6z
+		 M10.939,11.755l-0.522,4.29l4.401-0.41l-1.237-1.237l4.576-4.576L16.766,8.43l-4.576,4.576L10.939,11.755z"/>
+</g>
+</svg>

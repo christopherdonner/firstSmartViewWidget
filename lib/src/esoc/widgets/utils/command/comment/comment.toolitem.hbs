@@ -1,0 +1,38 @@
+{{#if isSeparator}}
+{{else}}
+  {{#if icon}}
+    {{#if renderIconAndText}}
+      <a href="#" class="needsclick csui-acc-focusable" tabindex="-1" data-cstabindex="-1"
+         aria-label="{{wnd_comments_title}}">
+        <span class="{{icon}}" data-cstabindex="-1"></span>
+        <span>{{name}}</span>
+        <span title="{{wnd_comments_title}}"
+              class="cs-text wnd-comment-count wnd_comments_validated" data-csid="{{id}}">{{wnd_comments_validated}}</span>
+      </a>
+    {{else}}
+      {{#if renderTextOnly}}
+        <a href="#" class="needsclick csui-acc-focusable" tabindex="-1" data-cstabindex="-1"
+           aria-label="{{wnd_comments_title}}">
+          <span>{{name}}</span>
+          <span title="{{wnd_comments_title}}"
+                class="cs-text wnd-comment-count wnd_comments_validated" data-csid="{{id}}">{{wnd_comments_validated}}</span>
+        </a>
+      {{else}}
+        <a href="#" title="{{name}}" class="needsclick csui-acc-focusable" tabindex="-1"
+           data-cstabindex="-1" aria-label="{{wnd_comments_title}}">
+          <span class="{{icon}}" data-cstabindex="-1"></span>
+          <span title="{{wnd_comments_title}}"
+                class="cs-text wnd-comment-count wnd_comments_validated" data-csid="{{id}}">{{wnd_comments_validated}}</span>
+        </a>
+      {{/if}}
+    {{/if}}
+  {{else}}
+    <a href="#" class="needsclick csui-acc-focusable" tabindex="-1" data-cstabindex="-1"
+       aria-label="{{wnd_comments_title}}">
+      <span>{{name}}</span>
+      <span title="{{wnd_comments_title}}"
+            class="cs-text wnd-comment-count wnd_comments_validated" data-csid="{{id}}">{{wnd_comments_validated}}</span>
+    </a>
+  {{/if}}
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,528 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog {
+  width: 100%;
+  padding: 0px !important;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-backdrop.binf-in {
+  filter: alpha(opacity=80);
+  opacity: .8;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-dialog.binf-modal-lg {
+  width: 100%;
+  top: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-dialog .binf-modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .csui-preview-carousal-container {
+  background-color: transparent;
+  height: 100vh;
+  padding: 112px 0 152px 0;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel {
+  background-color: transparent;
+  height: 100%;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-dialog .tile-header.binf-modal-header {
+  background: transparent;
+  padding: 0 20px;
+  min-height: 0;
+  border: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-dialog .tile-header.binf-modal-header .cs-close {
+  top: 40%;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-dialog .tile-header.binf-modal-header .icon-close-gallery {
+  padding: 0;
+  height: 18px;
+  width: 18px;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .csui-preview-carousal {
+  margin: 0 auto;
+  width: 60%;
+  height: 100%;
+  padding: 0;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-gallery-item {
+  width: 100%;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner {
+  overflow: hidden;
+  height: 100%;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item {
+  height: 100%;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box img,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img img,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img video {
+  max-width: 100%;
+  height: auto;
+  outline: none;
+  max-height: 100%;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-thumbnail-icon img {
+  width: auto;
+  height: calc(100% - 8px);
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-thumbnail-icon.binf-hidden img,
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-original-icon.binf-hidden img {
+  opacity: 0;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-thumbnail-icon img {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='.02');
+
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-thumbnail-icon > div {
+  height: 100%;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-thumbnail-icon img,
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-original-icon img {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out 0s;
+  -o-transition: opacity 1s ease-in-out 0s;
+  transition: opacity 1s ease-in-out 0s;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-thumbnail-icon img:focus,
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-img-box.csui-gallery-original-icon img:focus,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item.csui-item-original .binf-thumb-img video:focus {
+  outline: 1px dotted #ffffff;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item.csui-item-original .csui-img-box img,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item.csui-item-original .binf-thumb-img img,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item.csui-item-original .binf-thumb-img video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img img,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img video {
+  height: auto;
+  width: 100%;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img .binf-play-arrow-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img .binf-play-arrow {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 32px;
+  -webkit-flex: 0 0 auto;
+  font-size: 1.125em;
+  display: block;
+  margin: 14px auto auto auto;
+  border-radius: 41px;
+  -moz-border-radius: 41px;
+  -webkit-border-radius: 41px;
+  padding: 0px;
+  white-space: nowrap;
+  text-indent: -5000px;
+  background: #000000 url(images/play_arrow.svg) no-repeat 11px center/16px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  border: 2px solid white;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img.binf-video-container {
+  background: #ffffff; 
+  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 30%, #000000 30%, #000000 67%, #ffffff 67%, #ffffff 67%, #ffffff 100%); 
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 30%, #000000 30%, #000000 67%, #ffffff 67%, #ffffff 67%, #ffffff 100%); 
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #000000 30%, #000000 67%, #ffffff 67%, #ffffff 67%, #ffffff 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0); 
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-video {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.binf-widgets .csui-preview-carousal .binf-carousel-inner > .binf-item .csui-video video {
+  max-width: 100%;
+  height: 100%;
+}
+
+.binf-widgets .csui-carousel-film-strip {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  right: 0px;
+  padding-top: 30px;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+
+}
+
+.binf-widgets .csui-carousel-film-strip-inner.csui-film-strip-adjust {
+  justify-content: left;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item {
+  margin: 0 5px;
+  position: relative;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item:last-child {
+  padding-right: 10px;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img-container {
+  padding: 2px;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img-container,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-transition: all .2s ease-in-out 0s;
+  -o-transition: all .2s ease-in-out 0s;
+  transition: all .2s ease-in-out 0s;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item.binf-active .binf-thumb-img-container {
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item:hover .binf-thumb-img-container,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item:focus .binf-thumb-img-container {
+  border: 1px solid #94bbea;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item.binf-active .binf-thumb-img-container,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item.binf-active .binf-thumb {
+  border: 1px solid #ffffff;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item .binf-thumb-img > div {
+  width: 100%;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .csui-carousel-film-strip .binf-carousel {
+  width: calc(100%);
+  height: auto;
+  overflow: auto hidden;
+  margin: 0;
+  padding: 20px 0px 2px 0px;
+  background-color: rgba(17, 17, 17, 0.95);
+}
+
+body.binf-widgets.csui-on-ipad .csui-thumbcarousel-dialog.cs-dialog .csui-carousel-film-strip .binf-carousel,
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .csui-carousel-film-strip .binf-carousel:not(.ps-container) {
+  overflow: auto;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control {
+  background: transparent;
+  -webkit-transition: all .2s ease-in-out 0s;
+  -o-transition: all .2s ease-in-out 0s;
+  transition: all .2s ease-in-out 0s;
+  width: calc(20% - 20px);
+  height: 100%;
+  margin: 0px;
+  top: 0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control.binf-right span {
+  margin-left: 20px;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control.binf-left span {
+  margin-right: 20px;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control span {
+  font-size: 20px;
+  display: none;
+  padding: 33px;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-dialog .tile-header.binf-modal-header .cs-close:focus {
+  outline: 1px dotted #ffffff;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item:focus {
+  outline: none;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control:hover,
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control:focus,
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control:active {
+  color: #ffffff;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel:hover .binf-carousel-control span {
+  display: block;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control:hover span,
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control:focus span {
+  background: rgba(112, 118, 155, 0.5);
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control:focus span {
+  outline: 1px dotted #ffffff;
+  display: block;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control:active span {
+  background: rgba(204, 204, 204, 0.5);
+  display: block;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control.binf-left {
+  left: 0;
+  right: auto;
+  justify-content: flex-end;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control.binf-right {
+  right: 0;
+  left: auto;
+  justify-content: flex-start;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog .binf-carousel .binf-carousel-control {
+  font-size: 30px;
+}
+
+.binf-widgets .csui-carousel-film-strip .binf-carousel-control.csui-thumb-toggle-control {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  opacity: 1;
+  left: 10px;
+  right: auto;
+  bottom: auto;
+  top: -20px;
+  display: none;
+  padding: 10px;
+}
+
+
+
+.binf-widgets .csui-carousel-film-strip .binf-carousel-control.csui-thumb-toggle-control span {
+  font-size: 15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #000000;
+  border: 1px solid #ffffff;
+  position: relative;
+}
+
+.binf-widgets .csui-carousel-film-strip .binf-carousel-control.csui-thumb-toggle-control span:before {
+  top: calc(50% - 7px);
+  position: absolute;
+  left: calc(50% - 7px);
+}
+
+.binf-widgets .csui-carousel-film-strip .binf-thumb-caption {
+  display: none;
+  color: #ffffff;
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 16px;
+  font-size: 11px;
+}
+
+.binf-widgets .csui-carousel-film-strip-inner .binf-item:hover .binf-thumb-caption,
+.binf-widgets .csui-carousel-film-strip-inner .binf-item:focus .binf-thumb-caption {
+  display: block;
+}
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .binf-modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+.binf-widgets .csui-current-total-items,
+.binf-widgets .csui-active-item-name {
+  position: fixed;
+  top: 20px;
+  left: 32px;
+  color: #ffffff;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.binf-widgets .csui-current-total-items {
+  font-size: 16px;
+}
+
+.binf-widgets .csui-active-item-name {
+  width: 80%;
+  text-align: center;
+  z-index: 0;
+  left: 10%;
+  right: 10%;
+  top: 13px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.binf-widgets .csui-active-item-name .item-name {
+  padding-right: 10px;
+}
+
+.binf-widgets .csui-active-item-name .csui-download-gallery {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 19px;
+  background-position: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-active-item-name .csui-download-gallery:hover,
+.binf-widgets .csui-active-item-name .csui-download-gallery:focus {
+  background-color: #8597a2;
+}
+
+.binf-widgets .csui-img-loader {
+  width: 100%;
+  height: 5px;
+  position: relative;
+}
+
+.binf-widgets .csui-img-loader .csui-img-loader-inner {
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  background: rgba(23, 31, 76, 0.8);
+  position: absolute;
+}
+
+.binf-widgets .csui-img-loader .csui-img-loader-inner:before {
+  content: "";
+  width: 20%;
+  height: 4px;
+  border-radius: 3px;
+  background: #9de4f9;
+  position: absolute;
+  left: 0;
+  animation: csui-img-loading 5s infinite cubic-bezier(0.41, 0.32, 0.4, 0.74);
+
+}
+
+@-webkit-keyframes csui-img-loading {
+  50% {
+    left: 80%;
+  }
+}
+
+@keyframes csui-img-loading {
+  50% {
+    left: 80%;
+  }
+}

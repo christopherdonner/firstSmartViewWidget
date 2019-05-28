@@ -1,0 +1,76 @@
+<div class="cs-field-write">
+  <div class="cs-field-write-inner">
+    <div hidden id="{{ariaDescribedById}}">{{fieldWriteDescribedByAria}}</div>
+    <input type="{{inputType}}" id="{{id}}" role="button" aria-describedby="{{ariaDescribedById}}"
+        {{#if options.placeholder}}placeholder="{{options.placeholder}}"{{/if}}
+        {{#if idBtnLabel}}aria-labelledby="{{idBtnLabel}}" {{/if}}
+        {{#if multiFieldLabel}} aria-label="{{multiFieldLabel}}"{{/if}}
+        value="{{{options.item.itemName}}}" title="{{{options.item.anchorTitle}}}" />
+    {{#if options.item.itemName}}
+        <button class="btn-container inline-clear-itempicker-button" title="{{remove}}" tabindex="0"
+                data-cstabindex="0" aria-label="{{remove}}">
+          <span class="inline-clear-itempicker formfield_clear" ></span>
+        </button>
+    {{/if}}
+      <button class="binf-btn binf-btn-primary invoke-picker" tabindex="0" data-cstabindex="0"
+              title="{{browse}}">
+        {{browse}}
+      </button>
+    {{#xif "this.mode !== 'writeonly'"}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{/xif}}
+
+  </div>
+</div>
+
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    {{#if options.item.anchorTitle}}
+      <button class="btn-container inline-edit-more-button" title="{{toggleTitle}}"
+        aria-label="{{toggleTitle}}" aria-expanded="false">
+        <span class="inline-edit-more-icon icon-toolbar-more"></span>
+      </button>
+    {{/if}}
+    <div class="btn-container">
+    {{#if options.item.anchorTitle}}
+      <a {{#if schema.readonly}} aria-disabled="true" {{/if}} href="{{options.item.url}}"
+         class="item-reference-link {{options.item.disabledClass}}"
+         title="{{options.item.anchorTitle}}"
+        {{#if multiFieldLabel}} aria-label="{{readModeMultiFieldAria}} {{options.anchorTitleShort}}"
+        {{else}} aria-label="{{readModeAria}} {{options.anchorTitleShort}}" {{/if}}>{{options.item.itemName}}
+      </a>
+    {{/if}}
+    {{#unless options.item.anchorTitle}}
+        {{#if options.item.errorCase}}
+        <button {{#if schema.readonly}} aria-disabled="true" {{/if}} class="itempicker item-reference-link"
+          {{#if multiFieldLabel}} aria-label="{{readModeMultiFieldAria}}"
+          {{else}} aria-label="{{readModeAria}}" {{/if}}
+          {{#if options.buttonDisabled}}disabled{{/if}}>
+          <span class="placeholder error-placeholder" title="{{options.placeholder}}">
+              {{options.placeholder}}
+          </span>
+        </button>
+        {{else}}
+        <button {{#if schema.readonly}} aria-disabled="true" {{/if}} class="itempicker item-reference-link"
+          {{#if multiFieldLabel}} aria-label="{{readModeMultiFieldAria}}"
+          {{else}} aria-label="{{readModeAria}}" {{/if}}
+          {{#if options.buttonDisabled}}disabled{{/if}}>
+          <span class="placeholder" title="{{options.placeholder}}">
+            {{options.placeholder}}
+          </span>
+        </button>
+        {{/if}}
+    {{/unless}}
+    </div>
+    <div class="icon-container">
+      <div class="csui-icon-edit inline-edit-icon icon-edit" title="{{edit}}"></div>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb-inner id-{{options.item.nodeId}} binf-hidden"></div>
+<div class="item-reference-error-msg"> {{#if options.item.errorCase}} {{options.item.errorMsg}} {{/if}} </div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

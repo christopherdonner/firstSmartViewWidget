@@ -1,0 +1,23 @@
+<div class="csui-facet-header">
+  <div class="header-label" title="{{name}}">{{name}}</div>
+  <div class="header-count" title="{{count}}"> ({{count}})</div>
+  <div class="cs-icon csui-button-icon icon-expandArrowUp" tabindex="-1"></div>
+  <div class="csui-right-shadow"></div>
+</div>
+
+<div class="csui-facet-content {{show-content}}">
+  <div class="cs-filter-group"></div>
+  {{#if more}}
+    <div class="csui-filter-more" tabindex="-1">
+        <div class="csui-more-text">{{more}}</div>
+        <div class="cs-icon {{more-icon}}"></div>
+    </div>
+  {{/if}}
+  <div class="csui-facet-controls {{show-controls}}">
+      <button class="csui-btn binf-btn binf-btn-primary csui-apply">{{apply}}</button>
+      <button class="csui-btn binf-btn binf-btn-secondary csui-clear">{{clear}}</button>
+</div>
+
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

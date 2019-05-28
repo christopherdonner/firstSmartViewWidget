@@ -1,0 +1,50 @@
+src/myprefix-extensions.json:
+
+  {
+    "csui/utils/commands": {
+      "extensions": {
+        "myprefix": [
+          "myprefix/commands/add.something/add.something.command"
+        ]
+      }
+    },
+    "csui/widgets/metadata/add.properties.menuitems": {
+      "extensions": {
+        "myprefix": [
+          "myprefix/commands/add.something/something.menuitems"
+        ]
+      }
+    }
+  }
+
+src/commands/add.something/add.something.command.js:
+
+  define(['csui/models/command'], function (CommandModel) {
+
+    var AddSomethingCommand = CommandModel.extend({
+
+      defaults: {
+        signature: 'AddSomething',
+        ...
+      },
+
+      ...
+
+    });
+
+    return AddSomethingCommand;
+
+  });
+
+src/commands/add.something/something.menuitems.js:
+
+  define(function () {
+    return {
+      addPropertiesToolbar: [
+        {
+          signature: 'AddSomething',
+          name: 'Add Something'
+        }
+      ]
+    };
+  });

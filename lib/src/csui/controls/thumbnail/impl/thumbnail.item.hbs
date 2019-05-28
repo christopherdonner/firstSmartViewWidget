@@ -1,0 +1,13 @@
+<div class="csui-thumbnail-item-container">
+<div class="csui-thumbnail-icon-container">
+  <div class="csui-thumbnail-select {{#if isChecked}} csui-checkbox {{/if}}"></div>
+  <div class="csui-thumbnail-actionbar"></div>
+  <div class="csui-thumbnail-thumbnailIcon"></div>
+</div>
+<div class="csui-thumbnail-content-container">
+  {{#each columns}}
+    <div class="csui-thumbnail-content csui-thumbnail-{{this.attributes.key}}"></div>
+  {{/each}}
+</div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

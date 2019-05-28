@@ -1,0 +1,159 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "/api/v2/nodes/699145?actions=addcategory&actions=addversion&actions=open&actions=copy&actions=delete&actions=download&actions=edit&actions=editactivex&actions=rename&actions=move&actions=permissions&actions=properties&actions=reserve&actions=unreserve&actions=collect&actions=removefromcollection&expand=properties{original_id}&fields=properties",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"actions": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699145/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"collect": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699145",
+					"method": "PUT",
+					"name": "Collect"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/copy?id=699145",
+					"href": "/api/v2/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699145",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/move?id=699145",
+					"href": "/api/v2/nodes/699145",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"open": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699145/nodes",
+					"method": "GET",
+					"name": "Open"
+				},
+				"permissions": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "",
+					"name": "Permissions"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699145",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"removefromcollection": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/699145",
+					"method": "PUT",
+					"name": "Remove From Collection"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/rename?id=699145",
+					"href": "/api/v2/nodes/699145",
+					"method": "PUT",
+					"name": "Rename"
+				}
+			},
+			"map": {
+				"default_action": "open",
+				"more": [
+					"properties"
+				]
+			},
+			"order": [
+				"open",
+				"addcategory",
+				"rename",
+				"copy",
+				"collect",
+				"move",
+				"removefromcollection",
+				"permissions",
+				"delete"
+			]
+		},
+		"data": {
+			"properties": {
+				"container": true,
+				"container_size": 21,
+				"create_date": "2017-12-15T12:12:41",
+				"create_user_id": 1000,
+				"description": "",
+				"description_multilingual": {
+					"en_US": "",
+					"fr": ""
+				},
+				"external_create_date": null,
+				"external_identity": "",
+				"external_identity_type": "",
+				"external_modify_date": null,
+				"external_source": "",
+				"favorite": true,
+				"id": 699145,
+				"mime_type": null,
+				"modify_date": "2018-02-21T11:20:03",
+				"modify_user_id": 1000,
+				"name": "LLWR-10741 - Execute WR in SmartUI",
+				"name_multilingual": {
+					"en_US": "LLWR-10741 - Execute WR in SmartUI",
+					"fr": ""
+				},
+				"owner": "Minton, Adam",
+				"owner_group_id": 1001,
+				"owner_user_id": 1000,
+				"parent_id": 8475,
+				"permissions_model": "advanced",
+				"reserved": false,
+				"reserved_date": null,
+				"reserved_shared_collaboration": false,
+				"reserved_user_id": 0,
+				"size": 21,
+				"size_formatted": "21 Items",
+				"type": 0,
+				"type_name": "Folder",
+				"versions_control_advanced": false,
+				"volume_id": -2000
+			}
+		}
+	}
+}

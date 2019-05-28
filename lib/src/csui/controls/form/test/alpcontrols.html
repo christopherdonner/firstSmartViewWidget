@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Alpaca Form Controls</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding: 1em;
+      font-size: 14px;
+    }
+
+    .container {
+      padding: 1em;
+      background-color: #ffffff;
+    }
+
+    .fieldContainer {
+      /*margin: 1em;*/
+      width: 10em;
+    }
+
+    .binf-widgets .binf-container {
+      background-color: #ffffff;
+      margin-top: 20px;
+    }
+
+    #fields {
+      background-color: white;
+    }
+
+    .form-group > .row {
+      margin-left: 1em;
+      min-height: 3.5em;
+    }
+
+    .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+      padding-top: 5px;
+      margin-left: 0.5em;
+      line-height: 1.3em;
+    }
+
+    .cs-form .alpaca-container-item>.form-group.alpaca-field.alpaca-field-datetime>.col-sm-9 {
+      overflow: visible;
+    }
+
+    #form {
+      /*min-height: 15em;*/
+      max-width: 50em;
+    }
+
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          // Trick to get the default user image placeholder working;
+          // the usual mocked connection '//server/otcs/cs/api/v1'
+          // and '/support' would not produce a valid URL for the
+          // browser to load an <img> from, but if you create a
+          // symlink in your project root to CS_CORE_UI/src and call
+          // it 'csui', the following connection parameters will
+          // allow you to see the default user image on this page
+
+          connection: {
+            url: '/api/v1',
+            supportPath: '/',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      },
+      deps: ['csui/lib/require.config!csui/csui-extensions.json']
+    });
+
+    require(["csui/lib/underscore", "csui/lib/jquery", "csui/lib/backbone", "csui/lib/marionette",
+      "csui/models/form", "csui/controls/form/form.view", 'csui/utils/contexts/page/page.context',
+        'csui/controls/form/test/alpcontrols.mock'
+    ], function (_, $, Backbone, Marionette, FormModel, FormView, PageContext, mock) {
+
+      var pageContext = new PageContext({
+        factories: {
+          connector: {
+            connection: {
+              url: '//server/otcs/cs/api/v1',
+              supportPath: '/support',
+              session: {
+                ticket: 'dummy'
+              }
+            }
+          }
+        }
+      });
+
+      var form = {
+        "data": {},
+        "options": {
+          "fields": {},
+          "label": "CSUI Alpaca Controls"
+        },
+        "schema": {
+          "properties": {},
+          "type": "object"
+        }
+      };
+
+      // ------ user field
+
+      _.extend(form.data, {
+        "create_user_id": 1000
+      });
+      _.extend(form.options.fields, {
+        "create_user_id": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Created By (user)",
+//          "readonly": true,
+          "type": "otcs_user",
+          "type_control": {
+            "name": "Admin",
+            "parameters": {
+              "select_types": [0]
+            }
+          }
+        }
+      });
+      _.extend(form.schema.properties, {
+        "create_user_id": {
+//          "readonly": true,
+          "required": false,
+          "title": "Created By",
+          "type": "string"
+        }
+      });
+
+      _.extend(form.data, {});
+      _.extend(form.options.fields, {});
+      _.extend(form.schema.properties, {});
+
+      // -------- boolean field
+
+      _.extend(form.data, {
+        "187420_7": false
+      });
+      _.extend(form.options.fields, {
+        "187420_7": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Rights (bool)",
+          "readonly": false,
+          "type": "checkbox"
+        }
+      });
+      _.extend(form.schema.properties, {
+        "187420_7": {
+          "readonly": false,
+          "required": false,
+          "title": "Rights Management",
+          "type": "boolean"
+        }
+      });
+
+      // -------- select field
+
+      _.extend(form.data, {
+        //"187420_5": "Draft"
+      });
+      _.extend(form.options.fields, {
+        "187420_5": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Status (select)",
+          "readonly": false,
+          "type": "select"
+        }
+      });
+      _.extend(form.schema.properties, {
+        "187420_5": {
+          "enum": [
+            "Draft",
+            "Review",
+            "Released",
+            "Public"
+          ],
+          "readonly": false,
+          "required": false,
+          "title": "Status",
+          "type": "string"
+        }
+      });
+
+      // -------- text field
+
+      _.extend(form.data, {
+        "187420_4": "Tank Manual"
+      });
+      _.extend(form.options.fields, {
+        "187420_4": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Subject (text)",
+          "readonly": false,
+          "type": "text"
+        }
+      });
+      _.extend(form.schema.properties, {
+        "187420_4": {
+          "maxLength": 32,
+          "readonly": false,
+          "required": false,
+          "title": "Subject",
+          "type": "string"
+        }
+      });
+
+      // -------- integer field
+
+      _.extend(form.data, {
+        "186529_3": 12341234
+      });
+      _.extend(form.options.fields, {
+        "186529_3": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Manual Id (integer)",
+          "readonly": false,
+          "type": "integer"
+        }
+      });
+      _.extend(form.schema.properties, {
+        "186529_3": {
+          "readonly": false,
+          "required": false,
+          "title": "Manual Id",
+          "type": "integer"
+        }
+      });
+
+      // -------- date field
+
+      _.extend(form.data, {
+        "187420_11_x_14": null
+      });
+      _.extend(form.options.fields, {
+        "187420_11_x_14": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Reviewed at (date)",
+          "readonly": false,
+          "type": "date"
+        }
+      });
+      _.extend(form.schema.properties, {
+        "187420_11_x_14": {
+          "readonly": false,
+          "required": false,
+          "title": "Reviewed at (date)",
+          "type": "string"
+        }
+      });
+
+      // -------- datetime field
+
+      _.extend(form.data, {
+        "187420_11_x_13": null
+      });
+      _.extend(form.options.fields, {
+        "187420_11_x_13": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Reviewed at (datetime)",
+          "readonly": false,
+          "dateFormat": "DD/MM/YYYY HH:mm:ss",
+          "type": "datetime"
+        }
+      });
+      _.extend(form.schema.properties, {
+        "187420_11_x_13": {
+          "readonly": false,
+          "required": false,
+          "title": "Reviewed at (datetime)",
+          "type": "string"
+        }
+      });
+
+      // -------- textarea field
+
+      _.extend(form.data, {
+        "186529_4": ""
+      });
+      _.extend(form.options.fields, {
+        "186529_4": {
+          "hidden": false,
+          "hideInitValidationError": true,
+          "label": "Description (textarea)",
+          "readonly": false,
+          "type": "textarea"
+        }
+      });
+      _.extend(form.schema.properties, {
+        "186529_4": {
+          "readonly": false,
+          "required": false,
+          "title": "Description",
+          "type": "string"
+        }
+      });
+
+      // -------- nodepicker field
+
+      _.extend(form.data, {
+        shortcut: 69321
+      });
+      _.extend(form.options.fields, {
+        shortcut: {
+          anchorTitle: "Enterprise > Alberi - Demo Content > Water Management > Water pumps > Classic 3000/3 Jet",
+          hidden: false,
+          label: "Location (nodepicker)",
+          type: "otcs_node_picker",
+          type_control: {
+            parameters: {
+              name: "Classic 3000/3 Jet",
+              parent: 68333,
+              select_types: []
+            }
+          },
+          url: "#nodes/69321"
+        }
+      });
+      _.extend(form.schema.properties, {
+        shortcut: {
+          format: "uri",
+          hidden: false,
+          title: "Location",
+          type: "string"
+        }
+      });
+
+      mock.enable();
+
+      //form.view =  'bootstrap-edit';
+
+      var displayMode = $('input[name=inlineRadioOptionsMode]:checked').val();
+      var formModel = new FormModel( form);
+
+      var options = {
+        model: formModel,
+        mode: displayMode,
+        context: pageContext
+      };
+
+      var contentRegionForm = new Marionette.Region({el: "#form"}),
+        formView = new FormView(options);
+
+      contentRegionForm.show(formView);
+
+      var hideNotRequired = false;
+
+      // set display mode
+      $('#show').on('click', function () {
+        var mode = $('input[name=inlineRadioOptions]:checked').val();
+        var colMode = $('input[name=inlineRadioOptionsCol]:checked').val();
+
+        displayMode = $('input[name=inlineRadioOptionsMode]:checked').val();
+
+        if (mode === 'required') {
+          _.each(form.schema.properties, function (cur) {
+            cur.required = true;
+          });
+        } else {
+          _.each(form.schema.properties, function (cur) {
+            cur.required = false;
+          });
+        }
+
+        formView.destroy();
+
+        options = {
+          model: formModel,
+          mode: displayMode,
+          context: pageContext
+        };
+
+        formView = new FormView(options);
+
+
+        formView.layoutMode = colMode;
+
+
+//        formView.render();
+
+        contentRegionForm.show(formView);
+
+      });
+
+      $('#validate').on('click', function () {
+        formView.validate();
+      });
+
+      $('#toggleRequired').on('click', function () {
+        hideNotRequired = !hideNotRequired;
+        formView.hideNotRequired(hideNotRequired);
+      });
+
+      $('div[id*=li]').css("padding", "5px");
+
+        var pickeroptions = {
+          inline: true,
+            sideBySide: true
+        };
+        $('.datetimepickercontainer').datetimepicker(pickeroptions);
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Instructions:</div>
+    <div class="buttons binf-col-sm-8">Set up the parameters in the form and click the "Show" button
+      below.
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Fields:</div>
+
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="optional" checked>
+      optional
+    </label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="required"> required
+    </label>
+
+  </div>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Layout Mode:</div>
+
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsCol" id="inlineRadio3" value="singleCol" checked>
+      single column
+    </label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsCol" id="inlineRadio4" value="multiCol"> multi
+      column
+    </label>
+ </div>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Display Mode:</div>
+
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsMode" id="inlineRadio13" value="read" checked>
+      read</label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsMode" id="inlineRadio14" value="create">
+      create</label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptionsMode" id="inlineRadio15" value="update">
+      update</label>
+  </div>
+
+
+  <div class="" style="margin:2em;">
+    <button type="button" class="binf-btn binf-btn-primary" id="show">Show</button>
+  </div>
+
+
+  <div class="">
+    <div id="form"></div>
+
+    <div class="binf-col-sm-offset-2 binf-col-sm-8">
+      <button type="button" class="binf-btn binf-btn-primary" id="validate">Validate Form</button>
+    </div>
+
+    <div class="binf-col-sm-offset-2 binf-col-sm-8">
+      <button type="button" class="binf-btn binf-btn-primary" id="toggleRequired">Toggle Not Required Fields</button>
+    </div>
+
+      <div class="datetimepickercontainer"></div>
+  </div>
+
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

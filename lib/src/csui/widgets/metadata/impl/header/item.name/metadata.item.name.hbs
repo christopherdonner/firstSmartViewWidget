@@ -1,0 +1,37 @@
+<div class="cs-metadata-item-name">
+<span class="csui-toggle-wrapper binf-hidden">
+  <span class="icon circular1 arrow_back cs-go-back binf-hidden1" style="display:none;"
+        aria-label="{{goBack}}" title="{{goBack}}" tabindex="0"></span>
+  <span class="csui-icon csui-metadata-listview csui-metadata-listview-expand-icon" role="button" title="{{sidebarToggleTitle}}"
+        aria-label="{{sidebarToggleTitle}}" tabindex="0"></span>
+</span><span class="csui-type-icon"></span>
+<div role="heading" aria-level="2" class="title-header">
+<span class="title" tabindex="0" title="{{name}}" aria-label="{{nameAria}}" role="button"
+      aria-expanded="false">
+    {{name}}<span class="fadeout"></span>
+</span>
+</div>
+{{#unless read_only}}
+  <div class="title-edit-icon-div">
+    {{#unless show_dropdown_menu}}
+      <span class="csui-icon-edit inline-edit-icon icon-edit" title="{{edit_name_tooltip}}"
+            aria-label="{{edit_name_tooltip}}"></span>
+    {{/unless}}
+  </div>
+{{/unless}}
+<div class="title-edit-div">
+  <label id="{{edit_name_id}}" class="binf-hidden">{{placeholder_text}}</label>
+  <span class="cs-icon-required category_required" title="{{required_tooltip}}"></span>
+  <input type="text" class="title-input" placeholder="{{placeholder_text}}"
+         value="{{edit_name}}" aria-labelledby="{{edit_name_id}}" aria-required="true">
+  {{#unless hideCancelButton}}
+    <span class="csui-undo edit-cancel inline-edit-icon" title="{{cancel_edit_name_tooltip}}"
+          aria-label="{{cancel_edit_name_tooltip}}"></span>
+  {{/unless}}
+</div>
+</div>
+<div class="title-error-div">
+  <span class="title-error" title=""></span>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

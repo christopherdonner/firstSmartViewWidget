@@ -1,0 +1,24 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-pman-widget {
+  height: 100%;
+  background: #777474;
+  border: solid 1px #f1f1f1;
+}
+
+.binf-widgets .binf-has-error .csui-pman-widget {
+  border: 1px solid #df3324;
+}
+
+.binf-widgets .csui-pman-widget-msg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #d0d0d0;
+  font-size: 36px !important;
+  font-weight: 200 !important;
+  font-style: italic !important;
+  margin: 0 15px !important;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Global Messages</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    /* Put testing messages to the middle of the page */
+    body.binf-widgets {
+      padding: 15px;
+      text-align: center;
+    }
+
+    body.binf-widgets > * {
+      text-align: initial;
+    }
+
+    /* Give testing messages the same size */
+    body.binf-widgets > .sizable {
+      display: inline-block;
+      width: 400px;
+      margin: 15px;
+    }
+
+    body.binf-widgets > .sizable.size-fluid {
+      width: 80vw;
+    }
+
+    /* Adapt forms to be usable outside csui */
+    .binf-widgets .options {
+      background-color: #ffffff;
+      margin: 15px;
+      padding: 15px;
+    }
+
+    .binf-widgets .binf-control-label {
+      font-weight: bold;
+    }
+
+    /* Fix bug in styling of message dialog view */
+    .csui-messagepanel .csui-header {
+      height: 62px;
+    }
+
+    /* Style the custom message view */
+    .custom-message {
+      background-color: #d7d7d7;
+      height: 100px;
+    }
+
+    .custom-message h4 {
+      font-size: 1.5em;
+      margin: .5em;
+    }
+
+    .custom-message .binf-btn {
+      border-radius: 16px;
+      float: right;
+      margin-right: 1em;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require(['csui/controls/globalmessage/globalmessage',
+      'csui/utils/messagehelper',
+      'csui/controls/globalmessage/impl/messagedialog.view',
+      'csui/controls/globalmessage/impl/custom.wrapper.view',
+      'csui/lib/marionette', 'csui/lib/jquery', 'csui/lib/domReady!'
+    ], function (GlobalMessage, MessageHelper, MessageView,
+        CustomWrapperView, Marionette, $) {
+      'use strict';
+
+      var messageHelper = new MessageHelper();
+
+      function showMessage(type, message, details) {
+        var messageView = new MessageView({
+              info: type,
+              message: message,
+              details: details,
+              messageHelper: messageHelper
+            }),
+            region = new Marionette.Region({el: '#' + type});
+        region.show(messageView);
+      }
+
+      showMessage('info', 'Application was loaded.');
+      showMessage('success', 'The document was deleted.');
+      showMessage('warning', 'Old category version was applied.');
+      showMessage('error', 'Uploading the document failed.', 'Another document with the same name exists.');
+      showMessage('none', 'Application will be unloaded.');
+
+
+      var CustomView = Marionette.ItemView.extend({
+        className: 'custom-message',
+        template: function () {
+          return $('#custom-template').html();
+        },
+        events: {
+          'click button': function () {
+            this.$el.fadeOut(1000, this.destroy.bind(this));
+          }
+        }
+      });
+
+      function showCustomView() {
+        var customView = new CustomView(),
+            wrapperView = new CustomWrapperView({
+              contentView: customView,
+              messageHelper: messageHelper
+            }),
+            region = new Marionette.Region({el: '#custom'});
+        region.show(wrapperView);
+      }
+
+      showCustomView();
+
+      $('#messageWidth input').change(function () {
+        $('.sizable').toggleClass('size-fluid');
+      });
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Global messages</h1>
+<div class="options">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Instructions:</div>
+    <div class="binf-col-sm-10">Select the message panel width to resize the window and see the difference.</div>
+  </div>
+
+  <hr>
+
+  <form class="binf-form-horizontal">
+    <div class="binf-form-group">
+
+
+      <fieldset id="messageWidth" class="binf-col-sm-10">
+        <legend class="binf-col-sm-2 binf-control-label">Message width:</legend>
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="fixed" checked> Fixed
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="fluid"> Fluid
+        </label>
+      </fieldset>
+    </div>
+  </form>
+</div>
+
+<div class="sizable" id="info"></div>
+<div class="sizable" id="success"></div>
+<div class="sizable" id="warning"></div>
+<div class="sizable" id="error"></div>
+<div class="sizable" id="none"></div>
+<div class="sizable" id="custom"></div>
+
+
+<script type="text/x-template" id="custom-template">
+  <h4>This is a CustomView.</h4>
+  <button type="button" class="binf-btn binf-btn-primary">FadeOut</button>
+</script>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

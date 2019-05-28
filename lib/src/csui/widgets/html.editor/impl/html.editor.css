@@ -1,0 +1,960 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-html-editor-wrapper,
+.binf-widgets .csui-html-editor-wrapper-parent, .binf-widgets .csui-html-editor-grand-parent {
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-wrapper .cke_editable {
+  border: none;
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-wrapper .cke_editable:hover {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-wrapper-parent .ps-scrollbar-y-rail {
+  right: 3px;
+  z-index: 1040;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message {
+  background-color: #ffffff;
+  border: none;
+  height: calc(100%);
+  margin: 0px;
+  padding-right: 10px;
+  word-wrap: break-word;
+  line-height: 24px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  font-weight: 300;
+  font-style: oblique;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message p {
+  margin-bottom: 1em;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message table,
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message img {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-richtext-message.cke_editable {
+  z-index: 1040;
+  padding-right: 15px;
+  margin-right: 0px;
+}
+
+.binf-widgets .cui-rich-editor-widget-wrapper {
+  background-color: #ffffff;
+}
+
+.binf-widgets .cs-tile.cui-rich-editor-widget-wrapper .tile-content {
+  padding: 0;
+}
+
+.binf-widgets .cui-rich-editor-widget-wrapper .tile-controls .binf-dropdown,
+.binf-widgets .cui-rich-editor-widget-wrapper .tile-controls .csui-html-editor-reserved,
+.binf-widgets .cui-rich-editor-widget-wrapper .tile-controls .csui-html-editor-reserved-readonly {
+  margin-top: 18px;
+  float: right;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown a,
+.binf-widgets .csui-html-editor-grand-parent .csui-html-editor-tile-controls.tile-controls a {
+  cursor: pointer;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .csui-html-editor-control {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-position: center;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .csui-icon {
+  height: 22px;
+  width: 22px;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .icon-html-edit-toolbar-more {
+  margin: 3px auto auto auto;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon {
+  background-size: 16px;
+  width: 28px;
+  height: 28px;
+  float: left;
+  margin: 0px 0px 0px 8px;
+}
+
+.binf-widgets .csui-html-editor-action-buttons button:focus {
+  border: 1px dotted #333333;
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon.csui-html-edit-save:disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+.binf-widgets .icon.circular.csui-html-edit-icon:hover,
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown.binf-open .csui-html-editor-control,
+.binf-widgets .csui-html-editor-grand-parent:hover .tile-controls .binf-dropdown .csui-html-editor-control {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown .binf-dropdown-menu,
+.binf-widgets .csui-html-editor-grand-parent .binf-dropdown-menu {
+  margin-top: 6px;
+  border-radius: 0;
+  z-index: 1041;
+  right: 0;
+  left: auto;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .binf-dropdown .binf-dropdown-menu.csui-html-editor-floating-dd-menu,
+.binf-widgets .csui-html-editor-grand-parent .binf-dropdown-menu.csui-html-editor-floating-dd-menu {
+  right: auto;
+  left: 0;
+}
+
+.binf-widgets .csui-html-editor-action-buttons {
+  
+  
+  white-space: nowrap;
+  float: left;
+  padding: 0px 8px;
+  margin-top: 12px;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .tile-controls .csui-rich-text-edit-icon-wrapper {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-html-editor-no-header {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-html-editor-grand-parent .csui-html-editor-tile-controls.tile-controls {
+  color: #000000;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: auto;
+  height: 32px;
+  padding: 0;
+  z-index: 1;
+}
+
+.binf-widgets .csui-html-editor-grand-parent:hover .csui-html-editor-tile-controls.tile-controls {
+  z-index: 1041;
+}
+
+.binf-widgets .csui-richtext-message.cke_editable:hover {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-richtext-message ol {
+  list-style-type: decimal;
+}
+
+.binf-widgets .csui-richtext-message ul {
+  list-style-type: disc;
+}
+
+.binf-widgets .csui-rich-text-mask {
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.binf-widgets .csui-html-editor-zindex {
+  z-index: 1040;
+}
+
+.binf-widgets .csui-rich-text-body-mask {
+  position: absolute;
+  z-index: 1040;
+}
+
+
+
+.binf-widgets .csui-rich-text-editor-toolbar.cke_reset_all,
+.binf-widgets .csui-rich-text-editor-toolbar.cke_reset_all * {
+  z-index: 1040;
+}
+
+.binf-widgets .csui-rich-text-editor-toolbar .cke_button.cke_button__save,
+.binf-widgets .csui-rich-text-editor-toolbar .cke_button.cke_button__cancel {
+  background-size: 100%;
+  cursor: pointer;
+}
+
+
+
+
+.binf-widgets .csui-richtext-message h1,
+.binf-widgets .csui-richtext-message h2,
+.binf-widgets .csui-richtext-message h3,
+.binf-widgets .csui-richtext-message h4,
+.binf-widgets .csui-richtext-message h5 {
+  font-weight: bold;
+  color: #333333;
+  font-style: normal;
+}
+
+.binf-widgets .csui-richtext-message h1,
+.binf-widgets .csui-richtext-message h2,
+.binf-widgets .csui-richtext-message h3 {
+  margin-bottom: 0.5em;
+}
+
+.binf-widgets .csui-richtext-message h1 {
+  font-size: 26px;
+}
+
+.binf-widgets .csui-richtext-message h2 {
+  font-size: 22px;
+}
+
+.binf-widgets .csui-richtext-message h3 {
+  font-size: 18px;
+}
+
+.binf-widgets .csui-richtext-message h4 {
+  font-size: 14px;
+}
+
+.binf-widgets .csui-richtext-message h5 {
+  font-size: 12px;
+}
+
+.binf-widgets .csui-richtext-message p,
+.binf-widgets .csui-richtext-message dt {
+  margin: 0 0 0.5em 0;
+}
+
+.binf-widgets .csui-richtext-message ol {
+  margin-top: 0.5em;
+  padding-top: 0;
+  margin-left: 0;
+  padding-left: 2em;
+}
+
+.binf-widgets .csui-richtext-message dl {
+  margin: 0;
+  padding: 0;
+}
+
+.binf-widgets .csui-richtext-message ul {
+  margin-top: .5em;
+  padding-top: 0;
+  margin-left: 0;
+  padding-left: 1.5em;
+}
+
+.binf-widgets .csui-richtext-message li {
+  margin-top: .5em;
+  padding-top: 0;
+}
+
+.binf-widgets .csui-richtext-message code,
+.binf-widgets .csui-richtext-message .literal,
+.binf-widgets .csui-richtext-message .code,
+.binf-widgets .csui-richtext-message .filename,
+.binf-widgets .csui-richtext-message .screen, .programlisting {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 115%;
+}
+
+.binf-widgets .csui-richtext-message .programlisting {
+  font-family: "Courier New", Courier, monospace;
+  font-color: #58595b;
+}
+
+.binf-widgets .csui-richtext-message .guilabel {
+  font-family: Arial, Verdana, Sans-Serif;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.binf-widgets .csui-richtext-message .specialnote {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em
+}
+
+
+
+
+.binf-widgets .csui-html-editor-wrapper small {
+  font-size: smaller !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper big,
+.binf-widgets .csui-html-editor-wrapper .csui-big {
+  font-size: larger !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .marker {
+  background-color: Yellow;
+}
+
+.binf-widgets .csui-html-editor-wrapper sub,
+.binf-widgets .csui-html-editor-wrapper sup {
+  font-size: 75% !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper ol {
+  list-style-type: decimal;
+}
+
+.binf-widgets .csui-html-editor-wrapper ul {
+  list-style-type: disc;
+}
+
+.binf-widgets .csui-html-editor-wrapper em, .binf-widgets .csui-html-editor-wrapper var, .binf-widgets .csui-html-editor-wrapper cite, .binf-widgets .csui-html-editor-wrapper i,
+.binf-widgets .csui-html-editor-wrapper i > a, .binf-widgets .csui-html-editor-wrapper a > i, .binf-widgets .csui-html-editor-wrapper em > a, .binf-widgets .csui-html-editor-wrapper a > em {
+  font-style: italic;
+}
+
+.binf-widgets .csui-html-editor-wrapper tt, samp {
+  font-family: monospace !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper q {
+  quotes: inherit !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper q:before {
+  content: open-quote !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper q:after {
+  content: close-quote !important;
+}
+
+
+
+.binf-widgets .csui-richtext-message .cke_button.cke_button__save_disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 1;
+}
+
+.binf-widgets .csui-richtext-message .cke_toolbar:last-of-type .cke_toolgroup {
+  background-color: #f5f5f5;
+  border: none;
+  box-shadow: none
+}
+
+.binf-widgets .csui-richtext-message .cke_toolbar:last-of-type .cke_toolgroup a:first-child {
+  margin-left: 0;
+}
+
+.binf-widgets .csui-richtext-message .cke_toolbar:last-of-type .cke_toolgroup a:last-child {
+  margin-right: 0;
+}
+
+.binf-widgets .csui-richtext-message .dp-highlighter {
+  font-family: "Consolas", "Courier New", Courier, mono, serif;
+  font-size: 12px;
+  background-color: #e7e5dc;
+  width: 99%;
+  overflow: auto;
+  margin: 18px 0 !important;
+  padding-top: 1px;
+}
+
+
+
+
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) {
+  border: 1px solid #c1c1c1;
+  width: 100%;
+}
+
+.binf-widgets .csui-richtext-message .specialnote tr td:first-child {
+  width: 10%;
+}
+
+.binf-widgets .csui-richtext-message table[align="center"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.binf-widgets .csui-richtext-message table {
+  border-collapse: unset;
+  border-spacing: 2px;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tr,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tr > td,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tr > th,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tbody > tr,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tbody > tr > td,
+.binf-widgets .csui-richtext-message table:not([class*='specialnote']) > tbody > tr > th {
+  border: 1px solid;
+}
+
+.binf-widgets .csui-richtext-message table.specialnote td {
+  vertical-align: top;
+}
+
+.binf-widgets .csui-richtext-message th {
+  font-weight: bold;
+}
+
+.binf-widgets .csui-richtext-message blockquote {
+  border-width: 3px;
+  margin: 15px;
+  padding: 15px;
+}
+
+
+
+.binf-widgets .csui-richtext-message img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.csui-html-editor-grand-parent b,
+.csui-html-editor-grand-parent strong {
+  font-weight: bold;
+}
+
+.csui-html-editor-grand-parent i,
+.csui-html-editor-grand-parent em {
+  font-style: italic;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_inner {
+  display: inline-block;
+  float: left;
+}
+
+.binf-modal-open .cke_reset_all.csui-rich-text-editor-toolbar {
+  visibility: hidden;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_inner .csui-html-edit-icon {
+  white-space: nowrap;
+}
+
+html[dir="ltr"] .cke_reset_all.csui-rich-text-editor-toolbar[style*="right"] .cke_inner {
+  float: right;
+}
+
+html[dir="rtl"] .cke_reset_all.csui-rich-text-editor-toolbar[style*="left"] .cke_inner {
+  float: right;
+}
+
+
+.csui-html-editor-grand-parent .csui-error .csui-error-icon-div {
+  padding-top: 2.5em;
+}
+
+.csui-html-editor-grand-parent .csui-error .csui-error-icon-parent {
+  border: 0;
+  background-color: #f7f7f7;
+}
+
+.row-xs-full .csui-html-editor-grand-parent .csui-error .csui-error-icon-div {
+  padding-top: 9em;
+}
+
+.csui-html-editor-grand-parent .csui-error .csui-error-icon-div .csui-error-icon {
+  width: 6em;
+  height: 6em;
+}
+
+.csui-html-editor-grand-parent .csui-error .csui-message {
+  padding: 2em;
+  line-height: 1.5rem;
+}
+
+
+
+
+.csui-html-editor-control .csui-html-editor-reserved-icon {
+  margin: 2px auto auto auto;
+}
+
+#breadcrumb-wrap.csui-html-editor-zero-zindex {
+  z-index: 0;
+}
+
+
+.cke_reset_all.csui-rich-text-editor-toolbar,
+.cke_reset_all.csui-rich-text-editor-toolbar * {
+  box-sizing: content-box;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_button_label,
+.csui-rich-text-editor-toolbar .cke_voice_label {
+  display: none;
+}
+
+.cke_toolbar {
+  float: left;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_toolbar_separator {
+  float: left;
+  margin: 5px 2px 0;
+  height: 18px;
+  width: 1px;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar a.cke_button {
+  display: inline-block;
+  padding: 4px 6px;
+  height: 18px;
+  float: left;
+}
+
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_toolbar_break {
+  display: block;
+  clear: left
+}
+
+.cke_reset.csui-rich-text-editor-toolbar .cke_combo_button,
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_combo_button {
+  display: inline-block;
+  margin: 0 6px 5px 0;
+  border-top: 1px solid #eeeeee;
+  padding: 1px;
+}
+
+.cke_reset.csui-rich-text-editor-toolbar .cke_combo_text,
+.cke_reset_all.csui-rich-text-editor-toolbar .cke_combo_text {
+  line-height: 26px;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 60px;
+}
+
+.csui-rich-text-editor-toolbar .cke_button_icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.csui-rich-text-editor-toolbar.cke_reset_all .cke_toolgroup {
+  padding: 1px;
+  float: left;
+}
+
+.csui-rich-text-editor-toolbar .cke_button_arrow {
+  display: inline-block;
+}
+
+
+
+
+.binf-widgets .csui-html-editor-wrapper .contact {
+  color: #333333;
+  margin: 16px 16px 32px 16px;
+  width: calc(100% - 32px);
+  text-align: left;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactImage {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 8px;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactImage img {
+  height: 96px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact h1 {
+  font-size: 1.4em;
+  margin: 0 0 4px 16px;
+  font-weight: 400;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact p.contactTitle {
+  color: #333333;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact p.contactCompany {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  margin-left: 16px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact .header {
+  position: relative;
+  font-size: .875em;
+  padding: 16px 16px 12px 128px;
+  border-radius: 4px 4px 0 0;
+  min-height: 96px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact {
+  border-bottom: 4px solid #33c6c8;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact header p {
+  margin-bottom: 4px;
+  color: #666666;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact ul {
+  font-size: .875em;
+  text-align: left;
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact ul li {
+  padding: 12px 16px 12px 0px;
+  margin-left: 16px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contact ul li:last-child {
+  border-bottom: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactLabel {
+  display: block;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .contactValue {
+  line-height: 1.4em;
+}
+
+
+
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup {
+  display: inline-block;
+  vertical-align: top;
+  margin: 16px;
+  padding: 12px 0 0 0;
+  border-top: 2px solid #e2e2e2;
+  line-height: 1;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.v:first-child {
+  padding: 0 0 0 0;
+  border-top: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.h {
+  width: 240px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.icons {
+  width: 180px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup.v {
+  width: calc(100% - 32px);
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup h2 {
+  font-size: 1.2em;
+  color: #333333;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup ul {
+  font-size: .875em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li {
+  padding: 8px 0;
+  margin: 0;
+  line-height: 1.2em;
+}
+
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  vertical-align: top;
+  margin: 16px;
+  padding: 0;
+  outline: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:focus {
+  outline: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 8px auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a,
+.binf-widgets .csui-html-editor-wrapper .contact a {
+  display: inline-block;
+  color: #2f4ed1;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Lato;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a:active,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:active,
+.binf-widgets .csui-html-editor-wrapper .contact a:active {
+  color: #2e3d98;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a:visited,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:visited,
+.binf-widgets .csui-html-editor-wrapper .contact a:visited {
+  color: #4f3690;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper .linkGroup li a:hover,
+.binf-widgets .csui-html-editor-wrapper .iconLinkGroup a:hover,
+.binf-widgets .csui-html-editor-wrapper .contact a:hover {
+  color: #0084ce;
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h1,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h2,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h3,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h4,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h5,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h6,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > p,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ol,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > blockquote {
+  padding: 0;
+  margin: 0 16px 0 16px !important;
+  font-weight: normal !important;
+  color: #333333;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 300;
+  margin-bottom: 4px;
+  margin-left: 0px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > p {
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 22px;
+  margin-bottom: 24px !important;
+  margin-top: 8px !important;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400 !important;
+  margin-bottom: 4px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400 !important;
+  margin-bottom: 0px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h5 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400 !important;
+  margin-bottom: 4px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > h6 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400 !important;
+  color: #000000;
+  margin-bottom: 4px;
+  margin-left: 16px !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ol {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  font-weight: 400 !important;
+  max-width: 24em;
+  margin: -8px 0 24px 32px !important;
+  padding: 0 0 0 16px;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul {
+  list-style: disc;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ul li,
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > ol li {
+  margin: 6px 0;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > blockquote {
+  font-size: 14px;
+  line-height: 20px;
+  background: #f7f7f7;
+  border-left: 4px solid #cccccc;
+  margin: 16px 32px 16px 16px !important;
+  padding: 16px !important;
+  width: 80%;
+}
+
+.binf-widgets .csui-html-editor-wrapper .csui-html-editor-wrapper-parent > code {
+  border: 1px solid #cccccc;
+  color: #000000;
+  font-family: Courier, 'New Courier', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 16px 32px 16px 16px;
+  padding: 16px;
+  width: 80%;
+  display: block;
+  background-color: inherit !important;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer {
+  display: inline-block;
+  text-align: center;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:link p {
+  color: #2f4ed1;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:visited p {
+  color: #4f3690;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:hover p {
+  color: #0084ce;
+  text-decoration: underline;
+}
+
+.binf-widgets .csui-html-editor-wrapper #iconLinkContainer a:active p {
+  color: #2e3d98;
+  text-decoration: none;
+}
+
+
+.binf-widgets .csui-html-editor-wrapper table.binf-table {
+  margin: 16px;
+  width: calc(100% - 32px) !important;
+  border-collapse: collapse !important;
+  border-top: 1px solid #cccccc !important;
+  vertical-align: top;
+  text-align: left;
+  font-size: .875em;
+}
+
+.binf-widgets .csui-html-editor-wrapper .binf-table td {
+  background-color: #ffffff;
+  padding: 8px !important;
+  overflow: hidden;
+  word-break: normal;
+  border-bottom: 1px solid #cccccc !important;
+  color: #333333;
+  background-color: #ffffff
+}
+
+.binf-widgets .csui-html-editor-wrapper .binf-table th {
+  padding: 8px !important;
+  border-bottom: 1px solid #757575 !important;
+  overflow: hidden;
+  word-break: normal;
+  background-color: #f5f5f5;
+}
+
+.binf-widgets .csui-html-editor-wrapper .binf-table {
+  vertical-align: top
+}
+

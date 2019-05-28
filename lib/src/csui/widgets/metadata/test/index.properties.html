@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MetadataPropertiesView Widget</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body {
+      font-family: "Lato", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+      font-size: 14px;
+      font-weight: 300; /* Lato Light */
+      height: 100%;
+    }
+
+    .docRef {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #fff;
+    }
+    .test-container {
+      position: absolute;
+      top: 80px;
+      left: 20px;
+    }
+
+    .cs-metadata {
+      height: 100%;
+    }
+
+    .row {
+      height: 100%;
+    }
+
+    #content {
+      height: 100%;
+    }
+
+    a:link {
+      color: grey;
+    }
+    a:hover {
+      color: grey;
+    }
+    a:active {
+      color: grey;
+    }
+    a:visited {
+      color: grey;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+            /*
+            url: "http://murdock.opentext.com/alpha/cs.exe/api/v1",
+            supportPath: '/alphasupport',
+            */
+          }
+        }
+      }
+    });
+
+    require(["csui/lib/marionette", 'csui/utils/contexts/page/page.context',
+      "csui/utils/contexts/factories/node", "./metadata.mock.data.js", "../metadata.properties.view"
+    ], function (Marionette, PageContext, NodeModelFactory, MetadataMock, MetadataPropertiesView) {
+
+      MetadataMock.enable();
+
+      var metaDataView,
+          contentRegion = new Marionette.Region({el: "#content"}),
+          pageContext   = new PageContext(),
+          currentNode   = pageContext.getModel(NodeModelFactory, {attributes: {id: 11111  }}); // 1781076
+
+      currentNode.setExpand('node');
+      pageContext.fetch()
+        .done(function () {
+          metaDataView = new MetadataPropertiesView({
+            context: pageContext,
+            node: currentNode
+          });
+          contentRegion.show(metaDataView);
+        });
+//      pageContext.fetch();
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<a class="docRef" href="../doc/metadata.properties.view.md">Documentation</a>
+
+<div class="binf-container-fluid">
+  <div class="binf-row">
+    <div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12 test-container" id="content"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

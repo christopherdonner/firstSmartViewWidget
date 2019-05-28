@@ -1,0 +1,49 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"category_names": "",
+				"create_in_id": "699145",
+				"duplicate_name_action": "uniquenum",
+				"export_type": "node",
+				"node_description": "",
+				"node_name": "MyOutput.html",
+				"node_type": "doc"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text/html",
+			"http_method": "POST",
+			"output_destination": "node",
+			"run_in_background": false,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true,
+			"use_conversion_engine": false,
+			"xml_job_ticket_id": ""
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [
+		{
+			"data": {},
+			"options": {
+				"fields": {},
+				"form": {
+					"attributes": {
+						"action": "api/v1/nodes/699157/output",
+						"method": "POST"
+					},
+					"renderForm": true
+				}
+			},
+			"schema": {
+				"properties": {},
+				"type": "object"
+			}
+		}
+	]
+}

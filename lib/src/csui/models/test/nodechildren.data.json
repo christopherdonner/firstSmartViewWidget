@@ -1,0 +1,119 @@
+{
+  "nodes": {
+    "2000": {
+      "container": true,
+      "id": 2000,
+      "name": "Innovate",
+      "parent_id": -1,
+      "size": 2,
+      "type": 141,
+      "type_name": "Enterprise Volume",
+      "volume_id": 3000,
+      "actions": {
+        "browse": {},
+        "properties": {}
+      }
+    },
+    "2001": {
+      "container": true,
+      "id": 2001,
+      "name": "First child",
+      "parent_id": 2000,
+      "size": 0,
+      "type": 0,
+      "type_name": "Folder",
+      "volume_id": 2000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "2002": {
+      "container": false,
+      "id": 2002,
+      "name": "Second child",
+      "parent_id": 2000,
+      "size": 123,
+      "type": 144,
+      "mime_type": "text/plain",
+      "type_name": "Document",
+      "volume_id": 2000,
+      "actions": {
+        "delete": {},
+        "download": {},
+        "properties": {},
+        "reserve": {}
+      }
+    }
+  },
+  "definitions": {
+    "container": {
+      "key": "container",
+      "name": "Container",
+      "read_only": true,
+      "sort": true,
+      "type": 5,
+      "type_name": "Boolean"
+    },
+    "id": {
+      "key": "id",
+      "name": "ID",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "name": {
+      "key": "name",
+      "multiline": false,
+      "multilingual": true,
+      "name": "Name",
+      "read_only": false,
+      "sort": true,
+      "type": -1,
+      "type_name": "String"
+    },
+    "parent_id": {
+      "key": "parent_id",
+      "name": "Parent ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "size": {
+      "key": "type",
+      "name": "Size",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type": {
+      "key": "type",
+      "name": "Type",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type_name": {
+      "key": "type_name",
+      "multiline": false,
+      "multilingual": false,
+      "name": "Type",
+      "read_only": true,
+      "type": -1,
+      "type_name": "String"
+    },
+    "volume_id": {
+      "key": "volume_id",
+      "name": "Volume ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    }
+  }
+}

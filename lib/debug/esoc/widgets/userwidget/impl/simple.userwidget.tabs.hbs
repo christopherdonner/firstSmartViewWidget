@@ -1,0 +1,43 @@
+{{#if extraTabs}}
+  <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 tab-links esoc-profile-tabs
+  esoc-nopadding-right">
+    <div class="tab-links-bar">
+      <div class="left-toolbar"></div>
+      <ul class='binf-nav binf-nav-pills esoc-user-profile-tabcontainer'>
+
+        <li role="presentation" class="esoc-user-profile-tab binf-active"
+            id="esoc-simple-user-profile-tab-{{uniqueId}}">
+          <a href="#tab1" data-binf-toggle="tab" class="esoc-simple-user-profile-tab-label"
+             title={{messages.profile}}>
+          <span class="esoc-simple-user-profile-tab-label"
+                title={{messages.profile}}>{{messages.profile}}</span></a>
+        </li>
+
+        {{#each extraTabs}}
+          {{#this}}
+            {{#if show}}
+              <li role="presentation" class="esoc-user-profile-tab"
+                  id="esoc-user-profile-{{tabName}}-tab">
+                <a href="#{{tabName}}" data-binf-toggle="tab"
+                   class="esoc-user-profile-{{tabName}}-tab-label" title= {{tabName}}>
+              <span class="esoc-user-{{tabName}}-tab-label esoc-user-profile-tab-label"
+                    title="{{tabDisplayName}}">{{tabDisplayName}}</span>
+                  {{#if tabCount}}
+                    <span class="esoc-user-{{tabName}}-count
+              esoc-user-profile-tab-count esoc-user-profile-tab-label"
+                          title="{{tabCount.count}}">{{tabCount.count}}</span>
+                  {{/if}}
+                </a>
+              </li>
+            {{/if}}
+          {{/this}}
+        {{/each}}
+      </ul>
+      <div class="right-toolbar"></div>
+      <div id="esoc-simple-user-widget-form-body-{{uniqueId}}"
+      class="esoc-simple-user-widget-form-body"></div>
+    </div>
+  </div>
+{{else}}
+  <div id="esoc-simple-user-widget-form-body-{{uniqueId}}" class="esoc-simple-user-widget-form-body"></div>
+{{/if}}

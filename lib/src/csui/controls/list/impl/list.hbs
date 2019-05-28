@@ -1,0 +1,47 @@
+<div class="tile-header">
+
+  {{#if icon}}
+    <div class="tile-type-icon">
+      <span class="icon {{icon}}" aria-label="{{expandAria}}"></span>
+    </div>
+  {{else}}
+    {{#if imageUrl}}
+      <div class="tile-type-image {{imageClass}}">
+        <span class="tile-type-icon tile-type-icon-img"><img src="{{imageUrl}}"
+                                                             alt="{{expandAria}}"></span>
+      </div>
+    {{/if}}
+  {{/if}}
+
+  <div class="tile-title">
+    <h2 class="csui-heading">{{title}}</h2>
+  </div>
+
+  <div class="tile-controls">
+    {{^if hideSearch}}
+      <div class="search-box">
+        <input class="search" type="search" placeholder="{{searchPlaceholder}}"
+               title="{{searchPlaceholder}}">
+        <span class="clearer csui-icon formfield_clear" title="{{clearAll}}"
+              aria-label="{{clearAllAria}}" role="button"></span>
+        <span class="fadeout csui-icon" title="{{searchPlaceholder}}"></span>
+      </div>
+      <span title="{{searchTooltip}}" class="cs-search-icon icon icon-search" role="button"
+            aria-label="{{searchAria}}" aria-expanded="false"></span>
+    {{/if}}
+  </div>
+
+</div>
+<div class="tile-content" role="listbox">
+  <div class="binf-list-group"></div>
+  <div class="binf-sr-only" aria-live="off"></div>
+</div>
+
+<div class="tile-footer">
+  <div class="cs-more tile-expand" title="{{expandTitle}}" aria-label="{{expandAria}}"
+       role="button">
+    <div class="icon circular icon-tileExpand"></div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

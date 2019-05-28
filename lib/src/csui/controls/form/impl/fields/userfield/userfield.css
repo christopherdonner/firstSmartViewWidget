@@ -1,0 +1,260 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field-otcs_user .alpaca-control {
+  
+}
+
+.binf-widgets .cs-userfield {
+  margin-bottom: 0;
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+.binf-widgets .cs-userfield .cs-name a {
+  float: left;
+}
+
+.cs-userfield .cs-name .esoc-user-container:focus {
+  text-decoration: underline;
+}
+
+.cs-userfield .cs-name .esoc-user-container.cs-user-container-no-hover:focus {
+  text-decoration: none;
+}
+
+.cs-userfield .cs-name .cs-user-container-hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cs-userfield .cs-name .cs-user-container-no-hover {
+  text-decoration: none;
+  cursor: default;
+  color: #000000;
+}
+
+.cs-formfield.cs-userfield .inline-edit-icon.icon-edit {
+  margin-top: 5px;
+}
+
+.cs-form .alpaca-container-item > .binf-form-group.alpaca-field.alpaca-field-otcs_user > .binf-col-sm-9 {
+  overflow: visible;
+}
+
+.cs-userfield .cs-field-write-inner {
+  display: flex;
+   
+  height: 100%;
+}
+
+.cs-userfield .cs-field-write-inner .picker-container {
+  -webkit-box-flex: 1 1 0; 
+  -moz-box-flex: 1 1 0; 
+  -webkit-flex: 1 1 0; 
+  -ms-flex: 1 1 0; 
+  flex: inherit; 
+
+  width: 100%;
+  height: 100%;
+}
+
+.cs-userfield .cs-field-write-inner input {
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #a7a9ac;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+  padding: 0;
+  padding-left: 0.5em;
+  height: 28px;
+}
+
+.cs-formfield.cs-userfield .cs-field-read .cs-field-read-inner .cs-left {
+  width: 1.8em;
+}
+
+.cs-userfield .user-photo,
+.cs-userfield .user-default-image {
+  height: 24px;
+  width: 24px;
+
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex;
+
+  -moz-box-direction: column;
+  -webkit-box-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flexbox-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: justify;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  -moz-box-pack: justify;
+  justify-content: center;
+
+}
+
+.cs-userfield .user-default-image {
+  font-size: 9px;
+}
+
+.cs-userfield .cs-user-photo-hover {
+  cursor: pointer;
+}
+
+.cs-userfield button:focus .user-photo,
+.cs-userfield button:focus .user-default-image {
+  height: 1.65em;
+}
+
+.cs-userfield .cs-name {
+  width: calc(100% - 24px);
+}
+
+.cs-userfield .cs-name .esoc-user-container {
+  margin-left: 8px;
+  min-width: 100%;
+}
+
+.cs-userfield .cs-right {
+  display: inline-block;
+  line-height: 28px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.cs-formfield.cs-userfield .cs-field-read-content {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex; 
+  flex-direction: row;
+  width: 100%;
+}
+
+.cs-formfield.cs-userfield .cs-field-read-content:focus,
+.cs-formfield.cs-userfield .cs-field-read-content .cs-name .esoc-user-container:focus {
+  outline: 1px dotted #333333;
+}
+
+.cs-formfield.cs-userfield .cs-field-read-content.placeholder {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+
+.cs-formfield.cs-userfield .cs-field-read .btn-container {
+  height: 100%;
+  max-width: 100%;
+}
+
+.cs-formfield.cs-userfield .cs-field-read .btn-container div {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex;
+
+  margin-top: 0;
+  max-width: calc(100%);
+}
+
+.cs-formfield.cs-userfield .cs-field-read button {
+  height: 100%;
+  padding: 0px 4px 0px 4px;
+
+}
+
+.cs-formfield.cs-userfield .cs-field-read button:focus .cs-name {
+  width: auto;
+  margin-top: 0;
+  height: 28px;
+
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex;
+
+  -moz-box-direction: column;
+  -webkit-box-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flexbox-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: justify;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  -moz-box-pack: justify;
+  justify-content: center;
+}
+
+.binf-widgets .cs-userfield .cs-field-write-inner input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #666666;
+  border-radius: 3px;
+}
+
+.cs-userfield .cs-field-write .cs-search-icon,
+.cs-userfield .cs-field-write .cs-search-clear {
+  width: 0;
+  display: none;
+}
+
+.cs-userfield .cs-field-write .csui-control-userpicker .cs-search {
+  width: 100%;
+  margin: 0;
+}
+
+.cs-userfield .cs-field-write .csui-control-userpicker .scroll-container {
+  top: 1.875em;
+  width: 17.125em;
+}
+
+.cs-userfield .esoc-user-container:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.cs-userfield .esoc-user-container {
+  color: black;
+}
+
+.cs-userfield .esoc-user-container {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.cs-form-set-container .alpaca-container-item.alpaca-container-item-first > .binf-form-group .cs-userfield input {
+  margin-top: 1px;
+}
+
+.cs-metadata .cs-metadata-properties .binf-tab-content .cs-form.csui-general-form .alpaca-container-item > .binf-form-group.alpaca-field.alpaca-field-otcs_user > .alpaca-control-label {
+  margin-top: 1px;
+}
+
+.binf-widgets .cs-form .cs-form-set .alpaca-container .alpaca-container-item > .binf-form-group > div.binf-col-sm-9.cs-userfield-height {
+  height: 28px;
+}

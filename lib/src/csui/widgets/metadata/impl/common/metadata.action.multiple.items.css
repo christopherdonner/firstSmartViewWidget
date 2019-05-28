@@ -1,0 +1,132 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-metadata-add-items {
+  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.cs-metadata-add-items .cs-metadata {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+.cs-metadata-add-items .metadata-wrapper {
+  height: 100%;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.cs-metadata-add-items .metadata-wrapper .icon.circular {
+  border: 0;
+}
+
+.cs-metadata-add-items .metadata-navigation {
+  width: 100%;
+  height: 100%;
+}
+
+.cs-metadata-add-items .metadata-sidebar {
+  height: 100%;
+  min-height: 100%;
+  width: 20%;
+  min-width: 15.5em;
+  float: left;
+  border-right: 1px solid #999999;
+}
+
+
+
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .cs-content {
+  height: 100%;
+  min-height: 100%;
+}
+
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist.binf-panel {
+  border-left: 1px solid white;
+}
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .binf-panel-heading {
+  background-color: #f5f5f5;
+}
+
+
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .csui-icon-group,
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .csui-icon-group .csui-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .csui-icon-group {
+  margin-top: calc((3rem - 28px) / 2);
+}
+
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist a.binf-active > .binf-list-group-item {
+  background-color: #dfe7ea;
+  color: #333333;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist a > .binf-list-group-item {
+  background-color: transparent;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .binf-list-group-item:hover {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: #bac9ce;
+  color: #333333;
+}
+
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .list-item-title {
+  font-weight: 500;
+  line-height: 3rem;
+  height: 3rem;
+}
+
+
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .cs-icon-required {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: 43px;
+  top: 1rem;
+}
+
+
+
+.cs-metadata-add-items .metadata-content {
+  height: 100%;
+  width: 80%; 
+  max-width: calc(100% - 15.5em); 
+  display: inline-block;
+}
+
+.cs-metadata-add-items .metadata-content .cs-metadata {
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+<button id="{{id}}" class="binf-btn binf-btn-default binf-dropdown-toggle csui-acc-focusable" data-binf-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" aria-label="{{applyPropertiesAria}}">
+  <span class="cs-label">{{name}}</span>
+  <span class="cs-icon icon-caret-down"></span>
+</button>
+<ul class="binf-dropdown-menu" role="menu" aria-labelledby="{{id}}">
+  {{#each applyPropertiesOptions}}
+    <li role="presentation" data-optionid="{{this.id}}">
+      <a role="menuitem" tabindex="-1" href="#">
+        <span class="cs-label">{{this.name}}</span>
+      </a>
+    </li>
+  {{/each}}
+  <li class="binf-divider"></li>
+  <li role="presentation" class="open-selected-properties">
+    <a role="menuitem"  tabindex="-1" href="#">
+      <span class="cs-icon"></span>
+      <span class="cs-label">{{openSelectedProperties}}</span>
+    </a>
+  </li>
+</ul>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

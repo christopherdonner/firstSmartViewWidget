@@ -1,0 +1,110 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-inline-owner-change {
+  width: auto;
+  margin-left: 40px;
+}
+
+.binf-widgets .csui-inline-owner-change .cs-inline-user-lookup {
+  width: 100%;
+  display: table;
+}
+
+.binf-widgets .csui-inline-owner-change .csui-inline-permissions-user-picker {
+  width: calc(100% - 182px);
+  float: left;
+}
+
+.binf-widgets .csui-inline-owner-change .csui-user-picker-buttons {
+  float: right;
+  width: auto;
+  height: 33px;
+  padding: 0px 5px;
+}
+
+.binf-widgets .csui-inline-owner-change .csui-control-userpicker .cs-search-icon {
+  display: none;
+}
+
+.binf-widgets .csui-inline-owner-change .binf-btn {
+  border-radius: 18px;
+  width: 6em;
+  padding: 4px 12px;
+  height: auto;
+  margin: 0px 7px;
+}
+
+.binf-widgets .csui-inline-owner-change .binf-form-control {
+  position: relative;
+  width: 100%;
+  height: 33px;
+}
+
+.binf-widgets .csui-inline-owner-change .csui-control-userpicker .cs-search-clear {
+  right: 1em;
+  top: calc(50% - 7px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 1em;
+  width: 1em;
+  display: block;
+  font-size: 100%;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-inline-owner-change .member-picture .csui-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-inline-owner-change .member-info {
+  padding-left: 1em;
+  font-size: 16px;
+  width: calc(100% - 2em);
+}
+
+.binf-widgets .csui-permissions-list-container .csui-inline-owner-change .csui-userpicker-item .member-info .name {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-inline-owner-change .csui-userpicker-item .member-info span {
+  color: #414042;
+  font-weight: normal;
+  font-size: 0.75em;
+}
+
+.binf-widgets .csui-inline-owner-change .binf-btn-primary[disabled],
+.binf-widgets .csui-inline-owner-change .binf-btn-primary[disabled]:hover {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #999999;
+}
+
+.binf-widgets .csui-inline-owner-change .binf-btn[disabled] {
+  cursor: default;
+}
+
+.binf-widgets .csui-inline-owner-change .binf-btn-primary {
+  background-color: #0072aa;
+  color: #ffffff;
+}
+
+.binf-widgets .csui-inline-owner-change .binf-btn-primary:hover {
+  color: #ffffff;
+}
+
+.binf-widgets .csui-inline-owner-change .csui-inline-permissions-user-picker .csui-control-userpicker .scroll-container {
+  position: absolute;
+}
+
+.binf-widgets .csui-inline-owner-change .csui-change-user-error {
+  clear: both;
+  font-size: 13px;
+  color: #df3526;
+}
+
+.binf-widgets .csui-inline-owner-change .csui-change-user-error-display {
+  padding-top: 3px;
+}

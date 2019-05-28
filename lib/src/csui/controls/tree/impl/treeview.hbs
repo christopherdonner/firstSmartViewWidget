@@ -1,0 +1,41 @@
+{{#if isNodesExists }}
+  <div class="csui-tree-child {{#if nodeSplit}} {{splitClass}}{{/if}} {{#if
+  nodeClass}} nodeClass{{/if}}">
+      <input type="checkbox" id="node_{{nodeId}}" tabindex="-1" name="{{nodeId}}"
+             aria-label="{{nodeName}}" class="csui-tree-checkbox
+    {{#if readonly}}{{#if checked}}  icon-checkbox-on_disabled
+    {{else}} icon-checkbox-disabled{{/if}}{{/if}}" {{#if readonly}}disabled {{else}}{{#if
+      checked}} tabindex="-1"  checked{{/if}}{{/if}}>
+    <label for="node_{{nodeId}}"></label>
+    <span class="csui-node-name">{{nodeName}}</span>
+  {{#if nodeSplit}}
+      <div class="csui-tree-split {{splitClass}}">
+        <div class="csui-splitcontrol-label">
+          <span>{{splitName}}</span>
+        </div>
+      </div>
+      <div class="csui-separator"></div>
+  {{/if}}
+  </div>
+  <ul></ul>
+  {{else}}
+    <div class="csui-tree-child {{#if nodeSplit}} {{splitClass}}{{/if}}">
+      <input type="checkbox" id="node_{{nodeId}}" name="{{nodeId}}"
+             aria-label="{{nodeName}}"  tabindex="-1" class="csui-tree-checkbox
+             {{#if nodeClass}} nodeClass{{/if}}
+        {{#if readonly}}{{#if checked}} icon-checkbox-on_disabled
+    {{else}} icon-checkbox-disabled{{/if}}{{/if}}" {{#if readonly}}disabled {{else}}{{#if
+      checked}} checked{{/if}}{{/if}}>
+      <label for="node_{{nodeId}}"></label>
+      <span class="csui-node-name">{{nodeName}}</span>
+      {{#if nodeSplit}}
+        <div class="csui-tree-split {{splitClass}}">
+          <div class="csui-splitcontrol-label">
+            <span>{{splitName}}</span>
+          </div>
+        </div>
+        <div class="csui-separator"></div>
+      {{/if}}
+    </div>
+  {{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

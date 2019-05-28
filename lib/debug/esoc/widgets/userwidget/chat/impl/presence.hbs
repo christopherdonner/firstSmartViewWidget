@@ -1,0 +1,12 @@
+{{#if chatEnabled}}
+  {{#if presenceEnabled}}
+    <div id='esoc-chat-presence-indicator-{{id}}' title='{{tooltipText}}' class='esoc-chat-presence-indicator
+      {{#xif "this.status == 'Offline'" }}esoc-chat-presence-Offline {{/xif}}
+      {{#xif "this.status == 'Away'" }}esoc-chat-presence-Away{{/xif}}
+      {{#xif "this.status == 'Online'" }}esoc-chat-presence-Online{{/xif}}
+      {{#xif "this.status == 'Busy'" }}esoc-chat-presence-Busy{{/xif}}
+      {{#xif "this.status == 'Unknown'" }}esoc-chat-presence-Unknown{{/xif}}
+      {{#xif "this.status == 'DoNotDisturb'" }}esoc-chat-presence-donotdisturb{{/xif}}' tabindex="0"
+         aria-label="{{tooltipText}}"></div>
+  {{/if}}
+{{/if}}

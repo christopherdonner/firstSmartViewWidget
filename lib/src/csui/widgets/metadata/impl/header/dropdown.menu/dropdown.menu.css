@@ -1,0 +1,40 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-dropdown-menu .binf-dropdown {
+  display: inline-block;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.cs-dropdown-menu .binf-dropdown {
+  height: auto;
+}
+
+.cs-dropdown-menu .binf-dropdown > .binf-dropdown-toggle {
+  border: none;
+  background: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+
+.metadata-header .cs-dropdown-menu .binf-dropdown > .binf-dropdown-toggle {
+  margin-top: 1px;
+}
+
+.cs-dropdown-menu .binf-dropdown .csui-button-icon {
+  vertical-align: baseline;
+}
+
+.cs-dropdown-menu .binf-dropdown .csui-button-icon:focus {
+  outline-style: none;
+}
+
+.binf-widgets .cs-dropdown-menu .binf-open > .binf-dropdown-menu.adjust-dropdown-menu {
+  left: inherit;
+  right: 0;
+  border-radius: 0;
+}

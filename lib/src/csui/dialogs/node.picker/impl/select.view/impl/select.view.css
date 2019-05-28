@@ -1,0 +1,66 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-np-header.tile-header {
+  height: 30px;
+  overflow: hidden;
+}
+
+.binf-widgets .csui-np-content {
+  height: calc(100% - 3em) !important;
+}
+
+.csui-np-content .cs-list {
+  height: 100%;
+}
+
+.binf-widgets .csui-targetbrowse-history {
+  display: none;
+  float: left;
+  margin: 16px 0px 0px 25px;
+}
+
+.csui-slideMidLeft .csui-targetbrowse-history, .csui-slideMidLeft .cs-go-back {
+  display: none;
+}
+
+.csui-targetbrowse-history .arrow_back,
+.csui-targetbrowse-history .arrow_back_mouse_over,
+.csui-targetbrowse-history .arrow_back_mouse_down {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+  float: left;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+}
+
+.csui-targetbrowse-history .csui-targetbrowse-arrow-back {
+  display: inline-block;
+}
+
+.binf-widgets .csui-np-header .csui-search-item-left-panel {
+  width: calc(50% - 1em);
+  line-height: 2.5em;
+}
+
+.binf-widgets .csui-np-header .csui-search-item-right-panel {
+  line-height: 2.5em;
+  width: 50%;
+  float: right;
+}
+
+
+.binf-widgets .csui-np-header .csui-form-control-search,
+.binf-widgets .csui-np-header .csui-form-control-search:active,
+.binf-widgets .csui-np-header .csui-form-control-search:focus,
+.binf-widgets .csui-np-header .csui-form-control-search:hover {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: normal;
+  box-shadow: none;
+}

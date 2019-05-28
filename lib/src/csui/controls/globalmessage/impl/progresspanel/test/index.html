@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html style="background-color: white;">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Progress Panel Test Page</title>
+
+  <link rel="stylesheet" href="../../../../../themes/carbonfiber/theme.css">
+  <link rel="stylesheet" data-csui-theme-overrides="true" href="../../../../../themes/highcontrast/overrides.css">
+
+  <style>
+    body.binf-widgets {
+      padding-top: 15px;
+      height: calc(100vh - 15px);
+    }
+
+    body.binf-widgets > div:nth-child(1) {
+      height: calc(100% - 7em);
+    }
+
+    body.binf-widgets > div:nth-child(2) {
+      height: 7em;
+    }
+
+    .binf-row,
+    #content {
+      height: 100%;
+    }
+  </style>
+
+  <script src="../../../../../lib/require.js"></script>
+  <script src="../../../../../config.js" data-csui-path="../../../../.."></script>
+
+  <script>
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/underscore', 'csui/lib/marionette', 'csui/models/fileuploads',
+      '../progresspanel.view', 'csui/utils/messagehelper',
+      'csui/controls/globalmessage/globalmessage'
+    ], function (_, Marionette, FileUploadCollection, View, MessageHelper,
+        GlobalMessage) {
+
+      var messageHelper = new MessageHelper();
+
+      // Wrap the widget placeholder
+      var contentRegion = new Marionette.Region({
+            el: '#content'
+          }),
+          // Create the data managing context
+          collectionData = [
+            {
+              state: "resolved",
+              count: 2097152,
+              type: "application/pdf",
+              file: {
+                name: "Comparison-Safety-Classic.pdf",
+                type: "application/pdf",
+                size: 2097152
+              }
+            },
+            {
+              state: "processing",
+              count: 9751757,
+              type: "application/pdf",
+              file: {
+                name:
+                    "Instructions_Regular_of_this_product_with_very_long_name_just_to_test_long_names.pdf",
+                type: "application/pdf",
+                size: 12582912
+              }
+            },
+            {
+              state: "pending",
+              count: 0,
+              type: "application/pdf",
+              file: {
+                name: "Global_Instructions.pdf",
+                type: "application/pdf",
+                size: 8388608
+              }
+            }
+          ],
+          collection = new FileUploadCollection(collectionData);
+      // Create the widget instance
+      //          view = new View({
+      //            collection: collection
+      //          });
+
+      // Show the widget on the page
+      //contentRegion.show(view);
+      //var rect = view.el.getBoundingClientRect();
+      //view.sizes = rect;
+      //view.$el.offset({left: rect.left, top: rect.top});
+      //messageHelper.showPanel(view,contentRegion);
+
+      GlobalMessage.setMessageRegionView(contentRegion, {classes: "binf-navbar-default"});
+      GlobalMessage.setFileUploadCollection(collection);
+      GlobalMessage.showFileUploadProgress();
+
+      var intervalLength = 200,
+          byteIncrement = 200000,
+          startIncrement = 2000 / intervalLength;
+
+      var startCycles = new Array(collection.length);
+      for (var ii = 0; ii < collection.length; ii++) {
+        startCycles[ii] = ii * startIncrement;
+      }
+
+      var ActionsView = Marionette.ItemView.extend({
+
+            constructor: function ActionsView(options) {
+              Marionette.ItemView.prototype.constructor.call(this, options);
+            },
+
+            simulateUploadIncrement: function () {
+              this.currentCycle = this.currentCycle + 1;
+              var pending = 0,
+                  resolved = 0,
+                  processing = 0;
+              for (var ii = 0; ii < collection.models.length; ii++) {
+                var item = collection.models[ii];
+                if (item.promise().state() === "resolved" ||
+                    item.promise().state() === "rejected") {
+                  resolved += 1;
+                } else {
+                  if (this.currentCycle >= startCycles[ii]) {
+                    if (item.get("count") + byteIncrement < item.get("total")) {
+                      item.set("count", item.get("count") + byteIncrement);
+                    } else {
+                      item.set("count", item.get("total"));
+                    }
+                    if (item.get("count") >= item.get("total")) {
+                      item.set("state", "resolved");
+                      item.deferred.resolve(item);
+                      resolved += 1;
+                    } else {
+                      item.set("state", "processing");
+                      processing += 1;
+                    }
+                  } else if (this.currentCycle < startCycles[ii]) {
+                    item.set("state", "pending");
+                    pending += 1;
+                  }
+                }
+              }
+              if (resolved + pending + processing !== collection.models.length) {
+                alert(
+                    _.str.sformat("resolved={0},pending={1},processing={2},all={3}", resolved,
+                        pending, processing, collection.models.length));
+                clearInterval(this.currentInterval);
+              }
+              if (processing + pending === 0) {
+                clearInterval(this.currentInterval);
+              }
+            },
+
+            makeVisible: function () {
+              //messageHelper.showPanel(view,contentRegion);
+              GlobalMessage.showFileUploadProgress();
+            },
+
+            showMessage: function () {
+              GlobalMessage.showMessage("success", "A short message.", "Some Details.");
+            },
+
+            startUploadSimulation: function () {
+              collection.reset(collectionData);
+              for (var ii = 0; ii < collection.models.length; ii++) {
+                // all silent
+                collection.models[ii].set({"state": "pending", "count": 0}, {silent: true});
+                collection.models[ii].promise().fail(function (failedModel, error) {
+                  //alert("Cancelled "+failedModel.get("name"));
+                });
+              }
+              // and render complete panel once.
+              //view.render();
+              //messageHelper.showPanel(view,contentRegion);
+              GlobalMessage.showFileUploadProgress();
+              this.currentCycle = 0;
+              this.currentInterval = setInterval(_.bind(this.simulateUploadIncrement, this),
+                  intervalLength);
+            },
+
+            template: "#actions-view-template",
+
+            ui: {
+              startButton: '#startUploadSimulationButton',
+              visibleButton: '#makeVisibleButton',
+              messageButton: '#showMessageButton'
+            },
+            events: {
+              'click @ui.startButton': 'startUploadSimulation',
+              'click @ui.visibleButton': 'makeVisible',
+              'click @ui.messageButton': 'showMessage'
+            }
+          }),
+          actionsRegion = new Marionette.Region({
+            el: '#actions'
+          }),
+          actions = new ActionsView();
+
+      actionsRegion.show(actions);
+      actionsRegion.$el.find(".binf-btn-group").css({
+        "display": "flex", "flex-direction": "column"
+      });
+      actionsRegion.$el.find(".binf-btn-group .binf-btn").css({
+        "width": "130px"
+      });
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid">
+  <div class="binf-row">
+    <div id="content" class="binf-col-sm-12 binf-col-md-10 binf-col-lg-8"></div>
+  </div>
+</div>
+<div class="binf-container-fluid">
+  <div class="binf-row">
+    <div id="actions" class="binf-col-sm-12 binf-col-md-10 binf-col-lg-8"></div>
+  </div>
+</div>
+<div ID="index-templates" STYLE="display: none;">
+  <div ID="actions-view-template">
+    <div CLASS="binf-btn-group">
+      <button id="startUploadSimulationButton" type="button"
+              class="binf-btn binf-btn-primary">
+        Start Simulation
+      </button>
+      <button id="makeVisibleButton" type="button" class="binf-btn binf-btn-toolbar">
+        Make Visible
+      </button>
+      <button id="showMessageButton" type="button" class="binf-btn binf-btn-toolbar">
+        Show Message
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

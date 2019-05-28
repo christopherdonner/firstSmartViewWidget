@@ -1,0 +1,58 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .target-browse.cs-permission-group-picker .csui-add-member {
+  background-size: 24px;
+  min-width: 32px;
+  max-width: 32px;
+  height: 100%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  right: 24px;
+  position: absolute;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-search-bar > div {
+  padding-left: 2px;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 0px 10px 16px;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-search-bar .csui-control-userpicker .cs-search-icon {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: 0.25em;
+  top: 0.5625em;
+  background-repeat: no-repeat;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-search-bar .csui-control-userpicker .cs-search-clear {
+
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  right: 2.5em;
+  top: 0.5625em;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-search-bar .csui-control-userpicker .scroll-container .binf-dropdown-menu {
+  position: static;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-search-bar .csui-control-userpicker .scroll-container {
+  width: calc(100% - 18px);
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-lookup .csui-user-search-container .csui-userpicker-item .member-info .name {
+  line-height: 18px;
+}

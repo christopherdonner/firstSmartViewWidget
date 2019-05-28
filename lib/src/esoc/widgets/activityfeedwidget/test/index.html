@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AcitivityFeed Widget</title>
+
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+  <script src="../../../../csui/lib/require.js"></script>
+  <script data-csui-path="../../../../csui" src="../../../../csui/config.js"></script>
+  <script src="../../../../csui/helpers.js"></script>
+  <script>
+    require.config({
+      paths: {
+        esoc: '../../../../src'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/OTCS/livelink/api/v1/',
+            supportPath: '/img',
+            crossDomain: true
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../activityfeedwidget.view', 'csui/utils/contexts/factories/connector'
+    ], function (Marionette, PageContext, ActivityFeedWidget, Connector) {
+
+      var contentRegion    = new Marionette.Region({el: '#content1'}),
+          pageContext      = new PageContext(), // holds the model
+          options          = {
+            context: pageContext,
+            "title": "Activity Feed - All",
+            "feedsize": 15,
+            "feedtype": "all",
+            "feedSettings": {
+              "enableComments": true,
+              "enableFilters": false
+            },
+            config_settings: {
+              'feedsAutoRefreshWait': 60000,
+              'maxMessageLength': 1000
+            }
+          },
+          activityFeedView = new ActivityFeedWidget(options);
+
+      contentRegion.show(activityFeedView);
+      pageContext.fetch();
+
+      options.feedtype = "content";
+      options.title = "Activity Feed - Content";
+      var contentRegion1    = new Marionette.Region({el: '#content2'}),
+          activityFeedView1 = new ActivityFeedWidget(options);
+      contentRegion1.show(activityFeedView1);
+      pageContext.fetch();
+
+      options.feedtype = "status";
+      options.title = "Status Feed";
+      var contentRegion2    = new Marionette.Region({el: '#content3'}),
+          activityFeedView2 = new ActivityFeedWidget(options);
+      contentRegion2.show(activityFeedView2);
+      pageContext.fetch();
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid grid-rows ">
+  <div class="binf-row">
+    <div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12" id="content1"></div>
+    <div class="binf-col-sm-6 binf-col-md-6 binf-col-lg-6" id="content2"></div>
+    <div class="binf-col-sm-6 binf-col-md-6 binf-col-lg-6" id="content3"></div>
+  </div>
+</div>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

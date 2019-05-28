@@ -1,0 +1,18 @@
+<span class="dropdown-label">{{title}}</span>
+{{#if single_item}}
+  <button id="{{btnId}}" type="button" class="binf-btn binf-btn-default"
+          aria-label="{{title}}">
+    <span class="cs-label">{{title}}</span>
+  </button>
+{{else}}
+  <button id="{{btnId}}" type="button" class="binf-btn binf-btn-default binf-dropdown-toggle"
+          data-binf-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          aria-label="{{title}}">
+    <span class="cs-label">{{title}}</span>
+    <span class="cs-icon icon-caret-down" title="{{addToolTipContent}}"></span>
+  </button>
+{{/if}}
+<ul class="binf-dropdown-menu" role="menu" aria-labelledby="{{btnId}}">
+</ul>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

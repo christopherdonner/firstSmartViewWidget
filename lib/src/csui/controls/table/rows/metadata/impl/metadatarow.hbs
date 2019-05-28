@@ -1,0 +1,23 @@
+<div class="binf-row">
+  <div class="cs-form binf-form-horizontal">
+    {{#each meta}}
+      <div class="binf-form-group binf-col-xs-12"
+           data-csui-attribute="{{name}}">
+          {{#if this.isRegion}}
+              <div title="{{this.label}}" id="{{this.regionLabelId}}"
+                     class="binf-col-xs-4 binf-col-sm-3 binf-col-md-2 binf-control-label">{{this.label}}</div>
+
+              <div id="{{this.id}}" class="binf-col-xs-8 binf-col-sm-9 binf-col-md-10
+              binf-form-control-static csui-content-view" aria-labelledby="{{this.regionLabelId}}"></div>
+          {{else}}
+              <label for="{{this.id}}" title="{{this.label}}"
+                     class="binf-col-xs-4 binf-col-sm-3 binf-col-md-2 binf-control-label">{{this.label}}</label>
+              <input id="{{this.id}}" type="text" readonly value="{{this.value}}"
+                     {{#if this.tooltip}}title="{{this.tooltip}}"{{/if}}
+                     class="binf-col-xs-8 binf-col-sm-9 binf-col-md-10 binf-form-control-static">
+          {{/if}}
+      </div>
+    {{/each}}
+  </div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

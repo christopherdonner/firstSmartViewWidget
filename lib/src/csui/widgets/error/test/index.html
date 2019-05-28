@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Error Widget</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body.binf-widgets {
+      margin-top: 15px;
+    }
+    .csui-message {
+      color: #003f67;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require([
+      'csui/lib/backbone', 'csui/lib/marionette', '../error.view'
+    ], function (Backbone, Marionette, ErrorView) {
+      'use strict';
+
+      var error1, errorView1, errorRegion1, error2, errorView2, errorRegion2;
+
+      // with the new 'suggestion' data
+      errorView1 = new ErrorView({
+        model: error1,
+        data: {
+          message: 'The object cannot be accessed now.',
+          suggestion: 'Please try again later or contact the administrator.'
+        }
+      });
+      errorRegion1 = new Marionette.Region({el: '#error1'});
+      errorRegion1.show(errorView1);
+
+      // backward compatible with the old data without 'suggestion'
+      error2 = new Backbone.Model({
+        message: 'Sorry, the item you requested could not be accessed. ' +
+                 'Either it does not exist, or you do not have permission to access it. ' +
+                 'If you were sent a link to this item, please contact the sender for assistance.'
+      });
+      errorView2 = new ErrorView({
+        model: error2
+      });
+      errorRegion2 = new Marionette.Region({el: '#error2'});
+      errorRegion2.show(errorView2);
+
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Error examples</h1>
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="error1"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="error2"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

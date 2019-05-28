@@ -1,0 +1,51 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-configuration-view .icon {
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.csui-configuration-view > .binf-dropdown > button,
+.csui-configuration-view > .binf-dropdown > button:active {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.csui-configuration-view > .binf-dropdown > button:focus {
+  outline: 1px dotted #333333;
+}
+
+.csui-configuration-view .binf-dropdown.binf-open > ul.binf-dropdown-menu {
+  left: inherit;
+  right: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0;
+  max-height: calc(100vh - 150px);
+  max-width:  calc(100vw - 100px);
+  overflow: auto;
+}
+
+.csui-configuration-view .binf-dropdown.binf-open > ul.binf-dropdown-menu > li > a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.csui-configuration-view .binf-dropdown.binf-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.csui-configuration-view .binf-dropdown.binf-open > ul.binf-dropdown-menu > .command-view-region {
+  padding: 0;
+  margin: 0;
+  max-height: calc(100vh - 155px);
+  max-width:  calc(100vw - 100px);
+}

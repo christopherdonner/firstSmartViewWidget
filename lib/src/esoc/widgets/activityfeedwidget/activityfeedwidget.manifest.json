@@ -1,0 +1,140 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "Activity Feed",
+  "description": "Shows activity feeds for the given option parameters.",
+  "kind": "tile",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "wrapperClass": {
+        "title": "Wrapper class",
+        "description": "Wrapper class to be apply on top of activity feed list",
+        "type": "string",
+        "default": ""
+      },
+      "feedsize": {
+        "title": "Feed size",
+        "description": "Number of feed items to be fetched per page",
+        "type": "number",
+        "default": 20
+      },
+      "feedtype": {
+        "title": "Feed type",
+        "description": "Type of the feeds that should be consider",
+        "type": "string",
+        "default": "all",
+        "enum": [
+          "all",
+          "content",
+          "status",
+          "attribute"
+        ]
+      },
+      "feedSettings": {
+        "title": "Feed settings",
+        "description": "Feed settings to be considered",
+        "type": "object",
+        "properties": {
+          "enableComments": {
+            "title": "Enable comments",
+            "description": "Whether to show comment button or not respective to each feed",
+            "type": "boolean",
+            "default": true
+          },
+          "enableFilters": {
+            "title": "Enable filters",
+            "description": "Whether to show filter panel at left side or not in expanded view",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "honorfeedsource": {
+        "title": "Honor feed source",
+        "description": "Whether to consider pulsefrom or consider widget options as feed source",
+        "type": "boolean",
+        "default": false
+      },
+      "headerView": {
+        "title": "Header View",
+        "description": "Show feeds in horizontal view with dark theme",
+        "type": "boolean",
+        "default": false
+      },
+      "feedsource": {
+        "title": "Feed source",
+        "description": "Source for the feed to be considered",
+        "type": "object",
+        "properties": {
+          "source": {
+            "title": "Source",
+            "description": "Consider feed source as all or node or pulsefrom",
+            "type": "string",
+            "default": "all",
+            "enum": [
+              "all",
+              "node",
+              "pulsefrom"
+            ]
+          },
+          "id": {
+            "title": "id",
+            "description": "Object id to be consider as feed source and applicable only when feedsource.source is either node or pulsefrom",
+            "type": "string",
+            "default": ""
+          }
+        }
+      },
+      "updatesfrom": {
+        "title": "Updates from",
+        "description": "Feed updates from all/iamfollowing/myfollowers/following/followers/myupdates/mentions/myfavorites/user/group",
+        "type": "object",
+        "properties": {
+          "from": {
+            "title": "From",
+            "description": "Consider feed updates from different available sources",
+            "type": "string",
+            "default": "all",
+            "enum": [
+              "all",
+              "iamfollowing",
+              "myfollowers",
+              "following",
+              "followers",
+              "myupdates",
+              "mentions",
+              "myfavorites",
+              "user",
+              "group"
+            ]
+          },
+          "id": {
+            "title": "id",
+            "description": "User id or group id and applicable only if updatesfrom.from is following/followers/user/group",
+            "type": "string",
+            "default": ""
+          }
+        }
+      },
+      "config_settings": {
+        "title": "Config settings",
+        "description": "Widget instance level config settings",
+        "type": "object",
+        "properties": {
+          "feedsAutoRefreshWait": {
+            "title": "Activity feed auto refresh wait",
+            "description": "Auto feed refresh interval time",
+            "type": "number",
+            "default": 60000
+          },
+          "maxMessageLength": {
+            "title": "Maximum message length",
+            "description": "Maximum text length should be allowed while posting a comment or reply",
+            "type": "number",
+            "default": 1000
+          }
+        }
+      }
+    }
+  }
+}

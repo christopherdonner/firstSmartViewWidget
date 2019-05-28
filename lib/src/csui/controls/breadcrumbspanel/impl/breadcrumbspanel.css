@@ -1,0 +1,93 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+#breadcrumb-wrap {
+  position: absolute;
+  top: 12px;
+  width: 100%;
+  padding-left: calc(4vw + 15px);
+  padding-right: calc(4vw + 15px);
+  height: calc(2rem - 1px);
+  z-index: 2; 
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  font-size: 0.875rem;
+  min-width: 768px;
+  opacity: 0;
+  margin-bottom: 1px;
+}
+
+.binf-widgets.csui-maximized-widget-mode #breadcrumb-wrap {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.binf-widgets.csui-maximized-widget-mode #breadcrumb-wrap > .binf-row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.binf-widgets.csui-maximized-widget-mode #breadcrumb-wrap > .binf-row > .binf-col-xs-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#breadcrumb-wrap.breadcrumb-wrap-visible {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  opacity: 1;
+}
+
+#breadcrumb-wrap .binf-row {
+  height: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#breadcrumb-wrap .binf-item {
+  height: inherit;
+  display: flex;
+  display: -webkit-flex;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#breadcrumb-wrap .breadcrumb-inner {
+  width: 100%;
+  height: inherit;
+  padding-right: 10%;
+  background: #ebf1f4;
+}
+
+#breadcrumb-wrap .binf-breadcrumb {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center; 
+  height: inherit;
+}
+
+#breadcrumb-wrap .binf-breadcrumb > li.tail {
+  flex-shrink: 0;
+}
+
+#breadcrumb-wrap .binf-breadcrumb > li.binf-active {
+  display: block;
+}
+
+.binf-widgets #breadcrumb-wrap .binf-breadcrumb > li.binf-active {
+  color: #c3e5f6;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.binf-widgets #breadcrumb-wrap .binf-dropdown-menu > li > a {
+  color: #333333;
+}
+
+.binf-widgets .binf-breadcrumb>li.binf-active, .binf-widgets .binf-breadcrumb>li.tail {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  display: inline-flex;
+}

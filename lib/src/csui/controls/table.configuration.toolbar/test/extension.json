@@ -1,0 +1,18 @@
+{
+  "config": {
+    "csui/utils/commands": {
+      "extensions": {
+        "configurations": [
+          "csui/controls/table.configuration.toolbar/test/config.command/config.command"
+        ]
+      }
+    },
+    "csui/widgets/nodestable/toolbaritems": {
+      "extensions": {
+        "configurations": [
+          "csui/controls/table.configuration.toolbar/test/config.nodestable.toolitems"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{{#if options.canWrite}}
+  {{#if options.isMultiRowSetEnabled}}
+    <div class="icon-container csui-array-bulk-edit csui-array-bulk-edit-set binf-hidden">
+      <div class="csui-icon-edit inline-edit-icon icon-edit csui-bulk-edit csui-bulk-edit-{{options
+      .uniqueId}}" title="{{options.messages.editFields}}" aria-label="{{options.messages.editFields}}" tabindex="0" data-cstabindex="0"></div>
+      <div>
+        <span class="csui-bulk-edit-cancel-{{options.uniqueId}} csui-icon-edit inline-edit-icon
+        edit-cancel csui-bulk-edit-cancel binf-hidden" title="{{options.messages.cancel}}" aria-label="{{options.messages.cancel}}"
+        tabindex="-1" data-cstabindex="-1"></span>
+      </div>
+    </div>
+  {{else}}
+  {{/if}}
+{{/if}}
+<div class="{{#if options.isMultiRowSetEnabled}} cs-form-set {{else}}csui-multivalue-container {{#if options
+.isEditMode}} csui-multivalue-block csui-multivalue-read-block {{/if}} {{/if}} cs-form-set-container
+cs-form-set-container-{{options.uniqueId}}" {{#if options.isTabable}}tabindex="0"{{/if}}>
+  {{#each items}}
+    {{#item}}{{/item}}
+  {{/each}}
+</div>
+{{#if options.canWrite}}
+  {{#if options.isMultiRowSetEnabled}}
+   {{#if options.applyFlag}}
+      <div class="icon-container apply-set binf-hidden">
+         <button class="csui-icon apply-all block binf-hidden" title="{{options.messages.titleApplyAll}}"
+         aria-label="{{options.messages.titleApplyAll}}" tabindex="0" data-cstabindex="0">
+         </button>
+      </div>
+   {{/if}}
+  {{else}}
+    {{#if options.isMultiFieldItem}}
+    {{else}}
+      {{#if options.applyFlag}}
+        <div class="icon-container apply-mv binf-hidden">
+           <button class="csui-icon apply-all block binf-hidden" title="{{options.messages.titleApplyAll}}"
+           aria-label="{{options.messages.titleApplyAll}}" tabindex="0" data-cstabindex="0">
+           </button>
+        </div>
+      {{/if}}
+
+      <div class="icon-container csui-array-bulk-edit binf-hidden csui-array-bulk-edit-noset">
+        <div class="csui-icon-edit inline-edit-icon icon-edit csui-bulk-edit csui-bulk-edit-{{options
+        .uniqueId}}" title="{{options.messages.editFields}}" aria-label="{{options.messages.editFields}}"></div>
+        <div>
+          <span class="csui-bulk-edit-cancel-{{options.uniqueId}} csui-icon-edit inline-edit-icon
+          edit-cancel csui-bulk-edit-cancel binf-hidden" title="{{options.messages.cancel}}"
+          aria-label="{{options.messages.cancel}}" tabindex="-1" data-cstabindex="-1"></span>
+        </div>
+      </div>
+    {{/if}}
+  {{/if}}
+{{/if}}

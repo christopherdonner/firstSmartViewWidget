@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FolderBrowser.Widget with binf</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script src="../../../helpers.js"></script>
+
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+      csui.require.config({
+          config: {
+              "csui/utils/commands": {
+                  "extensions": {
+                      "csui": [
+                          "csui/integration/folderbrowser/commands/go.to.node.history",
+                          "csui/integration/folderbrowser/commands/open.full.page.container"
+                      ]
+                  }
+              },
+              'csui/widgets/nodestable/nodestable.view': {
+                useV2RestApi: true
+              },
+              "csui/widgets/nodestable/toolbaritems": {
+                  "extensions": {
+                      "csui": [
+                          "csui/integration/folderbrowser/impl/nodestable.toolitems"
+                      ]
+                  }
+              },
+              'csui/integration/folderbrowser/commands/go.to.node.history': {
+                  enabled: true
+              },
+              'csui/integration/folderbrowser/commands/open.full.page.container': {
+                  enabled: true
+              }
+          }
+      });
+
+    csui.onReady2([
+      "csui/lib/jquery",
+      'csui/integration/folderbrowser/folderbrowser.widget',
+      'csui/controls/globalmessage/globalmessage'
+    ], function ($, FolderBrowser, GlobalMessage ) {
+
+        var folderBrowser = new FolderBrowser({
+            connection: {
+                url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+                supportPath: '/alphasupport'
+            },
+            start: {id: 2000}, // {type: 141} causes errors, which is also the default when no value is set
+            breadcrumb: true, // {stop: {id: 2000}},
+            facetPanel: true,
+            pageSize: 50,
+            // filter: { name: "i"}, // would filter on the name
+            // filter: { type: 144 }, // would show only documents
+            filter: { type: 0 }, // will show only folders
+            clearFilterOnChange: false // filter will remain even when browsing to another directory
+        });
+
+        folderBrowser.show({placeholder: '#content'});
+
+        folderBrowser.on("containerOpened", function (args) {
+            // Keep the page title equal to the current container name
+            $("head title").text("At: " + args.node.name);
+
+            // annoying extra message/confirmation with every containerOpened, just for demonstration
+            GlobalMessage.showMessage('info', "Entering '" + args.node.name + "'");
+        });
+
+    });
+
+  </script>
+</head>
+
+
+
+<body class="binf-widgets">
+  <div class="binf-container-fluid grid-rows">
+    
+    <div class="binf-row">
+      <div id="content" class="row-xs-full"></div>
+    </div>
+
+  </div>
+</body>
+
+
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,57 @@
+
+<span class="csui-icon csui-status-icon {{status-icon}} " aria-hidden="true"></span>
+
+
+      <div class="csui-icon {{file-icon}}" aria-hidden="true"></div>
+
+
+      <div class="csui-description">
+        <div class="csui-name">
+          <span class="folder-name conflict-field {{status-ok}}" title="{{name}}">{{name}}</span>
+          <input class="binf-form-control cs-input rename-field binf-hidden" placeholder="{{inputPlaceHolder}}" tabindex="-1">
+          <span class="csui-undo edit-cancel inline-edit-icon  rename-field binf-hidden" tabindex="-1" title="{{cancel}}"></span>
+        </div>
+        {{#if conflict}}
+          <div class="csui-msg" title="{{conflict-error-msg}}">{{conflict-error-msg}}</div>
+        {{/if}}
+      </div>
+
+    <div class="csui-status conflict-field {{status-ok}}" title="{{status}}">{{status}}</div>
+
+
+
+<div class="csui-button-container" style="{{resolvedStyle}}">
+{{#if conflict}}
+  {{# unless excludeAddVersion}}
+      <button type="button" class="binf-btn btn-version conflict-field" aria-label="{{versionAria}}" tabindex="0" title="{{version}}"
+            data-cs-id="version">{{version}}</button>
+  {{/unless}}
+    <button type="button" class="binf-btn btn-rename conflict-field {{multiRowClass}}" aria-label="{{renameAria}}" tabindex="0"
+            title="{{rename}}" data-cs-id="rename">{{rename}}</button>
+{{else}}
+  {{#if noServerError}}
+      <button type="button" class="binf-btn btn-undo {{multiRowClass}}" aria-label="{{undoAria}}" tabindex="0" title="{{undo}}">{{undo}}</button>
+  {{/if}}
+{{/if}}
+
+
+{{#if noServerError}}
+{{#if multiConflicts}}
+  {{#if statusNotSkip}}
+        <span class="cs-icon circle_delete conflict-field" tabindex="0" title="{{skip}}" aria-label="{{skipAria}}" role="button"></span>
+  {{/if}}
+{{/if}}
+{{/if}}
+
+
+<div class='csui-internal-placeholder rename-field binf-hidden'>
+  <div class="csui-progress-container binf-hidden">
+    <div class="loader">
+      <div class="inner-border"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

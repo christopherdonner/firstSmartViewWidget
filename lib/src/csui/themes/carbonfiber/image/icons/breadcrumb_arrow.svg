@@ -1,0 +1,18 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #00a4d8;
+      }
+    </style>
+  </defs>
+  <title>breadcrumb_arrow5x10_blue</title>
+  <g>
+    <rect class="cls-1" x="0.004" width="5" height="10"/>
+    <path class="cls-2" d="M1,9.75a.749.749,0,0,1-.6-1.2L3.066,5,.4,1.45A.75.75,0,1,1,1.6.55L4.941,5,1.6,9.45A.752.752,0,0,1,1,9.75Z"/>
+  </g>
+</svg>

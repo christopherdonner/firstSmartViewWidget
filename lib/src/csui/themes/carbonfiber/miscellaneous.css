@@ -1,0 +1,101 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets a,
+.binf-widgets button {
+  touch-action: manipulation;
+}
+
+span.binf-glyphicon {
+  font-size: 20px;
+}
+
+span.icon-folder {
+  font-size: 20px;
+}
+
+.csui-btn.binf-btn{
+  display: inline-block;
+  line-height: 2em;
+  min-width: 3em;
+  min-height: 2em;
+  margin: 0 .75em;
+  padding: 0 1.5em;
+  text-decoration: none;
+  background-color: #0072aa;
+  color: #fff;
+  font-weight: 400;
+  font-size: .8em;
+  border-radius: 1.2em;
+  outline: none;
+}
+
+.csui-btn.binf-btn.binf-btn-secondary {
+  background-color: #ffffff;
+  border: 1px solid #0072aa;
+  color: #0072aa;
+}
+
+
+.csui-btn.binf-btn.binf-btn-secondary:focus {
+  box-shadow: none;
+  outline: 1px dotted #333;
+  outline-offset: 2px;
+}
+.csui-btn.binf-btn.binf-btn-secondary:link,
+.csui-btn.binf-btn.binf-btn-secondary:visited {
+  background-color: #fff;
+  color: #0072aa;
+  border: 1px solid #0072aa;
+}
+.csui-btn.binf-btn.binf-btn-secondary:hover {
+  background-color: #fff;
+  color: #004b71;
+  box-shadow: none;
+  outline: none;
+}
+.csui-btn.binf-btn.binf-btn-secondary:active {
+  background-color: #fff;
+  color: #0072aa;
+  box-shadow: none;
+  outline: none;
+}
+
+.csui-btn.binf-btn.binf-btn-primary {
+  background-color: #0072aa;
+  color: #ffffff;
+}
+
+.csui-btn.binf-btn.binf-btn-primary:focus {
+  background-color: #0072aa;
+  color: #ffffff;
+  outline: 1px dotted #333;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.csui-btn.binf-btn.binf-btn-primary:link,
+.csui-btn.binf-btn.binf-btn-primary:visited{
+  background-color: #0072aa;
+  color: #fff;
+  border: 1px solid #0072aa;
+}
+
+.csui-btn.binf-btn.binf-btn-primary:hover {
+  background-color: #004b71;
+  color: #fff;
+  border: 1px solid #004b71;
+  outline: none;
+}
+
+.csui-btn.binf-btn.binf-btn-primary:active {
+  background-color: #0072aa;
+  color: #fff;
+  border: 1px solid #0072aa;
+  box-shadow: none;
+  outline: none;
+}
+.csui-btn.binf-btn.binf-btn:disabled {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #999999;
+}

@@ -1,0 +1,41 @@
+{{#xif 'this.type === 0'}} 
+  <a href="javascript:void(0);" class="esoc-user-container
+  {{#if messages.showUserProfilePicture}}esoc-user-profile-pic-container{{/if}}
+    {{#if messages.showUserProfileLink}} esoc-user-profile-link {{/if}}
+    {{#if messages.showMiniProfile}} esoc-user-mini-profile {{/if}}
+    {{messages.userWidgetWrapperClass}}">
+
+    {{#if messages.showUserProfilePicture}}
+      <span class="image_user_placeholder esoc-userwidget-default-avatar esoc-user-default-avatar-{{messages.userid}}">{{initials}}</span>
+      <img class="esoc-userprofile-img-{{messages.userid}} binf-img-circle esoc-user-widget-avatar" alt="{{display_name}}" src="#">
+    {{/if}}
+    {{#if messages.showUserDisplayName}}
+      <span class="esoc-user-display-name" id="{{messages.uniqueId}}">
+    {{#if messages.showPresenceIndicator}}
+      <span id="user-presence-indicator-{{messages.userid}}" class="user-presence-indicator"></span>
+    {{/if}}
+        {{display_name}}
+    </span>
+    {{/if}}
+
+  </a>
+{{else}} 
+  <span class="esoc-group-container {{messages.userWidgetWrapperClass}}">
+
+    {{#if messages.showUserProfilePicture}}
+      <span class="image_group_placeholder esoc-userwidget-default-avatar esoc-user-default-avatar-{{messages.userid}}"></span>
+      <img class="esoc-userprofile-img-{{messages.userid}} binf-img-circle esoc-user-widget-avatar" alt="{{display_name}}" src="#">
+    {{/if}}
+    {{#if messages.showUserDisplayName}}
+      <span class="esoc-user-group-name" id="{{messages.uniqueId}}">
+    {{#if messages.showPresenceIndicator}}
+      <span id="user-presence-indicator-{{messages.userid}}" class="user-presence-indicator"></span>
+    {{/if}}
+        {{display_name}}
+    </span>
+    {{/if}}
+
+  </span>
+{{/xif}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

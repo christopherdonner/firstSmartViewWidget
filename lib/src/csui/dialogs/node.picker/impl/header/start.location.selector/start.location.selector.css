@@ -1,0 +1,43 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-start-locations > .binf-dropdown-toggle .cs-label,
+.csui-start-locations > .binf-dropdown-menu .cs-label {
+  vertical-align: text-bottom;
+}
+
+.csui-start-locations > .binf-dropdown-toggle .cs-label,
+.csui-start-locations > .binf-dropdown-menu .cs-label,
+.csui-start-locations > .binf-dropdown-toggle > .binf-caret {
+  margin-left: 0.5em;
+}
+
+
+.cs-dialog .cs-header-control .csui-start-locations > .binf-dropdown-toggle .cs-label {
+  vertical-align: middle;
+}
+
+.binf-widgets .cs-dialog .binf-modal-header .csui-start-locations .cs-icon {
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: 50% 50%;
+  
+}
+
+.cs-dialog .binf-modal-header .csui-start-locations .cs-icon.icon-caret-down {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.csui-start-locations button .cs-icon {
+  margin-bottom: 0;
+}
+
+.binf-widgets .csui-start-locations .dropdown-locations .csui-separator {
+  z-index: 1001;
+  background: inherit;
+  position: absolute;
+  height: 5px;
+  bottom: 0px;
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-thumbnail-nodestate .csui-node-state {
+  min-width: 3.5rem;
+  max-width: 9.5rem;
+}
+
+.binf-widgets .csui-thumbnail-nodestate .csui-node-state-reservation > ul {
+  display: block;
+}
+
+.binf-widgets .csui-thumbnail-nodestat .csui-node-state-reservation > ul > li {
+  display: inline-block;
+}
+
+.binf-widgets .csui-thumbnail-nodestate .csui-node-state-reservation .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}

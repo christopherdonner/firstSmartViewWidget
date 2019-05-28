@@ -1,0 +1,27 @@
+<div class="tile-header">
+
+  {{#if icon}}
+    <div class="tile-type-icon">
+      <span class="icon title-icon {{icon}}" aria-hidden="true"></span>
+    </div>
+  {{else}}
+    {{#if imageUrl}}
+      <div class="tile-type-image {{imageClass}}">
+        <span class="tile-type-icon tile-type-icon-img"><img src="{{imageUrl}}" alt="" aria-hidden="true"></span>
+      </div>
+    {{/if}}
+  {{/if}}
+
+  <div class="tile-title" >
+    <h2 class="csui-heading">{{title}}</h2>
+  </div>
+
+  <div class="tile-controls" title="{{title}}"></div>
+
+</div>
+
+<div class="tile-content"></div>
+
+<div class="tile-footer"></div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

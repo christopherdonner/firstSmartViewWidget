@@ -1,0 +1,7 @@
+{
+  "generator-csui-extension": {
+    "projectName": "donnertestwidget",
+    "projectDescription": "CS UI greetings extension module",
+    "modulePrefix": "donner"
+  }
+}

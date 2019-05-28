@@ -1,0 +1,449 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-datetimepicker-widget {
+  list-style: none;
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu {
+  margin: 2px 0;
+  padding: 4px;
+  width: 19em;
+}
+
+@media (min-width: 768px) {
+  .binf-datetimepicker-widget.binf-dropdown-menu.timepicker-sbs {
+    width: 38em;
+  }
+}
+
+@media (min-width: 992px) {
+  .binf-datetimepicker-widget.binf-dropdown-menu.timepicker-sbs {
+    width: 38em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .binf-datetimepicker-widget.binf-dropdown-menu.timepicker-sbs {
+    width: 38em;
+  }
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu:before,
+.binf-datetimepicker-widget.binf-dropdown-menu:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu.binf-bottom:before {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #cccccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  top: -7px;
+  left: 7px;
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu.binf-bottom:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  top: -6px;
+  left: 8px;
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu.binf-top:before {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #cccccc;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  bottom: -7px;
+  left: 6px;
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu.binf-top:after {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
+  bottom: -6px;
+  left: 7px;
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu.binf-pull-right:before {
+  right: auto;
+  left: 6px;
+}
+
+.binf-datetimepicker-widget.binf-dropdown-menu.binf-pull-right:after {
+  right: auto;
+  left: 7px;
+}
+
+.binf-datetimepicker-widget .binf-list-unstyled {
+  margin: 0;
+}
+
+.binf-widgets .binf-datetimepicker-widget a[data-action] {
+  padding: 6px 0;
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.binf-widgets .binf-datetimepicker-widget a[data-action]:hover,
+.binf-widgets .binf-datetimepicker-widget a[data-action]:focus {
+  color: #23527c;
+}
+
+.binf-widgets .binf-datetimepicker-widget a.binf-btn:hover,
+.binf-widgets .binf-datetimepicker-widget a.binf-btn:focus {
+  color: #333333;
+}
+
+.binf-datetimepicker-widget a[data-action]:active {
+  box-shadow: none;
+}
+
+.binf-datetimepicker-widget .timepicker-hour,
+.binf-datetimepicker-widget .timepicker-minute,
+.binf-datetimepicker-widget .timepicker-second {
+  width: 54px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.binf-datetimepicker-widget button[data-action] {
+  padding: 6px;
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="incrementHours"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Increment Hours";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="incrementMinutes"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Increment Minutes";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="decrementHours"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Decrement Hours";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="decrementMinutes"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Decrement Minutes";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="showHours"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Show Hours";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="showMinutes"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Show Minutes";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="togglePeriod"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Toggle AM/PM";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="clear"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Clear the picker";
+}
+
+.binf-datetimepicker-widget .binf-btn[data-action="today"]::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Set the date to today";
+}
+
+.binf-datetimepicker-widget .picker-switch {
+  text-align: center;
+}
+
+.binf-datetimepicker-widget .picker-switch::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Toggle Date and Time Screens";
+}
+
+.binf-datetimepicker-widget .picker-switch td {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: auto;
+  line-height: inherit;
+}
+
+.binf-datetimepicker-widget .picker-switch td span {
+  line-height: 2.5;
+  height: 2.5em;
+  width: 100%;
+}
+
+.binf-datetimepicker-widget table {
+  width: 100%;
+  margin: 0;
+}
+
+.binf-datetimepicker-widget table td,
+.binf-datetimepicker-widget table th {
+  text-align: center;
+  border-radius: 4px;
+}
+
+.binf-datetimepicker-widget table th {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.binf-datetimepicker-widget table th.picker-switch {
+  width: 145px;
+}
+
+.binf-datetimepicker-widget table th.binf-disabled,
+.binf-datetimepicker-widget table th.binf-disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+.binf-datetimepicker-widget table th.binf-prev::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Previous Month";
+}
+
+.binf-datetimepicker-widget table th.binf-next::after {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  content: "Next Month";
+}
+
+.binf-datetimepicker-widget table thead tr:first-child th {
+  cursor: pointer;
+}
+
+html[dir="rtl"] .binf-datetimepicker-widget table thead tr:first-child th span {
+  cursor: pointer;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: 'FlipH';
+  -ms-filter: 'FlipH';
+}
+
+.binf-datetimepicker-widget table thead tr:first-child th:hover {
+  background: #eeeeee;
+}
+
+.binf-datetimepicker-widget table td {
+  height: 54px;
+  line-height: 54px;
+  width: 54px;
+}
+
+.binf-datetimepicker-widget table td.cw {
+  font-size: .8em;
+  height: 20px;
+  line-height: 20px;
+  color: #777777;
+}
+
+.binf-datetimepicker-widget table td.day {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.binf-datetimepicker-widget table td.day:hover,
+.binf-datetimepicker-widget table td.hour:hover,
+.binf-datetimepicker-widget table td.minute:hover,
+.binf-datetimepicker-widget table td.second:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+.binf-datetimepicker-widget table td.old,
+.binf-datetimepicker-widget table td.new {
+  color: #777777;
+}
+
+.binf-datetimepicker-widget table td.today {
+  position: relative;
+}
+
+.binf-datetimepicker-widget table td.today:before {
+  content: '';
+  display: inline-block;
+  border: 0 0 7px 7px solid transparent;
+  border-bottom-color: #337ab7;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.binf-datetimepicker-widget table td.binf-active,
+.binf-datetimepicker-widget table td.binf-active:hover {
+  background-color: #337ab7;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.binf-datetimepicker-widget table td.binf-active.today:before {
+  border-bottom-color: #ffffff;
+}
+
+.binf-datetimepicker-widget table td.binf-disabled,
+.binf-datetimepicker-widget table td.binf-disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+.binf-widgets .binf-datetimepicker-widget table td span {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  line-height: 54px;
+  margin: 2px 1.5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.binf-datetimepicker-widget table td span:hover {
+  background: #eeeeee;
+}
+
+.binf-datetimepicker-widget table td span.binf-active {
+  background-color: #337ab7;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.binf-datetimepicker-widget table td span.old {
+  color: #777777;
+}
+
+.binf-datetimepicker-widget table td span.binf-disabled,
+.binf-datetimepicker-widget table td span.binf-disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+.binf-datetimepicker-widget.usetwentyfour td.hour {
+  height: 27px;
+  line-height: 27px;
+}
+
+.binf-datetimepicker-widget.wider {
+  width: 21em;
+}
+
+.binf-datetimepicker-widget .datepicker-decades .decade {
+  line-height: 1.8em !important;
+}
+
+.binf-input-group.date .binf-input-group-addon {
+  cursor: pointer;
+}
+
+.binf-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

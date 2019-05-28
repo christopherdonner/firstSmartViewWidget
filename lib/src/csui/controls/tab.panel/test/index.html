@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TabPanelView</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding: 1em;
+      color: #999999;
+    }
+
+    #content {
+      background-color: #ffffff;
+    }
+
+    .binf-widgets .samples-content {
+      height: 10em;
+      padding: 1em;
+      font-weight: normal;
+      font-size: 16px;
+    }
+
+
+    .samples-male {
+      background-color: #ccccff;
+    }
+
+    .samples-female {
+      background-color: #ffcccc;
+    }
+
+    .binf-widgets .binf-active {
+      color: #000000;
+      font-weight: bold;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require([
+      'csui/lib/jquery', 'csui/lib/handlebars', 'csui/lib/marionette',
+      '../tab.panel.view'
+    ], function ($, Handlebars, Marionette, TabPanelView) {
+      var contentRegion = new Marionette.Region({
+            el: '#content'
+          }),
+
+          TabContentView = Marionette.ItemView.extend({
+            className: function () {
+              return 'samples-content samples-' + this.model.get('gender');
+            },
+            template: Handlebars.compile($('#samples-tab-content').html())
+          }),
+
+          tabPanelView = new TabPanelView({
+            contentView: TabContentView,
+            tabs: [
+              {title: {en: 'Joe', de: 'Josef'}, gender: 'male'},
+              {title: {en: 'Jane', de: 'Johanna'}, gender: 'female'},
+              {title: {en: 'Fred', de: 'Fritz'}, gender: 'male'}
+            ]
+          });
+
+      contentRegion.show(tabPanelView);
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div id="content">
+  <script id="samples-tab-content" type="text/template">
+    {{title.en}} (also known as {{title.de}}) is {{gender}}<br><a href="http://heise.de">Outside link</a>
+  </script>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

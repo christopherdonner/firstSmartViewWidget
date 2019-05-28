@@ -1,0 +1,61 @@
+<div class="cs-field-write">
+  <div class="cs-field-write-inner">
+  <input type="{{inputType}}" id="{{id}}"
+         {{#if options.placeholder}}placeholder="{{options.placeholder}}"{{/if}}
+    {{#if options.size}}size="{{options.size}}"{{/if}}
+    {{#if name}}name="{{name}}"{{/if}}
+    {{#each options.data}}data-{{@key}}="{{this}}"{{/each}}
+    {{#each options.attributes}}{{@key}}="{{this}}"{{/each}}
+    value="{{data}}" {{#if idBtnLabel}}aria-labelledby="{{idBtnLabel}}" {{/if}}
+    {{#if multiFieldLabel}} aria-label="{{multiFieldLabel}}"{{/if}}
+    {{#if ariaRequired}} aria-required="{{ariaRequired}}"{{/if}}/>
+    {{#xif "this.mode !== 'writeonly'"}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{else}}
+      {{#if options.applyFlag}}
+        <div class="icon-container binf-hidden">
+          <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"></div>
+        </div>
+      {{/if}}
+    {{/xif}}
+
+  </div>
+</div>
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    <div class="btn-container">
+      {{#xif "this.options && this.options.type === 'url'"}}
+      <a href="{{absUrl}}" target="_blank"
+          title="{{#if options.anchorTitle}}{{options.anchorTitle}}{{else}}{{data}}{{/if}}"
+        {{#if multiFieldLabel}} aria-label="{{readModeMultiFieldAria}}" {{else}}
+          aria-label="{{readModeAria}}"{{/if}}>
+        {{#if this.hasData}}
+          <span>{{data}}</span>
+        {{else}}
+          <span class="placeholder" title="{{noValue}}">{{emptyLabel}}</span>
+        {{/if}}
+        </a>
+      {{else}}
+        <button title="{{tooltip}}"
+          {{#if schema.readonly}} aria-disabled="true" {{/if}}
+          {{#if multiFieldLabel}} aria-label="{{readModeMultiFieldAria}}" {{else}}
+                aria-label="{{readModeAria}}"
+          {{/if}}
+        >
+          {{#if this.hasData}}
+            <span>{{data}}</span>
+          {{else}}
+            <span class="placeholder" title="{{noValue}}">{{emptyLabel}}</span>
+          {{/if}}
+        </button>
+      {{/xif}}
+    </div>
+    <div class="icon-container">
+      <div class="csui-icon-edit inline-edit-icon icon-edit" title="{{edit}}"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

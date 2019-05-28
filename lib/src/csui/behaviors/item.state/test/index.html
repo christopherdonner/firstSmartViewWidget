@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ItemStateBehavior</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style data-csui-theme-overrides="true">
+    body.binf-widgets {
+      margin-top: 15px;
+    }
+
+    .my-tile.my-tile {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+    }
+
+    .my-tile p {
+      padding: 1em;
+    }
+
+    .my-tile .my-header {
+      padding: 15px;
+      font-size: 1.5em;
+      background-color: #dddddd;
+    }
+
+    .my-tile .my-content,
+    .my-tile .my-state {
+      width: 100%;
+      height: calc(100% - 30px - 2em);
+    }
+
+    .my-tile .csui-item-state {
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: auto;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 300;
+      color: #666666;
+    }
+  </style>
+
+  <script id="simple-node" type="text/x-handlebars-template">
+    <p>{{name}}</p>
+  </script>
+  <script id="node-with-header" type="text/x-handlebars-template">
+    <div class="my-header">
+      Node Information
+    </div>
+    <div class="my-content">
+      <p>{{name}}</p>
+    </div>
+  </script>
+  <script id="node-with-header-and-state" type="text/x-handlebars-template">
+    <div class="my-header">
+      Node Information
+    </div>
+    <div class="my-content">
+      <p>{{name}}</p>
+    </div>
+    <div class="my-state" style="display: none"></div>
+  </script>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        i18n: {
+          loadableLocales: {root: true}
+        }
+      }
+    });
+
+    require([
+      'csui/lib/jquery', 'csui/lib/handlebars',
+      'csui/lib/backbone', 'csui/lib/marionette',
+      'csui/utils/contexts/page/page.context',
+      'csui/utils/contexts/factories/node',
+      'csui/behaviors/item.state/item.state.behavior',
+      './item.state.mock.js'
+    ], function ($, Handlebars, Backbone, Marionette, PageContext,
+        NodeModelFactory, ItemStateBehavior, mock) {
+      'use strict';
+
+      var simpleNode = Handlebars.compile($('#simple-node').html()),
+          nodeWithHeader = Handlebars.compile($('#node-with-header').html()),
+          nodeWithHeaderAndState = Handlebars.compile(
+              $('#node-with-header-and-state').html()),
+          NodeViewWithModel = Marionette.ItemView.extend({
+            className: 'my-tile',
+            template: simpleNode,
+            behaviors: {
+              ItemState: {
+                behaviorClass: ItemStateBehavior,
+                stateMessages: {
+                  loading: 'Loading item...',
+                  failed: 'Loading item failed.'
+                }
+              }
+            },
+            modelEvents: {
+              change: 'render'
+            }
+          }),
+          NodeViewWithViewModel = Marionette.ItemView.extend({
+            className: 'my-tile',
+            template: simpleNode,
+            behaviors: {
+              ItemState: {
+                behaviorClass: ItemStateBehavior,
+                model: function () {
+                  return this.backendModel;
+                },
+                stateMessages: {
+                  loading: 'Loading item...',
+                  failed: 'Loading item failed.'
+                }
+              }
+            },
+            modelEvents: {
+              change: 'render'
+            },
+            constructor: function NodeViewWithViewModel(options) {
+              this.backendModel = options.model;
+              options.model = new Backbone.Model(this.backendModel.attributes);
+              Marionette.ItemView.prototype.constructor.call(this, options);
+              this.listenTo(this.backendModel, 'change', function () {
+                this.model.set(this.backendModel.attributes);
+              });
+            }
+          }),
+          NodeViewWithStateElement = Marionette.ItemView.extend({
+            className: 'my-tile',
+            template: nodeWithHeaderAndState,
+            ui: {
+              content: '.my-content',
+              state: '.my-state'
+            },
+            behaviors: {
+              ItemState: {
+                behaviorClass: ItemStateBehavior,
+                el: '.my-state',
+                stateMessages: {
+                  loading: 'Loading item...',
+                  failed: 'Loading item failed.'
+                }
+              }
+            },
+            modelEvents: {
+              change: 'render'
+            },
+            onRender: function () {
+              if (!this.model.fetched) {
+                this.ui.content.hide();
+                this.ui.state.show();
+              } else {
+                this.ui.content.show();
+                this.ui.state.hide();
+              }
+            }
+          }),
+          NodeViewWithStateRegion = Marionette.LayoutView.extend({
+            className: 'my-tile',
+            template: nodeWithHeader,
+            regions: {
+              content: '.my-content'
+            },
+            behaviors: {
+              ItemState: {
+                behaviorClass: ItemStateBehavior,
+                region: function () {
+                  return this.content;
+                },
+                stateMessages: {
+                  loading: 'Loading item...',
+                  failed: 'Loading item failed.'
+                }
+              }
+            },
+            modelEvents: {
+              change: 'render'
+            }
+          });
+
+      var viewIndex = 0;
+
+      function showView(View) {
+        var view = new View({
+              model: context.getModel(NodeModelFactory, {
+                attributes: {id: 2000 + (++viewIndex)}
+              })
+            }),
+            region = new Marionette.Region({
+              el: '#tile' + viewIndex
+            });
+        region.show(view);
+      }
+
+      function showModelView(View) {
+        showView(View);
+        showView(View);
+      }
+
+      var context = new PageContext();
+
+      showModelView(NodeViewWithModel);
+      showModelView(NodeViewWithViewModel);
+      showModelView(NodeViewWithStateElement);
+      showModelView(NodeViewWithStateRegion);
+
+      mock.enable();
+      context.fetch();
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile1"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile2"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile3"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile4"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile5"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile6"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile7"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="tile8"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

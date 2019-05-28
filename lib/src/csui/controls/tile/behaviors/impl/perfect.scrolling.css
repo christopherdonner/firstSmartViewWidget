@@ -1,0 +1,130 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-perfect-scrolling {
+  overflow: hidden;
+  position: relative;
+}
+
+.binf-widgets .csui-normal-scrolling {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.csui-normal-scrolling.csui-no-scroll-x {
+  overflow-x: hidden;
+}
+
+.csui-normal-scrolling.csui-no-scroll-y {
+  overflow-y: hidden;
+}
+
+.binf-widgets .csui-no-scrolling {
+  overflow: hidden;
+}
+
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail {
+  right: 6px;
+  width: 1em;
+  outline-style: none;
+}
+
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  right: 0;
+  width: .25em;
+  border-radius: 4px;
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y,
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y,
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail:focus > .ps-scrollbar-y,
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail.binf-focus > .ps-scrollbar-y
+{
+  width: .5em;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-y-rail {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-y-rail:hover {
+  background-color: transparent;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+  opacity: 1;
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container.ps-in-scrolling > .ps-scrollbar-y-rail {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.csui-perfect-scrolling.ps-container.ps-in-scrolling > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container:hover.ps-in-scrolling > .ps-scrollbar-y-rail {
+  opacity: 1;
+}
+
+.csui-perfect-scrolling.ps-container:hover.ps-in-scrolling > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-x-rail {
+  bottom: 6px;
+  height: 1em;
+}
+
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  bottom: 0;
+  height: .25em;
+  border-radius: 4px;
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-x-rail {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-x-rail:hover {
+  background-color: transparent;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
+  opacity: 1;
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container.ps-in-scrolling > .ps-scrollbar-x-rail {
+  opacity: 1;
+  background-color: transparent;
+}
+
+.csui-perfect-scrolling.ps-container.ps-in-scrolling > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container:hover.ps-in-scrolling > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  opacity: 1;
+  background-color: #808285;
+}
+
+.csui-perfect-scrolling.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x,
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-x-rail:active > .ps-scrollbar-x,
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-x-rail:focus > .ps-scrollbar-x,
+.csui-perfect-scrolling.ps-container > .ps-scrollbar-x-rail.binf-focus > .ps-scrollbar-x{
+  height: .5em;
+}

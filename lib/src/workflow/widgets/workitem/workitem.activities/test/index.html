@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>List controls example</title>
+
+  <link rel="stylesheet" href="../../../../../csui/themes/carbonfiber/theme.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+  <style>
+    body {
+      font-family: "Lato", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+      font-size: 14px;
+      font-weight: 300; /* Lato Light */
+      padding-top: 1em;
+    }
+
+    #content {
+      height: 30rem;
+    }
+  </style>
+
+  <script src="../../../../../csui/lib/require.js"></script>
+  <script src="../../../../../csui/config.js" data-csui-path="../../../../../csui"></script>
+  <script>
+
+    require.config({
+      paths: {
+        workflow: '../../../..'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          },
+          authenticator: {
+            isAuthenticated: function () {return true;},
+            setAuthenticationHeaders: function () {},
+            updateAuthenticatedSession: function () {}
+          }
+        }
+      }
+    });
+
+    require([
+          'csui/lib/backbone',
+          'csui/lib/marionette',
+          'csui/utils/contexts/page/page.context',
+          'workflow/widgets/workitem/workitem.activities/workitem.activities.view',
+          'workflow/testutils/activity/activity.mock',
+          'workflow/testutils/members/members.mock',
+          'csui/lib/handlebars.helpers.xif'],
+        function (Backbone, Marionette, PageContext, ActivityView, ActivityMock, MembersMock) {
+
+          // initialize the mock data
+          ActivityMock.enable();
+
+          MembersMock.enable({
+            id: 1002,
+            type: 0,
+            name: 'bwillis',
+            business_email: 'bwillis@elink.loc',
+            office_location: 'Nakatomi Plaza (Office Building in Los Angeles)',
+            title: 'New York Police Officer (Retired)',
+            display_name: 'Bruce Willis',
+            name_formatted: 'Bruce Willis',
+            group_id: 101,
+            photo_url: null
+          });
+
+          // we need a context
+          var context = new PageContext();
+
+          // create the view ...
+          var view = new ActivityView({
+            context: context,
+            processId: 0,
+            subprocessId: 0
+          });
+          view.render();
+
+          // ... and a region to show the view
+          var region = new Marionette.Region({
+            el: "#content"
+          });
+          region.show(view);
+
+          context.fetch();
+        }
+    )
+    ;
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container">
+  <div class="binf-row">
+    <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

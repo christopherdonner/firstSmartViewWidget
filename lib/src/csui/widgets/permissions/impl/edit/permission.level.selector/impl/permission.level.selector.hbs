@@ -1,0 +1,16 @@
+<ul class="csui-permission-levels" role="listbox">
+  {{#each permissionLevelOptions}}
+    <li class="csui-permission-level-item" data-optionid="{{this.id}}" role="listitem"
+        aria-label="{{this.name}}">
+      <a tabindex="-1" href="#">
+        <span class="cs-icon"></span>
+        <span class="cs-label">{{this.name}}</span>
+        {{#if this.showActionIcon}}
+          <span class="csui-icon {{this.actionIcon}}"></span>
+        {{/if}}
+      </a>
+    </li>
+  {{/each}}
+</ul>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

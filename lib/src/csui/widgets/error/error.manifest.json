@@ -1,0 +1,22 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "Error Message",
+  "description": "Shows a tile with an error message.",
+  "kind": "tile",
+  "supportedKinds": ["tile", "header", "fullpage"],
+  "schema": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "title": "Message",
+        "description": "Text to show in the widget",
+        "type": "string"
+      },
+      "suggestion": {
+        "title": "suggestion",
+        "description": "Optional text to show with smaller letters below the message",
+        "type": "string"
+      }
+    }
+  }
+}

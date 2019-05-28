@@ -1,0 +1,56 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "/api/v2/nodes/678795?fields=properties",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"data": {
+			"properties": {
+				"container": true,
+				"container_size": 16,
+				"create_date": "2017-11-15T10:57:58",
+				"create_user_id": 1000,
+				"description": "",
+				"description_multilingual": {
+					"en_US": "",
+					"fr": ""
+				},
+				"external_create_date": null,
+				"external_identity": "",
+				"external_identity_type": "",
+				"external_modify_date": null,
+				"external_source": "",
+				"favorite": true,
+				"id": 678795,
+				"mime_type": null,
+				"modify_date": "2017-11-23T12:08:09",
+				"modify_user_id": 1000,
+				"name": "LLWR-7531 - SmartUI Status Screen",
+				"name_multilingual": {
+					"en_US": "LLWR-7531 - SmartUI Status Screen",
+					"fr": ""
+				},
+				"owner_group_id": 1001,
+				"owner_user_id": 1000,
+				"parent_id": 8475,
+				"permissions_model": "advanced",
+				"reserved": false,
+				"reserved_date": null,
+				"reserved_user_id": 0,
+				"size": 16,
+				"size_formatted": "16 Items",
+				"type": 0,
+				"type_name": "Folder",
+				"versions_control_advanced": false,
+				"volume_id": -2000
+			}
+		}
+	}
+}

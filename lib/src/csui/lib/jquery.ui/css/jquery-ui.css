@@ -1,0 +1,173 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.binf-widgets .ui-draggable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.binf-widgets .ui-helper-hidden {
+	display: none;
+}
+.binf-widgets .ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.binf-widgets .ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.binf-widgets .ui-helper-clearfix:before,
+.binf-widgets .ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.binf-widgets .ui-helper-clearfix:after {
+	clear: both;
+}
+.binf-widgets .ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0); 
+}
+
+.binf-widgets .ui-front {
+	z-index: 100;
+}
+
+
+
+.binf-widgets .ui-state-disabled {
+	cursor: default !important;
+	pointer-events: none;
+}
+
+
+
+.binf-widgets .ui-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -.25em;
+	position: relative;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.binf-widgets .ui-widget-icon-block {
+	left: 50%;
+	margin-left: -8px;
+	display: block;
+}
+
+
+
+
+.binf-widgets .ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.binf-widgets .ui-resizable {
+	position: relative;
+}
+.binf-widgets .ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.binf-widgets .ui-resizable-disabled .ui-resizable-handle,
+.binf-widgets .ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.binf-widgets .ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.binf-widgets .ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.binf-widgets .ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.binf-widgets .ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.binf-widgets .ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.binf-widgets .ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.binf-widgets .ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.binf-widgets .ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+.binf-widgets .ui-selectable {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.binf-widgets .ui-selectable-helper {
+	position: absolute;
+	z-index: 100;
+	border: 1px dotted black;
+}
+.binf-widgets .ui-sortable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}

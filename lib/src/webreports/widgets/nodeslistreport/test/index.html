@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NodesListReport Widget</title>
+
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+  <style>
+    .docRef {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #fff;
+    }
+    .binf-widgets .container {
+      position: absolute;
+      top: 100px;
+    }
+
+    a:link {
+      color: grey;
+    }
+    a:hover {
+      color: grey;
+    }
+    a:active {
+      color: grey;
+    }
+    a:visited {
+      color: grey;
+    }
+
+  </style>
+  <script src="../../../../csui/lib/require.js"></script>
+  <script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+  <script>
+      require.config({
+          deps: [
+              'csui/lib/require.config!csui/csui-extensions.json'
+          ]
+      });
+
+    require.config({
+      paths: {
+        webreports: '../../..'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/cgi/cs.exe/api/v1',
+            supportPath: '/support',
+            credentials: {
+              username: 'Admin',
+              password: 'livelink'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../nodeslistreport.view.js', './nodeslistreport.mock.data.js'
+    ], function (Marionette, PageContext, NodesListReportView, mock) {
+
+      var   urlContentRegion = new Marionette.Region({el: '#url-content'}),
+            commonItemsContentRegion = new Marionette.Region({el: '#common-items-content'}),
+            pageContext   = new PageContext(),
+            commonItemsListreportView,
+            urlListreportView,
+            commonItemOptions,
+            linksOptions;
+
+            commonItemOptions = {
+                context: pageContext,
+                data: {
+                    id: 80121,
+                    title: 'Most Commonly Accessed Locations',
+                    titleBarIcon: 'title-assignments',
+                    searchPlaceholder: 'Search Common Locations'
+                }
+            };
+
+            linksOptions = {
+                context: pageContext,
+                data: {
+                    id: 73602,
+                    title: 'Useful Links',
+                    titleBarIcon: 'title-favourites',
+                    searchPlaceholder: 'Search Useful Links'
+                }
+            };
+
+            commonItemsListreportView = new NodesListReportView(commonItemOptions);
+            urlListreportView = new NodesListReportView(linksOptions);
+
+      urlContentRegion.show(urlListreportView);
+      commonItemsContentRegion.show(commonItemsListreportView);
+      mock.enable();
+      pageContext.fetch();
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<a class="docRef" href="../nodeslistreport.md">Documentation</a>
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="url-content"></div>
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="common-items-content"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

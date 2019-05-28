@@ -1,0 +1,25 @@
+{{#each columns}}
+  {{#if this.noTitleInHeader}}
+    {{#if isToolbar}}
+      <div class="csui-table-header-cell csui-table-header-toolbar" tabindex="-1"
+           data-cstabindex="-1" role="columnheader">
+        <span class="{{this.className}}" title="{{addTitle}}"></span>
+      </div>
+    {{else}}
+      <div class="csui-table-header-cell {{this.className}}" role="columnheader"></div>
+    {{/if}}
+  {{else}}
+    <div class="csui-table-header-cell {{this.className}}" title="{{this.title}}" tabindex="-1"
+         data-cstabindex="-1" role="columnheader">
+      <div class="csui-table-header-cell-container csui-fadeout">
+        <span>
+          {{this.title}}
+        </span>
+      </div>
+    </div>
+  {{/if}}
+{{/each}}
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

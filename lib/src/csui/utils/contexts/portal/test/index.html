@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PortalContext test</title>
+
+  <link rel="stylesheet" href="../../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../../lib/require.js"></script>
+  <script src="../../../../config.js" data-csui-path="../../../.."></script>
+  <script src="../../../../helpers.js"></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    csui.require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            supportPath: '/support',
+          }
+        }
+      }
+    });
+
+    csui.require([
+        'csui/widgets/favorites/favorites.view',
+        'csui/utils/contexts/portal/portal.context',
+        'csui/lib/marionette'
+    ], function (FavoritesView, PortalContext, Marionette) {
+        'use strict';
+
+        var context = new PortalContext(),
+            region = new Marionette.Region({
+                el: '#content'
+            }),
+            view = new FavoritesView({
+                context: context
+            });
+
+        region.show(view);
+        context.fetch();
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div id="content" class="binf-row-xs-full"></div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

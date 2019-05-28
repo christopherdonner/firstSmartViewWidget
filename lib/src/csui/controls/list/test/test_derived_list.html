@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Derived List View sample</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+
+    <script src="../../../lib/require.js"></script>
+    <script src="../../../config.js" data-csui-path="../../.."></script>
+    <script>
+        require(["csui/lib/marionette", "csui/lib/backbone", "csui/controls/list/list.view",
+            "csui/controls/listitem/listitemstandard.view", "../impl/nls/lang"
+        ], function (Marionette, Backbone, ListView, StandardListItem, lang) {
+            'use strict';
+
+            var contentRegion = new Marionette.Region({
+                el: "#content"
+            });
+
+            var DerivedListView = ListView.extend({
+
+                constructor: function DerivedListView(options) {
+                    if (!options) {
+                        options = {};
+                    }
+                    options.titleBarIcon = options.showTitleIcon === false ? undefined : 'title-icon title-favourites';
+                    ListView.prototype.constructor.apply(this, arguments);
+                },
+
+                childEvents: {
+                    'click:item': 'onClickItem'
+                },
+
+                templateHelpers: function () {
+                    return {
+                        title: this.options.title || lang.listTitle,
+                        icon: this.options.titleBarIcon,
+                        searchPlaceholder: lang.searchPlaceholder,
+                        hideSearch: true
+                    };
+                },
+
+                childView: StandardListItem,
+
+                onClickItem: function (target) {
+                    this.trigger('click:item');
+                    this.triggerMethod('execute:defaultAction', target.model);
+                    alert("Clicked on item '" + target.model.attributes.name + "'");
+                },
+
+                onClickHeader: function( target) {
+                    this.triggerMethod('expand');
+                    alert("Clicked on header, should trigger expand");
+                }
+            });
+
+            var options = {
+                title: 'SomeTitle',
+                showTitleIcon: true,
+                collection: new Backbone.Collection([{name: 'Predefined data1'}, {name: 'Predefined  data2'}])
+            };
+            var derived = new DerivedListView(options);
+            derived.render();
+
+            contentRegion.show(derived);
+
+
+            derived.collection.add({name: 'New element'});
+        });
+    </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Derived list view</h1>
+<div class="binf-container">
+    <div class="binf-row">
+        <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content"></div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,11 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.csui-general-form-fields > .cs-form > .alpaca-field-object {
+  margin: 0;
+}
+
+.csui-general-form-fields > .cs-form > .alpaca-field-object > * {
+  padding: 0;
+}

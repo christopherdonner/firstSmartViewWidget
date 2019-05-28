@@ -1,0 +1,88 @@
+{
+	"$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+	"title": "{{widgetTitle}}",
+	"description": "{{widgetDescription}}",
+	"kind": "header",
+	"supportedKinds": ["tile", "header", "fullpage"],
+	"schema": {
+		"type": "object",
+		"properties": {
+			"header": {
+				"title": "{{headerTitle}}",
+				"description": "{{headerDescription}}",
+				"type": "boolean",
+				"enum": [
+					true,
+					false
+				],
+				"default": false
+			},
+			"title": {
+				"title": "{{tileTitle}}",
+				"description": "{{tileDescription}}",
+				"type": "object"
+			},
+			"titleBarIcon": {
+				"title": "{{headerIconTitle}}",
+				"description": "{{headerIconDescription}}",
+				"type": "string"
+			},
+			"behavior": {
+				"type": "object",
+				"title": "{{behaviorTitle}}",
+				"description": "{{behaviorDescription}}",
+				"properties": {
+					"auto_cycle": {
+						"title": "{{cycleTitle}}",
+						"description": "{{cycleDescription}}",
+						"type": "boolean",
+						"enum": [
+							true,
+							false
+						],
+						"default": true
+					},
+					"interval": {
+						"title": "{{intervalTitle}}",
+						"description": "{{intervalDescription}}",
+						"type": "integer",
+						"default": 5000
+					},
+					"pause_on_hover": {
+						"title": "{{hoverTitle}}",
+						"description": "{{hoverDescription}}",
+						"type": "boolean",
+						"enum": [
+							true,
+							false
+						],
+						"default": true
+					},
+					"wrap": {
+						"title": "{{loopTitle}}",
+						"description": "{{loopDescription}}",
+						"type": "boolean",
+						"enum": [
+							true,
+							false
+						],
+						"default": true
+					}
+				}
+			},
+
+			"widgets": {
+				"type": "widgetarray",
+				"title": "{{childTitle}}",
+				"description": "{{childDescription}}"
+			}
+		}
+	},
+	"options": {
+		"fields": {
+			"title": {
+				"type": "otcs_multilingual_string"
+			}
+		}
+	}
+}

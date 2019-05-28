@@ -1,0 +1,120 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .title-section {
+  float: left;
+}
+
+.binf-widgets .apply-properties-selector {
+  position: relative;
+  display: inline-block;
+  width: 240px;
+}
+
+.binf-widgets .csui-global-search {
+  width: 100%;
+}
+
+.csui-global-search .csui-search-input-container {
+  margin-right: 1.5em;
+  margin-top: 2px;
+}
+
+.csui-global-search .csui-search-box .csui-search-box-slice-popover {
+  display: none;
+}
+
+.csui-global-search .csui-search-box .csui-input {
+  font-size: 12px;
+  width: 100%;
+}
+
+.target-browse .cs-apply-properties-selector.binf-dropdown {
+  padding: 0px
+}
+
+.csui-target-search-property-container {
+  width: 100%;
+}
+
+.csui-target-search-property-container .csui-global-search.csui-no-properties-selector {
+  float: right;
+  width: calc(100% - 57px);
+}
+
+.csui-target-search-property-container .csui-global-search {
+  float: left;
+  margin-right: 2.5rem;
+  width: calc(100% - 317px);
+}
+
+.csui-target-search-property-container .csui-global-search.for-shortcut {
+  float: right;
+  width: calc(100% - 57px);
+}
+
+.csui-target-search-property-container .apply-properties-selector, .csui-target-search-property-container .csui-separator {
+  float: right;
+}
+
+.csui-target-search-property-container .csui-global-search .csui-search-input-container {
+  margin-right: 0;
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+  .apply-properties-selector {
+    min-width: 220px;
+  }
+  .apply-properties-selector .cs-apply-properties-selector button {
+    float: left;
+  }
+}
+
+.binf-widgets .csui-filtername-container {
+  line-height: 24px;
+  padding: 20px 10px 0 10px;
+  width: calc(55% - 130px);
+}
+
+.binf-widgets .csui-filtername-container .cs-icon-required {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 3px;
+  float: left;
+}
+
+.binf-widgets .csui-filtername {
+  border-radius: 5px;
+  font: 12px Lato;
+  width: calc(100% - 20px);
+  border: 1px solid #757575;
+  height: 33px;
+  padding: 8px 14px;
+}
+
+.binf-widgets .csui-filtername-container .csui-filtername-error {
+  padding-left: 10px;
+  vertical-align: top;
+  font-size: 0.75em;
+  color: #df3324;
+  top: -4px;
+  position: relative;
+  cursor: default;
+}
+
+.binf-widgets .csui-filtername::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.csui-target-search-property-container .binf-dropdown-toggle.binf-btn-default:hover,
+.csui-target-search-property-container .binf-dropdown-toggle.binf-btn-default:active,
+.csui-target-search-property-container .binf-dropdown-toggle.binf-btn-default:focus,
+.csui-target-search-property-container .binf-dropdown-toggle.binf-btn-default.binf-active,
+.csui-target-search-property-container .binf-dropdown-toggle.binf-btn-default {
+  background-color: transparent;
+}

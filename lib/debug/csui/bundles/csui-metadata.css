@@ -1,0 +1,2831 @@
+.cs-dropdown-menu .binf-dropdown {
+  display: inline-block;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.cs-dropdown-menu .binf-dropdown {
+  height: auto;
+}
+
+.cs-dropdown-menu .binf-dropdown > .binf-dropdown-toggle {
+  border: none;
+  background: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+
+.metadata-header .cs-dropdown-menu .binf-dropdown > .binf-dropdown-toggle {
+  margin-top: 1px;
+}
+
+.cs-dropdown-menu .binf-dropdown .csui-button-icon {
+  vertical-align: baseline;
+}
+
+.cs-dropdown-menu .binf-dropdown .csui-button-icon:focus {
+  outline-style: none;
+}
+
+.binf-widgets .cs-dropdown-menu .binf-open > .binf-dropdown-menu.adjust-dropdown-menu {
+  left: inherit;
+  right: 0;
+  border-radius: 0;
+}/* Adjustments to dialog container for add item metdata */
+.binf-widgets .cs-item-action-metadata {
+  overflow: auto;
+}
+
+.binf-widgets .cs-item-action-metadata .binf-modal-lg {
+  height: calc(100vh - 128px);
+  min-height: 450px;
+  width: calc(100% - 64px);
+  top: 64px;
+  max-width: 1024px;
+  min-width: 704px;
+  max-height: 672px;
+}
+
+@media (min-width: 1400px) {
+  .cs-item-action-metadata .binf-modal-lg {
+    width: 90%;
+  }
+}
+
+.cs-item-action-metadata .binf-modal-lg .cs-close {
+  width: 30px;
+  padding: 0 10px 0 0;
+}
+
+.cs-item-action-metadata .binf-modal-lg .binf-modal-content .binf-modal-header .cs-close .cs-icon-cross {
+  padding: 0;
+  background-size: 23px 23px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  border: 0;
+}
+
+.cs-item-action-metadata .binf-modal-content {
+  height: 100%;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.cs-item-action-metadata .tile-header,
+.cs-item-action-metadata .binf-modal-header {
+  height: 4em;
+  background-color: #f7f7f7;
+  border-bottom: none;
+  padding: 0;
+}
+
+.cs-item-action-metadata .tile-header > .tile-title,
+.cs-item-action-metadata .binf-modal-header > .tile-title {
+  margin: 0 0 0 1.5em;
+  width: calc(100% - 105px);
+}
+
+.cs-item-action-metadata.cs-dialog .binf-modal-dialog .binf-modal-header .tile-title .csui-heading {
+  font-size: 1.3em;
+  font-weight: 400;
+  padding-top: 20px;
+  width: 100%;
+  line-height: inherit;
+}
+
+.cs-item-action-metadata .binf-modal-body,
+.cs-item-action-metadata .cs-metadata,
+.cs-item-action-metadata .cs-properties-wrapper .cs-metadata {
+  height: calc(100% - 8em);
+  /* subtract header and footer height */
+}
+
+.cs-item-action-metadata .binf-modal-body .cs-add-item-metadata-form {
+  height: 100%;
+}
+
+/* If you change the header and footer height, update the classes, which are used
+   by other components to get the common height of header and footer with body. */
+
+.cs-item-action-metadata .csui-content-without-header {
+  height: calc(100% - 4em);
+}
+
+.cs-item-action-metadata .csui-content-without-footer {
+  height: calc(100% - 4em);
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties {
+  height: calc(100% - 4em);
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.cs-add-item-metadata-form.without-header-bar .cs-metadata-properties {
+  height: 100%;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .binf-tab-content {
+  height: calc(100% - 70px); /* Subtract height of the tablinks and margin-top */
+  width: 100%;
+  position: relative;
+  margin-top: 0;
+}
+
+/*added styles for horizontal scrollbar is overlapping with the attributes in ipad
+@media (max-width: 1024px) {
+  .cs-add-item-metadata-form .cs-metadata-properties .binf-tab-content {
+    height: calc(100% - 48px);
+  }
+}*/
+
+.cs-add-item-metadata-form .cs-metadata-properties .binf-tab-content.show-validation-error {
+  height: calc(100% - 104px);
+  margin-top: 1.5em;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .metadata-validation-error {
+  display: block;
+  height: 2rem;
+  border-bottom: 1px solid #ff0000;
+  margin: 1em 0 1em 0;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .cs-close-error-icon {
+  width: 15px;
+  display: inline-block;
+  height: 15px;
+  margin: 0 0.5em 0 0;
+  vertical-align: bottom;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .validation-error-message {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.cs-item-action-metadata .binf-modal-body .metadata-content-header {
+  background-color: #ffffff;
+}
+
+.cs-item-action-metadata .tile-footer,
+.cs-item-action-metadata .binf-modal-footer {
+  /* TODO: Workaround not to break the button height.  If the font-se changes
+     to 14px, as specified, it will break the buttons, which have the font
+     size .875em.  This should be fixed by stoping using ems. */
+  height: calc(4em - .5em);
+  background-color: #f7f7f7;
+  border-top: none;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  padding: 12px 24px;
+}
+
+.cs-item-action-metadata .binf-modal-footer .binf-btn-primary.cs-button-overlay {
+  pointer-events: none;
+}
+
+/* Adjustments to Metdata */
+
+.binf-widgets .binf-panel {
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  margin: 0;
+}
+
+.binf-widgets .tab-links {
+  border: 0;
+}
+
+.binf-widgets .metadata-content-wrapper {
+  height: calc(100% - 4rem + 2px);
+  width: 100%;
+  float: left;
+}
+
+.cs-metadata .metadata-content-wrapper {
+  position: relative;
+}
+
+.binf-widgets .csui-metadata-tab-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3rem;
+  z-index: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+.metadata-content-wrapper > .tab-links > ul {
+  left: 50%;
+  transform: translateX(32%);
+  -webkit-transform: translateX(32%);
+}
+
+.metadata-content-wrapper .tab-links .binf-nav > li > a {
+  text-align: center;
+  margin: 1px 0 0 0;
+  height: calc(3rem - 2px);
+}
+
+.metadata-content-wrapper .tab-links .binf-nav > li > a:hover {
+}
+
+.binf-widgets .metadata-inner-wrapper {
+  /* Here should be height: 100%.  But the widget i supposed to take
+     the full page; it would jump from a thin header to the full form
+     when the form is loaded, which takes some time.
+     Whoever wants to embed it, has to change it to 100%. */
+  height: calc(100vh - 125px - 4em);
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown {
+  padding: 0;
+  height: 3rem;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  background: #f2f2f2;
+  border: 1px solid #cccccc;
+  border-left: 0;
+  z-index: auto;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button {
+  border: 0;
+  height: calc(3rem - 1px);
+  background-color: #f2f2f2;
+  outline-offset: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 0;
+  padding: 0 1.125rem 0 2rem;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:focus,
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:hover,
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:active {
+  background-color: #9ab3c2;
+  border: 0;
+  outline-offset: 0;
+  text-decoration: none;
+  box-shadow: none;
+  border-bottom: 1px solid #cccccc;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:focus,
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:active {
+  background-color: #e2e2e2;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown .binf-dropdown-menu {
+  margin-left: 2em;
+  min-width: 5em;
+  padding: 0;
+  margin-top: 1px;
+  max-height: calc(100vh - 270px);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown .binf-dropdown-menu li a:hover {
+  background-color: #9ab3c2;
+}
+
+.binf-widgets .cs-metadata-properties .tab-links {
+  display: block;
+}
+
+.binf-modal-dialog .binf-modal-body .metadata-content .cs-add-item-metadata-form .cs-metadata-properties .tab-links {
+  border-top: 0;
+}
+
+.binf-tab-content .cs-metadata-properties .tab-links {
+  margin: 0 0 0 9em; /* initial default then compute dynamically */
+  width: calc(100% - 9em); /* initial default then compute dynamically */
+  background: #f2f2f2;
+  padding: 0 3em 0 1em;
+}
+
+@media (min-width: 800px) {
+  .binf-tab-content .cs-metadata-properties .tab-links {
+    /* as per UX 'padding-right' should be 3em, but small resolutions always we are getting only
+       ellipses if the tab name doesn't fit, hence reducing the padding-right/left. */
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 700px) {
+  .binf-tab-content .cs-metadata-properties .tab-links {
+    padding: 0 8px;
+  }
+}
+
+@media (min-width: 600px) {
+  .cs-metadata-properties .with-left-toolbar .binf-nav-pills > li {
+    padding: 0 0 0 8px;
+  }
+
+  .cs-metadata-properties .binf-nav-pills > li:first-child {
+    padding-left: 32px;
+  }
+}
+
+.cs-metadata-properties .tab-links,
+.cs-metadata-properties .tab-links .left-toolbar,
+.cs-metadata-properties .tab-links .tab-links-bar,
+.cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav,
+.cs-metadata-properties .tab-links .right-toolbar {
+  height: 3rem;
+}
+
+.cs-metadata-properties .tab-links .left-toolbar {
+  float: left;
+  width: 3.375em; /* UX specs: 3.375em */
+  display: inline-block;
+}
+
+.cs-metadata-properties .tab-links .right-toolbar {
+  float: right;
+  width: calc(4.375em + 20px); /* see UX specs: 3.375em + 1em + width of add icon 20px */
+  display: inline-block;
+}
+
+.cs-metadata-properties .csui-tab-contents-header-wrapper {
+  height: 62px;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: calc(100% - 17px);
+  background-color: #ffffff;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .csui-tab-contents-header-wrapper {
+  left: 1.5em;
+  width: calc(100% - 35px);
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .csui-tab-contents-header-wrapper.show-validation-error {
+  top: 7rem;
+}
+
+.cs-add-item-metadata-form div:focus,
+.metadata-content-wrapper div:focus,
+.cs-metadata-properties .tab-links:focus,
+.cs-metadata-properties .tab-links .left-toolbar:focus,
+.cs-metadata-properties .tab-links .left-toolbar > .goto_previous_div .goto_previous_page:focus,
+.cs-metadata-properties .tab-links .tab-links-bar:focus,
+.cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav:focus,
+.cs-metadata-properties .tab-links .tab-links-bar span.fadeout:focus,
+.cs-metadata-properties .tab-links .right-toolbar:focus,
+.cs-metadata-properties .tab-links .right-toolbar > .goto_next_div .goto_next_page:focus,
+.cs-metadata-properties .tab-links .right-toolbar .csui-button-icon:focus {
+  outline-style: none;
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 4.375em - 20px); /* see UX specs: rightbar=3.375em, gap=1em, +icon=20px */
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar {
+  width: 100%; /* For Add Category: use 100% width because there is only one tab */
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar.with-left-toolbar {
+  width: calc(100% - 7.75em - 20px); /* see UX specs: leftbar=3.375em, rightbar=3.375em, gap=1em, +icon=20px */
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500%; /* make it bigger than the container to have more tablinks on the same line */
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 35px;
+  height: calc(3rem - 4px);
+  z-index: 9;
+  pointer-events: none;
+  display: inline-block;
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  background: -moz-linear-gradient(left, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 1) 75%, rgba(242, 242, 242, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 1) 75%, rgba(242, 242, 242, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 1) 75%, rgba(242, 242, 242, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f2f2f2', endColorstr='#f2f2f2', GradientType=1); /* IE6-9 */
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1); /* IE6-9 */
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  display: none;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav {
+  width: 100%;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .tab-links {
+  border-top: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page,
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page,
+.cs-metadata-properties .tab-links .add {
+  display: inline-block;
+  margin-top: calc((3rem - 14px) / 2);
+  width: 14px;
+  height: 14px;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div {
+  width: 3.375em;
+  height: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page {
+  margin-left: calc((3.375em - 14px) / 2); /* see UX specs: width=3.375em and arrow=14px */
+  position: relative;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div:hover,
+.cs-metadata-properties .tab-links .goto_previous_div:focus,
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page:hover,
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page:focus,
+.cs-metadata-properties .tab-links .goto_next_div:hover,
+.cs-metadata-properties .tab-links .goto_next_div:focus,
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page:hover,
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page:focus,
+.cs-metadata-properties .tab-links .add:hover,
+.cs-metadata-properties .tab-links .add:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cs-metadata-properties .tab-links .goto_next_div {
+  float: left;
+  position: relative;
+  width: calc(2rem + 14px);
+  height: 3rem;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page {
+  float: left;
+  margin-left: calc((3.375em - 14px) / 2); /* see UX specs: arrow=14px */
+  position: relative;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .add {
+  margin-top: calc((3em - 20px) / 2);
+  width: 20px;
+  height: 20px;
+  float: right;
+  opacity: 1;
+  border: 0;
+}
+
+.cs-metadata-properties .binf-tab-content.cs-table {
+  padding: 3em 1em 1em 1em;
+}
+
+.binf-widgets .cs-metadata-activity-feed {
+  padding: 0 3em 1em 3em;
+  margin-top: 4rem;
+}
+
+.cs-metadata-activity-feed .csui-table-tabletoolbar {
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  width: calc(100% + 3rem);
+  margin-bottom: 2rem;
+}
+
+.cs-metadata-activity-feed .tile-header {
+  display: block;
+}
+
+.binf-widgets .title {
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+.binf-widgets .metadata-navs {
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cs-metadata-properties .binf-nav-pills > li {
+  width: auto;
+  margin: 0;
+  padding: 0 1em;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cs-add-item-metadata-form.add-category .binf-nav-pills > li {
+  padding: 0;
+}
+
+.cs-tab-links.binf-dropdown li a span.cs-label {
+  font-size: 0.875rem;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .binf-nav-pills > li:first-child,
+.cs-add-item-metadata-form .cs-metadata-properties .binf-nav-pills > li.tab-links-first-visible {
+  padding-left: 0;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .binf-nav-pills > li {
+  width: 100%;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > a > span.cs-icon-required {
+  width: 9px; /*As suggestd by UX in LPAD-57017*/
+  height: 9px;
+  vertical-align: top;
+  position: relative;
+  top: 1rem;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  pointer-events: none;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > a {
+  width: auto;
+  max-width: 16em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  border-radius: 0;
+  font-size: 0.875rem;
+  color: #000000;
+  padding: 0 2px 0 2px;
+  vertical-align: baseline;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 6em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 10em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 16em;
+  }
+}
+
+@media (min-width: 800px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 9em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 14em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 20em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 16em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 23em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 32em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 25em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 35em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 50em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 35em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 50em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 70em;
+  }
+}
+
+.cs-metadata-properties .csui-mini-tablinks .binf-nav-pills > li > a {
+  max-width: 6em;
+}
+
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) {
+  .cs-item-action-metadata .tile-footer,
+  .cs-item-action-metadata .binf-modal-footer {
+    position: absolute;
+    width: 100%;
+    bottom: -17px;
+  }
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a:focus,
+.binf-widgets .cs-metadata-properties .binf-nav > li.binf-active > a:focus,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li > a:focus,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .binf-nav-pills > li > a {
+  max-width: 100%;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a:hover {
+  background-color: transparent;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a > .cs-tablink-text {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 1rem;
+  pointer-events: none;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a:hover > .cs-tablink-text {
+  border-bottom: 4px solid #666666;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a:hover {
+  background-color: transparent;
+  color: #000000;
+  font-weight: bold;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a > .cs-tablink-text,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a:hover > .cs-tablink-text {
+  border-bottom: 4px solid #0072aa;
+}
+
+/* note: always keep this one below the block above */
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li > a:active > .cs-tablink-text {
+  border-bottom: 4px solid #333333;
+}
+
+.cs-metadata-properties .binf-nav-pills > li div.cs-tablink-delete {
+  /* use opacity for hide and show that is still focusable by keyboard*/
+  opacity: 0;
+
+  width: 23px;
+  display: flex;
+  cursor: pointer;
+  padding-left: 5px;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.cs-metadata-properties.cs-touch-browser .binf-nav-pills > li.binf-active div.cs-tablink-delete,
+.cs-metadata-properties .binf-nav-pills > li:hover div.cs-tablink-delete,
+.cs-metadata-properties .binf-nav-pills > li:focus div.cs-tablink-delete,
+.cs-metadata-properties .binf-nav-pills > li > div.cs-tablink-delete.focused {
+  /* use opacity for hide and show that is still focusable by keyboard*/
+  opacity: 1;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > div.cs-tablink-delete > span.cs-delete-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > div.cs-tablink-delete > span.cs-delete-icon:focus {
+  outline: 1px dotted #333333;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .right-toolbar {
+  border: 0;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar .goto_previous_div,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar .goto_previous_div .goto_previous_page,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .right-toolbar {
+  display: none;
+  width: 0;
+}
+
+.cs-add-item-metadata-form.add-category .cs-form .alpaca-top:not(#generalform) {
+  border-top: 0;
+}
+
+.cs-metadata .binf-tab-content {
+  height: 100%;
+  width: 100%;
+}
+
+.cs-metadata .binf-tab-content.csui-normal-scrolling {
+  position: relative;
+}
+
+/*added styles for horizontal scrollbar is overlapping with the attributes*/
+.cs-metadata .metadata-content-wrapper > .binf-tab-content {
+  overflow: hidden;
+}
+
+.cs-metadata .metadata-content-wrapper .binf-tab-content .binf-tab-content {
+  height: calc(100% - 70px);
+  width: 100%;
+  margin-top: 0;
+  padding-top: 6px;
+}
+
+.binf-modal-dialog .binf-modal-body .cs-metadata-properties .binf-tab-content {
+  padding: 0;
+}
+
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content {
+  height: calc(100%  - 49px);
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 6px;
+}
+
+/*added styles for horizontal scrollbar is overlapping with the attributes in ipad*/
+@media (max-width: 1024px) {
+  .cs-metadata-properties .csui-tab-contents-header-wrapper {
+    width: calc(100% - 16px);
+  }
+
+  .metadata-content .cs-metadata .metadata-content-wrapper .binf-tab-content .binf-tab-content {
+    height: calc(100% - 48px);
+  }
+}
+
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content > div,
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content.ps-container > div {
+  padding: 6px 32px 6px 32px;
+}
+
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content.ps-container > div.ps-scrollbar-x-rail,
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content.ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.binf-widgets .tap-panel {
+  position: relative;
+}
+
+.binf-widgets .binf-tab-pane {
+  height: 100%;
+}
+
+/* Divide the inner tab panels (usually forms) on the properties panel
+   by a horizontal line: draw the lines at the top of all visible tabs
+   but the first one. */
+.cs-metadata-properties > .binf-tab-content > [role="tabpanel"]:not(.binf-hidden) ~ [role="tabpanel"]:not(:first-child),
+.cs-metadata-properties > .binf-tab-content > .binf-active[role="tabpanel"] {
+  border-top: 1px solid #e6e7e8;
+  padding-left: 32px;
+}
+
+.cs-metadata-properties > .binf-tab-content > .binf-active[role="tabpanel"]:first-child {
+  border-top: 0 none;
+}
+
+/* only applies to the metadata Properties' last tab; other higher level tabs won't have the effect */
+.cs-metadata-properties > .binf-tab-content > .last-tab-panel {
+  /*min-height: calc(100% + 3px);*/
+  min-height: 100%;
+}
+
+.binf-widgets .cs-metadata-properties {
+  height: 100%;
+}
+
+.binf-widgets .metadata-preview {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.metadata-inner-wrapper .binf-tab-pane {
+  position: relative;
+  height: 100%;
+}
+
+.binf-widgets .metadata-tab {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.binf-widgets .metadata-inner-contentview {
+  padding-left: 3em;
+  margin-top: 2em;
+}
+
+/* Label and Text justify solution */
+.binf-widgets .data-line {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-bottom: 2em;
+}
+
+.binf-form-group label + div, .binf-form-group label + div .alpaca-control {
+  text-align: left;
+}
+
+.data-line .title {
+  display: inline-block;
+  text-align: right;
+  font-size: 1em !important;
+}
+
+span.label-data {
+  float: right;
+  display: inline-block;
+  text-align: left;
+  width: calc(60% - 1em);
+}
+
+/* General tab specific content styles */
+.cs-metadata .title {
+  color: #333333;
+  font-size: 18px;
+}
+
+.binf-widgets .general-body {
+  clear: both;
+  float: left;
+  line-height: 1.5;
+}
+
+.binf-widgets .description-label {
+  margin-top: 0;
+}
+
+.binf-widgets .general-information {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+
+.general-information ul li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.binf-widgets .general-extensions {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.binf-widgets .extensions-wrap {
+  width: 100%;
+  clear: both;
+  float: left;
+  border: 1px dashed #999999;
+  background-color: #f5f5f5;
+  padding: 1em;
+}
+
+.binf-widgets .extensions-body {
+  font-style: italic;
+}
+
+/* SVG Icons */
+.binf-widgets .metadata-icon {
+  width: 2em;
+  margin-right: 1em;
+}
+
+/* Forms */
+.cs-metadata-properties .cs-form {
+  width: calc(100% - 10px);
+}
+
+/* Adapt the widget for embedding in metadata navigation */
+
+.cs-properties-wrapper .metadata-inner-wrapper {
+  /* If embedded, let the parent decide; the widget is
+     of the full-page kind by default. */
+  height: 100%;
+}
+
+.binf-widgets .tableheader-name > .title {
+  display: inline-block;
+  flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  font-weight: 300;
+  font-size: 2.25em;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: initial;
+}
+
+/*.binf-widgets .binf-modal-content .cs-metadata-properties {
+  height: calc(100% - 56px);
+}*/
+
+.binf-widgets .binf-modal-content .cs-add-item-metadata-form.without-header-bar .cs-metadata-properties {
+  height: 100%;
+}
+
+/*added styles for horizontal scrollbar is overlapping with the attributes*/
+.binf-widgets .binf-modal-content .cs-add-item-metadata-form .cs-metadata-properties {
+  height: calc(100% - 62px);
+  overflow: hidden;
+}
+
+/*added styles for horizontal scrollbar is overlapping with the attributes in ipad
+@media (max-width: 1024px){
+  .binf-widgets .binf-modal-content .cs-add-item-metadata-form .cs-metadata-properties {
+    height: calc(100% - 62px);
+  }
+}*/
+
+.binf-widgets .metadata-navigation.csui-hide-side-bar .metadata-sidebar,
+.binf-widgets .metadata-navigation.csui-hide-side-bar.csui-toggle-potrait .metadata-sidebar {
+  display: none;
+}
+
+.binf-widgets .metadata-navigation.csui-hide-side-bar .metadata-content,
+.binf-widgets .metadata-navigation.csui-toggle-potrait .metadata-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.binf-widgets .metadata-navigation.csui-toggle-potrait .metadata-sidebar {
+  /*display: block;*/
+  height: 100%;
+  min-height: 100%;
+  width: 20%;
+  min-width: 15.5em;
+  float: left;
+  position: absolute;
+  z-index: 901;
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* overlay class to override the z-index in metadata page */
+.binf-widgets .csui-metadata-overlay {
+  z-index: 50;
+}
+.binf-widgets .title-input {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 3px;
+  border: solid 1px #757575;
+}
+
+.title-header {
+  display: inline;
+}
+
+.title-input.csui-empty-with-placeholder {
+  color: #666666;
+  font-weight: normal;
+  font-style: italic;
+  border-radius: 2px;
+  border: solid 2px #cccccc;
+}
+
+.title.csui-empty-with-placeholder {
+  color: #666666;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.title-edit-div:focus,
+.title-edit-div .title-input:focus,
+.title-edit-icon-div .inline-edit-icon:focus {
+  outline-style: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: 2px solid #666666;
+}
+
+.csui-toggle-wrapper {
+  display:flex;
+}
+
+.csui-toggle-wrapper .cs-go-back {
+  width: 18px;
+  height: 18px;
+  margin: 8px 14px 5px 0px;
+  cursor: pointer;
+}
+
+.binf-widgets .cs-metadata-item-name {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.binf-widgets .cs-metadata-item-name .csui-toggle-wrapper {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.binf-widgets .cs-metadata-item-name .title-header {
+  width: auto;
+}
+
+.binf-widgets .cs-metadata-item-name .csui-icon.csui-metadata-listview.csui-metadata-listview-expand-icon,
+.binf-widgets .cs-metadata-item-name .csui-icon.csui-metadata-listview.csui-metadata-listview-collapse-icon {
+  margin-top: 0px;
+}
+
+.binf-widgets .cs-metadata-item-name.csui-fadeout:after {
+  right: 20px;
+}
+
+.binf-widgets .metadata-header .cs-metadata-item-name .title-edit-div {
+  display: flex;
+  flex-shrink: 0;
+}
+.metadata-header-left-bar .cs-go-back {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-top: calc((4rem - 18px)/2);
+  margin-left: calc((3em - 18px)/2);
+  cursor: pointer;
+}
+.binf-widgets .metadata-header-right-bar div {
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .metadata-header-right-bar .shortcut-div {
+  margin-top: calc((4rem - 28px) / 2);
+}
+
+.metadata-header-right-bar > span,
+.metadata-header-right-bar > div > a.shortcut-switch {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 28px;
+  color: #23527c;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 5px 0 5px;
+  vertical-align: middle;
+}
+
+.metadata-header-right-bar .required-field-switch > span.only-required-fields-label {
+  vertical-align: middle;
+}
+
+.metadata-header-right-bar .required-fields-switch {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.metadata-header-right-bar .required-fields-switch:focus {
+  outline: 1px dotted #333333;
+  outline-offset: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-booleanfield {
+  min-width: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-booleanfield .control-area {
+  padding: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-formfield .icon-container {
+  width: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-booleanfield .binf-switch:focus {
+  outline-width: 0;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: calc(4rem - 3px);
+  background-color: #ffffff;
+  width: 3em;
+  float: right;
+  display: inline-block;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar .icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-top: calc((4rem - 18px) / 2);
+  margin-left: calc((3em - 18px) / 2);
+  cursor: pointer;
+}
+
+.metadata-inner-wrapper .cs-metadata-properties .ps-container > div {
+  padding: 0 3em .5em 3em;
+}
+
+.metadata-inner-wrapper .cs-metadata-properties .ps-container > div.ps-scrollbar-x-rail,
+.metadata-inner-wrapper .cs-metadata-properties .ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.binf-modal-body .cs-metadata-properties .ps-container > div {
+  padding: 0 5px 5px 5px;
+}
+
+.binf-modal-body .cs-metadata-properties .ps-container > div.ps-scrollbar-x-rail,
+.binf-modal-body .cs-metadata-properties .ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.cs-metadata-properties .ps-container > div.ps-scrollbar-x-rail,
+.cs-metadata-properties .ps-container > div.ps-scrollbar-y-rail {
+  z-index: 1001;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar .binf-close {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-top: 1em; /* css calc bug: guess what calc((4em - 20px)/2) = ? */;
+  margin-right: 22px; /* assume 1em = 16px, so 1.375em = 22px */;
+  border: 0;
+  opacity: 1;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar .binf-close:hover,
+.metadata-header-right-bar .metadata-header-floating-rightbar .binf-close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+}
+.binf-widgets .metadata-content-header {
+  height: calc(4rem - 2px);
+  background: #ffffff;
+  display: flex;
+}
+
+.metadata-content-header:focus,
+.metadata-content-header div:focus,
+.metadata-header .csui-icon-group:focus,
+.metadata-header .csui-icon:focus,
+.metadata-content-header .metadata-header-left-bar-container:focus {
+  outline-style: none;
+}
+
+.metadata-content-header.shortcut-object,
+.metadata-content-header.has-rightbar {
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+
+  width: 100%;
+}
+
+.metadata-content-header .metadata-header-left-bar-container {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.metadata-content-header .metadata-header-right-bar-container {
+  position: absolute;
+  display: inline-block;
+  right: 1em;
+  vertical-align: baseline;
+  padding: 0;
+}
+
+.metadata-content-header.with-close-icon .metadata-header-right-bar-container {
+  right: 0;
+}
+
+.binf-widgets .metadata-header {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 5rem);
+  padding-left: 1.875rem;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.metadata-header.with-right-bar {
+  padding-left: 20px;
+  flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex-basis: 80%;
+  -webkit-flex-basis: 80%;
+  min-width: 80%;
+  max-width: 80%;
+}
+
+.metadata-content-header.shortcut-object .metadata-header.with-right-bar {
+  flex-basis: 60%;
+  -webkit-flex-basis: 60%;
+  min-width: 60%;
+  max-width: 60%;
+}
+
+.metadata-content-header.shortcut-object .metadata-header.with-right-bar,
+.metadata-header.with-back-button {
+  padding-left: 1em
+}
+
+@media (min-width: 600px) {
+  .metadata-header.with-right-bar {
+    flex-basis: 85%;
+    -webkit-flex-basis: 85%;
+    min-width: 85%;
+    max-width: 85%;
+    float: left;
+  }
+
+  .metadata-content-header.shortcut-object .metadata-header.with-right-bar {
+    flex-basis: 65%;
+    -webkit-flex-basis: 65%;
+    min-width: 65%;
+    max-width: 65%;
+  }
+}
+
+@media (min-width: 800px) {
+  .metadata-header.with-right-bar {
+    flex-basis: 90%;
+    -webkit-flex-basis: 90%;
+    min-width: 90%;
+    max-width: 90%;
+  }
+
+  .metadata-content-header.shortcut-object .metadata-header.with-right-bar {
+    flex-basis: 75%;
+    -webkit-flex-basis: 75%;
+    min-width: 75%;
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .metadata-header.with-right-bar {
+    flex-basis: 90%;
+    -webkit-flex-basis: 90%;
+    min-width: 90%;
+    max-width: 90%;
+  }
+
+  .metadata-content-header.shortcut-object .metadata-header.with-right-bar {
+    flex-basis: 80%;
+    -webkit-flex-basis: 80%;
+    min-width: 80%;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .metadata-header.with-right-bar {
+    flex-basis: 90%;
+    -webkit-flex-basis: 90%;
+    min-width: 90%;
+    max-width: 90%;
+  }
+
+  .metadata-content-header.shortcut-object .metadata-header.with-right-bar {
+    flex-basis: 85%;
+    -webkit-flex-basis: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .metadata-header.with-right-bar {
+    flex-basis: 90%;
+    -webkit-flex-basis: 90%;
+    min-width: 90%;
+    max-width: 90%;
+  }
+
+  .metadata-content-header.shortcut-object .metadata-header.with-right-bar {
+    flex-basis: 85%;
+    -webkit-flex-basis: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+
+.metadata-header .icon {
+  display: inline-block;
+}
+
+.metadata-header .cs-metadata-item-name-container {
+  width: 100%;
+  height: 100%;
+}
+
+.metadata-header .cs-metadata-item-name {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.metadata-header .cs-metadata-item-name span.csui-icon-group {
+  flex-shrink: 0;
+}
+
+.metadata-header .cs-metadata-item-name span.csui-icon-group,
+.metadata-header .cs-metadata-item-name span.csui-icon-group span.csui-icon {
+  position: static;
+  cursor: default;
+}
+
+.metadata-header .cs-metadata-item-name span.csui-icon-group.csui-metadata-shortcut-overlay span.csui-icon {
+  position: absolute;
+}
+
+.metadata-header .title {
+  position: relative;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0 2px 0 0.5em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.metadata-header .title .fadeout {
+  display: block;
+  position: absolute;
+  top: 1.3rem;
+  right: 0px;
+  width: 35px;
+  height: 1.3rem;
+  z-index: 9;
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.metadata-header .title-header {
+  max-height: 2.6rem;
+  line-height: 1.2;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.binf-widgets .metadata-header .cs-metadata-item-name .title-edit-icon-div {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0px;
+  padding-left: 2px;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.metadata-header .title-edit-icon-div .inline-edit-icon {
+  display: inline-block;
+}
+
+.metadata-header .title-edit-div {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  width: 95%;
+}
+
+.metadata-header .title-edit-div .cs-icon-required {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 3px;
+  float: left;
+}
+
+.metadata-header .title-edit-div .title-input {
+  text-align: left;
+  height: 25px;
+  display: inline-block;
+  max-width: calc(70% - 1.41em);
+  width: 95%;
+  float: none;
+  vertical-align: top;
+  margin-top: 2px;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.metadata-header .title-edit-div .title-input::-ms-clear {
+  display: none;
+}
+
+.metadata-header .title-edit-div .edit-cancel {
+  display: inline-block;
+  margin-top: 3px;
+  margin-left: 7px;
+  height: 22px;
+}
+
+.metadata-header .title-error-div {
+  padding-left: 44px;
+  vertical-align: top;
+  font-size: 0.75em;
+  color: #df3324;
+  top: -14px;
+  position: relative;
+  cursor: default;
+  line-height: 14px;
+}
+
+.metadata-header .csui-metadata-header-with-toggle .title-error-div {
+  padding-left: 78px;
+}
+
+@media (max-width: 1024px) {
+  .metadata-header .title-edit-div .title-input {
+    max-width: calc(100% - 1.41em);
+  }
+}
+/* Remove outside margin and padding for nexted forms */
+
+.csui-general-form-fields > .cs-form > .alpaca-field-object {
+  margin: 0;
+}
+
+.csui-general-form-fields > .cs-form > .alpaca-field-object > * {
+  padding: 0;
+}.cs-form.csui-general-form {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.metadata-inner-wrapper .cs-form.csui-general-form {
+  padding-top: 12px;
+}
+
+.binf-widgets .cs-form.csui-general-form:not(.csui-required-fields-only) {
+  min-height: 7.5em;
+}
+
+/* columns layout */
+
+.cs-form .metadata-pane-container {
+  height: auto;
+  width: 100%;
+  margin-top: 54px;
+}
+
+.cs-form .metadata-pane-left {
+  /*min-height: 150px;*/
+  padding: 0 2em 0 0;
+}
+
+@media (max-width: 1399px) {
+  .cs-form .metadata-pane-left {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cs-form .metadata-pane-left {
+    padding: 0;
+  }
+}
+
+.cs-form .metadata-pane-right {
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .cs-form .metadata-pane-right {
+    padding: 0;
+  }
+}
+
+.cs-form .metadata-pane-left {
+  height: 100%;
+}
+
+/* description */
+
+.cs-form .description_section .language-switcher {
+  margin-left: 0.5em;
+  margin-top: 5px;
+}
+
+.cs-form .description_section {
+  margin-bottom: 2em;
+}
+
+@media (min-width: 992px) {
+  .cs-form .description_section {
+    margin-bottom: 0;
+  }
+}
+
+.cs-form .description_section .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  text-align: right;
+  margin-bottom: 0.5em;
+  padding: 0 1em 0 0;
+}
+
+/* name */
+
+.cs-form #name_section {
+  height: auto;
+  margin-bottom: 3em;
+}
+
+.cs-form #name_section .binf-control-label {
+  width: 100%;
+  text-align: left;
+  padding-left: 6px;
+  padding-bottom: 0;
+}
+
+.cs-form #name_section .binf-col-sm-9 {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.cs-form #name_section .binf-form-group {
+  display: block;
+  text-align: left;
+  margin-top: 0em;
+  height: auto;
+}
+.cs-form .thumbnail_section {
+  height: auto;
+  max-width: 280px;
+  margin: 42px auto 1.5rem auto;
+
+}
+
+.cs-form .thumbnail_section .default_thumbnail.thumbnail_disabled {
+cursor: default;
+}
+
+.cs-form .thumbnail_section .default_thumbnail {
+  display: inline-block;
+  height: 124px;
+  width: 150px;
+}
+
+.cs-form .thumbnail_section .default_thumbnail.thumbnail_empty {
+  background-image: url('../widgets/metadata/general.panels/node/impl/images/thumbnail_empty.svg');
+}
+
+.cs-form .thumbnail_section .default_thumbnail.thumbnail_missing {
+  background-image: url('../widgets/metadata/general.panels/node/impl/images/thumbnail_missing.svg');
+}
+
+@media (max-width: 1100px) {
+  .cs-form .thumbnail_section {
+    margin-left: auto;
+  }
+}.cs-form img.img-doc-preview {
+  /*width: initial;*/
+  opacity: 50;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cs-form img.img-doc-preview:focus {
+  outline: none;
+}
+
+.binf-widgets .cs-form-img-border {
+  /*-webkit-box-shadow: 1px 1px 1px 0px rgba(51,51,51,0.5);*/
+  /*-moz-box-shadow: 1px 1px 1px 0px rgba(51,51,51,0.5);*/
+  /*box-shadow: 1px 1px 1px 0px rgba(51,51,51,0.5);*/
+  border: 1px solid #666666;
+}
+
+.binf-widgets .cs-form-img-border:focus {
+  border: 1px dotted #333333;
+}
+
+.binf-widgets .cs-form-img-vertical {
+  height: 100%;
+  max-height: 200px;
+  width: auto;
+  max-width: 280px;
+
+}
+
+.binf-widgets .cs-form-img-horizontal {
+  height: auto;
+  max-height: 200px;
+  /*width: 100%;*/
+  max-width: 280px;
+
+}
+
+.cs-form .thumbnail_section {
+  height: auto;
+  max-width: 280px;
+  margin: 42px auto 1.5rem auto;
+
+}
+
+.cs-form .thumbnail_section .thumbnail_not_loaded {
+  display: inline-block;
+  height: 124px;
+  width: 150px;
+  /* Check with UX-Radium team
+   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+   -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);*/
+}
+
+.cs-form .thumbnail_section .thumbnail_not_loaded.thumbnail_empty {
+  background-image: url('../widgets/metadata/general.panels/document/impl/images/thumbnail_empty.svg');
+}
+
+.cs-form .thumbnail_section .thumbnail_not_loaded.thumbnail_missing {
+  background-image: url('../widgets/metadata/general.panels/document/impl/images/thumbnail_missing.svg');
+}
+
+@media (max-width: 1100px) {
+  .cs-form .thumbnail_section {
+    margin-left: auto;
+  }
+}
+.cs-form .shortcut_section .binf-control-label {
+  text-align: right;
+  padding: 0 1em 0 0;
+  margin-bottom: 0.5em;
+}
+
+.cs-form .shortcut_section .binf-col-sm-9 {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.cs-form .shortcut_section .binf-form-group {
+  display: block;
+  text-align: left;
+  margin-top: 8px;
+  height: auto;
+}
+
+
+.url_section .binf-form-group > div {
+  width: 100%;
+}
+.cs-form .url_section .binf-control-label {
+  text-align: right;
+  padding: 0 1em 0 3em;
+}
+
+.cs-form .url_section .binf-col-sm-9 {
+  padding-left: 0;
+  padding-top: 0;
+  width: calc(60% - 40px); /*equal to description field*/
+  text-align: left;
+}
+
+.cs-form .url_section .binf-form-group {
+  display: block;
+  text-align: left;
+  margin-top: 8px;
+  height: auto;
+}
+
+.cs-form .url_section a.alpaca-control {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.binf-widgets .metadata-add-properties {
+  float: right;
+  position: relative;
+  width: 2.375em;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.metadata-add-properties .csui-loading-parent-wrapper,
+.metadata-add-properties .binf-dropdown {
+  height: inherit;
+  width: inherit;
+}
+
+.metadata-add-properties .binf-dropdown.binf-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.metadata-add-properties .binf-dropdown > .binf-dropdown-toggle {
+  float: right;
+  position: relative;
+  margin-top: calc((3rem - 20px) / 2);
+  height: 20px;
+  width: 20px;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.metadata-add-properties .binf-dropdown > .binf-dropdown-toggle > span.icon-toolbarAdd {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.metadata-add-properties .binf-dropdown.binf-open > ul.binf-dropdown-menu {
+  left: inherit;
+  right: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0;
+  max-height: calc(100vh - 270px);
+  overflow: auto;
+}
+.cs-metadata-properties .csui-tab-contents-header {
+  display: block;
+  height: 60px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding-top: 21px;
+  background-color: #ffffff;
+}
+
+.cs-metadata-properties .csui-tab-contents-header-content h4 {
+  color: #0072aa;
+  font-size: 1.25rem;
+  line-height: 1.35rem;
+  width: calc(100% - 222px);
+  float: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: calc((42px - 1.35rem) / 2);  /* offset by 1px for IE */
+  padding-bottom: 5px;
+}
+
+.cs-metadata-properties .csui-tab-contents-header-content {
+  float: left;
+  padding: 0 32px;
+  width: 100%;
+}
+
+.binf-modal-dialog .cs-metadata-properties .csui-tab-contents-header {
+  width: calc(100% - 25px);
+}
+
+.binf-modal-dialog .cs-metadata-properties .csui-tab-contents-header-content {
+  float: left;
+  padding: 0 0 0 32px;
+}
+
+.cs-metadata-properties .csui-tab-contents-header-right {
+  float: right;
+  max-width: 212px;
+  padding-top: calc((43px - 31px) / 2);    /* offset by 1px for IE */
+}
+
+.cs-metadata-properties .csui-tab-contents-header:after {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  content: "\00a0";
+  width: 100%;
+  float: left;
+  margin-top: 2px;
+  max-height: 8px; /*Changing this as per spec - metadata page 18*/
+}
+
+.cs-metadata-properties .csui-tab-contents-header .required-field-switch > span.only-required-fields-label {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.cs-metadata-properties .csui-tab-contents-header .required-fields-switch {
+  display: inline-flex;
+  vertical-align: middle;
+  padding: 0 3px 0 3px;
+}
+
+.cs-metadata-properties .csui-tab-contents-header .required-fields-switch:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -2px;
+}
+
+.cs-metadata-properties .csui-tab-contents-header .required-fields-switch .cs-booleanfield {
+  min-width: 0;
+}
+
+.cs-metadata-properties .csui-tab-contents-header .required-fields-switch .cs-booleanfield .control-area {
+  padding: 0;
+}
+
+.cs-metadata-properties .csui-tab-contents-header .required-fields-switch .cs-formfield .icon-container {
+  width: 0;
+}
+
+.cs-metadata-properties .csui-tab-contents-header .required-fields-switch .cs-booleanfield .binf-switch:focus {
+  outline-width: 0;
+}
+
+.cs-metadata-properties .csui-tab-contents-header .csui-tab-contents-header-title-full-width {
+  width: 100%;
+}
+.binf-widgets .csui-metadata-versions {
+  font-size: 16px;
+  font-weight: normal;
+  height: calc(100% - 4em);
+  flex: 1 1000 auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3em;
+  padding-right: 3em;
+  margin-top: 4em;
+}
+
+.binf-widgets .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-view {
+  flex: 0 0 0; /* start with zero height */
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  transition: flex-basis 0.3s; /* transition back from visible to invisible */
+}
+
+/* rowselection toolbar is visible */
+.binf-widgets .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-visible {
+  flex-basis: 3em;
+  visibility: visible;
+  overflow: visible;
+  transition: flex-basis 0.3s;
+}
+
+.binf-widgets .csui-no-animation .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-view,
+.binf-widgets .csui-no-animation .csui-metadata-versions > .csui-metadata-versions-rowselection-toolbar-visible {
+  transition: none;
+}
+
+.csui-metadata-versions .csui-table-view {
+  flex: 1 1000 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.csui-metadata-versions .csui-table-view > div {
+  overflow: hidden;
+}
+
+.csui-metadata-versions .csui-table-paginationview {
+  height: auto;
+  flex: 0 0 auto;
+}
+.cs-tab-links.binf-dropdown .cs-label {
+  font-size: 1.125rem;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.cs-tab-links.binf-dropdown button {
+  width: auto;
+}
+
+.cs-tab-links.binf-dropdown button .cs-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 3px 5px;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li.binf-active a {
+  color: #333333;
+  background-color: #e2e2e2;
+  margin: 0.063rem 0;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li a {
+  margin: 0.063rem 0;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li a:focus {
+  outline: 1px dotted #333333;
+}
+
+.cs-tab-links.binf-dropdown .binf-dropdown-menu li:first-child a {
+  margin-top: 0.187rem;
+}
+.binf-widgets .cs-metadata-add-items {
+  /* in perspective */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.cs-metadata-add-items .cs-metadata {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Adjustments to content */
+
+.cs-metadata-add-items .metadata-wrapper {
+  height: 100%;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.cs-metadata-add-items .metadata-wrapper .icon.circular {
+  border: 0;
+}
+
+.cs-metadata-add-items .metadata-navigation {
+  width: 100%;
+  height: 100%;
+}
+
+.cs-metadata-add-items .metadata-sidebar {
+  height: 100%;
+  min-height: 100%;
+  width: 20%;
+  min-width: 15.5em;
+  float: left;
+  border-right: 1px solid #999999;
+}
+
+/*-------------------------------------------*/
+/* list */
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .cs-content {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* header */
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist.binf-panel {
+  border-left: 1px solid white;
+}
+
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .binf-panel-heading {
+  background-color: #f5f5f5;
+}
+
+/* items */
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .csui-icon-group,
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .csui-icon-group .csui-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .csui-icon-group {
+  margin-top: calc((3rem - 28px) / 2);
+}
+
+/* active */
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist a.binf-active > .binf-list-group-item {
+  background-color: #dfe7ea;
+  color: #333333;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* normal */
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist a > .binf-list-group-item {
+  background-color: transparent;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* hover */
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .binf-list-group-item:hover {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: #bac9ce;
+  color: #333333;
+}
+
+/* title */
+.cs-metadata-add-items .metadata-sidebar .cs-simplelist .list-item-title {
+  font-weight: 500;
+  line-height: 3rem;
+  height: 3rem;
+}
+
+/* optional required star in front of title and green checkmark when required fields satisfied*/
+.cs-metadata-add-items .cs-simplelist .binf-list-group-item .cs-icon-required {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: 43px;
+  top: 1rem;
+}
+
+/* ---------------------------------------------------------*/
+/* content pane */
+.cs-metadata-add-items .metadata-content {
+  height: 100%;
+  width: 80%; /* subtract 20% of sidebar */
+  max-width: calc(100% - 15.5em); /* subtract min-width of sidebar */
+  display: inline-block;
+}
+
+.cs-metadata-add-items .metadata-content .cs-metadata {
+  width: 100%;
+}
+/* Adjustments to dialog container */
+
+.cs-properties .binf-modal-lg {
+  height: calc(100vh - 100px);
+  min-height: 90px;
+  top: 60px;
+}
+
+.cs-properties .binf-modal-content {
+  height: 100%;
+  border-radius: 0;
+}
+
+.cs-properties .tile-header,
+.cs-properties .binf-modal-header {
+  padding: 0;
+}
+
+.cs-properties .binf-modal-body,
+.cs-properties .cs-metadata,
+.cs-properties-wrapper .cs-metadata {
+  height: 100%;
+  position: relative;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .cs-properties.cs-dialog.binf-modal .binf-modal-dialog,
+  .cs-properties.cs-dialog.binf-modal .binf-modal-dialog .binf-modal-content {
+    height: auto;
+  }
+
+  .cs-properties.cs-dialog.binf-modal .binf-modal-dialog .binf-modal-body {
+    height: calc(100vh - 252px);
+  }
+
+  .cs-properties.cs-dialog .metadata-inner-wrapper {
+    height: 100%;
+  }
+
+  .cs-properties.cs-dialog .binf-modal-dialog .binf-modal-body .cs-metadata-properties .binf-tab-content {
+    height: calc(100% - 63px);
+  }
+}
+
+/* Resolution-specific CSS & 2 dpr */
+@media screen and (-webkit-min-device-pixel-ratio: 2), /* Webkit-based browsers */
+(min-resolution: 2dppx),                               /* The standard way */
+(min-resolution: 192dpi) {
+  /* IE browser */
+  .grid-rows > .binf-row > .row-xs-full.csui-node-properties-wrapper {
+    height: calc(100vh - 45px) !important;
+  }
+}
+
+/* Adjustments to wrapper container that is in-place with nodestable */
+
+.binf-widgets .cs-properties-wrapper {
+  /* in perspective */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cs-properties-wrapper .cs-metadata {
+  height: 100%;
+  overflow: hidden;
+}
+
+.binf-modal-lg .cs-properties-wrapper {
+  /* in modal dialog */
+  height: calc(100vh - 205px);
+  min-height: 90px;
+  overflow: hidden;
+}
+
+/* Adjustments to content */
+
+.cs-metadata .metadata-wrapper {
+  height: 100%;
+  padding: 0;
+  font-size: 14px;
+}
+
+.metadata-wrapper .icon.circular {
+  border: 0;
+}
+
+.binf-widgets .metadata-navigation {
+  width: 100%;
+  height: 100%;
+}
+
+.binf-widgets .metadata-sidebar {
+  height: 100%;
+  min-height: 100%;
+  width: 20%;
+  min-width: 15.5em;
+  float: left;
+  border-right: 1px solid #999999;
+}
+
+/*-------------------------------------------*/
+/* list */
+
+.metadata-sidebar .cs-simplelist {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+/* header */
+.metadata-sidebar .cs-simplelist.binf-panel {
+  border-left: 1px solid white;
+}
+
+.metadata-sidebar .cs-simplelist .binf-panel-heading {
+  background-color: #ffffff;
+  border: 1px dotted transparent;
+  border-bottom: 1px solid #cccccc;
+}
+
+.metadata-sidebar .cs-simplelist .cs-header span.icon:focus,
+.metadata-sidebar .cs-simplelist .cs-header span.cs-title:focus,
+.metadata-sidebar .cs-simplelist .cs-content:focus,
+.metadata-sidebar .cs-simplelist .cs-content .cs-list-group:focus,
+.metadata-sidebar .cs-simplelist a > .binf-list-group-item span:focus {
+  outline-style: none;
+}
+
+.metadata-sidebar .cs-simplelist .binf-panel-heading:focus {
+  border: 1px dotted #333333;
+}
+
+/* items */
+
+/* active */
+.metadata-sidebar .cs-simplelist a.binf-active > .binf-list-group-item {
+  background-color: #dfe7ea;
+  color: #333333;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.metadata-sidebar .cs-simplelist a.binf-active.active-item-disable > .binf-list-group-item {
+  background-color: #f5f5f5;
+}
+
+/* normal */
+.metadata-sidebar .cs-simplelist a > .binf-list-group-item {
+  background-color: transparent;
+  /* border-top: 1px solid #ffffff;
+   border-bottom: 1px solid #ffffff;*/
+}
+
+.metadata-sidebar .cs-simplelist a > .binf-list-group-item span {
+  pointer-events: none;
+  height: calc(3rem - 2px);
+  line-height: 3.1rem;
+}
+
+/* hover */
+.metadata-sidebar .cs-simplelist .binf-list-group-item:hover {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: #bac9ce;
+  color: #333333;
+}
+
+/* title */
+.metadata-sidebar .cs-simplelist .list-item-title {
+  font-weight: 500;
+}
+
+.metadata-sidebar .cs-simplelist .list-item-version {
+  font-weight: 500;
+  line-height: 2;
+  width: 28px;
+  height: 28px;
+  display: block;
+  padding-top: 1px;
+}
+
+/* ---------------------------------------------------------*/
+/* content pane */
+.binf-widgets .metadata-content {
+  height: 100%;
+  width: 80%; /* subtract 20% of sidbar */
+  max-width: calc(100% - 15.5em); /* subtract min-width of sidebar */
+  display: inline-block;
+}
+
+.metadata-content .cs-metadata {
+  width: 100%;
+}
+
+/* Move the vertical scrollbar rail left of the right border of the list. */
+.metadata-navigation > .metadata-sidebar > .cs-simplelist > .csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail {
+  right: 16px !important;
+}
+
+/*thumbnail properties view*/
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a.binf-active > .binf-list-group-item {
+  padding-left: 8px;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item {
+  padding-left: 8px;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span.list-item-title {
+  left: 62px;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span.csui-icon-group {
+  width: 40px;
+  padding: 3px 0;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span.csui-icon-group .csui-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .binf-list-group-item:hover {
+  border-top: none;
+  border-bottom: none;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .cs-list-group a .binf-list-group-item span.csui-icon-group .csui-icon.mime_image,
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .binf-list-group-item span.csui-icon-group .csui-icon.mime_image,
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .cs-list-group a.binf-active .binf-list-group-item span.csui-icon-group .csui-icon.mime_image,
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .binf-list-group-item:hover span.csui-icon-group .csui-icon.mime_image {
+  background-color: #ffffff;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span {
+  height: calc(3rem - 8px);
+}.binf-widgets .cs-metadata-navigation-wrapper {
+  background-color: #ffffff;
+}
+
+.binf-widgets .cs-metadata-navigation-wrapper.cs-metadata-no-bg-color {
+  background-color: transparent;
+}
+
+.binf-widgets .cs-metadata-navigation-wrapper,
+.binf-widgets .cs-metadata-navigation-wrapper > .cs-metadata,
+.binf-widgets .cs-metadata-navigation-wrapper > .cs-metadata .metadata-navigation > .metadata-content > .cs-metadata {
+  height: 100%;
+}
+
+.binf-widgets .cs-metadata-navigation-wrapper > .cs-metadata {
+  overflow: hidden;
+}
+.cs-document-overview-wrapper {
+  min-height: calc(33.25em + 16px) !important;
+  width: 100%;
+  min-width: 44em;
+  overflow: hidden;
+  text-align: center;
+  background-color: transparent !important;
+}
+
+.cs-document-overview-wrapper .cs-content-container {
+  margin: 0;
+  height: calc(100% - 8em);
+  display: flex;
+}
+
+.cs-document-overview-wrapper .cs-content {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+.cs-document-overview-wrapper .cs-content-wrapper {
+  width: 44em;
+  height: 33.25em;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cs-document-overview-wrapper .thumbnail_not_loaded {
+  background-repeat: no-repeat;
+}
+
+.cs-document-overview-wrapper .cs-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 4em;
+  padding: 0em 1.5em 0 1.5em !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  text-align: left;
+  vertical-align: middle;
+  -webkit-box-shadow: 0px 16px 15px 0px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 16px 15px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 16px 15px 0px rgba(255, 255, 255, 0.3);
+}
+
+.cs-document-overview-wrapper .title-container {
+  min-width: calc(100% - 128px);
+  max-width: calc(100% - 128px);
+  position: relative;
+}
+
+.binf-widgets .cs-document-overview-wrapper .title-header{
+  max-height: 2.9rem;
+  line-height: 1.3rem;
+  overflow: hidden;
+  position: relative;
+  padding-left: 0.5em;
+  word-wrap: break-word;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name span.csui-icon-group {
+  width: auto;
+  height: auto;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name span.csui-icon-group,
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name span.csui-icon-group span.csui-icon {
+  position: static;
+  cursor: default;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.binf-widgets .cs-document-overview-wrapper .title {
+   text-align: left;
+   font-size: 24px;
+   font-weight: 400;
+   padding: 0 2px 0 0;
+   cursor: pointer;
+  }
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-icon-div {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  padding-left: 2px;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-icon-div .inline-edit-icon {
+  display: inline-block;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  width: 95%;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name.csui-acc-tab-region .title {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  max-width: 95%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .cs-icon-required {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 3px;
+  float: left;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input {
+  text-align: left;
+  height: 25px;
+  display: inline-block;
+  max-width: calc(70% - 1.41em);
+  width: 95%;
+  float: none;
+  vertical-align: top;
+  margin-top: 2px;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input::-ms-clear {
+  display: none;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .edit-cancel {
+  display: inline-block;
+  height: 25px;
+}
+
+/*.cs-document-overview-wrapper .cs-metadata-item-name .title-error-div {
+  padding-left: 44px;
+  vertical-align: top;
+  font-size: 0.75em;
+  color: #df3324;
+  top: -12px;
+  position: relative;
+  cursor: default;
+}*/  /*title-error-div highererchy structure changed */
+
+.cs-document-overview-wrapper .cs-metadata-item-name-container .title-error-div {
+  padding-left: 53px;
+  font-size: 0.75em;
+  color: #df3324;
+  cursor: default;
+  line-height: 14px;
+}
+
+@media (max-width: 1024px) {
+  .cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input {
+    max-width: calc(100% - 40px);
+  }
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .mime_image {
+  width: 36px;
+  height: 36px;
+}
+
+.cs-document-overview-wrapper .thumbnail_section .csui-icon {
+  width: 154px !important;
+  height: 200px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cs-document-overview-wrapper .thumbnail_section {
+  cursor: pointer;
+  text-align: center !important;
+  margin-top: 0 !important;
+}
+
+.cs-document-overview-wrapper .general-information {
+  float: left !important;
+}
+
+.cs-document-overview-wrapper .cs-content-footer {
+  position: absolute;
+  text-align: center;
+  top: calc(100% - 4em);
+  width: 100%;
+  height: 4em;
+  padding-top: 1.2em !important;
+  border-top: 1px solid #e0e0e0 !important;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 0px -16px 15px 0px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px -16px 15px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px -16px 15px 0px rgba(255, 255, 255, 0.3);
+}
+
+.cs-content-footer .binf-btn {
+  height: 2em;
+  padding: 0 1.5em 0 1.5em;
+  margin-left: 1em;
+  vertical-align: middle;
+  border-radius: 1em;
+  font-size: 0.875em;
+  line-height: 0.75em;
+}
+
+.cs-content-footer .primary-btn {
+  background-color: #0072aa;
+  color: white;
+}
+
+.cs-content-footer .primary-btn:hover {
+  color: white;
+  background-color: #004b71;
+}
+
+.cs-content-footer .default-btn {
+  background-color: white;
+  color: #0072aa;
+  border: 1px solid #0072aa;
+}
+
+.cs-content-footer .default-btn:hover {
+  border: 1px solid #004b71;
+  color: #004b71;
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0, 75, 113, 1);
+  -moz-box-shadow: inset 0px 0px 0px 1px rgba(0, 75, 113, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 75, 113, 1);
+}
+
+.binf-widgets .cs-content-footer .binf-btn.primary-btn:focus,
+.binf-widgets .cs-content-footer .binf-btn.primary-btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.cs-document-overview-wrapper .binf-form-group.alpaca-field > .binf-col-sm-9 {
+  width: 60% !important;
+}
+
+.cs-document-overview-wrapper .user-photo {
+  height: 28px;
+  min-width: 28px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-box-direction: column;
+  -webkit-box-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flexbox-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  -moz-box-pack: justify;
+  justify-content: center;
+}
+
+.cs-field-cont {
+  margin-bottom: 2rem !important;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-box-direction: row;
+  -webkit-box-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flexbox-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  line-height: 24.5px;
+  height: 24.5px;
+}
+
+.cs-document-overview-wrapper .cs-value, .cs-document-overview-wrapper .cs-label {
+  line-height: 24.5px;
+  margin-left: 8px;
+}
+
+.cs-document-overview-wrapper .cs-label {
+  margin-right: 20px;
+  text-align: right !important;
+  width: 27%;
+}
+
+.cs-document-overview-wrapper .description_section {
+  position: relative;
+  float: left !important;
+}
+
+.cs-document-overview-wrapper .preview-section {
+  text-align: center !important;
+}
+
+.cs-document-overview-wrapper .location-container {
+  margin-bottom: 0.6em;
+}
+
+.cs-document-overview-wrapper .location-container .binf-btn[disabled] {
+  opacity: 1 !important;
+}
+
+.cs-document-overview-wrapper .location-container .location-view {
+  height: auto !important;
+  font-size: 0.9em;
+  margin-bottom: 0.8em;
+}
+
+.cs-document-overview-wrapper .location-container .cs-formfield {
+  height: auto !important;
+}
+
+.cs-document-overview-wrapper .favoriteRegion, .cs-document-overview-wrapper .commentRegion {
+  display: inline-block;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.cs-document-overview-wrapper .commentRegion {
+  height: 31px;
+  min-width: 40px;
+}
+
+.cs-document-overview-wrapper .icon-expandArrowDown {
+  z-index: 1;
+}
+
+.cs-document-overview-wrapper .icon-expandArrowUp {
+  bottom: 0 !important;
+  z-index: 1;
+}
+
+.cs-document-overview-wrapper .user-photo {
+  min-width: 24px !important;
+}
+
+.cs-document-overview-wrapper .actions-container {
+  display: flex;
+  align-items: center;
+}
+
+.cs-document-overview-wrapper .description-container {
+  width: 27.75em !important;
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+}
+
+.cs-document-overview-wrapper .thumbnail-container {
+  width: 16.25em !important;
+  padding-right: 3em !important;
+  padding-left: 0 !important;
+}
+
+.cs-document-overview-wrapper .description_section .cs-icon-exp-col {
+  right: -2em !important;
+}
+
+.cs-document-overview-wrapper .description_section .cs-field-read-inner .icon-container {
+  display: none !important;
+}
+
+.cs-document-overview-wrapper .cs-formfield {
+  text-align: left;
+}
+
+.binf-widgets .cs-document-overview-wrapper .title .fadeout {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  right: 0px;
+  width: 35px;
+  height: 1.5rem;
+  z-index: 9;
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+

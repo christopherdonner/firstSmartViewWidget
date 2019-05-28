@@ -1,0 +1,97 @@
+<div id="esoc-social-comment-create-container" class="">
+  <div id="esoc-social-comment-title-bar" class="esoc-social-comment-title-bar">
+    <div id="esoc-social-comment-title"
+         class="esoc-social-comment-title"> {{messages.comments}} </div>
+    <div id="esoc-social-comment-title-actions" class="esoc-social-comment-title-actions">
+      <a href="javascript:void(0);" id="esoc-social-comment-close-button"
+         class="esoc-social-comment-close-button" title="{{messages.close}}" aria-label="{{messages.close}}"></a>
+      <a href="javascript:void(0);" id="esoc-social-focus-element" aria-label="{{messages.close}}"></a>
+    </div>
+  </div>
+  <div id="esoc-social-comment-warning"
+       class="binf-alert binf-alert-danger esoc-social-warning esoc-social-comment-warning" role="alert">
+    {{messages.commentBlank}}
+  </div>
+  {{#if messages.commentingOpen}}
+    <div id="esoc-social-comment-form-container" class="esoc-social-comment-form-container">
+      <div class="esoc-social-comment-form-mask"></div>
+      <div id="esoc-social-comment-form-buttons-container"
+           class="row-fluid esoc-social-form-minheight">
+        <div class="esoc-social-comment-avatar-container">
+          <!-- TODO: need to replace this image with current logged-in user's profile image and remove the background related css properties -->
+          <span id="esoc-social-default-avatar" class="image_user_placeholder
+          esoc-social-comment-default-avatar">{{initials}}</span>
+          <img id="esoc-social-comment-avatar" class="binf-img-circle esoc-social-comment-avatar"
+               src="#" alt="{{display_name}}"/>
+        </div>
+        <div class="esoc-social-comment-input-container">
+          <div class="esoc-social-add-comment-data" style="display:none;"></div>
+                    <textarea id="esoc-social-comment-input"
+                              class="binf-form-control esoc-social-comment-input"
+                              placeholder="{{messages.writeAComment}}" aria-label="{{messages.writeAComment}}"></textarea>
+
+          <div id="esoc-suggestion-comment-header"></div>
+          <div id="esoc-social-textinput-button-holder" class="esoc-social-textinput-button-holder">
+            {{#if messages.attachementsEnabled}}
+              <a href="javascript:void(0);" id="esoc-social-comment-attachment"
+                 class="esoc-social-comment-attachment esoc-social-comment-attachment-header"
+                 data-html="true" data-binf-placement="bottom" aria-label="{{messages.attachFile}}"></a>
+            {{else}}
+              {{#if messages.shortcutsEnabled}}
+                <a href="javascript:void(0);" id="esoc-social-comment-attachment"
+                   class="esoc-social-comment-attachment esoc-social-comment-attachment-header"
+                   data-html="true" data-binf-placement="bottom" aria-label="{{messages.attachFile}}"></a>
+              {{/if}}
+            {{/if}}
+            <a href="javascript:void(0);"
+               class="esoc-social-comment-header-emotion esoc-social-comment-emoticon"
+               id="esoc-social-comment-emoticon" title="{{messages.emoticon}}" aria-label="{{messages.emoticon}}"></a>
+            <button id="esoc-social-comment-submit" disabled
+                    class="binf-btn binf-btn-primary esoc-social-comment-submit" type="submit"
+                    title="{{messages.post}}">{{messages.post}}</button>
+          </div>
+        </div>
+      </div>
+      {{#if messages.attachementsEnabled}}
+        {{^if messages.shortcutsEnabled}}
+          <input type="file" id="esoc-social-comment-desktop-attachment" name="AddDesktopDoc"
+                 style="display:none" />
+        {{/if}}
+      {{/if}}
+      <input type="hidden" id="esoc-social-comment-cs-shortcut" value="" />
+    </div>
+  {{else}}
+    <hr>
+  {{/if}}
+  <div id="esoc-social-comment-loading-indication"
+       class="esoc-social-comment-loading-indication">{{messages.loadingComments}}</div>
+  <div id="esoc-social-comment-container" class="binf-container esoc-social-comment-container"></div>
+</div>
+
+<div class="binf-modal binf-fade" id="esoc-social-dialog" tabindex="-1" role="dialog"
+     aria-labelledby="myModalTitle" aria-hidden="true">
+  <div class="binf-modal-dialog">
+    <div class="binf-modal-content esoc-social-modal-content">
+      <div class="binf-modal-header">
+        <h4 class="binf-modal-title" id="myModalTitle"></h4>
+      </div>
+      <div class="binf-modal-body">
+        <div class="binf-row">
+          <div class="binf-col-sm-2">
+            <span class="esoc-dialog-warning-icon"></span>
+            <!-- need to change to warning icon as per mockup-->
+          </div>
+          <div id="myModalConfirmationText" class="binf-col-sm-8"></div>
+        </div>
+        <div class="binf-row esoc-dialog-warning-margin">
+          <div class="binf-col-md-12 esoc-dialog-warning-buttons-align-middle">
+            <button type="button"
+                    class="binf-btn binf-btn-default esoc-social-dialog-delete-button">{{messages.deleteComment}}</button>
+            <button type="button" class="binf-btn binf-btn-default esoc-social-dialog-cancel-button"
+                    data-binf-dismiss="modal">{{messages.cancel}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

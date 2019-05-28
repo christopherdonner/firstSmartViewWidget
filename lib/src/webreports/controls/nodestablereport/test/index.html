@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>NodesListReport Widget</title>
+
+    <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+    <style>
+        .docRef {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            color: #fff;
+        }
+
+        .binf-widgets .webreports-table-report-container {
+            padding: 40px;
+        }
+
+        a:link {
+            color: grey;
+        }
+        a:hover {
+            color: grey;
+        }
+        a:active {
+            color: grey;
+        }
+        a:visited {
+            color: grey;
+        }
+
+    </style>
+    <script src="../../../../csui/lib/require.js"></script>
+    <script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+    <script>	
+		 require.config({
+		  deps: [
+			'csui/lib/require.config!csui/csui-extensions.json'
+		  ]
+		});
+		
+        require.config({
+            paths: {
+                webreports: '../../..'
+            },
+            config: {
+                'csui/utils/contexts/factories/connector': {
+                    connection: {
+                        url: '//server/cgi/cs.exe/api/v1',
+                        supportPath: '/support',
+                        credentials: {
+                            username: 'Admin',
+                            password: 'livelink'
+                        }
+                    }
+                }
+            }
+        });
+
+        require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+            '../nodestablereport.view.js', './nodestablereport.mock.data.js'
+        ], function (Marionette, PageContext, NodesTableReportView, mock) {
+
+            var urlContentRegion = new Marionette.Region({el: '#url-content'}),
+                pageContext = new PageContext(),
+                urlTablereportView,
+                linksOptions;
+
+            linksOptions = {
+                context: pageContext,
+                data: {
+                    id: 73602,
+                    title: 'Useful Links',
+                    titleBarIcon: 'title-favourites'
+                }
+            };
+
+            urlTablereportView = new NodesTableReportView(linksOptions);
+            urlContentRegion.show(urlTablereportView);
+
+            mock.enable();
+            pageContext.fetch();
+        });
+
+
+    </script>
+</head>
+
+<body class="binf-widgets">
+<a class="docRef" href="../nodestablereport.md">Documentation</a>
+
+<div class="binf-container-fluid grid-rows">
+    <div class="binf-row">
+        <div class="webreports-table-report-container" >
+            <div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12 row-xs-full" id="url-content"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

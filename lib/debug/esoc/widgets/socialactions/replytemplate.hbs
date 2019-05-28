@@ -1,0 +1,48 @@
+<div id="esoc-social-reply-create-container" class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+  <div id="esoc-social-reply-warning" style="display:none"
+       class="binf-alert binf-alert-danger esoc-social-warning" role="alert"></div>
+  <div id="esoc-social-reply-form-container" class="esoc-social-reply-form-container">
+    <div class="esoc-social-reply-form-mask"></div>
+    <div id="esoc-social-reply-input-holder" class="esoc-social-reply-input-holder">
+        <div class="esoc-socialactions-widget-arrow-up"></div>
+        <div class="esoc-social-reply-data" style="display:none"></div>
+        <textarea id="esoc-social-reply-input-{{messages.replyId}}" class="esoc-social-reply-input binf-form-control"
+                  placeholder="{{messages.writeAComment}}"></textarea>
+        <div id="esoc-suggestion-reply-header_{{messages.replyId}}"
+             class="esoc-suggestion-reply-header"></div>
+    </div>
+
+    <div id="esoc-social-reply-form-buttons-container"
+         class="esoc-social-reply-form-buttons-container">
+      <div id="esoc-social-textinput-button-holder-reply"
+           class="esoc-social-textinput-button-holder-reply">
+        {{#if messages.attachementsEnabled}}
+          <a href="javascript:void(0);" id="esoc-social-reply-attachment"
+             class="esoc-social-comment-attachment" data-html="true"
+             data-binf-placement="bottom" aria-label="{{messages.attachFile}}"></a>
+        {{else}}
+          {{#if messages.shortcutsEnabled}}
+            <a href="javascript:void(0);" id="esoc-social-reply-attachment"
+               class="esoc-social-comment-attachment" data-html="true"
+               data-binf-placement="bottom" aria-label="{{messages.attachFile}}"></a>
+          {{/if}}
+        {{/if}}
+        <a href="javascript:void(0);"
+           class="esoc-social-reply-emoticon-{{messages.replyId}} esoc-social-comment-emoticon"
+           id="esoc-social-reply-comment-emoticon" title="{{messages.emoticon}}" aria-label="{{messages.emoticon}}"></a>
+        <button id="esoc-social-reply-submit" disabled class="binf-btn binf-btn-primary esoc-social-reply-submit"
+                type="submit" title="{{messages.post}}">{{messages.post}}</button>
+      </div>
+    </div>
+  </div>
+  {{#if messages.attachementsEnabled}}
+    {{^if messages.shortcutsEnabled}}
+      <input type="file" id="esoc-social-reply-desktop-attachment" name="AddDesktopDoc"
+             style="display:none" />
+    {{/if}}
+  {{/if}}
+  <input type="hidden" id="esoc-social-reply-cs-shortcut" value="" />
+
+  <div id="esoc-social-comment-body-divider"></div>
+  <div id="esoc-social-reply-container" class="binf-container esoc-social-reply-container"></div>
+</div>

@@ -1,0 +1,94 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "tile",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "shortcutTheme": {
+        "title": "{{shortcutThemeTitle}}",
+        "description": "{{shortcutThemeDescription}}",
+        "type": "string",
+        "enum": [
+          "csui-shortcut-theme-stone1",
+          "csui-shortcut-theme-stone2",
+          "csui-shortcut-theme-teal1",
+          "csui-shortcut-theme-teal2",
+          "csui-shortcut-theme-pink1",
+          "csui-shortcut-theme-pink2",
+          "csui-shortcut-theme-indigo1",
+          "csui-shortcut-theme-indigo2"
+        ]
+      },
+      "shortcutItems": {
+        "title": "{{shortcutItemsTitle}}",
+        "description": "{{shortcutItemsDescription}}",
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "title": "{{idTitle}}",
+              "description": "{{idDescription}}",
+              "type": "integer"
+            },
+            "type": {
+              "title": "{{typeTitle}}",
+              "description": "{{typeDescription}}",
+              "type": "integer",
+              "enum": [141, 142, 133],
+              "default": 141
+            }
+          },
+          "oneOf": [{
+            "required": ["id"]
+          }, {
+            "required": ["type"]
+          }]
+        }
+      }
+    }
+  },
+  "options": {
+    "fields": {
+      "shortcutItems": {
+        "items": {
+          "fields": {
+            "id": {
+              "type": "otcs_node_picker",
+              "type_control": {
+                "parameters": {
+                  "select_types": []
+                }
+              }
+            },
+            "type": {
+              "type": "select",
+              "optionLabels": [
+                "{{typeEnterpriseVolume}}",
+                "{{typePersonalVolume}}",
+                "{{typeCategoryVolume}}"
+              ]
+            }
+          }
+        }
+      },
+      "shortcutTheme": {
+        "type": "select",
+        "optionLabels": [
+          "{{shortcutThemeStone1}}",
+          "{{shortcutThemeStone2}}",
+          "{{shortcutThemeTeal1}}",
+          "{{shortcutThemeTeal2}}",
+          "{{shortcutThemePink1}}",
+          "{{shortcutThemePink2}}",
+          "{{shortcutThemeIndigo1}}",
+          "{{shortcutThemeIndigo2}}"
+        ]
+      }
+    }
+  }
+}

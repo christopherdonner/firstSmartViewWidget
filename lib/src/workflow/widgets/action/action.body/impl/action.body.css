@@ -1,0 +1,158 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .workitem-action-assignee-selector {
+  display: flex;
+  width: 100%;
+}
+
+
+.workitem-action-assignee-selector .workitem-action-assignee {
+  flex-grow: 1;
+  height: 3.25rem;
+  margin-bottom: 1.125rem;
+}
+
+
+.workitem-action-assignee .assignee-label, .workitem-action-assignee-options .assignee-label {
+  margin-bottom: 0.5rem;
+  color: #757575;
+  font-size: 0.875rem;
+}
+
+.workitem-action-assignee .assignee-label > span {
+  font-size: 0.35rem;
+  color: #df3324;
+  vertical-align: text-top;
+}
+
+
+.workitem-action-assignee .cs-search {
+  outline: 0;
+  color: #333333;
+  box-sizing: border-box;
+  border: 1px solid #a7a9ac;
+  border-radius: 3px;
+  padding: 0 0.5rem;
+  height: 1.75rem !important;
+  font-size: 0.75rem !important;
+  font-style: italic;
+}
+
+.workitem-action-assignee .csui-control-userpicker .cs-search {
+  width: 100%;
+}
+
+.workitem-action-assignee .cs-search-clear {
+  display: none;
+}
+
+.workitem-action-assignee .cs-search-icon {
+  display: none;
+}
+
+.workitem-action-assignee .scroll-container {
+  top: 1.75rem;
+}
+
+.workitem-action-assignee-selector .workitem-action-assignee-options {
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.workitem-action-assignee-options .assignee-label {
+  padding-top: 2px;
+}
+
+.workitem-action-assignee-options .assignee-type-selector-region .binf-dropdown-toggle,
+.workitem-action-assignee-options .assignee-type-selector-region .binf-dropdown-menu {
+  font-size: 0.75rem !important;
+  padding-top: 0.35rem;
+}
+
+
+.workitem-action-body .workitem-action-assignee-label {
+  flex-grow: 1;
+  height: 3.25rem;
+  margin-bottom: 1.125rem;
+}
+
+.workitem-action-assignee-label .assignee-label {
+  margin-bottom: 0.5rem;
+  color: #757575;
+  font-size: 0.875rem;
+}
+
+.workitem-action-assignee-label .cs-formfield .cs-field-read {
+  padding-left: 0rem;
+}
+
+
+.workitem-action-comment .comment-label {
+  margin-bottom: 0.5rem;
+  color: #757575;
+  font-size: 0.875rem;
+}
+
+
+.workitem-action-comment .comment-input {
+  width: 100%;
+  height: 6rem;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid #a7a9ac;
+}
+
+.workitem-action-comment .comment-input::-webkit-input-placeholder {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.25rem;
+  font-style: italic;
+}
+
+.workitem-action-comment .comment-input::-moz-placeholder {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.25rem;
+  font-style: italic;
+}
+
+.workitem-action-comment .comment-input:-ms-input-placeholder {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.25rem;
+  font-style: italic;
+}
+
+.workitem-action-authenticate .authenticate-description {
+  margin-bottom: 0.5rem;
+  color:  #0072aa;
+  font-size: 0.875rem;
+}
+
+.workitem-action-authenticate .authenticate-input {
+  color: #757575;
+  width: 100%;
+  outline: 0;
+  box-sizing: border-box;
+  border: 1px solid #a7a9ac;
+  border-radius: 3px;
+  padding: 0 0.5rem;
+  height: 1.75rem !important;
+  font-size: 0.75rem !important;
+  font-style: italic;
+  margin-bottom: 1.125rem;
+}
+
+.workitem-action-authenticate .authenticate-input:focus {
+  outline: 1px dotted #333;
+  outline-offset: -1px;
+}
+
+.workitem-action-authenticate .authenticate-label {
+  margin-bottom: 0.5rem;
+  color: #757575;
+  font-size: 0.875rem;
+}
+
+.workitem-action-authenticate .authenticate-label > span {
+  font-size: 0.35rem;
+  color: #df3324;
+  vertical-align: text-top;
+}

@@ -1,0 +1,47 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"ftp_anonymous": false,
+				"ftp_copy_options": "unique",
+				"ftp_file_path": "automation_temp\/jordanTestOutput.html",
+				"ftp_port": 2121,
+				"ftp_server": "10.5.102.10",
+				"ftp_user_name": "qauser",
+				"ftp_user_password": "test1ng"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text\/html",
+			"http_method": "POST",
+			"output_destination": "ftp",
+			"run_in_background": false,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true,
+			"use_conversion_engine": false,
+			"xml_job_ticket_id": ""
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [{
+		"data": {},
+		"options": {
+			"fields": {},
+			"form": {
+				"attributes": {
+					"action": "api\/v1\/",
+					"method": ""
+				},
+				"renderForm": true
+			}
+		},
+		"schema": {
+			"properties": {},
+			"type": "object"
+		}
+	}]
+}

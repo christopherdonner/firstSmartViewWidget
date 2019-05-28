@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.cs-formfield.cs-arraybuttonsfield button {
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.cs-formfield.cs-arraybuttonsfield button:focus {
+  outline: none;
+}
+
+.cs-formfield.cs-arraybuttonsfield .csui-icon.circle_delete {
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 2px;
+}

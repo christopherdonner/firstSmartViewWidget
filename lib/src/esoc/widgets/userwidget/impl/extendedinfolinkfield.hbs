@@ -1,0 +1,57 @@
+{{#if content}}
+  <a href="{{content}}" target="_blank" class="{{linkClass}} esoc-user-external-profile-link
+  binf-col-lg-3 binf-col-md-3 binf-col-sm-3 binf-col-xs-3" aria-label="{{label}}">
+  </a>
+  <div class="esoc-extended-info-link-holder binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div class="esoc-user-extended-label esoc-user-profile-link-label esoc-user-label">{{label}}
+    </div>
+    <div class="esoc-user-extended-view-mode esoc-user-profile-link-content esoc-user-links">
+      <div class="esoc-user-messages-content esoc-user-messages esoc-user-widget-links-content">
+        <a href="{{content}}" target="_blank">{{content}}</a>
+      </div>
+      {{#if isEditable}}
+        <div class="esoc-user-extendedinfo-edit-icon">
+          <a class="esoc-user-extended-edit" aria-label="{{messages.edit}}"></a>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+{{else}}
+  {{#if isEditable}}
+    <div
+        class="{{linkClass}} esoc-user-external-profile-link binf-col-lg-3 binf-col-md-3 binf-col-sm-3 binf-col-xs-3" />
+    <div class="esoc-extended-info-link-holder binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      <div class=" esoc-user-extended-label esoc-user-profile-link-label esoc-user-label">{{label}}
+      </div>
+      <div
+          class="esoc-user-extended-info esoc-user-extended-view-mode esoc-user-default-content-mode">
+        <div class="esoc-user-extendedinfo-default-content">
+          <a href="javascript:void(0);"
+             class="esoc-user-profile-link-content esoc-user-default-content {{#if isEditable}} esoc-cursor-pointer {{/if}}">{{defaultMessage}}</a>
+        </div>
+        <div class="esoc-user-extendedinfo-edit-icon">
+          <a class="esoc-user-extended-edit" aria-label="{{messages.edit}}"></a>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+{{/if}}
+{{#if isEditable}}
+  <div class="esoc-extended-info-link-holder binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div
+        class="esoc-user-hide-element esoc-user-extended-edit-mode esoc-user-extended-edit-content">
+      <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-user-edit-textbox">
+        <input type="text" class="esoc-user-extended-edit-text esoc-user-extended-edit-input"
+               value="{{content}}" placeholder="{{defaultMessage}}" aria-label="{{defaultMessage}}"/>
+      </div>
+      <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-user-text-edit-buttons">
+        <button class="esoc-user-update binf-btn binf-btn-primary"
+                title="{{messages.update}}">{{messages.update}}</button>
+        <button class="esoc-user-cancel binf-btn binf-btn-default"
+                title="{{messages.cancel}}">{{messages.cancel}}</button>
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

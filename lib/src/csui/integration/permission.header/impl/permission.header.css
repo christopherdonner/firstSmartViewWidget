@@ -1,0 +1,28 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-permissions-rightbar-view {
+  padding: 10px 0px;
+}
+
+.binf-widgets .csui-permissions-rightbar-view div {
+  padding: 7px 0px;
+  width: 100%;
+  display: flex;
+}
+
+.binf-widgets .csui-permissions-rightbar-view div > label {
+  padding-right: 20px;
+  text-align: right;
+  min-width: 50%;
+  font-size: 100%;
+  font: inherit;
+  font-family: "Lato", "Helvetica", sans-serif;
+  vertical-align: baseline;
+}
+
+.binf-widgets .csui-permissions-rightbar-view span {
+  min-width: 235px;
+  text-align: left;
+  white-space: normal;
+  float: left;
+}

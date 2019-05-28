@@ -1,0 +1,87 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-description {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+
+  font-size: 16px; 
+  line-height: 16px;
+}
+
+
+.binf-widgets .cs-description.csui-description-collapsed .description {
+  max-height: 32px; 
+}
+
+.binf-widgets .cs-description.csui-description-short-lines-1.csui-description-collapsed .description {
+  max-height: 16px; 
+}
+
+.binf-widgets .cs-description.csui-description-collapsed .description {
+  overflow: hidden;
+
+}
+
+.binf-widgets .description {
+  flex: 1 auto;
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 0;
+
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.binf-widgets .description-caret-div {
+  padding-left: 0.5em;
+}
+
+.description-readmore,
+.binf-widgets .description-showless {
+  display: block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.binf-widgets .caret-hide {
+  display: none;
+}
+
+.binf-widgets .csui-details-row-description .description {
+  white-space: normal;
+  overflow: visible;
+  position: relative;
+  max-width: none;
+  max-height: none;
+  font-size: 12px;
+}
+
+.binf-widgets .cs-description.csui-description-collapsed .description:after {
+  content: '';
+  width: 2em;
+  height: 1em;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.binf-widgets .csui-details-row-description.csui-state-hover .cs-description.csui-description-collapsed .description:after,
+.binf-widgets .csui-details-row-description:active .cs-description.csui-description-collapsed .description:after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(186, 201, 206, 1) 100%);
+}
+
+.binf-widgets .csui-details-row-description.binf-active .cs-description.csui-description-collapsed .description:after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(223, 231, 234, 1) 100%);
+}

@@ -1,0 +1,11 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .csui-toolbar.binf-nav > li > a > .icon.csui-icon-go-previous-node {
+  width: 1.125em;
+  height: 1.125em;
+}
+
+.csui-icon-open-full-page {
+  background-image: url('images/toolbar_goto32.svg');
+}

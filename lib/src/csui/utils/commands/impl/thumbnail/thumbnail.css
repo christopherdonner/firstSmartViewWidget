@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.csui-thumbnail > p {
+  text-align: center;
+}
+
+.csui-thumbnail > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}

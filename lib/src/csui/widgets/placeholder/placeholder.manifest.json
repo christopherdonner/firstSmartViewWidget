@@ -1,0 +1,27 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "tile",
+  "supportedKinds": ["tile", "header", "fullpage"],
+  "schema": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "{{labelTitle}}",
+        "description": "{{labelDescription}}",
+        "type": "string"
+      },
+      "color": {
+        "title": "{{foregroundColorTitle}}",
+        "description": "{{foregroundColorDescription}}",
+        "type": "string"
+      },
+      "bgcolor": {
+        "title": "{{backgroundColorTitle}}",
+        "description": "{{backgroundColorDescription}}",
+        "type": "string"
+      }
+    }
+  }
+}

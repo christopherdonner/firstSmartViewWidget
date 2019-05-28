@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PerspectiveContext</title>
+
+  <script src="../../../../lib/require.js"></script>
+  <script src="../../../../config.js" data-csui-path="../../../.."></script>
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+          /*
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+            */
+            url: "http://murdock.opentext.com/alpha/cs.exe/api/v1",
+            supportPath: '/alphasupport'
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', 'csui/utils/contexts/perspective/perspective.context',
+      './perspective.context.mock'
+    ], function ($, PerspectiveContext, PerspectiveModelFactory) {
+
+      var contentElement = $('body'),
+          context = new PerspectiveContext(),
+          perspectiveModel = context.perspective;
+
+      context.fetchPerspective()
+          .once('change:perspective', function () {
+            $('<p>')
+                .text('Default landing page:')
+                .appendTo(contentElement);
+            $('<pre>')
+                .text(JSON.stringify(perspectiveModel.toJSON(), undefined, 2))
+                .appendTo(contentElement);
+          });
+
+    });
+  </script>
+</head>
+
+<body></body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

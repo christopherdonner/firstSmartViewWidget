@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .emoji-wysiwyg-editor {
+  border: 1px solid #d0d0d0;
+  overflow: auto;
+  outline: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.binf-widgets .emoji-menu {
+  position: absolute;
+  z-index: 999;
+  margin-left: -100px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

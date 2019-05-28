@@ -1,0 +1,10 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{title}}",
+  "description": "{{description}}",
+  "kind": "tile",
+  "schema": {
+    "type": "object",
+    "properties": {}
+  }
+}

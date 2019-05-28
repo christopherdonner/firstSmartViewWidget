@@ -1,0 +1,56 @@
+<div class="cs-field-write">
+  <div class="cs-field-write-inner">
+  <input type="{{inputType}}" id="{{id}}"
+         {{#if options.placeholder}}placeholder="{{options.placeholder}}"{{/if}}
+    {{#if options.size}}size="{{options.size}}"{{/if}}
+    {{#if name}}name="{{name}}"{{/if}}
+    {{#each options.data}}data-{{@key}}="{{this}}"{{/each}}
+    {{#each options.attributes}}{{@key}}="{{this}}"{{/each}}
+    value="{{options.anchorTitleShort}}" {{#if idBtnLabel}}
+    aria-labelledby="{{idBtnLabel}}" {{/if}}
+    {{#if multiFieldLabel}} aria-label="{{multiFieldLabel}}"{{/if}}
+    title="{{options.anchorTitle}}" />
+    {{#xif "this.mode !== 'writeonly'"}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{/xif}}
+    {{#if options.applyFlag}}
+      <div class="icon-container binf-hidden">
+        <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"
+             data-cstabindex="0"></div>
+      </div>
+    {{/if}}
+  </div>
+</div>
+
+{{! Note: if you change the structure below, be sure to update the code in method _prepareFieldText
+          in 'controls\form\fields\nodepickerfield.view.js' }}
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    <div class="btn-container">
+      <a href="javascript:void(0);" tabindex="0" data-cstabindex="0" class="{{#if
+      asReadonly}} csui-nodepicker-readonly {{/if}}"
+              {{#if options.buttonDisabled}}disabled{{/if}}
+          {{#if multiFieldLabel}}
+              aria-label="{{multiFieldLabel}} {{options.anchorTitleShort}}"
+          {{else}}
+              aria-label="{{idBtnLabel}} {{options.anchorTitleShort}}" {{/if}}>
+          {{#if options.anchorTitle}}
+             <span class="{{options.disabledClass}}"
+                title="{{options.anchorTitle}}">{{options.anchorTitleShort}}</span>
+           {{else}}
+             <span class="placeholder" title="{{noValue}}"
+                {{#unless schema.readonly}}data-cstabindex="0"{{/unless}}>
+             {{#unless schema.readonly}}{{emptyLabel}}{{/unless}}
+             </span>
+          {{/if}}
+      </a>
+    </div>
+    <div class="icon-container">
+      <div class="csui-icon-edit inline-edit-icon icon-edit" title="{{edit}}"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,27 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-parent-location {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.csui-parent-location .csui-parent-name {
+  display: inline-block;
+  text-overflow: ellipsis;
+  min-width: 5em;
+  overflow-x: hidden;
+  padding-left: 8px;
+}
+
+.csui-parent-location .csui-parent-text {
+  display: inline-block;
+  text-overflow: ellipsis;
+  min-width: 5em;
+  overflow-x: hidden;
+}
+
+.csui-parent-location .csui-icon-group {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}

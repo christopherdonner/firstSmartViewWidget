@@ -1,0 +1,47 @@
+{{#if showAuthenticate}}
+  
+  <div class="workitem-action-authenticate">
+    
+  </div>
+{{/if}}
+
+{{#if showAssigneeSelector}}
+  <div class="workitem-action-assignee-selector">
+    <div class="workitem-action-assignee">
+      <div class="assignee-label">
+        <span class="binf-glyphicon binf-glyphicon-star"></span>
+        {{assigneePickerLabel}}
+      </div>
+      <div class="assignee-picker">
+        
+      </div>
+    </div>
+    {{#if showAssigneeOptionsSelector}}
+      <div class="workitem-action-assignee-options">
+        <div class="assignee-label">
+          {{lang.assigneeOptionLabel}}
+        </div>
+        <div class="assignee-options">
+          
+        </div>
+      </div>
+    {{/if}}
+  </div>
+{{else}}
+  {{#if showAssigneeReadOnly}}
+    <div class="workitem-action-assignee-label">
+      <div class="assignee-label">
+        {{lang.assigneeLabelLabel}}
+      </div>
+      <div class="assignee-name"></div>
+    </div>
+  {{/if}}
+{{/if}}
+{{#if showComment}}
+  
+  <div class="workitem-action-comment">
+    
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

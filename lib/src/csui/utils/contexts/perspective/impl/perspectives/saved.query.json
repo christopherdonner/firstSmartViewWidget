@@ -1,0 +1,40 @@
+{
+  "type": "grid",
+  "options": {
+    "rows": [
+      {
+        "columns": [
+          {
+            "sizes": {
+              "md": 12
+            },
+            "heights": {
+              "xs": "half"
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "Saved Query",
+                "color": "#fff",
+                "bgcolor": "#cccc88"
+              }
+            }
+          },
+          {
+            "sizes": {
+              "md": 12
+            },
+            "heights": {
+              "xs": "full"
+            },
+            "widget": {
+              "type": "csui/widgets/search.results",
+              "options": {
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

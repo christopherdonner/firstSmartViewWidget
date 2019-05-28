@@ -1,0 +1,47 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-pman-widget-callout-form .cs-form {
+  display: inline-block;
+}
+
+.perspective-editing .cs-form.perspective-widget-form {
+  background-color: inherit;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.perspective-editing .perspective-widget-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label,
+.perspective-editing .perspective-widget-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container-label {
+  width: 100%;
+  text-align: left;
+}
+
+.perspective-editing .perspective-widget-form .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9 {
+  width: 100%;
+}
+
+.perspective-editing .perspective-widget-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container {
+  width: 100%;
+}
+
+.perspective-widget-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-array-item-field-wrapper {
+  max-width: inherit;
+}
+
+.perspective-widget-form .binf-help-block.alpaca-message {
+  margin-left: 0px;
+}
+
+.binf-widgets .csui-pman-form-header .csui-pman-form-title {
+  padding-bottom: 7px;
+  line-height: 24px;
+  font-size: 20px;
+  color: #333333; 
+}
+
+.binf-widgets .csui-pman-form-header .csui-pman-form-description {
+  font-weight: bolder;
+  line-height: 18px;
+  font-size: 14px;
+  color: #333333; 
+}

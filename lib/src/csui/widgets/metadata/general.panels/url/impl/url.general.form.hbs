@@ -1,0 +1,29 @@
+<div class="binf-row">
+  \{{#if options.label}}
+  <div class="binf-col-md-12 alpaca-container-label">
+    <h4>\{{options.label}}</h4>
+  </div>
+  \{{/if}}
+  <div class="metadata-pane-container">
+    <div class="metadata-pane-left binf-col-md-6  cs-form-doublecolumn
+    cs-form-leftcolumn">
+      <div class="owner_section general-information"></div>
+      <div class="typename_section general-information"></div>
+      <div class="csui-extra-general-fields"></div>
+    </div>
+    <div class="metadata-pane-right binf-col-md-6 cs-form-doublecolumn cs-form-rightcolumn">
+      <div class="metadata-tab">
+        \{{#if options.showThumbnail}}
+        <div class="thumbnail_section metadata-preview preview-section" title="\{{options.title}}">
+          <span class="default_thumbnail thumbnail_empty" data-cstabindex="0" role="button"
+                aria-label="\{{options.title}}"></span>
+        </div>
+        \{{/if}}
+        <div class="url_section general-information"></div>
+        <div class="description_section general-information"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

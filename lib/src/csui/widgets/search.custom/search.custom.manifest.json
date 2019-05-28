@@ -1,0 +1,31 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "tile",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "savedSearchQueryId": {
+        "title": "{{savedSearchQueryTitle}}",
+        "description": "{{savedSearchQueryDescription}}",
+        "type": "string"
+      }
+    },
+    "required": [
+      "savedSearchQueryId"
+    ]
+  },
+  "options": {
+    "fields": {
+      "savedSearchQueryId": {
+        "type": "otcs_node_picker",
+        "type_control": {
+          "parameters": {
+            "select_types": [258]
+          }
+        }
+      }
+    }
+  }
+}

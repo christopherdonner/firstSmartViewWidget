@@ -1,0 +1,17 @@
+{{#if haveEditPermission}}
+  <div class="binf-dropdown">
+    <a tabindex="-1" title="{{tooltip}}" class="binf-dropdown-toggle csui-html-editor-control"
+       href="#" data-binf-toggle="dropdown" role="button" aria-label="{{moreActionsAria}}"
+       aria-expanded="false">
+      <span class="csui-icon {{#if reserved}} csui-html-editor-reserved-icon {{/if}} {{iconClass}}">
+      </span>
+    </a>
+    <ul class="binf-dropdown-menu" role="menu"></ul>
+  </div>
+{{else}}
+  {{#if reserved}}
+    <span class="csui-icon csui-html-editor-reserved-readonly {{iconClass}}" title="{{tooltip}}">
+    </span>
+  {{/if}}
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,21 @@
+{{#if hasCommands}}
+  <div class="binf-dropdown">
+    <button id="{{btnId}}" type="button" class="binf-btn binf-dropdown-toggle"
+            data-binf-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            aria-label="{{showMoreAria}}">
+      <span class="csui-button-icon icon-expandArrowDown" title="{{showMoreTooltip}}"></span>
+    </button>
+    <ul class="binf-dropdown-menu" role="menu"></ul>
+  </div>
+{{else}}
+  <div class="csui-loading-parent-wrapper binf-disabled csui-disbaled binf-hidden">
+  <span class="csui-loading-dots-wrapper">
+    <span class="csui-loading-dot"></span>
+    <span class="csui-loading-dot"></span>
+    <span class="csui-loading-dot"></span>
+  </span>
+  </div>
+{{/if}}
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

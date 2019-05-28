@@ -1,0 +1,22 @@
+{{#if showSocialActions}}
+  <span class="esoc-social-actions-widget-area esoc-column-social" data-csid="{{id}}">
+    {{#if socialactions.commentsEnabled}}
+      <span class="esoc-column-social-comment-wrapper">
+      <span class="esoc-socialactions-comment"
+            data-value="{{id}}" aria-label="{{wnd_comments_title}}">
+		<span class="esoc-socialactions-comment-container">	
+          <a href="javascript:void(0);" class="cs-icon cs-icon-comment"
+             title="{{messages.addComments}}" aria-label="{{messages.addComments}}"></a>
+		</span>   
+          <span title="{{wnd_comments_title}}"
+                class="cs-text wnd_comments_validated" data-csid="{{id}}">{{wnd_comments_validated}}</span>
+      </span>
+      <span class="binf-sr-only">{{messages.addAComment}}</span>
+    </span>
+    {{/if}}
+  </span>
+{{else}}
+  <span class="esoc-socialactions-comment" data-value="{{id}}"
+        aria-label="{{wnd_no_comments}}"></span>
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

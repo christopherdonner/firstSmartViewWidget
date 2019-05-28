@@ -1,0 +1,22 @@
+.title-webreports {
+    background-image: url('../image/icons/title_webreports.svg');
+}
+.csui-webreport-node {
+    background-image: url('../image/icons/subtype_web_reports.svg');
+}
+.icon_status_email_sent {
+    background-image: url('../image/icons/status_emailsent24.svg');
+}
+.icon_status_ftp_server {
+    background-image: url('../image/icons/status_ftpserver24.svg');
+}
+.icon_status_task_delayed {
+    background-image: url('../image/icons/status_task_delayed24.svg');
+}
+.icon_status_task_running_behind {
+    background-image: url('../image/icons/status_task_runningbehind24.svg');
+}
+.webreport-parameter-prompt-header .icon.arrow_back.cs-go-back {
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,12 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-permission-item .csui-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.csui-permission-item.csui-permission-item-supplemental_markings > div,
+.csui-permission-item.csui-permission-item-security_clearance > div {
+  text-align: center;
+}

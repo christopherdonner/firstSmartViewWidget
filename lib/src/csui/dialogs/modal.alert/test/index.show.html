@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Modal Alert</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    /* Put some margin around the body */
+    body.binf-widgets {
+      padding: 15px;
+    }
+
+    /* Fix Bootstrap styling for forms destroyed by BmDodo styling */
+    .binf-widgets .options {
+      background-color: #ffffff;
+      margin: 15px;
+      padding: 15px;
+    }
+
+    .binf-widgets .binf-control-label {
+      font-weight: bold;
+    }
+
+    /* Improve the default form layout */
+    .binf-widgets .binf-radio-inline {
+      margin-right: 1em;
+    }
+
+    /* Enable placing modals next to each other like tiles */
+    .binf-widgets .binf-modal {
+      position: initial;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .binf-widgets .binf-modal-dialog {
+      margin: 15px 15px;
+    }
+
+    /* Custom icon for one of the samples */
+    .icon-waiting {
+      background-image: url('../../../themes/carbonfiber/image/icons/menu_location.svg');
+    }
+
+    /* Show the source code popovers with full width and monospace font */
+    .binf-widgets .binf-popover {
+      max-width: initial;
+    }
+    .binf-widgets .binf-popover-content {
+      white-space: pre;
+      font-family: monospace;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require(['csui/lib/underscore', 'csui/lib/jquery', '../modal.alert',
+      'csui/lib/binf/js/binf', 'csui/lib/domReady!'
+    ], function (_, $, ModalAlertView) {
+
+      // This page does not use the public API to show a modal alert. It
+      // renders the modals like tiles next to each other, which is not
+      // supported, but which allows easy demonstration of all of them.
+      //
+      // How to use the public API is shown in popovers for the modal "tiles".
+
+      var alerts = [],
+          dialogSize = 'md';
+
+      function showAlert(defaultOptions, options, source) {
+        var alert = addAlert(defaultOptions, options);
+        addSource(alert.$el, source);
+      }
+
+      function addAlert(defaultOptions, options) {
+        var alert = new ModalAlertView(_.defaults({
+          dialogSize: dialogSize
+        }, options, defaultOptions));
+        alert.render();
+        $(document.body).append(alert.el);
+        alert.$el.addClass('binf-in');
+        alerts.push(alert);
+        return alert;
+      }
+
+      function addSource($el, source) {
+        $el
+            .attr({
+              'role': 'button',
+              'data-binf-toggle': 'binf_popover',
+              'data-binf-trigger': 'focus',
+              'title': 'Source code',
+              'data-binf-content': source
+            })
+            .binf_popover({
+              trigger: 'hover',
+              placement: 'top'
+            });
+      }
+
+      function clearAll() {
+        _.each(alerts, function (alert) {
+          alert.destroy();
+        });
+        alerts = [];
+      }
+
+      function showAll() {
+        showAlert(ModalAlertView.defaultOptions.Message, {
+          message: 'Loading 123 messages ... 51%',
+          title: 'Loading',
+          buttons: ModalAlertView.buttons.Cancel
+        }, 'ModalAlert.showMessage({\n' +
+           '  message: \'Loading 123 messages ... 51%\',\n' +
+           '  title: \'Loading\',\n' +
+           '  buttons: ModalAlert.buttons.Cancel\n' +
+           '})');
+        showAlert(ModalAlertView.defaultOptions.Error, {
+          message: 'Unable to import items. The items to import may have been moved or deleted.'
+        }, 'ModalAlert.showError(\n' +
+           '  \'Unable to import items. The items to import may have been moved or deleted.\')');
+        showAlert(ModalAlertView.defaultOptions.Warning, {
+          message: 'System maintenance is scheduled in 30 minutes. You will be automatically signed out at that time.'
+        }, 'ModalAlert.showWarning(\n' +
+           '  \'System maintenance is scheduled in 30 minutes. You will be automatically signed out at that time.\')');
+        showAlert(ModalAlertView.defaultOptions.Information, {
+          message: 'OpenText Content Server application has been updated to version 16.0',
+          title: 'Software Update'
+        }, 'ModalAlert.showInformation(\n' +
+           '  \'System maintenance is scheduled in 30 minutes. You will be automatically signed out at that time.\',\n' +
+           '  \'Software Update\')');
+        showAlert(ModalAlertView.defaultOptions.Question, {
+          message: 'The selected folder contains 235 items.\nRemove the selected folder?',
+          title: 'Remove',
+          buttons: ModalAlertView.buttons.YesNo
+        }, 'ModalAlert.showQuestion(\n' +
+           '  \'The selected folder contains 235 items.\\nRemove the selected folder?\',\n' +
+           '  \'Remove\')');
+        showAlert(undefined, {
+          message: 'Loading 123 messages ... 51%',
+          title: '',
+          buttons: ModalAlertView.buttons.Cancel
+        }, 'ModalAlert.showMessage(\n' +
+           '  \'Loading 123 messages ... 51%\',\n' +
+           '  \'\', { // No title means no header\n' +
+           '    buttons: ModalAlert.buttons.Cancel\n' +
+           '  })');
+        showAlert(ModalAlertView.defaultOptions.Success, {
+          message: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
+          title: 'Upload Succeeded',
+          buttons: {
+            showCancel: true,
+            labelCancel: 'Fewer details'
+          },
+          showTitleCloseButton: true
+        }, 'ModalAlert.showSuccess(\n' +
+           '  \'Nam libero tempore ..., omnis dolor repellendus.\',\n' +
+           '  \'Upload Succeeded\', {\n' +
+           '    // Not implemented; all buttons close the dialog\n' +
+           '    buttons: {\n' +
+           '      showCancel: true,\n' +
+           '      labelCancel: \'Fewer details\'\n' +
+           '    },\n' +
+           '    showTitleCloseButton: true\n' +
+           '  })');
+        showAlert(ModalAlertView.defaultOptions.Message, {
+          title: 'Updating Pump 3000/9. Please wait...',
+          titleIcon: 'icon-waiting',
+          showTitleIcon: true,
+          buttons: {
+            showCancel: true,
+            labelCancel: 'More details...'
+          },
+          showTitleCloseButton: true
+        }, 'ModalAlert.showMessage({\n' +
+           '  title: \'Updating Pump 3000/9. Please wait...\',\n' +
+           '  titleIcon: \'icon-waiting\',\n' +
+           '  showTitleIcon: true,\n' +
+           '  // Not implemented; all buttons close the dialog\n' +
+           '  buttons: {\n' +
+           '    showCancel: true,\n' +
+           '    labelCancel: \'More details...\'\n' +
+           '  },\n' +
+           '  showTitleCloseButton: true\n' +
+           '})');
+      }
+
+      $('#dialogSize input').change(function () {
+        clearAll();
+        dialogSize = $('#dialogSize :checked').val();
+        showAll();
+      });
+
+      showAll();
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<h1 style="color: #fff;">Dialog variants</h1>
+<div class="options">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Instructions:</div>
+    <div class="binf-col-sm-10">Change the dialog size to see the difference.  See also the
+      <a href="index.try.html">interactive API try-out</a>.</div>
+  </div>
+
+  <hr>
+
+  <form class="binf-form-horizontal">
+    <div class="binf-form-group">
+      <p class="binf-col-sm-2 binf-control-label">Dialog size:</p>
+
+      <div id="dialogSize" class="binf-col-sm-10">
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="sm"> Small
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="md" checked> Medium
+        </label>
+        <label class="binf-radio-inline">
+          <input type="radio" name="dialogSize" value="lg"> Large
+        </label>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

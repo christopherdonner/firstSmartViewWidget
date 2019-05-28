@@ -1,0 +1,11 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-signin.binf-modal .binf-modal-dialog {
+  width: 760px;
+}
+
+.csui-signin.binf-modal .binf-modal-content {
+  background: linear-gradient(to bottom, #004b71 0%, #00a4d8 100%);
+  box-shadow: none;
+  border: none;
+}

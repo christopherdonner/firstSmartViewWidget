@@ -1,0 +1,75 @@
+<style>
+    .binf-widgets .webreports-htmlwebreport-sample1 h1 {
+        font-size: large;
+        font-weight: bold;
+    }
+    .binf-widgets .webreports-htmlwebreport-sample1 {
+        padding: 1em;
+    }
+
+    .binf-widgets .webreports-htmlwebreport-sample1 .webreports-htmlwebreport-otimage {
+        background-image: url("./otlogo.svg");
+        height: 75px;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: none;
+    }
+</style>
+
+<div class="webreports-htmlwebreport-sample1">
+
+    <div class="webreports-htmlwebreport-otimage" title="OpenText"></div>
+
+    <p>When inserting images you can make them resize automatically with the tile, as above. To do this just use "background-size: contain" as is done in the ".webreports-htmlwebreport-otimage" css and set the width and height as required. Here we have a fixed height but the width is set using a percentage.</p><br>
+
+    <p></p><h1>Formatted text returned from WebReport with ID <u>22550</u> and name <u>wr text and image sample</u>.</h1><p></p><br>
+
+    <p>The current container has ID <u>28150</u> and name <u>Test Folder</u>.</p><br>
+
+    <p>I can also retrieve dynamic values using WebReports tags e.g. The current user is <u>Admin</u> and the time is <u>Mon Sep 28 12:05:57 2015</u>.</p><br>
+
+    <p>WebReport parameters can be passed in as widget options. These values are returned from parameters: <u>testval1</u> and <u>testval2</u>.</p><br>
+
+    <p>The Content Server Smart UI flavor of Bootstrap is loaded as part of the page which means any styles from <a href="https://bootstrapdocs.com/v3.3.2/docs/" target="_blank">here</a> can be used. Please note that all bootstrap styles have been namespaced to avoid conflicts when Smart UI components are embedded into external systems. This means any documented Bootstrap classes need to have the prefix "binf-". One other thing to point out is that bootstrap components may be specifically styled to fit in with the Content Server design so components may look different to the Bootstrap documentation. For example:</p>
+
+    
+    <button type="button" class="binf-btn binf-btn-default">Default</button>
+
+    
+    <button type="button" class="binf-btn binf-btn-primary">Primary</button>
+
+    
+    <button type="button" class="binf-btn binf-btn-success">Success</button>
+
+    
+    <button type="button" class="binf-btn binf-btn-info">Info</button>
+
+    
+    <button type="button" class="binf-btn binf-btn-warning">Warning</button>
+
+    
+    <button type="button" class="binf-btn binf-btn-danger">Danger</button>
+
+    <br><br>
+
+    Icon can be used from <a href="https://bootstrapdocs.com/v3.3.2/docs/components/" target="_blank">here</a>. For example:
+
+    <span class="binf-glyphicon binf-glyphicon binf-glyphicon-calendar" aria-hidden="true"></span>
+    <span class="binf-glyphicon binf-glyphicon-eye-open" aria-hidden="true"></span>
+    <span class="binf-glyphicon binf-glyphicon-magnet" aria-hidden="true"></span>
+    <span class="binf-glyphicon binf-glyphicon-fire" aria-hidden="true"></span>
+    <span class="binf-glyphicon binf-glyphicon-send" aria-hidden="true"></span>
+
+    <br><br>
+
+    <p>Content Server icons can be loaded too using the relevant css classes. Please see the Smart UI SDK documentation for information on available icons. For example:</p><br>
+
+    <span class="icon csui-icon assignment-workflow" aria-hidden="true"></span>
+    <span class="icon csui-icon title-customers" aria-hidden="true"></span>
+    <span class="icon csui-icon title-favourites" aria-hidden="true"></span>
+    <span class="icon csui-icon mime_folder" aria-hidden="true"></span>
+    <span class="icon csui-icon url1" aria-hidden="true"></span>
+
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

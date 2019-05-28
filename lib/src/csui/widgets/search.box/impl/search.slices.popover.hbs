@@ -1,0 +1,16 @@
+<div class="csui-search-slice-container">
+  <div class="csui-search-slice-container-first"></div>
+  {{#each slices}}
+    <div class="csui-search-popover-row" data-sliceid="{{this.sliceId}}"
+         title="{{this.select}}{{this.sliceDisplayName}}" tabindex="-1">
+      <div class="csui-search-popover-row-body" data-sliceid="{{this.sliceId}}">
+        <div class="csui-search-popover-checked" data-sliceid="{{this.sliceId}}"
+             id="{{this.sliceId}}" aria-hidden="true"></div>
+        <div class="csui-search-popover-label" data-sliceid="{{this.sliceId}}">{{this.sliceDisplayName}}</div>
+      </div>
+    </div>
+  {{/each}}
+  <div class="csui-search-slice-container-last"></div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

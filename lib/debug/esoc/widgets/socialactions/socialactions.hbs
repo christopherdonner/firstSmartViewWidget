@@ -1,0 +1,26 @@
+<span>
+  <div class="esoc-error-socialactions" style="display: none;">
+    <div class="binf-panel-danger">
+      <div class="binf-panel-heading">
+        <h4 class="binf-panel-title"></h4>
+      </div>
+    </div>
+  </div>
+  {{#if socialactions.commentsEnabled}}
+    <span class="esoc-socialactions-getcomments" data-value="{{socialactions.CSID}}">
+            <div class="binf-btn binf-btn-primary"> {{messages.comments}} </div>
+        </span>
+  {{/if}}
+  <!--
+    {{#if socialactions.likesEnabled}}
+      <span>
+        <div class="binf-btn binf-btn-success">Like</div>
+      </span>
+    {{/if}}
+    {{#if socialactions.taggingEnabled}}
+      <span>
+        <div class="binf-btn btn-binf-warning">Tag</div>
+      </span>
+    {{/if}}
+  -->
+</span>

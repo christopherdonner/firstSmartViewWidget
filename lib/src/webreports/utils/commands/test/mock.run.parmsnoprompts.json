@@ -1,0 +1,63 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {},
+			"export_mime_type": "text\/html",
+			"output_destination": "browser"
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [{
+		"data": {
+			"myCurrentDate": "Thu Nov 09 14:32:00 2017",
+			"myNumber": 123456
+		},
+		"options": {
+			"fields": {
+				"myCurrentDate": {
+					"hidden": true,
+					"hideInitValidationError": true,
+					"label": "Today",
+					"readonly": false,
+					"type": "datetime"
+				},
+				"myNumber": {
+					"hidden": true,
+					"hideInitValidationError": true,
+					"label": "An Integer",
+					"readonly": false,
+					"type": "number"
+				}
+			},
+			"form": {
+				"attributes": {
+					"action": "api\/v1\/",
+					"method": ""
+				},
+				"renderForm": true
+			}
+		},
+		"schema": {
+			"properties": {
+				"myCurrentDate": {
+					"description": "",
+					"readonly": false,
+					"required": false,
+					"title": "Today",
+					"type": "Date"
+				},
+				"myNumber": {
+					"description": "",
+					"readonly": false,
+					"required": false,
+					"title": "An Integer",
+					"type": "number"
+				}
+			},
+			"type": "object"
+		}
+	}]
+}

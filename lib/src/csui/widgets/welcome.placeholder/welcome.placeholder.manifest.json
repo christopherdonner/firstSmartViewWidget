@@ -1,0 +1,26 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "header",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "title": "{{messageTitle}}",
+        "description": "{{messageDescription}}",
+        "type": "string"
+      },
+      "videoPoster": {
+        "title": "{{videoPosterTitle}}",
+        "description": "{{videoPosterDescription}}",
+        "type": "string"
+      },
+      "videoSrc": {
+        "title": "{{videoSourceTitle}}",
+        "description": "{{videoSourceDescription}}",
+        "type": "string"
+      }
+    }
+  }
+}

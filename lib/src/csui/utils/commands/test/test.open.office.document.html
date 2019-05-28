@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Open Document Test Page</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body.binf-widgets{
+      margin-top: 1em;
+      margin-left: 1em;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../../csui"></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      paths: {
+        // Disable crawling of dependencies
+        csui: '../../..',
+        // Locate requirejs plugins used in this component
+        css: '../../../lib/css',
+        'csui-ext': '../../../utils/load-extensions/load-extensions',
+        hbs: '../../../lib/hbs',
+        i18n: '../../../lib/i18n',
+        json: '../../../lib/json',
+        less: '../../../lib/less',
+        txt: '../../../lib/text',
+        // Locate modules, which are used not only in the browser,
+        // but also during the build; we need to map them explicitly,
+        // because we disabled the entire "csui" path above
+        'csui/lib/css-builder': '../../../lib/css-builder',
+        'csui/lib/handlebars': '../../../lib/handlebars',
+        'csui/lib/i18nprecompile': '../../../lib/i18nprecompile',
+        'csui/lib/normalize': '../../../lib/normalize',
+        'csui/lib/underscore': '../../../lib/underscore'
+      },
+
+      hbs: {
+        disableI18n: true,
+        disableHelpers: true,
+        templateExtension: 'hbs'
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      './test.open.office.document.view', './test.open.office.document.mock.js'
+    ], function (Marionette, PageContext, TestOpenOfficeDocumentView, TestOpenOfficeDocumentMock) {
+
+      // Wrap the widget placeholder
+      var contentRegion = new Marionette.Region({
+            el: '#content'
+          }),
+          // Create the data managing context
+          context       = new PageContext(),
+          // Create the widget instance
+          testView      = new TestOpenOfficeDocumentView({
+            context: context
+          });
+
+      // Show the widget on the page
+      contentRegion.show(testView);
+      // Mock the REST API responses
+      TestOpenOfficeDocumentMock.enable();
+      // Load data from the server
+      context.fetch();
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="container-fluid">
+  <div class="row">
+    <div id="content" class="col-sm-8 col-md-6 col-lg-4"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

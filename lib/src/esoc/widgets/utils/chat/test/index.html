@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample comment controller</title>
+  <link rel="stylesheet" href="../../../../../csui/themes/carbonfiber/theme.css">
+  <script src="../../../../../csui/lib/require.js"></script>
+  <style>
+    .esoc-column-social-comment-wrapper {
+      width: auto !important;
+    }
+
+    #chatBtnDiv, chatBtnDiv2 {
+      width: auto;
+      cursor: pointer;
+    }
+
+    a {
+      color: WHITE;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: orange;
+    }
+
+    .esoc-chat-button {
+      background-color: #ffffff;
+      width: 33px !important;
+      height: 29px;
+      padding: 5px;
+      border-radius: 62%;
+    }
+  </style>
+</head>
+<body>
+<div id="chatBtnDiv" class="esoc-chat-button"></div>
+<br />
+<br />
+
+<div id="chatBtnDiv2" ></div>
+
+<script data-csui-path="../../../../../csui" src="../../../../../csui/config.js"></script>
+<script src="../../../../../csui/helpers.js"></script>
+
+<script type="text/javascript">
+  require.config({
+    paths: {
+      esoc: '../../../../../src'
+    },
+    config: {
+      'csui/utils/contexts/factories/connector': {
+        connection: {
+          url: 'CSServer/api/v1/',
+          supportPath: '/img',
+          crossDomain: true
+        }
+      }
+    }
+  });
+
+  require(['csui/lib/marionette', 'csui/lib/underscore', 'csui/utils/contexts/page/page.context',
+        '../chat.view', 'hbs!customtemplate'
+      ], function (Marionette, _, PageContext, ChatView, CustomTemplate) {
+        var contentRegion = new Marionette.Region({el: '#chatBtnDiv'}),
+            pageContext   = new PageContext(), // holds the model
+            chatOptions   = {
+              "context": pageContext,
+              "tguser": "user1",
+              "domain": "opentext.com",
+
+            },
+            chatView      = new ChatView(chatOptions);
+        contentRegion.show(chatView);
+
+        var contentRegion1 = new Marionette.Region({el: '#chatBtnDiv2'}),
+            chatOptions1   = _.extend({}, chatOptions);
+        chatOptions1.tguser = "Admin";
+        chatOptions1.customtemplate = CustomTemplate;
+        var chatView2 = new ChatView(chatOptions1);
+        contentRegion1.show(chatView2);
+
+      }
+  );
+</script>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

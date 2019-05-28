@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Favorites Widget</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    .docRef {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #fff;
+    }
+    .container {
+      position: absolute;
+      top: 60px;
+    }
+
+    a:link {
+      color: grey;
+    }
+    a:hover {
+      color: grey;
+    }
+    a:active {
+      color: grey;
+    }
+    a:visited {
+      color: grey;
+    }
+
+  </style>
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../favorites.view', './favorites2.mock.data2'
+    ], function (Marionette, PageContext, FavoritesView, mock) {
+
+      mock.enable();
+
+      var contentRegion = new Marionette.Region({el: '#content'}),
+          pageContext   = new PageContext(), // holds the model
+          favoritesView = new FavoritesView({context: pageContext});
+
+      favoritesView.onClickItem = function (target) {
+        alert(target.model.attributes.name + ' clicked');
+      };
+
+      contentRegion.show(favoritesView);
+      pageContext.fetch();
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Favorites test</h1>
+<a class="docRef" href="../doc/favorites.md">Documentation</a>
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3 container" id="content"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

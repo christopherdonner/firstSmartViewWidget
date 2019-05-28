@@ -1,0 +1,997 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .cs-item-action-metadata {
+  overflow: auto;
+}
+
+.binf-widgets .cs-item-action-metadata .binf-modal-lg {
+  height: calc(100vh - 128px);
+  min-height: 450px;
+  width: calc(100% - 64px);
+  top: 64px;
+  max-width: 1024px;
+  min-width: 704px;
+  max-height: 672px;
+}
+
+@media (min-width: 1400px) {
+  .cs-item-action-metadata .binf-modal-lg {
+    width: 90%;
+  }
+}
+
+.cs-item-action-metadata .binf-modal-lg .cs-close {
+  width: 30px;
+  padding: 0 10px 0 0;
+}
+
+.cs-item-action-metadata .binf-modal-lg .binf-modal-content .binf-modal-header .cs-close .cs-icon-cross {
+  padding: 0;
+  background-size: 23px 23px;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  border: 0;
+}
+
+.cs-item-action-metadata .binf-modal-content {
+  height: 100%;
+  border-radius: 0;
+  font-size: 14px;
+}
+
+.cs-item-action-metadata .tile-header,
+.cs-item-action-metadata .binf-modal-header {
+  height: 4em;
+  background-color: #f7f7f7;
+  border-bottom: none;
+  padding: 0;
+}
+
+.cs-item-action-metadata .tile-header > .tile-title,
+.cs-item-action-metadata .binf-modal-header > .tile-title {
+  margin: 0 0 0 1.5em;
+  width: calc(100% - 105px);
+}
+
+.cs-item-action-metadata.cs-dialog .binf-modal-dialog .binf-modal-header .tile-title .csui-heading {
+  font-size: 1.3em;
+  font-weight: 400;
+  padding-top: 20px;
+  width: 100%;
+  line-height: inherit;
+}
+
+.cs-item-action-metadata .binf-modal-body,
+.cs-item-action-metadata .cs-metadata,
+.cs-item-action-metadata .cs-properties-wrapper .cs-metadata {
+  height: calc(100% - 8em);
+  
+}
+
+.cs-item-action-metadata .binf-modal-body .cs-add-item-metadata-form {
+  height: 100%;
+}
+
+
+
+.cs-item-action-metadata .csui-content-without-header {
+  height: calc(100% - 4em);
+}
+
+.cs-item-action-metadata .csui-content-without-footer {
+  height: calc(100% - 4em);
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties {
+  height: calc(100% - 4em);
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.cs-add-item-metadata-form.without-header-bar .cs-metadata-properties {
+  height: 100%;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .binf-tab-content {
+  height: calc(100% - 70px); 
+  width: 100%;
+  position: relative;
+  margin-top: 0;
+}
+
+
+
+.cs-add-item-metadata-form .cs-metadata-properties .binf-tab-content.show-validation-error {
+  height: calc(100% - 104px);
+  margin-top: 1.5em;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .metadata-validation-error {
+  display: block;
+  height: 2rem;
+  border-bottom: 1px solid #ff0000;
+  margin: 1em 0 1em 0;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .cs-close-error-icon {
+  width: 15px;
+  display: inline-block;
+  height: 15px;
+  margin: 0 0.5em 0 0;
+  vertical-align: bottom;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .validation-error-message {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.cs-item-action-metadata .binf-modal-body .metadata-content-header {
+  background-color: #ffffff;
+}
+
+.cs-item-action-metadata .tile-footer,
+.cs-item-action-metadata .binf-modal-footer {
+  
+  height: calc(4em - .5em);
+  background-color: #f7f7f7;
+  border-top: none;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  padding: 12px 24px;
+}
+
+.cs-item-action-metadata .binf-modal-footer .binf-btn-primary.cs-button-overlay {
+  pointer-events: none;
+}
+
+
+
+.binf-widgets .binf-panel {
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  margin: 0;
+}
+
+.binf-widgets .tab-links {
+  border: 0;
+}
+
+.binf-widgets .metadata-content-wrapper {
+  height: calc(100% - 4rem + 2px);
+  width: 100%;
+  float: left;
+}
+
+.cs-metadata .metadata-content-wrapper {
+  position: relative;
+}
+
+.binf-widgets .csui-metadata-tab-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3rem;
+  z-index: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+.metadata-content-wrapper > .tab-links > ul {
+  left: 50%;
+  transform: translateX(32%);
+  -webkit-transform: translateX(32%);
+}
+
+.metadata-content-wrapper .tab-links .binf-nav > li > a {
+  text-align: center;
+  margin: 1px 0 0 0;
+  height: calc(3rem - 2px);
+}
+
+.metadata-content-wrapper .tab-links .binf-nav > li > a:hover {
+}
+
+.binf-widgets .metadata-inner-wrapper {
+  
+  height: calc(100vh - 125px - 4em);
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown {
+  padding: 0;
+  height: 3rem;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  background: #f2f2f2;
+  border: 1px solid #cccccc;
+  border-left: 0;
+  z-index: auto;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button {
+  border: 0;
+  height: calc(3rem - 1px);
+  background-color: #f2f2f2;
+  outline-offset: 0;
+  text-decoration: none;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 0;
+  padding: 0 1.125rem 0 2rem;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:focus,
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:hover,
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:active {
+  background-color: #9ab3c2;
+  border: 0;
+  outline-offset: 0;
+  text-decoration: none;
+  box-shadow: none;
+  border-bottom: 1px solid #cccccc;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:focus,
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown button:active {
+  background-color: #e2e2e2;
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown .binf-dropdown-menu {
+  margin-left: 2em;
+  min-width: 5em;
+  padding: 0;
+  margin-top: 1px;
+  max-height: calc(100vh - 270px);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.binf-widgets .cs-metadata .cs-tab-links.binf-dropdown .binf-dropdown-menu li a:hover {
+  background-color: #9ab3c2;
+}
+
+.binf-widgets .cs-metadata-properties .tab-links {
+  display: block;
+}
+
+.binf-modal-dialog .binf-modal-body .metadata-content .cs-add-item-metadata-form .cs-metadata-properties .tab-links {
+  border-top: 0;
+}
+
+.binf-tab-content .cs-metadata-properties .tab-links {
+  margin: 0 0 0 9em; 
+  width: calc(100% - 9em); 
+  background: #f2f2f2;
+  padding: 0 3em 0 1em;
+}
+
+@media (min-width: 800px) {
+  .binf-tab-content .cs-metadata-properties .tab-links {
+    
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 700px) {
+  .binf-tab-content .cs-metadata-properties .tab-links {
+    padding: 0 8px;
+  }
+}
+
+@media (min-width: 600px) {
+  .cs-metadata-properties .with-left-toolbar .binf-nav-pills > li {
+    padding: 0 0 0 8px;
+  }
+
+  .cs-metadata-properties .binf-nav-pills > li:first-child {
+    padding-left: 32px;
+  }
+}
+
+.cs-metadata-properties .tab-links,
+.cs-metadata-properties .tab-links .left-toolbar,
+.cs-metadata-properties .tab-links .tab-links-bar,
+.cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav,
+.cs-metadata-properties .tab-links .right-toolbar {
+  height: 3rem;
+}
+
+.cs-metadata-properties .tab-links .left-toolbar {
+  float: left;
+  width: 3.375em; 
+  display: inline-block;
+}
+
+.cs-metadata-properties .tab-links .right-toolbar {
+  float: right;
+  width: calc(4.375em + 20px); 
+  display: inline-block;
+}
+
+.cs-metadata-properties .csui-tab-contents-header-wrapper {
+  height: 62px;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: calc(100% - 17px);
+  background-color: #ffffff;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .csui-tab-contents-header-wrapper {
+  left: 1.5em;
+  width: calc(100% - 35px);
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .csui-tab-contents-header-wrapper.show-validation-error {
+  top: 7rem;
+}
+
+.cs-add-item-metadata-form div:focus,
+.metadata-content-wrapper div:focus,
+.cs-metadata-properties .tab-links:focus,
+.cs-metadata-properties .tab-links .left-toolbar:focus,
+.cs-metadata-properties .tab-links .left-toolbar > .goto_previous_div .goto_previous_page:focus,
+.cs-metadata-properties .tab-links .tab-links-bar:focus,
+.cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav:focus,
+.cs-metadata-properties .tab-links .tab-links-bar span.fadeout:focus,
+.cs-metadata-properties .tab-links .right-toolbar:focus,
+.cs-metadata-properties .tab-links .right-toolbar > .goto_next_div .goto_next_page:focus,
+.cs-metadata-properties .tab-links .right-toolbar .csui-button-icon:focus {
+  outline-style: none;
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 4.375em - 20px); 
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar {
+  width: 100%; 
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar.with-left-toolbar {
+  width: calc(100% - 7.75em - 20px); 
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500%; 
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 35px;
+  height: calc(3rem - 4px);
+  z-index: 9;
+  pointer-events: none;
+  display: inline-block;
+}
+
+.cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  background: -moz-linear-gradient(left, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 1) 75%, rgba(242, 242, 242, 1) 100%); 
+  background: -webkit-linear-gradient(left, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 1) 75%, rgba(242, 242, 242, 1) 100%); 
+  background: linear-gradient(to right, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 1) 75%, rgba(242, 242, 242, 1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00f2f2f2', endColorstr='#f2f2f2', GradientType=1); 
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%); 
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%); 
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=1); 
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar .fadeout {
+  display: none;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar ul.binf-nav {
+  width: 100%;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .tab-links {
+  border-top: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page,
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page,
+.cs-metadata-properties .tab-links .add {
+  display: inline-block;
+  margin-top: calc((3rem - 14px) / 2);
+  width: 14px;
+  height: 14px;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div {
+  width: 3.375em;
+  height: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page {
+  margin-left: calc((3.375em - 14px) / 2); 
+  position: relative;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .goto_previous_div:hover,
+.cs-metadata-properties .tab-links .goto_previous_div:focus,
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page:hover,
+.cs-metadata-properties .tab-links .goto_previous_div .goto_previous_page:focus,
+.cs-metadata-properties .tab-links .goto_next_div:hover,
+.cs-metadata-properties .tab-links .goto_next_div:focus,
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page:hover,
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page:focus,
+.cs-metadata-properties .tab-links .add:hover,
+.cs-metadata-properties .tab-links .add:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cs-metadata-properties .tab-links .goto_next_div {
+  float: left;
+  position: relative;
+  width: calc(2rem + 14px);
+  height: 3rem;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .goto_next_div .goto_next_page {
+  float: left;
+  margin-left: calc((3.375em - 14px) / 2); 
+  position: relative;
+  z-index: 2;
+}
+
+.cs-metadata-properties .tab-links .add {
+  margin-top: calc((3em - 20px) / 2);
+  width: 20px;
+  height: 20px;
+  float: right;
+  opacity: 1;
+  border: 0;
+}
+
+.cs-metadata-properties .binf-tab-content.cs-table {
+  padding: 3em 1em 1em 1em;
+}
+
+.binf-widgets .cs-metadata-activity-feed {
+  padding: 0 3em 1em 3em;
+  margin-top: 4rem;
+}
+
+.cs-metadata-activity-feed .csui-table-tabletoolbar {
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  width: calc(100% + 3rem);
+  margin-bottom: 2rem;
+}
+
+.cs-metadata-activity-feed .tile-header {
+  display: block;
+}
+
+.binf-widgets .title {
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+.binf-widgets .metadata-navs {
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cs-metadata-properties .binf-nav-pills > li {
+  width: auto;
+  margin: 0;
+  padding: 0 1em;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cs-add-item-metadata-form.add-category .binf-nav-pills > li {
+  padding: 0;
+}
+
+.cs-tab-links.binf-dropdown li a span.cs-label {
+  font-size: 0.875rem;
+}
+
+.cs-add-item-metadata-form .cs-metadata-properties .binf-nav-pills > li:first-child,
+.cs-add-item-metadata-form .cs-metadata-properties .binf-nav-pills > li.tab-links-first-visible {
+  padding-left: 0;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .binf-nav-pills > li {
+  width: 100%;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > a > span.cs-icon-required {
+  width: 9px; 
+  height: 9px;
+  vertical-align: top;
+  position: relative;
+  top: 1rem;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  pointer-events: none;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > a {
+  width: auto;
+  max-width: 16em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  border-radius: 0;
+  font-size: 0.875rem;
+  color: #000000;
+  padding: 0 2px 0 2px;
+  vertical-align: baseline;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 6em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 10em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 16em;
+  }
+}
+
+@media (min-width: 800px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 9em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 14em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 20em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 16em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 23em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 32em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 25em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 35em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 50em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .cs-metadata-properties .binf-nav-pills > li > a {
+    max-width: 35em;
+  }
+
+  .cs-metadata-properties .wide-tablink .binf-nav-pills > li > a {
+    max-width: 50em;
+  }
+
+  .cs-metadata-properties .very-wide-tablink .binf-nav-pills > li > a {
+    max-width: 70em;
+  }
+}
+
+.cs-metadata-properties .csui-mini-tablinks .binf-nav-pills > li > a {
+  max-width: 6em;
+}
+
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) {
+  .cs-item-action-metadata .tile-footer,
+  .cs-item-action-metadata .binf-modal-footer {
+    position: absolute;
+    width: 100%;
+    bottom: -17px;
+  }
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a:focus,
+.binf-widgets .cs-metadata-properties .binf-nav > li.binf-active > a:focus,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li > a:focus,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .binf-nav-pills > li > a {
+  max-width: 100%;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a:hover {
+  background-color: transparent;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a > .cs-tablink-text {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 1rem;
+  pointer-events: none;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav > li > a:hover > .cs-tablink-text {
+  border-bottom: 4px solid #666666;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a:hover {
+  background-color: transparent;
+  color: #000000;
+  font-weight: bold;
+}
+
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a > .cs-tablink-text,
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li.binf-active > a:hover > .cs-tablink-text {
+  border-bottom: 4px solid #0072aa;
+}
+
+
+.binf-widgets .cs-metadata-properties .binf-nav-pills > li > a:active > .cs-tablink-text {
+  border-bottom: 4px solid #333333;
+}
+
+.cs-metadata-properties .binf-nav-pills > li div.cs-tablink-delete {
+  
+  opacity: 0;
+
+  width: 23px;
+  display: flex;
+  cursor: pointer;
+  padding-left: 5px;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.cs-metadata-properties.cs-touch-browser .binf-nav-pills > li.binf-active div.cs-tablink-delete,
+.cs-metadata-properties .binf-nav-pills > li:hover div.cs-tablink-delete,
+.cs-metadata-properties .binf-nav-pills > li:focus div.cs-tablink-delete,
+.cs-metadata-properties .binf-nav-pills > li > div.cs-tablink-delete.focused {
+  
+  opacity: 1;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > div.cs-tablink-delete > span.cs-delete-icon {
+  width: 14px;
+  height: 14px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.cs-metadata-properties .binf-nav-pills > li > div.cs-tablink-delete > span.cs-delete-icon:focus {
+  outline: 1px dotted #333333;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .tab-links-bar,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .right-toolbar {
+  border: 0;
+}
+
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar .goto_previous_div,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .left-toolbar .goto_previous_div .goto_previous_page,
+.cs-add-item-metadata-form.add-category .cs-metadata-properties .tab-links .right-toolbar {
+  display: none;
+  width: 0;
+}
+
+.cs-add-item-metadata-form.add-category .cs-form .alpaca-top:not(#generalform) {
+  border-top: 0;
+}
+
+.cs-metadata .binf-tab-content {
+  height: 100%;
+  width: 100%;
+}
+
+.cs-metadata .binf-tab-content.csui-normal-scrolling {
+  position: relative;
+}
+
+
+.cs-metadata .metadata-content-wrapper > .binf-tab-content {
+  overflow: hidden;
+}
+
+.cs-metadata .metadata-content-wrapper .binf-tab-content .binf-tab-content {
+  height: calc(100% - 70px);
+  width: 100%;
+  margin-top: 0;
+  padding-top: 6px;
+}
+
+.binf-modal-dialog .binf-modal-body .cs-metadata-properties .binf-tab-content {
+  padding: 0;
+}
+
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content {
+  height: calc(100%  - 49px);
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 6px;
+}
+
+
+@media (max-width: 1024px) {
+  .cs-metadata-properties .csui-tab-contents-header-wrapper {
+    width: calc(100% - 16px);
+  }
+
+  .metadata-content .cs-metadata .metadata-content-wrapper .binf-tab-content .binf-tab-content {
+    height: calc(100% - 48px);
+  }
+}
+
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content > div,
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content.ps-container > div {
+  padding: 6px 32px 6px 32px;
+}
+
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content.ps-container > div.ps-scrollbar-x-rail,
+.metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content.ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.binf-widgets .tap-panel {
+  position: relative;
+}
+
+.binf-widgets .binf-tab-pane {
+  height: 100%;
+}
+
+
+.cs-metadata-properties > .binf-tab-content > [role="tabpanel"]:not(.binf-hidden) ~ [role="tabpanel"]:not(:first-child),
+.cs-metadata-properties > .binf-tab-content > .binf-active[role="tabpanel"] {
+  border-top: 1px solid #e6e7e8;
+  padding-left: 32px;
+}
+
+.cs-metadata-properties > .binf-tab-content > .binf-active[role="tabpanel"]:first-child {
+  border-top: 0 none;
+}
+
+
+.cs-metadata-properties > .binf-tab-content > .last-tab-panel {
+  
+  min-height: 100%;
+}
+
+.binf-widgets .cs-metadata-properties {
+  height: 100%;
+}
+
+.binf-widgets .metadata-preview {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.metadata-inner-wrapper .binf-tab-pane {
+  position: relative;
+  height: 100%;
+}
+
+.binf-widgets .metadata-tab {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.binf-widgets .metadata-inner-contentview {
+  padding-left: 3em;
+  margin-top: 2em;
+}
+
+
+.binf-widgets .data-line {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-bottom: 2em;
+}
+
+.binf-form-group label + div, .binf-form-group label + div .alpaca-control {
+  text-align: left;
+}
+
+.data-line .title {
+  display: inline-block;
+  text-align: right;
+  font-size: 1em !important;
+}
+
+span.label-data {
+  float: right;
+  display: inline-block;
+  text-align: left;
+  width: calc(60% - 1em);
+}
+
+
+.cs-metadata .title {
+  color: #333333;
+  font-size: 18px;
+}
+
+.binf-widgets .general-body {
+  clear: both;
+  float: left;
+  line-height: 1.5;
+}
+
+.binf-widgets .description-label {
+  margin-top: 0;
+}
+
+.binf-widgets .general-information {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+
+.general-information ul li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.binf-widgets .general-extensions {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.binf-widgets .extensions-wrap {
+  width: 100%;
+  clear: both;
+  float: left;
+  border: 1px dashed #999999;
+  background-color: #f5f5f5;
+  padding: 1em;
+}
+
+.binf-widgets .extensions-body {
+  font-style: italic;
+}
+
+
+.binf-widgets .metadata-icon {
+  width: 2em;
+  margin-right: 1em;
+}
+
+
+.cs-metadata-properties .cs-form {
+  width: calc(100% - 10px);
+}
+
+
+
+.cs-properties-wrapper .metadata-inner-wrapper {
+  
+  height: 100%;
+}
+
+.binf-widgets .tableheader-name > .title {
+  display: inline-block;
+  flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  font-weight: 300;
+  font-size: 2.25em;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: initial;
+}
+
+
+
+.binf-widgets .binf-modal-content .cs-add-item-metadata-form.without-header-bar .cs-metadata-properties {
+  height: 100%;
+}
+
+
+.binf-widgets .binf-modal-content .cs-add-item-metadata-form .cs-metadata-properties {
+  height: calc(100% - 62px);
+  overflow: hidden;
+}
+
+
+
+.binf-widgets .metadata-navigation.csui-hide-side-bar .metadata-sidebar,
+.binf-widgets .metadata-navigation.csui-hide-side-bar.csui-toggle-potrait .metadata-sidebar {
+  display: none;
+}
+
+.binf-widgets .metadata-navigation.csui-hide-side-bar .metadata-content,
+.binf-widgets .metadata-navigation.csui-toggle-potrait .metadata-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.binf-widgets .metadata-navigation.csui-toggle-potrait .metadata-sidebar {
+  
+  height: 100%;
+  min-height: 100%;
+  width: 20%;
+  min-width: 15.5em;
+  float: left;
+  position: absolute;
+  z-index: 901;
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.binf-widgets .csui-metadata-overlay {
+  z-index: 50;
+}

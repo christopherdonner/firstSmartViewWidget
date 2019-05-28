@@ -1,0 +1,165 @@
+<div class="{{className}} esoc-mini-profile-widget binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+  {{#if enableSimpleSettingsModel}}
+    <div class="esoc-mini-profile-user binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      <div class="esoc-simple-mini-profile-user">
+        <div
+            class="esoc-mini-profile-userinfo binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          <div class="esoc-mini-profile-user-displayname">
+            <a href="javascript:void(0);" class="esoc-mini-profile-user-name"
+               title="{{display_name}}">{{display_name}}</a>
+          </div>
+          {{#if title}}
+            <div class="esoc-mini-profile-user-title" title="{{title}}">{{title}}</div>
+          {{/if}}
+          {{#if office_location}}
+            <div class="esoc-mini-profile-user-location"
+                 title="{{office_location}}">{{office_location}}
+            </div>
+          {{/if}}
+          {{#if business_email}}
+            <div class="esoc-mini-profile-user-displayemail">
+              <a class="esoc-mini-profile-user-email" href="mailto:{{business_email}}"
+                 title="{{business_email}}">{{business_email}}</a>
+            </div>
+          {{/if}}
+          {{#if business_phone}}
+            <div class="esoc-mini-profile-user-phone-data">
+              <div class="esoc-mini-profile-user-phone-label">{{business_phone_label}}</div>
+              <div class="esoc-mini-profile-user-phone"
+                   title="{{business_phone}}">{{business_phone}}</div>
+            </div>
+          {{/if}}
+          {{#if cell_phone}}
+            <div class="esoc-mini-profile-user-mobile-data">
+              <div class="esoc-mini-profile-user-mobile-label">{{cell_phone_label}}</div>
+              <div class="esoc-mini-profile-user-mobile" title="{{cell_phone}}">{{cell_phone}}</div>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="esoc-simple-mini-profile-user-img">
+
+        <div class="esoc-mini-profile-img">
+        <span class="esoc-mini-profile-avatar">
+           <a href="javascript:void(0);" class="esoc-mini-profile-pic">
+             <span class="image_user_placeholder esoc-miniprofile-default-avatar
+                esoc-user-default-avatar-{{id}}" title="{{display_name}}">{{initials}}</span>
+             <img id="esoc-mini-profile-pic-{{id}}" class="esoc-userprofile-img-{{id}}
+                binf-img-circle" title="{{display_name}}" alt="{{display_name}}" src="#">
+           </a>
+        </span>
+        </div>
+        <div id="esoc-mini-profile-chat-comment" class="esoc-miniprofile-chat-action-{{id}}
+        esoc-mini-profile-chat-comment"></div>
+        <div id="esoc-mini-profile-presence-indicator" class="esoc-mini-profile-presence-indicator binf-col-lg-12 binf-col-md-12 binf-col-sm-12
+      binf-col-xs-12"></div>
+      </div>
+
+    </div>
+  {{else}}
+      <div class="esoc-mini-profile-user binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          <div class="esoc-mini-profile-img">
+        <span class="esoc-mini-profile-avatar">
+           <a href="javascript:void(0);" class="esoc-mini-profile-pic">
+             <span class="image_user_placeholder esoc-miniprofile-default-avatar
+                esoc-user-default-avatar-{{id}}" title="{{display_name}}">{{initials}}</span>
+             <img id="esoc-mini-profile-pic-{{id}}" class="esoc-userprofile-img-{{id}}
+                binf-img-circle" title="{{display_name}}" alt="{{display_name}}">
+           </a>
+        </span>
+          </div>
+          <div id="esoc-mini-profile-presence-indicator"
+               class="esoc-mini-profile-presence-indicator binf-col-lg-12 binf-col-md-12 binf-col-sm-12
+      binf-col-xs-12"></div>
+          <div class="esoc-mini-profile-userinfo binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+              <div class="esoc-mini-profile-user-displayname">
+                  <a href="javascript:void(0);" class="esoc-mini-profile-user-name"
+                     title="{{display_name}}">{{display_name}}</a>
+              </div>
+              {{#if business_email}}
+                  <div class="esoc-mini-profile-user-displayemail">
+                      <a class="esoc-mini-profile-user-email" href="mailto:{{business_email}}"
+                         title="{{business_email}}">{{business_email}}</a>
+                  </div>
+              {{/if}}
+              {{#if title}}
+                  <div class="esoc-mini-profile-user-title" title="{{title}}">{{title}}</div>
+              {{/if}}
+              {{#if office_location}}
+                  <div class="esoc-mini-profile-user-location"
+                       title="{{office_location}}">{{office_location}}</div>
+              {{/if}}
+          </div>
+
+          <div class="esoc-mini-profile-actions binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+              {{^if deleted}}
+                  {{#if otherUser}}
+                      <div class="esoc-chat-action-enabled esoc-chat-action-enabled-{{id}}">
+                          {{#unless hideFollow}}
+                              <a href="javascript:void(0);" class="esoc-mini-profile-following-action" aria-label="{{actions.following}}">
+                                  <div class="esoc-miniprofile-otheruser-actions-withchat">
+                                      <div class="esoc-miniprofile-followingaction {{actions.followingClass}}"
+                                           title="{{actions.following}}"></div>
+                                  </div>
+                              </a>
+                          {{/unless}}
+                          <div class="esoc-mini-profile-otheruser-actions-spacing "></div>
+                          <a href="javascript:void(0);" aria-label="{{messages.chat}}">
+                              <div class="esoc-miniprofile-chat-action-{{id}}
+                     esoc-miniprofile-otheruser-actions-withchat esoc-miniprofile-chat-action"></div>
+                          </a>
+
+                          <div class="esoc-mini-profile-otheruser-actions-spacing "></div>
+                          <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+                              <div class="esoc-miniprofile-otheruser-actions-withchat">
+                                  <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+                              </div>
+                          </a>
+                      </div>
+
+                      <div class="esoc-chat-action-disabled esoc-chat-action-disabled-{{id}}">
+                          {{#if hideFollow}}
+                              <a href="javascript:void(0);" class="esoc-viewminiprofile-action">
+                                  <div class="esoc-mini-profile-selfuser-actions">
+                                      <div class="esoc-mini-profile-view-icon" title="{{actions
+                                      .viewprofile}}" aria-label="{{actions.viewprofile}}"></div>
+                                  </div>
+                              </a>
+                          {{else}}
+                              <a href="javascript:void(0);" class="esoc-mini-profile-following-action" aria-label="{{actions.followingClass}}">
+                                  <div class="esoc-mini-profile-otheruser-actions-without-chat">
+                                      <div class="esoc-miniprofile-followingaction {{actions.followingClass}}"
+                                           title="{{actions.following}}"></div>
+                                  </div>
+                              </a>
+                              <div class="esoc-mini-profile-otheruser-actions-spacing "></div>
+                              <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+                                  <div class="esoc-mini-profile-otheruser-actions-without-chat">
+                                      <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+                                  </div>
+                              </a>
+                          {{/if}}
+                      </div>
+                  {{else}}
+                      <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+                          <div class="esoc-mini-profile-selfuser-actions">
+                              <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+                          </div>
+                      </a>
+                  {{/if}}
+              {{else}}
+                  <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+                      <div class="esoc-mini-profile-selfuser-actions">
+                          <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+                      </div>
+                  </a>
+              {{/if}}
+          </div>
+          <div class="esoc-mini-profile-loading-img binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+              <span class="esoc-mini-profile-progress-icon" />
+          </div>
+          <div class="esoc-mini-profile-following-error binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+      </div>
+      <div id="{{id}}" class="esoc-social-users-load-more"></div>
+  {{/if}}
+</div>

@@ -1,0 +1,10 @@
+{
+"csui/bundles/csui-error": [
+  "csui/lib/backbone",
+  "csui/lib/jquery",
+  "csui/lib/jquery.binary.ajax",
+  "csui/lib/jquery.mockjax",
+  "csui/lib/jquery.parse.param",
+  "csui/pages/error.page/error.page.view"
+]
+}

@@ -1,0 +1,19 @@
+{{#if thumbnailAction}}
+  <div
+      class="csui-thumbnail-content-icon csui-thumbnail-content-no-default-action thumbnail-{{cid}}"
+      aria-label="{{typeAndNameAria}}" tabindex="0"></div>
+{{else}}
+  {{#if inactive}}
+    <div class="csui-thumbnail-content-icon csui-thumbnail-content-no-default-action inactive"
+         aria-label="{{typeAndNameAria}}"></div>
+  {{else}}
+    {{#if inCreateMode}}
+      <div class="csui-thumbnail-content-icon csui-thumbnail-content-default-action"
+           aria-label="{{typeAndNameAria}}" tabindex="0"></div>
+    {{else}}
+      <a class="csui-thumbnail-content-icon csui-thumbnail-content-default-action thumbnail-{{cid}}"
+         href="{{defaultActionUrl}}" aria-label="{{typeAndNameAria}}"></a>
+    {{/if}}
+  {{/if}}
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

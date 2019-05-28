@@ -1,0 +1,11 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-table-cell-node-state .csui-node-state-reservation > button {
+  border: none;
+  background: none;
+  padding: 1px 0;
+}
+
+.csui-table-cell-node-state .csui-node-state-reservation > button:focus {
+  outline: 1px dotted #333333;
+}

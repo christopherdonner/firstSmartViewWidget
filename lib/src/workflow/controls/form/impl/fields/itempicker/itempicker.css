@@ -1,0 +1,177 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .workitem-forms .cs-nodepicker {
+  height: auto;
+}
+
+.workitem-forms .cs-nodepicker .cs-search-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.3em;
+  height: 1.35em;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.workitem-forms .cs-nodepicker input {
+  -webkit-box-flex: 1 1 0; 
+  -moz-box-flex: 1 1 0; 
+  -webkit-flex: 1 1 0; 
+  -ms-flex: 1 1 0; 
+  flex: 1 1 0; 
+
+  line-height: 1.25em;
+  padding: 3px;
+  padding-left: 4.5px;
+  text-align: left;
+  width: 90%;
+
+  border: 0px solid #a7a9ac;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  overflow: hidden;
+  flex: 1 1;
+
+  color: rgb(102, 102, 102);
+}
+
+.workitem-forms .cs-nodepicker input:focus {
+  outline-color: #666666;
+  outline-width: 0px;
+  
+}
+
+.workitem-forms .cs-nodepicker input:-moz-focusring {
+  outline: 2px solid #666666;
+}
+
+
+
+.cs-formfield.cs-nodepicker .cs-field-read button.inline-edit-more-button{
+  width: 1.5em;
+  height: 1.5em;
+  min-width: 1.5em;
+  max-width: 1.5em;
+}
+
+.workitem-forms .cs-formfield.cs-nodepicker .cs-field-read, .workitem-forms .cs-formfield.cs-nodepicker .cs-field-write{
+ height:28px;
+}
+
+.workitem-forms .cs-formfield.cs-nodepicker .cs-field-read button {
+  text-align: left;
+  height: auto;
+}
+
+.workitem-forms .cs-formfield.cs-nodepicker .cs-field-read button > a {
+  text-align: left;
+  white-space: normal;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding: 0;
+  width: calc(100%);
+}
+
+.workitem-forms .cs-formfield.cs-nodepicker .cs-field-read .btn-container > a:focus {
+  color: rgb(51, 122, 183);
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read .inline-edit-more-icon,
+.binf-widgets .cs-formfield .inline-clear-itempicker {
+  width: 0.8rem;
+  height: 0.8rem;
+  max-width: 1rem;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.workflow-workitem-form .cs-formfield.cs-nodepicker .cs-field-write .icon-container {
+  position: static;
+}
+
+
+
+.workitem-forms .cs-formfield .cs-field-write button.inline-clear-itempicker-button {
+  text-align: left;
+  height: auto;
+  border:none;
+  background-color: transparent;
+  width: 16px;
+  min-width: 16px;
+  max-height: 80px;
+  overflow: hidden;
+  padding: 0;
+  display:flex;
+  -webkit-box-pack: justify;
+  justify-content: center;
+}
+
+.workitem-forms .cs-formfield .cs-field-write button.inline-clear-itempicker-button:focus {
+  outline: 1px dotted #666666;
+ }
+
+.workitem-forms .cs-form .alpaca-field.binf-has-error .cs-formfield.cs-nodepicker .cs-field-write button.invoke-picker {
+  border: 1px solid #2e6da4;
+  color: #ffffff;
+  background-color: #337ab7;
+}
+
+.workitem-forms .cs-formfield .cs-field-write .binf-btn-primary {
+  height: 1.5rem;
+  padding: 0 1rem;
+  vertical-align: middle;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  line-height: 0.75rem;
+}
+
+.workitem-forms .cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container.csui-multivalue-read-block .cs-formfield .icon-container {
+  -webkit-box-flex: 1 0 1.5em;
+  -moz-box-flex: 1 0 1.5em;
+  -webkit-flex: 1 0 1.5em;
+  -ms-flex: 1 0 1.5em;
+  flex: 1 0 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  min-width: 1.5em;
+  max-width: 1.5em;
+  margin-left: 0.5em;
+}
+
+.workitem-forms .breadcrumb-inner {
+  padding-left: 10px;
+}
+
+.binf-widgets .workitem-forms .breadcrumb-inner .binf-breadcrumb {
+  background: none;
+  border: 1px solid #dddddd;
+}
+
+.binf-widgets .workitem-forms .cs-field-read .error-placeholder {
+  color: #df3324;
+}
+
+.binf-widgets .workitem-forms .item-reference-error-msg, .binf-widgets .mobile-workitem-form .item-reference-error-msg {
+  color: #df3324;
+  display: block;
+  font-size: 12px;
+}
+
+.binf-widgets .workitem-forms .cs-form .alpaca-container-item > .binf-form-group.alpaca-field > .binf-col-sm-9 {
+  overflow: visible;
+}
+
+.workflow-workitem-form .cs-formfield .cs-field-write-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.workflow-workitem-form .workflow-icon-container .inline-edit-close-icon {
+  margin-right: 0.555rem;
+}

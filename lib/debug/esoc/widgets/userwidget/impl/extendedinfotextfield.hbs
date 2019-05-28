@@ -1,0 +1,108 @@
+{{#if content}}
+  <div class="esoc-user-label esoc-user-textarea-label">
+  {{#if extendedLabelClass}}
+      <span class={{extendedLabelClass}}>{{label}}</span>
+  {{else}}
+      <span class="esoc-user-extended-info-label">{{label}}</span>
+  {{/if}}
+    <div class="esoc-user-extended-info esoc-user-extended-view-mode">
+      {{#if userInputField}}
+        <div class="esoc-user-manager-field">
+          <div class="esoc-user-manager-avatar-container">
+        <span id="esoc-user-default-avatar" class="image_user_placeholder
+          esoc-user-default-avatar">{{initials}}</span>
+            <img id="esoc-user-manager-avatar" class="binf-img-circle esoc-user-manager-avatar" src="" />
+          </div>
+      <span class="esoc-widget-user-display-name esoc-user-messages" data-userid="{{content}}"
+            data-username="{{reportsTo}}" />
+          {{#if isEditable}}
+            <div
+                class="esoc-user-extendedinfo-edit-icon {{#if reportsTo}} esoc-user-extendedinfo-reports-to-edit-icon {{/if}}">
+              <a class="esoc-user-extended-edit" aria-label="{{messages.edit}}"></a>
+            </div>
+          {{/if}}
+        </div>
+      {{else}}
+        <div class="esoc-user-extendedinfo">
+          <div class="esoc-user-extendedinfo-content">
+            <a {{#if isEditable}} href="javascript:void(0);" {{/if}}
+                                  class="esoc-user-messages-content esoc-user-messages">
+              <div class="esoc-social-status-data esoc-user-content esoc-user-messages-content
+                  esoc-user-extended-info-content {{#if isEditable}} esoc-cursor-pointer {{/if}}">{{content}}</div>
+            </a>
+          </div>
+          {{#if isEditable}}
+            <div class="esoc-user-extendedinfo-edit-icon">
+              <a class="esoc-user-extended-edit" aria-label="{{messages.edit}}"></a>
+            </div>
+          {{/if}}
+        </div>
+      {{/if}}
+      <a href="javascript:void(0);" title="{{messages.more}}"
+         class="esoc-user-see-more esoc-user-hide-element" aria-label="{{messages.more}}">
+        <span class="icon-arrow-down"></span></a>
+      <a href="javascript:void(0);" title="{{messages.less}}"
+         class="esoc-user-see-less esoc-user-hide-element" aria-label="{{messages.less}}">
+        <span class="icon-arrow-up"></span></a>
+    </div>
+{{else}}
+  {{#if isEditable}}
+      <div class="esoc-user-label esoc-user-textarea-label ">
+        {{#if extendedLabelClass}}
+          <span class={{extendedLabelClass}}>{{label}}</span>
+        {{else}}
+          <span class="esoc-user-extended-info-label">{{label}}</span>
+        {{/if}}
+      </div>
+      <div
+          class="esoc-user-extended-info esoc-user-extended-view-mode esoc-user-default-content-mode">
+        <div class="esoc-user-extendedinfo-default-content">
+          <a {{#if isEditable}} href="javascript:void(0);" {{/if}}
+                                class="esoc-user-default-content {{#if isEditable}}esoc-cursor-pointer{{/if}}">{{defaultMessage}}</a>
+        </div>
+        <div class="esoc-user-extendedinfo-edit-icon">
+          <a class="esoc-user-extended-edit" aria-label="{{messages.edit}}"></a>
+        </div>
+      </div>
+  {{/if}}
+{{/if}}
+{{#if isEditable}}
+    <div class="esoc-user-hide-element esoc-user-extended-edit-mode">
+      {{#xif "this.formField === 'status'"}}
+        <div class="esoc-social-status-input-container">
+          <textarea id='esoc-social-status-input' class="esoc-user-extended-edit-textarea
+          esoc-user-extended-edit-input" placeholder="{{defaultMessage}}">{{content}}</textarea>
+        </div>
+        <div class="esoc-status-textinput-button-holder">
+          <a href="javascript:void(0);"
+             class="esoc-social-status-header-emotion esoc-social-comment-emoticon"
+             id="esoc-social-status-emoticon" title="{{messages.emoticon}}"></a>
+        </div>
+        <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-user-text-edit-buttons">
+          <button id="esoc-user-status-update" class="esoc-user-status-update binf-btn binf-btn-primary"
+                  title="{{messages.update}}">{{messages.update}}</button>
+          <button class="esoc-user-cancel binf-btn binf-btn-default"
+                  title="{{messages.cancel}}">{{messages.cancel}}</button>
+        </div>
+      {{else}}
+        {{#if userInputField}}
+          <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+            <div class="esoc-user-manager-picker-holder"></div>
+            <input type="text"
+                   class="esoc-user-extended-edit-text esoc-user-extended-edit-input esoc-user-hide-element"
+                   value="{{content}}" placeholder="{{defaultMessage}}" aria-label="{{defaultMessage}}"/>
+          </div>
+        {{else}}
+          <textarea class="esoc-user-extended-edit-textarea esoc-user-extended-edit-input"
+                    placeholder="{{defaultMessage}}" aria-label="{{defaultMessage}}">{{content}}</textarea>
+        {{/if}}
+        <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-user-text-edit-buttons">
+          <button class="esoc-user-update binf-btn binf-btn-primary"
+                  title="{{messages.update}}">{{messages.update}}</button>
+          <button class="esoc-user-cancel binf-btn binf-btn-default"
+                  title="{{messages.cancel}}">{{messages.cancel}}</button>
+        </div>
+      {{/xif}}
+    </div>
+  </div>
+{{/if}}

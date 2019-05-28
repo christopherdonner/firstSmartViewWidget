@@ -1,0 +1,16 @@
+{{#if back_button}}
+  <div class="cs-header binf-panel-heading cs-header-with-go-back" tabindex="0" role="link" aria-label="{{goBackAria}}">
+    <span class="icon circular arrow_back cs-go-back" title="{{goBackTooltip}}"></span>
+    <span class="cs-title cs-title-with-go-back" title="{{title}}">{{title}}</span>
+  </div>
+{{else if title}}
+  <div class="cs-header binf-panel-heading" tabindex="0">
+    <span class="cs-title" title="{{title}}">{{title}}</span>
+  </div>
+{{/if}}
+
+<div class="cs-content">
+  <div class="cs-list-group"></div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,63 @@
+<div class="cs-field-write">
+  <div class="cs-field-write-inner">
+    <div class="binf-input-group csui-datefield-input">
+    <input type="{{inputType}}" id="{{id}}" placeholder="{{placeholder}}"
+      {{#if inputStep}} step="{{inputStep}}"{{/if}}
+      {{#if options.size}} size="{{options.size}}"{{/if}}
+      {{#if name}} name="{{name}}"{{/if}}
+      {{#if ariaRequired}} aria-required="{{ariaRequired}}" {{/if}}
+      {{#each options.data}} data-{{@key}}="{{this}}" {{/each}}
+      {{#each options.attributes}}{{@key}}="{{this}}" {{/each}}
+      value="{{data}}"
+      {{#if idBtnLabel}}aria-labelledby="{{idBtnLabel}}" {{/if}}
+      {{#if multiFieldLabel}} aria-label="{{multiFieldLabel}}" {{/if}}/>
+      <span class="input-group-">
+          <span tabindex="0" title="{{datePickerIcon}}" aria-label="{{datePickerIcon}}"
+                role="button" class="icon-date_picker {{#if disabled}}cs-icon-disabled
+      {{else}}" tabindex="0" aria-label="{{datePickerIconAria}}{{/if}}"></span>
+      </span>
+    </div>
+
+    {{#xif "this.mode !== 'writeonly'"}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon edit-cancel" title="{{cancel}}"></div>
+      </div>
+    {{else}}
+      {{#if options.applyFlag}}
+        <div class="icon-container binf-hidden">
+          <div class="csui-icon apply-all binf-hidden" title="{{titleApplyAll}}" tabindex="0"
+               data-cstabindex="0"></div>
+        </div>
+      {{/if}}
+    {{/xif}}
+  </div>
+</div>
+
+<div class="cs-field-read">
+  <div class="cs-field-read-inner">
+    <div class="btn-container">
+      <button
+          {{#if schema.readonly}} aria-disabled="true" {{/if}}
+          {{#if multiFieldLabel}}
+            aria-label="{{readModeMultiFieldAria}}" data-multi="true"
+          {{else}}
+            aria-label="{{readModeAria}}"
+          {{/if}}
+      >
+        {{#if readData}}
+          <span title="{{readData}}">{{readData}}</span>
+        {{else}}
+          <span class="placeholder" title="{{noValue}}">{{{emptyLabel}}}</span>
+        {{/if}}
+      </button>
+    </div>
+    {{#if schema.readonly}}
+    {{else}}
+      <div class="icon-container">
+        <div class="csui-icon-edit inline-edit-icon icon-date_picker1 icon-edit" title="{{edit}}"></div>
+      </div>
+    {{/if}}
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

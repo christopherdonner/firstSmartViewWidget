@@ -1,0 +1,25 @@
+{{#if adduserorgroup}}
+  <h2 class="member-title">{{{title}}}</h2><span class="csui-separator"></span>
+  <div class="csui-target-controls">
+    {{#if locationSelector}}
+      <div class="csui-start-locations binf-dropdown {{#if
+          displayStartLocation}}binf-hidden{{/if}}"></div>
+    {{/if}}
+    <div class="csui-member-picker-container">
+      <div class="csui-member-picker"></div>
+    </div>
+  </div>
+{{else}}
+  <h2 class="member-title member-picker-view-header">{{title}}</h2><span
+      class="csui-view-separator csui-separator binf-hidden"></span>
+  <div class="csui-target-controls">
+    {{#if isNotDeleted}}
+      <div class="csui-member-picker-container">
+        <span class="csui-member-picker"></span>
+        <span tabindex="-1" class="csui-add-member icon-toolbarAdd binf-hidden"
+              title="{{addMemberTitle}}"></span>
+      </div>
+    {{/if}}
+  </div>
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

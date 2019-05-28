@@ -1,0 +1,222 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-dialog.csui-conflict-dialog.csui-individual .cs-simplelist {
+  height: 100%;
+  min-width: 0px;
+}
+
+.cs-dialog.csui-conflict-dialog.csui-individual .cs-content {
+  height: calc(100% - 1em);
+  width: 100%;
+}
+
+.csui-conflict-dialog.csui-individual .csui-icon.csui-status-icon {
+  width: 16px;
+  height: 28px;
+  border-radius: 1em;
+  margin-left: 24px;
+}
+
+.csui-conflict-dialog.csui-individual .csui-icon {
+  margin-left: 16px;
+  float: left;
+}
+
+.csui-conflict-dialog.csui-individual div.binf-list-group-item.no-border {
+  border: 0px;
+}
+
+.csui-conflict-dialog.csui-individual div.binf-list-group-item {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-align-items: initial;
+  -ms-flex-align: initial;
+  align-items: initial;
+  border-radius: 0px;
+  border-top: 1px solid #f5f5f5;
+  background-color: #ffffff;
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 0px;
+  width: 100%;
+  font-style: normal;
+  height: inherit;
+}
+
+.csui-conflict-dialog.csui-individual div.binf-list-group-item:hover {
+  background-color: #bac9ce;
+}
+
+.csui-conflict-dialog.csui-individual div.binf-list-group-item.edit-mode {
+  padding-bottom: 14px;
+}
+
+
+
+.csui-conflict-dialog.csui-individual span.csui-status-icon.edit-mode {
+  margin-bottom: 10px;
+  flex: 0 0 16px;
+}
+
+.csui-conflict-dialog.csui-individual div.csui-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 8px;
+  width: 40%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex: 1 3000 auto;
+}
+
+.csui-conflict-dialog.csui-individual div.csui-description.sm {
+  flex: 1 1000 auto;
+}
+
+.csui-conflict-dialog.csui-individual .csui-msg {
+  color: #df3324;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: pre-wrap;
+}
+
+.csui-conflict-dialog.csui-individual span.folder-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+
+.csui-conflict-dialog.csui-individual span.folder-name.error,
+.csui-conflict-dialog.csui-individual span.folder-name.ok {
+  padding-top: 7px;
+}
+
+.csui-conflict-dialog.csui-individual input {
+  width: calc(100% - 60px);
+  margin-right: 4px;
+  float: left;
+  height: 26px;
+  border: 1px solid #a7a9ac;
+  max-width: 400px;
+  padding: 2px 12px 3px 12px;
+}
+
+.csui-conflict-dialog.csui-individual .edit-cancel {
+  float: left;
+}
+
+.csui-conflict-dialog.csui-individual input:focus {
+  border: 2px solid #666666;
+}
+
+.csui-conflict-dialog.csui-individual .csui-status {
+
+  font-size: 12px;
+  line-height: 16px;
+  color: #df3324;
+  float: left;
+  margin-left: 32px;
+  margin-top: 1px;
+  min-width: 50px;
+  max-width: 64px;
+  text-align: right;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex: 1 1000 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+
+}
+
+.csui-conflict-dialog.csui-individual .csui-status.sm {
+  left: 0px;
+  margin-left: 32px;
+  bottom: 16px;
+}
+
+.csui-conflict-dialog.csui-individual .csui-status.ok {
+  color: #146634;
+  padding-top: 2px;
+  width: 100%;
+}
+
+.csui-conflict-dialog.csui-individual .csui-status.error {
+  padding-top: 2px;
+  overflow: visible;
+}
+
+.csui-conflict-dialog.csui-individual .binf-modal-body .binf-btn {
+  height: 1.125rem;
+  padding: 0 0.75rem;
+  vertical-align: middle;
+  border-radius: 0.625rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #0072aa;
+  color: #0072aa;
+  float: right;
+  min-width: 3.25rem;
+  font-style: normal;
+}
+
+.csui-conflict-dialog.csui-individual .binf-modal-body .btn-rename {
+
+  margin-right: 16px;
+}
+
+.csui-conflict-dialog.csui-individual .binf-modal-body .btn-undo {
+  margin-right: 16px;
+}
+
+.csui-conflict-dialog.csui-individual .binf-modal-body .no-cancel-icon {
+  margin-right: 24px;
+}
+
+.csui-conflict-dialog.csui-individual .binf-modal-body .binf-btn:hover {
+  border: 1px solid #004b71;
+  color: #004b71;
+}
+
+.csui-conflict-dialog.csui-individual .binf-modal-body .binf-btn:active {
+  box-shadow: none;
+}
+
+.csui-conflict-dialog.csui-individual .binf-modal-body .binf-btn:focus {
+  outline: 1px dotted #333333;
+  outline-offset: 2px;
+}
+
+.csui-conflict-dialog.csui-individual .cs-icon.circle_delete {
+  width: 24px;
+  height: 0px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.csui-conflict-dialog.csui-individual .csui-focus .cs-icon.circle_delete,
+.csui-conflict-dialog.csui-individual .cs-icon.circle_delete.binf-show {
+  height: 24px;
+}
+
+.csui-conflict-dialog.csui-individual .csui-internal-placeholder {
+  width: 92px;
+  float: right;
+  height: 24px;
+}
+
+.csui-conflict-dialog.csui-individual .csui-button-container {
+  min-width: 254px;
+  display: inline-flex;
+  justify-content: flex-end;
+}

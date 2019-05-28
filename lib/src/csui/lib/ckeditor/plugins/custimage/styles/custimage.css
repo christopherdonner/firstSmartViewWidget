@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cke_reset_all a.cke_dialog_ui_button {
+
+    vertical-align: bottom;
+    user-select: none;
+    border:2px solid #0072aa;
+    border-radius:1em;
+    -webkit-appearance:button;
+    background-color:#0072aa;
+    color:#fff
+
+}
+
+.cke_reset_all a.cke_dialog_ui_button span {
+
+    color:#fff
+
+}

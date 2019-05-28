@@ -1,0 +1,99 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .permissions-content-header {
+  height: 4rem;
+  white-space: nowrap;
+  background: #111b58;
+  color: #ffffff;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.binf-widgets .permissions-header-left-bar-container {
+  width: 100%;
+  padding: 0px 24px;
+  display: inline-flex;
+  flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  align-items: center;
+}
+
+.binf-widgets .permissions-header-left-bar-container .permissions-header-left-bar {
+  height: 100%;
+  width: 100%;
+}
+
+.binf-widgets .permissions-header-left-bar-container .csui-permission-header-name-container {
+  width: calc(100% - 24px);
+  padding: 0 120px 0 98px;
+}
+
+.binf-widgets .permissions-header-left-bar-container .csui-permission-header-name-container .csui-permission-header-name {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 22px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.binf-widgets .permissions-header-left-bar-container .csui-permissions-folder {
+  display: flex;
+  display: -webkit-flex;
+  height: 100%;
+  width: 100%;
+}
+
+.binf-widgets .permissions-header-left-bar-container .csui-permissions-folder > div {
+  display: inline-flex;
+  flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  align-items: center;
+}
+
+.binf-widgets .permissions-header-left-bar-container .csui-permissions-folder .csui-icon-group {
+  margin-right: 10px;
+  height: auto;
+}
+
+.binf-widgets .permissions-header-right-bar-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.binf-widgets .permissions-content-header.permissions-header-right-bar-empty .permissions-header-right-bar-container {
+  width: 0px;
+  padding: 0px;
+}
+
+.binf-widgets .permissions-content-header.permissions-header-right-bar-empty .permissions-header-left-bar-container {
+  width: calc(100% - 1px);
+}
+
+.binf-widgets .permissions-header-right-bar {
+  float: right;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell.csui-table-header-toolbar,
+.binf-widgets .cs-permissions .csui-table-header {
+  overflow: visible;
+}
+
+.binf-widgets .cs-permissions .csui-table-header .csui-table-header-toolbar .binf-dropdown-menu {
+  cursor: default;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 1023px) {
+  .binf-widgets .cs-permissions .csui-table-header .csui-table-header-toolbar .binf-dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+.binf-widgets .cs-permissions .csui-table-header .csui-table-header-toolbar .binf-dropdown-menu li a:hover {
+  background-color: #bac9ce;
+}

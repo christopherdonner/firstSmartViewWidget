@@ -1,0 +1,16 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"append_form": "append",
+				"form_id": 678873
+			},
+			"export_if_no_data": true,
+			"http_method": "POST",
+			"output_destination": "form",
+			"run_in_background": false,
+			"show_status_screen": true
+		},
+		"rows_affected": 45
+	}
+}

@@ -1,0 +1,159 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-table-actionbar {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: right;
+  font-size: 16px;
+}
+
+.binf-widgets .csui-table-actionbar-bubble {
+  background-color: #ffffff;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.binf-widgets .csui-table-actionbar-bubble .tile-nav li.binf-dropdown.binf-open {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.binf-widgets .csui-table-actionbar-bubble .tile-nav li.binf-dropdown.binf-open ul {
+  z-index: 1003;
+}
+
+.binf-widgets .csui-table-actionbar-bubble .tile-nav li.binf-dropdown.binf-open ul li a {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .csui-table-actionbar-bubble .tile-nav li.binf-dropdown .binf-dropdown-menu.csui-perfect-scrolling {
+  overflow: hidden;
+}
+
+.csui-table-actionbar-bubble.csui-state-loading,
+.csui-table-actionbar-bubble.csui-state-failed {
+  display: inline-flex;
+  background-color: #bac9ce;
+  pointer-events: none;
+}
+
+.csui-table-actionbar.csui-state-loading > ul > li.csui-toolbar-state,
+.csui-table-actionbar.csui-state-failed > ul > li.csui-toolbar-state {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-style: italic;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.csui-table-actionbar.csui-state-loading > ul > li.csui-toolbar-state {
+  animation: csui-table-actionbar-state-fade-in-and-out 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 1
+}
+
+@keyframes csui-table-actionbar-state-fade-in-and-out {
+  from {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: .5;
+  }
+}
+
+.csui-table-actionbar > ul.binf-nav {
+  padding-left: 0.1875em;
+  padding-right: 0.1875em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.csui-table-actionbar > ul.binf-nav > li.binf-open > a {
+  box-shadow: none;
+  border-radius: 2em;
+}
+
+.csui-table-actionbar > ul.binf-nav .icon {
+  font-size: inherit;
+  position: relative;
+  vertical-align: baseline;
+  margin: 0;
+}
+
+.csui-table-actionbar.binf-disabled > ul.binf-nav > li > a > .icon {
+  opacity: 0.5;
+}
+
+.csui-table-actionbar.binf-disabled > ul.binf-nav > li > a {
+  pointer-events: none;
+  color: #777777;
+}
+
+.csui-table-actionbar > ul.binf-nav > li > a {
+  padding: 0 0.6875em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  display: flex;
+  display: -webkit-flex;
+  align-self: center;
+  height: inherit;
+}
+
+.csui-table-actionbar > ul.binf-nav > li > a:focus,
+.csui-table-actionbar > ul.binf-nav > li > a:hover {
+  background-color: transparent;
+}
+
+.csui-table-actionbar > ul.binf-nav > li.binf-divider {
+  width: 1px;
+  height: 1.5em;
+  background-color: #7c9599;
+}
+
+.csui-table-actionbar > ul.binf-nav > li:first-child {
+  padding-left: 0;
+}
+
+.csui-table-actionbar > ul.binf-nav > li:last-child {
+  padding-right: 0;
+}
+
+.csui-table-actionbar > ul.binf-nav > li:hover {
+  background-color: transparent;
+}
+
+.csui-table-actionbar .icon {
+  vertical-align: text-bottom;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.5em;
+  height: 2em;
+}
+
+.csui-table-actionbar ul.binf-dropdown-menu > li > a > span.icon {
+  margin-right: 0.5em;
+}
+
+@media screen and (max-width: 1199px) {
+  .csui-table-actionbar > ul.binf-nav > li > a {
+    padding-left: 0.65em;
+  }
+}
+
+.csui-navbar.binf-navbar.csui-zero-zindex,
+#breadcrumb-wrap.csui-zero-zindex,
+.csui-search-tool-container.csui-zero-zindex {
+  z-index: 0;
+}

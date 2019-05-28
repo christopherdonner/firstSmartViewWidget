@@ -1,0 +1,55 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-details-row > .csui-table-metadata-view {
+  padding-bottom: 1em;
+}
+
+.csui-details-row > .csui-table-metadata-view .binf-row {
+  flex: 1 1 auto;
+}
+
+.csui-details-row > .csui-table-metadata-view .cs-form {
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.csui-details-row > .csui-table-metadata-view .cs-form .binf-form-group {
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.csui-table-metadata-view .cs-form .binf-form-group label,
+.csui-table-metadata-view .cs-form .binf-form-group input {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  padding-left: 1em;
+  border: none;
+}
+
+.csui-table-metadata-view .cs-form .binf-form-group input[type="text"] {
+  background-color: transparent;
+}
+
+.csui-table-metadata-view .cs-form .binf-form-group .csui-content-view .csui-icon-group {
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+.csui-table-metadata-view .cs-form .binf-form-group .csui-content-view .csui-icon-group .csui-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.csui-table-metadata-view .cs-form .binf-form-group .csui-content-view {
+  padding: 0 0 0 1em;
+  display: flex;
+  align-items: center;
+  height: auto;
+}

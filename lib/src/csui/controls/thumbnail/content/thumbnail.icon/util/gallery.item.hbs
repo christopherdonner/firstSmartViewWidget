@@ -1,0 +1,94 @@
+{{#each data}}
+  {{#if activeItem}}
+    {{#if isVideo}}
+      <div class="binf-item binf-active binf-item-{{id}}">
+        {{#if originalAvailable}}
+          <div class="csui-video">
+            <video preload="none" poster="" controls="controls">
+              <source src="{{this.contentURL}}" type='{{this.videoType}}'>
+              </source>
+              {{this.videoNotSupportMsg}}
+            </video>
+          </div>
+        {{else}}
+          <div class="csui-video">
+            <video preload="none" poster="" controls="controls">
+              <source src="{{this.contentURL}}" type='{{this.videoType}}'>
+              </source>
+              {{this.videoNotSupportMsg}}
+            </video>
+            <div class="csui-img-loader">
+              <div class="csui-img-loader-inner"></div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    {{else}}
+      <div class="binf-item binf-active binf-item-{{id}}">
+        {{#if originalAvailable}}
+          <div class="csui-img-box csui-gallery-original-icon">
+            <img src="{{this.contentURL}}" tabindex="0">
+          </div>
+        {{else}}
+          <div class="csui-img-box csui-gallery-thumbnail-icon">
+            <div>
+              <img src="{{this.contentURL}}" tabindex="0">
+              <div class="csui-img-loader">
+                <div class="csui-img-loader-inner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="csui-img-box csui-gallery-original-icon binf-hidden">
+            <img src="{{this.contentURL}}" tabindex="0">
+          </div>
+        {{/if}}
+      </div>
+    {{/if}}
+  {{else}}
+    {{#if isVideo}}
+      <div class="binf-item binf-item-{{id}}">
+        {{#if originalAvailable}}
+          <div class="csui-video">
+            <video preload="none" poster="" controls="controls">
+              <source src="{{this.contentURL}}" type='{{this.videoType}}'>
+              </source>
+              {{this.videoNotSupportMsg}}
+            </video>
+          </div>
+        {{else}}
+          <div class="csui-video">
+            <video preload="none" poster="" controls="controls">
+              <source src="{{this.contentURL}}" type='{{this.videoType}}'>
+              </source>
+              {{this.videoNotSupportMsg}}
+            </video>
+            <div class="csui-img-loader">
+              <div class="csui-img-loader-inner"></div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    {{else}}
+      <div class="binf-item binf-item-{{id}}">
+        {{#if originalAvailable}}
+          <div class="csui-img-box csui-gallery-original-icon">
+            <img src="{{this.contentURL}}" tabindex="0">
+          </div>
+        {{else}}
+          <div class="csui-img-box csui-gallery-thumbnail-icon">
+            <div>
+              <img src="{{this.contentURL}}" tabindex="0">
+              <div class="csui-img-loader">
+                <div class="csui-img-loader-inner"></div>
+              </div>
+            </div>
+          </div>
+          <div class="csui-img-box csui-gallery-original-icon binf-hidden">
+            <img src="{{this.contentURL}}" tabindex="0">
+          </div>
+        {{/if}}
+      </div>
+    {{/if}}
+  {{/if}}
+{{/each}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

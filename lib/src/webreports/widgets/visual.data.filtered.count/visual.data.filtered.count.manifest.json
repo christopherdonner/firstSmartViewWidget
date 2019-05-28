@@ -1,0 +1,202 @@
+{
+    "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+    "title": "{{widgetTitle}}",
+    "description": "{{widgetDescription}}",
+    "kind": "header",
+    "supportedKinds": ["tile", "header"],
+    "schema": {
+        "type": "object",
+        "properties": {
+            "title": {
+                "title": "{{tileTitle}}",
+                "description": "{{tileDescription}}",
+                "type": "object"
+            },
+            "type": {
+                "title": "{{typeTitle}}",
+                "description": "{{typeDescription}}",
+                "type": "string",
+                "enum": ["bar","donut","pie"],
+                "default": "bar"
+            },
+            "id": {
+                "title": "{{sourceTitle}}",
+                "description": "{{sourceDescription}}",
+                "type": "integer"
+            },
+            "activeColumn": {
+                "title": "{{activeTitle}}",
+                "description": "{{activeDescription}}",
+                "type": "string"
+            },
+            "viewValueAsPercentage": {
+                "title": "{{percentTitle}}",
+                "description": "{{percentDescription}}",
+                "type": "boolean",
+                "enum": [
+                    true,
+                    false
+                ],
+                "default": false
+            },
+            "groupAfter": {
+                "title": "{{groupTitle}}",
+                "type": "integer",
+                "description": "{{groupDescription}}",
+                "enum": [-1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+                "default": -1
+            },
+            "sortBy": {
+                "title": "{{sortTitle}}",
+                "description": "{{sortDescription}}",
+                "type": "string",
+                "enum": ["ordinal","Count"],
+                "default": "Count"
+            },
+            "sortOrder": {
+                "title": "{{directionTitle}}",
+                "description": "{{directionDescription}}",
+                "type": "string",
+                "enum": ["desc","asc"],
+                "default": "desc"
+            },
+            "filterable": {
+                "title": "{{optionsTitle}}",
+                "description": "{{optionsDescription}}",
+                "type": "boolean",
+                "enum": [
+                    true,
+                    false
+                ],
+                "default": false
+            },
+            "expandable": {
+                "title": "{{expandedTitle}}",
+                "description": "{{expandedDescription}}",
+                "type": "boolean",
+                "enum": [
+                    true,
+                    false
+                ],
+                "default": false
+            },
+            "launchButtonConfig": {
+                "type": "object",
+                "title": "{{buttonTitle}}",
+                "description": "{{buttonDescription}}",
+                "properties": {
+                    "rowLimit": {
+                        "title": "{{maxTitle}}",
+                        "description": "{{maxDescription}}",
+                        "type": "integer"
+                    },
+                    "launchButtons": {
+                        "type": "array",
+                        "title": "{{customButtonTitle}}",
+                        "description": "{{customButtonDescription}}",
+                        "items": {
+                            "type": "object",
+                            "title": "{{addButtonTitle}}",
+                            "description": "{{addButtonDescription}}",
+                            "properties": {
+                                "launchButtonID": {
+                                    "title": "{{reportButtonTitle}}",
+                                    "description": "{{reportButtonDescription}}",
+                                    "type": "integer"
+                                },
+                                "launchButtonLabel": {
+                                    "title": "{{labelButtonTitle}}",
+                                    "description": "{{labelButtonDescription}}",
+                                    "type": "object"
+                                },
+                                "launchButtonTooltip": {
+                                    "title": "{{buttonToolTitle}}",
+                                    "description": "{{buttonToolDescription}}",
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "parameters": {
+                "type": "array",
+                "title": "{{paramSourceTitle}}",
+                "description": "{{paramSourceDescription}}",
+                "items": {
+                    "type": "object",
+                    "title": "{{paramPairTitle}}",
+                    "description": "{{paramPairDescription}}",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "title": "{{paramNameTitle}}",
+                            "description": "{{paramNameDescription}}"
+                        },
+                        "value": {
+                            "type": "string",
+                            "title": "{{paramValueTitle}}",
+                            "description": "{{paramValueDescription}}"
+                        }
+                    }
+                }
+            }
+        },
+        "required": ["activeColumn","id"]
+    },    
+    "options": {
+        "fields": {
+            "id": {
+                "type": "otcs_node_picker",
+                "type_control": {
+                    "parameters": {
+                        "select_types": [30303]
+                    }
+                }
+            },
+			"title": {
+				"type": "otcs_multilingual_string"
+			},
+            "launchButtonConfig": {
+                "fields": {
+                    "launchButtons": {
+                        "items": {
+                            "fields": {
+                                "launchButtonID": {
+                                    "type": "otcs_node_picker",
+                                    "type_control": {
+                                        "parameters": {
+                                            "select_types": [30303]
+                                        }
+                                    }
+                                },
+								"launchButtonLabel": {
+									"type": "otcs_multilingual_string"
+								},
+								"launchButtonTooltip": {
+									"type": "otcs_multilingual_string"
+								}
+                            }
+                        }
+                    }
+                }
+            },
+            "type": {
+                "type": "select",
+                "optionLabels": ["{{optionsTypeBar}}", "{{optionsTypeDonut}}", "{{optionsTypePie}}"]
+            },
+            "groupAfter": {
+                "type": "select",
+                "optionLabels": ["{{optionsGroupAfterDefault}}","2","3","4","{{optionsPieDonutDefault}}","6","7","8","9","10","11","12","13","14","{{optionsBarDefault}}","16","17","18","19","20"]
+            },
+            "sortBy": {
+                "type": "select",
+                "optionLabels": ["{{optionsSortByActive}}", "{{optionsSortByCount}}"]
+            },
+            "sortOrder": {
+                "type": "select",
+                "optionLabels": ["{{optionsSortOrderDsc}}", "{{optionsSortOrderAsc}}"]
+            }
+        }
+    }
+}

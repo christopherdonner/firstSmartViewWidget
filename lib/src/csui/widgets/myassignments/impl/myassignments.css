@@ -1,0 +1,11 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-assignments .tile-header {
+  cursor: pointer;
+
+}
+
+.binf-widgets .csui-myassignmentstable .csui-table-cell-name-appendix-full {
+  min-width: 0;
+  padding-left: 0;
+}

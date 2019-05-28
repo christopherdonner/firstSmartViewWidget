@@ -1,0 +1,126 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.chat-container {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+}
+
+.esoc-social-chat-widget {
+  width: 38.750em;
+  background-color: #ffffff;
+  border-radius: 3px;
+  z-index: 2000;
+  font-family: Lato;
+}
+
+.esoc-social-chat-title-bar {
+  width: 100%;
+  height: 3.750em;
+  margin: 0px;
+  padding: 0 1em;
+  line-height: 3.750em;
+}
+
+.esoc-social-chat-title-bar .esoc-social-chat-title {
+  float: left;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.50em;
+  color: #333333;
+}
+
+.esoc-social-chat-close-button {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/close_button.png") 0px 0px;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.esoc-social-chat-minimize-button:before {
+  cursor: pointer;
+  content: "\2212";
+  font-size: 25px;
+}
+
+.esoc-social-chat-circle {
+  background: url("../images/circle.png") 0px 0px;
+  width: 50px;
+  height: 50px;
+}
+
+.esoc-social-chat-icon {
+  background: url("../images/chat.png") 0px 0px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
+
+.esoc-social-chat-label {
+  position: absolute;
+  left: 10px;
+  font-family: Lato;
+  font-weight: 300;
+  font-style:Normal;
+  color: #ffffff;
+}
+
+.esoc-social-chat-minimized-icon {
+  position: fixed;
+  background-color: transparent;
+  cursor: pointer;
+  bottom: 25px;
+  left: 25px;
+}
+
+.esoc-social-chat-title-actions {
+  height: 3.75em;
+  float: right;
+  display: table;
+}
+
+.esoc-social-chat-body {
+  border-top: 1px solid #cfcfcf;
+}
+
+.esoc-social-contacts {
+  height: 450px;
+  background-color: #ffffff;
+  border-right: 1px solid #cfcfcf;
+}
+
+.esoc-social-chat-history {
+  height: 450px;
+  background-color: #ffffff;
+}
+
+.esoc-social-chat-contacts-footer {
+  height: 50px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.esoc-social-chat-contacts-list {
+  height: 400px;
+  overflow: auto;
+}
+
+.esoc-social-chat-history-footer {
+  height: 50px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.esoc-social-chat-history-body {
+  height: 400px;
+  overflow: auto;
+}
+
+.esoc-social-contact-item:hover, .esoc-social-add-contact:hover,
+.esoc-social-view-contacts:hover, .esoc-social-view-recent:hover {
+  cursor: pointer;
+}

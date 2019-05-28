@@ -1,0 +1,20 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"server_file_path": "C:\\wroutput\\WROutput.html"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text/html",
+			"http_method": "POST",
+			"output_destination": "server",
+			"run_in_background": true,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true,
+			"use_conversion_engine": false,
+			"xml_job_ticket_id": ""
+		}
+	}
+}

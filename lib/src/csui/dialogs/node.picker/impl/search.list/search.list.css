@@ -1,0 +1,50 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .searchheader-inner .csui-search-data-header {
+  margin: 0px;
+  padding-top: 5px;
+}
+
+.binf-widgets .searchheader-inner.csui-non-container-padding {
+  padding-top: 0px;
+}
+
+.csui-node-picker .searchheader-inner .csui-search-header .headerCount {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 1em;
+}
+
+.binf-widgets .csui-node-picker .searchheader-inner .csui-search-header {
+  position: relative;
+}
+
+.binf-widgets .csui-node-picker .searchheader-inner .csui-search-header-title {
+  display: inline-block;
+  font-weight: inherit;
+  font-size: 16px;
+  margin-left: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  margin-right: 0px;
+  width: auto;
+}
+
+.binf-widgets .csui-node-picker .csui-search-header-title .results-title {
+  line-height: 0px;
+}
+
+.binf-widgets .searchheader-inner .csui-search-header {
+  padding: 0px;
+  line-height: 16px;
+}
+
+.binf-widgets .csui-node-picker .csui-search-item .csui-search-item-name {
+  font-weight: normal;
+  overflow: hidden;
+}

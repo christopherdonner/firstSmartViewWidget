@@ -1,0 +1,7 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-truncate > div.csui-table-cell-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

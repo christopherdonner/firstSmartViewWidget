@@ -1,0 +1,285 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .wf-wfstatus .wfstatus-empty-list {
+
+  padding-top: 2.2rem;
+  text-align: center;
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #cccccc;
+  line-height: 1.5rem;
+  margin: 1.5rem 1rem 0 1rem;
+  vertical-align: middle;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-allcount,
+.binf-widgets .wfstatus-extended-view .wfstatus-ontimecount,
+.binf-widgets .wfstatus-extended-view .wfstatus-latecount,
+.binf-widgets .wfstatus-extended-view .wfstatus-completedcount {
+  border-radius: 0.5em;
+  padding: 0.25em 0.5em;
+  background-color: #c9f093;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-single-details .wfstatus-workflow-name {
+  padding-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.binf-widgets .wfstatus-single {
+  margin: 0 1rem 0 1.5rem;
+  color: #cccccc;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-completed-icon,
+.wfstatus-completed-icon {
+  background-image: url(image/icons/timeline_complete56.svg);
+}
+
+.binf-widgets .wfstatus-single .wfstatus-ontime-icon,
+.wfstatus-ontime-icon {
+  background-image: url(image/icons/timeline_current56.svg);
+}
+
+.binf-widgets .wfstatus-single .wfstatus-workflowlate-icon,
+.wfstatus-workflowlate-icon {
+  background-image: url(image/icons/status_late18.svg);
+}
+
+.binf-widgets .wfstatus-single .wfstatus-completed-icon,
+.binf-widgets .wfstatus-single .wfstatus-ontime-icon,
+.binf-widgets .wfstatus-single .wfstatus-workflowlate-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-status-info {
+  font-size: 1.5rem;
+  color: #cccccc;
+  line-height: 2rem;
+  text-align: center;
+  padding-top: 0.75rem;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-status-info .wfstatus-count-ontime {
+  color: #09bcef;
+  line-height: 1.5rem;
+  vertical-align: bottom;
+}
+
+.binf-widgets .wf-wfstatus .tile-header, .binf-widgets .icon-toolbarFilter {
+  cursor: pointer;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-status-info .wfstatus-count-completed {
+  color: #2ca02c;
+  line-height: 1.5rem;
+  vertical-align: bottom;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-status-info .wfstatus-count-workflowlate {
+  color: #f3794e;
+  line-height: 1.5rem;
+  vertical-align: bottom;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-status-info .wfstatus-msg {
+  vertical-align: middle;
+  line-height: 1.5rem;
+  color: #cccccc;
+  padding-right: 2rem;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-status-info .wfstatus-info {
+  color: #ffffff;
+  line-height: 1.5rem;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-date {
+  float: right;
+  display: inline-block;
+  font-style: italic;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-detail {
+  padding-top: 0.75rem;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-wfname-details {
+  padding-top: 1.5rem;
+  color: #cccccc;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-currentstep-details .wfstatus-step-name {
+  padding-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-detail .wfstatus-duedate {
+  color: #ffffff;
+  padding-top: 0.5rem;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-assignee-startdate .wfstatus-assignee-details {
+  width: 50%;
+  float: left;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-assignee-startdate .wfstatus-startdate-details {
+  width: 50%;
+  float: right;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-assignee-startdate .wfstatus-assignee-details .wfstatus-assignee {
+  color: #ffffff;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-assignee-startdate .wfstatus-startdate-details .wfstatus-start-date {
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+.binf-widgets .wfstatus-single .wfstatus-workflow-name,
+.binf-widgets .wfstatus-single .wfstatus-step-name,
+.binf-widgets .wfstatus-single .wfstatus-info,
+.binf-widgets .wfstatus-single .wfstatus-date,
+.binf-widgets .wfstatus-single .wfstatus-assignee {
+  line-height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #cccccc;
+}
+
+.binf-widgets .wf-wfstatus .tile-content {
+  background-color: #37474f;
+  overflow: hidden;
+  position: relative;
+}
+
+.binf-widgets .wfstatus-allcount,
+.binf-widgets .wfstatus-ontimecount,
+.binf-widgets .wfstatus-latecount,
+.binf-widgets .wfstatus-completedcount {
+  margin-left: 0.5rem;
+}
+
+.binf-widgets .tile-content .wfstatus-scrolling {
+  height: 100%;
+}
+
+.binf-widgets .wfstatus-table {
+  height: calc(100vh - 183px);
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.binf-widgets .wfstatus-filter-width {
+  width: 80%;
+}
+
+.binf-widgets .wfstatus-table #tableview {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  min-height: 5.625rem;
+}
+
+.binf-widgets .wfstatus-table .wfstatus-status-icon-col {
+  height: 1.69rem;
+  width: 1.37rem;
+  background-repeat: no-repeat;
+  background-position-y: 0.1rem;
+}
+
+.binf-widgets .wfstatus-table .wfstatus-status-col-value {
+  padding: 0.25rem 0rem 0rem 0.3rem;
+}
+
+.binf-widgets .wfstatus-table .wfstatus-status {
+  display: inline-flex;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view {
+  float: left;
+  width: 20%;
+  background-color: #f1f1f1;
+  display: none;
+  height: calc(100vh - 183px);
+  position: relative;
+  overflow: hidden;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-show-filter-view {
+  display: block;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view .wfstatus-body {
+  padding-left: 1rem;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view .wfstatus-panel-heading {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0 0 1rem 0.5rem;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view .binf-wfstatus-heading {
+  padding: 0.5rem;
+  background-color: #bac9ce;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view .wfstatus-header {
+  margin: 2rem 0 0 1.8rem;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view .wfstatus-body {
+  padding-left: 3rem;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view .csui-selected-checkbox input[type="checkbox"] {
+  opacity: 1;
+  margin-right: 0.5rem;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-filter-view .csui-selected-checkbox {
+  padding: 0.2rem;
+}
+
+.binf-widgets .wfstatus-table .dataTables_empty {
+  display: none
+}
+
+.binf-widgets .wf-wfstatus .tile-content div:focus,
+.binf-widgets .wf-wfstatus .tile-header div:focus {
+  outline: 1px dotted #ffffff;
+}
+
+.binf-widgets .wfstatus-extended-view .wfstatus-table .binf-table.dataTable > tbody > tr > td {
+  cursor: pointer;
+}
+
+.binf-widgets .content-tile.wf-wfstatus   {
+  background-color: #37474f;
+}
+
+@media only screen and (max-device-width: 768px) {
+	.binf-widgets .wfstatus-table .binf-table.dataTable>tbody{
+	  margin-bottom: 1rem
+	}
+}

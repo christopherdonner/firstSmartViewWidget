@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample comment controller</title>
+  <link rel="stylesheet" href="../../../../../csui/themes/carbonfiber/theme.css">
+  <script src="../../../../../csui/lib/require.js"></script>
+  <style>
+    .esoc-column-social-comment-wrapper {
+      width: auto !important;
+    }
+
+    #commentButtonDiv {
+      width: 100px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div id="commentButtonDiv"></div>
+
+<script data-csui-path="../../../../../csui" src="../../../../../csui/config.js"></script>
+<script src="../../../../../csui/helpers.js"></script>
+
+<script type="text/javascript">
+  require.config({
+    paths: {
+      esoc: '../../../../../src'
+    },
+    config: {
+      'csui/utils/contexts/factories/connector': {
+        connection: {
+          url: '//server/OTCS/livelink/api/v1/',
+          supportPath: '/img',
+          crossDomain: true
+        }
+      }
+    }
+  });
+  csui.onReady(['../commentdialog', 'csui/utils/contexts/page/page.context'],
+      function (CommentDialog, PageContext) {
+        var context = new PageContext(),
+            options = {
+              nodeid: "2000", // provide valid node id here
+              context: context,
+              placeholder: "#commentButtonDiv",
+              connection: {
+            url: '//server/OTCS/livelink/api/v1',
+                supportPath: '/img',
+                crossDomain: true
+              }
+            };
+        CommentDialog.getCommentButton(options);
+
+      }
+  );
+</script>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,79 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .csui-action-fields {
+    width: 100%;
+    float: left;
+    margin: 8px 0px 12px 0px;
+}
+
+.binf-widgets .csui-action-fields .cs-form.csui-general-form {
+    width: 100%;
+    min-height: auto !important;
+}
+.binf-widgets .csui-action-fields .general-information {
+    text-align: left;
+}
+.binf-widgets .csui-action-fields .action-field-label-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 16px 0 0;
+    vertical-align: top;
+    color: #757575;
+}
+
+.binf-widgets .csui-action-fields label {
+    padding: 0px;
+    text-align: right;
+
+}
+
+.binf-widgets .csui-action-fields .action-with-icon {
+    display: inline-block;
+    width: calc(60% - 40px);
+    padding: 0;
+}
+.binf-widgets .csui-action-fields .action-with-icon .csui-action-icon-container {
+    float: left;
+    margin-right: 6px;
+    border: 1px silver solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.binf-widgets .csui-action-fields .action-with-icon:hover .csui-action-icon-container {
+    background-color:silver;
+    border: 1px darkslategray solid;
+}
+
+.binf-widgets .csui-action-fields .action-with-icon .csui-action-icon-container:active {
+    background-color:slategray;
+}
+
+.binf-widgets .csui-action-fields .action-with-icon div.csui-action-icon.csui-icon.csui-collapse-expand-icon {
+    height: 20px;
+    margin-right: 13px;
+    margin-left: 1px;
+}
+.binf-widgets .csui-action-fields .action-with-icon span.csui-action-link {
+    line-height: 25px;
+    color: #1377bd;
+    cursor: pointer;
+}
+
+.binf-widgets .csui-action-fields .action-with-icon span.csui-action-link:hover {
+    text-decoration: underline;
+}
+
+.binf-widgets .csui-action-icon.csui-icon {
+    border-radius: 20px;
+    height: 24px;
+    width: 24px;
+}

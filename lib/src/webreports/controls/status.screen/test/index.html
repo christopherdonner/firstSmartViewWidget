@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>WebReport Run Form</title>
+
+	<link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+	<style>
+		#webreport-status-screen-demo {
+			background-color: #fff;
+		}
+	</style>
+
+	<script src="../../../../csui/lib/require.js"></script>
+	<script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+
+	<script>
+
+		require.config({
+			deps: [
+				'csui/lib/require.config!csui/csui-extensions.json'
+			]
+		});
+
+		require.config({
+			paths: {
+				webreports: '../../../'
+			},
+			config: {
+				'csui/utils/contexts/factories/connector': {
+					connection: {
+						url: '//server/cgi/cs.exe/api/v1',
+						supportPath: '/support',
+						credentials: {
+							username: 'Admin',
+							password: 'livelink'
+						}
+					}
+				}
+			}
+		});
+
+		require(['csui/lib/underscore', 'csui/lib/marionette', 'csui/utils/contexts/page/page.context',  'csui/utils/contexts/factories/connector',
+			'csui/controls/globalmessage/globalmessage',
+			'webreports/controls/status.screen/status.screen.view',
+			'webreports/models/run.webreport.pre/run.webreport.pre.model',
+			'webreports/models/run.webreport/run.webreport.model',
+			'./status.screen.mock.js'
+		], function (_, Marionette, PageContext, ConnectorFactory, GlobalMessage, StatusScreenView, WebReportRunModelPre, WebReportRunModel, WRMock) {
+
+			var statusView,
+				context = new PageContext(),
+				connector = context.getObject(ConnectorFactory),
+				region = new Marionette.Region({el: "#webreport-status-screen-demo"}),
+				attributes = { id: 678823 },
+				options = { connector: connector, id: 678823 },
+				WRRunPreModel = new WebReportRunModelPre(attributes, options),
+				WRRunModel = new WebReportRunModel(attributes, options);
+
+			WRMock.enable();
+
+			WRRunPreModel
+					.fetch()
+					.done( function(){
+
+						WRRunModel
+							.fetch()
+							.done( function(){
+
+								statusView = new StatusScreenView({
+									destinationModel: WRRunPreModel.destinationModel,
+									executeModel: WRRunModel
+								});
+
+								region.show(statusView);
+							});
+					});
+
+		});
+	</script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid binf-grid-rows">
+	<div class="binf-row">
+		<div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12 binf-row-xs-full" id="webreport-status-screen-demo"></div>
+	</div>
+</div>
+
+</body>
+
+</html>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

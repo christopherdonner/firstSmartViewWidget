@@ -1,0 +1,74 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .title-input {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 3px;
+  border: solid 1px #757575;
+}
+
+.title-header {
+  display: inline;
+}
+
+.title-input.csui-empty-with-placeholder {
+  color: #666666;
+  font-weight: normal;
+  font-style: italic;
+  border-radius: 2px;
+  border: solid 2px #cccccc;
+}
+
+.title.csui-empty-with-placeholder {
+  color: #666666;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.title-edit-div:focus,
+.title-edit-div .title-input:focus,
+.title-edit-icon-div .inline-edit-icon:focus {
+  outline-style: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: 2px solid #666666;
+}
+
+.csui-toggle-wrapper {
+  display:flex;
+}
+
+.csui-toggle-wrapper .cs-go-back {
+  width: 18px;
+  height: 18px;
+  margin: 8px 14px 5px 0px;
+  cursor: pointer;
+}
+
+.binf-widgets .cs-metadata-item-name {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.binf-widgets .cs-metadata-item-name .csui-toggle-wrapper {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.binf-widgets .cs-metadata-item-name .title-header {
+  width: auto;
+}
+
+.binf-widgets .cs-metadata-item-name .csui-icon.csui-metadata-listview.csui-metadata-listview-expand-icon,
+.binf-widgets .cs-metadata-item-name .csui-icon.csui-metadata-listview.csui-metadata-listview-collapse-icon {
+  margin-top: 0px;
+}
+
+.binf-widgets .cs-metadata-item-name.csui-fadeout:after {
+  right: 20px;
+}
+
+.binf-widgets .metadata-header .cs-metadata-item-name .title-edit-div {
+  display: flex;
+  flex-shrink: 0;
+}

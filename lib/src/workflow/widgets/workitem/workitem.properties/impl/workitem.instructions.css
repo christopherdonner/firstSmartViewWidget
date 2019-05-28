@@ -1,0 +1,266 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .workitem-instructions .workitem-instructions-text {
+    font: italic 0.875em Lato;
+    font-size: 100%;
+    width: calc(100% - 2.43rem);
+    display: inline-block;
+}
+
+.binf-widgets .workflow-workitem-properties-instructions .csui-button-icon ,
+.binf-widgets .workitem-extended-view-mode > a {
+    float: right;
+}
+
+.binf-widgets .workitem-see-more-content {
+    max-height: 1.187rem;
+    line-height: 0.75rem;
+}
+
+.binf-widgets .workitem-instructions .workitem-see-less-instruction:hover,
+.binf-widgets .workitem-instructions .workitem-see-more-instruction:hover {
+    text-decoration: none;
+}
+
+.binf-widgets .workitem-hide-element {
+    display: none;
+}
+
+.binf-widgets .workitem-extended-view-mode {
+    padding: 0rem .625rem 0rem 0rem;
+}
+
+.binf-widgets .workitem-instructions span:focus {
+    outline: 1px dotted #333333;
+    outline-offset: -1px;
+    height: 1.125rem;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text img {
+    max-width: 100%;
+    height: auto;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text table, .binf-widgets .workitem-instructions .workitem-instructions-text img {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text {
+    font-size: 16px;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text a,
+.binf-widgets .workitem-instructions .workitem-instructions-text abbr,
+.binf-widgets .workitem-instructions .workitem-instructions-text acronym {
+    border-bottom: 1px dotted #666;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text address {
+    margin: 0 0 1.5em;
+    font-style: italic;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text applet,
+.binf-widgets .workitem-instructions .workitem-instructions-text article,
+.binf-widgets .workitem-instructions .workitem-instructions-text aside,
+.binf-widgets .workitem-instructions .workitem-instructions-text audio,
+.binf-widgets .workitem-instructions .workitem-instructions-text b,
+.binf-widgets .workitem-instructions .workitem-instructions-text strong,
+.binf-widgets .workitem-instructions .workitem-instructions-text dfn {
+    font-weight: bold;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text blockquote,
+.binf-widgets .workitem-instructions .workitem-instructions-text canvas,
+.binf-widgets .workitem-instructions .workitem-instructions-text big {
+    font-size: larger;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text caption,
+.binf-widgets .workitem-instructions .workitem-instructions-text td,
+.binf-widgets .workitem-instructions .workitem-instructions-text th {
+    padding: 4px 10px 4px 5px;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text center,
+.binf-widgets .workitem-instructions .workitem-instructions-text cite,
+.binf-widgets .workitem-instructions .workitem-instructions-text code {
+    line-height: 1.5;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text dd {
+    margin-left: 1.5em;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text dd,
+.binf-widgets .workitem-instructions .workitem-instructions-text del {
+    color: #666;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text details,
+.binf-widgets .workitem-instructions .workitem-instructions-text div,
+.binf-widgets .workitem-instructions .workitem-instructions-text dl {
+    margin: 0 0 1.5em 0;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text dl dt {
+    font-weight: bold;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text dt,
+.binf-widgets .workitem-instructions .workitem-instructions-text em,
+.binf-widgets .workitem-instructions .workitem-instructions-text i {
+    font-style: italic;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text embed,
+.binf-widgets .workitem-instructions .workitem-instructions-text fieldset {
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text li,
+.binf-widgets .workitem-instructions .workitem-instructions-text mark,
+.binf-widgets .workitem-instructions .workitem-instructions-text menu,
+.binf-widgets .workitem-instructions .workitem-instructions-text nav,
+.binf-widgets .workitem-instructions .workitem-instructions-text object,
+.binf-widgets .workitem-instructions .workitem-instructions-text output,
+.binf-widgets .workitem-instructions .workitem-instructions-text p {
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text pre {
+    margin: 1.5em 0;
+    white-space: pre;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text s,
+.binf-widgets .workitem-instructions .workitem-instructions-text samp,
+.binf-widgets .workitem-instructions .workitem-instructions-text section,
+.binf-widgets .workitem-instructions .workitem-instructions-text span,
+.binf-widgets .workitem-instructions .workitem-instructions-text strike,
+.binf-widgets .workitem-instructions .workitem-instructions-text small {
+    font-size: small;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text sup,
+.binf-widgets .workitem-instructions .workitem-instructions-text sub {
+    line-height: 0;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text sup {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text sub {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text table {
+    margin-bottom: 1.4em;
+    width: 100%;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text tfoot {
+    font-style: italic;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text th {
+    font-weight: bold;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text thead,
+.binf-widgets .workitem-instructions .workitem-instructions-text tr,
+.binf-widgets .workitem-instructions .workitem-instructions-text tt {
+    line-height: 1.5;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text u,
+.binf-widgets .workitem-instructions .workitem-instructions-text li ul,
+.binf-widgets .workitem-instructions .workitem-instructions-text li ol {
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text ul {
+    list-style: circle;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text ol {
+    list-style-type: decimal;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text ul,
+.binf-widgets .workitem-instructions .workitem-instructions-text ol {
+    border: 0;
+    margin: 0 24px 24px 24px;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text q {
+    quotes: inherit;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text q:before {
+    content: open-quote;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-texty q:after {
+    content: close-quote;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 1em;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text h4 {
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin-bottom: 1.25em;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text h5 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    border: 0;
+}
+
+.binf-widgets .workitem-instructions .workitem-instructions-text h6 {
+    font-size: 1em;
+    font-weight: bold;
+    border: 0;
+}

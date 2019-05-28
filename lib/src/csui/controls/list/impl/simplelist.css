@@ -1,0 +1,176 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-simplelist {
+  min-width: 15.4em;
+  
+}
+
+
+
+.binf-widgets .cs-simplelist.binf-panel {
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  margin: 0;
+}
+
+.binf-widgets .cs-simplelist .binf-panel-heading {
+  height: calc(4rem - 1px);
+  background-color: #f1f1f1;
+  font-weight: 300;
+  border: 0;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+}
+
+.binf-widgets .cs-simplelist .cs-header-with-go-back {
+  cursor: pointer;
+  display: table;
+  table-layout: fixed;
+  padding-left: 1.4rem;
+}
+
+.binf-widgets .cs-simplelist .cs-go-back {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  display: table-cell;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  float: none;
+  vertical-align: middle;
+  margin: 0 0 0 1px;
+  cursor: pointer;
+}
+
+.binf-widgets .cs-simplelist .cs-title {
+  font-size: 1.5rem;
+  display: inline-block;
+  transform: translateY(35%);
+  -moz-transform: translateY(35%);
+  -webkit-transform: translateY(35%);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 110%;
+}
+
+.binf-widgets .cs-simplelist .cs-title-with-go-back {
+  transform: translateY(25%);
+  -moz-transform: translateY(25%);
+  -webkit-transform: translateY(25%);
+  cursor: pointer;
+  width: calc(100% - 30px); 
+  margin-left: 0.875rem;
+  vertical-align: middle;
+  
+  table-layout: fixed;
+}
+
+
+
+
+.binf-widgets .binf-widgets .cs-simplelist .ps-scrollbar-y-rail,
+.binf-widgets .cs-simplelist .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  z-index: 8;
+}
+
+.binf-widgets .cs-simplelist .cs-content {
+  position: relative;
+  height: calc(100% - 4.5em); 
+  width: calc(100% + 1em); 
+  z-index: 5;
+}
+
+.binf-widgets .cs-simplelist .cs-content.csui-normal-scrolling {
+	width: 100%;
+}
+
+.binf-widgets .cs-simplelist .binf-list-group-item {
+  padding: 0 2rem 0 0.75rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 0;
+  width: 100%;
+  height: calc(3rem - 2px);
+  border-left: 4px solid transparent;
+}
+
+.binf-widgets .cs-simplelist .cs-list-group div.binf-list-group-item span.csui-type-icon.csui-icon {
+  height: 46px;
+}
+
+.binf-widgets .cs-simplelist .binf-active .binf-list-group-item {
+  border-radius: 0;
+  border-left: 4px solid #7b9ab0;
+  background-color: #dfe7ea;
+  padding-left: 0.75rem;
+  color: #333333;
+  position: relative;
+}
+
+.binf-widgets .cs-simplelist .cs-list-group a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #323232;
+  text-decoration: none;
+  width: calc(100% - 0.875em); 
+  border: 1px dotted transparent;
+}
+
+.cs-simplelist .cs-list-group a:focus,
+.binf-widgets .cs-simplelist .cs-list-group a.binf-active:focus {
+  border: 1px dotted #333333;
+}
+
+.binf-widgets .cs-simplelist .cs-list-group a.binf-active {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: 9;
+  
+}
+
+.binf-widgets .cs-simplelist .cs-list-group a.binf-active.active-item-disable {
+  pointer-events: none;
+  cursor:default;
+}
+
+.binf-widgets .cs-list-group .csui-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.binf-widgets .cs-list-group .list-item-title {
+  line-height: 3em;
+  height: 3em;
+  top: 0px;
+  width: calc(100% - 60px);
+  position: absolute;
+  left: 50px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .cs-list-group li:hover {
+  background-color: #bac9ce;
+}
+
+
+
+.binf-widgets .arrow-overlay {
+  position: absolute;
+  z-index: 9;
+  right: -12px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 23px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-left: 0.875em solid #dfe7ea;
+}

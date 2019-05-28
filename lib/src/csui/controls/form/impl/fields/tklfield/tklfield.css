@@ -1,0 +1,119 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-form .alpaca-container-item > .binf-form-group.alpaca-field-tkl > .binf-col-sm-9 {
+  overflow: visible;
+  
+  padding: 0;
+}
+
+.binf-widgets .cs-tklfield-select {
+  width: 100%;
+  position: relative;
+}
+
+.cs-tkl-search-box {
+  position: relative;
+}
+
+.cs-tkl-search-box input {
+  border: 1px solid #a7a9ac;
+
+  border-radius: 3px;
+  padding-right: 22px;
+  height: 28px;
+}
+
+.cs-tkl-search-box:after {
+  content: '';
+  position:absolute;
+  pointer-events: none;
+  top:7px;
+  right:10px;
+  height: 12px;
+  width: 12px;
+  display: block;
+  background: url('../../../../../themes/carbonfiber/image/icons/search.svg') no-repeat center;
+}
+
+.cs-tkl-search-box input:focus {
+  border: 2px solid #666666;
+}
+
+.cs-tkl-search-box input:focus {
+  outline: none;
+}
+
+.cs-tkl-searchbox {
+  position: relative;
+}
+
+.cs-tkl-search-box .csui-icon-tkl-search {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+.binf-widgets .cs-tklfield-select ul {
+  padding: 5px 0;
+}
+
+.cs-tkl-options-container {
+  display: none;
+  box-shadow: #cccccc 0 0 8px;
+  position: absolute;
+  z-index: 1002;
+  background: #ffffff;
+  width: 100%;
+}
+
+
+.cs-tkl-options li {
+  color: #333333;
+}
+
+.cs-tkl-options > li:not(.cs-tkl-no-result):hover, .binf-widgets .cs-tkl-options > li.active {
+  background: #bdcdd8;
+}
+
+.binf-widgets .cs-tkl-options > li > a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 3px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cs-tkl-options > li:hover a {
+  color: inherit;
+}
+
+.binf-widgets .cs-tklfield .cs-tkl-options .cs-tkl-selected {
+  background: #1074bc;
+  color: #ffffff;
+}
+
+.cs-tkl-selected {
+  background: #1074bc;
+  color: #ffffff;
+}
+
+.cs-tkl-options > .cs-tkl-no-result {
+  color: #00659a;
+  background: none;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.binf-widgets .cs-tkl-options > .cs-tkl-no-result > a{
+  cursor: text;
+}
+
+.cs-tkl-dropup {
+  top: auto;
+  bottom: 100%;
+}

@@ -1,0 +1,19 @@
+<div role="heading" aria-level="3" aria-label="Add favorite">
+<label for="{{name_input_id}}" class='favorite-name-label'>{{name_label}}</label>
+<input id="{{name_input_id}}" class='favorite-name-input binf-form-control' type='text' placeholder='{{name_place_holder}}' value='{{favorite_name}}'>
+<div class='favorite-name-input-error-div'>
+  <span class='favorite-name-input-error'></span>
+</div>
+
+{{#if groups}}
+  <label for="grpSelectId" class='favorite-group-label'>{{group_label}}</label>
+  <div class='favorite-groups-container'></div>
+{{/if}}
+
+<div class='favorite-buttons-container'>
+  <button title="{{add_button_label}}" class='add-btn binf-btn binf-btn-primary binf-btn-default'>{{add_button_label}}</button>
+  <button title="{{cancel_button_label}}" class='cancel-btn binf-btn binf-btn-default'>{{cancel_button_label}}</button>
+</div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,131 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-collection-conflicts-dialog .binf-modal-content .cs-close .cs-icon-cross {
+  display: none;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .tile-header .csui-heading.tile-title.binf-modal-title {
+  margin-left: 15px;
+  font-family: Lato, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .binf-modal-body {
+  font-style: oblique;
+  padding: 0;
+  overflow: hidden;
+  flex: 1 1000 auto;
+  -ms-flex: 1 1000 auto;
+  -webkit-flex: 1 1000 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  margin: 0;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .binf-modal-body .csui-conflicts-items-data {
+  width: calc(100% - 24px);
+  padding: 10px 0;
+  margin-left: 24px;
+  height: 100%;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .binf-modal-body .csui-conflicts-items-data .csui-collection-conflicts-title {
+  line-height: 24px;
+  font-weight: 500;
+  bottom: 5px;
+  position: relative;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .binf-modal-body .csui-conflicts-items-data ul {
+  height: 100%;
+}
+
+.binf-widgets .csui-collection-conflict-items li {
+  vertical-align: middle;
+  color: #323232;
+  text-decoration: none;
+}
+
+.binf-widgets .csui-collection-conflict-items li.csui-conflict-item {
+  width: calc(100% - 36px);
+  font-style: normal;
+  border-radius: 0;
+  padding: 6px 0;
+  border-top: 1px none #f5f5f5;
+  background-color: #ffffff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.binf-widgets .csui-collection-conflict-items .csui-icon-group {
+  float: left;
+  height: 28px;
+  width: 28px;
+}
+
+.binf-widgets .csui-collection-conflict-items .item-name {
+  font-size: 14px;
+  line-height: 26px;
+  padding-left: 12px;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .tile-header.binf-modal-header {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #cccccc;
+  height: 3.5em;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  width: 100%;
+  display: table;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .tile-title .csui-heading {
+  line-height: 56px;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .tile-header.binf-modal-header .csui-icon-notification-information {
+  float: left;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 28px;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .csui-icon-group .csui-icon {
+  height: 28px;
+  width: 28px;
+}
+
+.binf-widgets .csui-collection-conflicts-dialog .binf-modal-footer {
+  background-color: #f5f5f5;
+  padding: 0.75rem 1.5rem;
+  border-top: 2px solid #cccccc;
+}
+
+.cs-dialog.csui-collection-conflicts-dialog {
+  overflow: auto;
+}
+
+.csui-collection-conflicts-dialog .binf-modal-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.cs-dialog.csui-collection-conflicts-dialog .binf-modal-dialog {
+  margin-top: 96px;
+}

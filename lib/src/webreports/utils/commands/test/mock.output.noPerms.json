@@ -1,0 +1,24 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"category_names": "",
+				"create_in_id": 678795,
+				"duplicate_name_action": "addver",
+				"export_type": "node",
+				"node_description": "",
+				"node_name": "SomeOutput.html",
+				"node_type": "doc"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text/html",
+			"http_method": "POST",
+			"output_destination": "node",
+			"run_in_background": false,
+			"show_status_screen": true,
+			"use_conversion_engine": false,
+			"xml_job_ticket_id": ""
+		},
+		"node_id": 678795
+	}
+}

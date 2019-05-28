@@ -1,0 +1,15 @@
+<div {{#if show_input}}class="search-box csui-table-searchbox" {{else}}class="search-box csui-table-searchbox
+binf-hidden"{{/if}}>
+  <input type="search" class="csui-table-search-input" placeholder="{{search_placeholder}}"
+         title="{{search_placeholder}}" value="{{search_value}}">
+         <span class="fadeout csui-icon" title="{{search_placeholder}}" style="display: inline-block;"></span>
+  <span class="sbclearer formfield_clear" role="button" aria-expanded="false"
+        title="{{search_clear_icon_tooltip}}" aria-label="{{search_clear_icon_tooltip}}"></span>
+</div>
+<div class="csui-table-search-icon" role="button" aria-expanded="false"
+     aria-label="{{search_icon_tooltip}}" title="{{search_icon_tooltip}}">
+  <span class="icon icon-search"></span>
+</div>
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

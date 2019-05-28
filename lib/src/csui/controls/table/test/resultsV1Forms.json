@@ -1,0 +1,61 @@
+{
+"forms": [
+    {
+      "schema": {
+        "properties": {
+          "name": {
+            "maxLength": 248,
+            "minLength": 1,
+            "readonly": false,
+            "required": true,
+            "title": "Name",
+            "type": "string"
+          },
+          "description": {
+            "readonly": false,
+            "required": false,
+            "title": "Description",
+            "type": "string"
+          },
+          "create_date": {
+            "readonly": true,
+            "required": false,
+            "title": "Created",
+            "type": "string"
+          },
+          "create_user_id": {
+            "readonly": true,
+            "required": false,
+            "title": "Created By",
+            "type": "string"
+          },
+          "type": {
+            "readonly": true,
+            "required": false,
+            "title": "Type",
+            "type": "integer"
+          },
+          "type_name": {
+            "readonly": true,
+            "required": false,
+            "title": "Type",
+            "type": "string"
+          },
+          "modify_date": {
+            "readonly": true,
+            "required": false,
+            "title": "Modified",
+            "type": "string"
+          },
+          "owner_user_id": {
+            "readonly": true,
+            "required": false,
+            "title": "Owned By",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+]
+}

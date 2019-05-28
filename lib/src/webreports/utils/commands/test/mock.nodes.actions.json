@@ -1,0 +1,656 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "\/api\/v2\/nodes\/actions?actions=addcategory&actions=addversion&actions=copy&actions=delete&actions=edit&actions=rename&actions=move&actions=properties&actions=reserve&actions=unreserve&ids=348554&ids=348549&ids=381739&ids=381738&ids=348547&ids=348006&ids=348032&ids=348033&ids=348034",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"348006": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348006\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348006\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=348006",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348006",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=348006",
+					"href": "\/api\/v2\/nodes\/348006",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348006",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=348006",
+					"href": "\/api\/v2\/nodes\/348006",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348006",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "GetParameters",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		},
+		"348032": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348032\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348032\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=348032",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348032",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"edit": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "func=Edit.Edit&nodeid=348032&uiType=2",
+					"method": "GET",
+					"name": "Edit"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=348032",
+					"href": "\/api\/v2\/nodes\/348032",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348032",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=348032",
+					"href": "\/api\/v2\/nodes\/348032",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348032",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "open",
+				"more": ["properties"]
+			},
+			"order": ["edit", "addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		},
+		"348033": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348033\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348033\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=348033",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348033",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"edit": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "func=Edit.Edit&nodeid=348033&uiType=2",
+					"method": "GET",
+					"name": "Edit"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=348033",
+					"href": "\/api\/v2\/nodes\/348033",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348033",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=348033",
+					"href": "\/api\/v2\/nodes\/348033",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348033",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "open",
+				"more": ["properties"]
+			},
+			"order": ["edit", "addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		},
+		"348034": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348034\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348034\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=348034",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348034",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=348034",
+					"href": "\/api\/v2\/nodes\/348034",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348034",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=348034",
+					"href": "\/api\/v2\/nodes\/348034",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348034",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "open",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		},
+		"348547": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348547\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348547\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=348547",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348547",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=348547",
+					"href": "\/api\/v2\/nodes\/348547",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348547",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=348547",
+					"href": "\/api\/v2\/nodes\/348547",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348547",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "GetParameters",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		},
+		"348549": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348549\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348549\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=348549",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348549",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=348549",
+					"href": "\/api\/v2\/nodes\/348549",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348549",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=348549",
+					"href": "\/api\/v2\/nodes\/348549",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348549",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "GetParameters",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		},
+		"348554": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348554\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348554\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=348554",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348554",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=348554",
+					"href": "\/api\/v2\/nodes\/348554",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348554",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=348554",
+					"href": "\/api\/v2\/nodes\/348554",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/348554",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "GetParameters",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		},
+		"381738": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381738\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381738",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381738",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=381738",
+					"href": "\/api\/v2\/nodes\/381738",
+					"method": "PUT",
+					"name": "Rename"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addcategory", "rename", "delete"]
+		},
+		"381739": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381739\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381739\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=381739",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381739",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=381739",
+					"href": "\/api\/v2\/nodes\/381739",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381739",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=381739",
+					"href": "\/api\/v2\/nodes\/381739",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/381739",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "GetParameters",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete"]
+		}
+	}
+}

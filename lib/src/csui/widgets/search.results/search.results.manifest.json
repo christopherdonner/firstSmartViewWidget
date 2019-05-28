@@ -1,0 +1,26 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "fullpage",
+  "schema": {},
+  "options": {},
+  "actions": [
+    {
+      "toolItems": "csui/widgets/search.results/toolbaritems",
+      "toolItemMasks": "csui/widgets/search.results/toolbaritems.masks",
+      "toolbars": [
+        {
+          "id": "otherToolbar",
+          "title": "{{otherToolbarTitle}}",
+          "description": "{{otherToolbarDescription}}"
+        },
+        {
+          "id": "inlineToolbar",
+          "title": "{{inlineToolbarTitle}}",
+          "description": "{{inlineToolbarDescription}}"
+        }
+      ]
+    }
+  ]
+}

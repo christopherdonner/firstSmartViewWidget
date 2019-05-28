@@ -1,0 +1,114 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.binf-widgets .cs-thumbnail-wrapper .csui-table-cell-_select {
+  width: calc(2.5em + 18px);
+  min-width: calc(2.5em + 18px);
+  vertical-align: bottom;
+  text-overflow: clip;
+  text-align: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .binf-table.dataTable > thead > tr > th.csui-table-cell-_select,
+.binf-widgets .cs-thumbnail-wrapper .binf-table.dataTable > tbody > tr > td.csui-table-cell-_select {
+  text-overflow: clip;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox {
+  position: relative;
+  align-items: center;
+  line-height: initial;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox .csui-selectlabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox .csui-selectlabel:focus {
+  box-shadow: 0 0 0 1px #333333;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox .csui-selectlabel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  outline: 0;
+  cursor: pointer;
+  background-image: url('images/checkbox.svg');
+ }
+
+ .binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox input[disabled] + .csui-selectlabel::before {
+  cursor: default;
+  background-image: url('images/checkbox_disabled.svg');
+ }
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox .csui-selectlabel::after {
+  display: inline-block;
+  position: absolute;
+  color: #ffffff;
+  background-color: #666666;
+  width: 18px;
+  height: 18px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox.csui-checkbox-atleastone .csui-selectlabel::before {
+  background: url('images/checkbox_mixed.svg');
+ }
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox.csui-checkbox-atleastone {
+  background-color: #ffffff;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox.csui-checkbox-selectAll input[type="checkbox"]:checked + .csui-selectlabel::after {
+  background: url('images/checkbox_all_selected.svg');
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox input[type="checkbox"]:checked + .csui-selectlabel::after {
+  font-family: "FontAwesome";
+  content: "";
+  background: url('images/checkbox_selected.svg');
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox input[type="checkbox"]:disabled {
+  cursor: default;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-selected-checkbox input[type="checkbox"]:checked + .csui-selectlabel::before {
+  background-color: transparent;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-checkbox-primary input[type="checkbox"]:checked + .csui-selectlabel::after {
+  border-radius: 3px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-search-item-check .csui-checkbox-primary input[type="checkbox"] + .csui-selectlabel:focus,
+.binf-widgets .cs-thumbnail-wrapper .csui-search-item-check .csui-checkbox-primary input:focus + .csui-selectlabel {
+  border-color: #337ab7;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-checkbox-primary input[type="checkbox"]:checked + .csui-selectlabel:hover::before {
+  border: 1px solid #cccccc;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-checkbox-primary input[type="checkbox"]:disabled + .csui-selectlabel:hover::before {
+  border: none;
+}

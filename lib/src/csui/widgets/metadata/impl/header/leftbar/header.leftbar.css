@@ -1,0 +1,12 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.metadata-header-left-bar .cs-go-back {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-top: calc((4rem - 18px)/2);
+  margin-left: calc((3em - 18px)/2);
+  cursor: pointer;
+}

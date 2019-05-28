@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Table Report Widget</title>
+
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+  <style>
+    .binf-widgets .webreports-table-report-container {
+      padding: 30px;
+    }
+
+  </style>
+  <script src="../../../../csui/lib/require.js"></script>
+  <script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+  <script>
+    require.config({
+        deps: [
+            'csui/lib/require.config!csui/csui-extensions.json'
+        ]
+    });
+
+    require.config({
+      paths: {
+        webreports: '../../..'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/cgi/cs.exe/api/v1',
+            supportPath: '/the_main_img',
+            credentials: {
+              username: 'Admin',
+              password: 'livelink'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../table.report.view.js', './table.report.mock.data.js'
+    ], function (Marionette, PageContext, TableReportView, mock) {
+
+      var   tableReportContentRegion = new Marionette.Region({el: '#webreports-table-report-region'}),
+            pageContext   = new PageContext(),
+            tableReportView = new TableReportView({
+				context: pageContext,
+				data: {
+                    id: 24024,
+                    sortBy: "SubType",
+                    SortOrder: "ASC",
+                    columnsWithSearch: "SubType",
+                    titleBarIcon: 'mime_audio',
+                    title: 'Sample WebReports Table',
+                    header: true,
+                    swrLaunchCell: {
+                        id: 12345,
+                        iconClass: 'my-icon-class',
+                        hoverText: 'Some alt text for my icon.'
+                    },
+                    parameters: [
+                        {
+                            name: 'myparm1',
+                            value: 'val1'
+                        },
+                        {
+                            name: 'myparm2',
+                            value: 'val2'
+                        }
+                    ]
+				}
+			});
+        
+      tableReportContentRegion.show(tableReportView);
+      mock.enable();
+      pageContext.fetch();
+
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+  <div class="binf-container-fluid grid-rows">
+    <div class="binf-row">
+      <div class="webreports-table-report-container" >
+        <div id="webreports-table-report-region"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

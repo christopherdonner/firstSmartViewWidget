@@ -1,0 +1,94 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "/api/v2/nodes/683231?actions=addcategory&actions=addversion&actions=open&actions=copy&actions=delete&actions=download&actions=edit&actions=editactivex&actions=rename&actions=move&actions=permissions&actions=properties&actions=reserve&actions=unreserve&expand=properties{original_id}&fields=properties",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"actions": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/683231/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"open": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/683231/nodes",
+					"method": "GET",
+					"name": "Open"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/683231",
+					"method": "GET",
+					"name": "Properties"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": [
+					"properties"
+				]
+			},
+			"order": [
+				"open",
+				"addcategory"
+			]
+		},
+		"data": {
+			"properties": {
+				"container": true,
+				"container_size": 1,
+				"create_date": "2017-11-15T13:16:05",
+				"create_user_id": 1000,
+				"description": "",
+				"description_multilingual": {
+					"en_US": "",
+					"fr": ""
+				},
+				"external_create_date": null,
+				"external_identity": "",
+				"external_identity_type": "",
+				"external_modify_date": null,
+				"external_source": "",
+				"favorite": false,
+				"id": 683231,
+				"mime_type": null,
+				"modify_date": "2017-11-29T15:20:11",
+				"modify_user_id": 1000,
+				"name": "My Initiated Workflow-683235",
+				"name_multilingual": {
+					"en_US": "My Initiated Workflow-683235",
+					"fr": "My Initiated Workflow-683235"
+				},
+				"owner_group_id": 1001,
+				"owner_user_id": 1000,
+				"parent_id": 2023,
+				"permissions_model": "advanced",
+				"reserved": false,
+				"reserved_date": null,
+				"reserved_user_id": 0,
+				"size": 1,
+				"size_formatted": "1 Item",
+				"type": 154,
+				"type_name": "Workflow Attachments",
+				"versions_control_advanced": false,
+				"volume_id": -2023
+			}
+		}
+	}
+}

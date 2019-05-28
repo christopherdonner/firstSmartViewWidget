@@ -1,0 +1,27 @@
+{{#if header}}
+    <div class="tile-header">
+
+        {{#if icon}}
+            <div class="tile-type-icon">
+                <span class="icon {{icon}}" aria-hidden="true"></span>
+            </div>
+        {{else}}
+            {{#if imageUrl}}
+                <div class="tile-type-image {{imageClass}}">
+                    <img src="{{imageUrl}}" aria-hidden="true">
+                </div>
+            {{/if}}
+        {{/if}}
+
+        <div class="tile-title">
+             <h2 class="csui-heading">{{title}}</h2>
+        </div>
+
+    </div>
+{{/if}}
+
+<div class="webreports-nodestablereport-view">
+    <div id="tableview"></div>
+    <div id="paginationview"></div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

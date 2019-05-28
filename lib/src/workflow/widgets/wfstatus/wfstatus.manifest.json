@@ -1,0 +1,64 @@
+ {
+"$schema":"http://opentext.com/cs/json-schema/draft-04/schema#",
+"title":"{{title}}", 
+  "description":"{{description}}", 
+  "kind":"tile", 
+  "schema": {
+    "type":"object", 
+    "required":false, 
+    "properties": {
+      
+      "widgetTitle": {
+        "title":"{{workflowtrackingwidgetTitle}}", 
+        "description":"{{workflowtrackingwidgetTitleDescription}}", 
+        "readonly":false, 
+        "required":true, 
+        "default":"{{title}}", 
+        "type":"string"
+      }, 
+     
+      "retention": {
+          "title":"{{displayCompletedWorkflows}}", 
+          "description":"{{displayCompletedWorkflowsDescription}}", 
+          "readonly":false, 
+          "required":false, 
+          "default":30, 
+          "type":"integer"
+        }, 
+      "filterWorkflowtype": {
+          "title":"{{workflowTypeTitle}}", 
+          "description":"{{workflowTypeDescription}}", 
+          "type":"string", 
+          "enum":[
+                "Managed", 
+                "Initiated", 
+                "Both"
+          ], 
+          "default":"Both"
+        }
+
+    }
+  }, 
+    "options": {
+        "fields": {
+                   
+            "widgetTitle": {
+              "type":"text"
+            }, 
+
+            "retention": {
+              "type":"number"
+            }, 
+
+            "filterWorkflowtype": {
+              "type":"select", 
+              "optionLabels":[                  
+                  "{{workflowTypeManaged}}", 
+                  "{{workflowTypeInitiated}}", 
+                  "{{workflowTypeBoth}}"
+                  ]
+              }
+           }
+           
+    }
+  }

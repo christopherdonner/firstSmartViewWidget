@@ -1,0 +1,82 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"category_names": "",
+				"create_in_id": "7728",
+				"duplicate_name_action": "uniquenum",
+				"export_type": "node",
+				"node_description": "",
+				"node_name": "ThisHadParametersOutput.html",
+				"node_type": "doc"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text/html",
+			"http_method": "POST",
+			"output_destination": "node",
+			"run_in_background": false,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true,
+			"use_conversion_engine": false,
+			"xml_job_ticket_id": ""
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [
+		{
+			"data": {
+				"myName": "",
+				"startDate": "Fri Dec 01 14:51:51 2017"
+			},
+			"options": {
+				"fields": {
+					"myName": {
+						"hidden": false,
+						"hideInitValidationError": true,
+						"label": "Name",
+						"readonly": false,
+						"type": "text"
+					},
+					"startDate": {
+						"hidden": false,
+						"hideInitValidationError": true,
+						"label": "Start Date",
+						"readonly": false,
+						"type": "datetime"
+					}
+				},
+				"form": {
+					"attributes": {
+						"action": "api/v1/nodes/683652/output",
+						"method": "POST"
+					},
+					"renderForm": true
+				}
+			},
+			"schema": {
+				"properties": {
+					"myName": {
+						"description": "",
+						"readonly": false,
+						"required": false,
+						"title": "Name",
+						"type": "String"
+					},
+					"startDate": {
+						"description": "",
+						"readonly": false,
+						"required": false,
+						"title": "Start Date",
+						"type": "Date"
+					}
+				},
+				"type": "object"
+			}
+		}
+	]
+}

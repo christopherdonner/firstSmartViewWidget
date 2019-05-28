@@ -1,0 +1,48 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item {
+    flex-grow: 1;
+    background-color: rgba(247, 247, 247, 0.82);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333333;
+    text-decoration: none;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:active,
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:focus {
+    text-decoration: none;
+    color: #333333;
+    outline: 1px solid #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:hover {
+    outline: 1px solid #333333;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item:not(.csui-disabled) {
+    cursor: pointer;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-disabled {
+    pointer-events: none;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-disabled .tile-title {
+    color: #757575;
+    font-style: italic;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-disabled .tile-icon {
+    opacity: 0.5;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item .tile-icon {
+    display: flex;
+    align-items: center;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item .tile-icon .icon {
+    background-repeat: no-repeat;
+    background-position: center 45%;
+}

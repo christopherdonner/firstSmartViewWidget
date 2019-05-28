@@ -1,0 +1,70 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-table-cell-name {
+  overflow-x: visible !important;
+}
+
+.binf-table.dataTable > tbody > tr > .csui-table-cell-name {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+td > div.csui-table-cell-name-div,
+th > div.csui-table-cell-name-div {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.binf-widgets .csui-table-cell-name-justify-div {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 3em;
+  width: 100%;
+  height: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+td > div .csui-table-cell-name-value,
+th > div .csui-table-cell-name-value {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  width: 100%;
+}
+
+.csui-table-cell-name .csui-table-cell-name-value .csui-table-cell-name-link-text {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.csui-table-cell-name-value.csui-table-cell-no-default-action {
+  cursor: auto;
+  color: #757575;
+  font-style: italic;
+}
+
+tr.csui-cut-row .csui-table-cell-name-value {
+  color: #a7a7a7;
+}
+
+td > div > .csui-table-cell-name-appendix,
+th > div > .csui-table-cell-name-appendix {
+  flex: 1 0 auto;
+  max-width: 0;
+}
+
+td > div .csui-table-cell-name-appendix-full,
+th > div .csui-table-cell-name-appendix-full {
+  padding-left: 0;
+  margin-left: -2em;  
+  min-width: 17.5em;
+  max-width: 100%;
+  display: inline-flex;
+}

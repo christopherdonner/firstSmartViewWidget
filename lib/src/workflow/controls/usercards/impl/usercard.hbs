@@ -1,0 +1,107 @@
+
+{{#if  assigneeType}}
+  <div
+      class="wfstatus-mini-profile-user binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div class="wfstatus-mini-profile-details">
+      <div class="wfstatus-group-profile-img">
+            <span class="wfstatus-mini-profile-avatar">
+                <a href="javascript:void(0);" class="wfstatus-group-profile-pic">
+                    <span
+                        class="wfstatus-miniprofile-default-avatar-show default-group-avatar image_group_placeholder"
+                        title="{{name}}"></span>
+                </a>
+            </span>
+      </div>
+
+      <div
+          class="wfstatus-mini-profile-userinfo binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+        <div class="wfstatus-mini-profile-user-displayname">
+          <a href="javascript:void(0);" class="wfstatus-mini-profile-group-name"
+             title="{{name}}">{{name}}</a>
+        </div>
+      </div>
+      <div class="wfstatus-usercard-wfstatus" title="{{status}}">
+        {{status}}
+      </div>
+    </div>
+    <div class="wfstatus-usercard-actions">
+      <div class="wfstatus-reassignButton">
+            <span><button class="csui-btn binf-btn binf-btn-primary wfstatus-reassign-btn" title="{{ReassignLabel}}"
+                          tabindex="0">{{ReassignLabel}}</button>
+            </span>
+      </div>
+    </div>
+    {{#if  MultiUser}}
+      {{#if notLastUser}}
+        <hr>
+      {{/if}}
+    {{/if}}
+  </div>
+
+{{else}}
+
+  <div
+      class="wfstatus-mini-profile-user binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div class="wfstatus-mini-profile-details">
+      <div class="wfstatus-user-profile-img">
+            <span class="wfstatus-mini-profile-avatar">
+                <a href="javascript:void(0);" class="wfstatus-user-profile-pic">
+                    <span
+                        class="image_user_placeholder wfstatus-miniprofile-default-avatar-{{displayDefaultPic}}"
+                        title="{{name}}"></span>
+                    <img id="wfstatus-mini-profile-pic-{{id}}" class="wfstatus-userprofile-img
+                         binf-img-circle-{{displayPic}}" src="{{photoUrl}}" title="{{name}}">
+                </a>
+            </span>
+      </div>
+
+      <div
+          class="wfstatus-mini-profile-userinfo binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+        <div class="wfstatus-mini-profile-user-displayname">
+          <a href="javascript:void(0);" class="wfstatus-mini-profile-user-name"
+             title="{{name}}">{{name}}</a>
+        </div>
+        {{#if business_email}}
+          <div class="wfstatus-mini-profile-user-displayemail">
+            <a class="wfstatus-mini-profile-user-email" href="mailto:{{business_email}}"
+               title="{{business_email}}">{{business_email}}</a>
+          </div>
+        {{/if}}
+
+        {{#if business_phone}}
+          <div class="wfstatus-mini-profile-user-phone"
+               title="{{business_phone}}">{{PhoneLabel}} {{business_phone}}</div>
+        {{/if}}
+      </div>
+      <div class="wfstatus-usercard-wfstatus" title="{{status}}">
+        {{status}}
+      </div>
+    </div>
+    <div class="wfstatus-usercard-actions">
+        {{#if isChatEnabled}}
+        <div class="wfstatus-chatButton">
+            <a href='{{chatURI}}' class='wfstatus-chat-icon'>
+                <span><button class="csui-btn binf-btn binf-btn-secondary wfstatus-chat-btn" title="{{ChatLabel}}"
+                              tabindex="0">{{ChatLabel}}</button>
+                </span></a>
+        </div>
+        {{/if}}
+
+
+        {{#if displayReassign}}
+        <div class="wfstatus-reassignButton">
+            <span><button class="csui-btn binf-btn binf-btn-primary wfstatus-reassign-btn" title="{{ReassignLabel}}"
+                          tabindex="0">{{ReassignLabel}}</button>
+            </span>
+        </div>
+        {{/if}}
+    </div>
+    {{#if  MultiUser}}
+      {{#if notLastUser}}
+        <hr>
+      {{/if}}
+    {{/if}}
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

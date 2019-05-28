@@ -1,0 +1,89 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+div.slide-container {
+	padding: 0;
+	margin: 0;
+	height: 50vh;
+}
+
+div.binf-slide {
+	background-color: #f7f7f7;
+	height: 50vh;
+}
+
+div.tile-content.carousel-tile-content {
+	height: 100%;
+	padding: 0px;
+}
+
+#carousel-main-data-container {
+	height: 100%;
+	width: 100%;
+}
+
+.carousel-top-container-div {
+	height: 100%;
+}
+
+.binf-carousel-inner {
+	height: 100%;
+}
+
+.binf-carousel-inner > .binf-active {
+	height: 100%;
+}
+
+#carousel-main-data-container > span.carousel-indicators-container > ol.binf-carousel-indicators {
+	bottom: 13px;
+}
+
+
+#carousel-main-data-container > span.carousel-indicators-container > ol > li {
+	background-color: #808080;
+	margin: 0px 6px 0px 6px;
+	opacity: 0.3;
+	height: 16px;
+	width:	16px;
+	border: 1px solid #606060;
+}
+
+
+#carousel-main-data-container > span.carousel-indicators-container > ol > li.binf-active {
+	background-color: #fff;
+	border: 1px solid #808080;
+}
+
+#carousel-main-data-container > span.carousel-indicators-container > ol > li.carousel-content-loading {
+	height: 5px;
+	margin-bottom: 5px;
+}
+
+#carouselButtons {
+	text-align: right;
+	margin-top: -33px;
+	margin-right: 5px;
+}
+
+#carouselButtons button {
+	color: #d2d0d0;
+	background-color: transparent;
+	border: none;
+}
+
+
+#carouselButtons button span {
+	font-size: 15px;
+	top: 5px;
+}
+
+div.carousel-slide-loading-message {
+	color: #d2d0d0;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	line-height: 40vh;
+}
+
+div.webreports-tilereport-spacer {
+	height: 0px;
+}

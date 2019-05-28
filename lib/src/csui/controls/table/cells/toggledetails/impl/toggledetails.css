@@ -1,0 +1,20 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-table-cell-_toggledetails {
+  min-width: 3.5rem;
+  max-width: 3.5rem;
+}
+
+.csui-table-cell-_toggledetails .icon-expandArrowDown {
+  vertical-align: middle;
+}
+
+.csui-table-cell-_toggledetails .icon-expandArrowUp,
+.csui-table-cell-_toggledetails .icon-expandArrowDown {
+  
+}
+
+.csui-table-cell-_toggledetails .csui-acc-focusable-active {
+  
+  
+}

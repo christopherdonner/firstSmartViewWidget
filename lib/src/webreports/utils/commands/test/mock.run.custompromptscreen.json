@@ -1,0 +1,48 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {},
+			"export_mime_type": "text\/html",
+			"output_destination": "browser"
+		},
+		"parameters_data": {
+			"prompt_file_id": "8957",
+			"show_descriptions": false
+		}
+	},
+	"forms": [{
+		"data": {
+			"myPromptParm": "hello world"
+		},
+		"options": {
+			"fields": {
+				"myPromptParm": {
+					"hidden": false,
+					"hideInitValidationError": true,
+					"label": "label1",
+					"readonly": false,
+					"type": "text"
+				}
+			},
+			"form": {
+				"attributes": {
+					"action": "api\/v1\/",
+					"method": ""
+				},
+				"renderForm": true
+			}
+		},
+		"schema": {
+			"properties": {
+				"myPromptParm": {
+					"description": "",
+					"readonly": false,
+					"required": false,
+					"title": "label1",
+					"type": "String"
+				}
+			},
+			"type": "object"
+		}
+	}]
+}

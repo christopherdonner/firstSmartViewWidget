@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SearchBoxView</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body {
+      padding: 1em;
+    }
+    .csui-search-box .icon {
+      color: #fff;
+    }
+    #content {
+      width: 370px;
+      max-height: 80px;
+      background-color: white;
+    }
+  </style>
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//murdock.opentext.com/alpha/llisapi.dll/api/v1',
+            supportPath: '/alphasupport'
+           }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context', '../search.box.view', 'csui/utils/contexts/factories/search.query.factory'
+    ], function (Marionette, PageContext, SearchBoxView, SearchQueryModelFactory) {
+
+        var contentRegion = new Marionette.Region({el: '#content'}),
+            pageContext = new PageContext(),
+            searchBoxView = new SearchBoxView({context: pageContext});
+
+        contentRegion.show(searchBoxView);
+
+        // this shows the changes stored in the model, which should then be listened to
+        pageContext.listenTo(pageContext.getModel(SearchQueryModelFactory), "change", function (model) {
+            alert("Detected a change on the model, changed.where= " + model.changed.where);
+        });
+
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-xs-12" id="content"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

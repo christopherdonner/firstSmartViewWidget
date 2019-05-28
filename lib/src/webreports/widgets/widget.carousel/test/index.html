@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Carousel Widget test</title>
+
+	<link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+	<script src="../../../../csui/lib/require.js"></script>
+	<script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+
+	<script>
+		 require.config({
+		  deps: [
+			'csui/lib/require.config!csui/csui-extensions.json'
+		  ]
+		});
+	
+		require.config({
+			paths: {
+				webreports: '../../..'
+			},
+			config: {
+				'csui/utils/contexts/factories/connector': {
+					connection: {
+						url: '//server/cgi/cs.exe/api/v1',
+						supportPath: '/support',
+						credentials: {
+							username: 'Admin',
+							password: 'livelink'
+						}
+					}
+				}
+			}
+		});
+
+		require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+			'../widget.carousel.view.js', './widget_carousel_folder_mock'
+		], function (Marionette, PageContext, CarouselView, CarouselFolderMock) {
+
+			var
+				// Create the data managing context
+				context = new PageContext(),
+
+				// Create an instance of the carousel and populate it with 3 widgets:
+				carouselView = new CarouselView({
+					context: context,
+					data: {
+						"header": true,
+						"title": "The Widget",
+						"titleBarIcon": "title-recentlyaccessed", 	//(defaults to WR icon) eg: "title-recentlyaccessed'
+						"behavior": {
+							"auto_cycle": true,
+							"interval": 2000, //(in ms)
+							"pause_on_hover": true,
+							"wrap": true  //(default:  true) continuous loop.
+						},
+
+						"widgets": [
+
+// SIMPLE CHART WIDGET:
+							{
+								"type": "webreports/widgets/visual.data.filtered.count",
+								"options": {
+									"type": "bar",
+									"sortBy": "Count",
+									"sortOrder": "desc",
+									"activeColumn": "Type",
+									"groupAfter": "10",
+									"id": 32990,
+									"filterable": true
+								}
+							},
+
+							{
+								"type": "webreports/widgets/nodeslistreport",
+								"options": {
+									"title": "Important Documents",
+									"searchPlaceholder": "Search",
+									"id": 102123
+								}
+							},
+
+							{
+								"type": "webreports/widgets/tilereport",
+								"options": {
+									"header": false,
+									"scroll": true,
+									"id": 102374,
+									"title": "My Data"
+								}
+							},
+
+
+
+
+							{
+								"type": "webreports/widgets/tilereport",
+								"options": {
+									"header": true,
+									"scroll": true,
+									"id": 102375,
+									"title": "Audit Report"
+								}
+							}
+						]
+					}
+				}),
+
+				// Create helpers to show the views on the page
+				carouselRegion = new Marionette.Region({
+					el: "#carousel_parent"
+				});
+
+				// Show the views on the page
+				carouselRegion.show(carouselView);
+
+				// Mock the REST API responses
+				CarouselFolderMock.enable();
+
+				// Fetch the data from the server to populate the tiles with
+				context.fetch();
+		});
+	</script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="container-fluid grid-rows">
+	<div class="binf-row">
+		<div class="binf-col-md-8 binf-col-xl-6" id="carousel_parent">
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

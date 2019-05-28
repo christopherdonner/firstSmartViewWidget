@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Form Controls</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+
+    .binf-widgets .binf-container {
+      padding: 1em;
+      background-color: #ffffff;
+      margin-top: 20px;
+    }
+
+    .binf-control-label {
+      font-weight: bold;
+    }
+
+    .binf-form-group .binf-control-label {
+      margin-top: 0.5em;
+    }
+
+    a:link {
+      color: grey;
+    }
+
+    a:hover {
+      color: grey;
+    }
+
+    a:active {
+      color: grey;
+    }
+
+    a:visited {
+      color: grey;
+    }
+
+    .fieldContainer {
+      /*margin: 1em;*/
+      /*width: 100%;*/
+      /*font-size: 18px !important;*/
+    }
+
+    #fields {
+      background-color: white;
+    }
+
+    .cs-formfield {
+      font-size: 0.875em;
+    }
+
+    .cs-formfield button {
+      font-size: inherit;
+    }
+
+    .doclink {
+      margin-top: 10px;
+    }
+
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      paths: {
+        esoc: '../../../../esoc'
+      },
+
+      config: {
+        'csui/utils/log': {
+          level: "DEBUG"
+        },
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            //credentials: {
+            //  username: 'Admin"',
+            //  password: 'livelink'
+            //},
+            url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            supportPath: '/support'
+            //url: 'http://vmfp-oclipse.opentext.net/carbonfibre/cs/api/v1',
+            //supportPath: '/carbonfibresupport'
+          }
+          //},
+          //'csui/utils/contexts/factories/node': {
+          //  attributes: {type: 141}
+        }
+      }
+    });
+
+    require(["csui/lib/jquery", "csui/lib/backbone", "csui/lib/marionette",
+      'esoc/controls/userwidget/userwidget.view', // load it here that we have it in userfield.view 361 (circular dependency)
+      "csui/controls/form/fields/userfield.view",
+      "csui/controls/form/fields/booleanfield.view",
+      "csui/controls/form/fields/selectfield.view",
+      "csui/controls/form/fields/textfield.view",
+      "csui/controls/form/fields/textareafield.view",
+      "csui/controls/form/fields/datefield.view",
+      "csui/controls/form/fields/nodepickerfield.view",
+
+      'csui/utils/contexts/page/page.context',
+      'csui/controls/form/test/alpcontrols.mock',
+      'csui/controls/form/test/node.picker.mock'
+    ], function ($, Backbone, Marionette, vview, UserFieldView, BooleanFieldView, SelectFieldView,
+                 TextFieldView, TextAreaFieldView, DateFieldView, NodePickerFieldView,
+                 PageContext, mock, nodepickermock) {
+
+      var pageContext = new PageContext({
+        factories: {
+          connector: {
+            connection: {
+              url: '//server/otcs/cs/api/v1',
+              supportPath: '/support',
+              session: {
+                ticket: 'dummy'
+              }
+            }
+          }
+        }
+      });
+
+      mock.enable();
+      nodepickermock.test1.enable();
+
+      // ------ user field
+
+      var contentRegionUserField = new Marionette.Region({
+          el: "#userField"
+        }),
+        data = {
+          id: '120031',
+          name: 'Armstrong, Liz',
+          url: 'images/liz.png'
+        },
+        model = new Backbone.Model({
+          data: data
+        }),
+        userfield = new UserFieldView({
+          model: model,
+          context: pageContext,
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/otcssupport'
+          }
+        });
+
+      userfield.on("click:item", function () {
+        alert('click:item raised');
+      });
+
+      //userfield.render();
+      contentRegionUserField.show(userfield);
+
+      // -------- boolean field
+
+      var contentRegionBooleanField = new Marionette.Region({
+          el: "#booleanField"
+        }),
+        booleanField = new BooleanFieldView({
+          id: 'booleanField',
+          model: new Backbone.Model({
+            data: false
+          })
+        });
+
+        booleanField.on("field:changed", function (event) {
+        //        alert(event.fieldid + ' field:changed, new value: ' + event.fieldvalue);
+        console.log(event.fieldid, 'field:changed', event.fieldvalue);
+      });
+
+      contentRegionBooleanField.show(booleanField);
+
+      // -------- select field
+
+      var contentRegionSelectField = new Marionette.Region({
+          el: "#selectField"
+        }),
+        selectField = new SelectFieldView({
+          id: 'selectField',
+          collection: new Backbone.Collection([
+            {
+              id: 0,
+              name: 'name'
+            },
+            {
+              id: 1,
+              name: 'some very long name'
+            }
+          ]),
+
+          model: new Backbone.Model({
+              options:{
+                isMultiFieldItem:false,
+                selected: true,
+                mode: 'read' // 'read', 'readonly', 'writeonly' ?
+              }
+          })
+        });
+
+      selectField.on("field:changed", function (event) {
+        //alert(event.fieldid + ' field:changed, new value: ' + event.fieldvalue);
+        console.log(event.fieldid, 'field:changed', event.fieldvalue);
+      });
+
+      contentRegionSelectField.show(selectField);
+
+      // -------- date field
+
+      var contentRegionDateField = new Marionette.Region({
+          el: "#dateField"
+        }),
+        dateField = new DateFieldView({
+          id: 'dateField',
+          model: new Backbone.Model({
+            data: '2015-10-19T00:00:00'
+          })
+          //dateFormat: "YYYY-MM-DD HH:mm:ss"
+        });
+
+      dateField.on("field:changed", function (event) {
+        //alert(event.fieldid + ' field:changed, new value: ' + event.fieldvalue);
+        console.log(event.fieldid, 'field:changed', event.fieldvalue);
+      });
+
+      contentRegionDateField.show(dateField);
+
+      // -------- datetime field
+
+      var contentRegionDatetimeField = new Marionette.Region({
+          el: "#datetimeField"
+        }),
+        datetimeField = new DateFieldView({
+          id: 'dateField',
+          model: new Backbone.Model({
+            data: '2015-10-19T10:20:30'
+          }),
+          dateFormat: "YYYY-MM-DD HH:mm:ss"
+        });
+
+        datetimeField.on("field:changed", function (event) {
+        //alert(event.fieldid + ' field:changed, new value: ' + event.fieldvalue);
+        console.log(event.fieldid, 'field:changed', event.fieldvalue);
+      });
+
+      contentRegionDatetimeField.show(datetimeField);
+
+      // -------- text field
+
+      var contentRegionTextField = new Marionette.Region({
+          el: "#textField"
+        }),
+        textField = new TextFieldView({
+          id: 'textField',
+          model: new Backbone.Model({
+            data: 'Initial TextField Value',
+            options: {}
+          })
+        });
+
+        textField.on("field:changed", function (event) {
+        //alert(event.fieldid + ' field:changed, new value: ' + event.fieldvalue);
+        console.log(event.fieldid, 'field:changed', event.fieldvalue);
+      });
+
+      contentRegionTextField.show(textField);
+
+      // -------- textarea field
+
+      var contentRegionTextAreaField = new Marionette.Region({
+          el: "#textAreaField"
+        }),
+        textAreaField = new TextAreaFieldView({
+          id: 'textAreaField',
+          model: new Backbone.Model({
+            data: 'Initial TextAreaField Value',
+            options: {}
+          })
+        });
+
+        textAreaField.on("field:changed", function (event) {
+        //        alert(event.fieldid + ' field:changed, new value: ' + event.fieldvalue);
+        console.log(event.fieldid, 'field:changed', event.fieldvalue);
+      });
+
+      contentRegionTextAreaField.show(textAreaField);
+
+      // -------- nodepicker field
+
+      var contentRegionNodePickerField = new Marionette.Region({
+          el: "#nodePickerField"
+        }),
+        nodePickerField = new NodePickerFieldView({
+          context: pageContext,
+          model: new Backbone.Model({data:2000}),
+          parent:null
+        });
+
+        nodePickerField.on("field:changed", function (event) {
+        //        alert(event.fieldid + ' field:changed, new value: ' + event.fieldvalue);
+        console.log(event.fieldid, 'field:changed', event.fieldvalue);
+
+      });
+
+      contentRegionNodePickerField.show(nodePickerField);
+
+      // set display mode
+      $('#show').on('click', function () {
+        var fields = [userfield, booleanField, selectField, dateField, datetimeField,
+          textField, textAreaField, nodePickerField];
+        var mode = $('input[name=inlineRadioOptions]:checked').val();
+
+        fields.forEach(function (field) {
+          field.setMode(mode);
+          field.render();
+        });
+
+        dateField.setFocus();
+      });
+
+      $('div[id*=li]').css("padding", "5px");
+      dateField.setFocus();
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">CSUI Form Controls:</div>
+    <div class="buttons binf-col-sm-4">Common CSUI Form Controls</div>
+    <div class="binf-col-sm-2">
+      <a href="../doc/formfield.md" target="_blank">Documentation</a>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Instructions:</div>
+    <div class="buttons binf-col-sm-10">Set up the parameters in the form and click the "Show" button
+      below.
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="binf-row binf-form-horizontal">
+    
+    <div class="binf-col-sm-2 binf-control-label">Display Mode:</div>
+
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="read" checked> read
+    </label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="write"> write
+    </label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="readonly"> readonly
+    </label>
+    <label class="binf-radio-inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="writeonly"> writeonly
+    </label>
+
+    <div class="binf-col-sm-offset-2 binf-col-sm-10">
+      <button type="button" class="btn btn-primary" id="show">Show</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <form class="binf-form-horizontal">
+
+      <div class="binf-form-group">
+        <label for="dateField" class="binf-col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/datefield.md" target="_blank">Date Field</a>
+        </label>
+
+        <div class="binf-col-sm-3">
+          <div class="fieldContainer " id="dateField"></div>
+        </div>
+      </div>
+
+      <div class="binf-form-group">
+        <label for="datetimeField" class="binf-col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/datetimefield.md" target="_blank">Datetime Field</a>
+        </label>
+
+        <div class="binf-col-sm-3">
+          <div class="fieldContainer" id="datetimeField"></div>
+        </div>
+      </div>
+
+      <div class="binf-form-group">
+        <label for="userField" class="binf-col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/userfield.md" target="_blank">User Field</a>
+        </label>
+
+        <div class="binf-col-sm-3">
+          <div class="fieldContainer " id="userField"></div>
+        </div>
+      </div>
+
+      <div class="binf-form-group">
+        <label for="booleanField" class="col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/booleanfield.md" target="_blank">Boolean Field</a>
+        </label>
+
+        <div class="binf-col-sm-2">
+          <div class="fieldContainer" id="booleanField"></div>
+        </div>
+      </div>
+
+      <div class="binf-form-group">
+        <label for="selectField" class="binf-col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/selectfield.md" target="_blank">Select Field</a>
+        </label>
+
+        <div class="binf-col-sm-4">
+          <div class="fieldContainer" id="selectField"></div>
+        </div>
+      </div>
+
+      <div class="binf-form-group">
+        <label for="textField" class="binf-col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/textfield.md" target="_blank">Text Field</a>
+        </label>
+
+        <div class="binf-col-sm-4">
+          <div class="fieldContainer" id="textField"></div>
+        </div>
+      </div>
+
+      <div class="binf-form-group">
+        <label for="textAreaField" class="binf-col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/textareafield.md" target="_blank">TextArea Field</a>
+        </label>
+
+        <div class="binf-col-sm-4">
+          <div class="fieldContainer" id="textAreaField"></div>
+        </div>
+
+      </div>
+
+      <div class="binf-form-group">
+        <label for="nodePickerField" class="binf-col-sm-2 binf-control-label">
+          <a tabindex="-1" href="../doc/nodepickerfield.md" target="_blank">Nodepicker Field</a>
+        </label>
+
+        <div class="binf-col-sm-4">
+          <div class="fieldContainer " id="nodePickerField"></div>
+        </div>
+      </div>
+
+
+  </form>
+
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

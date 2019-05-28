@@ -1,0 +1,14 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.webreports-tilereport-spacer {
+    display: block;
+}
+.webreports-tilereport-parent-noheader {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.webreports-tilereport-content-noheader {
+    height: 100%;
+}
+

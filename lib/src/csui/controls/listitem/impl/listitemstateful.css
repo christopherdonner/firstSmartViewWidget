@@ -1,0 +1,133 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .SLI {
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  
+  width: calc(100% - 10px);
+  height: 46px;
+}
+
+.SLI span {
+  
+  cursor: pointer;
+}
+
+.binf-widgets .SLIIcon {
+  display: inherit; 
+
+  
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  margin-left: 0px;
+  margin-right: 10px;
+
+  padding-bottom: 1em;
+}
+
+.binf-widgets .SLIRightDiv {
+
+  
+  width: calc(100% - 2.375rem);
+  display: inherit; 
+
+  
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  padding-bottom: 1em;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+.binf-widgets .SLITitleDiv {
+  width: 70%; 
+
+  -webkit-flex: 3 1 0;          
+  -ms-flex: 3 1 0;              
+  flex: 3 1 0;
+
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.binf-widgets .SLITitle {
+  height: 20px;
+
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.binf-widgets .SLIDescription {
+  font-size: 12px;
+  line-height: normal;
+  color: #666666;
+
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.binf-widgets .SLIInfoNone {
+}
+
+.binf-widgets .SLIInfoSuccess {
+  color: #007833;
+}
+
+.binf-widgets .SLIInfoWarning {
+  color: #c54545;
+  font-weight: bolder;
+}
+
+
+
+.binf-widgets .SLIInfo {
+  text-align: right;
+  margin: 0 0 20px 10px;
+  font-size: 12px;
+
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  width: 25%;
+  max-width: 80px;
+  min-width: 70px;
+
+  -webkit-flex: 1 0 0;          
+  -ms-flex: 1 0 0;              
+  flex: 1 0 0;
+ }
+
+
+.binf-widgets a.SLI.inactive,
+.binf-widgets a.SLI.inactive .csui-icon,
+.binf-widgets a.SLI.inactive span {
+  cursor: default;
+}
+
+.binf-widgets a.SLI.inactive .csui-icon {
+  opacity: 0.5;
+}
+
+.binf-widgets a.SLI.inactive span {
+  color: #717171;
+  font-style: italic;
+}

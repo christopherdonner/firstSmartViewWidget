@@ -1,0 +1,261 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  height: 70px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error-icon-parent {
+  height: 42px;
+  width: 42px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error-icon {
+  width: 26px;
+  height: 26px;
+  margin: 8px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-error-icon-div {
+  padding: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-message {
+  margin: 0 10px;
+  padding: 0;
+  text-align: left;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details {
+  height: 70px;
+  width: 100%;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details > div {
+  float: left;
+  margin-left: 10px;
+  height: 100%;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details .tile-icon .icon {
+  width: 2.625em;
+  height: 2.625em;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details .tile-title {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small .csui-details .tile-title .csui-heading {
+  display: block;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade1 {
+  background: #d0d0d0;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade2 {
+  background: #9d9c9c;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade3 {
+  background: #777676;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-grey-shade4 {
+  background: #505050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade1 {
+  background: #66cca7;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade2 {
+  background: #39ac82;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade3 {
+  background: #2c8464;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-green-shade4 {
+  background: #03634d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade1 {
+  background: #ee90ee;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade2 {
+  background: #e34fe3;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade3 {
+  background: #c71fc7;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-purple-shade4 {
+  background: #9a189a;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade1 {
+  background: #cb7a0a;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade2 {
+  background: #bb6207;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade3 {
+  background: #aa4704;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-orange-shade4 {
+  background: #9e3402;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade1 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade2 {
+  background: #3f4950;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade3 {
+  background: #71747b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone1-shade4 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade1 {
+  background: #71747b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade2 {
+  background: #5f6e77;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade3 {
+  background: #70769b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-stone2-shade4 {
+  background: #3f4950;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade1 {
+  background: #005873;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade2 {
+  background: #078db3;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade3 {
+  background: #00639b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal1-shade4 {
+  background: #005c5d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade1 {
+  background: #008a8b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade2 {
+  background: #007599;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade3 {
+  background: #00639b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-teal2-shade4 {
+  background: #004267;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade1 {
+  background: #780050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade2 {
+  background: #c83370;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade3 {
+  background: #a8003d;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink1-shade4 {
+  background: #780050;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade1 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade2 {
+  background: #a0006b;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade3 {
+  background: #ba004c;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-pink2-shade4 {
+  background: #8b0039;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade1 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade2 {
+  background: #2e3d98;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade3 {
+  background: #232e72;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo1-shade4 {
+  background: #111b58;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade1 {
+  background: #2e3d98;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade2 {
+  background: #4f3690;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade3 {
+  background: #232e72;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-shortcut-theme-indigo2-shade4 {
+  background: #414979;
+}
+
+.binf-widgets .csui-shortcut-container .csui-shortcut-item.csui-small.csui-failed {
+  background-color: #edf1fa;
+}

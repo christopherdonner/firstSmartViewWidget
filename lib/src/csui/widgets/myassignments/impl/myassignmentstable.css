@@ -1,0 +1,61 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-myassignmentstable {
+  height: calc(100vh - 183px);
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.binf-widgets .csui-myassignmentstable #tableviewMA {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  min-height: 90px;
+  
+}
+
+.binf-widgets .csui-myassignmentstable #paginationviewMA {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.binf-widgets .csui-myassignmentstable #paginationviewMA .binf-pagination {
+  margin: 0;
+}
+
+.csui-myassignmentstable .binf-table.dataTable .csui-table-cell-type {
+  min-width: 6em;
+  max-width: 6em;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .binf-widgets .csui-myassignmentstable, .binf-widgets .cs-dialog .binf-modal-lg .binf-modal-body {
+    height: calc(100vh - 315px);
+  }
+
+  .binf-widgets .cs-dialog.activityfeed-expand .binf-modal-lg .binf-modal-body {
+    overflow: hidden;
+  }
+
+  .binf-widgets .cs-properties .binf-modal-lg {
+    max-height: 44.4rem;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .binf-widgets .csui-myassignmentstable, .binf-widgets .cs-dialog .binf-modal-lg .binf-modal-body {
+    height: calc(100vh - 315px);
+  }
+
+  .binf-widgets .cs-dialog.activityfeed-expand .binf-modal-lg .binf-modal-body {
+    overflow: hidden;
+  }
+
+  .binf-widgets .cs-properties .binf-modal-lg {
+    max-height: 44.4rem;
+  }
+}

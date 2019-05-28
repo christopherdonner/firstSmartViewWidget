@@ -1,0 +1,16 @@
+{{#if flyoutArrowDisabled}}
+  <a href="#" class="csui-toolitem {{#if disabled}}binf-disabled{{/if}}" title ={{name}} data-cstabindex="-1">
+    <span>{{name}}</span>
+  </a>
+{{else}}
+  <a href="#" class="csui-toolitem csui-flyout-arrow" title={{name}} data-binf-toggle="dropdown" role="button"
+     aria-label="{{expandTitle}}" aria-expanded="false" data-cstabindex="-1">
+    <span>{{name}}</span>
+    <span class="csui-button-icon icon-expandArrowDown" title="{{expandTitle}}"></span>
+  </a>
+{{/if}}
+<ul class="binf-dropdown-menu" role="menu"></ul>
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

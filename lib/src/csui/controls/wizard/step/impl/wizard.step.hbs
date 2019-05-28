@@ -1,0 +1,27 @@
+{{#if largeSize}}
+  <div class="binf-modal-dialog binf-modal-lg">
+{{else}}
+  {{#if midSize}}
+    <div class="binf-modal-dialog binf-modal-md">
+  {{else}}
+    <div class="binf-modal-dialog">
+  {{/if}}
+{{/if}}
+
+  <div class="binf-modal-content" aria-label="{{dialogTxtAria}}">
+
+    <div class="tile-header binf-modal-header"></div>
+
+    {{#if bodyMessage}}
+      <div class="binf-modal-body cs-dialog cs-dialog-bodymessage">{{bodyMessage}}</div>
+    {{else}}
+      <div class="binf-modal-body"></div>
+    {{/if}}
+
+    <div class="binf-modal-footer binf-hidden"></div>
+
+  </div>
+
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

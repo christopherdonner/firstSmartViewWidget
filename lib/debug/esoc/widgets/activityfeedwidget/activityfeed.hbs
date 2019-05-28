@@ -1,0 +1,176 @@
+{{#if messages.isFirstItem}}
+  <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-comment-list-divider"></div>
+{{/if}}
+<a href="javascript:void(0);" class="esoc-activity-focus-element" aria-label="{{messages.userProfileLink}}"></a>
+<div class="esoc-profileimg-block">
+    <span class="esoc-userprofile-img">
+        <img class="esoc-userprofile-img-{{user.id}} binf-img-circle" src="" />
+    </span>
+</div>
+<div class="esoc-commentinfo-block-wrapper binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+  <div class="esoc-commentinfo-block binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div class="esoc-social-comment-details">
+      <div class="esoc-comment-user-details binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+        <span class="esoc-user-widget"></span>
+        <span class="esoc-activityfeed-actiontype">
+          {{#xif "this.feed_event_type == 4 || this.feed_event_type == 2"}}
+            {{messages.actionType}}
+          {{/xif}}
+          {{#xif "this.feed_event_type == 7 || this.feed_event_type == 8"}}
+            {{messages.textmsg}}
+          {{/xif}}
+          {{#xif "this.modified_at_iso8601 == ''"}}
+            <span class="esoc-social-comment-timestamp">{{created_at_iso8601}}</span>
+          {{else}}
+            <span class="esoc-social-comment-timestamp">
+              <span class="esoc-social-comment-timestamp-ago" title="{{messages.modifiedAt}}">
+              </span>
+              {{modified_at_iso8601}}
+            </span>
+          {{/xif}}
+        </span>
+        {{#if messages.enableComments}}
+          <div class="esoc-social-comment-list-actions">
+            <div class="esoc-social-comment-container esoc-socialactions-getcomments">
+              <a class="esoc-social-comment-container" href="javascript:void(0);" aria-label="{{messages.comments}}"
+                 data-value={{data_id}}>
+                <span class="esoc-activity-feed-comment">
+                  <span class="esoc-cs-icon-feed-comment"
+                        data-value={{data_id}} title="{{messages.comments}}"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        {{/if}}
+
+      </div>
+    </div>
+    {{#xif "this.feed_event_type == 4"}}
+      <div class="esoc-comment-msg">
+        <span>
+          <span class="esoc-activity-object-info {{messages.inactiveClass}}">
+            <a href="javascript:void(0);" class="esoc-social-mime-icon {{messages
+            .mimeTypeClass}}" title="{{extended_info.name}}" aria-label="{{extended_info.name}}"></a>
+            <a href="javascript:void(0);" class="esoc-object-name"
+               title="{{extended_info.name}}">{{extended_info.name}}</a>
+          </span>
+        </span>
+      </div>
+    {{else xif "this.feed_event_type == 2"}}
+      <div class="esoc-comment-msg">
+        <span class="esoc-status-feed-icon" title="{{messages.statusfeed}}"></span>
+        <span class="esoc-social-comment-details esoc-reply-user-widget"></span>
+        <span class="esoc-activityfeed-status-action"> {{messages.status}}</span>
+        </span>
+      </div>
+    {{/xif}}
+  </div>
+
+  <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div id="esoc-social-comment-input-holder-{{uniqueId}}">
+      {{#xif "this.feed_event_type == 7"}}
+        <div class="esoc-social-comment-data">
+          <span class="esoc-activity-object-info {{messages.inactiveClass}}">
+            {{#xif "this.extended_info.subtype == this.messages.shortcutAttachmentSubtype"}}
+              <a href="javascript:void(0);" class="esoc-social-mime-icon csui-icon-group"
+                 title="{{extended_info.name}}" aria-label="{{extended_info.name}}">
+                <span class="{{messages.mimeTypeClass}}" />
+                <span class="csui-icon csui-icon-shortcut-overlay"></span>
+              </a>
+            {{/xif}}
+            {{#xif "this.extended_info.subtype != this.messages.shortcutAttachmentSubtype"}}
+              <a href="javascript:void(0);" class="esoc-social-mime-icon {{messages
+              .mimeTypeClass}}" title="{{extended_info.name}}" aria-label="{{extended_info.name}}"></a>
+            {{/xif}}
+            <a href="javascript:void(0);" class="esoc-object-name"
+               title="{{extended_info.name}}">{{extended_info.name}}</a>
+            </span>
+        </div>
+        {{#xif "this.extended_info.sgm_description != ''"}}
+          <div class="esoc-extended-view-mode">
+            <div class="esoc-social-comment-data">
+              <div class="esoc-description">{{extended_info.sgm_description}}</div>
+            </div>
+            <a href="javascript:void(0);" title="{{messages.more}}"
+               class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+              <span class="icon-arrow-down"></span></a>
+            <a href="javascript:void(0);" title="{{messages.less}}"
+               class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+              <span class="icon-arrow-up"></span></a>
+          </div>
+        {{/xif}}
+
+      {{else xif "this.feed_event_type == 8"}}
+        <div class="esoc-social-comment-data">
+          <span class="esoc-activity-object-info {{messages.inactiveClass}}">
+            <a href="javascript:void(0);" class="esoc-social-mime-icon 
+            {{messages.mimeTypeClass}}" title="{{extended_info.name}}" aria-label="{{extended_info.name}}"></a>
+            <a href="javascript:void(0);" class="esoc-object-name esoc-object-name-with-version"
+               title="{{extended_info.name}}">{{extended_info.name}}</a>
+            <span class="esoc-social-version">{{messages.version}}</span>
+            <span class="esoc-version-number">{{extended_info.version_name}}</span>
+          </span>
+        </div>
+        {{#xif "this.extended_info.sgm_description != ''"}}
+          <div class="esoc-extended-view-mode">
+            <div class="esoc-social-comment-data">
+              <div class="esoc-description">{{extended_info.sgm_description}}</div>
+            </div>
+            <a href="javascript:void(0);" title="{{messages.more}}"
+               class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+              <span class="icon-arrow-down"></span></a>
+            <a href="javascript:void(0);" title="{{messages.less}}"
+               class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+              <span class="icon-arrow-up"></span></a>
+          </div>
+        {{/xif}}
+
+      {{else xif "this.feed_event_type == 9"}}
+        <div class="esoc-extended-view-mode">
+          <div class="esoc-social-comment-data"></div>
+          <a href="javascript:void(0);" title="{{messages.more}}"
+             class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+            <span class="icon-arrow-down"></span></a>
+          <a href="javascript:void(0);" title="{{messages.less}}"
+             class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+            <span class="icon-arrow-up"></span></a>
+        </div>
+      {{else}}
+        <div class="esoc-extended-view-mode">
+          <div class="esoc-social-comment-data">{{{commentText}}}</div>
+          <a href="javascript:void(0);" title="{{messages.more}}"
+             class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+            <span class="icon-arrow-down"></span></a>
+          <a href="javascript:void(0);" title="{{messages.less}}"
+             class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+            <span class="icon-arrow-up"></span></a>
+        </div>
+      {{/xif}}
+    </div>
+
+    {{#xif "this.extended_info.attachment_id != '' && (this.extended_info.attachment_subtype ==
+    this.messages.shortcutAttachmentSubtype || this.extended_info.attachment_subtype == this
+    .messages.documentAttachmentSubtype)"}}
+      <div class="esoc-social-attachment {{messages.attachmentInactiveClass}}">
+        {{#xif "this.extended_info.attachment_subtype == this.messages.shortcutAttachmentSubtype"}}
+          <span class="csui-icon-group esoc-social-attachment-icon"
+                title="{{extended_info.attachment_name}}">
+            <span class="{{messages.attachmentMimeTypeClass}}" />
+            <span class="csui-icon csui-icon-shortcut-overlay"></span>
+          </span>
+        {{else xif "this.extended_info.attachment_subtype == this.messages
+        .documentAttachmentSubtype"}}
+          <a href="javascript:void(0);" class="esoc-social-attachment-icon {{messages
+          .attachmentMimeTypeClass}}" title="{{extended_info.attachment_name}}" aria-label="{{extended_info.attachment_name}}"></a>
+        {{/xif}}
+        <a href="javascript:void(0);" class="esoc-social-attachment-name"
+           title="{{extended_info.attachment_name}}">{{extended_info
+        .attachment_name}}</a>
+      </div>
+    {{/xif}}
+  </div>
+</div>
+{{#xif "this.noMoreData == false"}}
+  <div id="{{uniqueId}}" class="esoc-social-activity-load-more"></div>
+{{/xif}}
+<span class="esoc-social-comment-delete"></span>

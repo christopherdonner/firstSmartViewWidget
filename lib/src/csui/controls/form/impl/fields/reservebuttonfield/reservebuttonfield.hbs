@@ -1,0 +1,19 @@
+{{#if reserved}}
+  <div class="cs-field-read">
+    <div class="cs-field-read-inner">
+      <div class="btn-container">
+        <span class="csui-btn-reserve-status {{noActionCSS}}">
+          <span tabindex="{{tabIndex}}" data-cstabindex="{{tabIndex}}"
+                class="csui-btn-reserve-status-action csui-icon {{icon}}" role="button"
+                title="{{tooltip}}" {{#if idBtnLabel}}aria-labelledby="{{idBtnLabel}}"
+          {{/if}}></span>
+          <span
+              class="csui-reserveby-status cs-formfield cs-userfield cs-formfield-readonly"></span>
+           <input id="{{reserveid}}" class="binf-hidden" value="reserved" type="button">
+        </span>
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

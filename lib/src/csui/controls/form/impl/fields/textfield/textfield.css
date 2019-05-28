@@ -1,0 +1,61 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.cs-textfield input {
+  
+
+  -webkit-box-flex: 1 1 0; 
+  -moz-box-flex: 1 1 0; 
+  -webkit-flex: 1 1 0; 
+  -ms-flex: 1 1 100%; 
+  flex: 1 1 0; 
+
+  padding-left: 0.5em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  border: 1px solid #a7a9ac;
+  border-radius: 3px;
+  margin: 0;
+  height: 28px;
+}
+
+.cs-form .alpaca-field.has-error .cs-field-write input {
+  color: #000000;
+  background-color: #fae9ea;
+  border: 1px solid #df3324;
+}
+
+.cs-textfield input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  border: 2px solid #666666;
+  border-radius: 3px;
+}
+
+.cs-textfield .cs-field-write-inner {
+  display:flex;
+}
+
+
+
+.cs-formfield.cs-textfield .cs-field-read button > span {
+  white-space: nowrap;
+}
+
+.cs-formfield.cs-textfield .cs-field-read button a {
+  outline: 0;
+}
+
+
+
+.cs-textfield.readonly input {
+  border: 1px transparent;
+  padding-left: 0;
+}
+
+
+

@@ -1,0 +1,114 @@
+{
+	"data": {
+		"compound_document": "api/v1/forms/nodes/create?type=136&parent_id=678795",
+		"document": "api/v1/forms/nodes/create?type=144&parent_id=678795",
+		"folder": "api/v1/forms/nodes/create?type=0&parent_id=678795",
+		"shortcut": "api/v1/forms/nodes/create?type=1&parent_id=678795",
+		"tasklist": "api/v1/forms/nodes/create?type=204&parent_id=678795",
+		"url": "api/v1/forms/nodes/create?type=140&parent_id=678795",
+		"Wiki": "api/v1/forms/nodes/create?type=5573&parent_id=678795"
+	},
+	"definitions": {
+		"compound_document": {
+			"body": "",
+			"content_type": "",
+			"display_hint": "",
+			"display_href": "",
+			"handler": "form",
+			"image": "/main3_img/webdoc/cd.gif",
+			"method": "GET",
+			"name": "Compound Document",
+			"parameters": {},
+			"tab_href": "",
+			"type": 136
+		},
+		"document": {
+			"body": "",
+			"content_type": "",
+			"display_hint": "",
+			"display_href": "",
+			"handler": "form",
+			"image": "/main3_img/webdoc/doc.gif",
+			"method": "GET",
+			"name": "Document",
+			"parameters": {},
+			"tab_href": "",
+			"type": 144
+		},
+		"folder": {
+			"body": "",
+			"content_type": "",
+			"display_hint": "",
+			"display_href": "",
+			"handler": "form",
+			"image": "/main3_img/webdoc/folder.gif",
+			"method": "GET",
+			"name": "Folder",
+			"parameters": {},
+			"tab_href": "",
+			"type": 0
+		},
+		"shortcut": {
+			"body": "",
+			"content_type": "",
+			"display_hint": "",
+			"display_href": "",
+			"handler": "form",
+			"image": "/main3_img/tinyali.gif",
+			"method": "GET",
+			"name": "Shortcut",
+			"parameters": {},
+			"tab_href": "",
+			"type": 1
+		},
+		"tasklist": {
+			"body": "",
+			"content_type": "",
+			"display_hint": "",
+			"display_href": "",
+			"handler": "form",
+			"image": "/main3_img/task/16tasklist.gif",
+			"method": "GET",
+			"name": "Task List",
+			"parameters": {},
+			"tab_href": "",
+			"type": 204
+		},
+		"url": {
+			"body": "",
+			"content_type": "",
+			"display_hint": "",
+			"display_href": "",
+			"handler": "form",
+			"image": "/main3_img/webdoc/url.gif",
+			"method": "GET",
+			"name": "URL",
+			"parameters": {},
+			"tab_href": "",
+			"type": 140
+		},
+		"Wiki": {
+			"body": "",
+			"content_type": "",
+			"display_hint": "",
+			"display_href": "",
+			"handler": "form",
+			"image": "/main3_img/wiki/wiki.gif",
+			"method": "GET",
+			"name": "Wiki",
+			"parameters": {},
+			"tab_href": "",
+			"type": 5573
+		}
+	},
+	"definitions_map": {},
+	"definitions_order": [
+		"compound_document",
+		"document",
+		"folder",
+		"shortcut",
+		"tasklist",
+		"url",
+		"Wiki"
+	]
+}

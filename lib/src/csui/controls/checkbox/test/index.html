@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Checkbox control example</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+  <style>
+    body.binf-widgets {
+      font-size: 16px;
+      padding-top: 1em;
+    }
+
+    .binf-widgets h1 {
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding-bottom: 1em;
+    }
+
+    .binf-widgets .cbRegion {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      height: 3em;
+      width: 3em;
+    }
+
+    .binf-widgets .test-row div span {
+      color: white;
+    }
+
+    #content1 {
+      background-color: #ffee55;
+    }
+
+    #btEnable:not([disabled]) {
+      background-color: #ffee55;
+    }
+
+    #btDisable:not([disabled]) {
+      background-color: #ffee55;
+    }
+
+    #content2 {
+      background-color: #ff6b8c;
+    }
+
+    #content3 {
+      background-color: #57b2ff;
+    }
+
+    #btSetMixed:not([disabled]) {
+      background-color: #57b2ff;
+    }
+
+    #content4 {
+      background-color: #86ff32;
+    }
+
+    .binf-widgets .csui-control-view .csui-control:focus {
+      outline: 3px dotted white;
+      outline-offset: -3px;
+    }
+
+    /* no outline if control is clicked - only by using keyboard should show the outline */
+    /* override from control.css with one more class because the outline style from above also has
+     one more class to override the style from control.css */
+    .binf-widgets .csui-control-view .csui-control:active,
+    .binf-widgets .csui-control-view .csui-control:active:focus,
+    .binf-widgets .csui-control-view .csui-control.csui-control-active {
+      outline: none;
+    }
+
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require(["csui/lib/jquery", "csui/lib/backbone", "csui/lib/marionette",
+      "csui/controls/checkbox/checkbox.view"
+    ], function ($, Backbone, Marionette, CheckboxView) {
+
+      function showStatus(id, text, model) {
+        $(id).text(text + ', current state: ' + model.get('checked'));
+        setTimeout(function () {
+          $(id).text('current state: ' + model.get('checked'));
+        }, 3000);
+
+      }
+
+      var contentRegion1 = new Marionette.Region({
+            el: "#content1"
+          }),
+          contentRegion2 = new Marionette.Region({
+            el: "#content2"
+          }),
+          contentRegion3 = new Marionette.Region({
+            el: "#content3"
+          }),
+          contentRegion4 = new Marionette.Region({
+            el: "#content4"
+          });
+
+      var control1 = new CheckboxView({disabled: true});
+      var control2 = new CheckboxView({checked: 'false'});
+      var control3 = new CheckboxView({checked: 'mixed'});
+      var control4 = new CheckboxView({checked: 'true'});
+
+      control1.render();
+      contentRegion1.show(control1);
+
+      control2.render();
+      contentRegion2.show(control2);
+
+      control3.render();
+      contentRegion3.show(control3);
+
+      control4.render();
+      contentRegion4.show(control4);
+
+      control1.listenTo(control1, 'clicked', function (e) {
+        showStatus('#status1', 'clicked', e.model);
+      });
+      control2.listenTo(control2, 'clicked', function (e) {
+        showStatus('#status2', 'clicked', e.model);
+      });
+      control3.listenTo(control3, 'clicked', function (e) {
+        showStatus('#status3', 'clicked', e.model);
+      });
+      control4.listenTo(control4, 'clicked', function (e) {
+        showStatus('#status4', 'clicked', e.model);
+      });
+
+      control1.listenTo(control1.model, 'change:disabled', function () {
+        var disabled = control1.model.get('disabled');
+        $('#btEnable').prop("disabled", !disabled);
+        $('#btDisable').prop("disabled", disabled);
+      });
+
+      $('#btEnable').on('click', function (ev) {
+        control1.setDisabled(false);
+      });
+      $('#btDisable').on('click', function (ev) {
+        control1.setDisabled(true);
+      });
+
+      $('#btSetMixed').on('click', function () {
+        control3.setChecked('mixed');
+        var state = control3.model.get('checked');
+        showStatus('#status3', state, control3.model);
+      });
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container">
+  <h1>Checkbox Control Test Page</h1>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Disabled</span>
+      <div id="content1" class="cbRegion"></div>
+      <span id="status1"></span>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Not checked</span>
+      <div id="content2" class="cbRegion"></div>
+      <span id="status2"></span>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Partly checked</span>
+      <div id="content3" class="cbRegion"></div>
+      <span id="status3"></span>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Checked</span>
+      <div id="content4" class="cbRegion"></div>
+      <span id="status4"></span>
+    </div>
+  </div>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <button class="binf-btn" id="btEnable">Enable</button>
+      <button disabled class="binf-btn" id="btDisable">Disable</button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3"></div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <button class="binf-btn" id="btSetMixed">Set Mixed</button>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

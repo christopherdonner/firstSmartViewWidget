@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Auth with Connector</title>
+
+  <script src="../../../lib/require.js"></script>
+  <script>
+
+    // namespace require
+    var csui = window.csui || (window.csui = {});
+    if (!csui.requirejs && window.requirejs) {
+      csui.requirejs = window.requirejs;
+      csui.require = window.require;
+      csui.define = window.define;
+    }
+
+    // config require
+    var csuiPath = "../../.."; // path to csui sources
+    require.config({
+      paths: {
+        csui: csuiPath,
+        css: csuiPath + '/lib/css',
+        'csui-ext': csuiPath + '/utils/load-extensions/load-extensions',
+        hbs: csuiPath + '/lib/hbs',
+        i18n: csuiPath + '/lib/i18n',
+        json: csuiPath + '/lib/json',
+        less: csuiPath + '/lib/less',
+        txt: csuiPath + '/lib/text'
+      }
+    });
+
+    // load authenticator rules
+    require.config({
+      config: {
+        "csui/utils/authenticators/authenticators": {
+          "extensions": {
+            "csui": [
+              "csui/utils/authenticators/core.authenticators"
+            ]
+          }
+        }
+      }
+    });
+
+
+    // Ensure initialization of the framework.
+    require(['csui/lib/jquery', 'csui/utils/connector'
+    ], function ($, Connector) {
+
+      var connection = {
+        url: '//murdock.opentext.com/alpha/cs.exe/api/v1',
+        credentials: {
+          username: 'admin',
+          password: 'october1'
+        }
+      };
+
+      var connector  = new Connector({
+        connection: connection
+      });
+
+      connector.authenticate(
+        function success() {
+          console.log('authenticated', connection);
+
+          // get node info from REST API, prepare
+          var callOptions = connector.extendAjaxOptions({
+            url: connection.url + '/nodes/2000'
+          });
+
+          // call
+          $.ajax(callOptions)
+            .done(function (resp) {
+              console.log( resp);
+            });
+
+        },
+        function failed( connection) {
+          console.log('could not authenticate', connection);
+        }
+      );
+
+
+     });
+
+  </script>
+</head>
+
+<body>
+<div id="target"></div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

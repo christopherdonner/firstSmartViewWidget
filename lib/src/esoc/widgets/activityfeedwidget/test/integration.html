@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//server/OTCS/livelink/widgets?crossOrigin=true"></script>
+  <link rel="stylesheet" href="//server/img/csui/themes/carbonfiber/theme.css">	
+  <script>
+    csui.require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/OTCS/livelink/api/v1/',
+            supportPath: '/img',
+            crossDomain: true,
+            credentials: {
+              username: "Admin",
+              password: "livelink"
+            }
+          }
+        },
+        'esoc/controls/userwidget/userwidget.view': {
+          'enableProfilePicture': true,
+          'enableSimpleUserProfile': true
+        },
+        'esoc/widgets/userwidget/view/miniprofile.view': {
+          'enableProfilePicture': true,
+          'enableSimpleUserProfile': true
+        }
+      }
+    });
+    csui.require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      'csui/utils/contexts/factories/user',
+      'esoc/widgets/activityfeedwidget/activityfeedwidget.view'
+    ], function (Marionette, PageContext, UserModelFactory, ActivityFeedWidget) {
+      var contentRegion    = new Marionette.Region({el: '#content'}),
+          pageContext      = new PageContext(),
+          currentUser      = pageContext.getModel(UserModelFactory),
+          options          = {
+            context: pageContext,
+            "wrapperClass": "hero"
+          },
+          activityFeedView = new ActivityFeedWidget(options);
+      contentRegion.show(activityFeedView);
+      pageContext.fetch();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12" id="content"></div>
+  </div>
+</div>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

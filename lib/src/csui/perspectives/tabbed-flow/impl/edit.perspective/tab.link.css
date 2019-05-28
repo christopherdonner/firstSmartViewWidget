@@ -1,0 +1,35 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-pman-editinput {
+  background: transparent;
+}
+
+.binf-widgets .csui-pman-editinput {
+  color: #ffffff !important;
+  caret-color: #ffffff;
+  border: 1px solid #ffffff;
+  margin: 10px 22px !important;
+  max-width: 332px;
+  min-width: 125px;
+}
+
+.binf-widgets .pman-edit-tab .cs-tablink-delete {
+  display: none;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.binf-widgets .pman-edit-tab .cs-tablink-delete .cs-delete-icon {
+  height: 16px;
+  width: 16px;
+  display: block;
+}
+
+.binf-widgets .pman-edit-tab.binf-active .cs-tablink-delete, .binf-widgets .pman-edit-tab:hover .cs-tablink-delete {
+  display: block;
+}
+

@@ -1,0 +1,26 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"attach_results_to_email": false,
+				"attachment_name": "",
+				"email_address": "jgladsto@opentext.com",
+				"email_address_user_id": "",
+				"email_body_text": "",
+				"email_mailing_list": null,
+				"email_subject": "Report Data"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text/html",
+			"http_method": "POST",
+			"output_destination": "email",
+			"run_in_background": false,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true,
+			"use_conversion_engine": false,
+			"xml_job_ticket_id": ""
+		}
+	}
+}

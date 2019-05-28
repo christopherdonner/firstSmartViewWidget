@@ -1,0 +1,67 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.csui-np-header .csui-folder-name,
+.csui-np-header > div,
+.csui-np-header > div > form{
+  height: 100%;
+}
+
+.csui-np-header .csui-folder-name{
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.csui-np-header .binf-form-group > input::-ms-clear,
+.csui-np-header .binf-form-group > input::-ms-reveal {
+  display: none;
+}
+
+.binf-widgets .csui-np-header .csui-search-item{
+  display: inline-block;
+  float: left;
+  margin: 7px 7px 0 3px;
+  line-height: 2em;
+}
+
+.binf-widgets .csui-np-header .csui-search-item-type {
+  display: inline-block;
+  float: left;
+  margin: 7px 7px 0 11px;
+  line-height: 2em;
+}
+
+.csui-np-header .csui-np-header .csui-search-item-left-panel {
+  width: 50%;
+  float: left;
+}
+
+.csui-np-header .csui-np-header .csui-search-item-right-panel {
+  width: 50%;
+  float: right;
+}
+
+.binf-widgets .csui-np-header .csui-search-item-location,
+.binf-widgets .csui-np-header .csui-search-item-location-disabled {
+  height: 2em;
+  line-height: 2em;
+  width: 100%;
+  margin: 7px 0 0 0;
+}
+
+.csui-search-item .csui-np-header .csui-search-item-name,
+.csui-search-item .csui-np-header .csui-search-item-name-disabled {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.binf-widgets .csui-np-header .csui-search-results-header {
+  margin: 5px 0px 0px 0px;
+}

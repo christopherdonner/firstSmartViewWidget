@@ -1,0 +1,31 @@
+<a href="#" class="binf-dropdown-toggle nav-profile csui-navbar-icons csui-acc-focusable" data-binf-toggle="dropdown">
+  <span class="csui-profile-default-image image_user_placeholder">{{initials}}</span>
+  <img class="csui-profile-image binf-img-circle binf-hidden" role="presentation" src="" alt="">
+</a>
+<ul class="binf-dropdown-menu csui-profile-dropdown">
+  <li class="csui-name">
+            <a class="cs-name">
+              <span class="esoc-userwidget-wrapper">
+                <a href="javascript:void(0);" class="esoc-user-container esoc-user-profile-link"
+                   data-binf-original-title="" title="">
+                  <span class="user-display-name" id="2122"
+                        data-binf-original-title="" title="">
+                      {{name}}
+                  </span>
+                </a>
+              </span>
+            </a>
+  </li>
+  {{#unless removeSwitchToClassic}}
+    <li class="binf-divider switch-ui-divider"></li>
+    <li>
+      <a class='switch-ui' href="#">{{classic-view}}</a>
+    </li>
+  {{/unless}}
+  <li class="binf-divider"></li>
+  <li>
+    <a class='sign-out' href="#">{{sign-out}}</a>
+  </li>
+</ul>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

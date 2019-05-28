@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Table Report Widget - General Table</title>
+
+  <link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+  <style>
+    .binf-widgets .webreports-table-report-container {
+      padding: 30px;
+    }
+
+    a:link {
+      color: grey;
+    }
+    a:hover {
+      color: grey;
+    }
+    a:active {
+      color: grey;
+    }
+    a:visited {
+      color: grey;
+    }
+
+  </style>
+  <script src="../../../../csui/lib/require.js"></script>
+  <script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+  <script>
+
+	  require.config({
+		  deps: [
+			  'csui/lib/require.config!csui/csui-extensions.json'
+		  ]
+	  });
+
+    require.config({
+      paths: {
+        webreports: '../../..'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/cgi/cs.exe/api/v1',
+            supportPath: '/the_main_img',
+            credentials: {
+              username: 'Admin',
+              password: 'livelink'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../table.report.view.js', './table.report.mock.data.js'
+    ], function (Marionette, PageContext, TableReportView, mock) {
+
+      var   tableReportContentRegion = new Marionette.Region({el: '#common-items-content'}),
+            pageContext   = new PageContext(),
+            tableReportView = new TableReportView({
+				context: pageContext,
+				data: {
+                    id: 24024,
+                    sortBy: "SubType",
+                    sortOrder: "asc",
+                    columnsWithSearch: "SubType",
+                    titleBarIcon: "title-assignments",
+                    swrLaunchCell: {
+                        id: 12345,
+                        iconClass: 'my-icon-class',
+                        hoverText: 'Some hover text for my icon.'
+                    }
+				}
+			});
+
+        
+      tableReportContentRegion.show(tableReportView);
+      mock.enable();
+      pageContext.fetch();
+    });
+
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="webreports-table-report-container" >
+      <div class="" id="common-items-content"></div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

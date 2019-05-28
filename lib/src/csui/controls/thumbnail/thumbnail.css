@@ -1,0 +1,1205 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-thumbnail-wrapper {
+  flex: 1 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-container {
+  height: calc(100% - 0px);
+  background-color: #ffffff;
+  display: block;
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: auto;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-container .csui-thumbnail-results {
+  height: calc(100% - 32px);
+}
+
+
+@media only screen and (max-device-width: 1024px) {
+  body.binf-widgets.csui-on-ipad div {
+    cursor: pointer;
+  }
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  justify-content: flex-start;
+  position: relative;
+  height: auto;
+  padding: 5px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item {
+  max-width: 190px;
+  height: auto;
+  margin: 2px;
+  min-width: 190px;
+  background: transparent;
+  flex: 1 1 0;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-item-container {
+  width: 100%;
+  height: auto;
+  float: left;
+  border-radius: 5px;
+  padding: 0;
+  border: 0;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, .15);
+  -webkit-border-radius: 0px 0px 4px 0px rgba(0, 0, 0, .15);
+  -moz-border-radius: 0px 0px 4px 0px rgba(0, 0, 0, .15);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item:focus {
+  border-color: #94bbea;
+  border-radius: 10px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-selected {
+  border: 2px solid #2e3d98;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-selected .csui-thumbnail-item-container {
+  
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form:focus {
+  
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-item.csui-thumbnail-item-form div.csui-thumbnail-thumbnailIcon:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-item.csui-thumbnail-item-form div.csui-thumbnail-thumbnailIcon:focus {
+  border-color: transparent;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-icon-container {
+  
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content-container {
+  border-bottom: 4px solid #3dc6c7;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  background: #dce4e8;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container.csui-new-item {
+  background-color: #e7f1d9;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container.csui-new-item.csui-new-item-error {
+  background-color: #dce4e8;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content-container .csui-inlineform-url .csui-inlineform-group-url .csui-inlineform-input-url {
+  margin-top: 15px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-icon-container,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container {
+  position: relative;
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-icon-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container {
+  background: #eef2f4;
+  padding: 0 16px 36px 16px;
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  font-size: 14px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content-container {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container a {
+  color: #333333;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data {
+  display: block;
+  padding: 0 22px;
+  height: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input[type="checkbox"] {
+  margin: 0;
+  width: 14px;
+  height: 15px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox .csui-selectlabel::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox .csui-selectlabel::after {
+  width: 19px;
+  height: 19px;
+  top: -2px;
+  left: -3px;
+  border: 5px solid transparent;
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+  background-color: transparent;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input[type="checkbox"] + .csui-selectlabel:hover::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input:hover + .csui-selectlabel::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input[type="checkbox"] + .csui-selectlabel:focus::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input:focus + .csui-selectlabel::before {
+  border: 4px solid #909090;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input[type="checkbox"]:disabled + .csui-selectlabel:hover::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input[disabled]:hover + .csui-selectlabel::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input[type="checkbox"]:disabled + .csui-selectlabel:focus::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox input[disabled]:focus + .csui-selectlabel::before {
+  border: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-selected-checkbox.csui-checkbox-selectAll input[type="checkbox"]:checked + .csui-selectlabel::after {
+  background-repeat: no-repeat;
+  border: 3px solid transparent;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header {
+  background-color: #eef2f4;
+  display: block;
+  position: relative;
+  height: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-selected-checkbox.csui-checkbox-atleastone {
+  background-color: transparent;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-selected-checkbox span {
+  margin-left: 5px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-select {
+  padding: 0px 5px;
+  width: 33.3%;
+  font-size: 14px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-select.csui-checkbox {
+  display: block;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-thumbnail-itemcount {
+  width: 33.3%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-thumbnail-sort-search-container {
+  width: 33.3%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container {
+  text-align: right;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  align-items: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-thumbnail-column-search {
+  right: 0;
+  position: relative;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  min-width: 32px;
+  justify-content: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .cs-sort-links {
+  position: relative;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-search-sort-options {
+  display: inline;
+  border: none;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .7);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-search-sort-options .dropdown-backdrop {
+  display: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-search-sort-options button.binf-btn {
+  border: none;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 0px;
+  background: transparent;
+  font-weight: bold;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-search-sort-options .csui-button-icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-search-sort-options.binf-open .csui-button-icon {
+  background-image: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-search-sort-options.binf-open .binf-btn.binf-btn-default {
+  background-color: #ffffff;
+  outline: 0;
+  -webkit-box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, .7);
+  -moz-box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, .7);
+  box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, .7);
+  z-index: 1001;
+  position: relative;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-search-sort-options .csui-sort-arrow {
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .icon-search {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 19px;
+  width: 19px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  border: 0px;
+  border-radius: 0;
+  top: auto;
+  margin: 0px;
+  padding: 3px 0px 0px 0px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu > li span.cs-icon {
+  background-repeat: no-repeat;
+  min-width: 16px;
+  min-height: 16px;
+  top: calc(50% - 8px);
+  position: absolute;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu > li.binf-active span.cs-icon {
+  display: block;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu li {
+  padding: 2px 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu > li > a {
+  padding: 0 1em;
+  line-height: 2em;
+  display: flex;
+  position: relative;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu > li.binf-active > a {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu > li > a:hover {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .binf-dropdown-menu > li span.cs-label {
+  margin-left: 24px;
+  font: 14px Lato;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection div.csui-thumbnail-thumbnailIcon {
+  display: block;
+  float: left;
+  padding: 0;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  
+  max-height: 190px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-item.csui-thumbnail-item-rename-form div.csui-thumbnail-thumbnailIcon,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-item.csui-thumbnail-item-rename-form .csui-thumbnail-content.csui-thumbnail-name {
+  display: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-item.csui-thumbnail-item-form div.csui-thumbnail-thumbnailIcon {
+  max-height: 84px;
+  background: #dce4e8;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-icon-container {
+  
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-content {
+  padding: 8px 0 0 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-content.csui-thumbnail-name {
+  padding: 10px 0 5px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  line-height: normal;
+  min-height: 32px;
+  
+  opacity: 1;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-content .csui-thumbnail-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  line-height: 18px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-content.csui-thumbnail-name .csui-thumbnail-overview-icon {
+  padding-right: 8px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-item-form .csui-thumbnail-content.csui-thumbnail-name .csui-thumbnail-overview-icon {
+  display: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .binf-popover-content .csui-thumbnail-overview-name .csui-thumbnail-name {
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 14px;
+  color: #333333;
+  padding-left: 8px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  display: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  padding: 6px;
+  height: auto;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-selected .csui-thumbnail-select {
+  background: rgba(255, 255, 255, 1);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item:hover .csui-thumbnail-select,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item:focus .csui-thumbnail-select,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item:active .csui-thumbnail-select {
+  display: block;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select.csui-checkbox {
+  display: block;
+  height: auto;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select .csui-selectlabel::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select .csui-selectlabel::after,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #757575;
+  top: 0;
+  left: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select input[disabled] + .csui-selectlabel::before,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select input[disabled] + .csui-selectlabel::after,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-select input[disabled] {
+  border: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-reserved {
+  width: auto;
+  position: absolute;
+  right: 10px;
+  top: -35px;
+  text-align: right;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-reserved .csui-node-state-reservation {
+  float: right;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-reserved .icon {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  padding: 1em 1em 0 1em;
+  height: auto;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-default-action .csui-icon-group,
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-no-default-action .csui-icon-group {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100%;
+  min-height: 190px;
+  width: 100%;
+
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-default-action .csui-icon-group,
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-no-default-action .csui-icon-group {
+  height: 100%;
+  width: 100%;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-default-action .csui-icon-group,
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-no-default-action .csui-icon-group {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-default-action.inactive,
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-no-default-action.inactive {
+  cursor: default;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-default-action {
+  display: block;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-default-action:focus {
+  outline: 1px dotted #ffffff;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-icon.csui-thumbnail-content-no-default-action.thumbnailPreview:focus {
+  outline: 1px dotted #ffffff;
+}
+
+.binf-widgets .csui-thumbnail-thumbnailIcon .csui-thumbnail-content-icon.csui-thumbnail-content-no-default-action.thumbnailPreview > span.csui-icon-group .csui-icon {
+  display: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content-icon.csui-thumbnail-content-no-default-action.inactive .csui-icon-group,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content-icon.csui-thumbnail-content-no-default-action.inactive .csui-icon-group .csui-icon {
+  cursor: default;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content-icon.csui-thumbnail-content-default-action .csui-icon-group .csui-icon,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content-icon.csui-thumbnail-content-no-default-action .csui-icon-group .csui-icon {
+  cursor: pointer;
+  width: 100%;
+  height: 200px;
+  background-size: 96px;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content-icon.csui-thumbnail-content-no-default-action.inactive {
+  cursor: default;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-wnd_comments,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview {
+  position: absolute;
+  text-align: right;
+  width: 32px;
+  height: 32px;
+  max-width: 32px;
+  min-width: 32px;
+  bottom: 2px;
+  padding: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite {
+  right: 50px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-wnd_comments {
+  right: 90px;
+  width: auto;
+  max-width: 56px;
+  text-align: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-wnd_comments a {
+  margin-top: 0;
+  width: 18px;
+  height: 32px;
+  background-size: 18px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-wnd_comments .esoc-column-social .cs-text {
+  margin-top: 8px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container > button {
+  height: 28px;
+  width: 28px;
+  padding: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon {
+  height: 20px;
+  width: 20px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-content .csui-thumbnail-label span {
+  padding: 0 10px 0 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-content .csui-thumbnail-date {
+  display: flex;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-overview-container .csui-thumbnail-date {
+  display: block;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content-container .csui-thumbnail-overview {
+  right: 9px;
+  bottom: 2px;
+  padding: 0px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview button:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview button:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview button:active {
+  background-color: #cccccc;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-overview-container a {
+  height: 28px;
+  width: 28px;
+  float: right;
+  align-items: center;
+  display: flex;
+  border: 1px solid #f5f5f5b5;
+  padding: 2px 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-overview-container .csui-thumbnail-overview-properties button {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  padding: 0 0 2px;
+  border: none;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-nodestate button, 
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container .csui-overview-container .csui-thumbnail-nodestate a {
+  height: 28px;
+  width: 28px;
+  background: transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-overview-container .icon {
+  width: 100%;
+  height: 100%;
+  background-size: 22px;
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-overview-container .csui-node-state-reservation .icon {
+  background-size: 18px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-overview-container .icon.icon-toolbar-metadata {
+  width: 20px;
+  height: 20px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview button:focus {
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .icon {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-thumbnail-size label,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-size span {
+  float: left;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-thumbnail-size span,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-thumbnail-modify_date span {
+  padding-left: 10px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-overview .csui-thumbnail-name -name-appendix {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  min-width: 35px;
+  max-width: 35px;
+  border-radius: 50%;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-actionbar {
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-actionbar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-table-actionbar-bubble {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-table-actionbar-bubble > ul.binf-nav > li > a {
+  padding: 1px 4px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-table-actionbar-bubble > ul.binf-nav > li > a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-actionbar ul.binf-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-actionbar ul.binf-nav > li,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-table-actionbar-bubble {
+  width: 28px;
+  height: 28px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-actionbar .icon-toolbar-more {
+  width: 26px;
+  height: 26px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper li.binf-dropdown.binf-open ul {
+  right: auto;
+  left: auto;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-inlineform-group {
+  flex-wrap: wrap;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-inlineform-group.csui-inlineform-group-url-wrapped {
+  margin-top: 20px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-inlineform-group.csui-inlineform-group-error {
+  padding-top: 0.5em;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-inlineform-group.csui-inlineform-group-error .binf-text-danger {
+  white-space: normal;
+}
+
+.binf-widgets .cs-thumbnail-wrapper input.binf-form-control.csui-inlineform-input-url {
+  width: calc(100% - 50px);
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover {
+  max-width: 230px;
+  min-width: 230px;
+  border: none;
+  border-radius: 0px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover .binf-arrow {
+  border-right-color: transparent;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover .binf-popover-content {
+  padding: 16px 20px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover.binf-left > .binf-arrow {
+  border-left-color: transparent;
+  top: 80%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover .overview-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover .overview-name {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 10px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover .metedata-overview-template .size-container,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover .metedata-overview-template .overview-name-container,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-actions-container .csui-thumbnail-overview .binf-popover .metedata-overview-template .date-container {
+  margin-bottom: 15px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-results .csui-thumbnail-collection > div.csui-thumbnail-empty {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  color: #ffffff;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-results .csui-thumbnail-collection > div.csui-thumbnail-empty p {
+  margin-top: 160px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection.csui-thumbnail-empty {
+  height: 100%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-collection .csui-thumbnail-empty.icon-thumbnail-empty-page {
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-top: 70px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-inlineform-group .csui-btn.binf-btn.csui-btn-save,
+.binf-widgets .cs-thumbnail-wrapper .csui-inlineform-group .csui-btn.binf-btn.csui-btn-cancel {
+  margin-right: 0;
+  margin-top: 10px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-inline-action-container {
+  width: 100%;
+  background: #f9f9f9;
+  position: absolute;
+  bottom: 0;
+  height: 48px;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  opacity: 1;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container {
+  display: flex;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container .csui-btn-save,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container .csui-btn-cancel {
+  border: 0;
+  margin: 0px 15px 0px 0px;
+  padding: 8px 5px;
+  background: transparent;
+  font-size: 14px;
+  border-radius: 5px;
+  height: auto;
+  line-height: normal;
+  color: #232e72;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-overview-icon .csui-icon-group,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-overview-icon .csui-icon-group .csui-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container .csui-btn-save {
+  font-weight: bold;
+  color: #232e72;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container .csui-btn-save:hover {
+  background: #dce4e8;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container .csui-btn-save:active {
+  background: #cccccc;
+  color: #414979;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-name .csui-inlineform-group > .csui-inlineform-input-name {
+  width: calc(100% - 31px);
+  height: 32px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form input {
+  
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form input:focus {
+  
+  outline: none;
+}
+
+
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-inlineform-group > .csui-inlineform-input-url {
+  margin-left: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content-icon .csui-icon-group .csui-icon {
+  height: 100px;
+  background-size: 48px 48px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-apply-transition .csui-thumbnail-content-icon .csui-icon-group .csui-icon {
+  height: 200px;
+  background-size: 96px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content-container .csui-inlineform .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content-icon .csui-icon-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-size: 100px;
+  background-position: center;
+  min-height: 84px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content.csui-thumbnail-name {
+  min-height: 138px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content.csui-thumbnail-favorite,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content.csui-thumbnail-reserved,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content.csui-thumbnail-size,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content.csui-thumbnail-date,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-content.csui-thumbnail-wnd_comments,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item.csui-thumbnail-item-form .csui-thumbnail-overview {
+  display: none;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container .csui-inlineform-group .csui-btn-metadata {
+  position: absolute;
+  right: 17px;
+  top: -75px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .binf-widgets .cs-dialog.csui-thumbcarousel-dialog .binf-modal-lg .binf-modal-body {
+    height: calc(100vh - 30px);
+  }
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-reserved .csui-thumbnail-nodestate-container {
+  position: relative;
+  display: inline-block;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-reserved .csui-thumbnail-nodestate-container::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-reserved .csui-thumbnail-nodestate-container .csui-thumbnail-nodestate > ul > li {
+  height: 18px;
+  width: 18px;
+  float: right;
+  align-items: center;
+  display: flex;
+  border: 1px solid #f5f5f5b5;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  margin-left: 8px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.csui-thumbnail-nodestate .csui-node-state-reservation > button,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-content-container .csui-thumbnail-nodestate a {
+  width: 100%;
+  height: 100%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-thumbnail-column-search {
+  position: relative;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-thumbnail-column-search .csui-table-column-search .csui-table-searchbox {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  margin-left: -1em;
+  margin-right: 0.5em;
+  max-width: 100%;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-thumbnail-column-search .csui-table-column-search .csui-table-searchbox .fadeout {
+  top: 6px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-thumbnail-column-search .csui-thumbnail-search-input {
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  height: 28px;
+  font-style: italic;
+  line-height: normal;
+  outline: 0;
+  border: 1px solid #a7a9ac;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 30px;
+  width: calc(100% - 28px);
+  margin: 0;
+  max-width: 100%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-header .csui-thumbnail-header-data .csui-sorting-container .csui-thumbnail-column-search > .csui-thumbnail-search-icon {
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  cursor: pointer;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-actionbar-hide-child {
+  visibility: hidden;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-actionbar-hide-child + li.csui-loading-parent-wrapper {
+  position: absolute;
+  left: 3px;
+  padding: 0;
+}
+
+.csui-table-column-search .icon.icon-search {
+  height: 19px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-inlineform-group .csui-inlineform-input-error {
+  display: block;
+  height: 32px;
+  margin-top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-table-column-search > .csui-table-search-icon {
+  cursor: pointer;
+}

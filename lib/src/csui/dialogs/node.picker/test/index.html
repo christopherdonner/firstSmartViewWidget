@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NodePicker</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            supportPath: '/support'
+          }
+        //},
+        //'csui/utils/contexts/factories/node': {
+        //  attributes: {id: 2000}
+        }
+      }
+    });
+
+    require(['csui/utils/contexts/page/page.context', 'csui/models/node/node.model',
+      '../node.picker', "csui/utils/contexts/factories/node","csui/models/nodechildren", 'csui/utils/contexts/factories/connector'
+    ], function (PageContext, NodeModel, NodePicker, NodeFactory, NodeChildrenCollection, ConnectorFactory) {
+      var context = new PageContext(),
+          connector = context.getObject(ConnectorFactory),
+          container = context.getObject(NodeFactory),
+          node = new NodeModel({id: 37474}, {connector: connector});
+
+      container.set({id:2000});
+
+      var collection = new NodeChildrenCollection(undefined, {
+        node: container,
+        autofetch: true,
+        expand: ['node']
+      });
+      collection.fetch({reset: false, merge: false, remove: false});
+      collection.on('sync', function(models){
+        var nodes = [collection.models[0],collection.models[1], collection.models[2]];
+        var nodePicker = new NodePicker({
+          initialSelection: nodes,
+          initialContainer: container,
+          command: 'copy',
+          selectMultiple: false,
+          dialogTitle: 'Copy',
+          context: context
+          //unselectableNodes: [node],
+          //selectableTypes: [144, 131]
+        });
+
+
+        nodePicker
+          .show()
+          .done(function (args) {
+            var names = args.nodes.map(function (node) {
+              return node.get('name');
+            });
+            alert(names.join(', '));
+          });
+
+      });
+
+
+
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets"></body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

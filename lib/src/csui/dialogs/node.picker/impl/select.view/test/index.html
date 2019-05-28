@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NodePicker</title>
+
+  <link rel="stylesheet" href="../../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../../lib/require.js"></script>
+  <script src="../../../../config.js" data-csui-path="../../../.."></script>
+  <script src="../../../../helpers.js"></script>
+
+  <script>
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            //url: '//server/otcs/cs/api/v1',
+            url: 'http://localhost/OTCS_0519/cs.exe/api/v1',
+            supportPath: '/support'
+
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/underscore','csui/lib/marionette',
+      'csui/utils/contexts/page/page.context', "csui/utils/contexts/factories/node",
+      "csui/utils/contexts/factories/children", '../select.view.js'
+    ], function ( _, Marionette, PageContext, NodeFactory, ChildrenCollectionFactory, SelectionView) {
+
+      var context = new PageContext(),
+          container = context.getObject(NodeFactory);
+
+
+      container.set('id', 2660);
+      container.fetch().then(function () {
+        var collection =  context.getCollection(ChildrenCollectionFactory);
+        collection.setLimit(0,20,true);
+        var region = new Marionette.Region({el: '#content'});
+        var selectionView = new SelectionView({
+          context: context,
+          collection: collection,
+          container: container
+        });
+        region.show(selectionView);
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+
+<div class="container-fluid grid-rows">
+  <button id="closeBrowser" style="float:right; top:10px">close</button>
+  <div class="row">
+    <div id="content" class="row-xs-full"></div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,41 @@
+<div class="wfstatus-filter-view">
+
+  <div class="wfstatus-panel-heading" title="{{headerFilterTitle}}">{{headerFilterTitle}}
+  </div>
+  <div class="binf-wfstatus-heading" title="{{headerFilterLabel}}">
+    {{headerFilterLabel}}
+  </div>
+
+  <div class="wfstatus-header csui-selected-checkbox csui-checkbox-primary">
+    <input id="selectAll" type="checkbox" class="All" tabindex="-1"
+      {{checkedAll}}>{{allFilterLabel}}</br></input>
+    <span class="wfstatus-allcount">{{allWFStatusCount}}</span>
+  </div>
+
+  <div class="wfstatus-body">
+    <div class="csui-selected-checkbox csui-checkbox-primary">
+      <input id="wfstatus-late" type="checkbox" class="wfstatus-late" tabindex="-1"
+        {{checkedLate}}>{{lateFilterLabel}}</input>
+      <span class="wfstatus-latecount">{{lateCount}}</span>
+    </div>
+    </br>
+
+    <div class="csui-selected-checkbox csui-checkbox-primary">
+      <input id="wfstatus-ontime" type="checkbox" class="wfstatus-ontime" tabindex="-1"
+        {{checkedOnTime}}>{{ontimeFilterLabel}}</input>
+      <span class="wfstatus-ontimecount">{{ontimeCount}}</span>
+    </div>
+    </br>
+    <div class="csui-selected-checkbox csui-checkbox-primary">
+      <input id="wfstatus-completed" type="checkbox" class="wfstatus-completed" tabindex="-1"
+        {{checkedCompleted}}>{{completedFilterLabel}}</input>
+      <span class="wfstatus-completedcount">{{completedCount}}</span>
+      </br>
+    </div>
+  </div>
+</div></div>
+
+<div class="wfstatus-list-view"></div>
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,9 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.icon-toolbar-wfinitiate {
+  background-image: url('images/toolbar_workflow24.svg');
+}
+
+.icon-toolbar-wfinitiate:hover {
+  background-image: url('images/toolbar_workflow_mo24.svg');
+}

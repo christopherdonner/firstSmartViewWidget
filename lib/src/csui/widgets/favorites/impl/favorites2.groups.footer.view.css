@@ -1,0 +1,26 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-favorite-groups-footer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow-x: hidden; 
+}
+
+.binf-widgets .csui-favorite-groups-footer > .csui-groups-footer-wrapper {
+  font-size: 16px;
+  padding-top: 1em;
+  border-top: 1px solid #dddddd;
+}
+
+.binf-widgets .csui-favorite-groups-footer .csui-groups-footer-text {
+  text-align: center;
+  font-size: 0.75em;
+  font-style: italic;
+  color: #666666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 0.75em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}

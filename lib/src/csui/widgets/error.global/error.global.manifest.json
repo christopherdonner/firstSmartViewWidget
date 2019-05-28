@@ -1,0 +1,18 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "fullpage",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "serverError": {
+        "title": "{{serverErrorTitle}}",
+        "description": "{{serverErrorDescription}}",
+        "type": "string"
+      }
+    }
+  },
+  "options": {
+  }
+}

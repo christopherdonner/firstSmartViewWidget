@@ -1,0 +1,132 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-apply-properties-selector.binf-dropdown {
+  padding: 0 0 0 1.5em;
+}
+
+.binf-widgets .cs-apply-properties-selector .dropdown-label {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 1em;
+}
+
+.binf-widgets .cs-apply-properties-selector button {
+  padding: 0 1rem;
+  padding-right: 1.5rem;
+  border: 0;
+  background-color: transparent;
+  outline-offset: 0;
+  text-decoration: none;
+  height: 100%;
+  align-items: center;
+}
+
+@-moz-document url-prefix() {
+  .cs-apply-properties-selector button {
+    display: block;
+  }
+}
+
+.binf-widgets .cs-apply-properties-selector button:focus,
+.binf-widgets .cs-apply-properties-selector button:hover,
+.binf-widgets .cs-apply-properties-selector button:active {
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+}
+
+.binf-widgets .cs-apply-properties-selector.binf-open button:focus,
+.binf-widgets .cs-apply-properties-selector button:hover,
+.binf-widgets .cs-apply-properties-selector button:active {
+  outline: none;
+  outline-offset: 0;
+}
+
+.binf-widgets .cs-apply-properties-selector.binf-dropdown.binf-open > .binf-dropdown-toggle {
+  z-index: 9;
+  background-color: transparent !important;
+}
+
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-menu {
+  left: auto;
+  right: 0;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 0.25em 0px;
+  background-clip: border-box;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.4), -2px 2px 3px -1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.4), -2px 2px 3px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.4), -2px 2px 3px -1px rgba(0, 0, 0, 0.4);
+}
+
+.binf-widgets .cs-apply-properties-selector .binf-dropdown-menu li a {
+  font-size: 1em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+}
+
+.binf-widgets .cs-apply-properties-selector .binf-dropdown-menu .binf-divider {
+  margin: 0.25em 0px;
+}
+
+.binf-widgets .cs-apply-properties-selector .cs-icon {
+  width: 1em;
+}
+
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-toggle .cs-label,
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-menu .cs-label {
+  vertical-align: text-bottom;
+  
+}
+
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-toggle > .cs-icon {
+  margin-left: 0.5em;
+}
+
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-toggle .cs-label,
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-menu .cs-label,
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-toggle > .binf-caret {
+  margin-left: 0;
+}
+
+.binf-widgets .cs-apply-properties-selector > .binf-dropdown-menu > .binf-active > a:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+
+.cs-dialog .cs-header-control .cs-apply-properties-selector > .binf-dropdown-toggle .cs-label {
+  vertical-align: middle;
+  width: 172px;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.cs-dialog .binf-modal-header .cs-apply-properties-selector .cs-icon {
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  display: inline-block;
+  background-position-y: 50%;
+}
+
+.cs-dialog .binf-modal-header .cs-apply-properties-selector .cs-icon.icon-caret-down {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin-left: 0.5rem;
+  margin-Right: 0.5rem;
+  display: inline-block;
+  text-align: right;
+}
+
+.binf-widgets .cs-apply-properties-selector button .cs-icon {
+  margin-bottom: 0;
+}
+
+.binf-widgets .cs-apply-properties-selector .binf-dropdown-menu li.binf-active a {
+  color: #333333;
+  background-color: #dfe7ea;
+}

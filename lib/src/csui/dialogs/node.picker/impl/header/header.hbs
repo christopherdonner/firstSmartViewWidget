@@ -1,0 +1,32 @@
+{{#if saveFilter}}
+  <h2 id="nodePickerHeader" class="csui-title">{{{title}}}</h2>
+  <div class='csui-filtername-container'>
+    <span class="cs-icon-required category_required" title=""></span>
+    <input type='text' class='csui-filtername' placeholder="{{placeHolderName}}" tabindex="-1"
+           data-cstabindex="-1" />
+    <span class="csui-filtername-error binf-hidden" title=""></span>
+  </div>
+{{else}}
+  <h2 id="nodePickerHeader" class="csui-title">{{title}}</h2><span class="csui-separator"></span>
+{{/if}}
+
+<div class="csui-target-controls {{#xif "this.globalSearch !== false"}}csui-no-search{{/xif}}">
+  {{#if locationSelector}}
+    <div class="csui-start-locations binf-dropdown" ></div>
+  {{/if}}
+
+  <div class="csui-target-search-property-container">
+    {{#xif "this.globalSearch !== false"}}
+      <div class="csui-global-search {{#if saveFilter}}csui-save-filter {{/if}}{{#if
+          propertiesSeletor}}{{else}}csui-no-properties-selector for-shortcut{{/if}}"></div>
+    {{/xif}}
+
+    {{#if propertiesSeletor}}
+      <div class="apply-properties-selector"></div>
+    {{/if}}
+    <span class="csui-separator {{#if
+        propertiesSeletor}}{{else}}csui-no-properties-selector{{/if}}"></span>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

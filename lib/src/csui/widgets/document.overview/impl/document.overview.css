@@ -1,0 +1,404 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-document-overview-wrapper {
+  min-height: calc(33.25em + 16px) !important;
+  width: 100%;
+  min-width: 44em;
+  overflow: hidden;
+  text-align: center;
+  background-color: transparent !important;
+}
+
+.cs-document-overview-wrapper .cs-content-container {
+  margin: 0;
+  height: calc(100% - 8em);
+  display: flex;
+}
+
+.cs-document-overview-wrapper .cs-content {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+.cs-document-overview-wrapper .cs-content-wrapper {
+  width: 44em;
+  height: 33.25em;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cs-document-overview-wrapper .thumbnail_not_loaded {
+  background-repeat: no-repeat;
+}
+
+.cs-document-overview-wrapper .cs-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 4em;
+  padding: 0em 1.5em 0 1.5em !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  text-align: left;
+  vertical-align: middle;
+  -webkit-box-shadow: 0px 16px 15px 0px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 16px 15px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 16px 15px 0px rgba(255, 255, 255, 0.3);
+}
+
+.cs-document-overview-wrapper .title-container {
+  min-width: calc(100% - 128px);
+  max-width: calc(100% - 128px);
+  position: relative;
+}
+
+.binf-widgets .cs-document-overview-wrapper .title-header{
+  max-height: 2.9rem;
+  line-height: 1.3rem;
+  overflow: hidden;
+  position: relative;
+  padding-left: 0.5em;
+  word-wrap: break-word;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name span.csui-icon-group {
+  width: auto;
+  height: auto;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name span.csui-icon-group,
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name span.csui-icon-group span.csui-icon {
+  position: static;
+  cursor: default;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.binf-widgets .cs-document-overview-wrapper .title {
+   text-align: left;
+   font-size: 24px;
+   font-weight: 400;
+   padding: 0 2px 0 0;
+   cursor: pointer;
+  }
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-icon-div {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  padding-left: 2px;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-icon-div .inline-edit-icon {
+  display: inline-block;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  width: 95%;
+}
+
+.binf-widgets .cs-document-overview-wrapper .cs-metadata-item-name.csui-acc-tab-region .title {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  max-width: 95%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .cs-icon-required {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 3px;
+  float: left;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input {
+  text-align: left;
+  height: 25px;
+  display: inline-block;
+  max-width: calc(70% - 1.41em);
+  width: 95%;
+  float: none;
+  vertical-align: top;
+  margin-top: 2px;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input::-ms-clear {
+  display: none;
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .edit-cancel {
+  display: inline-block;
+  height: 25px;
+}
+
+  
+
+.cs-document-overview-wrapper .cs-metadata-item-name-container .title-error-div {
+  padding-left: 53px;
+  font-size: 0.75em;
+  color: #df3324;
+  cursor: default;
+  line-height: 14px;
+}
+
+@media (max-width: 1024px) {
+  .cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input {
+    max-width: calc(100% - 40px);
+  }
+}
+
+.cs-document-overview-wrapper .cs-metadata-item-name .mime_image {
+  width: 36px;
+  height: 36px;
+}
+
+.cs-document-overview-wrapper .thumbnail_section .csui-icon {
+  width: 154px !important;
+  height: 200px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cs-document-overview-wrapper .thumbnail_section {
+  cursor: pointer;
+  text-align: center !important;
+  margin-top: 0 !important;
+}
+
+.cs-document-overview-wrapper .general-information {
+  float: left !important;
+}
+
+.cs-document-overview-wrapper .cs-content-footer {
+  position: absolute;
+  text-align: center;
+  top: calc(100% - 4em);
+  width: 100%;
+  height: 4em;
+  padding-top: 1.2em !important;
+  border-top: 1px solid #e0e0e0 !important;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 0px -16px 15px 0px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px -16px 15px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px -16px 15px 0px rgba(255, 255, 255, 0.3);
+}
+
+.cs-content-footer .binf-btn {
+  height: 2em;
+  padding: 0 1.5em 0 1.5em;
+  margin-left: 1em;
+  vertical-align: middle;
+  border-radius: 1em;
+  font-size: 0.875em;
+  line-height: 0.75em;
+}
+
+.cs-content-footer .primary-btn {
+  background-color: #0072aa;
+  color: white;
+}
+
+.cs-content-footer .primary-btn:hover {
+  color: white;
+  background-color: #004b71;
+}
+
+.cs-content-footer .default-btn {
+  background-color: white;
+  color: #0072aa;
+  border: 1px solid #0072aa;
+}
+
+.cs-content-footer .default-btn:hover {
+  border: 1px solid #004b71;
+  color: #004b71;
+  -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0, 75, 113, 1);
+  -moz-box-shadow: inset 0px 0px 0px 1px rgba(0, 75, 113, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 75, 113, 1);
+}
+
+.binf-widgets .cs-content-footer .binf-btn.primary-btn:focus,
+.binf-widgets .cs-content-footer .binf-btn.primary-btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.cs-document-overview-wrapper .binf-form-group.alpaca-field > .binf-col-sm-9 {
+  width: 60% !important;
+}
+
+.cs-document-overview-wrapper .user-photo {
+  height: 28px;
+  min-width: 28px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-box-direction: column;
+  -webkit-box-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flexbox-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  -moz-box-pack: justify;
+  justify-content: center;
+}
+
+.cs-field-cont {
+  margin-bottom: 2rem !important;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -moz-box-direction: row;
+  -webkit-box-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flexbox-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  line-height: 24.5px;
+  height: 24.5px;
+}
+
+.cs-document-overview-wrapper .cs-value, .cs-document-overview-wrapper .cs-label {
+  line-height: 24.5px;
+  margin-left: 8px;
+}
+
+.cs-document-overview-wrapper .cs-label {
+  margin-right: 20px;
+  text-align: right !important;
+  width: 27%;
+}
+
+.cs-document-overview-wrapper .description_section {
+  position: relative;
+  float: left !important;
+}
+
+.cs-document-overview-wrapper .preview-section {
+  text-align: center !important;
+}
+
+.cs-document-overview-wrapper .location-container {
+  margin-bottom: 0.6em;
+}
+
+.cs-document-overview-wrapper .location-container .binf-btn[disabled] {
+  opacity: 1 !important;
+}
+
+.cs-document-overview-wrapper .location-container .location-view {
+  height: auto !important;
+  font-size: 0.9em;
+  margin-bottom: 0.8em;
+}
+
+.cs-document-overview-wrapper .location-container .cs-formfield {
+  height: auto !important;
+}
+
+.cs-document-overview-wrapper .favoriteRegion, .cs-document-overview-wrapper .commentRegion {
+  display: inline-block;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.cs-document-overview-wrapper .commentRegion {
+  height: 31px;
+  min-width: 40px;
+}
+
+.cs-document-overview-wrapper .icon-expandArrowDown {
+  z-index: 1;
+}
+
+.cs-document-overview-wrapper .icon-expandArrowUp {
+  bottom: 0 !important;
+  z-index: 1;
+}
+
+.cs-document-overview-wrapper .user-photo {
+  min-width: 24px !important;
+}
+
+.cs-document-overview-wrapper .actions-container {
+  display: flex;
+  align-items: center;
+}
+
+.cs-document-overview-wrapper .description-container {
+  width: 27.75em !important;
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+}
+
+.cs-document-overview-wrapper .thumbnail-container {
+  width: 16.25em !important;
+  padding-right: 3em !important;
+  padding-left: 0 !important;
+}
+
+.cs-document-overview-wrapper .description_section .cs-icon-exp-col {
+  right: -2em !important;
+}
+
+.cs-document-overview-wrapper .description_section .cs-field-read-inner .icon-container {
+  display: none !important;
+}
+
+.cs-document-overview-wrapper .cs-formfield {
+  text-align: left;
+}
+
+.binf-widgets .cs-document-overview-wrapper .title .fadeout {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  right: 0px;
+  width: 35px;
+  height: 1.5rem;
+  z-index: 9;
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 100%); 
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); 
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); 
+}
+

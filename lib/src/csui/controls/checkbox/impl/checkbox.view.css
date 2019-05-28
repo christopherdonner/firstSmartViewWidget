@@ -1,0 +1,47 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .csui-checkbox {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0; 
+  margin: 0;
+  border-color: inherit;
+  border-radius: 0;
+  border-style: none;
+  border-width: 0;
+  border-image: none;
+  background-color: transparent;
+  text-indent: inherit;
+  text-shadow: inherit;
+}
+
+.binf-widgets .csui-checkbox > span {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  align-self: center; 
+}
+
+.binf-widgets .csui-checkbox:disabled > span {
+  background: url('images/checkbox_disabled.svg');
+  background-color: white;
+}
+
+.binf-widgets .csui-checkbox:not([disabled])[aria-checked='false'] > span {
+  background: url('images/checkbox.svg');
+  background-color: white;
+}
+
+.binf-widgets .csui-checkbox:not([disabled])[aria-checked='true'] > span {
+  background: url('images/checkbox_all_selected.svg');
+  background-color: white;
+}
+
+.binf-widgets .csui-checkbox:not([disabled])[aria-checked='mixed'] > span {
+  background: url('images/checkbox_mixed.svg');
+  background-color: white;
+}

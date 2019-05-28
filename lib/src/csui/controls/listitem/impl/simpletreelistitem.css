@@ -1,0 +1,208 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-simpletreelistitem.binf-panel {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.binf-widgets .cs-simpletreelistitem .arrow-overlay {
+  display: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading {
+  height: 48px;
+  padding: 0 16px 0 16px;
+  background-color: #f7f7f7;
+  border: 0;
+
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading span:focus,
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading span:active {
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading:hover,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group > a:hover,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group > a.binf-active:hover {
+  background-color: #d7d7d7;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading:focus,
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading.binf-active:focus,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a:focus,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.binf-active:focus {
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading .container-icon {
+  height: 32px;
+  width: 32px;
+  margin: 8px 8px 0 0;
+  background-repeat: no-repeat;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading .cs-title {
+  font-size: 14px;
+  margin: 17px 8px 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+
+  flex-basis: 0;
+  -webkit-flex-basis: 0;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading .dropdown-icon {
+  width: 16px;
+  height: 48px;
+  background-repeat: no-repeat;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content {
+  min-height: 48px;
+  padding: 0;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-container {
+  height: 48px;
+  padding: 0 16px 0 56px;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-placeholder {
+  display: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-text {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: left;
+  margin: 0;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group {
+  padding: 0;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item {
+  width: 100%;
+  height: 44px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  border-radius: 0;
+  background-color: inherit;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item:focus,
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item:active,
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item span:focus,
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item span:active {
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a {
+  width: 100%;
+  height: 48px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #323232;
+  text-decoration: none;
+  padding: 0 16px 0 56px;
+}
+
+.binf-widgets .cs-simpletreelistitem.flatten-tree .cs-content .cs-list-group a {
+  padding: 0 16px 0 16px;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.binf-active {
+  background-color: #f7f7f7;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .csui-icon,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .list-item-title {
+  cursor: default;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .csui-icon {
+  opacity: 0.5;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .list-item-title {
+  color: #757575;
+  font-style: italic;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group div.binf-list-group-item .csui-icon-group,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group div.binf-list-group-item .csui-icon {
+  height: 44px;
+  width: 32px;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group div.binf-list-group-item .csui-icon {
+  margin-right: 8px;
+  display: block;
+  position: absolute;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .list-item-title {
+  line-height: 44px;
+  height: 44px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: static;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item .csui-table-actionbar .binf-nav a {
+  padding: 0 0.6875em;
+  height: auto;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item .csui-table-actionbar .binf-nav .binf-dropdown-menu a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.binf-widgets .csui-tile-with-more-btn .list-item-title {
+  width: calc(100% - 107px); 
+}
+
+.binf-widgets .cs-favorites span.csui-tileview-more-btn {
+  right: 0px;
+}

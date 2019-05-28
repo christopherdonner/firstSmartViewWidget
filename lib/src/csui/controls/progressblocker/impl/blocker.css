@@ -1,0 +1,99 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+div.load-container {
+  border: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  z-index: 1040;
+}
+
+div.load-container.csui-global {
+  z-index: 1101; 
+}
+
+div.outer-border{
+  margin: -44px 0 0 -44px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border: 10px solid rgba(255, 255, 255,1);
+  border-radius: 100%;
+  width: 87px;
+  height: 87px;
+  background: radial-gradient(circle, rgba(0,0,0,0) 14px, white 5px); 
+  background: -webkit-radial-gradient(circle, rgba(0,0,0,0) 14px, white 5px); 
+  background: -o-radial-gradient(circle, rgba(0,0,0,0) 14px, white 5px); 
+  background: -moz-radial-gradient(circle, rgba(0,0,0,0) 14px, white 5px); 
+  z-index: 999;
+}
+
+div.load-container.csui-global > div.outer-border {
+  z-index: 1102; 
+}
+
+div.inner-border{
+  border: 8px solid rgba(255, 255, 255,1);
+  border-radius: 100%;
+  width: 43px;
+  height: 43px;
+}
+
+
+div.loader {
+  margin: auto;
+  position: relative;
+  border: 12px solid rgba(219, 241, 254, 1);
+  border-left: 12px solid #0072aa;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+  border-radius: 100%;
+  width: 67px;
+  height: 67px;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

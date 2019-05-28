@@ -1,0 +1,1061 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "\/api\/v2\/nodes\/actions?actions=addclassifications&actions=addcategory&actions=addversion&actions=copy&actions=delete&actions=edit&actions=editactivex&actions=rename&actions=move&actions=permissions&actions=properties&actions=reserve&actions=unreserve&actions=comment&actions=finalizerecord&actions=setasdefaultpage&actions=unsetasdefaultpage&actions=initiatedocumentworkflow&ids=678796&ids=678798&ids=681871&ids=678807&ids=678821&ids=678868&ids=678863&ids=678880&ids=678873&ids=679564&ids=678823&ids=681887&ids=678825&ids=678827",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"678796": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678796\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678796\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678796",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678796",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678796",
+					"href": "\/api\/v2\/nodes\/678796",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678796",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678796",
+					"href": "\/api\/v2\/nodes\/678796",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678796",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"678798": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678798\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678798\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678798",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678798",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678798",
+					"href": "\/api\/v2\/nodes\/678798",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678798",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678798",
+					"href": "\/api\/v2\/nodes\/678798",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678798",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"678807": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678807\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678807\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678807",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678807",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678807",
+					"href": "\/api\/v2\/nodes\/678807",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678807",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678807",
+					"href": "\/api\/v2\/nodes\/678807",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678807",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"678821": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678821\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678821\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678821",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678821",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678821",
+					"href": "\/api\/v2\/nodes\/678821",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678821",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678821",
+					"href": "\/api\/v2\/nodes\/678821",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678821",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"678823": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678823\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678823\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678823",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678823",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678823",
+					"href": "\/api\/v2\/nodes\/678823",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678823",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678823",
+					"href": "\/api\/v2\/nodes\/678823",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678823",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"678825": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678825\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678825\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678825",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678825",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678825",
+					"href": "\/api\/v2\/nodes\/678825",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678825",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678825",
+					"href": "\/api\/v2\/nodes\/678825",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678825",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"678827": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678827\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678827",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678827",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678827",
+					"href": "\/api\/v2\/nodes\/678827",
+					"method": "PUT",
+					"name": "Rename"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addcategory", "rename", "delete", "comment"]
+		},
+		"678863": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678863\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678863",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678863",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678863",
+					"href": "\/api\/v2\/nodes\/678863",
+					"method": "PUT",
+					"name": "Rename"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addcategory", "rename", "delete"]
+		},
+		"678868": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678868\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678868\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678868",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678868",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678868",
+					"href": "\/api\/v2\/nodes\/678868",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678868",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678868",
+					"href": "\/api\/v2\/nodes\/678868",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678868",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"678873": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678873\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678873",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678873",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678873",
+					"href": "\/api\/v2\/nodes\/678873",
+					"method": "PUT",
+					"name": "Rename"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addcategory", "rename", "delete"]
+		},
+		"678880": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678880\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678880\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=678880",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678880",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=678880",
+					"href": "\/api\/v2\/nodes\/678880",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678880",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=678880",
+					"href": "\/api\/v2\/nodes\/678880",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/678880",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"679564": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/679564\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"AddClassifications": {
+					"body": "",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/679564\/classifications",
+					"method": "POST",
+					"name": "Add Classification"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/679564\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=679564",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/679564",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"initiatedocumentworkflow": {
+					"body": "initiate_in_smartview",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "",
+					"name": ""
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=679564",
+					"href": "\/api\/v2\/nodes\/679564",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"permissions": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "",
+					"name": "Permissions"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/679564",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=679564",
+					"href": "\/api\/v2\/nodes\/679564",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/679564",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "open",
+				"more": ["properties"]
+			},
+			"order": ["initiatedocumentworkflow", "addversion", "addcategory", "rename", "copy", "move", "permissions", "reserve", "AddClassifications", "delete", "comment"]
+		},
+		"681871": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681871\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681871\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=681871",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681871",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=681871",
+					"href": "\/api\/v2\/nodes\/681871",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681871",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=681871",
+					"href": "\/api\/v2\/nodes\/681871",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681871",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		},
+		"681887": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681887\/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681887\/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"comment": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "POST",
+					"name": "Comments"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/copy?id=681887",
+					"href": "\/api\/v2\/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681887",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/move?id=681887",
+					"href": "\/api\/v2\/nodes\/681887",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681887",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "\/api\/v2\/forms\/nodes\/rename?id=681887",
+					"href": "\/api\/v2\/nodes\/681887",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application\/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "\/api\/v2\/nodes\/681887",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "",
+				"more": ["properties"]
+			},
+			"order": ["addversion", "addcategory", "rename", "copy", "move", "reserve", "delete", "comment"]
+		}
+	}
+}

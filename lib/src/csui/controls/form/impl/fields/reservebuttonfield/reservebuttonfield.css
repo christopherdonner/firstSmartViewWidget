@@ -1,0 +1,38 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-btn-reserve-status {
+  background: transparent no-repeat;
+  background-size: contain;
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+}
+
+.binf-widgets .csui-btn-reserve-status > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.binf-widgets .csui-btn-reserve-status .csui-icon{
+  min-width: 1.5rem;
+  height: 1.5rem;
+}
+
+.csui-btn-reserve-status-action {
+  cursor: pointer;
+}
+
+.binf-widgets .csui-btn-reserve-status .csui-reserveby-status {
+  width: auto;
+  max-width:70%;
+  height: 24px;
+}
+
+.binf-widgets .csui-btn-reserve-status .csui-reserveby-status .esoc-user-profile-link:focus {
+  text-decoration: none;
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .csui-btn-reserve-no-action {
+  cursor: text;
+}

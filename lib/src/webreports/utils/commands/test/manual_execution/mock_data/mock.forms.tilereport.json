@@ -1,0 +1,40 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"options": {
+					"header": "off",
+					"scroll": "on",
+					"title": "Important Data YES",
+					"titleBarIcon": ""
+				},
+				"type": "webreports/widgets/tilereport"
+			},
+			"http_method": "GET",
+			"output_destination": "fullpagewidget"
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [
+		{
+			"data": {},
+			"options": {
+				"fields": {},
+				"form": {
+					"attributes": {
+						"action": "api/v1/nodes/699160/output",
+						"method": "GET"
+					},
+					"renderForm": true
+				}
+			},
+			"schema": {
+				"properties": {},
+				"type": "object"
+			}
+		}
+	]
+}

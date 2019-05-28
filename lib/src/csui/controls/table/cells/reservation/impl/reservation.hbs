@@ -1,0 +1,27 @@
+{{#if reservedSharedCollaboration}}
+  {{#if canRevokeShare}}
+    <button type="button" aria-label="{{reservedAria}}" class="csui-unreserve-cellview">
+  {{/if}}
+  {{#if isReservedByOther}}
+      <span title="{{reservedTooltip}}" class="icon icon-shared_collaborate_other"></span>
+  {{else}}
+      <span title="{{reservedTooltip}}" class="icon icon-shared_collaborate_self"></span>
+  {{/if}}
+  {{#if canRevokeShare}}
+    </button>
+  {{/if}}
+{{else if reserved}}
+  {{#if canUnreserve}}
+    <button type="button" aria-label="{{reservedAria}}" class="csui-unreserve-cellview">
+  {{/if}}
+  {{#if isReservedByOther}}
+      <span title="{{reservedTooltip}}" class="icon icon-reserved_other"></span>
+  {{else}}
+      <span title="{{reservedTooltip}}" class="icon icon-reserved_self"></span>
+  {{/if}}
+  {{#if canUnreserve}}
+    </button>
+  {{/if}}
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

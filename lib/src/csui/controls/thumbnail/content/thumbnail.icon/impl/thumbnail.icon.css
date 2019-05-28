@@ -1,0 +1,5 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-thumbcarousel-dialog.cs-dialog .csui-carousel-film-strip .binf-carousel.ps-container {
+  overflow: hidden;
+}

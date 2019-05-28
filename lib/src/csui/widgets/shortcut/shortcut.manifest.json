@@ -1,0 +1,66 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "tile",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "title": "{{idTitle}}",
+        "description": "{{idDescription}}",
+        "type": "integer"
+      },
+      "type": {
+        "title": "{{typeTitle}}",
+        "description": "{{typeDescription}}",
+        "type": "integer",
+        "enum": [141, 142, 133],
+        "default": 141
+      },
+      "background": {
+        "title": "{{backgroundTitle}}",
+        "description": "{{backgroundDescription}}",
+        "type": "string",
+        "enum": [
+          "cs-tile-background1",
+          "cs-tile-background2",
+          "cs-tile-background3"
+        ]
+      }
+    },
+    "oneOf": [{
+      "required": ["id"]
+    }, {
+      "required": ["type"]
+    }]
+  },
+  "options": {
+    "fields": {
+      "id": {
+        "type": "otcs_node_picker",
+        "type_control": {
+          "parameters": {
+            "select_types": []
+          }
+        }
+      },
+      "type": {
+        "type": "select",
+        "optionLabels": [
+          "{{typeEnterpriseVolume}}",
+          "{{typePersonalVolume}}",
+          "{{typeCategoryVolume}}"
+        ]
+      },
+      "background": {
+        "type": "select",
+        "optionLabels": [
+          "{{backgroundGrey}}",
+          "{{backgroundGreen}}",
+          "{{backgroundOrange}}"
+        ]
+      }
+    }
+  }
+}

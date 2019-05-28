@@ -1,0 +1,30 @@
+{{#if defaultAction}}
+  {{#if inactive}}
+    <div class="csui-table-cell-name-div">
+      <div class="csui-table-cell-name-justify-div">
+        <p class="csui-table-cell-name-value csui-table-cell-no-default-action"
+           title="{{name}}" aria-label="{{nameNoOpenAria}}">{{name}}</p>
+      </div>
+      <div class="csui-table-cell-name-appendix"></div>
+    </div>
+  {{else}}
+    <div class="csui-table-cell-name-div">
+      <a href="{{defaultActionUrl}}"
+         class="csui-table-cell-name-value csui-table-cell-default-action csui-table-cell-name-justify-div"
+         title="{{name}}" aria-label="{{nameAria}}">
+        <span class="csui-table-cell-name-link-text">{{name}}</span>
+      </a>
+      <div class="csui-table-cell-name-appendix"></div>
+    </div>
+  {{/if}}
+{{else}}
+  <div class="csui-table-cell-name-div">
+    <div class="csui-table-cell-name-justify-div">
+      <p class="csui-table-cell-name-value csui-table-cell-no-default-action"
+         title="{{name}}" aria-label="{{nameNoOpenAria}}">{{name}}</p>
+    </div>
+    <div class="csui-table-cell-name-appendix"></div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

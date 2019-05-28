@@ -1,0 +1,53 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-table-cell-type {
+  text-align: center;
+  justify-content: center;
+  min-width: 5rem;
+  max-width: 5rem;
+}
+
+.binf-widgets .binf-table.dataTable > tbody > tr > td.csui-table-cell-type {
+  padding: 0;
+}
+
+.binf-widgets .csui-table-cell-type .csui-table-cell-default-action {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.binf-widgets .binf-table.dataTable .csui-table-cell-type .icon-sortArrowUp,
+.binf-widgets .binf-table.dataTable .csui-table-cell-type .icon-sortArrowDown {
+  margin-left: 0;
+}
+
+.binf-widgets .csui-table-cell-type > .icon-sortArrowUp,
+.binf-widgets .csui-table-cell-type > .icon-sortArrowDown {
+  margin-left: 0;
+}
+
+.binf-widgets .csui-table-cell-type > span {
+  vertical-align: middle;
+}
+
+.binf-widgets .csui-table-cell-type.csui-table-cell-no-default-action {
+  cursor: auto;
+}
+
+.binf-widgets .csui-table-cell-type.csui-table-cell-no-default-action .csui-icon,
+tr.csui-cut-row > td.csui-table-cell-type .csui-icon {
+  opacity: 0.5;
+}
+
+.binf-widgets .binf-table.dataTable > thead > tr > th.csui-table-cell-type {
+  text-overflow: clip;
+}
+
+.binf-widgets .binf-table.dataTable > tbody > tr > td.csui-table-cell-type {
+  
+  
+  
+}

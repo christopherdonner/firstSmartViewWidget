@@ -1,0 +1,87 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-modal-body .csui-panel {
+  border: 1px solid #a9a9a9;
+  border-left: 0;
+  border-bottom: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.binf-modal-body .csui-panel:hover,
+.binf-modal-body .csui-panel:active,
+.binf-modal-body .csui-panel:focus {
+ 
+}
+.binf-modal-body .cs-start-locations.selected {
+  width: 50%;
+  float: left;
+}
+.binf-widgets .cs-pane-view {
+  float: left;
+}
+.cs-pane-view .cs-list .binf-list-group {
+  
+  box-sizing: border-box;
+  
+  padding-top: calc(0.25em - 2px);
+}
+.binf-widgets .csui-select-lists {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.csui-select-lists > div {
+  width: 50%;
+  height: 100%;
+  position:absolute;
+  left:0px;
+}
+
+.csui-select-lists .left-only {
+  width: 100%;
+  border-right: 0;
+}
+.csui-select-lists .cs-pane-view {
+  border-right: 0;
+}
+.csui-select-lists .cs-start-locations {
+  border-left: 0;
+}
+.target-browse .binf-modal-body .left-only.csui-panel:hover,
+.target-browse .binf-modal-body .left-only.csui-panel:active,
+.target-browse .binf-modal-body .left-only.csui-panel:focus{
+  border-left: 0;
+  border-right: 0;
+}
+.target-browse .binf-modal-body .cs-pane-view.csui-panel:hover,
+.target-browse .binf-modal-body .cs-pane-view.csui-panel:active,
+.target-browse .binf-modal-body .cs-pane-view.csui-panel:focus{
+  border-right: 0;
+}
+.target-browse .binf-modal-body .cs-start-locations.csui-panel:hover,
+.target-browse .binf-modal-body .cs-start-locations.csui-panel:active,
+.target-browse .binf-modal-body .cs-start-locations.csui-panel:focus{
+  border-left: 0;
+  border-right: 1px solid #a9a9a9;
+}
+
+.binf-widgets .csui-extended-width {
+  width: 150%;
+}
+
+.csui-select-lists > div.csui-panel-compress {
+  width: calc(100% / 3);
+}
+
+.csui-select-lists > div.zeroWidth {
+  width: 0px;
+}

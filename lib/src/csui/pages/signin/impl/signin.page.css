@@ -1,0 +1,26 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets * {
+  margin: 0;
+}
+
+html, body.binf-widgets {
+  height: 100%;
+}
+
+.binf-widgets .wrapper {
+  height: 100%;
+  margin: 0 auto -50px; 
+}
+
+.binf-widgets footer,
+.binf-widgets .push {
+  height: 50px; 
+}
+
+.binf-widgets .login-copyright {
+  display: table;
+  font-size: 0.8em;
+  color: #ffffff;
+  margin: 0 auto;
+}

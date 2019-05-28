@@ -1,0 +1,220 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-favorite-groups-rows {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dddddd;
+  flex: 1 1 auto;
+  padding-right: 13px; 
+}
+
+.csui-favorite-groups-rows {
+  overflow-y: auto; 
+}
+
+.csui-favorite-groups-rows.csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  right: 9px; 
+}
+
+
+.binf-widgets .csui-favorite-group {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  max-width: 100%;
+  height: 3em;
+  min-height: 3em;
+  padding-right: 1.25em;
+  align-items: center;
+  font-size: 14px;
+}
+
+.binf-widgets .csui-favorite-group[role=button] {
+  cursor: pointer;
+}
+
+.binf-widgets .csui-favorite-group .icon {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.binf-widgets .csui-favorite-group .csui-favorite-group-selection-marker {
+  display: flex;
+  flex: 0 0 4px;
+  height: 100%;
+}
+
+.binf-widgets .csui-favorite-group .csui-favorite-group-draggable-handle {
+  display: flex;
+  flex: 0 0 1.5em;
+  visibility: hidden;
+  justify-content: center;
+}
+
+.binf-widgets .csui-favorite-group .csui-favorite-group-draggable-handle .icon {
+  width: 6px;
+  height: 14px;
+}
+
+.binf-widgets .csui-favorite-group button.binf-btn {
+  
+  border-color: inherit;
+  border-radius: 0;
+  border-style: none;
+  border-width: 0;
+  border-image: none;
+  background-color: transparent;
+  text-align: left;
+  text-indent: inherit;
+  text-shadow: inherit;
+  height: inherit;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.binf-widgets .csui-favorite-group button.binf-btn.csui-btn-action {
+  display: none;
+}
+
+.binf-widgets .csui-favorite-group .csui-favorite-group-input-name {
+  height: 1.75em;
+  border-radius: 3px;
+  color: #333333;
+  border: 1px solid #757575;
+  margin-right: 0;
+  padding-left: 0.5em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.binf-widgets .csui-favorite-group .csui-favorite-group-name-link {
+  color: #333333;
+  flex: 1 1 auto;
+  line-height: normal;
+  display: flex;
+  white-space: nowrap;
+  height: inherit;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.binf-widgets .csui-favorite-group a:visited,
+.binf-widgets .csui-favorite-group a:hover,
+.binf-widgets .csui-favorite-group a:focus {
+  text-decoration: none;
+  color: #333333;
+}
+
+.binf-widgets .csui-favorite-group .csui-favorite-group-name-link > .csui-favorite-group-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block; 
+  white-space: nowrap;
+}
+
+
+
+
+.binf-widgets .csui-favorite-group .csui-favorite-group-input-name:focus {
+  outline: none;
+  outline-offset: initial;
+  border: 2px solid #666666;
+  height: 1.875em;
+}
+
+.binf-widgets .csui-favorite-group.csui-dragstarted a:focus {
+  outline: none;
+}
+
+
+.binf-widgets .csui-favorite-groups .csui-favorite-group[draggable="true"] .csui-favorite-group-draggable-handle {
+  cursor: move;
+}
+
+.binf-widgets .csui-favorite-groups .csui-favorite-group.csui-dragover {
+  background-color: #b2bec5;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing .csui-favorite-group .csui-favorite-group-draggable-handle {
+  
+  
+}
+
+
+body:not(.csui-on-ipad) .binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group[draggable="true"]:hover,
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group.csui-dragstarted {
+  background-color: #b2bec5;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing .csui-favorite-group:not(.csui-favorite-group-readonly) button {
+  display: block;
+}
+
+
+
+body:not(.csui-on-ipad) .binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none:not(.csui-favorite-groups-has-group-in-focus) .csui-favorite-group:not(.csui-favorite-group-readonly):hover button,
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group.csui-in-focus:not(.csui-favorite-group-readonly):not(.csui-dragstarted) button {
+  display: block; 
+}
+
+
+body:not(.csui-on-ipad) .binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group[draggable="true"]:hover .csui-favorite-group-draggable-handle,
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group.csui-dragstarted .csui-favorite-group-draggable-handle {
+  visibility: visible;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing .csui-favorite-group[draggable="true"] .csui-favorite-group-draggable-handle {
+  visibility: visible;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group.binf-active {
+  background-color: #dfe7ea;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group.binf-active .csui-favorite-group-selection-marker {
+  background-color: #7b9ab0;
+}
+
+
+.binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group.binf-active .csui-favorite-group-arrow-overlay {
+  position: absolute;
+  z-index: 9;
+  right: -12px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+  border-left: 0.75rem solid #dfe7ea;
+}
+
+
+body:not(.csui-on-ipad) .binf-widgets .csui-favorite-groups.csui-favorite-groups-editing-none .csui-favorite-group.binf-active:hover .csui-favorite-group-arrow-overlay {
+  border-left-color: #bac9ce;
+}
+
+
+.binf-widgets .csui-favorite-group.csui-favorite-group-rename {
+  padding-left: 1em;
+}
+
+
+.binf-widgets .csui-favorite-group.csui-favorite-group-rename button {
+  display: block;
+}
+
+.binf-widgets .csui-favorite-group.csui-dragline {
+  height: 0;
+  min-height: 0;
+  box-shadow: 2px 0 2px 2px #627783;
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WidgetModel</title>
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="vendor/alpaca/alpaca.min.css">
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body {
+      padding: 15px 0;
+    }
+
+    .alpaca-control > .pagination {
+      margin: 0;
+    }
+
+    #title {
+      font-size: 125%;
+      font-weight: 700;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+
+    #content-container {
+      margin-top: 15px;
+    }
+
+    #content {
+      width: 100%;
+      height: 100%;
+    }
+
+    .row-xs-1 {
+      height: 25vh;
+    }
+    .row-xs-2 {
+      height: 33vh;
+    }
+    .row-xs-3 {
+      height: 50vh;
+    }
+    .row-xs-4 {
+      height: 66vh;
+    }
+    .row-xs-5 {
+      height: 75vh;
+    }
+    .row-xs-6 {
+      height: 100vh;
+    }
+
+    #blocker {
+      display: none;
+    }
+
+    #blocker.active {
+      display: block;
+      opacity: 0.1;
+    }
+  </style>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/handlebars/handlebars.min.js"></script>
+  <script src="vendor/alpaca/alpaca.min.js"></script>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        'csui/utils/contexts/factories/node': {
+          attributes: {
+            type: 141
+          }
+        },
+        'i18n': {
+          loadableLocales: {
+            root: true
+          }
+        },
+        'csui/models/server.module/server.module.collection': {
+          modules: {
+            'csui': {
+              title: 'Core Widgets'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      'csui/utils/contexts/factories/node', 'csui/dialogs/modal.alert/modal.alert',
+      'csui/models/widget/widget.model', './widget.mock'
+    ], function (Marionette, PageContext, NodeModelFactory, ModalAlert,
+        WidgetModel, mock) {
+      'use strict';
+
+      $('#blocker').removeClass('active');
+
+      mock.enable();
+
+      var contentRegion = new Marionette.Region({el: '#content'}),
+          context = new PageContext(),
+          node = context.getModel(NodeModelFactory),
+          widget;
+
+      $('#name').on('keyup', function (event) {
+        if (event.keyCode === 13) {
+          reloadWidget();
+        }
+      });
+      $('#load').click(reloadWidget);
+
+      function reloadWidget() {
+        closeForm();
+        closeWidget();
+        widget = new WidgetModel({
+          id: $('#name').val()
+        });
+        $('#blocker').addClass('active');
+        widget
+            .fetch({ignoreManifestErrors: true})
+            .always(function () {
+              $('#blocker').removeClass('active');
+            })
+            .done(showForm)
+            .fail(function (error) {
+              ModalAlert.showError(error.toString(), 'Loading Widget Failed');
+            });
+      }
+
+      function showForm() {
+        var manifest = widget.get('manifest');
+        var title = (manifest && manifest.title || widget.id)  +
+                    ' from ' + widget.serverModule.get('title');
+        jQuery('#title').text(title);
+        jQuery('#form').alpaca($.extend(true, {
+          "options": {
+            "form": {
+              "buttons": {
+                "submit": {
+                  "title": "Show",
+                  "click": function () {
+                    var data = this.getValue();
+                    showWidget(data);
+                  }
+                }
+              }
+            }
+          }
+        }, {
+          data: manifest && widget.getDefaultData(),
+          schema: manifest && manifest.schema || {},
+          options: manifest && manifest.options || {}
+        }));
+      }
+
+      function closeForm() {
+        if (jQuery('#form').children().length) {
+          jQuery('#title').text('');
+          jQuery('#form').alpaca('destroy');
+        }
+      }
+
+      function showWidget(data) {
+        context.clear();
+        var View = widget.get('view'),
+            view = new View({
+              context: context,
+              data: data
+            });
+        contentRegion.show(view);
+        $('#blocker').addClass('active');
+        context
+            .fetch()
+            .always(function () {
+              $('#blocker').removeClass('active');
+            })
+            .fail(function (error) {
+              ModalAlert.showError(error.toString(), 'Loading Data Failed');
+            });
+      }
+
+      function closeWidget() {
+        contentRegion.empty();
+      }
+
+      function clickToPaginate(event) {
+        var $button = $(this),
+            $current = $button.parent(),
+            $pager = $button.closest('.pagination'),
+            $active = $pager.find('li.active');
+        event.preventDefault();
+        var width = parseInt($button.text());
+        if ($current.is(':first-child')) {
+          if ($current.next().is('.active')) {
+            return;
+          }
+          $current = $active.prev();
+        } else if ($current.is(':last-child')) {
+          if ($current.prev().is('.active')) {
+            return;
+          }
+          $current = $active.next();
+        }
+        $active.removeClass('active');
+        $current.addClass('active');
+        $pager.trigger('paginate', {
+          prev: $active[0],
+          next: $current[0]
+        });
+      }
+
+      $('#width a, #height a').click(clickToPaginate);
+      $('#width').on('paginate', function (event, args) {
+        var $parent = $('#content-parent');
+        $parent.attr('class',
+            $parent.attr('class').replace(/\s*col-xs-\d+\s*/, '') +
+            ' col-xs-' + $(args.next).text());
+      });
+      $('#height').on('paginate', function (event, args) {
+        var $parent = $('#content-parent');
+        $parent.attr('class',
+            $parent.attr('class').replace(/\s*row-xs-\d+\s*/, '') +
+            ' row-xs-' + $(args.next).find('a').attr('data-value'));
+      });
+
+    }, function (error) {
+
+      alert(error.toString());
+
+    });
+  </script>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="alpaca-field alpaca-field-object alpaca-create alpaca-top">
+        <div class="form-group alpaca-field alpaca-field-string">
+          <label for="name" class="control-label alpaca-control-label">Widget</label>
+          <input id="name" class="alpaca-control form-control">
+        </div>
+      </div>
+      <div class="alpaca-form-buttons-container">
+        <button id="load" class="btn btn-default">Load</button>
+      </div>
+      <div id="title"></div>
+      <div id="form"></div>
+    </div>
+    <div class="col-xs-6">
+      <div class="alpaca-field alpaca-field-object alpaca-create alpaca-top">
+        <div class="form-group alpaca-field alpaca-field-string">
+          <div class="control-label alpaca-control-label">Width</div>
+          <nav class="alpaca-control">
+            <ul class="pagination" id="width">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">«</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li class="active"><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">10</a></li>
+              <li><a href="#">11</a></li>
+              <li><a href="#">12</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">»</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="form-group alpaca-field alpaca-field-string">
+          <div class="control-label alpaca-control-label">Height</div>
+          <nav class="alpaca-control">
+            <ul class="pagination" id="height">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">«</span>
+                </a>
+              </li>
+              <li><a href="#" data-value="1">1/4</a></li>
+              <li><a href="#" data-value="2">1/3</a></li>
+              <li class="active"><a href="#" data-value="3">1/2</a></li>
+              <li><a href="#" data-value="4">2/3</a></li>
+              <li><a href="#" data-value="5">3/4</a></li>
+              <li><a href="#" data-value="6">1</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">»</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="content-container">
+  <div class="row">
+    <div class="col-xs-6 row-xs-3" id="content-parent">
+      <div class="binf-widgets" id="content"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop active" id="blocker"></div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

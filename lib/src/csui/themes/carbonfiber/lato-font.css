@@ -1,0 +1,35 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-light.woff2') format('woff2'),
+  url('fonts/lato-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-regular.woff2') format('woff2'),
+  url('fonts/lato-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-bold.woff2') format('woff2'),
+  url('fonts/lato-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato-italic.woff2') format('woff2'),
+  url('fonts/lato-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}

@@ -1,0 +1,197 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.visual-data-btn-settings {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+}
+
+.visual-data-btn-settings a {
+    outline: none;
+}
+
+.visual-data-btn-settings span {
+    line-height: 1.1em;
+    width: 28px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.visual-data-container {
+    height: 100%;
+    min-height: 200px;
+    width: 100%;
+    font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.binf-modal-dialog .visual-data-container {
+    height: calc(100vh - 360px);
+}
+
+.visual-data-container .axis text {
+    font-size: 10px;
+    fill: #000;
+}
+
+.visual-data-container .axis-label {
+    font-size: 10px;
+    fill: #000;
+}
+
+.visual-data-container .chart-label {
+    font-size: 12px;
+    fill: #000;
+    pointer-events: none;
+}
+
+.visual-data-container .chart-label.outside {
+    fill: #000;
+}
+
+.visual-data-container .chart-label.hidden {
+    display: none;
+}
+
+.visual-data-container .chart-bar {
+    cursor: pointer;
+    shape-rendering: crispEdges;
+}
+
+.visual-data-container .chart-label-disc {
+    fill: #000;
+}
+
+.visual-data-container .pie-legend-container {
+    font-size: 10px;
+}
+
+.visual-data-container .pie-legend-text {
+    font-size: 1em;
+}
+
+.visual-data-container .pie-legend-active-column {
+    font-size: 16px;
+}
+
+.visual-data-container .pie-total-label-disc {
+    fill: #fff;
+    stroke: #eee;
+}
+
+.visual-data-container .bar.clickable, .visual-data-container .arc.clickable, .visual-data-container .pie-legend {
+    cursor: pointer;
+}
+
+.visual-data-container .gridline, .visual-data-container .domain {
+    pointer-events: none;
+    stroke: #000;
+    stroke-opacity: 0.05;
+    shape-rendering: crispEdges;
+}
+
+.visual-data-container .x .tick>line {
+    stroke-opacity: 0.3;
+}
+
+.visual-data-container .valueline {
+    stroke: #FD963C;
+    stroke-width: 2px;
+}
+
+.visual-data-container .area {
+    fill: #FD963C;
+    fill-opacity: 0.5;
+}
+
+.visual-data-overlay-clip {
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.visual-data-overlay {
+    position: absolute;
+    pointer-events: auto; 
+    top: 70px;
+    right: 0;
+    min-height: 178px;
+    opacity: 0.9;
+    transform-origin: 100% 0%;
+    transition: transform 0.3s ease-in-out;
+    transform: translate3d(100%,0,0);
+}
+
+.visual-data-overlay.visible {
+    transform: translate3d(0,0,0);
+}
+
+.visual-data-overlay .binf-modal-content {
+    
+}
+
+.visual-data-overlay ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.visual-data-overlay ul:last-of-type {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.visual-data-overlay li {
+    padding-bottom: 10px;
+    opacity: 1; 
+}
+
+.visual-data-overlay li>label {
+    display: block;
+    padding-bottom: 2px;
+}
+
+.visual-data-overlay .binf-modal-content {
+    border-radius: 0;
+}
+
+.visual-data-autoupdate-wrapper {
+    float: left;
+    padding-top: 3px;
+}
+
+.visual-data-autoupdate-wrapper label {
+    margin-left: 5px;
+}
+
+.icon-settingsOpen {
+    
+    background-image: url('../../../../csui/themes/carbonfiber/image/icons/settings.svg');
+}
+
+.visual-data-overlay-content.binf-modal-dialog {
+    width: auto;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.visual-data-wrapper div.outer-border{
+    margin: 0 !important;
+    position: absolute;
+}
+
+.tile-content .visual-data-wrapper div.outer-border{
+    left: calc(50% - 34px);
+    top: calc(50% - 80px);
+}
+
+.expanded-visualization-container div.outer-border{
+    left: calc(50% + 90px);
+    top: calc(50% - 50px);
+}

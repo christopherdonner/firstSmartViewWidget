@@ -1,0 +1,86 @@
+The CSUI page is driven by perspective data coming from the server. Each URL is a server resource.
+
+When the URL is now overriding the perspective (e.g. `metadata` perspective page),
+the code is mixing server-driven perspective and URL-driven perspective for the page.
+
+The code flows and algorithm must have precise and complex logics for many possible combinations.
+
+This internal file containing the algorithm that can be referenced in future when working this code.
+
+Scenarios:
+
+1) Go to NodeRouter with URL: nodes/id[?query that does not have 'metadata' perspective]
+
+- in the node.perspective.router code
+- clear BrowsingStates stack and reset browsingStates flags
+- add/push a single browsingState 'browse'
+- set this.url = undefined
+- navigate to the url and set PageTitle
+
+2) Go to NodeRouter with URL: nodes/id/[versions/id]?query (query that has 'metadata' perspective)
+
+- in the node.perspective.router code
+- clear BrowsingStates stack and reset browsingStates flags
+- add/push a single browsingState: 'metadata' or 'version'
+- set BrowsingStates.allowUrlUpdate = true
+- set this.url = undefined
+- navigate to the url and set PageTitle
+- with Properties page the node metadata is asynchronously rendered,
+  metadata.dropdowntab.view code will trigger 'update:title' event to update PageTitle
+
+3) If go to (1) and then go into Properties of a node:
+
+- in metadata.dropdowntab.view code
+- create a perspective override perspective='metadata.navigation' or 'metadata' query
+- since (1) has 'browse' state, add/push a new 'metadata' or 'version' state
+- if BrowsingStates.allowUrlUpdate = true,
+  then trigger 'state:change' event for the NodeRouter code to run _browsingStateUpdateUrl() method
+- get URL will generate accumulated 'browse' and 'metadata' query for the Copy Link command
+- NodeRouter will update PageTitle
+
+4) If go to (2 or 3 showing Properties), then switch to Properties of a different node:
+
+- in metadata.dropdowntab.view code
+- currently is in Properties of a node and switching to Properties of a different node,
+  on destroy of the current Properties page will pop the current 'metadata' state off the stack
+- create a perspective override perspective='metadata.navigation' or 'metadata' query
+- 'browse' state may exist on the stack, add/push a new 'metadata' or 'version' state
+- if BrowsingStates.allowUrlUpdate = true,
+  then trigger 'state:change' event for the NodeRouter code to run _browsingStateUpdateUrl() method
+- get URL will generate accumulated 'browse' and 'metadata' query
+- NodeRouter will update PageTitle
+
+5) If go to (2, 3, or 4 showing Properties), then switch to Version or Activity panel:
+
+- in metadata.dropdowntab.view code
+- 'metadata' or 'version' state exists on the stack:
+  -- if the state ID is still the same, just update this state with new params
+  -- if the state ID is different (e.g. going from 'metadata' to 'version'), add/push a new state
+- get URL will generate accumulated 'browse' and 'metadata' query
+- NodeRouter will update PageTitle
+
+6) If in (2, 3, or 4 showing Properties) and then click on the GoBack button or a breadcrumbs link:
+
+- the code first goes directly into node.perspective.router::_updateNodeUrl() method
+- then keep the BrowsingState.allowUrlUpdate flag to use for urlIncludedQuery=true
+- clear BrowsingStates stack and reset browsingStates flags
+- call BrowsingStates.setBrowsingStates() to add/push a 'browse' state
+
+- in the BrowsingStates code:
+ (i) this.url is undefined, use 'location.search' for the query ('location.hash' is added later)
+ (ii) -- temporarily set BrowsingState.allowUrlUpdate = true
+      -- call BrowsingStates.clearMetadataParamsInUrlQuery() method to clear metadata parameters
+      -- set the BrowsingState.allowUrlUpdate back to previous value
+
+- base on the allowUrlUpdate flag from the beginning:
+ -- if true, navigate to url = this.browsingStates.getUrlPathWithQuery() with urlIncludedQuery=true
+ -- else (false), then navigate to the normal url
+- NodeRouter will update PageTitle
+
+7) If in (2, 3, of 4 showing Properties) and then click on the Home button:
+
+- the code first go to perspective.router code in the navigate() method
+- call BrowsingStates.clearMetadataParamsInUrlQuery() method if metadata perspective was set
+- on the before:route event, the code goes to NodeRouter::onOtherRoute() method
+- call BrowsingStates.resetAll()
+- then the rest of the code can just continue as is

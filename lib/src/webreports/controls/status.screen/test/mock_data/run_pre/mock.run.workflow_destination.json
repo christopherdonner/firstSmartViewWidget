@@ -1,0 +1,47 @@
+{
+	"data": {
+		"destination_data": {
+			"destination_specific": {
+				"workflow_attach_output": true,
+				"workflow_attachment_description": "",
+				"workflow_attachment_name": "MyOutput.html",
+				"workflow_category_names": "",
+				"workflow_description": "A description of this workflow",
+				"workflow_due": "due_in",
+				"workflow_due_in": "7",
+				"workflow_map_id": "678827",
+				"workflow_title": "My Initiated Workflow"
+			},
+			"export_if_no_data": true,
+			"export_mime_type": "text\/html",
+			"http_method": "POST",
+			"output_destination": "workflow",
+			"run_in_background": false,
+			"schedule_data": {
+				"schedule_enabled": false
+			},
+			"show_status_screen": true
+		},
+		"parameters_data": {
+			"prompt_file_id": "",
+			"show_descriptions": false
+		}
+	},
+	"forms": [{
+		"data": {},
+		"options": {
+			"fields": {},
+			"form": {
+				"attributes": {
+					"action": "api\/v1\/",
+					"method": ""
+				},
+				"renderForm": true
+			}
+		},
+		"schema": {
+			"properties": {},
+			"type": "object"
+		}
+	}]
+}

@@ -1,0 +1,23 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-table-cell-priority {
+  max-width: 7em;
+  min-width: 7em;
+}
+
+.csui-table-cell-priority .icon {
+  height: 1.1em;
+  width: 1em;
+  background-repeat: no-repeat;
+  background-position-y: 0.1rem;
+  display: inline-block;
+}
+
+.csui-table-cell-priority .icon-priorityHigh {
+}
+
+.csui-table-cell-priority .icon-priorityMedium {
+}
+
+.csui-table-cell-priority .icon-priorityLow {
+}

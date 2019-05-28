@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ServerModuleCollection</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding: 1em;
+      color: #000;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require.config({
+      config: {
+        // Test localizability
+        //'i18n': {
+        //  locale: 'cs-cz'
+        //},
+        // Generated dynamically when run on the server
+        'csui/models/server.module/server.module.collection': {
+          modules: {
+            'csui': {
+              title: {
+                'en': 'User Interface Widgets',
+                'cs': 'Věcičky uživatelského rozhraní'
+              }
+            },
+            'conws': {
+              title: {
+                'en': 'Connected Workspaces',
+                'de': 'Verbundene Arbeitsplätze',
+                'cs': 'Spojené pracovní prostory'
+              }
+            },
+            'esoc': {
+              title: {
+                'en': 'eSocial',
+                'de': 'e-Sozial'
+              }
+            },
+            'webreports': {
+              title: 'Web Reports'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', 'csui/lib/handlebars',
+      'csui/models/server.module/server.module.collection',
+      'csui/utils/base', 'csui/utils/handlebars/l10n', 'csui/lib/domReady!'
+    ], function ($, Handlebars, ServerModuleCollection, base) {
+
+      var serverModules = new ServerModuleCollection();
+
+      // Support multilingual titles and locale-aware collation
+      function sortByTitle() {
+        serverModules.models.sort(function(left, right) {
+          left = left.get('title') || '';
+          left = base.getClosestLocalizedString(left);
+          right = right.get('title') || '';
+          right = base.getClosestLocalizedString(right);
+          return base.localeCompareString(left, right, {usage:'sort'});
+        });
+      }
+
+      serverModules
+          .fetch()
+          .then(sortByTitle)
+          .done(function () {
+            var template = Handlebars.compile($('#server-module-list-template').html()),
+                result = template(serverModules.toJSON());
+            $('body').prepend(result);
+          });
+
+    });
+  </script>
+</head>
+
+<body>
+<script id="server-module-list-template" type="text/x-handlebars-template">
+  <ul>
+    {{#each this}}
+    <li data-server-module-id="{{id}}">{{csui-l10n title}}</li>
+    {{/each}}
+  </ul>
+</script>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

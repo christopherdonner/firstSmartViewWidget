@@ -1,0 +1,17 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-metadata-activity-feed {
+  height: calc(100% - 3.5em);
+  padding: 0em 1em 1em 1em;
+}
+
+.cs-metadata-activity-feed .feeds {
+  height: 100%;
+  position: relative;
+}
+
+.cs-metadata-activity-feed .esoc-activityfeed-list {
+  height: 100%;
+  position: relative;
+  padding: 0px 15px 0px 0px;
+}

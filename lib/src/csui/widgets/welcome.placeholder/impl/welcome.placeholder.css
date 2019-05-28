@@ -1,0 +1,124 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .hero{
+  width: calc(100%);
+  overflow: hidden;
+}
+.binf-widgets .hero:focus {
+  border: 1px dotted #333333;
+}
+
+.binf-widgets .csui-hero-tile {
+  padding: 32px;
+  height: 100%;
+  min-width: 260px;
+  background: #fff url(images/hero_bg.jpg) no-repeat top center;
+  box-shadow: 0px 0px 1.76px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.csui-hero-tile .csui-greeting {
+  display: block;
+  font-size: 2.625em;
+  font-weight: 200;
+  margin: 0em 32px 32px 32px;
+  text-align: center;
+}
+
+.csui-hero-tile .csui-message{
+  clear: left;
+  display: block;
+  color: #333;
+  margin: 0px 20%;
+  margin-bottom: 0;
+  font-size: .875em;
+  height: 72px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  text-align: center;
+}
+
+.csui-hero-tile .csui-videoButton {
+  font-size: 1.125em;
+  display:block;
+  margin: 0px auto 32px auto;
+  border-radius: 41px;
+  -moz-border-radius: 41px;
+  -webkit-border-radius: 41px;
+  padding: 0px;
+  white-space: nowrap;
+  width: 82px;
+  height: 82px;
+  text-indent: -5000px;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.4) url(images/play_arrow.svg) no-repeat 26px center/38px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+
+.csui-hero-tile .csui-videoButton:hover {
+  background: rgba(0, 0, 0, 0.5) url(images/play_arrow.svg) no-repeat 26px center/38px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.csui-hero-tile .csui-videoButton:active {
+  background: rgba(0, 0, 0, 0.6) url(images/play_arrow.svg) no-repeat 26px center/38px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen
+and (max-width: 920px) {
+
+  .csui-hero-tile .csui-greeting {
+    font-size: 2em;
+    margin: 0px 1em 1em 1em;
+  }
+
+  .csui-hero-tile .csui-message {
+    margin: 1.5em 10%;
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+  }
+}
+
+@media only screen
+and (max-width: 480px) {
+
+  .csui-hero-tile .csui-message {
+    display: none;
+  }
+}
+
+
+@media only screen
+and (max-width: 1150px) {
+
+  .csui-hero-tile .csui-message {
+    margin: 1.5em 10%;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen
+and (max-height: 400px) {
+
+  .csui-hero-tile .csui-message {
+    display:none;
+  }
+}

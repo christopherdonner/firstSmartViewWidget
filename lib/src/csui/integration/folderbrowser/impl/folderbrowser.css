@@ -1,0 +1,121 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets.csui-folderbrowser {
+  height: 100%;
+  min-width: 200px;
+}
+
+#csui-folderbrowser-core {
+  height: 100%;
+}
+
+#csui-folderbrowser-core .csui-fb-nodestable {
+  position: relative;
+  height: 100%;
+}
+
+#csui-folderbrowser-core .csui-fb-breadcrumbs .binf-breadcrumb {
+  
+  height: 37px;
+}
+
+.csui-folderbrowser.csui-with-breadcrumb #csui-folderbrowser-core .csui-fb-nodestable {
+  
+  height: calc(100% - 37px);
+}
+
+.csui-folderbrowser .csui-global-message.csui-messagepanel {
+  max-width: 90%;
+}
+
+.csui-folderbrowser .csui-global-message.csui-progresspanel {
+  transform: translateX(5%);
+  max-width: 90%;
+  min-width: 544px;
+}
+
+.csui-folderbrowser .csui-global-message.csui-progresspanel.compressed,
+.csui-folderbrowser .csui-global-message.csui-messagepanel.compressed {
+  min-width: 0;
+  max-width: none;
+}
+
+.csui-folderbrowser .csui-progresspanel .csui-names-progress {
+  flex: 70 70 auto;
+  -ms-flex: 70 70 auto;
+  -webkit-flex: 70 70 auto;
+  width: 70%;
+}
+
+.csui-folderbrowser .csui-progresspanel .csui-states-actions {
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-names-progress {
+  flex-direction: column;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-names-progress > * {
+  margin-top: initial;
+  margin-bottom: initial;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-names-progress,
+.csui-progresspanel.compressed .csui-progressrow .csui-states-actions {
+  padding-top: 0.6em;
+  padding-bottom: 0.3em;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-names-progress {
+  padding-left: 0.3em;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-progresscell {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-names {
+  width: initial;
+  max-width: 18em;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-progress {
+  margin-left: 0.325em;
+  max-width: 18em;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-progress-text {
+  text-align: left;
+}
+
+.csui-progresspanel.compressed .csui-progressbar .csui-progress-textbar {
+  margin-top: 0.325em;
+  
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-percent {
+  
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-stateaction {
+  padding-left: 0;
+  padding-right: 0;
+  width: 3.5em;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-expand {
+  padding-left: 0;
+  padding-right: 0;
+  width: 2.5em;
+}
+
+.csui-progresspanel.compressed .csui-progressrow .csui-close {
+  padding-left: 0;
+  padding-right: 0;
+  width: 2.5em;
+}

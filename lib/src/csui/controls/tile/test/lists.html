@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ListView</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body.binf-widgets {
+      padding: 1em;
+    }
+
+    /* Preserve line breaks in the content view. */
+    .test-content.test-content {
+      white-space: pre-line;
+    }
+
+    /* Original tile provided margins, new one and dialog do not; add them. */
+    .test-content.test-content {
+      margin: 1em;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require(['csui/lib/underscore', 'csui/lib/jquery', 'csui/lib/backbone', 'csui/lib/marionette',
+      'csui/lib/handlebars', '../tile.view', '../behaviors/perfect.scrolling.behavior.js',
+      '../behaviors/expanding.behavior', '../behaviors/searching.behavior',
+      '../behaviors/blocking.behavior', '../behaviors/infinite.scrolling.behavior.js',
+      'csui/models/mixins/fetchable/fetchable.mixin', 'csui/models/browsable/client-side.mixin'
+    ], function (_, $, Backbone, Marionette, Handlebars, TileView, PerfectScrollingBehavior,
+        ExpandingBehavior, SearchingBehavior, BlockingBehavior, InfiniteScrollingBehavior,
+        FetchableMixin, ClientSideBrowsableMixin) {
+
+      var
+      // Create a sample model and collection for list views
+          ItemModel = Backbone.Model.extend({
+            defaults: {
+              id: null,
+              name: 'Unnamed'
+            }
+          }),
+
+          ItemCollection = Backbone.Collection.extend({
+            model: ItemModel,
+            initialize: function (models, options) {
+              this._items = _.times(30, function (index) {
+                ++index;
+                return {
+                  id: index,
+                  name: 'Item ' + index
+                };
+              });
+              this.makeFetchable(options)
+                  .makeClientSideBrowsable(options);
+            },
+            sync: function (method, collection, options) {
+              if (method !== 'read') {
+                throw new Error('Only fetching the collection is supported.');
+              }
+              console.log('Getting', collection._items.length, 'items');
+              var deferred = $.Deferred();
+              setTimeout(function () {
+                var response = _.clone(collection._items);
+                  if (!options) {
+                      options = {};
+                  }
+                if (options.success) { options.success(response, options); }
+                collection.trigger('sync', collection, response, options);
+                deferred.resolve(response);
+              }, 250);
+              return deferred.promise();
+            }
+          }),
+
+          ListItemView = Marionette.ItemView.extend({
+            className: 'binf-list-group-item',
+            template: Handlebars.compile($('#list-item-template').html())
+          }),
+
+          StandardListView = Marionette.CollectionView.extend({
+            attributes: {
+              style: 'width: 100%; height: 100%; overflow: auto;'
+            },
+            childView: ListItemView,
+            behaviors: {
+              Blocking: {
+                behaviorClass: BlockingBehavior
+              },
+              InfiniteScrolling: {
+                behaviorClass: InfiniteScrollingBehavior
+              }
+            }
+          }),
+
+          PerfectListView = Marionette.CompositeView.extend({
+            attributes: {
+              style: 'width: 100%; height: 100%;'
+            },
+            template: Handlebars.compile($('#list-template').html()),
+            childViewContainer: '.binf-list-group',
+            childView: ListItemView,
+            behaviors: {
+              Blocking: {
+                behaviorClass: BlockingBehavior
+              },
+              PerfectScrolling: {
+                behaviorClass: PerfectScrollingBehavior,
+                suppressScrollX: true
+              },
+              InfiniteScrolling: {
+                behaviorClass: InfiniteScrollingBehavior
+              }
+            }
+          }),
+
+          ListView = /\bstandadScrollbar\b/.test(location.search) ?
+                     StandardListView : PerfectListView,
+
+          HeaderView = Marionette.LayoutView.extend({
+            className: 'tile hero',
+            attributes: {
+              style: 'box-shadow: none'
+            },
+            template: Handlebars.compile($('#header-template').html()),
+            regions: {
+              listRegion: '.list'
+            },
+            onShow: function () {
+              var collection = new ItemCollection(undefined, {
+                    top: 10
+                  }),
+                  listView = new ListView({
+                    collection: collection
+                  });
+              this.listRegion.show(listView);
+              collection.fetch();
+            }
+          }),
+
+          ListTileView = TileView.extend({
+            icon: 'header-openfolder',
+            title: 'List Tile',
+            contentView: ListView,
+            contentViewOptions: function () {
+              return {
+                collection: this.items
+              };
+            },
+            behaviors: {
+              Expanding: {
+                behaviorClass: ExpandingBehavior,
+                expandedView: ListView,
+                expandedViewOptions: function () {
+                  return {
+                    collection: this.contentView.collection
+                  };
+                },
+                titleBarIcon: 'image_user_placeholder',
+                dialogTitle: 'List Tile'
+              },
+              Searching: {
+                behaviorClass: SearchingBehavior,
+                searchIconTitle: "configuredIconTitle",
+                searchIconAria: "configuredIconAria"
+              }
+            },
+            constructor: function (options) {
+              ListTileView.__super__.constructor.apply(this, arguments);
+              this.items = new ItemCollection(undefined, {
+                top: 10
+              });
+            },
+            onShow: function () {
+              this.items.fetch();
+            }
+          });
+
+      // Finish the ItemCollection prototype declaration
+      ClientSideBrowsableMixin.mixin(ItemCollection.prototype);
+      FetchableMixin.mixin(ItemCollection.prototype);
+
+      var
+      // Create instances of the views to show on the page
+          headerView = new HeaderView(),
+          tileView = new ListTileView(),
+
+      // Create helpers to show the views on the page
+          headerRegion = new Marionette.Region({
+            el: "#header"
+          }),
+          tileRegion = new Marionette.Region({
+            el: "#tile"
+          });
+
+      // Show the views on the page
+      headerRegion.show(headerView);
+      tileRegion.show(tileView);
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-12 binf-col-md-8 binf-col-lg-6" id="header"></div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="tile"></div>
+  </div>
+</div>
+
+<script id="list-template" type="text/x-handlebars-template">
+  <div class="binf-list-group" style="margin-bottom: 0;"></div>
+</script>
+
+<script id="list-item-template" type="text/x-handlebars-template">
+  {{name}}
+</script>
+
+<script id="header-template" type="text/x-handlebars-template">
+  <div class="list" style="margin-left: 50%; width: 50%; height: 100%; color: #000;"></div>
+</script>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

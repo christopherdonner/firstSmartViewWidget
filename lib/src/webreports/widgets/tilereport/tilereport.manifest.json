@@ -1,0 +1,85 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "header",
+  "supportedKinds": ["tile", "header", "fullpage"],
+  "schema": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "title": "{{tileTitle}}",
+        "description": "{{tileDescription}}",
+        "type": "object"
+      },
+      "titleBarIcon": {
+        "title": "{{iconTitle}}",
+        "description": "{{iconDescription}}",
+        "type": "string"
+      },
+      "header": {
+        "title": "{{headerTitle}}",
+        "description": "{{headerDescription}}",
+        "type": "boolean",
+        "enum": [
+          true,
+          false
+        ],
+        "default": true
+      },
+      "scroll": {
+        "title": "{{scrollTitle}}",
+        "description": "{{scrollDescription}}",
+        "type": "boolean",
+        "enum": [
+          true,
+          false
+        ],
+        "default": true
+      },
+      "id": {
+        "title": "{{idTitle}}",
+        "description": "{{idDescription}}",
+        "type": "integer"
+      },
+      "parameters": {
+        "type": "array",
+        "title": "{{firstParamTitle}}",
+        "description": "{{firstParamDescription}}",
+        "items": {
+          "type": "object",
+          "title": "{{secondParamTitle}}",
+          "description": "{{secondParamDescription}}",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "{{paramNameTitle}}",
+              "description": "{{paramNameDescription}}"
+            },
+            "value": {
+              "type": "string",
+              "title": "{{paramValTitle}}",
+              "description": "{{paramValDescription}}"
+            }
+          }
+        }
+      }
+    },
+    "required": ["id"]
+  },  
+  "options": {
+    "fields": {
+      "id": {
+        "type": "otcs_node_picker",
+        "type_control": {
+          "parameters": {
+            "select_types": [30303]
+          }
+        }
+      },
+      "title": {
+        "type": "otcs_multilingual_string"
+      }
+    }
+  }
+}

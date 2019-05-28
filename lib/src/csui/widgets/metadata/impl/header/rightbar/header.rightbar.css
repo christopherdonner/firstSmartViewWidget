@@ -1,0 +1,117 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .metadata-header-right-bar div {
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .metadata-header-right-bar .shortcut-div {
+  margin-top: calc((4rem - 28px) / 2);
+}
+
+.metadata-header-right-bar > span,
+.metadata-header-right-bar > div > a.shortcut-switch {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 28px;
+  color: #23527c;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 5px 0 5px;
+  vertical-align: middle;
+}
+
+.metadata-header-right-bar .required-field-switch > span.only-required-fields-label {
+  vertical-align: middle;
+}
+
+.metadata-header-right-bar .required-fields-switch {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.metadata-header-right-bar .required-fields-switch:focus {
+  outline: 1px dotted #333333;
+  outline-offset: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-booleanfield {
+  min-width: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-booleanfield .control-area {
+  padding: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-formfield .icon-container {
+  width: 0;
+}
+
+.metadata-header-right-bar .required-fields-switch .cs-booleanfield .binf-switch:focus {
+  outline-width: 0;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  height: calc(4rem - 3px);
+  background-color: #ffffff;
+  width: 3em;
+  float: right;
+  display: inline-block;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar .icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-top: calc((4rem - 18px) / 2);
+  margin-left: calc((3em - 18px) / 2);
+  cursor: pointer;
+}
+
+.metadata-inner-wrapper .cs-metadata-properties .ps-container > div {
+  padding: 0 3em .5em 3em;
+}
+
+.metadata-inner-wrapper .cs-metadata-properties .ps-container > div.ps-scrollbar-x-rail,
+.metadata-inner-wrapper .cs-metadata-properties .ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.binf-modal-body .cs-metadata-properties .ps-container > div {
+  padding: 0 5px 5px 5px;
+}
+
+.binf-modal-body .cs-metadata-properties .ps-container > div.ps-scrollbar-x-rail,
+.binf-modal-body .cs-metadata-properties .ps-container > div.ps-scrollbar-y-rail {
+  padding: 0;
+}
+
+.cs-metadata-properties .ps-container > div.ps-scrollbar-x-rail,
+.cs-metadata-properties .ps-container > div.ps-scrollbar-y-rail {
+  z-index: 1001;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar .binf-close {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-top: 1em; ;
+  margin-right: 22px; ;
+  border: 0;
+  opacity: 1;
+}
+
+.metadata-header-right-bar .metadata-header-floating-rightbar .binf-close:hover,
+.metadata-header-right-bar .metadata-header-floating-rightbar .binf-close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+}

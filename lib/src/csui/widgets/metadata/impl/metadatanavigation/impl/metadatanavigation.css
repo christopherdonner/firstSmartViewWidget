@@ -1,0 +1,249 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.cs-properties .binf-modal-lg {
+  height: calc(100vh - 100px);
+  min-height: 90px;
+  top: 60px;
+}
+
+.cs-properties .binf-modal-content {
+  height: 100%;
+  border-radius: 0;
+}
+
+.cs-properties .tile-header,
+.cs-properties .binf-modal-header {
+  padding: 0;
+}
+
+.cs-properties .binf-modal-body,
+.cs-properties .cs-metadata,
+.cs-properties-wrapper .cs-metadata {
+  height: 100%;
+  position: relative;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .cs-properties.cs-dialog.binf-modal .binf-modal-dialog,
+  .cs-properties.cs-dialog.binf-modal .binf-modal-dialog .binf-modal-content {
+    height: auto;
+  }
+
+  .cs-properties.cs-dialog.binf-modal .binf-modal-dialog .binf-modal-body {
+    height: calc(100vh - 252px);
+  }
+
+  .cs-properties.cs-dialog .metadata-inner-wrapper {
+    height: 100%;
+  }
+
+  .cs-properties.cs-dialog .binf-modal-dialog .binf-modal-body .cs-metadata-properties .binf-tab-content {
+    height: calc(100% - 63px);
+  }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 2dppx),                               
+(min-resolution: 192dpi) {
+  
+  .grid-rows > .binf-row > .row-xs-full.csui-node-properties-wrapper {
+    height: calc(100vh - 45px) !important;
+  }
+}
+
+
+
+.binf-widgets .cs-properties-wrapper {
+  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cs-properties-wrapper .cs-metadata {
+  height: 100%;
+  overflow: hidden;
+}
+
+.binf-modal-lg .cs-properties-wrapper {
+  
+  height: calc(100vh - 205px);
+  min-height: 90px;
+  overflow: hidden;
+}
+
+
+
+.cs-metadata .metadata-wrapper {
+  height: 100%;
+  padding: 0;
+  font-size: 14px;
+}
+
+.metadata-wrapper .icon.circular {
+  border: 0;
+}
+
+.binf-widgets .metadata-navigation {
+  width: 100%;
+  height: 100%;
+}
+
+.binf-widgets .metadata-sidebar {
+  height: 100%;
+  min-height: 100%;
+  width: 20%;
+  min-width: 15.5em;
+  float: left;
+  border-right: 1px solid #999999;
+}
+
+
+
+
+.metadata-sidebar .cs-simplelist {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+
+.metadata-sidebar .cs-simplelist.binf-panel {
+  border-left: 1px solid white;
+}
+
+.metadata-sidebar .cs-simplelist .binf-panel-heading {
+  background-color: #ffffff;
+  border: 1px dotted transparent;
+  border-bottom: 1px solid #cccccc;
+}
+
+.metadata-sidebar .cs-simplelist .cs-header span.icon:focus,
+.metadata-sidebar .cs-simplelist .cs-header span.cs-title:focus,
+.metadata-sidebar .cs-simplelist .cs-content:focus,
+.metadata-sidebar .cs-simplelist .cs-content .cs-list-group:focus,
+.metadata-sidebar .cs-simplelist a > .binf-list-group-item span:focus {
+  outline-style: none;
+}
+
+.metadata-sidebar .cs-simplelist .binf-panel-heading:focus {
+  border: 1px dotted #333333;
+}
+
+
+
+
+.metadata-sidebar .cs-simplelist a.binf-active > .binf-list-group-item {
+  background-color: #dfe7ea;
+  color: #333333;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.metadata-sidebar .cs-simplelist a.binf-active.active-item-disable > .binf-list-group-item {
+  background-color: #f5f5f5;
+}
+
+
+.metadata-sidebar .cs-simplelist a > .binf-list-group-item {
+  background-color: transparent;
+  
+}
+
+.metadata-sidebar .cs-simplelist a > .binf-list-group-item span {
+  pointer-events: none;
+  height: calc(3rem - 2px);
+  line-height: 3.1rem;
+}
+
+
+.metadata-sidebar .cs-simplelist .binf-list-group-item:hover {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: #bac9ce;
+  color: #333333;
+}
+
+
+.metadata-sidebar .cs-simplelist .list-item-title {
+  font-weight: 500;
+}
+
+.metadata-sidebar .cs-simplelist .list-item-version {
+  font-weight: 500;
+  line-height: 2;
+  width: 28px;
+  height: 28px;
+  display: block;
+  padding-top: 1px;
+}
+
+
+
+.binf-widgets .metadata-content {
+  height: 100%;
+  width: 80%; 
+  max-width: calc(100% - 15.5em); 
+  display: inline-block;
+}
+
+.metadata-content .cs-metadata {
+  width: 100%;
+}
+
+
+.metadata-navigation > .metadata-sidebar > .cs-simplelist > .csui-perfect-scrolling.ps-container > .ps-scrollbar-y-rail {
+  right: 16px !important;
+}
+
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a.binf-active > .binf-list-group-item {
+  padding-left: 8px;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item {
+  padding-left: 8px;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span.list-item-title {
+  left: 62px;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span.csui-icon-group {
+  width: 40px;
+  padding: 3px 0;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span.csui-icon-group .csui-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .binf-list-group-item:hover {
+  border-top: none;
+  border-bottom: none;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .cs-list-group a .binf-list-group-item span.csui-icon-group .csui-icon.mime_image,
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .binf-list-group-item span.csui-icon-group .csui-icon.mime_image,
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .cs-list-group a.binf-active .binf-list-group-item span.csui-icon-group .csui-icon.mime_image,
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist .binf-list-group-item:hover span.csui-icon-group .csui-icon.mime_image {
+  background-color: #ffffff;
+}
+
+.metadata-sidebar .csui-metadata-navigation-thumbnail.cs-simplelist a > .binf-list-group-item span {
+  height: calc(3rem - 8px);
+}

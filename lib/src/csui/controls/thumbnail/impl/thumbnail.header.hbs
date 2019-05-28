@@ -1,0 +1,23 @@
+<div class="csui-thumbnail-header-data">
+  <div class="csui-thumbnail-select">
+    {{#if isEmptyNode}}
+      <div class="csui-selected-checkbox csui-checkbox-primary csui-checkbox-selectAll">
+        <input class="csui-selectAll-input" type="checkbox" disabled="" title="{{selectAllTitle}}" tabindex="-1">
+        <div class="csui-selectAll-header csui-selectlabel"></div>
+        <span>{{selectAll}}</span>
+      </div>
+    {{else}}
+      <div class="csui-selected-checkbox csui-checkbox-primary csui-checkbox-selectAll">
+        <input class="csui-selectAll-input" type="checkbox" title="{{selectAllTitle}}" tabindex="-1">
+        <div class="csui-selectAll-header csui-selectlabel"></div>
+        <span>{{selectAll}}</span>
+      </div>
+    {{/if}}
+  </div>
+  <div class="csui-thumbnail-itemcount">{{items}}</div>
+  <div class="csui-thumbnail-sort-search-container">
+    <div id="csui-sorting-container" class="csui-sorting-container"></div>
+    <div id="csui-thumbnail-column-search" class="csui-thumbnail-column-search"></div>
+  </div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

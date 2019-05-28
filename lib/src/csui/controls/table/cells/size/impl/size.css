@@ -1,0 +1,8 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-table-cell-size {
+  justify-content: flex-end;
+  text-align: right;
+  max-width: 7em;
+  min-width: 7em;
+}

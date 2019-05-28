@@ -1,0 +1,217 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-permission-level-container .binf-popover-content {
+  padding: 16px 16px 13px 16px;
+}
+
+.binf-widgets .csui-tree-container ul ul {
+  padding-left: 32px;
+}
+
+.binf-widgets .csui-tree-container li ul {
+  padding-left: 34px;
+}
+
+.binf-widgets .csui-tree-container span.csui-node-name {
+  padding-left: 14px;
+  line-height: 18px;
+  width: 100%;
+  color: #333333;
+}
+
+.binf-widgets .csui-permissions-level .csui-tree-container span.csui-node-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .csui-tree-root {
+  list-style: none;
+  line-height: normal;
+}
+
+.binf-widgets .csui-tree-child {
+  position: relative;
+  align-items: center;
+  line-height: initial;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  padding-bottom: 14px;
+  width: 100%;
+}
+
+.binf-widgets .csui-tree-child.csui-split-fullcontrol {
+  padding-bottom: 0px;
+  padding-right: 16px;
+}
+
+.csui-tree-child label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.binf-widgets .csui-tree-child.csui-split-read {
+  width: 100%;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.binf-widgets .csui-tree-child.csui-split-read .csui-node-name {
+  padding-right: 32px;
+}
+
+.binf-widgets .csui-tree-child .csui-separator {
+  bottom: 0;
+  position: absolute;
+}
+
+.binf-widgets .csui-tree-child.csui-split-read .csui-separator {
+  border-bottom: 2px solid #008a8b;
+}
+
+.binf-widgets .csui-tree-child.csui-split-write {
+  width: 100%;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.binf-widgets .csui-permission-attributes .csui-permission-attribute-tree {
+  padding: 15px 0px 13px 15px;
+  overflow: hidden;
+}
+
+.binf-widgets .binf-modal-content .csui-permission-attributes .csui-permission-attribute-tree {
+  padding: 15px 0px 13px 30px;
+  overflow: hidden;
+}
+
+.binf-widgets .csui-permissions-level .csui-permission-attributes .csui-permission-attribute-tree .csui-tree-root {
+  display: inline-block;
+  width: 100%;
+}
+
+.binf-widgets .csui-tree-child .csui-node-name {
+  padding-right: 65px;
+}
+
+.binf-widgets .csui-tree-child.csui-split-write .csui-separator {
+  border-bottom: 2px solid #5864ad;
+  width: calc(100% + 85px);
+}
+
+.csui-tree-child label:focus {
+  box-shadow: 0 0 0 1px #333333;
+}
+
+.csui-tree-child label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  outline: 0;
+  cursor: pointer;
+  background-image: url('images/checkbox.svg');
+}
+
+.csui-tree-child label::after {
+  display: inline-block;
+  position: absolute;
+  color: #ffffff;
+  background-color: #666666;
+  width: 18px;
+  height: 18px;
+}
+
+.csui-tree-child input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin: 0px;
+  float: left;
+}
+
+.csui-tree-child input[type="checkbox"]:checked + label::after {
+  font-family: "FontAwesome";
+  content: "";
+  background: url('images/checkbox_selected.svg');
+}
+
+.csui-tree-child input[type="checkbox"]:disabled + label::before {
+  background-color: #ffffff;
+  cursor: not-allowed;
+  background: url('images/checkbox_disabled.svg');
+}
+
+.csui-tree-child input[type="checkbox"].icon-checkbox-on_disabled + label::before {
+  background-color: #ffffff;
+  cursor: default;
+  background: url('images/checkbox_on24_dis.svg');
+}
+
+.csui-tree-child input[type="checkbox"].icon-checkbox-disabled + label::before {
+  background-color: #ffffff;
+  cursor: default;
+  background: url('images/checkbox24_dis.svg');
+}
+
+.csui-tree-child input[type="checkbox"].icon-checkbox-disabled,
+.csui-tree-child input[type="checkbox"].icon-checkbox-on_disabled {
+  cursor: default;
+}
+
+.binf-widgets .csui-tree-split.csui-split-read,
+.binf-widgets .csui-tree-split.csui-split-write,
+.binf-widgets .csui-tree-split.csui-split-fullcontrol {
+  width: 32px;
+  position: absolute;
+  bottom: 0;
+}
+
+.binf-widgets .csui-tree-split.csui-split-read,
+.binf-widgets .csui-tree-split.csui-split-read .csui-splitcontrol-label span {
+  background-color: #66d4d6;
+}
+
+.binf-widgets .csui-tree-split.csui-split-write,
+.binf-widgets .csui-tree-split.csui-split-write .csui-splitcontrol-label span {
+  background-color: #b9afd3;
+}
+
+.binf-widgets .csui-tree-split.csui-split-fullcontrol,
+.binf-widgets .csui-tree-split.csui-split-fullcontrol .csui-splitcontrol-label span {
+  background-color: #6bd7f5;
+}
+
+.binf-widgets .csui-tree-split.csui-split-fullcontrol {
+  bottom: -16px;
+}
+
+.binf-widgets .csui-splitcontrol-label {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.binf-widgets .csui-splitcontrol-label span {
+  width: 95px;
+  display: inline-block;
+  position: absolute;
+  left: -31px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  top: 55px;
+  text-align: right;
+}
+
+.binf-widgets .csui-permissions-collection .csui-permission-item-permissions .csui-tree-split .csui-splitcontrol-label span {
+  color: #333333;
+}

@@ -1,0 +1,150 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-alert {
+  
+  z-index: 1200;
+}
+
+.csui-alert .icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 32px;
+  width: 32px;
+}
+
+.csui-alert .binf-modal-content {
+  background-color: #fff;
+  border-radius: 3px;
+  border-bottom: 0 none;
+}
+
+.csui-alert .binf-modal-header {
+  border-bottom: 0px none;
+  font-size: 24px;
+}
+
+.csui-alert .binf-modal-header .binf-close {
+  opacity: .7;
+}
+
+.csui-alert .binf-modal-header .binf-close:hover {
+  opacity: 1;
+}
+.csui-alert .question-header,
+.csui-alert .warning-header,
+.csui-alert .error-header,
+.csui-alert .info-header,
+.csui-alert .success-header,
+.csui-alert .message-header {
+  background-color: transparent;
+  color: #000;
+}
+
+.csui-alert .question-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #111B57;
+  border-radius: 2px;
+}
+
+.csui-alert .warning-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #DF6800;
+}
+
+.csui-alert .error-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #DF3323;
+}
+
+.csui-alert .info-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #2D3C97;
+}
+
+.csui-alert .success-header ~ .binf-modal-footer {
+  border-top: 0 none;
+  margin: 0;
+  border-bottom: 4px solid #067C13;
+}
+
+.csui-alert .binf-modal-header .binf-modal-title .icon {
+  float: left;
+}
+
+.csui-alert .binf-modal-header .binf-modal-title .title-text {
+  margin-left: 15px;
+  width: calc(100% - 47px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  line-height: normal;
+}
+
+.csui-alert .binf-modal-body {
+  margin: 0px 30px 15px;
+  white-space: pre-wrap;
+  font-size: 1.1em;
+  line-height: 120%;
+  font-weight: 300;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.csui-alert .binf-modal-footer {
+  border-top: 0 solid #e5e5e5;
+  margin: 0 15px 15px 15px;
+}
+
+.csui-alert .binf-modal-footer.csui-no-body {
+  margin-top: 15px;
+}
+
+.csui-alert .binf-modal-footer .binf-btn {
+  border-radius: 1rem;
+  min-width: 5rem;
+  margin-left: 10px;
+  line-height: 0.75rem;
+  font-size: 0.875rem;
+  height: 2rem;
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default {
+  border-radius: 1rem;
+  min-width: 5rem;
+  margin-left: 10px;
+  line-height: 0.75rem;
+  font-size: 0.875rem;
+  height: 2rem;
+  border: 1px solid #0072aa;
+  color: #0072aa;
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default:hover {
+  background-color: #ffffff;
+  border: 1px solid #004b71;
+  color: #004b71;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  -moz-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default:focus {
+  outline: 1px dotted #333333;
+  outline-offset: 2px;
+  background-color: #ffffff;
+  border: 1px solid #004b71;
+  box-shadow: none;
+  color: #004b71;
+}
+
+.csui-alert .binf-modal-footer .binf-btn-default:active {
+  border: 1px solid #0072aa;
+  color: #0072aa;
+}

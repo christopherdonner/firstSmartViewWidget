@@ -1,0 +1,13 @@
+<div class="binf-row">
+  {{#each fields}}
+    {{#if this.isSetType}}
+      <div class="binf-col-md-12 cs-form-singlecolumn cs-form-set"
+           id="csfSingleCol_{{../../modelId}}{{@index}}"></div>
+    {{else}}
+      <div class="binf-col-md-12 cs-form-doublecolumn"
+           id="csfLeftCol_{{../../modelId}}{{@index}}"></div>
+    {{/if}}
+  {{/each}}
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

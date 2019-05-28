@@ -1,0 +1,47 @@
+ {
+"$schema":"http://opentext.com/cs/json-schema/draft-04/schema#",
+"title":"{{title}}", 
+  "description":"{{description}}", 
+  "kind":"tile", 
+  "schema": {
+    "type":"object", 
+    "required":false, 
+    "properties": {
+
+      "widgetTitle": {
+        "title":"{{workflowmonitorwidgetTitle}}", 
+        "description":"{{workflowmonitorwidgetTitleDescription}}", 
+        "readonly":false, 
+        "required":true, 
+        "default":"{{title}}", 
+        "type":"string"
+      }, 
+
+      "wfstatusfilter": {
+        "title": "{{workflowStatusTitle}}",
+        "description": "{{workflowStatusDescription}}",
+        "required":true, 
+        "type": "integer"
+      }
+      
+    }
+  }, 
+    "options": {
+        "fields": {                
+                  
+          "widgetTitle": {
+            "type":"text"
+          }, 
+
+          "wfstatusfilter": 
+            {
+              "type": "otcs_node_picker",
+              "type_control": {
+                "parameters": {
+                  "select_types": [190]
+                }
+              }
+            }
+        }  
+    }
+  }

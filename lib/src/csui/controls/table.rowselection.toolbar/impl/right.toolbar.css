@@ -1,0 +1,41 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-right-toolbar-view {
+  height: 100%;
+}
+
+.csui-right-toolbar-view .csui-condensed-header-toggle-container {
+  display: flex;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.csui-right-toolbar-view .csui-condensed-header-toggle-container button.csui-condensed-header-toggle {
+  height: 100%;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.csui-right-toolbar-view .csui-condensed-header-toggle-container button.csui-condensed-header-toggle:focus {
+  border: 1px dotted #333333;
+}
+
+.csui-right-toolbar-view .csui-condensed-header-toggle-container .icon-condensed-header {
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.csui-right-toolbar-view .csui-condensed-header-toggle-container .icon-condensed-header.icon-rotate180 {
+  transform: rotate(180deg);
+}

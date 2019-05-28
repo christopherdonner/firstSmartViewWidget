@@ -1,0 +1,102 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-simplelist.csui-facet-panel {
+  height: 100%;
+  background-color: #f7f7f7;
+  border: 0;
+  box-shadow: none;
+  min-width: 0;
+}
+
+.binf-widgets .cs-simplelist.csui-facet-panel .cs-content {
+  width: 100%;
+  height: calc(100% - 3em + 2px);
+}
+
+.binf-widgets .csui-facet-panel .cs-content .csui-collection-state {
+  padding: 16px;
+  white-space: nowrap;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  color: #666666;
+}
+
+.binf-widgets .csui-facet-panel .cs-content .csui-collection-state.csui-state-loading {
+  animation: csui-facet-panel-state-fade-in-and-out 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 1
+}
+
+@keyframes csui-facet-panel-state-fade-in-and-out {
+  from {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: .5;
+  }
+}
+
+.binf-widgets .cs-simplelist.csui-facet-panel .cs-title {
+  display: block;
+}
+
+.binf-widgets .cs-simplelist.csui-facet-panel .binf-panel-heading {
+  font-size: 0.875em;
+  height: calc(3em - 1px);
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  background-color: inherit;
+  border-bottom: 0;
+  padding: 0 16px;
+}
+
+.binf-widgets .csui-facet-panel .csui-horizontal-separator {
+  height: 2px;
+  background-color: #dcdcdc;
+  padding: 0;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+.binf-widgets .ui-clear-facet {
+  padding: 0.5em;
+  margin-top: 3px;
+}
+
+.csui-facetpanel #facetheader {
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+button.ui-clear-facet-button {
+  height: 20px;
+  width: 20px;
+  margin-right: 0.4em;
+  font-size: 0.875em;
+}
+
+.ui-clear-facet-button .ui-icon {
+  margin-left: 1px;
+}
+
+.binf-widgets .ui-clear-facet-text {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.cs-simplelist.csui-facet-panel .csui-right-shadow {
+  position: absolute;
+  width: 16px;
+  right: 0;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  background: -webkit-linear-gradient(left, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.2)); 
+  background: -o-linear-gradient(right, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.2)); 
+  background: -moz-linear-gradient(right, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.2)); 
+  background: linear-gradient(to right, rgba(65, 64, 55, 0), rgba(65, 64, 55, 0.2)); 
+}

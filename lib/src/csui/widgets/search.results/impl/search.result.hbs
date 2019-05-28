@@ -1,0 +1,67 @@
+<div class="csui-search-item-row-wrapper csui-search-item-complete-row binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+  <div class="csui-search-item-row binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <h3 class="csui-search-item-hide-h3">{{name}}</h3>
+    <div class="csui-search-item-check"></div>
+    <div class="csui-search-item-icon {{messages.inactiveclass}}">
+      <span class="csui-type-icon"></span>
+    </div>
+    <div class="csui-search-col2 binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      <div class="csui-search-item-left-panel binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+        <div class="csui-search-item">
+          <div class="">
+            <div class="csui-search-item-name ">
+              <a href={{defaultActionUrl}} aria-label="{{name}} {{mimeTypeAria}}" title="{{name}}"
+                 class="csui-search-item-link {{messages.inactiveclass}}">{{name}}</a>
+              {{#if search_result_metadata}}
+                {{#xif "this.search_result_metadata.current_version === false || this
+                .search_result_metadata.version_type ==='minor' "}}
+                  {{#if versions}}
+                    <div class="csui-search-results-version csui-search-item-version-{{cid}}">
+                      <a href="javascript:void(0);" class="csui-search-version-label">{{messages
+                      .versionLabel}} {{versions.version_number_name}}
+                      </a>
+                    </div>
+                  {{/if}}
+                {{/xif}}
+              {{/if}}
+              <div class="csui-icon csui-search-results-reservation csui-search-item-reservation
+                  csui-search-item-reservation-{{cid}}"></div>
+            </div>
+          </div>
+        </div>
+        <div class="csui-search-item-content-wrapper binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          {{#if messages.enableBreadcrumb}}
+            <div class="csui-search-item-breadcrumb csui-search-item-breadcrumb-{{cid}}"></div>
+            <div class="csui-search-row-spacer binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+          {{/if}}
+          <p class="csui-search-item-desc csui-overflow-description binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+            {{#if summary}}
+            {{else}}
+              {{description}}
+            {{/if}}
+          </p>
+        </div>
+        <div class="csui-search-row-spacer binf-col-lg-12 binf-col-md-12 binf-col-sm-12
+        binf-col-xs-12 csui-search-row-spacer-divider"></div>
+      </div>
+      <div class="csui-search-item-center-panel binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+      <div class="csui-search-item-right-panel">
+        <div class="csui-search-item-control-{{cid}} binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+          <div class="csui-search-toolbar-container binf-hidden binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+            {{#if version_id}}
+              <div class="csui-search-item-action-{{cid}}-{{version_id}} csui-search-item-inline-actions"></div>
+            {{else}}
+              <div class="csui-search-item-action-{{cid}} csui-search-item-inline-actions"></div>
+            {{/if}}
+          </div>
+          <div class="csui-search-row-spacer binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+          <div role="list" class="csui-search-item-details-wrapper binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+        </div>
+      </div>
+    </div>
+    <div class="csui-search-item-action-panel csui-search-item-action-panel-{{cid}}">
+      <div class="csui-search-item-fav search-fav-{{cid}}"></div>
+    </div>
+  </div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

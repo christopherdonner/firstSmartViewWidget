@@ -1,0 +1,12 @@
+{{#if current_description}}
+  <span class="description {{truncate_fade_class}}"
+        title="{{complete_description}}">{{current_description}}</span>
+{{/if}}
+<div class="description-caret-div">
+  <span class="description-readmore icon-expandArrowDown" role="button" aria-expanded="false" title="{{showmore_tooltip}}"
+        aria-label="{{showmore_aria}}" tabindex="0"></span>
+  <span class="description-showless icon-expandArrowUp" role="button" aria-expanded="true" title="{{showless_tooltip}}"
+        aria-label="{{showless_aria}}" tabindex="0"></span>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

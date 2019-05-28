@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Social Actions on ROI</title>
+  <script src="//server/OTCS/livelink/widgets?crossOrigin=true"></script>
+  <link rel="stylesheet" href="//server/img/csui/themes/carbonfiber/theme.css">
+</head>
+<body>
+
+<div style="background-color: #aecad0; height:43px;width:100%;  background: -webkit-linear-gradient(top, #f7fafa, #c4d7e0);
+/* Firefox 3.6+ */
+background: -moz-linear-gradient(top, #f7fafa, #c4d7e0);
+/* IE 10 */
+background: -ms-linear-gradient(top, #f7fafa, #c4d7e0);
+/* Opera 11.10+ */
+background: -o-linear-gradient(top, #f7fafa, #c4d7e0);
+padding-left: 5px;
+padding-top: 8px;
+width: 100%;
+font-family: serif;
+border-bottom: 5px solid rgb(18, 105, 150);
+font-size: 20px;">OpenText | Test Page
+</div>
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered" style="color: #cfcfcf;">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th style="text-align: right !important;">Size</th>
+        <th style="text-align: center !important;">Modified Date</th>
+        <th style="text-align: center !important;">Social actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>ESOC_PDF.jpg</td>
+        <td style="text-align: right !important;">50 KB</td>
+        <td style="text-align: center !important;">03/11/2015 09:46 PM</td>
+        <td>
+          <div class="esoc-social-actions-widget" data-rockey="ROCKey1" data-roid="esoc_photo"
+               data-csid="" style="float:right;"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>ESOC_Doc.doc</td>
+        <td style="text-align: right !important;">720 KB</td>
+        <td style="text-align: center !important;">02/24/2015 11:15 AM</td>
+        <td>
+          <div class="esoc-social-actions-widget" data-rockey="ROCKey1" data-roid="esoc_doc"
+               data-csid="" style="float:right;"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>ESOC_File.pdf</td>
+        <td style="text-align: right !important;">2 MB</td>
+        <td style="text-align: center !important;">03/01/2015 04:03 PM</td>
+        <td>
+          <div class="esoc-social-actions-widget" data-rockey="ROCKey1" data-roid="esoc_file"
+               data-csid="" style="float:right;"></div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  csui.onReady(
+      ['esoc/widgets/socialactions/socialactions.main', 'csui/utils/contexts/page/page.context'],
+      function (SocialActionsMainWidget, PageContext) {
+        var context = new PageContext(),
+            options = {
+              context: context,
+              placeholder: ".esoc-social-actions-widget",
+              connection: {
+                url: '//server/OTCS/livelink/api/v1',
+                supportPath: '/img',
+                crossDomain: true
+              },
+              config_settings: {
+                'maxMessageLength': 1000
+              }
+            };
+        //Read OTDS ticket from cookies
+        var OTDSTicket = '';
+        var otdsTicketMatch = (' ' +
+                               document.cookie).match(new RegExp('[; ]otdsticket=([^\\s;]*)'));
+        if (otdsTicketMatch) {
+          OTDSTicket = unescape(otdsTicketMatch[1]);
+          options.connection.authenticationHeaders = {OTDSTicket: OTDSTicket};
+        }
+        new SocialActionsMainWidget(options);
+
+      }
+  );
+</script>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

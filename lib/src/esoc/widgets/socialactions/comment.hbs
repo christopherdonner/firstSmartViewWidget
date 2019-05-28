@@ -1,0 +1,268 @@
+<div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-social-comment-body-divider"></div>
+<div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-comment-list-divider"></div>
+<div class="esoc-profileimg-block">
+  <span class="esoc-userprofile-img">
+    <img class="esoc-userprofile-img-{{user.id}} binf-img-circle" src="" />
+  </span>
+</div>
+
+<div class="esoc-commentinfo-block-wrapper binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+
+  <div class="esoc-commentinfo-block binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div class="esoc-social-comment-details">
+      <div class="esoc-social-comment-user-details binf-col-lg-10 binf-col-md-10 binf-col-sm-10 binf-col-xs-10">
+        <span class="esoc-user-widget"></span>
+        <span class="esoc-social-timestamp">
+          {{#if modified_at_iso8601}}
+            <span class="esoc-social-comment-timestamp">
+              <span class="esoc-social-comment-timestamp-ago"></span>
+              <span class="esoc-social-comment-blue">{{messages.modifiedAt}}</span>
+              <span class="esoc-social-timestamp-text">{{modified_at_iso8601}}</span>
+            </span>
+          {{else}}
+            <span
+                class="esoc-social-comment-timestamp esoc-social-timestamp-text">{{created_at_iso8601}}</span>
+          {{/if}}
+        </span>
+      </div>
+      <div class="esoc-social-comment-icon-holder binf-col-lg-2 binf-col-md-2 binf-col-sm-2 binf-col-xs-2">
+        <div class="esoc-social-comment-icon-holder esoc-social-comment-icon-holder-inner">
+
+          {{#if actions.edit}}
+            <a href="javascript:void(0);"
+               class="esoc-social-comment-button esoc-social-comment-icon-edit"
+               title="{{messages.edit}}" aria-label="{{messages.edit}}"></a>
+          {{/if}}
+
+          {{#xif "this.messages.feedEventType != 1 && this.actions.deleteAction"}}
+            <div class="esoc-social-comment-icon-spacer"></div>
+            <a href="javascript:void(0);"
+               class="esoc-social-comment-button esoc-social-comment-delete-confirm esoc-social-comment-icon-delete"
+               title="{{messages.deleteComment}}" data-binf-toggle="modal"
+               data-binf-target="#esoc-social-dialog" aria-label="{{messages.deleteComment}}"></a>
+          {{/xif}}
+
+          {{#if actions.hide}}
+            <div class="esoc-social-comment-icon-spacer"></div>
+            <a href="javascript:void(0);"
+               class="esoc-social-comment-button esoc-social-comment-icon-hide"
+               title="{{messages.hide}}"></a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    {{#xif "this.feed_event_type == 7"}}
+      <div class="esoc-social-comment-data binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"
+           data-id="{{id}}">
+        <span class="esoc-social-text esoc-comment-valign">{{messages.textmsg}}</span>
+        {{#xif "this.extended_info.subtype == this.messages.shortcutAttachmentSubtype"}}
+          <span class="esoc-social-mime-icon esoc-comment-valign csui-icon-group">
+            <span class="{{messages.mimeTypeClass}}" />
+            <a href="javascript:void(0);" class="csui-icon csui-icon-shortcut-overlay"></a>
+          </span>
+        {{/xif}}
+
+        <span class="esoc-object-name esoc-comment-valign" title="{{extended_info.name}}">
+          {{#xif "this.extended_info.subtype != this.messages.shortcutAttachmentSubtype"}}
+            <span class="esoc-social-mime-icon esoc-comment-valign {{messages.mimeTypeClass}}"
+                  title="{{extended_info.name}}"></span>
+          {{/xif}}
+          {{extended_info.name}}
+        </span>
+      </div>
+      <div class="esoc-extended-view-mode">
+        {{#if extended_info.sgm_description}}
+          <div class="esoc-social-comment-data">
+            <div class="esoc-description">{{extended_info.sgm_description}}</div>
+          </div>
+        {{/if}}
+        <a href="javascript:void(0);" title="{{messages.more}}"
+           class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+          <span class="icon-arrow-down"></span></a>
+        <a href="javascript:void(0);" title="{{messages.less}}"
+           class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+          <span class="icon-arrow-up"></span></a>
+      </div>
+
+      <div class="binf-alert binf-alert-danger binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-social-warning"
+           role="alert"></div>
+    {{else xif "this.feed_event_type == 8"}}
+      <div class="esoc-social-comment-data binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"
+           data-id="{{id}}">
+        <span class="esoc-social-text esoc-comment-valign">{{messages.textmsg}}</span>
+        <span class="esoc-object-name esoc-comment-valign" title="{{extended_info.name}}">
+          <span class="esoc-social-mime-icon esoc-comment-valign {{messages.mimeTypeClass}}"
+                title="{{extended_info.name}}"></span>
+          {{extended_info.name}}
+        </span>
+        <span class="esoc-social-version esoc-comment-valign">{{messages.version}}</span>
+        <span class="esoc-version-number esoc-comment-valign">{{extended_info.version_name}}</span>
+      </div>
+      <div class="esoc-extended-view-mode">
+        {{#if extended_info.sgm_description}}
+          <div class="esoc-social-comment-data">
+            <div class="esoc-description">{{extended_info.sgm_description}}</div>
+          </div>
+        {{/if}}
+        <a href="javascript:void(0);" title="{{messages.more}}"
+           class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+          <span class="icon-arrow-down"></span></a>
+        <a href="javascript:void(0);" title="{{messages.less}}"
+           class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+          <span class="icon-arrow-up"></span></a>
+      </div>
+      <div class="binf-alert binf-alert-danger binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-social-warning"
+           role="alert"></div>
+    {{else xif "this.feed_event_type == 9"}}
+      <div class="esoc-extended-view-mode">
+        <div class="esoc-social-comment-data binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"
+             data-id="{{id}}"></div>
+        <a href="javascript:void(0);" title="{{messages.more}}"
+           class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+          <span class="icon-arrow-down"></span></a>
+        <a href="javascript:void(0);" title="{{messages.less}}"
+           class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+          <span class="icon-arrow-up"></span></a>
+      </div>
+      <div class="binf-alert binf-alert-danger binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-social-warning"
+           role="alert"></div>
+    {{else}}
+      <div class="esoc-extended-view-mode">
+        <div
+            class="esoc-social-comment-data esoc-social-comment-text binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"
+            data-id="{{id}}">{{text}}</div>
+        <a href="javascript:void(0);" title="{{messages.more}}"
+           class="esoc-see-more esoc-see-more-activity esoc-hide-element" aria-label="{{messages.more}}">
+          <span class="icon-arrow-down"></span></a>
+        <a href="javascript:void(0);" title="{{messages.less}}"
+           class="esoc-see-less esoc-see-less-activity esoc-hide-element" aria-label="{{messages.less}}">
+          <span class="icon-arrow-up"></span></a>
+      </div>
+      <div class="binf-alert binf-alert-danger binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-social-warning"
+           role="alert"></div>
+      <div id="esoc-social-comment-input-holder-{{uniqueId}}" class="esoc-social-comment-input-holder
+      binf-col-lg-8 binf-col-md-8 binf-col-sm-7 binf-col-xs-5">
+        <textarea class="esoc-social-comment-data-textarea esoc-social-comment-data-textarea-{{id}}"
+                  placeholder="{{messages.writeAComment}}" aria-label="{{text}}">{{text}}</textarea>
+      </div>
+    {{/xif}}
+    <div class="esoc-social-icons-container binf-col-lg-4 binf-col-md-4 binf-col-sm-5 binf-col-xs-7">
+      <div class="esoc-social-edit-icons" id="esoc-social-edit-comment-icons-{{id}}">
+        <a href="javascript:void(0);" id="esoc-social-comment-edit-attachment-{{id}}"
+           class="esoc-social-comment-attachment" data-html="true" data-binf-placement="bottom" aria-label="{{messages.editAttachment}}"
+        ></a>
+        <a href="javascript:void(0);"
+           class="esoc-social-comment-emoticon esoc-social-comment-emotion-{{id}}"
+           id="esoc-social-comment-emoticon-{{id}}" title="{{messages.emoticon}}" aria-label="{{messages.emoticon}}"></a>
+      </div>
+    </div>
+    <div id="esoc-suggestion-comment-list_{{id}}"></div>
+
+    {{#if extended_info.attachment_id}}
+      {{#xif "this.extended_info.attachment_subtype == this.messages.shortcutAttachmentSubtype"}}
+        <div id="esoc-social-comment-attachment-{{id}}"
+             class="binf-col-lg-7 binf-col-md-7 binf-col-sm-9 binf-col-xs-9 esoc-social-attachment">
+          <span class="csui-icon-group esoc-social-attachment-icon"
+                title="{{extended_info.attachment_name}}">
+            <span id="esoc-social-selected-file-icon-{{id}}" class="binf-col-lg-2 binf-col-md-2 binf-col-sm-2 binf-col-xs-2
+                  {{messages.mimeTypeClass}}" />
+            <a href="javascript:void(0);" class="csui-icon csui-icon-shortcut-overlay"></a>
+          </span>
+
+          <div class="binf-col-lg-9 binf-col-md-9 binf-col-sm-9 binf-col-xs-9 esoc-social-attachment-name">
+            <a href="javascript:void(0);" class="esoc-social-attachment-download"
+               title="{{extended_info.attachment_name}}">{{extended_info.attachment_name}}</a>
+          </div>
+          {{#if actions.addshortcut}}
+            <a href="javascript:void(0);" id="esoc-social-attachment-icon-delete-{{id}}"
+               class="binf-col-lg-1 binf-col-md-1 binf-col-sm-1 binf-col-xs-1 comment esoc-social-attachment-icon-delete"
+               data-binf-toggle="modal" data-binf-target="#esoc-social-dialog"
+               title="{{messages.deleteComment}}"></a>
+          {{/if}}
+        </div>
+      {{else xif "this.extended_info.attachment_subtype == this.messages.documentAttachmentSubtype"}}
+        <div id="esoc-social-comment-attachment-{{id}}"
+             class="binf-col-lg-7 binf-col-md-7 binf-col-sm-9 binf-col-xs-9 esoc-social-attachment">
+          <a href="javascript:void(0);" class="binf-col-lg-2 binf-col-md-2 binf-col-sm-2 binf-col-xs-2 esoc-social-attachment-icon
+             {{messages.mimeTypeClass}}" title="{{extended_info.attachment_name}}"></a>
+
+          <div class="binf-col-lg-7 binf-col-md-7 binf-col-sm-7 binf-col-xs-7 esoc-social-attachment-name">
+            <a href="javascript:void(0);" class="esoc-social-attachment-download"
+               title="{{extended_info.attachment_name}}">{{extended_info.attachment_name}}</a>
+          </div>
+          <div
+              class="binf-col-lg-2 binf-col-md-2 binf-col-sm-2 binf-col-xs-2 esoc-social-attachment-size">{{extended_info.attachment_size}}</div>
+          {{#if actions.addattachment}}
+            <a href="javascript:void(0);" id="esoc-social-attachment-icon-delete-{{id}}"
+               class="binf-col-lg-1 binf-col-md-1 binf-col-sm-1 binf-col-xs-1 comment esoc-social-attachment-icon-delete"
+               data-binf-toggle="modal" data-binf-target="#esoc-social-dialog"
+               title="{{messages.deleteComment}}"></a>
+          {{/if}}
+        </div>
+      {{/xif}}
+    {{/if}}
+
+    <div class="esoc-social-comment-list-actions binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      {{#xif "this.messages.feedEventType != 1 && this.messages.feedEventType != 2"}}
+        <span class="esoc-comment-reply">
+          {{#if reply_count }}
+            <a id="reply_link_{{id}}" class="esoc-reply_link" href="javascript:void(0)">
+              {{messages.reply}}
+              <span id="reply_link_count_{{id}}">({{reply_count}})</span>
+            </a>
+            {{#xif "this.extended_info.attachment_id == '' && (this.actions.addattachment || this.actions.addshortcut)"}}
+              <span class="item-separator">|</span>
+            {{/xif}}
+          {{else}}
+            {{#if actions.reply.can_reply }}
+              <a id="reply_link_{{id}}" class="esoc-reply_link"
+                 href="javascript:void(0)"> {{messages.reply}} </a>
+              {{#xif "this.extended_info.attachment_id == '' && (this.actions.addattachment || this.actions.addshortcut)"}}
+                <span class="item-separator">|</span>
+              {{/xif}}
+            {{/if}}
+          {{/if}}
+        </span>
+      {{/xif}}
+
+      <span class="esoc-comment-attachment">
+        {{#xif "this.extended_info.attachment_id == '' && (this.actions.addattachment || this.actions.addshortcut)"}}
+          <a class="comment esoc-social-attachment-file {{messages.attachmentPositionClass}}"
+             href="javascript:void(0)" data-html="true"
+             data-binf-placement="bottom"> {{messages.attachFile}} </a>
+        {{/xif}}
+      </span>
+    </div>
+    {{#xif "this.actions.addattachment && !this.actions.addshortcut"}}
+      <input type="file" id="esoc-social-commentedit-desktop-attachment-{{id}}" name="AddDesktopDoc"
+             style="display:none" />
+      <input type="file" id="esoc-social-commentlist-desktop-attachment-{{id}}" name="AddDesktopDoc"
+             style="display:none" />
+    {{/xif}}
+    <input type="hidden" id="esoc-social-comment-cs-shortcut-{{id}}-attachfiles" value="" />
+    <input type="hidden" id="esoc-social-comment-cs-shortcut-edit-{{id}}" value="" />
+
+    <div id="reply_{{ id }}" data-id="{{ id }}"
+         class="reply-thread-list binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12"></div>
+
+    <div class="esoc-social-comment-list-update binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+      <button class="esoc-social-comment-update binf-btn binf-btn-primary" title="{{messages.update}}">
+        {{messages.update}}
+      </button>
+      <button class="esoc-social-comment-cancel binf-btn binf-btn-default" title="{{messages.cancel}}">
+        {{messages.cancel}}
+      </button>
+      <span class="esoc-social-comment-hidden-text">{{text}}</span>
+    </div>
+  </div>
+</div>
+{{^if noMoreData}}
+  <div id="{{id}}" class="esoc-social-comment-load-more"></div>
+{{/if}}
+<span class="esoc-social-comment-delete"></span>
+<div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-social-comment-body-divider"></div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

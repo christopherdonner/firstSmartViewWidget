@@ -1,0 +1,53 @@
+<form>
+  <div class="binf-hidden-md binf-hidden-lg hidden-xl hidden-xxl
+       csui-inlineform-vertical-spacer"></div>
+  <div class="csui-inlineform-group csui-inlineform-group-url">
+    <input type="text" value="{{name}}" placeholder="{{namePlaceholder}}"
+           class="binf-form-control csui-inlineform-input-name {{#if validationFailed_Name~}} hasError
+         {{~/if}}">
+    <input type="text" value="{{url}}" placeholder="{{urlPlaceholder}}"
+           class="binf-hidden-xs binf-hidden-sm binf-form-control csui-inlineform-input-url {{#if
+           haveErrorMessage}}csui-inlineform-error{{/if}}">
+    {{#if haveErrorMessage}}
+      <span class="formfield_error csui-inlineform-input-error"></span>
+    {{/if}}
+    <button type="button" class="binf-hidden-xs
+    binf-hidden-sm csui-btn-metadata binf-btn">
+      <span class="icon icon-toolbar-metadata"></span></button>
+    <div class="csui-inline-action-container">
+      <button type="submit" class="binf-hidden-xs
+    binf-hidden-sm csui-btn-save csui-btn binf-btn
+            {{#if disableSavebtn}} {{else}}binf-btn-default {{/if}}"
+        {{#if disableSavebtn}} disabled {{/if}}>{{SaveButtonLabel}}</button>
+      <button type="button" class="binf-hidden-xs binf-hidden-sm csui-btn-cancel csui-btn binf-btn
+            binf-btn-default">{{CancelButtonLabel}}</button>
+    </div>
+
+  </div>
+  <div class="binf-hidden-md binf-hidden-lg hidden-xl hidden-xxl
+       csui-inlineform-vertical-spacer"></div>
+  <div class="binf-hidden-md binf-hidden-lg hidden-xl hidden-xxl csui-inlineform-group
+csui-inlineform-group-url-wrapped">
+    <input type="text" value="{{url}}" placeholder="{{urlPlaceholder}}"
+           class="binf-form-control csui-inlineform-input-url {{#if
+           haveErrorMessage}}csui-inlineform-error{{/if}}">
+    <button type="button" class="csui-btn-metadata binf-btn">
+      <span class="icon icon-toolbar-metadata"></span></button>
+    <div class="csui-inline-action-container">
+      <button type="submit" class="csui-btn-save csui-btn binf-btn
+            {{#if disableSavebtn}} {{else}}binf-btn-default {{/if}}"
+        {{#if disableSavebtn}} disabled {{/if}}>{{SaveButtonLabel}}</button>
+      <button type="button"
+              class="csui-btn-cancel csui-btn binf-btn binf-btn-default">{{CancelButtonLabel}}</button>
+    </div>
+  </div>
+  <div class="binf-hidden-md binf-hidden-lg hidden-xl hidden-xxl
+       csui-inlineform-vertical-spacer"></div>
+</form>
+{{#if haveErrorMessage}}
+  <div class="csui-inlineform-group csui-inlineform-group-error" role="alert">
+    <div class="binf-text-danger">{{errorMessage}}</div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,240 @@
+{
+  "users": {
+    "1000": {
+      "id": 1000,
+      "name": "Admin",
+      "first_name": "Chief",
+      "last_name": "Administrator",
+      "personal_volume_id": 2003
+    }
+  },
+  "nodeMetadata": {
+    "create_date": {
+      "include_time": true,
+      "key": "create_date",
+      "name": "Created",
+      "read_only": true,
+      "sort": true,
+      "type": -7,
+      "type_name": "Date"
+    },
+    "create_user_id": {
+      "key": "create_user_id",
+      "name": "Created By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "description": {
+      "key": "description",
+      "multiline": true,
+      "multilingual": true,
+      "name": "Description",
+      "read_only": false,
+      "type": -1,
+      "type_name": "String"
+    },
+    "id": {
+      "key": "id",
+      "name": "ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "modify_date": {
+      "include_time": true,
+      "key": "modify_date",
+      "name": "Modified",
+      "read_only": true,
+      "sort": true,
+      "type": -7,
+      "type_name": "Date"
+    },
+    "modify_user_id": {
+      "key": "modify_user_id",
+      "name": "Modified By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "name": {
+      "key": "name",
+      "multiline": false,
+      "multilingual": true,
+      "name": "Name",
+      "read_only": false,
+      "sort": true,
+      "type": -1,
+      "type_name": "String"
+    },
+    "owner_user_id": {
+      "key": "owner_user_id",
+      "name": "Owned By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "parent_id": {
+      "key": "parent_id",
+      "name": "Parent ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "reserved": {
+      "key": "reserved",
+      "name": "Reserved",
+      "read_only": false,
+      "sort": true,
+      "type": 5,
+      "type_name": "Boolean"
+    },
+    "reserved_date": {
+      "include_time": true,
+      "key": "reserved_date",
+      "name": "Reserved",
+      "read_only": false,
+      "sort": true,
+      "type": -7,
+      "type_name": "Date"
+    },
+    "reserved_user_id": {
+      "key": "reserved_user_id",
+      "name": "Reserved By",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "size": {
+      "key": "type",
+      "name": "Size",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type": {
+      "key": "type",
+      "name": "Type",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type_name": {
+      "key": "type_name",
+      "multiline": false,
+      "multilingual": false,
+      "name": "Type",
+      "read_only": true,
+      "type": -1,
+      "type_name": "String"
+    }
+  },
+  "nodes": {
+    "2000": {
+      "actions": [
+        {
+          "name": "Open",
+          "signature": "Browse"
+        }
+      ],
+      "id": 2000,
+      "name": "Innovate",
+      "type": 141,
+      "create_date": "2014-07-10T14:12:31",
+      "create_user_id": 1000,
+      "description": "",
+      "modify_date": "2014-10-15T14:54:06",
+      "modify_user_id": 1000,
+      "parent_id": -1,
+      "perm_create": true,
+      "perm_delete": true,
+      "perm_delete_versions": true,
+      "perm_modify": true,
+      "perm_modify_attributes": true,
+      "perm_modify_permissions": true,
+      "perm_reserve": true,
+      "perm_see": true,
+      "perm_see_contents": true
+    },
+    "2003": {
+      "actions": [
+        {
+          "name": "Open",
+          "signature": "Browse"
+        }
+      ],
+      "id": 2003,
+      "name": "Chief's Home",
+      "type": 142,
+      "create_date": "2014-07-10T14:12:31",
+      "create_user_id": 1000,
+      "description": "",
+      "modify_date": "2014-10-15T14:54:06",
+      "modify_user_id": 1000,
+      "parent_id": -1,
+      "perm_create": true,
+      "perm_delete": true,
+      "perm_delete_versions": true,
+      "perm_modify": true,
+      "perm_modify_attributes": true,
+      "perm_modify_permissions": true,
+      "perm_reserve": true,
+      "perm_see": true,
+      "perm_see_contents": true
+    },
+    "2100": {
+      "actions": [
+        {
+          "name": "Open",
+          "signature": "Open"
+        }
+      ],
+      "id": 2100,
+      "name": "Overview.txt",
+      "type": 144,
+      "create_date": "2014-08-10T14:12:31",
+      "create_user_id": 1000,
+      "description": "",
+      "modify_date": "2014-11-15T14:54:06",
+      "modify_user_id": 1000,
+      "parent_id": 2000,
+      "perm_create": true,
+      "perm_delete": true,
+      "perm_delete_versions": true,
+      "perm_modify": true,
+      "perm_modify_attributes": true,
+      "perm_modify_permissions": true,
+      "perm_reserve": true,
+      "perm_see": true,
+      "perm_see_contents": true
+    }
+  },
+  "columns": [
+    {
+      "key": "type",
+      "name": "Type",
+      "data_type": 2,
+      "sortable": true
+    },
+    {
+      "key": "name",
+      "name": "Name",
+      "data_type": -1,
+      "sortable": true
+    },
+    {
+      "key": "size",
+      "name": "Size",
+      "data_type": 2,
+      "sortable": true
+    }
+  ]
+}

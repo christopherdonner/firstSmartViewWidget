@@ -1,0 +1,67 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-shortcut {
+  background-color: rgba(247, 247, 247, 0.82);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  color: #333333;
+}
+
+.binf-widgets .cs-shortcut:active,
+.binf-widgets .cs-shortcut:hover,
+.binf-widgets .cs-shortcut:focus,
+.binf-widgets .cs-shortcut:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.binf-widgets .cs-shortcut:focus {
+  border: 1px dotted #333333;
+}
+
+.cs-shortcut:not(.csui-disabled) {
+  cursor: pointer;
+}
+
+.cs-shortcut.csui-disabled {
+  pointer-events: none;
+}
+
+.cs-shortcut.csui-disabled .tile-title {
+  color: #757575;
+  font-style: italic;
+}
+
+.cs-shortcut.csui-disabled .tile-icon {
+  opacity: 0.5;
+}
+
+.cs-shortcut .tile-header {
+  background-color: #f7f7f7;
+}
+
+.cs-shortcut .tile-title {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.cs-shortcut .tile-icon {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: calc(100% - 70px);
+}
+
+.cs-shortcut .tile-icon .icon {
+  width: 7em;
+  height: 7em;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+}

@@ -1,0 +1,24 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .csui-control-view {
+  height: 100%;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.binf-widgets .csui-control {
+  border: thin solid transparent; 
+}
+
+.binf-widgets .csui-control:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+
+.binf-widgets .csui-control:active,
+.binf-widgets .csui-control:active:focus,
+.binf-widgets .csui-control.csui-control-active {
+  outline: none;
+}

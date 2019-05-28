@@ -1,0 +1,42 @@
+<div class="workitem-attachments-item">
+  <div class="workitem-attachments-icon"></div>
+  <div class="workitem-attachments-info">
+    <a class="workitem-attachments-name" href="{{defaultActionUrl}}">
+      <div class="workitem-attachment-name" title="{{name}}">{{name}}</div>
+    </a>
+
+    <input id="workitem-attachments-name-input-{{nodeId}}" class="workitem-attachments-name-input
+    binf-form-control cs-input rename-field binf-hidden" placeholder="{{namePlaceholder}}"
+           tabindex="-1" aria-label="{{namePlaceholder}}" title="{{name}}">
+    <span class="workitem-attachments-name-cancel csui-undo edit-cancel inline-edit-icon
+      rename-field binf-hidden" tabindex="-1" title="{{cancel}}"></span>
+
+    <div id="workitem-attachments-error-message-{{nodeId}}"
+         class="workitem-attachments-error-message binf-hidden"></div>
+
+    <div class="workitem-attachments-description">
+        <textarea id="workitem-attachments-description-input-{{nodeId}}" class="workitem-attachments-description-input binf-form-control cs-input rename-field
+      binf-hidden" placeholder="{{descriptionPlaceholder}}" tabindex="-1" aria-label="{{descriptionPlaceholder}}" rows="2"></textarea>
+      <span class="workitem-attachments-description-cancel csui-undo edit-cancel inline-edit-icon
+      rename-field binf-hidden" tabindex="-1" title="{{cancel}}"></span>
+
+      <div class="wrap">
+        <div>
+
+        <span
+            class="workitem-attachment-description workitem-attachments-description-ro binf-hidden"
+            title="{{description}}">{{description}}</span>
+
+          <span
+              class="workitem-attachment-description workitem-attachments-empty-description-ro binf-hidden"
+              title="{{descriptionPlaceholder}}">{{descriptionPlaceholder}}</span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="workitem-attachments-actions"></div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

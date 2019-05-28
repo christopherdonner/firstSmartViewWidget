@@ -1,0 +1,28 @@
+<div class="csui-facet-list-bar">
+  <div class="csui-mover csui-overflow-left binf-hidden">
+    <a href="#" title="{{previous}}" aria-label="{{previous}}">
+      <span class="csui-icon goto_previous_page"  ></span>
+    </a>
+    <span class="csui-facet-list-fade csui-facet-list-fadein"></span>
+  </div>
+
+  <div class="csui-facet-list-area"></div>
+
+  <div class="csui-mover csui-overflow-right binf-hidden">
+    <span class="csui-facet-list-fade csui-facet-list-fadeout"></span>
+    <a href="#" title="{{next}}" aria-label="{{next}}">
+      <span class="csui-icon goto_next_page" ></span>
+    </a>
+  </div>
+</div>
+
+<a href="#" class="csui-clear-all binf-hidden" role="button" aria-label="{{clearAllAria}}">
+  <div class='cs-icon binf-close'></div>
+  <div class='clear-label'>{{clearAll}}</div>
+</a>
+{{#if showSaveFilter}}
+<button class="binf-btn binf-btn-primary csui-filter-save binf-hidden"
+        aria-label="{{saveAsAria}}">{{saveas}}</button>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

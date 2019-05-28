@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Parameter Prompt View</title>
+
+	<link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+	<script src="../../../../csui/lib/require.js"></script>
+	<script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+
+	<style>
+		body {
+			font-family: "Lato", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+			font-size: 14px;
+			font-weight: 300; /* Lato Light */
+			height: 100%;
+		}
+
+		.test-container {
+			position: absolute;
+			top: 60px;
+		}
+
+		#content {
+			height: 100%;
+		}
+
+		a:link {
+			color: grey;
+		}
+
+		a:hover {
+			color: grey;
+		}
+
+		a:active {
+			color: grey;
+		}
+
+		a:visited {
+			color: grey;
+		}
+	</style>
+
+	<script>
+		require.config({
+			deps: [
+				'csui/lib/require.config!csui/csui-extensions.json'
+			]
+		});
+
+		require.config({
+			paths: {
+				webreports: '../../..'
+			},
+			config: {
+				'csui/utils/contexts/factories/connector': {
+					connection: {
+						url: '//server/cgi/cs.exe/api/v1',
+						supportPath: '/support',
+						credentials: {
+							username: 'Admin',
+							password: 'livelink'
+						}
+					}
+				}
+			}
+		});
+
+		require(["csui/lib/marionette", 'csui/utils/contexts/page/page.context',
+			"csui/utils/contexts/factories/node", "./parameter.prompt.mock.data.js",
+			"../parameter.prompt.form.view.js",
+			"webreports/utils/contexts/factories/run.webreport.pre.factory",
+			"webreports/controls/run.webreport.pre/run.webreport.pre.controller"
+		], function (Marionette, PageContext, NodeModelFactory, PromptMock, PromptView, PromptModelFactory, RunWRController) {
+
+			PromptMock.enable();
+
+			var promptView,
+				promptModel,
+				contentRegion = new Marionette.Region({el: "#content"}),
+				pageContext = new PageContext(),
+				currentNode = pageContext.getModel(NodeModelFactory, {attributes: {id: 348547}}),
+				runWRModel = pageContext.getModel(PromptModelFactory, {
+					attributes: {
+						node: currentNode
+					}
+				}),
+				runWRController = new RunWRController();
+
+
+			pageContext.fetch()
+					.done(function () {
+
+						// We've got the page context, now get the runWRModel to see if there are parameters:
+						runWRController.getRunWRPreModel({
+							node: currentNode,
+							context: pageContext
+						}).done( function(){
+
+							// Build the prompt view and show it:
+							promptView = new PromptView({
+								context: pageContext,
+								model: currentNode,
+								promptModel: runWRController.runWRPreModel,
+								showBackIcon: false
+							});
+
+							contentRegion.show(promptView);
+						});
+					});
+
+		});
+	</script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid">
+	<div class="binf-row">
+		<div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12 test-container" id="content"></div>
+	</div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

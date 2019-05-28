@@ -1,0 +1,121 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dialog Control</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+    <style>
+      #medium .binf-modal-dialog {
+        margin-top: 200px;
+      }
+      #large .binf-modal-dialog {
+        margin-top: 300px;
+      }
+      #viewInside .binf-modal-dialog {
+        margin-top: 550px;
+      }
+      .binf-modal-backdrop {
+        display: none;
+      }
+    </style>
+
+    <script src="../../../lib/require.js"></script>
+    <script src="../../../config.js" data-csui-path="../../.."></script>
+    <script>
+      require(['csui/lib/marionette', '../dialog.view'
+      ], function (Marionette, DialogView) {
+
+          var defaultRegion = new Marionette.Region({
+                  el: '#default'
+              }),
+
+              title = 'Default Size',
+              bodyMessage = 'Default size message. With a lot of text in the message body, it wraps as one would expect.',
+
+              defaultDialog = new DialogView({
+                  title: title,
+                  bodyMessage:bodyMessage,
+                  dialogTxtAria: title + " " + bodyMessage
+                  // , iconLeft: 'cs-icon-cross' // this looks cropped left and right
+              });
+
+          title = 'Medium Size';
+          bodyMessage = 'A message for medium size, nothing special here.';
+
+          var mediumRegion = new Marionette.Region({
+                  el: '#medium'
+              }),
+
+              mediumDialog = new DialogView({
+                  title: title,
+                  midSize: true,
+                  bodyMessage: bodyMessage,
+                  dialogTxtAria: title + " " + bodyMessage
+              });
+
+          title = 'Large Size';
+          bodyMessage ='Lots of space for a detailed message.<br>Some HTML tags are possible.<br>In all sizes there should be nice padding around the message.';
+
+          var largeRegion = new Marionette.Region({
+                  el: '#large'
+              }),
+              largeDialog = new DialogView({
+                  title: title,
+                  largeSize: true,
+                  bodyMessage: bodyMessage,
+                  dialogTxtAria: title + " " + bodyMessage
+              });
+
+          title = 'Default With View Inside';
+          var viewInsideRegion = new Marionette.Region({
+                  el: '#viewInside'
+              }),
+              xView = Marionette.ItemView.extend({
+                  // not a good example of an itemView
+                template : function(serialized_model) {
+                  return 'A proper view would look better than this:<br><img src="../impl/image/dialogCloseDark.png" alt="close dialog"><br>With some content and styling probably.';
+                }
+              }),
+              viewInsideDialog = new DialogView({
+                  title: 'Default With View Inside',
+                  dialogTxtAria: title,
+                  largeSize: true,
+                  view: new xView()
+              });
+
+        defaultRegion.show(defaultDialog);
+        mediumRegion.show(mediumDialog);
+        largeRegion.show(largeDialog);
+        viewInsideRegion.show(viewInsideDialog);
+
+      });
+    </script>
+  </head>
+
+
+  <body class="binf-widgets">
+  <h1>Dialog control samples</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-5 col-lg-4" id="default"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-5 col-lg-4" id="medium"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-5 col-lg-4" id="large"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-5 col-lg-4" id="viewInside"></div>
+    </div>
+  </div>
+  </body>
+
+  </html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

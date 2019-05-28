@@ -1,0 +1,60 @@
+<div class="csui-header">
+  <div class="csui-progressrow csui-height-target">
+    <div class="csui-names-progress">
+      <div class="csui-names csui-progresscell">
+        <div class="csui-header-icon csui-icon binf-hidden"></div>
+        <div class="csui-title" tabindex="-1" id="{{progressTitleId}}">
+          {{title}}
+        </div>
+      </div>
+      <div class="csui-progress csui-progresscell"  tabindex="0">
+        <div class="csui-progress-dynamic binf-hidden" aria-hidden="true">
+          <div class="csui-progress-textbar">
+            <div class="binf-progress">
+              <div class="binf-progress-bar" role="progressbar" aria-valuenow="{{percentage}}"
+                   aria-valuemin="0" aria-valuemax="100" style="width:{{percentage}}%">
+              </div>
+            </div>
+          </div>
+          <div class="csui-percent"></div>
+        </div>
+        <div class="csui-progress-static" aria-hidden="true">
+          <div class="csui-progress-textbar">
+            <div class="csui-progress-static-pending">{{state_pending}}</div>
+            <div class="csui-progress-static-processing binf-hidden">{{state_processing}}</div>
+            <div class="csui-progress-static-resolved binf-hidden">{{state_resolved}}</div>
+            <div class="csui-progress-static-rejected binf-hidden">{{state_rejected}}</div>
+            <div class="csui-progress-static-aborted binf-hidden">{{state_aborted}}</div>
+          </div>
+          <div class="csui-percent"></div>
+        </div>
+      </div>
+    </div>
+    <div class="csui-states-actions">
+      <div class="csui-stateaction csui-progresscell">
+        <button type="button" aria-label="{{stateaction_all_pending}}"
+                class="csui-stateaction-pending
+        csui-icon-like-btn binf-btn binf-btn-default">{{stateaction_pending}}</button>
+        <button type="button" aria-label="{{stateaction_all_processing}}"
+                class="csui-stateaction-processing csui-icon-like-binf-btn binf-hidden binf-btn binf-btn-default">
+            {{stateaction_processing}}</button>
+      </div>
+      <div class="csui-expand csui-progresscell">
+        <button type="button" class="csui-expand-down csui-button-icon icon-expandArrowDown binf-btn binf-btn-default"
+                aria-label="{{expandAria}}" title="{{expand}}" aria-haspopup="true" aria-expanded="false"/>
+        <button type="button" class="csui-expand-up binf-hidden csui-button-icon icon-expandArrowUp binf-btn binf-btn-default"
+                aria-label="{{collapseAria}}" title="{{collapse}}" aria-haspopup="true" aria-expanded="true"/>
+      </div>
+      <div class="csui-close csui-progresscell {{#if processing}}binf-hidden {{/if}}">
+        <button type="button" class="csui-action-close csui-icon binf-btn binf-btn-default"
+                aria-label="{{closeAria}}" title="{{close}}" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="csui-items-wrapper">
+  <div class="csui-items" role="list">
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

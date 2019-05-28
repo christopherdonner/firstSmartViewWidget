@@ -1,0 +1,317 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-pager {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #e8e8e8;
+  font-size: 0.875em;
+  font-stretch: normal;
+  color: #333333;
+  border: 1px solid #cccccc;
+  border-bottom: 0;
+}
+
+.csui-pager .csui-separator {
+  height: 100%;
+  width: 1px;
+  margin-left: 1em;
+  background-color: #cccccc;
+  float: left;
+}
+
+.csui-pager .csui-pagesize-menu,
+.csui-pager .csui-total-container-items {
+  flex: 0 3 auto;
+  -ms-flex: 0 3 auto;
+  -webkit-flex: 0 3 auto;
+  padding: 0 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.csui-pager .csui-total-container-items.csui-pagination-top-bottom-padding {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.csui-pager .csui-pagesize-menu {
+  height: 100%;
+  padding: 0;
+}
+
+.csui-pager .csui-pagesize-menu > div,
+.csui-pager .csui-pagesize-menu > div > a {
+  vertical-align: middle;
+}
+
+.csui-pager .csui-pagesize-menu > div > a {
+  color: #333333;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.csui-pager .csui-pagesize-menu > div > a:hover,
+.csui-pager .csui-pagesize-menu > div > a:focus {
+  background-color: #f7f7f7;
+}
+
+.csui-pager .csui-pagesize-menu > div > a {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  white-space: normal;
+  min-width: 70px;
+  height: initial;
+}
+
+.csui-pager .csui-pagesize-menu > div > a > div {
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 42px;
+}
+
+.csui-pager .csui-pagesize-menu .csui-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+}
+
+.csui-pager .csui-pagination {
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  width: 100px;
+}
+
+.csui-pager div.csui-paging-navbar {
+  background-color: inherit;
+  width: calc(100%);
+  overflow: hidden;
+}
+
+.csui-pager div.csui-paging-navbar > ul {
+  display: none;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  width: 100%;
+  background-color: #ededed;
+  position: relative;
+  left: 101%;
+}
+
+.csui-pager div.csui-paging-navbar > ul.csui-active {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  left: 0;
+}
+
+.csui-pager div.csui-paging-navbar > ul > li {
+  background-color: #ededed;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 4rem;
+  max-width: 4rem;
+  cursor: pointer;
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+}
+
+.csui-pager div.csui-paging-navbar > ul > li > a {
+  height: calc(100%);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 4rem;
+}
+
+.csui-pager div.csui-paging-navbar > ul > li.csui-overflow {
+  width: 3em;
+  min-width: 3em;
+  max-width: 12rem;
+}
+
+.csui-pager div.csui-paging-navbar.csui-last-slidePage > ul > li.csui-overflow {
+  max-width: 4rem;
+}
+
+.csui-pager div.csui-paging-navbar > ul > li.csui-overflow > a {
+  background-color: #e2e2e2;
+}
+
+.csui-pager div.csui-paging-navbar > ul > li.csui-overflow .csui-overflow-right {
+  float: right;
+}
+
+.csui-pager div.csui-paging-navbar > ul > li > a:focus,
+.csui-pager div.csui-paging-navbar > ul > li > a:hover,
+.csui-pager div.csui-paging-navbar > ul > li > a:active {
+  background-color: #f7f7f7;
+  border: 0;
+}
+
+.csui-pager div.csui-paging-navbar > ul > li.csui-overflow span {
+  height: 14px;
+  margin: auto;
+  width: 1em;
+}
+
+.csui-pager .pager-tabs {
+  background-color: #e2e2e2;
+}
+
+.csui-paging-navbar > ul > li:not(.csui-overflow) {
+  min-width: 100px;
+  float: left;
+  display: inline-block !important;
+}
+
+.csui-paging-navbar > ul > li:not(.csui-overflow) > a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.csui-pagination li > a.csui-activePage {
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+
+.csui-pager ul.binf-dropdown-menu {
+  background-color: #ffffff;
+  min-width: 120px;
+  bottom: 100%;
+  top: auto; 
+  border-radius: 0;
+}
+
+.csui-pager ul.binf-dropdown-menu > li > a {
+  padding: 0.375rem 0.75rem 0.375rem 2rem;
+  color: #321f20;
+  text-align: left;
+}
+
+.csui-select .csui-pagination-checked {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  left: 10px;
+  position: absolute;
+  margin-top: 3px;
+}
+
+.csui-pager ul.binf-dropdown-menu .binf-open,
+.csui-pager ul.binf-dropdown-menu .binf-open:hover,
+.csui-pager ul.binf-dropdown-menu .binf-open:focus {
+  background-color: #bac9ce;
+}
+
+.csui-pager ul.binf-dropdown-menu > li > a:hover {
+  color: #333333;
+  border: 0;
+  outline: 0;
+  background-color: #bac9ce;
+}
+
+.csui-pager ul.binf-dropdown-menu > li > a:focus {
+  outline: 1px dotted #333333;
+  outline-offset: -2px;
+}
+
+.csui-pager ul.binf-dropdown-menu > li > a:active {
+  background-color: #dfe7ea;
+}
+
+.csui-pager ul.binf-dropdown-menu li {
+  float: none !important;
+  display: block !important;
+  border-right: 0;
+  border-top: 0;
+  text-align: center;
+  line-height: 1.2em;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+
+
+.csui-paging-navbar > ul.csui-pages.csui-slide {
+
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  animation: slide 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  -webkit-animation: slide 300ms forwards;
+  -moz-animation: slide 300ms forwards;
+  -moz-animation-fill-mode: forward;
+  -o-animation: slide 300ms;
+  -o-animation-fill-mode: forward;
+
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: 60%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-moz-keyframes slide {
+  0% {
+    left: 60%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-o-keyframes slide {
+  0% {
+    left: 60%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide {
+  from {
+    left: 60%;
+  }
+  to {
+    left: 0;
+  }
+}

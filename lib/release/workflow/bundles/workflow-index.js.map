@@ -1,0 +1,1 @@
+{"version":3,"file":"workflow-index.js","sources":["workflow-index.js.src.js"],"names":["csui","require","config","bundles","workflow/bundles/workflow-core","workflow/bundles/workflow-all"],"mappings":"AAAAA,KAAKC,QAAQC,QACXC,WACFC,kCACE,kDACA,uCACA,wDACA,0EACA,gDACA,4DAEFC,iCACE,qDACA,mDACA,0CACA,4CACA,4CACA,0CACA,8CACA,2EACA,4EACA,+CACA,wDACA,0DACA,uDACA"}

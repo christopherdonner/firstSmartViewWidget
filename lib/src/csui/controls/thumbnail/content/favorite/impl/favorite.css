@@ -1,0 +1,42 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFavOpen {
+  background-image: url('images/switch_favorite24.svg');
+  background-size: 20px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFavOpen:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFavOpen:focus {
+  background-image: url('images/switch_favorite24_mo.svg');
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFavOpen:active {
+  background-image: url('images/switch_favorite24_md.svg');
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFav {
+  background-image: url('images/switch_favorite_on24.svg');
+  background-size: 20px;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFav:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFav:focus {
+  background-image: url('images/switch_favorite_on24_mo.svg');
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container .icon.icon-socialFav:active {
+  background-image: url('images/switch_favorite_on24_md.svg');
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container button:hover,
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container button:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-content.csui-thumbnail-favorite .csui-favorite-star-view-container button:active {
+  background-color: #cccccc;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}

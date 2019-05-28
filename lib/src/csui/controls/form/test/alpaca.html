@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Alpaca Fields Example Page</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+  <style>
+
+    .docRef {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #ffffff;
+    }
+
+    .test-container {
+      padding: 20px 150px;
+      height: 100%;
+    }
+
+    #form {
+      background-color: white;
+      padding: 30px;
+      height: 100%;
+      overflow: auto;
+      position: relative;
+      max-width: 500px;
+      margin: 30px;
+    }
+
+    #toolbar > div {
+      display: inline-block;
+      margin: 1em;
+    }
+
+    #form .alpaca-layout-two-column-mask {
+      padding-left: 1em;
+    }
+
+    #form .alpaca-view-web-list .alpaca-controlfield-label {
+      width: 20em;
+    }
+
+    #form .alpaca-controlfield-text input,
+    #form .alpaca-controlfield-text textarea {
+      padding: 4px 8px 4px 8px;
+    }
+
+    #form .chosen-container {
+      font-size: 1em;
+    }
+
+    #form.rtl div.alpaca-layout-two-column-mask {
+      padding-left: initial;
+      padding-right: 2em;
+    }
+
+    #form.rtl .alpaca-view-web-list .alpaca-controlfield-label {
+      text-align: right;
+    }
+
+    #form.rtl .alpaca-controlfield-text input,
+    #form.rtl .alpaca-controlfield-text textarea {
+      padding-left: 4px;
+      padding-right: 8px;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require(["csui/lib/jquery",
+      'csui/utils/base',
+      "csui/lib/moment",
+      "csui/utils/connector",
+      "csui/lib/binf/js/binf",
+      "csui/lib/alpaca/js/alpaca",
+      'csui/lib/binf/js/binf-datetimepicker'
+    ], function ($, base, moment, Connector) {
+
+      var currentForm;
+
+      var formData = {
+
+        "view": {
+          "parent": "bootstrap-edit"
+          /*"layout" : {
+           "template": "twoColumnLayout",
+           "bindings": {
+           "name": "leftcolumn",
+           "gender": "leftcolumn",
+           "age": "leftcolumn",
+           "phone": "leftcolumn",
+           "contry": "leftcolumn",
+           "state": "leftcolumn",
+           "zipcode": "leftcolumn",
+           "email": "leftcolumn",
+           "website": "leftcolumn",
+           "password": "rightcolumn",
+           "photo": "rightcolumn",
+           "vegetarian": "rightcolumn",
+           "icecream": "rightcolumn",
+           "employedSince": "rightcolumn",
+           "certifiedAt": "rightcolumn",
+           "lunchAt": "rightcolumn",
+           "averageMark": "rightcolumn",
+           "comment": "rightcolumn"
+           }
+           }*/
+        },
+
+        "data": {
+          "personal": {
+            "name": "Inigo Montoya",
+            "gender": "male",
+            "age": 29
+          },
+          "phone": "414-111-2222",
+          "country": "usa",
+          "state": "MA",
+          "zipcode": "12345-6789",
+          "email": "montoyai@gmail.com",
+          "website": "https://plus.google.com/+InigoMontoya",
+          "password": "secret",
+          "photo": null,
+          "vegetarian": false,
+          "icecream": "Vanilla",
+          "employedSince": "2001-10-15",
+          "certifiedAt": "2005-08-23T13:11:00",
+          "lunchAt": "11:30:00",
+          "averageMark": 2.5,
+          "comment": "A sample comment",
+          "tag": ["ice", "water", "damp"]
+        },
+
+        "schema": {
+          "title": "Sample Form",
+          "description": "A showcase of all Alpaca field types.",
+          "type": "object",
+          "properties": {
+            "personal": {
+              "title": "Personal (scope)",
+              "description": "Personal information.",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Name (text)",
+                  "description": "Enter your full name."
+                },
+                "gender": {
+                  "type": "string",
+                  "enum": [
+                    "male",
+                    "female"
+                  ],
+                  "required": true
+                },
+                "age": {
+                  "type": "integer",
+                  "minimum": 10,
+                  "maximum": 80
+                }
+              }
+            },
+            "phone": {
+              "type": "string",
+              "required": true
+            },
+            "country": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "zipcode": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "website": {
+              "type": "url",
+              "format": "uri"
+            },
+            "password": {
+              "type": "password",
+              "format": "password"
+            },
+            "photo": {
+              "type": "string",
+              "format": "uri"
+            },
+            "vegetarian": {
+              "type": "boolean",
+              "enum": [true, false],
+              "default": false
+            },
+            "icecream": {
+              "type": "string",
+              "enum": [
+                "Vanilla",
+                "Chocolate",
+                "Coffee",
+                "Strawberry",
+                "Mint"
+              ]
+            },
+            "employedSince": {
+              "type": "string",
+              "format": "date"
+            },
+            "certifiedAt": {
+              "type": "string",
+              "format": "datetime"
+            },
+            "lunchAt": {
+              "type": "string",
+              "format": "time"
+            },
+            "averageMark": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "comment": {
+              "type": "string"
+            },
+            "tag": {
+              "type": "array"
+            }
+
+          },
+        },
+
+        "options": {
+          "fields": {
+            "personal": {
+              "fields": {
+                "label": "Personal (scope)",
+                "name": {
+                  "type": "text"
+                },
+                "gender": {
+                  "type": "radio",
+                  "optionLabels": ["Male", "Female"],
+                  "label": "Gender (radio, mandatory)"
+                },
+                "age": {
+                  "type": "integer",
+                  "label": "Age (integer)"
+                }
+              }
+            },
+            "phone": {
+              "type": "phone",
+              "label": "Phone (phone)"
+            },
+            "country": {
+              "type": "country",
+              "label": "Country (country)"
+            },
+            "state": {
+              "type": "state",
+              "label": "State (state)"
+            },
+            "zipcode": {
+              "type": "zipcode",
+              "label": "Zip/Postal code (zipcode)"
+            },
+            "email": {
+              "type": "email",
+              "label": "Email Address (email)"
+            },
+            "website": {
+              "type": "url",
+              "label": "Website (text, uri)"
+            },
+            "password": {
+              "type": "password",
+              "label": "Password (password)"
+            },
+            "photo": {
+              "type": "file",
+              "label": "Photo (file, uri)"
+            },
+            "vegetarian": {
+              "type": "radio",
+              "label": "Are you a vegetarian? (checkbox)",
+              "rightLabel": "Yes, I am"
+            },
+            "icecream": {
+              "label": "Favorite ice cream (string, enum)"
+            },
+            "employedSince": {
+              "type": "date",
+              "label": "Employed since (date)",
+              "dateFormat": 'yy-mm-dd',
+              "picker": {
+                //"widgetParent": "body",
+                //"widgetPositioning": {vertical: 'bottom'}
+              }
+            },
+            "certifiedAt": {
+              "type": "datetime",
+              "label": "Certified at (datetime)",
+              "picker": {
+                //"widgetParent": "#form",
+                //"widgetPositioning": {vertical: 'top'}
+              }
+            },
+            "lunchAt": {
+              "type": "time",
+              "label": "Lunch at (time)",
+              "picker": {
+                //"widgetParent": "#form",
+                //"widgetPositioning": {vertical: 'bottom'}
+              }
+            },
+            "averageMark": {
+              "type": "number",
+              "label": "Average Mark (number)"
+            },
+            "comment": {
+              "type": "textarea",
+              "label": "Comment (textarea)",
+              "wordlimit": 250
+            },
+            "tag": {
+              "type": "tag",
+              //"separator": "xx"
+            }
+          }
+        }
+
+        //          "postRender": function (form) {
+        //            var container = form.domEl;
+        //            currentForm = form;
+        //            $(".alpaca-controlfield-select select", container).chosen({
+        //              disable_search_threshold: 10,
+        //              classes: {
+        //                highlighted: "ui-state-hover ui-state-default",
+        //                iconCollapsed: "ui-icon ui-icon-triangle-1-s",
+        //                iconExpanded: "ui-icon ui-icon-triangle-1-n",
+        //                singleCollapsed: "ui-state-default ui-corner-all",
+        //                singleExpanded: "ui-state-default ui-corner-top",
+        //                drop: "ui-widget-content"
+        //              }
+        //            });
+        //            $('.alpaca-controlfield-text', container).find(
+        //                'input[type="text"], input[type="password"], textarea'
+        //            ).addClass('ui-widget-content ui-corner-all');
+        //            container.bind("fieldupdate", function() {
+        //              var value = container.getValue();
+        //            }).bind('destroyed', function() {
+        //            });
+        //          }
+
+      };
+
+      var connector = new Connector({
+        connection: {
+          url: '//vmfp-oclipse.opentext.net/livelink/livelink/api/v1',
+          supportPath: '/livelinksupport'
+        }
+      });
+
+      $("#resetform")
+          .click(function () {
+            if (currentForm) {
+              destroyForm();
+              $(this).html('Create form');
+            } else {
+              createForm();
+              $(this).html('Destroy form');
+            }
+          });
+
+      function createForm() {
+
+        var template = '<div ' +
+                       '{{#if name}} id="{{name}}" name="{{name}}"{{/if}}' +
+                       '> </div>';
+
+        $("#form").alpaca(formData);
+      }
+
+      function destroyForm() {
+        var container = currentForm.domEl;
+        currentForm.destroy();
+        currentForm = undefined;
+      }
+
+      createForm();
+
+    });
+  </script>
+
+</head>
+
+<body class="binf-widgets">
+
+<div id="toolbar">
+  <button id="resetform">Destroy Form</button>
+</div>
+
+<div class="test-container container-fluid">
+  <div id="form" class="row"></div>
+</div>
+
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML Tile</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body {
+      padding: 1em;
+    }
+
+    #content {
+      top: 150px;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      paths: {
+        wiki: "../../../../LES_WIKI_UI/src"
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1/',
+            supportPath: '/alphasupport'
+/*
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+*/
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette',
+      'csui/utils/contexts/page/page.context', './html.editor.mock.js', '../html.editor.view'
+    ], function (Marionette, PageContext, HtmlMock, HtmlEditorView) {
+      HtmlMock.enable();
+      var pageContext = new PageContext();
+      var htmlEditorView   = new HtmlEditorView({
+            icon: 'title-favourites',
+            title: 'HTML Editor',
+            context: pageContext,
+            id: 2119877 //4525793 Provide any wiki page id.
+          }),
+          htmlEditorRegion = new Marionette.Region({
+            el: "#content"
+          });
+
+      htmlEditorRegion.show(htmlEditorView);
+      pageContext.fetch();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<h1>HTML editor sample</h1>
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-6 binf-col-md-6 binf-col-lg-6" id="content"></div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

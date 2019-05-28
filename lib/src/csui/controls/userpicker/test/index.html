@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Widget Selector Control</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+
+    .binf-container-fluid.grid-rows .binf-text-info {
+      padding: 0.5em;
+      margin: 0.5em;
+    }
+
+    #picker {
+      margin-left: 1em;
+    }
+
+    #picker .csui-acc-tab-region {
+      padding: 0.5em;
+    }
+
+    #memberInfo {
+      margin-top: 2em;
+      color: #000;
+      background-color: inherit;
+      font-family: monospace;
+      overflow: hidden;
+    }
+  </style>
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            // Trick to get the default user image placeholder working;
+            // the usual mocked connection '//server/otcs/cs/api/v1'
+            // and '/support' would not produce a valid URL for the
+            // browser to load an <img> from, but if you create a
+            // symlink in your project root to CS_CORE_UI/src and call
+            // it 'csui', the following connection parameters will
+            // allow you to see the default user image on this page
+            url: '/api/v1',
+            supportPath: '/',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require([
+      'csui/lib/jquery',
+      'csui/lib/marionette',
+      'csui/utils/contexts/page/page.context',
+      '../userpicker.view',
+      'userpicker.mock',
+      'csui/lib/perfect-scrollbar'
+    ], function ($, Marionette, PageContext, UserPickerView, mock) {
+
+      var pickerRegion = new Marionette.Region({el: '#picker'}),
+          context      = new PageContext(),
+          pickerView   = new UserPickerView({
+            context: context
+          });
+
+      pickerView.on('item:change', function (args) {
+        $('#memberInfo').text(JSON.stringify(args.item.attributes, undefined, 2));
+      });
+
+      mock.enable();
+
+      pickerRegion.show(pickerView);
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<br>
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-text-info" style="background-color: #fff">Admin, Kristen, Neil, Nick.<br>Partial matching works.<br></div>
+  <br>
+  <div class="binf-row">
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="picker" style="background-color: #fff"></div>
+  </div>
+
+  <pre id="memberInfo" class="binf-text-info" style="background-color: #fff"></pre>
+
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

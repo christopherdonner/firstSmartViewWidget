@@ -1,0 +1,664 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.csui-global-message.csui-progresspanel {
+  position: absolute;
+  
+  z-index: 1200;
+  transform: translateX(50%) translateX(-50%);
+  max-height: 97%;
+  width: 99%;
+  min-width: 310px;
+  max-width: 758px;
+}
+
+.csui-progresspanel .csui-header .csui-progressrow {
+  height: 62px;
+}
+
+.binf-widgets .csui-progresspanel {
+  display: inline-flex;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.csui-progresspanel .csui-items-wrapper {
+  display: block;
+}
+
+
+
+.csui-progresspanel.csui-collapsing .csui-items-wrapper,
+.csui-progresspanel.csui-expanding .csui-items-wrapper {
+  margin: 0 -0.625em -0.625em -0.625em;
+  padding: 0 0.625em 0.625em 0.625em;
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+
+.csui-progresspanel:not(.csui-collapsing):not(.csui-expanding),
+.csui-progresspanel.csui-collapsing .csui-header,
+.csui-progresspanel.csui-collapsing .csui-items,
+.csui-progresspanel.csui-expanding .csui-header,
+.csui-progresspanel.csui-expanding .csui-items {
+  -webkit-box-shadow: 0px 0px 0.625em 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.625em 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.625em 0px rgba(0, 0, 0, 0.3);
+}
+
+.csui-progresspanel .csui-header {
+  display: inline-block;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.csui-progresspanel .csui-header.csui-error {
+  background-color: #ff9f00;
+  height: 64px;
+  padding: 0;
+  display: block;
+  width: 100%;
+  border-top: 1px solid #a9a9a9;
+  border-bottom: 1px solid #cccccc;
+}
+
+.csui-error .csui-progressrow {
+  padding: 0 0.5em;
+  display: table;
+  width: 100%;
+}
+
+.binf-widgets .csui-fss {
+  width: 80%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.csui-progressrow .csui-names-progress {
+  width: 94%;
+  margin:5px;
+}
+
+.csui-progressrow .csui-name-status .csui-states-actions {
+  flex: 0 0 auto;
+  width: 101px;
+}
+
+.csui-error .csui-progressrow .csui-states-actions {
+  display: table-cell;
+  vertical-align: middle;
+  height: 64px;
+  width: auto;
+}
+
+.csui-progresspanel .csui-header-icon {
+  margin-right: .2em;
+}
+
+.csui-progresspanel .csui-items {
+  display: block;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-progresspanel {
+  border-left: 1px solid #a9a9a9;
+  border-right: 1px solid #a9a9a9;
+}
+
+.csui-progresspanel .csui-items .csui-progressrow > .csui-names-progress,
+.csui-progresspanel .csui-items .csui-progressrow > .csui-states-actions {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.csui-progresspanel .csui-items .csui-progressrow:last-child,
+.csui-progresspanel .csui-items .csui-progressrow:last-child {
+  border-bottom: 1px solid #a9a9a9;
+}
+
+.binf-widgets .csui-progressrow {
+  
+}
+
+.csui-progressrow .csui-names {
+  width: 37%;
+  flex: 0 0 0;
+}
+
+.csui-progressrow .csui-progress-textbar {
+  
+  width: 100%;
+}
+
+.csui-progressrow .csui-percent {
+  width: 3em;
+}
+
+.csui-progressrow .csui-stateaction {
+  width: 3em;
+}
+
+.csui-progressrow .csui-expand {
+  width: 3em;
+}
+
+.csui-progressrow .csui-close {
+  width: 3em;
+}
+
+.csui-progressrow .csui-action-close,
+.csui-progressrow .csui-action-close:hover,
+.csui-progressrow .csui-action-close:active,
+.csui-progressrow .csui-action-close:focus {
+  background-image: url('images/circle_close.svg');
+}
+
+.binf-widgets .csui-progressrow button {
+  border: none;
+  background-color: transparent;
+}
+
+.binf-widgets .csui-progressrow .csui-progresscell .binf-btn-default:hover,
+.binf-widgets .csui-progressrow .csui-progresscell .binf-btn-default:focus,
+.binf-widgets .csui-progressrow .csui-progresscell .binf-btn-default:active {
+  background-color: transparent;
+}
+
+.csui-progressrow .csui-progresscell {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.csui-items .csui-progressrow {
+  border-bottom: 1px solid #f5f5f5;
+  display: block;
+}
+
+.csui-items .csui-progressrow.csui-error {
+  position: relative;
+  text-align: left;
+}
+
+.csui-header .csui-progressrow,
+.csui-progressrow .csui-names-progress,
+.csui-progressrow .csui-states-actions,
+.csui-progressrow .csui-progresscell,
+.csui-progressrow .csui-progress-dynamic,
+.csui-progressrow .csui-progress-static,
+.csui-progressrow .csui-progress-static .csui-progress-textbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0px;
+}
+
+.csui-progressrow .csui-close.csui-progresscell,
+.csui-error .csui-progressrow .csui-close.csui-progresscell{
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 40px;
+}
+
+.csui-progressrow .csui-expand.csui-progresscell{
+  width: 3.25rem;
+  min-width: 2.25rem;
+  padding: 0;
+  padding-left: 8px;
+}
+
+.csui-progressrow .csui-progress-dynamic {
+  align-items: center;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.csui-progressrow .csui-stateaction.csui-progresscell .binf-btn {
+  padding: 0;
+}
+
+.csui-error .csui-progressrow .csui-progress-dynamic {
+  display: none;
+}
+
+.csui-progressrow .csui-names-progress > *,
+.csui-progressrow .csui-states-actions > *,
+.csui-progressrow .csui-progresscell > *,
+.csui-progressrow .csui-progress-dynamic > *,
+.csui-progressrow .csui-progress-static > *,
+.csui-progressrow .csui-progress-static .csui-progress-textbar > * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.csui-progressrow .csui-names {
+  display: flex;
+}
+
+.csui-progressrow .csui-type {
+}
+
+.csui-progressrow .csui-title,
+.csui-progressrow .csui-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875em;
+  line-height: 1.6em;
+  color: #333333;
+  vertical-align: middle;
+  padding-left: 0.5rem;
+  width: 100%;
+}
+
+.csui-progressrow .csui-names .csui-icon {
+  display: table-cell;
+  vertical-align: middle;
+  height: 64px;
+}
+
+.csui-progressrow .csui-progresscell.csui-names .csui-header-icon {
+  display: none;
+}
+
+.ps-container .csui-progressrow .csui-progresscell .csui-icon {
+  display: inline-table;
+}
+
+.csui-error .csui-progressrow .csui-expand.csui-progresscell {
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+.csui-error .csui-progressrow .csui-title {
+  padding-left: 0.5em;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.csui-error .csui-progressrow .csui-progresscell {
+  width: auto;
+  padding: 0 0 0 0.4rem;
+  display: table-cell;
+  height: 62px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.csui-error .csui-progressrow .csui-names.csui-progresscell {
+  display: inline-flex;
+}
+
+.csui-progresspanel .csui-progressrow .csui-error {
+  position: absolute;
+  left: 16px;
+  bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 2.5em;
+  font-size: 0.75em;
+  line-height: 1em;
+  color: #ec2024;
+  flex: 0;
+  width: calc(100% - 4em);
+  min-height: 17px;
+  text-align: left;
+}
+
+.csui-progressrow.csui-error .csui-error {
+  position: relative;
+  white-space: normal;
+  bottom: 8px;
+  padding-right: 10px;
+  width: calc(100% - 5rem);
+  margin-top: -9px;
+}
+
+.csui-progressbar .csui-progress-text {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  color: #767676;
+  text-align: center;
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
+}
+
+.csui-header .csui-progressrow .binf-progress {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.csui-progressbar .binf-progress {
+  margin-bottom: 2em;
+}
+
+.csui-progressrow .binf-progress {
+  font-size: 0.5em;
+  line-height: 0.625em;
+}
+
+.csui-progressbar .csui-progress-static .csui-progress-textbar {
+  display: table;
+  vertical-align: middle;
+  height: 64px;
+}
+
+.csui-progressrow .csui-progress-static .csui-progress-textbar > * {
+  font-size: 0.75em;
+  line-height: 1em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.csui-progressrow .csui-progress-static-pending {
+  color: #333333;
+}
+
+.csui-progressrow .csui-progress-static-processing {
+}
+
+.csui-progressrow .csui-progress-static-resolved {
+  color: #146634;
+}
+
+.csui-progressrow .csui-progress-static-rejected,
+.csui-progressrow .csui-progress-static-aborted {
+  color: #df3324;
+}
+
+.csui-progressrow .csui-percent {
+  font-size: 0.75em;
+  line-height: 1em;
+  color: #333333;
+  padding-left: 0.6em;
+}
+
+.csui-progressrow .csui-stateaction {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.csui-progressrow .csui-stateaction > * {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.csui-header .csui-progressrow .csui-stateaction > * {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 0;
+}
+
+
+
+.csui-progressbar .csui-stateaction > .circle_delete {
+  width: 1.5rem;
+  height: 1.4rem;
+}
+
+.csui-progressrow .csui-stateaction-pending {
+  color: #0072aa;
+}
+
+.csui-progressrow .csui-stateaction-processing {
+  color: #0072aa;
+}
+
+.csui-progressrow .csui-stateaction-resolved {
+  color: #146634;
+}
+
+.csui-progressrow .csui-stateaction-rejected,
+.csui-progressrow .csui-stateaction-aborted {
+  color: #df3324;
+}
+
+.binf-widgets .csui-name-status {
+  display: flex;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .csui-global-message.csui-progresspanel {
+    max-width: 44rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .csui-progressrow {
+    
+  }
+
+  .csui-progressrow .csui-names-progress > * {
+    margin-top: initial;
+    margin-bottom: initial;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .csui-progressrow .csui-progresscell {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+
+  .csui-progressrow .csui-names {
+    display: flex;
+  }
+
+  .csui-progressrow .csui-progress {
+    margin-left: 0.325em;
+    margin-right: 0.325em;
+  }
+
+  .csui-progressrow .csui-progress-text {
+    text-align: left;
+  }
+
+  .csui-progressbar .csui-progress-textbar {
+    margin-top: 0.325em;
+    
+  }
+
+  .csui-progressrow .csui-percent {
+    
+  }
+
+  .csui-progressrow .csui-name-status .csui-states-actions {
+    width: 92px;
+  }
+
+  .csui-progressrow .csui-stateaction {
+    padding-left: 0;
+    padding-right: 0;
+    width: 3.5em;
+  }
+
+  .csui-progressrow .csui-expand {
+    padding-left: 0;
+    padding-right: 0;
+    width: 2.5em;
+  }
+
+  .csui-progressrow .csui-close {
+    padding-left: 0;
+    padding-right: 0;
+    width: 2.5em;
+  }
+
+  .csui-progressrow .csui-error {
+    margin-left: 2em;
+  }
+}
+
+@media screen and (max-width: 637px) {
+
+  .csui-progressrow .csui-names-progress {
+    width: 94%;
+  }
+}
+
+
+
+
+.binf-widgets .binf-progress {
+  background-color: rgba(195, 229, 246, 0.9);
+  height: 1.375em;
+  border-radius: 0.6875em;
+  border-color: #757575;
+  border-width: 0.125em;
+  border-style: solid;
+  padding: 0.125em 0.125em;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  margin: 0;
+}
+
+
+.binf-widgets .binf-progress-bar {
+  border-radius: 0.4375em;
+  text-align: right;
+  font-size: 1em;
+  line-height: 0.8em;
+  background-color: #0072aa;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+
+
+.csui-header .csui-progressrow .csui-title
+  {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-style: normal;
+  padding-left: 0.5rem;
+}
+
+.csui-items-wrapper .csui-progressrow .csui-name{
+  line-height: 1rem;
+  font-style: normal;
+}
+
+.binf-widgets .binf-progress {
+  background-color: #ffffff;
+  height: 10px;
+  border-radius: 5px;
+  border-color: #111fb0;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0;
+}
+
+.binf-widgets .binf-progress-bar {
+  border-radius: 3px;
+  height: 6px;
+  background-color: #111fb0;
+}
+
+.csui-progressrow .csui-stateaction-processing {
+  color: #2e3d98;
+}
+
+.csui-progressrow .csui-stateaction-processing:hover {
+  color: #0084ce;
+  text-decoration: underline;
+  text-decoration-color: #0084ce;
+}
+
+.csui-progressrow .csui-stateaction-processing:active{
+  color: #2e3d98;
+}
+
+.csui-progressrow .csui-stateaction-processing:visited {
+  color: #4f3690;
+  text-decoration: underline;
+  text-decoration-color: #0084ce;
+}
+
+.csui-progresspanel .csui-header.csui-error {
+  border-top: 0 none;
+  border-bottom: 1px solid  #a9aeb9;
+  background-color: #ffffff;
+  border-bottom: 4px solid #DF6800;
+}
+
+.csui-progresspanel .csui-header{
+  border-radius: 3px 3px 0 0;
+}
+
+.csui-progresspanel.csui-collapsed .csui-header{
+  border-radius: 3px;
+}
+
+.csui-progresspanel:not(.csui-collapsing):not(.csui-expanding),
+.csui-progresspanel.csui-collapsing .csui-header,
+.csui-progresspanel.csui-collapsing .csui-items,
+.csui-progresspanel.csui-expanding .csui-header,
+.csui-progresspanel.csui-expanding .csui-items {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.csui-progresspanel .csui-items-wrapper {
+  border-radius: 0 0 3px 3px;
+}
+
+.csui-items .csui-progressrow {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.csui-progressrow .csui-progress-static-resolved {
+  color: #067d14;
+}
+.csui-progressrow .csui-progress-static-pending {
+  color: #333333;
+}
+.csui-progressrow .csui-progress-static .csui-progress-textbar > * {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.csui-progressbar .csui-stateaction > * {
+  width: 1.5rem;
+  height: 1.5rem;
+  float: left;
+}
+
+.csui-error .csui-progressrow .csui-title:before {
+  content: "";
+  background-image: url(images/notification/notification_warning.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+  padding-right: 10px;
+  margin-right: 10px;
+  padding-bottom: 4px;
+}
+
+.csui-error .csui-progressrow .csui-title {
+  text-align: left;
+}
+
+.csui-error .csui-progressrow .csui-progresscell{
+  padding-left: 0;
+}
+
+.csui-items .csui-progressrow.csui-error {
+  
+}
+

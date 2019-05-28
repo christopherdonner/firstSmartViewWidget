@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<symbol  id="New_Symbol_5" viewBox="-8.5002 -6.4998 17 13">
+	<g>
+		<g>
+			<path fill="none" stroke="#0072AA" stroke-miterlimit="10" d="M5.9996,6.0003h-12c-1.105,0-2-0.895-2-2v-8c0-1.105,0.895-2,2-2
+				h12c1.105,0,2,0.895,2,2v8C7.9996,5.1053,7.1046,6.0003,5.9996,6.0003L5.9996,6.0003z"/>
+		</g>
+		<polyline fill="none" stroke="#0072AA" stroke-width="0.5" stroke-linejoin="round" points="7.2176,5.3163 -0.0004,-0.9997 
+			-7.2184,5.3163 		"/>
+	</g>
+</symbol>
+<use xlink:href="#New_Symbol_5"  width="17" height="13" id="XMLID_8_" x="-8.5002" y="-6.4998" transform="matrix(1.4036 0 0 -1.4036 11.9999 12)" overflow="visible"/>
+</svg>

@@ -1,0 +1,95 @@
+{
+	"$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+	"title": "{{title}}",
+	"description": "{{description}}",
+	"kind": "tile",
+	"supportedKinds": ["tile", "header", "fullpage"],
+	"schema": {
+		"type": "object",
+		"properties": {
+			"titlefield": {
+				"title": "{{titleLabel}}",
+				"description": "{{titleDesc}}",
+				"type": "string",
+				"default": ""
+			},
+			"wikicontainerid": {
+				"title": "{{wikiContainerID}}",
+				"description": "{{wikiContainerIDDesc}}",
+				"type": "integer"
+			},
+			"wikitemplateid": {
+				"title": "{{wikiTemplateID}}",
+				"description": "{{wikiTemplateIDDesc}}",
+				"type": "integer"
+			},
+			"wikiid": {
+				"title": "{{wikiContainerID}}",
+				"description": "{{wikiContainerIDDesc}}",
+				"type": "integer"
+			},
+			"wikipageid": {
+				"title": "{{wikiTemplateID}}",
+				"description": "{{wikiTemplateIDDesc}}",
+				"type": "integer"
+			}
+		}
+	},
+	"options": {
+		"fields": {
+			"wikicontainerid": {
+				"type": "otcs_node_picker",
+				"type_control": {
+					"parameters": {
+						"select_types": [
+							5573
+						]
+					}
+				}
+			},
+			"wikitemplateid": {
+				"type": "otcs_node_picker",
+				"type_control": {
+					"parameters": {
+						"select_types": [
+							5574
+						],
+						"startLocation": "csui/dialogs/node.picker/start.locations/perspective.assets.volume"
+					}
+				}
+			},
+			"wikipageid": {
+				"type": "otcs_node_picker",
+				"hidden": true,
+				"type_control": {
+					"parameters": {
+						"select_types": [
+							5574
+						]
+					}
+				}
+			},
+			"wikiid": {
+				"type": "otcs_node_picker",
+				"hidden": true,
+				"type_control": {
+					"parameters": {
+						"select_types": [
+							5573
+						]
+					}
+				}
+			},
+			"width": {
+				"type": "select",
+				"optionLabels": [
+					"{{default}}",
+					"{{full}}",
+					"{{half}}",
+					"{{quarter}}"
+				]
+			}
+		}
+	},
+	"callback": "wiki/callbacks/wikiHookCallback"
+}

@@ -1,0 +1,105 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-form.cs-datefield div {
+  vertical-align: top;
+}
+
+.cs-datefield .binf-datetimepicker-widget {
+  z-index: 1002;
+}
+
+
+
+.cs-formfield .inline-edit-icon.icon-date_picker {
+  margin-top: 1px;
+}
+
+
+
+.cs-datefield input {
+  -webkit-box-flex: 1 1 0; 
+  -moz-box-flex: 1 1 0; 
+  -webkit-flex: 1 1 0; 
+  -ms-flex: 1 1 100%; 
+  flex: 1 1 0; 
+
+  height: 28px;
+  text-align: left;
+
+  border: 1px solid #a7a9ac;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.cs-form .alpaca-field.binf-has-error .cs-field-write input {
+  color: #000000;
+  background-color: #fae9ea;
+  border: 1px solid #df3324;
+}
+
+.cs-datefield input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #666666;
+  border-radius: 3px;
+}
+
+.cs-datefield a:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  border: 2px solid #666666;
+  border-radius: 3px;
+}
+
+
+
+.cs-formfield.cs-datefield .cs-field-read button > span {
+  white-space: nowrap;
+}
+
+.cs-formfield.cs-datefield .cs-field-read button a {
+  outline: 0;
+}
+
+
+
+.cs-datefield.readonly input {
+  border: 1px transparent;
+  padding-left: 0;
+}
+
+
+
+.cs-datefield .binf-datetimepicker-widget {
+  color: black;
+}
+
+.cs-datefield .binf-datetimepicker-widget .picker-switch {
+  font-weight: bold;
+}
+
+.cs-datefield .binf-datetimepicker-widget .timepicker-picker table {
+  width: auto
+}
+
+.cs-field-write-inner .binf-input-group {
+  width: 100%;
+  display: block;
+}
+
+.csui-datefield-input input {
+  padding-right: 36px;
+}
+
+.csui-datefield-input input::-ms-clear {
+  display: none;
+  visibility: hidden;
+}

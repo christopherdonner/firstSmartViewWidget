@@ -1,0 +1,48 @@
+{
+	"data": {
+		"actions": [
+			{
+				"key": "SendOn",
+				"label": "Send on"
+			}
+		],
+		"attachments_on": true,
+		"comments_on": true,
+		"custom_actions": [],
+		"data_packages": [
+			{
+				"data": {
+					"attachment_folder_id": 683231
+				},
+				"sub_type": 1,
+				"type": 1
+			}
+		],
+		"instructions": null,
+		"message": null,
+		"process_id": 683235,
+		"subprocess_id": 683235,
+		"task_id": 1,
+		"title": "<Initiator>"
+	},
+	"forms": [
+		{
+			"Columns": null,
+			"data": {},
+			"options": {
+				"fields": {},
+				"form": {
+					"attributes": {
+						"action": "api/v1/processes/683235/subprocesses/683235/tasks/1",
+						"method": "PUT"
+					},
+					"renderForm": true
+				}
+			},
+			"schema": {
+				"properties": {},
+				"type": "object"
+			}
+		}
+	]
+}

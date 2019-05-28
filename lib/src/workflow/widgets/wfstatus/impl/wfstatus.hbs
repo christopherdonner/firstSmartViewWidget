@@ -1,0 +1,86 @@
+<div class="tile-header" tabindex="0">
+  <div class="tile-type-icon">
+    <span class="icon title-icon mime_workflow_status" aria-hidden="true"></span>
+  </div>
+  <div class="tile-title">
+    <h2 class="csui-heading">{{dialogTitle}}</h2>
+  </div>
+</div>
+
+<div class="tile-content">
+<div class="wfstatus-scrolling">
+  <div class="cs-emptylist-placeholder"></div>
+  {{#if emptyTextRequired}}
+    <div class="wfstatus-empty-list"> {{emptyListText}}</div>
+  {{/if}}
+
+  {{#if isSingleStatus}}
+    <div class="wfstatus-single">
+      <div class="wfstatus-single-details">
+
+        
+        <div class="wfstatus-status-info">
+            <span class="wfstatus-count-{{model.data.status}}"
+                  title="{{model.count}}">{{model.count}}</span>
+          <span class=" wfstatus-msg">{{totalMsg}}</span>
+          <span class="wfstatus-{{model.data.status}}-icon"></span>
+          <span class="wfstatus-info" title="{{statusInfo}}">{{statusInfo}}</span>
+
+        </div>
+
+        
+        {{#if dueDate}}
+          <div class="wfstatus-detail">
+            <span class="wfstatus-duedate-label">{{dueDateLabel}}</span>
+
+            <div class="wfstatus-duedate" title="{{dueDate}}">{{dueDate}}</div>
+          </div>
+        {{/if}}
+        
+        <div class="wfstatus-wfname-details">
+          <div class="wfstatus-wfname-label">{{wfNameLabel}}</div>
+          <div class="wfstatus-workflow-name"
+               title="{{model.data.wfname}}">{{model.data.wfname}}</div>
+        </div>
+        {{#if model.data.stepname}}
+          
+          <div class="wfstatus-currentstep-details">
+            <span class="wfstatus-currentstep-label">{{currentStepNameLabel}}</span>
+
+            <div class="wfstatus-step-name"
+                 title="{{model.data.stepname}}">{{model.data.stepname}}</div>
+          </div>
+        {{/if}}
+        <div class="wfstatus-assignee-startdate">
+          {{#if assignee}}
+            <div class="wfstatus-assignee-details">
+              <div class="wfstatus-assignee-label">{{assignedToLabel}}</div>
+              <div class="wfstatus-assignee" title="{{assignee}}">{{assignee}}</div>
+            </div>
+          {{/if}}
+
+          {{#if startDate}}
+            <div class="wfstatus-startdate-details">
+              <div class="wfstatus-startdate-label">{{startDateLabel}}</div>
+              <div class="wfstatus-start-date" title="{{startDate}}">{{startDate}}</div>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if donutChart}}
+    <div class="wfstatus-donut-chart"></div>
+  {{/if}}
+
+
+  {{#if showExpand}}
+    <div class="tile-footer">
+      <div id="cs-more" class="tile-expand" title={{expandLabel}} role="button" tabindex="0">
+        <div class="icon circular icon-tileExpand"></div>
+      </div>
+    </div>
+  {{/if}}
+</div></div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

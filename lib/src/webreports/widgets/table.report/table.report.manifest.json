@@ -1,0 +1,121 @@
+{
+	"$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+	"title": "{{widgetTitle}}",
+	"description": "{{widgetDescription}}",
+	"kind": "fullpage",
+	"supportedKinds": [
+		"fullpage"
+	],
+	"schema": {
+		"type": "object",
+		"properties": {
+			"title": {
+				"title": "{{tileTitle}}",
+				"description": "{{tileDescription}}",
+				"type": "string"
+			},
+			"id": {
+				"title": "{{sourceTitle}}",
+				"description": "{{sourceDescription}}",
+				"type": "integer"
+			},
+			"titleBarIcon": {
+				"title": "{{headerIconTitle}}",
+				"description": "{{headerIconDescription}}",
+				"type": "string"
+			},
+			"columnsWithSearch": {
+					"title": "{{columnFilterTitle}}",
+					"description": "{{columnFilterDescription}}",
+				"type": "string"
+			},
+			"sortBy": {
+				"title": "{{sortTitle}}",
+				"description": "{{sortDescription}}",
+				"type": "string"
+			},
+			"sortOrder": {
+				"title": "{{directionTitle}}",
+				"description": "{{directionDescription}}",
+				"type": "string",
+				"enum": ["desc","asc"],
+				"default": "desc"
+			},
+			"swrLaunchCell": {
+				"type": "object",
+				"title": "{{swrLaunchCellTitle}}",
+				"description": "{{swrLaunchCellDescription}}",
+				"properties": {
+					"id": {
+						"title": "{{swrLaunchCellIDTitle}}",
+						"description": "{{swrLaunchCellIDDescription}}",
+						"type": "integer"
+					},
+					"iconClass": {
+						"title": "{{swrLaunchCellIconClassTitle}}",
+						"description": "{{swrLaunchCellIconClassDescription}}",
+						"type": "string"
+					},
+					"hoverText": {
+						"title": "{{swrLaunchCellHoverTextTitle}}",
+						"description": "{{swrLaunchCellHoverTextDescription}}",
+						"type": "string"
+					}
+				}
+			},
+			"parameters": {
+				"type": "array",
+				"title": "{{parametersArrayTitle}}",
+				"description": "{{parametersArrayDescription}}",
+				"items": {
+					"type": "object",
+					"title": "{{parameterObjectTitle}}",
+					"description": "{{parameterObjectDescription}}",
+					"properties": {
+						"name": {
+							"type": "string",
+							"title": "{{parameterNameTitle}}",
+							"description": "{{parameterNameDescription}}"
+						},
+						"value": {
+							"type": "string",
+							"title": "{{parameterValueTitle}}",
+							"description": "{{parameterValueDescription}}"
+						}
+					}
+				}
+			}
+		}
+	},
+	"required": ["id", "sortBy", "sortOrder" ],
+	"options": {
+		"fields": {
+			"id": {
+				"type": "otcs_node_picker",
+				"type_control": {
+					"parameters": {
+						"select_types": [
+							30303
+						]
+					}
+				}
+			},
+			"sortOrder": {
+				"type": "select",
+				"optionLabels": ["{{optionsSortOrderDsc}}", "{{optionsSortOrderAsc}}"]
+			},
+			"swrLaunchCell": {
+				"fields": {
+					"id": {
+						"type": "otcs_node_picker",
+						"type_control": {
+							"parameters": {
+								"select_types": [30303]
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

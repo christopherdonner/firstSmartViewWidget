@@ -1,0 +1,39 @@
+{{#if is_shortcut}}
+
+  <div class="metadata-header-left-bar-container"></div>
+  <div class="metadata-header with-right-bar"></div>
+  <div class="metadata-header-right-bar-container"></div>
+
+{{else}}
+
+  {{#if back_button}}
+
+    <div class="metadata-header-left-bar-container"></div>
+
+    {{#if show_only_required_fields_switch}}
+      <div class="metadata-header with-back-button with-right-bar"></div>
+    {{else}}
+      <div class="metadata-header with-back-button"></div>
+    {{/if}}
+
+  {{else}}
+
+    {{#if show_only_required_fields_switch}}
+      <div class="metadata-header with-right-bar"></div>
+    {{else}}
+      <div class="metadata-header"></div>
+    {{/if}}
+
+  {{/if}}
+
+  {{#if show_only_required_fields_switch}}
+    <div class="metadata-header-right-bar-container"></div>
+  {{/if}}
+
+{{/if}}
+
+{{#if show_close_icon}}
+  <div class="metadata-header-right-bar-container"></div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

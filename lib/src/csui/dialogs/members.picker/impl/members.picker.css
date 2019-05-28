@@ -1,0 +1,230 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .target-browse.cs-permission-group-picker .member-title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.binf-widgets .target-browse.cs-permission-group-picker .member-picker-view-header {
+  
+}
+
+.binf-widgets .target-browse.cs-permission-group-picker .cs-header-control .csui-start-locations.binf-dropdown > div.dropdown-locations.binf-open .binf-dropdown-menu {
+  width: 100%;
+}
+
+.binf-widgets .target-browse.cs-permission-group-picker .cs-header-control .csui-start-locations.binf-dropdown > div.dropdown-locations .binf-btn-default  .cs-label {
+  min-width: 65px;
+  max-width: 170px;
+  display: inline-block;
+  text-align: left;
+}
+
+.binf-widgets .target-browse.cs-permission-group-picker .cs-header-control .csui-start-locations.binf-dropdown > div.dropdown-locations.binf-open .binf-btn-default  .cs-label {
+  min-width: 170px;
+ }
+
+.binf-widgets .target-browse.cs-permission-group-picker .cs-header-control .csui-start-locations.binf-dropdown > div.dropdown-locations .binf-btn-default  .cs-label,
+.binf-widgets .target-browse.cs-permission-group-picker .cs-header-control .csui-start-locations.binf-dropdown > div.dropdown-locations.binf-open .binf-btn-default  .cs-label,
+.binf-widgets .target-browse.cs-permission-group-picker .cs-header-control .csui-start-locations.binf-dropdown > div.dropdown-locations.binf-open .binf-dropdown-menu .cs-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.binf-widgets .target-browse.cs-permission-group-picker .cs-header-control .csui-start-locations.binf-dropdown > div.dropdown-locations.binf-open .binf-dropdown-menu .cs-icon {
+  flex: 0 0 auto;
+}
+
+.binf-widgets .target-browse.cs-permission-group-picker.cs-dialog .cs-header-control {
+  padding: 0 0 0 0.75em;
+}
+
+.binf-widgets .target-browse.cs-permission-group-picker .binf-modal-content {
+  width: 52em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .binf-widgets .target-browse.cs-permission-group-picker .binf-modal-content {
+    width: 100%;
+  }
+}
+
+.binf-widgets .csui-member-group-icon {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.binf-widgets .csui-member-picker-container {
+  width: 100%;
+}
+
+.binf-widgets .csui-member-picker-container .csui-member-picker {
+  float: left;
+  width: calc(100% - 40px);
+  margin-right: 2.5rem;
+}
+
+.binf-widgets .csui-member-picker-container .csui-global-search {
+  float: left;
+  margin-right: 2.5rem;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-lookup .csui-user-search-container {
+  display: none;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-lookup .icon-header-search {
+  background-position-y: 0px;
+  background-position-x: 0px;
+  padding: 8px;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  float: right;
+  top: 12px;
+  right: 24px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-lookup .csui-control-userpicker .cs-search-icon {
+  display: none;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-lookup .csui-control-userpicker .cs-search {
+  position: relative;
+  width: calc(100% - 18px);
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  border: 1px solid #757575;
+  border-radius: 5px;
+  padding: 8px 30px 8px 14px;
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-lookup .csui-control-userpicker .cs-search-clear {
+  top: auto;
+  height: 1em;
+  right: 2em;
+  top: 0.5625em;
+}
+
+.binf-widgets .csui-member-picker-container .csui-user-search-bar > div {
+  padding-left: 2px;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 0px 10px 16px;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .tile-header > .tile-title {
+  display: inline-block;
+  float: none;
+  height: auto;
+  padding: 0px;
+  width: 100%;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .tile-header > .tile-title h4.tile-title {
+  padding: 14px 0px;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .tile-header .cs-header-control {
+  height: auto;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .tile-header .csui-heading.tile-title {
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  vertical-align: middle;
+  font-weight: normal;
+  width: 100%;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .tile-header {
+  height: auto;
+  padding: 0px 32px;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .tile-header .csui-permission-level-select {
+  width: 100%;
+  float: left;
+  padding: 3px 0px 16px 0px;
+  height: auto;
+}
+
+.binf-widgets .cs-wizard-step.cs-dialog .binf-modal-body {
+  margin: 0px;
+}
+
+.binf-widgets .cs-wizard-step.cs-dialog .binf-modal-body .cs-permission-level-selector {
+  padding: 1px;
+}
+
+.binf-widgets .cs-wizard-step.cs-dialog .binf-modal-body .cs-permission-level-selector .csui-permission-levels {
+  min-height: 230px;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .binf-modal-dialog {
+  width: 544px;
+  top: 65px;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .binf-modal-footer {
+  padding: 1em 1.5em;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .binf-modal-dialog .binf-modal-content {
+  min-height: 388px;
+}
+
+.binf-widgets .csui-permissions-level.cs-dialog .binf-modal-dialog .csui-permission-attributes {
+  padding: 1px 1px 0px 1px;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog .tile-header {
+  background-color: #f5f5f5;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog.cs-dialog .tile-header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #a9a9a9;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog.cs-dialog .tile-header {
+  padding: 0px 32px;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog.cs-dialog .tile-header > .tile-title {
+  padding: 0px;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog.cs-dialog .tile-header > .tile-title h4.tile-title {
+  padding: 14px 0px;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog.cs-dialog .binf-modal-body .csui-apply-permission-content {
+  line-height: 25px;
+  padding: 10px 32px 0px 32px;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog.cs-dialog .binf-modal-footer,
+.binf-widgets .csui-permissions-level.cs-dialog .binf-modal-footer {
+  padding: 16px 32px;
+}
+
+.binf-widgets .target-browse.csui-permissions-apply-dialog.cs-dialog .binf-modal-footer button.binf-btn:first-child,
+.binf-widgets .csui-permissions-level.cs-dialog .binf-modal-footer button.binf-btn:first-child {
+  margin-left: 0px;
+}

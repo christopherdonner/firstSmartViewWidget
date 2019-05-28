@@ -1,0 +1,395 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-global-message.csui-messagepanel {
+  position: absolute;
+  
+  z-index: 1200;
+  transform: translateX(50vw) translateX(-50%); 
+}
+
+.csui-global-message.csui-messagepanel.position-hidden {
+  position: absolute;
+  bottom: 100%;
+  top: initial;
+  top: auto; 
+}
+
+.csui-global-message.csui-messagepanel.position-show {
+  bottom: initial;
+  bottom: auto; 
+  height: initial;
+  height: auto; 
+  border-radius: 3px;
+}
+
+.binf-widgets .csui-messagepanel {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  min-width: 384px;
+  max-width: 752px;
+}
+
+.csui-messagepanel .csui-details-wrapper {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+
+.csui-messagepanel .csui-details-wrapper {
+  margin: 0 -5px -5px -5px;
+  padding: 0 5px 5px 5px;
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+
+
+
+
+
+
+.csui-messagepanel .csui-header,
+.csui-messagepanel .csui-details,
+.csui-messagepanel.csui-success-with-link {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.csui-messagepanel.csui-success-with-link .csui-header,
+.csui-messagepanel.csui-success-with-link .csui-message-link-div {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.csui-messagepanel .csui-header {
+  background-color: #f7f7f7;
+  position: relative;
+  height: 62px;
+  border-radius: 3px 3px 0 0;
+}
+
+.csui-messagepanel .csui-details {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 0 0px 3px 3px;
+}
+
+.csui-messagepanel.csui-none .csui-header {
+  border-bottom: #dcdcdc 1px solid;
+}
+
+.csui-messagepanel .csui-header .csui-icon {
+}
+
+.csui-messagepanel.csui-none .csui-header .csui-state {
+  padding-left: 0;
+}
+
+.csui-messagepanel .csui-header .csui-state {
+  float: left;
+  position: absolute;
+  top: calc(50% - 0.6 * 1.75em);
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.csui-messagepanel .csui-header .csui-text {
+  overflow: hidden; 
+  position: relative;
+  top: calc(50% - 0.55 * 1.75em);
+  font-size: 1.5em;
+  line-height: 1.75em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 2.67em;
+  margin-right: 2.67em;
+}
+
+.csui-messagepanel.csui-no-icon .csui-header .csui-text {
+  padding-left: .75em;
+}
+
+.csui-messagepanel .csui-header .csui-action {
+  float: right;
+  position: absolute;
+  top: calc(50% - 0.55 * 1.75em);
+  right: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.csui-messagepanel .csui-details .csui-text {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.csui-messagepanel .csui-details .csui-action {
+  width: 100%;
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: -0.125em; 
+}
+
+.csui-messagepanel .csui-details .csui-action button {
+  float: right;
+}
+
+.csui-messagepanel.csui-info .csui-header {
+  color: white;
+  background-color: #0072aa;
+}
+
+.csui-messagepanel.csui-success .csui-header {
+  color: white;
+  background-color: #146634;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-header {
+  color: white;
+  background-color: #146634;
+  height: 4em;
+}
+
+.csui-messagepanel.csui-warning .csui-header {
+  color: #333333;
+  background-color: #ff9f00;
+}
+
+
+
+.csui-messagepanel.csui-processing .csui-header {
+  color: white;
+  background-color: #004b71;
+}
+
+.csui-messagepanel.csui-none .csui-header {
+  color: #333333;
+  background-color: white;
+}
+
+.csui-messagepanel.csui-info .csui-state-icon {
+  color: #0072aa;
+}
+
+.csui-messagepanel.csui-success .csui-state-icon,
+.csui-messagepanel.csui-success-with-link .csui-state-icon {
+  color: #146634;
+}
+
+.csui-messagepanel.csui-warning .csui-state-icon {
+}
+
+.csui-messagepanel.csui-error .csui-state-icon {
+  color: #df3324;
+}
+
+.csui-messagepanel.csui-processing .csui-state-icon {
+}
+
+.csui-messagepanel.csui-none .csui-state-icon {
+  width: 0;
+}
+
+.csui-messagepanel.csui-info .csui-action-close,
+.csui-messagepanel.csui-success .csui-action-close,
+.csui-messagepanel.csui-success-with-link .csui-action-close,
+.csui-messagepanel.csui-error .csui-action-close,
+.csui-messagepanel.csui-processing .csui-action-close,
+.csui-messagepanel.csui-warning .csui-action-close,
+.csui-messagepanel.csui-none .csui-action-close {
+  border: none;
+  background-color: transparent;
+}
+
+.csui-messagepanel .csui-action-moredetails,
+.csui-messagepanel .csui-action-fewerdetails {
+  border-color: #2e3d98;
+  color: #2e3d98;
+  float: right;
+  line-height: 32px;
+}
+
+.csui-messagepanel a.csui-action-moredetails:hover,
+.csui-messagepanel a.csui-action-fewerdetails:hover,
+.csui-messagepanel a.csui-action-moredetails:focus,
+.csui-messagepanel a.csui-action-fewerdetails:focus {
+  color: #0084ce;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-message-link-div {
+  height: 3rem;
+  position: relative;
+  color: #ffffff;
+  background-color: #ffffff;
+  border-bottom: 4px solid green;
+  border-radius: 0 0 3px 3px;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-message-link-div > a {
+  color: #0072aa;
+  font-size: 1rem;
+  position: absolute;
+  top: calc((3rem - 1rem) / 2);
+  right: -2rem;
+  transform: translateX(-50%);
+}
+
+.binf-widgets .cs-dialog.addversion-fornonreserve .notification_warning {
+  background-image: url('images/notification_warning_white.svg');
+  margin: 19px 15px;
+  height: 32px;
+  width: 32px;
+}
+
+.binf-widgets .cs-dialog.addversion-fornonreserve .cs-dialog-bodymessage{
+
+  margin: 30px 30px 25px 30px;
+}
+
+.binf-widgets .cs-dialog.addversion-fornonreserve .tile-header .tile-title{
+  margin-left: 6px;
+}
+
+
+
+
+
+.binf-widgets .csui-icon-notification-success {
+  background-image: url(images/notification/status_completed.svg);
+}
+
+.binf-widgets .circle_delete, .binf-widgets .circle_delete:focus, .binf-widgets .circle_delete:active {
+  background-image: url(images/notification/formfield_clear24.svg);
+}
+
+.binf-widgets .csui-action-close.csui-icon,
+.binf-widgets .csui-icon.csui-icon-notification-information-white,
+.binf-widgets .csui-icon.csui-icon-notification-warning-white,
+.binf-widgets .csui-icon.csui-icon-notification-success-white,
+.binf-widgets .csui-icon.csui-icon-notification-error-white{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.binf-widgets .csui-action-close.binf-btn {
+  padding: 0;
+}
+
+.binf-navbar .binf-navbar-nav > li:not(.csui-help) > .breadcrumbs-handle > a {
+  padding-top: 19px;
+  padding-left: 14px;
+}
+
+.csui-messagepanel.csui-error .csui-header {
+  color: #888;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+  border-bottom: 4px solid #df3324;
+  text-align: left;
+}
+
+.binf-widgets .binf-navbar-nav .nav-profile,
+.binf-widgets .binf-navbar-nav .csui-notification > .messagecenter {
+  padding: 7px 16px 6px;
+}
+
+.binf-navbar-nav .csui-search-box .csui-header-search-icon {
+  margin-right: 8px;
+}
+
+.binf-widgets .csui-action .csui-icon-dismiss-white,
+.csui-progressrow .csui-action-close {                                                         
+  background-image: url(images/notification/formfield_clear24_dummy.svg);      
+}
+
+.binf-widgets .csui-action .csui-icon-dismiss-white.csui-action-close-replace-dummy,
+.csui-progressrow .csui-action-close.csui-action-close-replace-dummy {
+  background-image: url(images/notification/formfield_clear24.svg);
+}
+
+.binf-widgets .csui-icon-dismiss-white:active,
+.binf-widgets .csui-icon-dismiss-white:focus,
+.csui-progressrow .csui-action-close:active,
+.csui-progressrow .csui-action-close:focus,
+.binf-widgets .csui-icon-dismiss-white.csui-action-close-replace-dummy:active,
+.binf-widgets .csui-icon-dismiss-white.csui-action-close-replace-dummy:focus,
+.csui-progressrow .csui-action-close.csui-action-close-replace-dummy:active,
+.csui-progressrow .csui-action-close.csui-action-close-replace-dummy:focus {
+  background-image: url(images/notification/formfield_clear24_md.svg);
+}
+
+
+.binf-widgets .csui-icon-dismiss-white:hover,
+.csui-progressrow .csui-action-close:hover,
+.binf-widgets .csui-icon-dismiss-white.csui-action-close-replace-dummy:hover,
+.csui-progressrow .csui-action-close.csui-action-close-replace-dummy:hover {
+  background-image: url(images/notification/formfield_clear24_dis.svg);
+}
+
+.binf-widgets .csui-icon-notification-error-white {
+  background-image: url(images/notification/notification_error_red.svg);
+}
+
+.binf-widgets .csui-messagepanel.csui-success .csui-header {
+  border-top: 0 none;
+  background-color: #ffffff;
+  border-bottom: 4px solid #067d14;
+  border-radius: 0 0 3px 3px;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #333333;
+  min-width: 24rem;
+}
+
+.binf-widgets .csui-icon-notification-success-white {
+  background-image: url(images/notification/notification_success24.svg);
+}
+
+.csui-messagepanel .csui-header .csui-text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #333333;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-header{
+  background-color: #ffffff;
+}
+
+.csui-messagepanel.csui-error .csui-details {
+  border-bottom: 4px solid #df3324;
+}
+
+@media screen and (max-width: 1024px) {
+  .binf-widgets .csui-messagepanel {
+    max-width: 44rem;
+  }
+}

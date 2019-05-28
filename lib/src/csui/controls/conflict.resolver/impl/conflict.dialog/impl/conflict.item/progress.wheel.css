@@ -1,0 +1,58 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-progress-container {
+  margin-bottom: 0px;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  margin-right: 0px;
+  top: 0px;
+}
+
+.csui-progress-container .inner-border{
+  border: 0px solid rgba(255, 255, 255,1);
+  border-radius: 1em;
+  width: 10px;
+  height: 10px;
+}
+
+
+.csui-progress-container .loader {
+  margin: auto;
+  position: absolute;
+  border: 5px solid rgba(219, 241, 254, 1);
+  border-left: 5px solid #0072aa;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+  border-radius: 1em;
+  width: 24px;
+  height: 24px;
+  right: 36px;
+  margin-right: 0px;
+  top: 18px;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,106 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-mp-header.tile-header {
+  height: 30px;
+  overflow: hidden;
+}
+
+.binf-widgets .csui-mp-content {
+  height: calc(100% - 3em);
+}
+
+.binf-widgets .target-browse .cs-breadcrumb[style="display: block;"] + div#csui-mp-selectviews .csui-mp-content,
+.binf-widgets .target-browse .cs-breadcrumb:not([style]) + div#csui-mp-selectviews .csui-mp-content,
+.binf-widgets .target-browse .cs-breadcrumb[style=""] + div#csui-mp-selectviews .csui-mp-content {
+  height: calc(100% - 5em);
+}
+
+.csui-mp-content .cs-list {
+  height: 100%;
+}
+
+.binf-widgets .csui-mp-content .csui-item-standard {
+  padding-left: 0px;
+}
+
+.binf-widgets .csui-mp-header .csui-folder-name {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.binf-widgets .csui-mp-header .csui-folder-name,
+.binf-widgets .csui-mp-header > div,
+.binf-widgets .csui-mp-header > div > form {
+  height: 100%;
+}
+
+.binf-widgets .csui-mp-header .csui-folder-name .folder-name {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  line-height: 1rem;
+}
+
+.binf-widgets .csui-targetbrowse-history {
+  display: none;
+  float: left;
+  margin: 16px 0px 0px 25px;
+}
+
+.csui-slideMidLeft .csui-targetbrowse-history {
+  display: none;
+}
+
+.csui-targetbrowse-history .arrow_back,
+.csui-targetbrowse-history .arrow_back_mouse_over,
+.csui-targetbrowse-history .arrow_back_mouse_down {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+  float: left;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+}
+
+.csui-targetbrowse-history .csui-targetbrowse-arrow-back {
+  display: inline-block;
+}
+
+.binf-widgets .csui-mp-header .csui-search-item-left-panel {
+  width: calc(50% - 1em);
+  line-height: 2.5em;
+}
+
+.binf-widgets .csui-mp-header .csui-search-item-right-panel {
+  line-height: 2.5em;
+  width: 50%;
+  float: right;
+}
+
+.binf-widgets .csui-mp-header .csui-form-control-search,
+.binf-widgets .csui-mp-header .csui-form-control-search:active,
+.binf-widgets .csui-mp-header .csui-form-control-search:focus,
+.binf-widgets .csui-mp-header .csui-form-control-search:hover {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: normal;
+  box-shadow: none;
+}

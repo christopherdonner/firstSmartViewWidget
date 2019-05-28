@@ -1,0 +1,13 @@
+{{#if hasMetadataRow}}
+  <a class="expand-details-row-toggle" title="{{expandToggleTooltip}}" aria-label="{{expandToggleAria}}"
+     href="#csui-details-row-{{id}}" data-binf-toggle="collapse" aria-expanded="false"
+     aria-controls="csui-details-row-{{id}}">
+    {{#if rowIsExpanded}}
+      <span class="csui-button-icon icon-expandArrowUp"></span>
+    {{else}}
+      <span class="csui-button-icon icon-expandArrowDown"></span>
+    {{/if}}
+  </a>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

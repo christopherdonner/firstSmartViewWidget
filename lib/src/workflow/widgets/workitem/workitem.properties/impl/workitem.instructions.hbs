@@ -1,0 +1,19 @@
+{{#if model.instructions}}
+  <div class=" workitem-instructions-scrolling">
+    <div class="workitem-extended-view-mode workitem-see-less-content
+      workitem-see-less-instruction">
+      <div id="{{id_instructions}}"
+           class="workitem-instructions-text csui-acc-focusable-active ">{{{model.instructions}}}</div>
+      <a href="javascript:void(0);" title="{{seeLess}}" role="button" aria-label="{{seeLessInstructions}}"
+         aria-describedby="{{id_instructions}}" class="instruction-see-less
+         workitem-see-less-instruction">
+      <span class="csui-button-icon icon-expandArrowUp"></span></a>
+      <a href="javascript:void(0);" title="{{seeMore}}" role="button"
+         aria-describedby="{{id_instructions}}" aria-label="{{seeMoreInstructions}}"
+         class="instruction-see-more workitem-see-more-instruction workitem-hide-element">
+      <span class="csui-button-icon icon-expandArrowDown"></span></a>
+    </div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

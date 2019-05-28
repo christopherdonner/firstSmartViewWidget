@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>WebReport Run Form</title>
+
+	<link rel="stylesheet" href="../../../../csui/themes/carbonfiber/theme.css">
+
+	<script src="../../../../csui/lib/require.js"></script>
+	<script src="../../../../csui/config.js" data-csui-path="../../../../csui"></script>
+
+	<script>
+
+		require.config({
+			deps: [
+				'csui/lib/require.config!csui/csui-extensions.json'
+			]
+		});
+
+		require.config({
+			paths: {
+				webreports: '../../../'
+			},
+			config: {
+				'csui/utils/contexts/factories/connector': {
+					connection: {
+						url: '//server/cgi/cs.exe/api/v1',
+						supportPath: '/support',
+						credentials: {
+							username: 'Admin',
+							password: 'livelink'
+						}
+					}
+				}
+			}
+		});
+
+		require(['csui/lib/underscore', 'csui/lib/marionette', 'csui/utils/contexts/page/page.context',  'csui/utils/contexts/factories/connector','csui/controls/form/form.view',
+			'webreports/utils/contexts/factories/run.webreport.pre.factory',
+			'./webreport.forms.mock.js'
+		], function (_, Marionette, PageContext, ConnectorFactory, FormView, WebReportRunModelFactory, WebReportRunFormMock) {
+
+			var webreportRunFormView,
+				webreportRunFormRegion,
+				context = new PageContext(),
+				connector = context.getObject(ConnectorFactory),
+				WRRunModel = context.getModel(WebReportRunModelFactory,{
+					attributes: {
+						id: 12345
+					},
+					options: {
+						connector: connector,
+						id: 12345
+					}
+				});
+
+			WebReportRunFormMock.enable();
+
+			WRRunModel
+					.fetch()
+					.done(function (){
+
+						webreportRunFormView = new FormView({
+							context: context,
+							model: WRRunModel
+						});
+
+						webreportRunFormRegion = new Marionette.Region({
+							el: "#webreport-run-form"
+						});
+
+						webreportRunFormRegion.show(webreportRunFormView);
+
+					});
+
+		});
+	</script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid binf-grid-rows">
+	<div class="binf-row">
+		<div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12 binf-row-xs-full" id="webreport-run-form"></div>
+	</div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

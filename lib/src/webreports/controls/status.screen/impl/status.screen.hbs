@@ -1,0 +1,61 @@
+<div class="webreport-status-screen-container">
+
+	{{#if runInBackground}}
+
+		<div class="webreport-status-screen-row webreport-status-screen-data">
+			<div class="webreports-destination-icon-container icon_status_task_running_behind" aria-hidden="true"></div>
+			<div class="webreports-destination-status-description">
+				<p>{{runningInBackground}}</p>
+				<p>{{noFurtherResponse}}</p>
+				<br>
+				<p>{{outputMessage}}</p>
+			</div>
+		</div>
+
+	{{else if useConversion}}
+
+		<div class="webreport-status-screen-row webreport-status-screen-data">
+			<div class="webreports-destination-icon-container icon_status_task_delayed" aria-hidden="true"></div>
+			<div class="webreports-destination-status-description">
+				<p>{{sentForConversion}}</p>
+				<br>
+				<p>{{outputMessage}}</p>
+			</div>
+		</div>
+
+	{{else}}
+
+		<div class="webreport-status-screen-row webreport-status-screen-data">
+			{{#if iconClass}}
+				<div class="webreports-destination-icon-container {{iconClass}}" aria-hidden="true"></div>
+			{{/if}}
+			<div class="webreports-destination-status-description">
+				<p>{{destinationMessage}}</p>
+				{{#if primaryData2}}<br><p>{{primaryData2}}</p>{{/if}}
+				<p>
+					{{#if primaryIsLink}}
+						<a id="primaryNodeLink" href="#">{{primaryData}}</a>
+					{{else}}
+						<span class="webreports-status-screen-highlighted-text">{{primaryData}}</span>
+					{{/if}}
+				</p>
+			</div>
+		</div>
+
+		{{#if dualRows}}
+		<div class="webreport-status-screen-row webreport-status-screen-misc-data">
+			{{#if secondaryIconClass}}
+				<div class="webreports-destination-icon-container {{secondaryIconClass}}" aria-hidden="true"></div>
+			{{/if}}
+			<div class="webreports-destination-status-description">
+				<p>{{secondaryNodeInfo}}</p>
+				<p><a id="secondaryNodeLink" href="#">{{secondaryData}}</a></p>
+			</div>
+		</div>
+		{{/if}}
+
+	{{/if}}
+
+
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

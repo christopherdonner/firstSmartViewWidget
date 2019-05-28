@@ -1,0 +1,26 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-form .url_section .binf-control-label {
+  text-align: right;
+  padding: 0 1em 0 3em;
+}
+
+.cs-form .url_section .binf-col-sm-9 {
+  padding-left: 0;
+  padding-top: 0;
+  width: calc(60% - 40px); 
+  text-align: left;
+}
+
+.cs-form .url_section .binf-form-group {
+  display: block;
+  text-align: left;
+  margin-top: 8px;
+  height: auto;
+}
+
+.cs-form .url_section a.alpaca-control {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PageContext</title>
+  <link rel="stylesheet" href="../../../../themes/carbonfiber/theme.css">
+  
+  <style>
+    body {
+      font-family: "Lato", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+      font-size: 14px;
+      font-weight: 500; /* Lato Light */
+      height: 100%;
+    }
+  </style>
+  
+  <script src="../../../../lib/require.js"></script>
+  <script src="../../../../config.js" data-csui-path="../../../.."></script>
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+          /*
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+            */
+            url: "http://murdock.opentext.com/alpha/cs.exe/api/v1",
+            supportPath: '/alphasupport'
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', '../page.context', 'csui/utils/contexts/factories/connector',
+      'csui/utils/contexts/factories/user', './page.context.mock'
+    ], function ($, PageContext, ConnectorFactory, UserModelFactory, PageContextMock) {
+
+      var contentElement = $('body'),
+          context = new PageContext(),
+          connector = context.getObject(ConnectorFactory),
+          currentUser = context.getModel(UserModelFactory);
+
+      $('<p>')
+          .text('Connected to the server ' + connector.connection.url)
+          .appendTo(contentElement);
+
+      PageContextMock.enable();
+
+      context.fetch()
+          .done(function () {
+            $('<p>')
+                .text('Current user is ' + currentUser.get('name'))
+                .appendTo(contentElement);
+          });
+
+    });
+  </script>
+</head>
+
+<body></body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,91 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-configure-perspective-widget {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.binf-row .csui-configure-perspective-widget {
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  left: 5px;
+}
+
+.csui-configure-perspective-widget.csui-widget-drop {
+  background: black;
+  opacity: 0.5;
+}
+
+.csui-pman-widget-close {
+  padding: 3px !important;
+  display: inline-block;
+  position: absolute;
+  right: -8px;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  display: none;
+}
+
+.csui-pman-widget-close div {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.csui-configure-perspective-widget:hover .csui-pman-widget-close,
+.csui-configure-perspective-widget.binf-active .csui-pman-widget-close {
+  display: inline-block;
+}
+
+.csui-configure-perspective-widget.csui-widget-drop .csui-pman-widget-close {
+  display: none;
+}
+
+.csui-drag-start .csui-configure-perspective-widget .csui-pman-widget-close {
+  display: none; 
+}
+
+.csui-configure-perspective-widget .csui-pman-widget-masking {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1150; 
+}
+
+.csui-configure-perspective-widget .csui-pman-popover-holder {
+  position: absolute;
+  height: 100%;
+}
+
+.csui-configure-perspective-widget .csui-pman-popover-right {
+  right: 0;
+}
+
+.csui-pman-placeholder-container .csui-pman-widget-close {
+  display: none !important;;
+}
+
+.csui-pman-editable-widget {
+  position: relative;
+}
+
+.perspective-editing .binf-popover {
+  min-width: 350px;
+  max-width: 500px;
+  width: min-content;
+  background-color: #f7f7f7;
+  border-radius: 0px;
+}
+
+.perspective-editing .binf-arrow:after {
+  background-color: inherit;
+}
+
+
+

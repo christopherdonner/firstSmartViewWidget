@@ -1,0 +1,27 @@
+{{#if header}}
+<div class="csui-header">{{label}}</div>
+{{/if}}
+
+
+
+<div class="csui-facet-list-area">
+  <ol class="csui-facet-list"></ol>
+  <div class="binf-dropdown dropdown-facet-list csui-hidden">
+    <button type="button" class="binf-btn binf-btn-default binf-dropdown-toggle"
+            data-binf-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <span class="csui-icon icon-more"></span>
+    </button>
+    <ul class="binf-dropdown-menu" role="menu" aria-labelledby="{{id}}">
+    </ul>
+  </div>
+</div>
+
+<div class="csui-clear-all" tabindex="-1">
+  <div class='cs-icon binf-close'></div>
+  <div class='clear-label'>{{clearAll}}</div>
+</div>
+
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

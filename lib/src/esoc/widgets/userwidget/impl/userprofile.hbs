@@ -1,0 +1,139 @@
+<div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12  esoc-nopadding-right">
+  <div class="esoc-userprofile-actions">
+    <div class="esoc-userprofile-pic-actions">
+      <span class="{{#xif '!this.messages.isOtherUser && this.messages.enableUploadProfilePicture'}}
+      esoc-full-profile-avatar-cursor {{/xif}}
+      image_user_placeholder esoc-userprofile-default-avatar esoc-full-profile-avatar-update
+    esoc-user-default-avatar-{{userid}}" title="{{messages.displayname}}">{{initials}}</span>
+      <img class="{{#xif '!this.messages.isOtherUser && this.messages.enableUploadProfilePicture'}}
+      esoc-full-profile-avatar-cursor {{/xif}} esoc-full-profile-avatar
+    esoc-full-profile-avatar-update binf-img-circle esoc-image
+    esoc-upload-image-style
+    esoc-userprofile-img-{{userid}}" title="{{messages.displayname}}"
+           alt="{{messages.display_name}}" src="#"/>
+    </div>
+    <div class="esoc-profile-img-load-container esoc-social-progress-style">
+      <div class="esoc-profile-img-outer-border">
+        <div class="esoc-profile-img-loader">
+          <div class="esoc-profile-img-inner-border"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="esoc-userprofile-action-names">
+      {{^if deleted}}
+        {{#if otherUser}}
+          <a href="javascript:void(0);">
+            <div id="esoc-userprofile-chat-action" class="esoc-user-profile-chat-action"></div>
+          </a>
+          <a href="javascript:void(0);" class="esoc-userprofile-following-action">
+          </a>
+        {{else}}
+          {{#if messages.enableUploadProfilePicture}}
+            <a href="javascript:void(0);" class="esoc-update-profilepic"
+               title="{{messages.updatePic}}">
+              <div class="esoc-userprofile-actions-name">
+                {{messages.updatePic}}
+              </div>
+            </a>
+            <input type="file" id="esoc-profilepic-desktop-attachment" name="updateProfilePic"
+                   accept="image/*" style="display:none" aria-label="{{messages.updatePic}}"/>
+          {{/if}}
+        {{/if}}
+      {{/if}}
+    </div>
+  </div>
+  <a href="javascript:void(0);" id="esoc-user-focus-element" aria-label="{{messages.updatePic}}"></a>
+
+  <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 tab-links esoc-profile-tabs
+  esoc-nopadding-right">
+    <div class="tab-links-bar">
+      <div class="left-toolbar"></div>
+      <ul class='binf-nav binf-nav-pills esoc-user-profile-tabcontainer'>
+        <li role="presentation" class="esoc-user-profile-tab binf-active"
+            id="esoc-user-profile-general-tab">
+          <a href="#tab1" data-binf-toggle="tab" class="esoc-user-general-tab-label"
+             title={{messages.general}}>
+          <span class="esoc-user-general-tab-label"
+                title={{messages.general}}>{{messages.general}}</span></a>
+        </li>
+        
+        {{^if deleted}}
+			{{#unless hideFollowing}}		
+				<li role="presentation" class="esoc-user-profile-tab esoc-user-pulse-enabled-tabs"
+				  id="esoc-user-profile-following-tab">
+					<a href="#tab4" data-binf-toggle="tab" class="esoc-user-following-tab-label"
+					   title= {{messages.followingCount}}>
+					  <span class="esoc-user-following-tab-label"
+							title= {{messages.followingCount}}>{{messages.following}}</span>
+					  <span class="esoc-user-following-count esoc-user-following-tab-label"
+							title= {{messages.followingCount}}></span>
+					</a>
+				</li>
+			{{/unless}}
+			{{#unless hideFollowers}}	
+				<li role="presentation" class="esoc-user-profile-tab esoc-user-pulse-enabled-tabs"
+				  id="esoc-user-profile-followers-tab">
+					<a href="#tab5" data-binf-toggle="tab" class="esoc-user-followers-tab-label"
+					   title= {{messages.followersCount}}>
+					  <span class="esoc-user-followers-tab-label"
+							title= {{messages.followersCount}}>{{messages.followers}}</span>
+					  <span class="esoc-user-followers-count esoc-user-followers-tab-label"
+							title= {{messages.followersCount}}></span>
+					</a>
+				</li>
+			{{/unless}}
+        {{/if}}
+		{{#unless hideActivity}}		
+			<li role="presentation" class="esoc-user-profile-tab esoc-user-pulse-enabled-tabs"
+				id="esoc-user-profile-activity-tab">
+			  <a href="#tab6" data-binf-toggle="tab" class="esoc-user-activity-tab-label"
+				 title= {{messages.activity}}>
+				<span class="esoc-user-activity-tab-label"
+					  title= {{messages.activity}}>{{messages.activity}}</span></a>
+			</li>
+		{{/unless}}	
+        {{^if otherUser}}
+			{{#unless hideSettings}}
+				<li role="presentation" class="esoc-user-profile-tab esoc-user-pulse-enabled-tabs"
+				  id="esoc-user-profile-settings-tab">
+					<a href="#tab7" data-binf-toggle="tab" class="esoc-user-settings-tab-label"
+					   title= {{messages.settings}}>
+					  <span class="esoc-user-settings-tab-label" title= {{messages.settings}}>{{messages
+					  .settings}}</span></a>
+				</li>
+			{{/unless}}	
+        {{/if}}
+        {{#each extraTabs}}
+          {{#this}}
+            {{#if show}}
+            <li role="presentation" class="esoc-user-profile-tab"
+                id="esoc-user-profile-{{tabName}}-tab">
+              <a href="#{{tabName}}" data-binf-toggle="tab"
+                 class="esoc-user-profile-{{tabName}}-tab-label" title= {{tabName}}>
+              <span class="esoc-user-{{tabName}}-tab-label esoc-user-profile-tab-label"
+                    title="{{tabDisplayName}}">{{tabDisplayName}}</span>
+                {{#if tabCount}}
+                  <span class="esoc-user-{{tabName}}-count
+              esoc-user-profile-tab-count esoc-user-profile-tab-label"
+                        title= "{{tabCount.count}}">{{tabCount.count}}</span>
+                {{/if}}
+              </a>
+            </li>
+            {{/if}}
+          {{/this}}
+        {{/each}}
+      </ul>
+      <div class="right-toolbar"></div>
+      <div id="esoc-user-profile-tab-content"
+           class="esoc-user-profile-tab-content binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

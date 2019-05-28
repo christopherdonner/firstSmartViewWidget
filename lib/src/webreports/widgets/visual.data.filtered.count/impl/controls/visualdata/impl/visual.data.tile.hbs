@@ -1,0 +1,47 @@
+<div class="tile-header">
+
+    {{#if icon}}
+        <div class="tile-type-icon">
+            <span class="icon title-icon {{icon}}" aria-hidden="true"></span>
+        </div>
+    {{else}}
+        {{#if imageUrl}}
+            <div class="tile-type-image {{imageClass}}">
+                <img src="{{imageUrl}}" aria-hidden="true">
+            </div>
+        {{/if}}
+    {{/if}}
+
+    <div class="tile-title" title="{{title}}">
+        <h2 class="csui-heading">{{title}}</h2>
+    </div>
+
+    <div class="tile-controls" title="{{title}}"></div>
+
+</div>
+
+<div class="tile-content"></div>
+
+<div class="tile-footer"></div>
+
+<div class="visual-data-overlay-clip">
+    <div class="visual-data-overlay">
+        <div class="visual-data-overlay-content binf-modal-dialog">
+        <form class="csui-inlineform-group visual-data-settings-form">
+            <div class="binf-modal-content">
+                <div class="binf-modal-body">
+                    <div class="visual-data-controls-parent"></div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+{{#if filterable}}
+
+<div class="csui-favorite csui-acc-tab-region visual-data-btn-settings">
+    <span class="binf-glyphicon binf-glyphicon-cog" role="button" tabindex="0" aria-label="{{settings}}"></span>
+</div>
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

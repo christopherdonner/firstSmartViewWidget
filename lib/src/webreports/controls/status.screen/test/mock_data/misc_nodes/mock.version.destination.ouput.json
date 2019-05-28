@@ -1,0 +1,166 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "/api/v2/nodes/653866?actions=addcategory&actions=addversion&actions=open&actions=copy&actions=delete&actions=download&actions=edit&actions=editactivex&actions=rename&actions=move&actions=permissions&actions=properties&actions=reserve&actions=unreserve&expand=properties{original_id}&fields=properties",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"actions": {
+			"data": {
+				"addcategory": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/653866/categories",
+					"method": "POST",
+					"name": "Add Category"
+				},
+				"addversion": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/653866/versions",
+					"method": "POST",
+					"name": "Add Version"
+				},
+				"copy": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/copy?id=653866",
+					"href": "/api/v2/nodes",
+					"method": "POST",
+					"name": "Copy"
+				},
+				"delete": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/653866",
+					"method": "DELETE",
+					"name": "Delete"
+				},
+				"download": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/653866/content?download",
+					"method": "GET",
+					"name": "Download"
+				},
+				"move": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/move?id=653866",
+					"href": "/api/v2/nodes/653866",
+					"method": "PUT",
+					"name": "Move"
+				},
+				"open": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/653866/content",
+					"method": "GET",
+					"name": "Open"
+				},
+				"permissions": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "",
+					"method": "",
+					"name": "Permissions"
+				},
+				"properties": {
+					"body": "",
+					"content_type": "",
+					"form_href": "",
+					"href": "/api/v2/nodes/653866",
+					"method": "GET",
+					"name": "Properties"
+				},
+				"rename": {
+					"body": "",
+					"content_type": "",
+					"form_href": "/api/v2/forms/nodes/rename?id=653866",
+					"href": "/api/v2/nodes/653866",
+					"method": "PUT",
+					"name": "Rename"
+				},
+				"reserve": {
+					"body": "reserved_user_id=1000",
+					"content_type": "application/x-www-form-urlencoded",
+					"form_href": "",
+					"href": "/api/v2/nodes/653866",
+					"method": "PUT",
+					"name": "Reserve"
+				}
+			},
+			"map": {
+				"default_action": "open",
+				"more": [
+					"properties"
+				]
+			},
+			"order": [
+				"open",
+				"download",
+				"addversion",
+				"addcategory",
+				"rename",
+				"copy",
+				"move",
+				"permissions",
+				"reserve",
+				"delete"
+			]
+		},
+		"data": {
+			"properties": {
+				"container": false,
+				"container_size": 0,
+				"create_date": "2017-10-26T10:06:28",
+				"create_user_id": 1000,
+				"description": "",
+				"description_multilingual": {
+					"en_US": "",
+					"fr": ""
+				},
+				"external_create_date": null,
+				"external_identity": "",
+				"external_identity_type": "",
+				"external_modify_date": null,
+				"external_source": "",
+				"favorite": false,
+				"id": 653866,
+				"mime_type": "text/html",
+				"modify_date": "2017-12-01T17:00:43",
+				"modify_user_id": 1000,
+				"name": "myhtmlDoc.html",
+				"name_multilingual": {
+					"en_US": "myhtmlDoc.html",
+					"fr": ""
+				},
+				"owner_group_id": 1001,
+				"owner_user_id": 1000,
+				"parent_id": 2000,
+				"permissions_model": "advanced",
+				"reserved": false,
+				"reserved_date": null,
+				"reserved_user_id": 0,
+				"size": 20145,
+				"size_formatted": "20 KB",
+				"type": 144,
+				"type_name": "Document",
+				"versions_control_advanced": false,
+				"volume_id": -2000
+			}
+		}
+	}
+}

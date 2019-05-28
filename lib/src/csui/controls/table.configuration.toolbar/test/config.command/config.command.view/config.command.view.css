@@ -1,0 +1,102 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.config-command-view {
+  height: 100%;
+}
+
+.config-command-view > .header-container {
+  height: 3em;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 0 0 5px 0;
+}
+
+.config-command-view > .body-container {
+  height: calc(100% - 8em);
+  width: auto;
+  display: inline-block;
+  position: relative;
+  padding: 1em 0;
+}
+
+.config-command-view > .body-container > .body-form-wrapper {
+  transition: width 0.5s, height 0.5s;
+}
+
+.config-command-view > .body-container > .body-form-wrapper.small {
+  width: 180px;
+  height: 120px;
+}
+
+.config-command-view > .body-container > .body-form-wrapper.medium {
+  width: 500px;
+  height: 400px;
+}
+
+.config-command-view > .body-container > .body-form-wrapper.large {
+  width: 1800px;
+  height: 1200px;
+}
+
+.config-command-view > .footer-container {
+  height: 5em;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 5px 0 0 0;
+}
+
+.config-command-view > .header-container > span,
+.config-command-view .buttons-container {
+  width: auto;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+.config-command-view .binf-btn {
+  height: 32px;
+  padding: 0 24px;
+  margin-right: 16px;
+  vertical-align: middle;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 12px;
+}
+
+.config-command-view .binf-btn-default:active,
+.config-command-view .binf-btn-default {
+  background-color: #ffffff;
+  border: 1px solid #0072aa;
+  color: #0072aa;
+}
+
+.config-command-view .binf-btn-default:focus {
+  background-color: #ffffff;
+  border: 1px solid #004b71;
+  box-shadow: 0;
+  color: #0072aa;
+  outline: 1px dotted #333333;
+  outline-offset: 2px;
+}
+
+.config-command-view .binf-btn-default:hover,
+.config-command-view .binf-btn-default:focus {
+  background-color: #ffffff;
+  border: 1px solid #004b71;
+  color: #004b71;
+
+  box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  -moz-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  -ms-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+}
+

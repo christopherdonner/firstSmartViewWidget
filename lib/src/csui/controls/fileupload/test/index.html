@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NodePicker</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <script src="../../../lib/require.js"></script>
+  <script src="../../../config.js" data-csui-path="../../.."></script>
+
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+           url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            // url: 'http://localhost/OTCS_0708/cs.exe/api/v1',
+            supportPath: '/support'
+          }
+        },
+        'csui/utils/contexts/factories/node': {
+          attributes: {id: 2000}
+        }
+      }
+    });
+
+    require(['csui/lib/underscore', "csui/lib/jquery", 'csui/utils/contexts/page/page.context',
+      "csui/widgets/nodestable/nodestable.view", 'csui/utils/commands/add',
+      'csui/models/node/node.model', 'csui/utils/contexts/factories/connector',"csui/utils/contexts/factories/node"
+    ], function (_,$,PageContext,NodesTableView, AddCommand, NodeModel, ConnectorFactory,NodeFactory) {
+      var el = $("#content");
+
+      var context = new PageContext(),
+        connector = context.getObject(ConnectorFactory),
+        container = context.getObject(NodeFactory),
+        options = {
+          context: context,
+          data: {
+            pageSize: 20
+          }
+        };
+
+      var nodesTableWidget = new NodesTableView(options),
+        addCommand = new AddCommand();
+
+      nodesTableWidget.render();
+      context.fetch().then(function () {
+        el.append(nodesTableWidget.el);
+        nodesTableWidget.triggerMethod('show');
+//        addCommand.uploadFile({container:container,
+//          connector: connector,
+//          multiple: false,
+//          parentView: nodesTableWidget});
+      });
+
+    });
+  </script>
+</head>
+<body class="binf-widgets">
+  <div id="content">
+</div>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,9 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-placeholder {
+  padding: 1em;
+  background-color: #cacaca;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}

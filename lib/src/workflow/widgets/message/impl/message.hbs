@@ -1,0 +1,19 @@
+<div class="message-head">
+  <div class="message-subject">
+    <div class="subject-pre">{{subjectPre}}</div>
+    <div class="subject-sender">{{sender}}</div>
+    <div class="subject-post">{{subjectPost}}</div>
+  </div>
+  <div class="message-toggle">
+    <div hidden id={{ariaDescribedById}}>{{subjectAria}}</div>
+    <a class="toggle-button" role="button" title="{{seeLess}}" data-binf-toggle="collapse"
+       href=".message-body" aria-describedby={{ariaDescribedById}}
+           aria-label="{{seeLessMessages}}">
+      <span class="csui-button-icon icon-expandArrowUp"></span>
+    </a>
+  </div>
+</div>
+<div class="message-body binf-collapse binf-in">
+  <div class="message-text">{{messageText}}</div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

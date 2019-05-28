@@ -1,0 +1,22 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-search-expandall-text,
+.binf-widgets .csui-search-header-expand-all {
+  display: inline-block;
+}
+
+.binf-widgets .csui-search-expandall-text {
+  padding-right: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: calc(100% - 48px);
+}
+
+.binf-widgets .csui-search-header-expand-all.icon-expandArrowDown {
+  font-size: 11px;
+}
+
+.binf-widgets .csui-search-header-expand-all.icon-expandArrowUp {
+  position: inherit;
+}

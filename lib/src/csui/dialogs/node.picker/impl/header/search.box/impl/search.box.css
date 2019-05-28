@@ -1,0 +1,252 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.target-browse .csui-search-box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  padding-right: 0;
+}
+
+.target-browse .csui-search-box .search-bar {
+  width: 100%;
+  display: none;
+}
+
+.target-browse .csui-search-box .search-bar-content {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 0px 10px 16px;
+}
+
+.target-browse.csui-save-filter-browse  .csui-search-box .search-bar-content {
+  padding-top: 18px;
+}
+
+.target-browse .csui-global-search.for-shortcut .csui-search-box .search-bar-content {
+  padding-left: 0;
+}
+
+.target-browse .csui-search-box > a {
+  background-position-y: 0px;
+  background-position-x: 0px;
+  padding: 8px;
+  height: 32px;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+}
+
+.target-browse .csui-search-box .csui-input {
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  border: 1px solid #757575;
+  border-radius: 5px;
+  padding: 8px 30px 8px 14px;
+  background-color: #ffffff;
+  font: 12px Lato;
+  color: #333333;
+}
+
+.target-browse .csui-search-box .csui-search-box .csui-input:focus {
+  outline: 0;
+}
+
+.target-browse .csui-search-box .csui-input::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+.target-browse .csui-input-focus {
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.target-browse .csui-search-box .csui-clearer {
+  color: #d3d3d3;
+  position: absolute;
+  top: calc((100% - 20px) / 2);
+  right: 0;
+  line-height: 1.4em;
+  font-size: 1.4em;
+  pointer-events: auto;
+  z-index: 10;
+  display: none;
+}
+
+.target-browse .csui-search-box .csui-clearer.formfield_clear {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 8px;
+}
+
+.target-browse .csui-search-box a.csui-header-search-icon {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.target-browse .csui-search-box .csui-header-search-icon {
+  display: inline-block;
+  position: absolute;
+  right: -2.5rem;
+  top: 12px;
+}
+
+.target-browse.csui-save-filter-browse .csui-search-box .csui-header-search-icon {
+  top: 20px;
+}
+
+.target-browse .binf-navbar-nav .csui-search-box .csui-header-search-icon {
+  padding: 10px;
+  margin-right: 8px; 
+}
+
+.target-browse .csui-search-box .csui-search-box-slice-popover {
+  color: #333333;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 25px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  width: 32px;
+  height: auto;
+}
+
+.target-browse .search-bar .binf-popover-content {
+  min-width: 225px;
+}
+
+.target-browse .search-bar .binf-popover-title {
+  display: none;
+}
+
+.target-browse .search-bar .binf-popover {
+  border-radius: 0;
+}
+
+
+
+.target-browse .csui-slice-checkbox {
+  line-height: inherit;
+}
+
+.target-browse .csui-selected-checkbox.csui-slice-checkbox label {
+  position: relative;
+  padding: 4px 0px 0px 4px;
+  word-break: break-all;
+  cursor: pointer;
+  word-break: break-all;
+  cursor: pointer;
+  display: inline-block;
+  width: calc(100% - 25px);
+}
+
+.target-browse .csui-selected-checkbox.csui-slice-checkbox label span.cs-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inherit;
+  text-overflow: ellipsis; 
+  width: 100%;
+  margin-top: -2PX;
+}
+
+
+
+.target-browse .csui-selected-checkbox.csui-slice-checkbox label::before {
+  margin-left: -1.5em;
+  top: 2px;
+}
+
+.target-browse .csui-selected-checkbox.csui-slice-checkbox label::after {
+  left: 0px;
+  margin-left: -20px;
+  padding-left: 3px;
+  top: 2px;
+}
+
+.target-browse .csui-selected-checkbox.csui-slice-checkbox input[type="checkbox"]:checked + label::after {
+  color: rgba(2, 115, 61, 0.99);
+  background-color: transparent;
+}
+
+
+
+.target-browse .csui-search-input-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex: 1 1 auto;
+  margin-right: 1em;
+  height: initial;
+  padding-left: 0;
+}
+
+.target-browse .csui-selected-checkbox {
+  width: calc(100%);
+}
+
+.target-browse .csui-selected-checkbox input[type="checkbox"] {
+  position: relative;
+}
+
+.target-browse .csui-search-options-dropdown {
+  position: absolute;
+  background-color: #ffffff;
+  width: calc(100%);
+  padding: 0.4em 0.7em 0.7em 0.5em;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: none;
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.target-browse .csui-search-box .csui-input::-webkit-input-placeholder {
+  color: #666666;
+  font-size: 12px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.target-browse .csui-search-box .csui-input:-moz-placeholder {
+  color: #666666;
+  font-size: 12px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.target-browse .csui-search-box .csui-input::-moz-placeholder {
+  color: #666666;
+  font-size: 12px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.target-browse .csui-search-box .csui-input:-ms-input-placeholder {
+  color: #666666;
+  font-size: 12px;
+  font-style: italic;
+  font-family: Lato;
+}
+
+.target-browse .csui-target-controls span.csui-separator {
+  margin-top: 1rem;
+  position: relative;
+  right: 0;
+}
+
+.target-browse .csui-global-search.csui-no-properties-selector .csui-search-box {
+  width: calc(100% - 15px);
+}
+
+.target-browse span.csui-separator.csui-no-properties-selector {
+  display: none;
+}

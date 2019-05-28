@@ -1,0 +1,103 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-navbar-nav .binf-open > .binf-dropdown-menu.csui-profile-dropdown {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+  border: 0px;
+  border-radius: 0;
+  margin-top: 0;
+}
+
+.binf-nav > li > * > ul.csui-profile-dropdown > li {
+  border: 0px;
+}
+
+.binf-nav > li > * > a.csui-navbar-icons {
+  margin: 0px 10px;
+}
+
+.binf-nav > li > * > a.csui-navbar-icons.notification {
+  
+  margin: 6px 10px 0 6px;
+}
+
+.binf-nav > li > * > a.nav-profile {
+  display: inline-block;
+  height: 60px;
+  float: left;
+  padding: 7px 10px 6px;
+  margin: 0px 0px;
+}
+
+.binf-widgets .csui-profile li {
+  margin: 0px;
+  margin-bottom: 2px;
+}
+
+.binf-widgets .csui-profile li:first-child {
+  margin-top: 4px;
+}
+
+.binf-widgets .csui-profile li:last-child {
+  margin-bottom: 4px;
+}
+
+.binf-widgets .csui-profile li.csui-name > .cs-name {
+  display: none; 
+}
+
+.binf-widgets .csui-profile > .binf-open > a {
+  z-index: 1001;
+  box-shadow: none;
+  position: relative;
+}
+
+.binf-widgets .csui-profile > .binf-open > a:focus {
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .csui-profile > .binf-open {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.binf-widgets .csui-profile li > a,
+.binf-widgets .csui-profile li > a:active {
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.csui-profile .user-display-name {
+  
+}
+
+
+.binf-widgets .csui-profile li a:hover {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-profile li.binf-divider {
+  padding: 0px;
+  margin: 4px 0px;
+}
+
+.binf-widgets .hide-menu {
+  display: none;
+}
+
+.binf-widgets .csui-profile-image,
+.binf-widgets .csui-profile-default-image {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+}
+
+.csui-profile a.nav-profile:hover,
+.csui-profile a.nav-profile:focus {
+  text-decoration: none;
+}

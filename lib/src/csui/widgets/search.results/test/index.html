@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SearchResultsView</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+    <style>
+        body.binf-widgets {
+            padding: 1em;
+        }
+        .binf-widgets .csui-search-box .icon {
+            color: #fff;
+        }
+
+        #queryIndex {
+            height: 65px;
+            background-color: white;
+            margin: 7.5px;
+            padding: 4px;
+        }
+
+        #queryIndex .csui-search-input-container input {
+            width: 100%;
+        }
+
+    </style>
+    <script src="../../../lib/require.js"></script>
+    <script src="../../../config.js" data-csui-path="../../.."></script>
+    <script>
+
+      require.config({
+        deps: [
+          'csui/lib/require.config!csui/csui-extensions.json'
+        ]
+      });
+
+      require.config({
+        config: {
+          'csui/utils/contexts/factories/connector': {
+            connection: {
+              // url: '//murdock.opentext.com/alpha/llisapi.dll/api/v1',
+              // supportPath: '/support'
+              url: '//server/otcs/cs/api/v1',
+              supportPath: '/support',
+              session: {
+                ticket: 'dummy'
+              }
+            }
+          }
+        }
+      });
+
+      require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+        'csui/widgets/search.box/search.box.view', '../search.results.view', 'csui/utils/contexts/factories/search.query.factory',
+        './search.results.mock.js'
+      ], function (Marionette, PageContext, SearchBoxView, SearchResultsView, SearchQueryModelFactory, mock) {
+
+        var queryRegion = new Marionette.Region({el: '#queryIndex'}),
+          resultsRegion = new Marionette.Region({el: '#resultsIndex'}),
+          pageContext = new PageContext(),
+          searchBoxView = new SearchBoxView({
+            context: pageContext,
+            data: {
+              showInput: true
+            }
+          }),
+          searchResultsView = new SearchResultsView({context: pageContext});
+
+        mock.enable();
+
+        queryRegion.show(searchBoxView);
+        resultsRegion.show(searchResultsView);
+
+        /* this would show the changes passed between the views through the model
+                pageContext.listenTo(pageContext.getModel(SearchQueryModelFactory), "change", function (model) {
+                    alert("Got a change on the model: " + model.changed);
+                });
+        */
+        pageContext.fetch();
+      });
+
+    </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid">
+    <div class="binf-row">
+        <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3" id="queryIndex"></div>
+    </div>
+    <div class="binf-row">
+        <div class="binf-col-xs-12" id="resultsIndex"></div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

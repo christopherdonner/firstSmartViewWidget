@@ -1,0 +1,13 @@
+{{#if sortEnable}}
+  <div class="csui-search-sort-options ">
+    <button id="{{id}}" type="button" class="binf-btn binf-btn-default binf-dropdown-toggle"
+            data-binf-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="{{sortButtonAria}}">
+      <span class="cs-label">{{title}}</span>
+      <span class="cs-icon icon-caret-down"></span>
+    </button>
+    <ul class="binf-dropdown-menu" role="menu" aria-label="{{listAria}}"></ul>
+  </div>
+  <a href="javascript:void(0);" id="search-sort-btn" class="cs-icon icon-sortArrowDown"></a>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

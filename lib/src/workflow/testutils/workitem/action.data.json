@@ -1,0 +1,298 @@
+{
+  "allActionsEdit_301423": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423\/categories",
+      "method": "POST",
+      "name": "Add Category",
+      "signature": "addcategory"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423",
+      "method": "DELETE",
+      "name": "Delete",
+      "signature": "delete"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423\/content?download",
+      "method": "GET",
+      "name": "Download",
+      "signature": "download"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "\/api\/v2\/forms\/nodes\/rename?id=301423",
+      "href": "",
+      "method": "PUT",
+      "name": "Rename",
+      "signature": "rename"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423",
+      "method": "GET",
+      "name": "Properties",
+      "signature": "properties"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/rename?id=301423",
+      "method": "GET",
+      "name": "Edit",
+      "signature": "edit"
+    }
+  ],
+
+  "allActions_301423": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423\/categories",
+      "method": "POST",
+      "name": "Add Category",
+      "signature": "addcategory"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423",
+      "method": "DELETE",
+      "name": "Delete",
+      "signature": "delete"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423\/content?download",
+      "method": "GET",
+      "name": "Download",
+      "signature": "download"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "\/api\/v2\/forms\/nodes\/rename?id=301423",
+      "href": "",
+      "method": "PUT",
+      "name": "Rename",
+      "signature": "rename"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301423",
+      "method": "GET",
+      "name": "Properties",
+      "signature": "properties"
+    }
+  ],
+  "allActions_301422": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422\/categories",
+      "method": "POST",
+      "name": "Add Category",
+      "signature": "addcategory"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422",
+      "method": "DELETE",
+      "name": "Delete",
+      "signature": "delete"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422\/content?download",
+      "method": "GET",
+      "name": "Download",
+      "signature": "download"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "\/api\/v2\/forms\/nodes\/rename?id=301422",
+      "href": "",
+      "method": "PUT",
+      "name": "Rename",
+      "signature": "rename"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422",
+      "method": "GET",
+      "name": "Properties",
+      "signature": "properties"
+    }
+  ],
+  "allActions_301424": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301424\/categories",
+      "method": "POST",
+      "name": "Add Category",
+      "signature": "addcategory"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301424",
+      "method": "DELETE",
+      "name": "Delete",
+      "signature": "delete"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301424\/content?download",
+      "method": "GET",
+      "name": "Download",
+      "signature": "download"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "\/api\/v2\/forms\/nodes\/rename?id=301424",
+      "href": "",
+      "method": "PUT",
+      "name": "Rename",
+      "signature": "rename"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301424",
+      "method": "GET",
+      "name": "Properties",
+      "signature": "properties"
+    }
+  ],
+  "downloadProperties_301422": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422\/content?download",
+      "method": "GET",
+      "name": "Download",
+      "signature": "download"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422",
+      "method": "GET",
+      "name": "Properties",
+      "signature": "properties"
+    }
+  ],
+  "propertiesRename_301422": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422",
+      "method": "GET",
+      "name": "Properties",
+      "signature": "properties"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "\/api\/v2\/forms\/nodes\/rename?id=301423",
+      "href": "",
+      "method": "PUT",
+      "name": "Rename",
+      "signature": "rename"
+    }
+  ],
+  "downloadDelete_301422": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422\/content?download",
+      "method": "GET",
+      "name": "Download",
+      "signature": "download"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301422",
+      "method": "DELETE",
+      "name": "Delete",
+      "signature": "delete"
+    }
+  ],
+  "shortcut_301425": [
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301425",
+      "method": "DELETE",
+      "name": "Delete",
+      "signature": "delete"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "\/api\/v2\/forms\/nodes\/rename?id=301425",
+      "href": "",
+      "method": "PUT",
+      "name": "Rename",
+      "signature": "rename"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "form_href": "",
+      "href": "\/api\/v2\/nodes\/301425",
+      "method": "GET",
+      "name": "Properties",
+      "signature": "properties"
+    },
+    {
+      "body": "",
+      "content_type": "",
+      "href": "",
+      "href_form": "",
+      "method": "",
+      "name": "OpenShortlink",
+      "signature": "openshortlink"
+    }
+  ]
+}

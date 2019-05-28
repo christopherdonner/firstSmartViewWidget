@@ -1,0 +1,1015 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-permissions-wrapper {
+  
+  min-height: 2.5em;
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.binf-widgets .cs-permissions-wrapper .cs-permission-container,
+.binf-widgets .cs-permissions-wrapper .permission-wrapper,
+.binf-widgets .cs-permissions-wrapper .cs-metadata {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.binf-widgets .cs-properties-wrapper .cs-permissions-wrapper {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.binf-widgets .binf-modal-body .cs-permissions,
+.binf-widgets .binf-modal-lg .cs-permissions-wrapper {
+  height: calc(100vh - 183px);
+}
+
+.binf-widgets .cs-permissions {
+  min-height: 100%;
+  border-top: 1px solid #cccccc;
+}
+
+.binf-widgets .cs-permissions .csui-no-permissions-container {
+  text-align: center;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 300;
+  color: #757575;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: calc(100vh - 173px);
+}
+
+.binf-widgets .cs-permissions .csui-no-permissions {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 200;
+  color: #757575;
+  text-align: center;
+  margin: 48px auto 32px;
+}
+
+.binf-widgets .cs-permissions .cs-permissions-content {
+  height: calc(100% - 64px);
+}
+
+.binf-widgets .csui-permissions-list-container {
+  height: calc(100vh - 235px);
+  width: 100%;
+  clear: both;
+  padding: 0px;
+}
+
+.binf-widgets .csui-permissions-list-container.empty-permission-list {
+  height: auto;
+}
+
+.binf-widgets .csui-permissions-list-container,
+.binf-widgets .csui-permission-lookup-container {
+  min-width: 640px;
+  max-width: 848px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list {
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 0px 32px 5px 32px;
+  border: 0px;
+  background: #ffffff;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-body {
+  float: left;
+  width: 100%;
+  border-top: 0px;
+}
+
+.binf-widgets .csui-permission-lookup-container {
+  padding: 15px 32px;
+  text-align: center;
+}
+
+.binf-widgets .cs-permissions-lookup {
+  display: inline;
+}
+
+.binf-widgets .csui-permission-lookup-lbl-container {
+  position: static;
+  display: inline-block;
+  overflow: hidden;
+  text-align: right;
+  padding: 4px 1em 4px 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+}
+
+.binf-widgets .csui-permission-lookup-lbl {
+  width: auto;
+  display: inline-block;
+  text-align: left;
+  padding-right: 0px;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+  line-height: 26px;
+}
+
+.binf-widgets .csui-permissions-user-picker {
+  width: 464px;
+  display: inline-block;
+}
+
+.binf-widgets .csui-permissions-user-picker .csui-control-userpicker .cs-search-icon {
+  left: 0.5em;
+  top: calc(50% - 7px);
+}
+
+.binf-widgets .csui-permissions-user-picker .binf-form-control {
+  padding: 6px 26px;
+}
+
+.binf-widgets .csui-permissions-user-picker .csui-control-userpicker .cs-search {
+  position: relative;
+  box-shadow: none;
+  width: 100%;
+}
+
+.binf-widgets .csui-permissions-user-picker .csui-control-userpicker .cs-search-clear {
+  right: 1em;
+  top: calc(50% - 7px);
+}
+
+.binf-widgets .csui-permissions-user-picker .csui-control-userpicker .scroll-container {
+  position: absolute;
+  width: 100%;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row {
+  padding: 4px 0px;
+  display: block;
+  float: left;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-body .csui-table-row {
+  border-top: 1px solid #cccccc;
+  border-bottom: 0px;
+  display: flex;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-body .csui-table-row:first-child {
+  border-top: none;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-body {
+  height: calc(100% - 33px);
+  min-height: 1px;
+  position: relative;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-body.csui-perfect-scrolling.ps-container.ps-active-y {
+  border-bottom: 1px solid #cccccc;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-body.csui-perfect-scrolling.ps-container.ps-active-y .csui-table-body {
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-body .csui-table-body {
+  border-bottom: 1px solid #cccccc;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row:hover {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell {
+  padding: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-permissions {
+  padding-left: 1px;
+  padding-right: 10px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-permissions > div {
+  padding-right: 1px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-cell-permissions > div {
+  width: 100%;
+
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell > div {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  width: 100%;
+  vertical-align: middle;
+  margin: 1px 0px;
+}
+
+binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-table-cell-permissions .binf-popover,
+.binf-widgets .binf-modal .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell-permissions .binf-popover {
+  width: auto;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-user-container {
+  width: 100%;
+  display: flex;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-selected-user-ingroup {
+  padding: 5px 0px 5px 42px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-selected-user-ingroup .icon.icon-toolbar-more {
+  background-size: 2rem 1rem;
+  vertical-align: text-bottom;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.5em;
+  height: 1.3em;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-profileimg,
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .member-info,
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-inline-owner-change {
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  min-width: 3em;
+  width: auto;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .member-info {
+  width: calc(100% - 50px);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-userpicker-item .member-info {
+  padding: 0px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-permissions .csui-permission-level-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-inline-owner-change {
+  min-width: 0px;
+  margin: 0px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row.csui-changeowner-permission .csui-table-cell .csui-inline-owner-change {
+  min-width: calc(100% - 50px);
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row.csui-changeowner-permission .csui-table-cell .csui-inlinetoolbar {
+  display: none;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-inlinetoolbar {
+  padding-left: 5px;
+  min-width: 104px;
+  max-width: 100%;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  width: auto;
+  margin-right: 80px;
+  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell {
+  height: auto;
+  padding: 0px 1px;
+  overflow: hidden;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-cell-permissions span,
+.binf-widgets .csui-permissions-list-container .member-info span {
+  color: #2e3d98;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-cell-permissions span.csui-node-name,
+.binf-widgets .csui-permissions-list-container .csui-table-cell-permissions .csui-splitcontrol-label span {
+  color: #333333;
+}
+
+.binf-widgets .csui-permissions-list-container .member-info span {
+  font-weight: 700;
+}
+
+.binf-widgets .csui-permissions-list-container .member-info span.csui-public {
+  color: #333333;
+  font-weight: 400;
+}
+
+.binf-widgets .csui-permission-group {
+  background-color: #ebf1f4;
+  height: 2em;
+  vertical-align: middle;
+  line-height: 2em;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-header {
+  min-height: 1em;
+  height: 33px;
+  z-index: 1;
+  position: relative;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-header {
+  display: inline-block;
+  border-bottom: 1px solid #757575;
+  background-color: #f5f5f5;
+  width: 100%;
+  color: #333333;
+  line-height: 32px;
+}
+
+.binf-widgets .cs-permissions .csui-table-header .csui-table-header-toolbar .binf-dropdown-menu {
+  cursor: default;
+  border-radius: 0px;
+  left: auto;
+  right: 0;
+}
+
+.binf-widgets .cs-permissions .csui-table-header .csui-table-header-toolbar .binf-dropdown-menu > li > a {
+  padding: 3px 16px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell.csui-table-header-toolbar,
+.binf-widgets .cs-permissions .csui-table-header {
+  overflow: visible;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell {
+  height: 100%;
+  align-items: center;
+  min-width: 20%;
+  vertical-align: middle;
+  line-height: 32px;
+  max-width: 20%;
+  text-overflow: initial;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  padding: 0px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell .csui-table-header-cell-container {
+  width: calc(100% - 16px);
+  overflow: hidden;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell.csui-permission-level .csui-table-header-cell-container {
+  width: calc(100% - 10px);
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell .csui-table-header-cell-container.csui-fadeout:after {
+  background: linear-gradient(to right, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 1) 100%);
+  min-height: 30px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell:first-child {
+  padding-left: 40px;
+}
+
+.binf-widgets .csui-add-user-group {
+  display: inline-block;
+  width: 2.7em;
+  height: 3em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.binf-widgets .csui-add-user-group .icon-toolbarAdd {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin-top: 9px;
+}
+
+.binf-widgets .csui-permission-group > a {
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.binf-widgets .csui-permission-group > a .csui-button-icon {
+  height: 2em;
+  float: left;
+}
+
+.binf-widgets .csui-permission-group > a:hover,
+.binf-widgets .csui-permission-group > a:focus {
+  text-decoration: none;
+}
+
+.binf-widgets .csui-permission-group .csui-assigned-permission-lbl,
+.binf-widgets .csui-permission-group .csui-default-permission-lbl {
+  padding-left: 8px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-user-display-name {
+  line-height: 2.4em;
+  padding-left: 0px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-user-display-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-permissions-list-container .member-info .binf-disabled:hover,
+.binf-widgets .csui-permissions-list-container .csui-user-display-name.csui-public:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-profileimg {
+  float: left;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.binf-widgets .csui-permissions-list-container .member-info .csui-add-owner-or-group .csui-user-display-name {
+  width: auto;
+}
+
+.binf-widgets .csui-permissions-list-container .member-info .csui-add-owner-or-group .csui-user-display-name {
+  padding-left: 0.5em;
+}
+
+.binf-widgets .csui-permissions-list-container .member-info .csui-add-owner-or-group span {
+  float: left;
+  line-height: 24px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-profileimg.binf-disabled,
+.binf-widgets .csui-permissions-list-container .member-info .binf-disabled {
+  opacity: .5;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-icon {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex;
+  background-position: center 1px;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-icon.icon-edit {
+  margin-left: 7px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-icon.csui-icon-user,
+.binf-widgets .csui-permissions-list-container .csui-icon.icon-edit,
+.binf-widgets .csui-permissions-list-container .icon-toolbarAdd,
+.binf-widgets .csui-permissions-list-container .csui-icon.image_user_placeholder_permission,
+.binf-widgets .csui-permissions-list-container .csui-icon.image_group_placeholder_permission {
+  cursor: pointer;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-permission-subitem-row .member-info {
+  padding-left: 40px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-permission-subitem-row .member-info::before {
+  content: "···";
+}
+
+.binf-widgets .csui-inlinetoolbar .csui-table-actionbar {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.binf-widgets .csui-permissions-empty {
+  border-bottom: 1px solid #d5d5d5;
+  padding: 12px 0px 10px 40px;
+  height: 44px;
+}
+
+.binf-widgets .permissions-header-left-bar-container .csui-permission-header-name-container .csui-permission-header-name.csui-fadeout:after {
+  background: linear-gradient(to right, rgba(17, 27, 89, 0) 0%, rgba(17, 27, 89, 1) 100%);
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row:hover .member-info.csui-fadeout:after,
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row:hover .csui-permission-level-container.csui-fadeout:after {
+  background: linear-gradient(to right, rgba(183, 201, 205, 0) 0%, rgba(183, 201, 205, 1) 100%);
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row.active-row .member-info.csui-fadeout:after,
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row.active-row .csui-permission-level-container.csui-fadeout:after {
+  background: linear-gradient(to right, rgba(223, 231, 234, 0) 0%, rgba(223, 231, 234, 1) 100%);
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row.active-row:hover .csui-permission-level-container.csui-fadeout:after,
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row.active-row:hover .member-info.csui-fadeout:after {
+  background: linear-gradient(to right, rgba(183, 201, 205, 0) 0%, #b7c9cd 100%);
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-fadeout:after {
+  bottom: 1px;
+}
+
+.binf-widgets .csui-permission-level-container .csui-permission-level {
+  color: #2e3d98;
+  padding-right: 5px;
+  line-height: 33px;
+}
+
+.binf-widgets .csui-permission-level-container .csui-permission-level:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.binf-widgets .csui-permission-level-container .binf-popover {
+  max-width: initial;
+  min-width: 380px;
+  border-radius: 0px;
+  border: none;
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: fixed;
+}
+
+.binf-widgets .csui-tree {
+  display: none;
+}
+
+html[dir="rtl"] .binf-widgets .csui-permission-level-container .binf-popover.binf-left > .binf-arrow {
+  right: auto;
+  left: -11px;
+  border-left-color: rgba(0, 0, 0, .25);
+  border-left-width: 0px;
+  border-right-width: 11px;
+}
+
+html[dir="rtl"] .binf-widgets .csui-permission-level-container .binf-popover.binf-left > .binf-arrow:after {
+  left: 1px;
+  right: auto;
+  border-left-color: #ffffff;
+  border-right-width: 10px;
+  border-left-width: 0;
+}
+
+html[dir="rtl"] .binf-widgets .csui-edit-permission-popover-container .binf-popover {
+  margin-right: 12px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-list-body .csui-table-body .csui-table-empty {
+  padding: 10px;
+}
+
+.csui-permissions-list-container .csui-table-empty > span {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.binf-widgets .csui-edit-permission-popover-container .binf-popover,
+.binf-widgets .binf-modal .csui-table-row .csui-table-cell-permissions .binf-popover {
+  border-radius: 0px;
+  border: none;
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: initial;
+  min-width: 230px;
+
+}
+
+.binf-widgets .csui-edit-permission-popover-container.csui-permission-attribute-popover-container .binf-popover,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover {
+  min-width: 380px;
+  max-width: calc(100% - 100px);
+  border-radius: 0px;
+  border: none;
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover {
+  position: fixed;
+}
+
+.binf-widgets .csui-edit-permission-popover-container .binf-popover-content,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover-content {
+  padding: 0;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a {
+  display: block;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+  float: left;
+  width: 100%;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a {
+  padding: 5px 60px 5px 16px;
+}
+
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a {
+  padding: 5px 60px 5px 30px;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li:last-child > a {
+  padding: 5px 16px;
+}
+
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li:last-child > a {
+  padding: 5px 16px 5px 30px;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a:focus,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a:focus {
+  color: #333333;
+  text-decoration: none;
+  background-color: #bac9ce;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a:hover,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a:hover {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a:focus:active,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a:focus:active {
+  background-color: #dfe7ea;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li span.cs-icon,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li span.cs-icon {
+  background-repeat: no-repeat;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 3px 0px 0px 0px;
+  width: auto;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a:focus,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  outline-offset: -2px;
+}
+
+.binf-widgets .csui-tree-child input[type="checkbox"]:focus + label::before {
+  outline-offset: 3px;
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .csui-edit-permission-popover-container .csui-permission-attribute-buttons-container,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover-content .csui-permission-attribute-buttons-container {
+  background: #f5f5f5;
+  padding: 10px 14px;
+  text-align: right;
+  margin-top: 1px;
+}
+
+.binf-widgets .csui-edit-permission-popover-container .csui-permission-attribute-buttons-container button.cs-cancel-btn.binf-btn.binf-btn-default,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover-content .csui-permission-attribute-buttons-container button.cs-cancel-btn.binf-btn.binf-btn-default {
+  margin-left: 10px;
+  background-color: #ffffff;
+  border: 1px solid #0072aa;
+  color: #0072aa;
+}
+
+.binf-widgets .csui-edit-permission-popover-container .csui-permission-attribute-buttons-container button.cs-cancel-btn.binf-btn.binf-btn-default:hover,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover-content .csui-permission-attribute-buttons-container button.cs-cancel-btn.binf-btn.binf-btn-default:hover {
+  border: 1px solid #004b71;
+  color: #004b71;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  -moz-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+}
+
+.binf-widgets .csui-edit-permission-popover-container .csui-permission-attribute-buttons-container button.binf-btn,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover-content .csui-permission-attribute-buttons-container button.binf-btn
+ {
+  margin-left: 10px;
+}
+
+.binf-widgets .csui-edit-permission-popover-container .csui-permission-attribute-buttons-container button.binf-btn.cs-save-btn,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover-content .csui-permission-attribute-buttons-container button.binf-btn.cs-save-btn {
+  text-transform: uppercase;
+}
+
+.binf-widgets .csui-edit-permission-popover-container .csui-permission-attribute-buttons-container button.binf-btn,
+.binf-widgets .binf-modal .csui-table-cell-permissions .binf-popover-content .csui-permission-attribute-buttons-container button.binf-btn {
+  padding: 3px 24px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a > span,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a > span {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  height: auto;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li > a > span.cs-label,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li > a > span.cs-label {
+  margin-left: 7px;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li:last-child > a span.cs-label,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li:last-child > a span.cs-label {
+  width: auto;
+}
+
+.binf-widgets .binf-popover-content .cs-permission-level-selector ul li:last-child > a span.csui-icon.icon-more,
+.binf-widgets .binf-modal-body .cs-permission-level-selector ul li:last-child > a span.csui-icon.icon-more {
+  width: 2rem;
+  height: 1rem;
+  margin-top: 3px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list div.csui-table-header-cell.csui-table-header-toolbar {
+  height: 32px;
+  min-width: 32px;
+  max-width: 32px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.binf-widgets .csui-table-toolbar,
+.binf-widgets .csui-add-permission,
+.binf-widgets .csui-table-cell-addpermissions {
+  min-width: 32px;
+  max-width: 32px;
+  height: 100%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-addpermissions {
+  overflow: visible;
+  padding: 0px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-addpermissions .csui-table-actionbar {
+  width: 100%;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-addpermissions .csui-table-actionbar ul.binf-nav,
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-addpermissions .csui-table-actionbar ul.binf-nav li,
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-addpermissions .csui-table-actionbar ul.binf-nav > li > a {
+  padding: 0px;
+  width: 100%;
+  background-color: transparent !important;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-addpermissions .csui-table-actionbar ul > li > a {
+  padding: 3px 16px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell.csui-table-cell-addpermissions .csui-table-actionbar .icon {
+  width: 100%;
+  background-size: 2rem 1rem;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-cell-addpermissions ul.binf-dropdown-menu {
+  position: absolute;
+  right: auto;
+  left: auto;
+}
+
+.binf-widgets .csui-add-permission {
+  background-size: 16px;
+}
+
+.binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row.csui-changeowner-permission .csui-table-cell.csui-table-cell-addpermissions .csui-table-actionbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 1330px) {
+  .binf-widgets .cs-permissions .csui-table-header .csui-table-header-toolbar .binf-dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .binf-widgets .csui-edit-permission-popover-container .binf-popover .binf-arrow {
+    right: -10px;
+  }
+
+  .binf-widgets .csui-permissions-list-container,
+  .binf-widgets .csui-permission-lookup-container {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .binf-widgets .csui-permissions-user-picker {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-device-width: 1024px) {
+  .csui-on-ipad .binf-widgets .csui-permissions-list-container .csui-table-list .csui-table-row .csui-table-cell .csui-inlinetoolbar {
+    display: none;
+  }
+
+  .binf-widgets .csui-permissions-list-container {
+    height: calc(100vh - 280px);
+  }
+}
+
+
+.binf-widgets .csui-permissions-apply-dialog .binf-modal-dialog {
+  top: 65px;
+  width: 544px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .binf-modal-dialog .binf-modal-body {
+  margin: 0px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .binf-modal-dialog .binf-modal-content {
+  border-radius: 3px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .tile-header {
+  padding: 16px 16px 16px 32px;
+  height: auto;
+  display: inline-block;
+
+}
+
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .tile-header > div,
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .tile-header .csui-heading.binf-modal-title {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .binf-modal-body .csui-apply-permission {
+  color: #333333;
+}
+
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .binf-modal-body .csui-apply-permission-content {
+  line-height: 25px;
+  padding: 10px 16px 0px 32px;
+  word-wrap: break-word;
+}
+
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .tile-header .binf-modal-title .icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 32px;
+  width: 32px;
+  float: left;
+}
+
+.binf-widgets .csui-permissions-apply-dialog.cs-dialog .tile-header .binf-modal-title .title-text {
+  margin-left: 15px;
+  width: calc(100% - 47px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  float: left;
+  line-height: 32px;
+  font-size: 1.3em;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-subfolder-container {
+  padding: 15px 24px 32px 32px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-subfolder-container .csui-apply-permission-sub-folder {
+  padding-top: 15px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-sub-folder,
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-subitems-container {
+  line-height: normal;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-subitems-container {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-subitems-container .csui-permisison-subItem {
+  margin-bottom: 12px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-subitems-container .csui-permisison-subItem {
+  margin-bottom: 12px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-sub-folder-label {
+  margin-right: 26px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .csui-apply-permission-subitems {
+  margin-top: 15px;
+}
+
+.binf-widgets .csui-apply-permission-sub-folder .required-fields-switch {
+  display: inline-flex;
+  vertical-align: middle;
+  padding: 0 3px;
+}
+
+.binf-widgets .csui-permissions-apply-dialog .tile-header,
+.binf-widgets .csui-permissions-apply-dialog .binf-modal-footer {
+  background: transparent;
+  border: none;
+
+}
+
+.binf-widgets .csui-permissions-apply-dialog .binf-modal-footer {
+  padding: 16px 24px 16px 32px;
+  border-bottom: 4px solid #111b57;
+}
+
+
+
+.binf-widgets .cs-permissions-wrapper .csui-permissions-empty-actions {
+  padding: 6px 0px 0px 32px;
+}
+
+.binf-widgets .cs-permissions-wrapper .csui-permissions-empty-actions .csui-addMember-container,
+.binf-widgets .cs-permissions-wrapper .csui-permissions-empty-actions .csui-grantAccess-container {
+  display: flex;
+  padding-top: 6px;
+  width: 100%;
+  align-items: center;
+}
+
+.binf-widgets .cs-permissions-wrapper .csui-permissions-empty-actions .csui-addMember-container .csui-addMember,
+.binf-widgets .cs-permissions-wrapper .csui-permissions-empty-actions .csui-grantAccess-container .csui-grantAccess {
+  border: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  padding: 6px;
+  color: #2e3d98;
+  font-weight: 600;
+  font-size: 14px;
+  width: calc(100% - 24px);
+}
+
+.binf-widgets .cs-permissions-wrapper .csui-permissions-empty-actions .csui-icon {
+  width: 20px;
+  height: 20px;
+}
+

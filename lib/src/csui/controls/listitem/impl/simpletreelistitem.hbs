@@ -1,0 +1,17 @@
+<div class="cs-header binf-panel-heading" tabindex="0" aria-label="{{ariaName}}">
+  {{#if icon}}
+    <span class="csui-button-icon container-icon {{icon}}"></span>
+  {{/if}}
+  <span class="cs-title" title="{{#if tooltip}}{{tooltip}}{{else}}{{name}}{{/if}}">{{name}}</span>
+  {{#if expand}}
+    <span class="csui-button-icon dropdown-icon icon-expandArrowUp" title="{{collapseLabel}}"></span>
+  {{else}}
+    <span class="csui-button-icon dropdown-icon icon-expandArrowDown" title="{{expandLabel}}"></span>
+  {{/if}}
+</div>
+
+<div class="cs-content{{#unless expand}} binf-hidden{{/unless}}">
+  <div role="group" class="cs-list-group"></div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

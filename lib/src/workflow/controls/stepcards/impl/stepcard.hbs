@@ -1,0 +1,27 @@
+<div class="wfstatus-step-info" taskId="{{task_id}}">
+  <div class="wfstatus-type-icon">
+    <span class="wfstatus-title-icon wfstatus-{{stepIcon}}-step-icon" aria-hidden="true"></span>
+  </div>
+  <div class="wfstatus-step-header">
+    <div class="wfstatus-step-name" title="{{stepName}}">{{stepName}}</div>
+    <div class="wfstatus-step-duedate" title="{{dueDate}}">{{dueDate}}</div>
+  </div>
+
+  {{#if assignee}}
+    <div class="wfstatus-step-assignee" title="{{assignee}}">
+      {{assignee}}
+    </div>
+  {{/if}}
+
+  <div class="wfstatus-stepcard-action">
+    <div class="wfstatus-open-workflow-button">
+            <span><button class="binf-btn binf-btn-default" title="{{OpenWorkflowLabel}}"
+                          tabindex="0">{{OpenWorkflowLabel}}</button>
+            </span>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,82 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-item-name {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  min-width: 0; 
+  height: 100%;
+  align-items: center;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-readonly {
+  font-size: inherit;
+  display: inline-flex;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  align-items: center;
+  font-weight: 300;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: normal;
+  height: 100%;
+  padding-left: 0.33em;
+  padding-right: 0.33em;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-readonly > .csui-item-name-block {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  float: none;
+  outline: none;
+  margin: 1px 0;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  width: 100%;
+  min-width: 5em;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit > input {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex: 1 10 auto;
+  -webkit-flex: 1 10 auto;
+  text-align: left;
+  font-size: 20px;
+  line-height: 24px;
+  min-width: 3em;
+  max-width: 20em;
+  border: 1px solid #a7a9ac;
+  border-radius: 5px;
+  float: none;
+  padding: 0 0.2em 0 0.5em;
+  outline: none;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit > .edit-cancel {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.5em;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit > .csui-item-name-error {
+  font-size: 14px;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  padding-left: 1em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

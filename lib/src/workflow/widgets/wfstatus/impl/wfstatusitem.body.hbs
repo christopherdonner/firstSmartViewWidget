@@ -1,0 +1,67 @@
+<div class="wfstatusitem-progressbar">
+
+  <div class="wfstatusitem-date">
+    {{#if showDateHeader }}
+      <span class="wfstatusitem-enddate">{{startDate}}</span> - <span
+        class="wfstatusitem-enddate">{{endDate}}</span>
+    {{/if}}
+  </div>
+  <div class="wfstatusitem-step">
+    <div class="wfstatusitem-step-row">
+      <span class="wfstatusitem-step-left-label"> {{panelEndDate}} </span>
+      <div class="wfstatusitem-step-circle"></div>
+      <span class="wfstatusitem-step-right-label"> {{endLabel}} </span>
+    </div>
+    <div class="wfstatusitem-bar"></div>
+  </div>
+
+  {{#if showCurrent }}
+    <div class="wfstatusitem-step">
+      <div class="wfstatusitem-step-row">
+        <span class="wfstatusitem-step-left-label">  </span>
+        <div type="next" class="wfstatusitem-step-circle wfstatusitem-link
+      wfstatusitem-next-step-icon"></div>
+        <span type="next" class="wfstatusitem-step-right-label wfstatusitem-next-step-label">
+          {{nextStepLabel}}</span>
+      </div>
+      <div class="wfstatusitem-bar"></div>
+    </div>
+    <div class="wfstatusitem-step">
+      <div class="wfstatusitem-step-row">
+        <span class="wfstatusitem-step-left-label">{{currentStepDate}} </span>
+        <div type="current" class="wfstatusitem-step-circle wfstatusitem-link
+      wfstatusitem-current-step-icon"></div>
+        <span type="current" class="wfstatusitem-step-right-label wfstatusitem-current-step-label">
+          {{currentStepLabel}} </span>
+      </div>
+      <div class="wfstatusitem-bar"></div>
+    </div>
+  {{/if}}
+
+  {{#if showCompleted }}
+    <div class="wfstatusitem-step">
+      <div class="wfstatusitem-step-row">
+        <span class="wfstatusitem-step-left-label"> </span>
+        <div type="completed" class="wfstatusitem-step-circle wfstatusitem-link
+      wfstatusitem-completed-step-icon"></div>
+        <span type="completed"
+              class="wfstatusitem-step-right-label wfstatusitem-completed-step-label">
+          {{completedStepLabel}}</span>
+      </div>
+      <div class="wfstatusitem-bar"></div>
+    </div>
+  {{/if}}
+
+  <div class="wfstatusitem-step">
+    <div class="wfstatusitem-step-row">
+      <span class="wfstatusitem-step-left-label"> {{startDate}} </span>
+      <div class="wfstatusitem-step-circle"></div>
+      <span class="wfstatusitem-step-right-label"> {{startLabel}} </span>
+    </div>
+  </div>
+
+</div>
+<div class="wfstatusitem-step-cards"></div>
+<div class="wfstatusitem-user-cards"></div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

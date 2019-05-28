@@ -1,0 +1,70 @@
+{
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "workflow": [
+      ]
+    }
+  },
+  "workflow/widgets/workitem/workitem.view": {
+    "extensions": {
+      "workflow": [
+        "workflow/widgets/workitem/workitem.attachments/workitem.attachments.controller",
+        "workflow/widgets/workitem/workitem.activities/workitem.activities.controller"
+      ]
+    }
+  },
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "workflow": [
+        "workflow/widgets/wfstatus",
+        "workflow/widgets/wfmonitor"
+      ]
+    }
+  },
+  "csui/utils/commands": {
+    "extensions": {
+      "workflow": [
+        "workflow/commands/initiate.workflow/initiate.workflow",
+        "workflow/commands/initiate.document.workflow/initiate.document.workflow",
+        "workflow/commands/open.workitem/open.workitem"
+      ]
+    }
+  },
+  "csui/utils/defaultactionitems": {
+    "extensions": {
+      "workflow": [
+        "workflow/commands/defaultactionitems"
+      ]
+    }
+  },
+  "csui/widgets/nodestable/toolbaritems": {
+    "extensions": {
+      "workflow": [
+        "workflow/toolbars/workflow.nodestable.toolbaritems"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/perspective.context": {
+    "extensions": {
+      "workflow": [
+        "workflow/perspective/context/plugins/workflow.perspective.context.plugin"
+      ]
+    }
+  },
+  "csui/pages/start/perspective.routing": {
+    "extensions": {
+      "workflow": [
+        "workflow/perspective/routers/workflow.perspective.router"
+      ]
+    }
+  },
+  "csui/controls/table/cells/cell.factory":{
+  "extensions": {
+    "csui": [
+      "workflow/controls/table/cells/status.cell",
+      "workflow/controls/table/cells/date.cell",
+      "workflow/controls/table/cells/assignee.cell"
+    ]
+  }
+  }
+}

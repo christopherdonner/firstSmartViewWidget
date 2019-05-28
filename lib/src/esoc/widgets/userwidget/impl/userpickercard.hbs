@@ -1,0 +1,74 @@
+<div class="{{className}}">
+  <div class="member-picture{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="esoc-user-picker-default-img-{{id}} csui-icon-paceholder csui-icon
+            image_user_placeholder" style="background-color:{{userbackgroundcolor}}">{{initials}}</span>
+    <img class="esoc-user-picker-img-{{id}} csui-icon-user csui-icon binf-img-circle binf-hidden" alt="{{messages.image}}">
+  </div>
+  <div class="member-info{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="name binf-pull-left" title="{{display_name}}">{{display_name}}</span>
+    <span class="email binf-pull-left" title="{{email}}">{{business_email}}</span>
+    <span class="title binf-pull-left" title="{{title}}">{{title}}</span>
+    <span class="department binf-pull-left" title="{{department_name}}">{{department_name}}</span>
+    <span class="office binf-pull-left" title="{{office_location}}">{{office_location}}</span>
+    {{#if disabled}}
+      <span class="message binf-pull-left">{{disabled-message}}</span>
+    {{/if}}
+  </div>
+  <div class="esoc-mini-profile-actions">
+    {{^if deleted}}
+      {{#if otherUser}}
+        <div class="esoc-chat-action-enabled esoc-chat-action-enabled-{{id}}">
+          <a href="javascript:void(0);" class="esoc-mini-profile-following-action" aria-label="{{actions.following}}">
+            <div class="esoc-miniprofile-otheruser-actions-withchat">
+              <div class="esoc-miniprofile-followingaction {{actions.followingClass}}"
+                   title="{{actions.following}}"></div>
+            </div>
+          </a>
+
+          <div class="esoc-mini-profile-otheruser-actions-spacing "></div>
+          <a href="javascript:void(0);" aria-label="{{messages.chat}}">
+            <div class="esoc-miniprofile-chat-action-{{id}}
+                   esoc-miniprofile-otheruser-actions-withchat esoc-miniprofile-chat-action"></div>
+          </a>
+
+          <div class="esoc-mini-profile-otheruser-actions-spacing "></div>
+          <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+            <div class="esoc-miniprofile-otheruser-actions-withchat">
+              <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="esoc-chat-action-disabled esoc-chat-action-disabled-{{id}}">
+          <a href="javascript:void(0);" class="esoc-mini-profile-following-action" aria-label="{{actions.following}}">
+            <div class="esoc-mini-profile-otheruser-actions-without-chat">
+              <div class="esoc-miniprofile-followingaction {{actions.followingClass}}"
+                   title="{{actions.following}}"></div>
+            </div>
+          </a>
+
+          <div class="esoc-mini-profile-otheruser-actions-spacing "></div>
+          <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+            <div class="esoc-mini-profile-otheruser-actions-without-chat">
+              <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+            </div>
+          </a>
+        </div>
+      {{else}}
+        <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+          <div class="esoc-mini-profile-selfuser-actions">
+            <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+          </div>
+        </a>
+      {{/if}}
+    {{else}}
+      <a href="javascript:void(0);" class="esoc-viewminiprofile-action" aria-label="{{actions.viewprofile}}">
+        <div class="esoc-mini-profile-selfuser-actions">
+          <div class="esoc-mini-profile-view-icon" title="{{actions.viewprofile}}"></div>
+        </div>
+      </a>
+    {{/if}}
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

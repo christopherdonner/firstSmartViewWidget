@@ -1,0 +1,38 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.esoc-chat-presence-Away,
+.esoc-chat-presence-Online,
+.esoc-chat-presence-Busy,
+.esoc-chat-presence-IdleBusy,
+.esoc-chat-presence-Offline,
+.esoc-chat-presence-donotdisturb {
+  width: 12px;
+  height: 12px;
+  margin: 16px 0;
+  padding: 0px;
+  cursor: default;
+}
+
+.esoc-chat-presence-Away {
+  background: url(../images/away.svg) no-repeat center;
+}
+
+.esoc-chat-presence-Online {
+  background: url(../images/online.svg) no-repeat center;
+}
+
+.esoc-chat-presence-Busy {
+  background: url(../images/busy.svg) no-repeat center;
+}
+
+.esoc-chat-presence-Offline {
+  background: url(../images/offline.svg) no-repeat center;
+}
+
+.binf-widgets .esoc-chat-presence-Unknown {
+  background: url(../images/unknown.svg) no-repeat center;
+}
+
+.esoc-chat-presence-donotdisturb {
+  background: url(../images/do_not_disturb.svg) no-repeat center;
+}

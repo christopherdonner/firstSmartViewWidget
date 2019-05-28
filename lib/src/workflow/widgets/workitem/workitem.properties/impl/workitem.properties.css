@@ -1,0 +1,65 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .workflow-workitem-properties {
+  flex: 1 1 auto;
+  padding: 0rem 2rem 0rem 2rem;
+}
+
+.binf-widgets .workitem-instructions {
+  flex: 0 0 auto;
+  margin: 1rem 0rem 1rem 0rem;
+  padding-left: 1rem;
+  overflow: hidden;
+}
+
+.binf-widgets .workitem-forms {
+  flex: 1 1 auto;
+}
+
+.binf-widgets .workflow-workitem-form .cs-form {
+  padding: 1rem 0rem 0rem 0.5rem;
+  border-top: 2px solid #e5e5e5;
+}
+
+.binf-widgets .workflow-workitem-form .cs-form.cs-form-update.workitem-with-empty-instructions,
+.binf-widgets .workflow-workitem-form .cs-form.cs-form-create.workitem-with-empty-instructions {
+  border-top: 0px;
+}
+
+.binf-widgets .metadata-validation-error {
+  height: 2rem;
+  border-bottom: 1px solid #ff0000;
+  margin-top: 1rem;
+}
+
+.binf-widgets .metadata-validation-error .cs-close-error-icon {
+  width: 15px;
+  display: inline-block;
+  height: 15px;
+  margin: 0 0.5rem 0 0;
+  vertical-align: bottom;
+  cursor: pointer;
+  background-color: white;
+  border: 0;
+}
+
+.binf-widgets .workflow-workitem-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  padding: 0 1em 0 1em;
+}
+
+.binf-widgets .workflow-workitem-form .cs-form-create .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-form-set-container .cs-pull-right {
+  float: left;
+}
+
+.binf-widgets .workflow-workitem-form .cs-form-create .cs-form-doublecolumn .alpaca-field.alpaca-field-array .cs-form-set-container .cs-pull-left {
+  width: calc(100%);
+  max-width: calc(100%);
+}
+
+.binf-widgets .workitem-multimap-select-message {
+  text-align: center;
+  font: italic 1.7rem Lato;
+  color: #757575;
+  padding-top: 5em;
+  display: none;
+}
