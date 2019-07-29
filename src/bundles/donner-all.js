@@ -2,13 +2,15 @@
 // include public modules from this component
 
 define([
-  // add public files for this module here
+  'donner/widgets/.donner/.donner.view',
+  'json!donner/widgets/.donner/.donner.manifest.json'
 ], {});
 
 require([
   'require',
   'css'
 ], function (require, css) {
+
   // Load the bundle-specific stylesheet
   css.styleLoad(require, 'donner/bundles/donner-all');
 });

@@ -5,5 +5,12 @@
         "version": "1.0"
       }
     }
+  },
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "donner": [
+        "donner/widgets/.donner"
+      ]
+    }
   }
 }

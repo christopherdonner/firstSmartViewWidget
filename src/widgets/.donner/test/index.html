@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DonnerView</title>
+
+  <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/theme.css">
+  <style>
+    body {
+      /* Make some space at the top; there is no top navigation bar
+         on this page */
+      padding-top: 1em;
+    }
+  </style>
+
+  <script src="../../../../lib/src/csui/lib/require.js"></script>
+  <script src="../../../../lib/src/csui/config.js"
+          data-csui-path="../../../../lib/src/csui"></script>
+
+  <script>
+    require.config({
+      paths: {
+      'donner': '../../..'
+      },
+      deps: [
+        'csui/lib/require.config!csui/csui-extensions.json',
+        'csui/lib/require.config!donner/donner-extensions.json'
+      ],
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        i18n: {
+          locale: 'en-us',
+          loadableLocales: {
+            root: true
+          },
+          preferredLocales: 'en-us'
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../.donner.view', './.donner.mock.js'
+    ], function (Marionette, PageContext, DonnerView, mock) {
+      'use strict';
+
+      // Wrap the widget placeholder
+      var region = new Marionette.Region({
+            el: '#widget'
+          }),
+      // Create the data managing context
+          context = new PageContext(),
+      // Create the widget instance
+          view = new DonnerView({
+            context: context
+          });
+
+      // Show the widget on the page
+      region.show(view);
+      // Mock the REST API responses
+      mock.enable();
+      // Load data from the server
+      context.fetch();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid">
+  <div class="binf-row">
+    <div id="widget" class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3"></div>
+  </div>
+</div>
+</body>
+
+</html>
