@@ -4,16 +4,16 @@ define([
   // CS REST API URL parsing and combining
   'csui/utils/url'
 ], function (Backbone, Url) {
-  'use strict';
 
-  var DonnerModel = Backbone.Model.extend({
+  var HelloModel = Backbone.Model.extend({
+
     // Declare model properties with default values
     defaults: {
       name: 'Unnamed'
     },
 
     // Constructor gives an explicit name to the object in the debugger
-    constructor: function DonnerModel(attributes, options) {
+    constructor: function HelloModel(attributes, options) {
       Backbone.Model.prototype.constructor.apply(this, arguments);
 
       // Enable this model for communication with the CS REST API
@@ -33,7 +33,9 @@ define([
       // All attributes are placed below the `data` key
       return response.data;
     }
+
   });
 
-  return DonnerModel;
+  return HelloModel;
+
 });

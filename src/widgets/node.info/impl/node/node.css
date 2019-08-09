@@ -1,0 +1,16 @@
+.samples-node-info h5 {
+  font-size: .9em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  text-align: right;
+}
+
+.samples-node-info h4 {
+  font-size: 1.3em;
+  margin-bottom: 1ex;
+}
+
+.samples-node-info p {
+  font-weight: 400;
+  margin-bottom: 1ex;
+}

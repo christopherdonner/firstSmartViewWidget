@@ -1,7 +1,7 @@
 {
   "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
   "title": "Hello",
-  "description": "Heyoooo",
+  "description": "Welcomes the current user.",
   "kind": "tile",
   "schema": {
     "type": "object",

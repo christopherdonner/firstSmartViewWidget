@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DonnerView</title>
+  <title>HelloView</title>
 
   <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/theme.css">
   <style>
@@ -23,13 +23,15 @@
 
   <script>
     require.config({
-      paths: {
-      'donner': '../../..'
-      },
       deps: [
-        'csui/lib/require.config!csui/csui-extensions.json',
-        'csui/lib/require.config!donner/donner-extensions.json'
-      ],
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      paths: {
+        greet: '../../..'
+      },
       config: {
         'csui/utils/contexts/factories/connector': {
           connection: {
@@ -39,39 +41,32 @@
               ticket: 'dummy'
             }
           }
-        },
-        i18n: {
-          locale: 'en-us',
-          loadableLocales: {
-            root: true
-          },
-          preferredLocales: 'en-us'
         }
       }
     });
 
     require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
-      '../.donner.view', './.donner.mock.js'
-    ], function (Marionette, PageContext, DonnerView, mock) {
-      'use strict';
+      '../hello.view', './hello.mock.js'
+    ], function (Marionette, PageContext, HelloView, HelloMock) {
 
       // Wrap the widget placeholder
-      var region = new Marionette.Region({
-            el: '#widget'
+      var contentRegion = new Marionette.Region({
+            el: '#content'
           }),
       // Create the data managing context
           context = new PageContext(),
       // Create the widget instance
-          view = new DonnerView({
+          helloView = new HelloView({
             context: context
           });
 
       // Show the widget on the page
-      region.show(view);
+      contentRegion.show(helloView);
       // Mock the REST API responses
-      mock.enable();
+      HelloMock.enable();
       // Load data from the server
       context.fetch();
+
     });
   </script>
 </head>
@@ -79,7 +74,7 @@
 <body class="binf-widgets">
 <div class="binf-container-fluid">
   <div class="binf-row">
-    <div id="widget" class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3"></div>
+    <div id="content" class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3"></div>
   </div>
 </div>
 </body>

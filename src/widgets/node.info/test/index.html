@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Node Info</title>
+
+    <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/theme.css">
+
+    <script src="../../../../lib/src/csui/lib/require.js"></script>
+    <script src="../../../../lib/src/csui/config.js"
+            data-csui-path="../../../../lib/src/csui"></script>
+
+    <script>
+        require.config({
+            paths: {
+                samples: '../../..'
+            },
+            config: {
+                'csui/utils/contexts/factories/connector': {
+                    connection: {
+                        // url: '//murdock.opentext.com/alpha/cs.exe/api/v1',
+                        url: '//server/otcs/cs/api/v1',
+                        supportPath: '/support',
+                        session: {
+                            ticket: 'dummy'
+                        }
+                    }
+                }
+            }
+        });
+
+        require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+            '../node.info.view', 'node.info.mock'
+        ], function (Marionette, PageContext, NodeInfoView, NodeInfoMock) {
+
+            NodeInfoMock.enable();
+
+            // Wrap the widget placeholder
+            var contentRegion = new Marionette.Region({
+                    el: '#content'}),
+
+                // Create the data managing context
+                context = new PageContext({
+                    factories: {
+                        node: {
+                            attributes: {
+                                id: 555555
+                            }
+                        }
+                    }
+                }),
+                // Create the widget instance
+                nodeInfoView = new NodeInfoView({
+                    context: context,
+                    data: {
+                        node: true,
+                        containingWorkspace: true,
+                        volume: false
+                    }
+                });
+
+            // Show the widget on the page
+            contentRegion.show(nodeInfoView);
+            // Load data from the server
+            context.fetch();
+
+        });
+    </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid">
+    <div class="binf-row">
+        <div id="content" class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3"></div>
+    </div>
+</div>
+</body>
+
+</html>

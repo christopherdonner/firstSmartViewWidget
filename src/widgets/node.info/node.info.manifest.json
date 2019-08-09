@@ -1,0 +1,26 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "Node Information",
+  "description": "Show common properties of the current node or volume or both",
+  "kind": "tile",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "node": {
+        "title": "Node",
+        "description": "Show information about the current node",
+        "default": true
+      },
+      "volume": {
+        "title": "Volume",
+        "description": "Show information about the closest parent volume where the current node is stored",
+        "default": true
+      },
+      "containingWorkspace": {
+        "title": "Containing Workspace",
+        "description": "SHow information about the closest workspace which the current node belongs to",
+        "default": true
+      }
+    }
+  }
+}

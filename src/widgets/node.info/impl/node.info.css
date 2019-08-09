@@ -1,0 +1,11 @@
+.samples-node-info {
+  /* Make more space around the welcome message than the default Bootstrap
+     panel offers */
+  padding: 1em;
+  overflow: hidden;
+}
+
+.samples-node-info > :not(:first-child) {
+  margin-top: 5px;
+  border-top: 2px solid #dcdcdc;
+}

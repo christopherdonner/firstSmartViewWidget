@@ -1,0 +1,10 @@
+.binf-widgets .greet-greeting {
+  /* Make more space around the welcome message than the default Bootstrap
+     panel offers */
+  padding: 1em;
+  /* Make the panel look nicer */
+  background-color: #fff;
+  /* Fill up the parent tile extents. */
+  width: 100%;
+  height: 100%;
+}

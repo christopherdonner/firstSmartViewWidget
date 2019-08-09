@@ -1,23 +1,23 @@
 define(['csui/utils/contexts/page/page.context',
-  'donner/widgets/.donner/.donner.view', './.donner.mock.js'
-], function (PageContext, DonnerView, mock) {
-  'use strict';
+  'greet/widgets/hello/hello.view', './hello.mock.js'
+], function (PageContext, HelloView, HelloMock) {
 
-  describe('DonnerView', function () {
+  describe('WidgetHelloView', function () {
+
     beforeEach(function () {
       // Make sure that the server connection is mocked in the test specs
-      mock.enable();
+      HelloMock.enable();
     });
 
     afterEach(function () {
       // Remove the mocks not to interfere with other test specs
-      mock.disable();
+      HelloMock.disable();
     });
 
     describe('given a server connection with the person to greet', function () {
 
       // Declare objects used in the checks
-      var context, view;
+      var context, helloView;
 
       // Initialize the objects first here to enable ddescribe and iit
       // tricks; wait until the model gets fetched by the CS REST API
@@ -37,11 +37,11 @@ define(['csui/utils/contexts/page/page.context',
           }
         });
 
-        view = new DonnerView({
+        helloView = new HelloView({
           context: context
         });
 
-        view.render();
+        helloView.render();
 
         context
             .fetch()
@@ -49,18 +49,18 @@ define(['csui/utils/contexts/page/page.context',
       }, 5000);
 
       it('creates a model with information about the person', function () {
-        var model = view.model;
+        var model = helloView.model;
         expect(model).toBeDefined();
         var name = model.get('name');
         expect(name).toBe('jdoe');
       });
 
       it('marks the widget with the right CSS class', function () {
-        expect(view.$el.hasClass('donner--donner')).toBeTruthy();
+        expect(helloView.$el.hasClass('greet-hello')).toBeTruthy();
       });
 
       it('renders the greeting', function () {
-        var innerText = view.$el.text();
+        var innerText = helloView.$el.text();
         expect(innerText).not.toMatch(/Unnamed/);
       });
 
